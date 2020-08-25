@@ -1,0 +1,1665 @@
+<!doctype HTML public "-//W3C//DTD HTML 4.0 Frameset//EN">
+
+<html>
+<head>
+<title>FTP Actions Plugin Help</title>
+
+<meta http-equiv=content-type content="text/html; charset=windows-1252">
+
+<style>
+
+/* ELEMENTS */
+
+body {
+  font-family: Verdana, sans-serif;
+  font-size: 8pt;
+  background-color: #ffffff;
+}
+
+hr {
+  text-align: center;
+  color: #f0f0f0;
+  width: 100%;
+  height: 6pt;
+
+  margin-top: 0pt;
+  margin-bottom: -3pt;
+
+  border: none;
+}
+
+A:link, A:active, A:visited {
+  color: #0000ff;
+  text-decoration: none;
+}
+
+A:hover {
+  color: #0000ff;
+  text-decoration: underline;
+}
+
+h1 {
+  font-family: Verdana;
+  font-weight: bold;
+  font-size: 18.0pt;
+  white-space: nowrap;
+  color: #fff;
+  background-color: #699BEF;
+
+  padding: 4pt 3pt;
+  padding: 5px 4px;
+
+  margin-top: 0pt;
+  margin-bottom: 0pt;
+
+  border-right: 1px solid #333;
+  border-left: 1px solid #699BEF;
+  border-bottom: solid black 1px;
+}
+
+h2 {
+  font-family: Arial, sans-serif;
+  font-size: 12.0pt;
+  letter-spacing: .2ex;
+  color: #000;
+  
+  margin-left: 0pt;
+  margin-right: 0pt;
+  margin-top: 18pt;
+  margin-bottom: 9pt;
+}
+
+h3 {
+  font-family: Arial, sans-serif;
+  font-size: 10pt;
+  font-weight: bold;
+  font-style: normal;
+  color: black;
+  letter-spacing: 0px;
+
+  margin-left: 0pt;
+  margin-right: 0pt;
+  margin-top: 18pt;
+  margin-bottom: 3pt;
+}
+
+p {
+  font-family: Verdana;
+  font-size: 8.0pt;
+  line-height: 12.0pt;
+  
+  margin-left: 0pt;
+  margin-right: 0pt;
+  margin-top: 0pt;
+  margin-bottom: 9pt;
+}
+
+/* CLASSES */
+
+div.Actions h3, div.Events h3 {
+  font-family: Arial, sans-serif;
+  font-size: 10pt;
+  font-weight: bold;
+  font-style: italic;
+  color: #3C77B3;
+  letter-spacing: 0px;
+  
+  margin-left: 12pt;
+  margin-right: 0pt;
+  margin-top: 18pt;
+  margin-bottom: 3pt;
+}
+
+div.Actions h4, div.info h3 {
+  font-family: Verdana;
+  font-size: 8.0pt;
+  line-height: 12.0pt;
+  font-weight: bold;
+  
+  margin-top: 9pt;
+  margin-bottom: 0pt;
+  margin-left: 28pt;
+  margin-right: 0pt;
+}
+
+div.Actions p, div.Events p, div.ErrorCodes p {
+  font-family: Verdana;
+  font-size: 8.0pt;
+  line-height: 12.0pt;
+  
+  margin-top: 0pt;
+  margin-bottom: 9pt;
+  margin-left: 12pt;
+  margin-right: 0pt;
+}
+
+div.ErrorCodes table {
+  font-family: Verdana, sans-serif;
+  font-size: 8.0pt;
+  line-height: 12.0pt;
+  margin: 0px 0px 9pt 28pt;
+  border-collapse: collapse; 
+  border: none;
+}
+
+div.ErrorCodes table th,
+div.ErrorCodes table td {
+  border-bottom: 1px solid #ddd;
+  padding: 1ex;
+}
+
+div.ErrorCodes table th {
+  text-align: left;
+  padding-left: 0px;
+  padding-right: 2ex;
+}
+
+p.NavLocal {
+  white-space: nowrap;
+  text-indent: -4px;
+  font-family: Verdana, Arial, sans-serif;
+  font-weight: bold;
+  font-style: normal;
+  font-size: 13px;
+  background-color: #e4e4e4;
+
+  margin-top: 0px;
+  margin-bottom: 12pt;
+
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 0px;
+  padding-right: 0px;
+
+  border-bottom: 1px solid #e4e4e4;
+}
+
+p.Note {
+    font-family: Verdana;
+    font-size: 8.0pt;
+    line-height: 12.0pt;
+    color: #000000;
+    background-color: #ffffe8;
+
+    margin-top: 0pt;
+    margin-bottom: 9pt;
+    margin-left: 0pt;
+    margin-right: 5%;
+
+    padding-left: 2pt;
+    padding-right: 2pt;
+    padding-top: 1pt;
+    padding-bottom: 2pt;
+}
+
+p.Tip {
+    font-family: Verdana;
+    font-size: 8.0pt;
+    line-height: 12.0pt;
+    color: #000000;
+    background-color: #EAF4E8;
+
+    margin-top: 0pt;
+    margin-bottom: 9pt;
+    margin-left: 0pt;
+    margin-right: 5%;
+
+    padding-left: 2pt;
+    padding-right: 2pt;
+    padding-top: 1pt;
+    padding-bottom: 2pt;
+}
+
+div.Actions p.Note, div.Events p.Note,
+div.Actions p.Tip, div.Events p.Tip {
+    margin-left: 28pt;
+}
+
+div.CallbackParams p.Note,
+div.CallbackParams p.Tip {
+    margin-left: 38pt;
+}
+
+
+pre.code {
+  white-space: pre;
+  font-family: Courier New, Courier, Arial, sans-serif;
+  font-size: 10pt;
+  font-weight: normal;
+  font-style: normal;
+  letter-spacing: normal;
+  color: #000;
+  background-color: #f9f9f9;
+  
+  margin-top: 3pt;
+  margin-bottom: 9pt;
+  margin-left: 0pt;
+  margin-left: 0pt;
+  
+  padding: 10px;
+  
+  border: 1px dotted #ccc;
+}
+
+div.Actions pre.code, div.Events pre.code {
+  margin-left: 28pt;
+}
+
+div.Actions h2 {
+  margin-bottom: -6pt;
+}
+
+div.actions p, div.info p, div.ErrorCodes p {
+  margin-left: 28pt;
+}
+
+div.actions p.indent {
+  margin-left: 38pt;
+}
+
+div.CallbackParams h5 {
+  font-family: Verdana;
+  font-size: 8.0pt;
+  line-height: 12.0pt;
+  font-weight: bold;
+  
+  margin-top: 9pt;
+  margin-bottom: 0pt;
+  margin-left: 38pt;
+  margin-right: 0pt;
+}
+
+div.CallbackParams p {
+  font-family: Verdana;
+  font-size: 8.0pt;
+  line-height: 12.0pt;
+  
+  margin-top: 0pt;
+  margin-bottom: 9pt;
+  margin-left: 38pt;
+  margin-right: 0pt;
+}
+
+div.history h2 + h3 {
+	margin-top: 3pt;
+}
+
+span.here { /* blue tab effect in navbar (NavLocal) */
+  font-weight: bold;
+  color: #fff;
+  background-color: #699BEF;
+
+  margin: 0px;
+
+  padding: 4px 8px;
+
+  border-top: 1px solid #699BEF;
+  border-bottom: 1px solid #333;
+  border-left: none;
+  border-right: 1px solid #333;
+}
+
+span.type {
+    color: #aaa;
+}
+
+span.nowrap {
+  white-space: nowrap;
+}
+</style>
+</head>
+<body>
+
+<h1>FTP Actions Plugin</h1>
+
+<p class="NavLocal"><span class=wab>&nbsp;</span><span class="here">Online Help</span></p>
+
+<h2>Description</h2>
+
+<p>The FTP actions plugin allows you to connect to and navigate an ftp server within your application, either behind the scenes, or with user input.</p>
+
+<p>Whether creating your own FTP client, or simply offering the option of downloading from a pre-specified FTP server, this plugin is an excellent addition to your toolbox. Shipping with actions to connect, navigate, upload and download, this is a full-function plugin. As well, the FTP plugin supports resumed downloads.</p>
+
+<p>
+Both 32-bit and 64-bit versions of the FTP action plugin are available in supported products. Action names and categories are identical, however when adding them to projects the 32-bit plugin is named "FTP" while the 64-bit version is named "FTP (64-bit)." Choose the appropriate version of the plugin based on whether the runtime using the plugin is a 32-bit or 64-bit executable.
+</p>
+
+
+
+<div class="Actions">
+<h2>Actions</h2>
+
+<p style="margin-top: 18pt; margin-left: 12pt;">
+<a href="#FTP.CdUp">FTP.CdUp</a><br/>
+<a href="#FTP.ChangeDir">FTP.ChangeDir</a><br/>
+<a href="#FTP.ClearLog">FTP.ClearLog</a><br/>
+<a href="#FTP.Command">FTP.Command</a><br/>
+<a href="#FTP.Connect">FTP.Connect</a><br/>
+<a href="#FTP.Delete">FTP.Delete</a><br/>
+<a href="#FTP.Disconnect">FTP.Disconnect</a><br/>
+<a href="#FTP.Download">FTP.Download</a><br/>
+<a href="#FTP.GetConnectTimeout">FTP.GetConnectTimeout</a><br/>
+<a href="#FTP.GetControlPort">FTP.GetControlPort</a><br/>
+<a href="#FTP.GetCurrentDir">FTP.GetCurrentDir</a><br/>
+<a href="#FTP.GetDataPort">FTP.GetDataPort</a><br/>
+<a href="#FTP.GetFileInfo">FTP.GetFileInfo</a><br/>
+<a href="#FTP.GetHelp">FTP.GetHelp</a><br/>
+<a href="#FTP.GetLastResponse">FTP.GetLastResponse</a><br/>
+<a href="#FTP.GetLog">FTP.GetLog</a><br/>
+<a href="#FTP.GetPassiveMode">FTP.GetPassiveMode</a><br/>
+<a href="#FTP.GetTransferType">FTP.GetTransferType</a><br/>
+<a href="#FTP.IsConnected">FTP.IsConnected</a><br/>
+<a href="#FTP.IsValidHostname">FTP.IsValidHostname</a><br/>
+<a href="#FTP.List">FTP.List</a><br/>
+<a href="#FTP.ListFiles">FTP.ListFiles</a><br/>
+<a href="#FTP.ListFolders">FTP.ListFolders</a><br/>
+<a href="#FTP.MakeDir">FTP.MakeDir</a><br/>
+<a href="#FTP.NoOp">FTP.NoOp</a><br/>
+<a href="#FTP.RemoveDir">FTP.RemoveDir</a><br/>
+<a href="#FTP.Rename">FTP.Rename</a><br/>
+<a href="#FTP.Resume">FTP.Resume</a><br/>
+<a href="#FTP.SetCommandCallback">FTP.SetCommandCallback</a><br/>
+<a href="#FTP.SetConnectTimeout">FTP.SetConnectTimeout</a><br/>
+<a href="#FTP.SetControlPort">FTP.SetControlPort</a><br/>
+<a href="#FTP.SetDataPort">FTP.SetDataPort</a><br/>
+<a href="#FTP.SetPassiveMode">FTP.SetPassiveMode</a><br/>
+<a href="#FTP.SetResponseCallback">FTP.SetResponseCallback</a><br/>
+<a href="#FTP.SetTransferType">FTP.SetTransferType</a><br/>
+<a href="#FTP.Upload">FTP.Upload</a><br/>
+</p>
+
+<h3><a name="FTP.CdUp">FTP.CdUp ();</a></h3>
+
+<h4>Description:</h4><p>Moves up one directory level on the FTP server.</p>
+
+<h4>Returns:</h4><p>Nothing.</p>
+
+<h4>Example:</h4><pre class="code">
+-- navigate to /web/images
+FTP.ChangeDir("/web/images");
+
+-- move "up" from /web/images to /web
+FTP.CdUp(); 
+</pre>
+
+
+<h3><a name="FTP.ChangeDir">FTP.ChangeDir (string Path);</a></h3>
+
+<h4>Description:</h4><p>Changes the current directory on the FTP server.</p>
+
+<h4>Path:</h4><p><span class="type">(string)</span> The path to the 
+directory on the FTP server that you want to navigate to.</p>
+
+<h4>Returns:</h4><p>Nothing.</p>
+
+<h4>Example:</h4><pre class="code">
+-- navigate to /web/misc
+FTP.ChangeDir("/web/misc");
+
+-- navigate to /web/misc/files
+FTP.ChangeDir("files");
+</pre>
+
+
+<h3><a name="FTP.ClearLog">FTP.ClearLog ();</a></h3>
+
+<h4>Description:</h4><p>Clears (empties) the command/response log. Use 
+this to "reset" the log of commands sent to the FTP server and the 
+response messages received from it.</p>
+
+<p class="note"><b>Note:</b> The command/response log is for 
+information only. Clearing the log has no effect on the FTP server.
+
+<h4>Returns:</h4><p>Nothing.</p>
+
+<h4>Example:</h4><pre class="code">
+-- reset the log
+FTP.ClearLog();
+</pre>
+
+
+<h3><a name="FTP.Command">FTP.Command (string Command);</a></h3>
+
+<h4>Description:</h4><p>Performs a custom FTP command on the FTP server.</p>
+
+<h4>Command:</h4><p><span class="type">(string)</span> Any valid FTP 
+command or any server-specific command.</p>
+
+<h4>Returns:</h4><p>Nothing.</p>
+
+<h4>Example:</h4><pre class="code">
+-- set access permissions for foo.txt
+-- so the owner can read+write, but everyone else can only read
+-- note: this is a server-specific command, it may not work on all servers
+FTP.Command("SITE CHMOD 644 foo.txt");
+</pre>
+
+
+<h3><a name="FTP.Connect">FTP.Connect (string Hostname, <span class="nowrap">string Username = "anonymous",</span> <span class="nowrap">string Password = "anonymous@anonymous.com",</span> <span class="nowrap">string Account = "",</span> <span class="nowrap">boolean HidePassword = true)</span>;</a></h3>
+
+<h4>Description:</h4><p>Connects to an FTP server.</p>
+
+<h4>Hostname:</h4><p><span class="type">(string)</span> The hostname or IP address of the FTP site you want to connect to.</p>
+
+<h4>Username:</h4><p><span class="type">(string)</span> The username you want to login as, or "anonymous" to initiate an anonymous login.</p>
+
+<h4>Password:</h4><p><span class="type">(string)</span> The password for the given username.</p>
+
+<h4>Account:</h4><p><span class="type">(string)</span> An additional "account" name for systems which require it (usually used for access control).</p>
+
+<h4>HidePassword:</h4><p><span class="type">(boolean)</span> Whether to include the password in the FTP log as plain text or replace it with "****".</p>
+
+<p class="indent">
+<b>true</b> - Replace the password with **** in the command/response log.<BR/>
+<b>false</b> - Don't hide the password in the command/response log.</p>
+
+<h4>Returns:</h4><p>Nothing.</p>
+
+<h4>Example 1:</h4><pre class="code">
+-- make an anonymous connection to ftp.cdrom.com
+FTP.Connect("ftp.cdrom.com");
+
+err = Application.GetLastError();
+if err ~= FTP.OK then
+    Dialog.Message("Error", _tblErrorMessages[err]);
+end
+</pre>
+
+<h4>Example 2:</h4><pre class="code">
+-- connect to NASA's space image server
+-- note: the username and password won't work, this is just an example :)
+FTP.Connect("explorer.arc.nasa.gov", "neil_armstrong", "EagleHasLanded");
+
+err = Application.GetLastError();
+if err ~= FTP.OK then
+    Dialog.Message("Error", _tblErrorMessages[err]);
+end
+</pre>
+
+
+<h3><a name="FTP.Delete">FTP.Delete (string Filename);</a></h3>
+
+<h4>Description:</h4><p>Deletes a file in the current directory on the FTP server.</p>
+
+<h4>Filename:</h4><p><span class="type">(string)</span> The name of the file that you want to delete.</p>
+
+<h4>Returns:</h4><p>Nothing.</p>
+
+<h4>Example:</h4><pre class="code">
+-- connect to myftp.com and delete foo.txt from the /pub/uploads folder
+
+-- step 1: connect to the site
+FTP.Connect("ftp.myftp.com", "myusername", "mypassword");
+err = Application.GetLastError();
+if err ~= FTP.OK then
+    Dialog.Message("Error", _tblErrorMessages[err]);
+end
+
+-- step 2: navigate to the desired directory
+FTP.ChangeDir("/pub/uploads");
+err = Application.GetLastError();
+if err ~= FTP.OK then
+    Dialog.Message("Error", _tblErrorMessages[err]);
+end
+
+-- step 3: delete the file
+FTP.Delete("foo.txt");
+err = Application.GetLastError();
+if err ~= FTP.OK then
+    Dialog.Message("Error", _tblErrorMessages[err]);
+end
+</pre>
+
+
+<h3><a name="FTP.Disconnect">FTP.Disconnect ();</a></h3>
+
+<h4>Description:</h4><p>Disconnects from the FTP server.</p>
+
+<h4>Returns:</h4><p>Nothing.</p>
+
+<h4>Example:</h4><pre class="code">
+-- log off
+FTP.Disconnect();
+</pre>
+
+
+<h3><a name="FTP.Download">FTP.Download (string Source, string Destination, function CallbackFunction)</span>;</a></h3>
+
+<h4>Description:</h4><p>Downloads a file from the current directory on the FTP server.</p>
+
+<h4>Source:</h4><p><span class="type">(string)</span> The name of the file that you want to download.</p>
+
+<h4>Destination:</h4><p><span class="type">(string)</span> The full path and filename of the destination file that you want to download to.</p>
+
+<h4>CallbackFunction:</h4><p><span class="type">(string)</span> The 
+name of a function that will be called whenever progress is made in 
+the download operation. (You can use this callback function to display 
+the progress of the download operation in your own custom way.)</p>
+
+<p class="note"><b>Note:</b> If CallbackFunction is set to nil, then 
+the progress information will be sent to the built-in status dialog, 
+assuming it is currently visible. (You can show or hide the status 
+dialog with a StatusDlg.Show or StatusDlg.Hide action.)</p>
+
+<p>The callback function must be able to receive the following parameters:</p>
+
+<div class="CallbackParams">
+<h5>Bytes:</h5><p><span class="type">(number)</span> The number of bytes that have been transferred so far.</p>
+
+<h5>TotalBytes:</h5><p><span class="type">(number)</span> The total number of bytes to transfer, or 0 if the total number of bytes is not known.</p>
+
+</div>
+<!-- /CallbackParams -->
+
+<p>The callback function should return a boolean value (true or false) 
+indicating whether the download should continue:</p>
+
+<p class="indent"><b>true</b> - Continue downloading the file.<BR>
+<b>false</b> - Abort the download.</p>
+
+<h4>Returns:</h4><p>Nothing.</p>
+
+<h4>Example 1:</h4><pre class="code">
+-- download the Project Gutenberg edition of Hamlet
+
+-- step 1: connect anonymously to cdrom.com
+FTP.Connect("ftp.cdrom.com");
+err = Application.GetLastError();
+if err ~= FTP.OK then
+    Dialog.Message("Error", _tblErrorMessages[err]);
+end
+
+-- step 2: change to the directory where the text file is located
+FTP.ChangeDir("/.1/gutenberg/etext97");
+err = Application.GetLastError();
+if err ~= FTP.OK then
+    Dialog.Message("Error", _tblErrorMessages[err]);
+end
+
+-- step 3a: enable the status dialog's cancel button
+StatusDlg.ShowCancelButton();
+
+-- step 3b: show the status dialog
+StatusDlg.Show();
+
+-- step 3c: download the file as &lt;temp&gt;\Hamlet.txt
+FTP.Download("1ws2610.txt", _TempFolder .. "\\Hamlet.txt");
+err = Application.GetLastError();
+
+-- step 3d: hide the status dialog
+StatusDlg.Hide();
+
+-- step 4: log off
+FTP.Disconnect();
+
+-- ...now check whether FTP.Download generated an error
+if err == FTP.OK then
+    Dialog.Message("Success!", _TempFolder.."\\Hamlet.txt was downloaded successfully!");
+else
+    Dialog.Message("Error", _tblErrorMessages[err]);
+end
+</pre>
+
+<h4>Example 2:</h4><pre class="code">
+-- download the Project Gutenberg edition of Hamlet 
+-- using a custom progress display
+
+-- display the progress in an AutoPlay Media Studio paragraph object named "Progress" 
+-- (note: the paragraph object must already exist on the page)
+function cbDownload(nBytes, nTotal)
+    if nTotal == 0 then
+        Paragraph.SetText("Progress", nBytes .. " bytes downloaded!")
+    else
+        Paragraph.SetText("Progress", nBytes / nTotal * 100 .. "% downloaded!")
+    end
+end
+
+-- step 1: connect anonymously to cdrom.com
+FTP.Connect("ftp.cdrom.com");
+err = Application.GetLastError();
+if err ~= FTP.OK then
+    Dialog.Message("Error", _tblErrorMessages[err]);
+end
+
+-- step 2: change to the directory where the text file is located
+FTP.ChangeDir("/.1/gutenberg/etext97");
+err = Application.GetLastError();
+if err ~= FTP.OK then
+    Dialog.Message("Error", _tblErrorMessages[err]);
+end
+
+-- step 3: download the file as &lt;temp&gt;\Hamlet.txt
+FTP.Download("1ws2610.txt", _TempFolder .. "\\Hamlet.txt", cbDownload);
+err = Application.GetLastError();
+
+-- step 4: log off
+FTP.Disconnect();
+
+-- ...now check whether FTP.Download generated an error
+if err == FTP.OK then
+    Dialog.Message("Success!", _TempFolder.."\\Hamlet.txt was downloaded successfully!");
+else
+    Dialog.Message("Error", _tblErrorMessages[err]);
+end
+</pre>
+
+
+<h3><a name="FTP.GetConnectTimeout">number FTP.GetConnectTimeout ();</a></h3>
+
+<h4>Description:</h4><p>Returns the number of seconds that the application will 
+wait while attempting to establish a connection with the FTP server.</p>
+
+<h4>Returns:</h4><p><span class="type">(number)</span> The current connection timeout, in seconds.</p>
+
+<h4>Example:</h4><pre class="code">
+-- get the current timeout value
+nConnectTimeout = FTP.GetConnectTimeout();
+</pre>
+
+
+<h3><a name="FTP.GetControlPort">number FTP.GetControlPort ();</a></h3>
+
+<h4>Description:</h4><p>Returns the control port being used for communication with the FTP server.</p>
+
+<h4>Returns:</h4><p><span class="type">(number)</span> The current control port.</p>
+
+<h4>Example:</h4><pre class="code">
+-- get the current control port
+nControlPort = FTP.GetControlPort();
+</pre>
+
+
+<h3><a name="FTP.GetCurrentDir">string FTP.GetCurrentDir ();</a></h3>
+
+<h4>Description:</h4><p>Returns the path to the current directory on the FTP server.</p>
+
+<h4>Returns:</h4><p><span class="type">(string)</span> The path to the current directory on the FTP server.</p>
+
+<h4>Example:</h4><pre class="code">
+-- get the current directory
+strDir = FTP.GetCurrentDir();
+</pre>
+
+
+<h3><a name="FTP.GetDataPort">number FTP.GetDataPort ();</a></h3>
+
+<h4>Description:</h4><p>Returns the data port being used for communication with the FTP server.</p>
+
+<h4>Returns:</h4><p><span class="type">(number)</span> The current data port.</p>
+
+<h4>Example:</h4><pre class="code">
+-- get the current data port
+nDataPort = FTP.GetDataPort();
+</pre>
+
+
+<h3><a name="FTP.GetFileInfo">table FTP.GetFileInfo (string Filename);</a></h3>
+
+<h4>Description:</h4><p>Returns a table containing information about a specific 
+file in the current directory on the FTP server.</p>
+
+<h4>Filename:</h4><p><span class="type">(string)</span> The name of a file in the current directory on the FTP server.</p>
+
+<h4>Returns:</h4><p><span class="type">(table)</span> A table containing information about the file. If an error occurs (for example, if the file doesn't exist), this action returns nil.</p>
+
+<p>If successful, the following information will be stored in the table:</p>
+
+<p class="indent"><b>Name:</b><br><span class="type">(string)</span> The name of the file.</p>
+<p class="indent"><b>Size:</b><br><span class="type">(number)</span> The size of the file, in bytes.</p>
+<p class="indent"><b>Year:</b><br><span class="type">(number)</span> The year from the file's creation date, e.g. 2003.</p>
+<p class="indent"><b>Month:</b><br><span class="type">(number)</span> The month from the file's creation date, e.g. 12.</p>
+<p class="indent"><b>Day:</b><br><span class="type">(number)</span> The day from the file's creation date, e.g. 25.</p>
+<p class="indent"><b>Hour:</b><br><span class="type">(number)</span> The hour from the file's creation date, e.g. 16.</p>
+<p class="indent"><b>Minute:</b><br><span class="type">(number)</span> The minute from the file's creation date, e.g. 57.</p>
+<p class="indent"><b>Date:</b><br><span class="type">(string)</span> The file's creation date in "&lt;weekday&gt;, &lt;month&gt; &lt;day&gt;, &lt;year&gt;" format, e.g. Thursday, Dec 25, 2003.</p>
+<p class="indent"><b>DateISO:</b><br><span class="type">(string)</span> The file's creation date in ISO format, e.g. 2003-12-25T16:57:00.</p>
+
+<h4>Example:</h4><pre class="code">
+-- get the size and creation date of the Project Gutenberg version of Hamlet
+
+-- step 1: connect anonymously to cdrom.com
+FTP.Connect("ftp.cdrom.com");
+err = Application.GetLastError();
+if err ~= FTP.OK then
+    Dialog.Message("Error", _tblErrorMessages[err]);
+end
+
+-- step 2: change to the directory where the text file is located
+FTP.ChangeDir("/.1/gutenberg/etext97");
+err = Application.GetLastError();
+if err ~= FTP.OK then
+    Dialog.Message("Error", _tblErrorMessages[err]);
+end
+
+-- step 3: get the size of the Hamlet text file
+tbInfo = FTP.GetFileInfo("1ws2610.txt");
+if tbInfo then
+    nHamletFileSize = tbInfo.Size;
+    strHamletFileDate = tbInfo.Date;
+    Dialog.Message("File Information:", "Size: " .. nHamletFileSize .. " bytes\r\nDate: "..strHamletFileDate);
+end
+
+-- step 4: log off
+FTP.Disconnect();
+</pre>
+
+
+<h3><a name="FTP.GetHelp">string FTP.GetHelp ();</a></h3>
+
+<h4>Description:</h4><p>Returns the help text for a command from the FTP server.</p>
+
+<h4>Command:</h4><p><span class="type">(string)</span> The command whose help text you want to retrieve. (On some servers you can use "" to get a list of all commands.)</p>
+
+<h4>Returns:</h4><p><span class="type">(string)</span> The help text (i.e. syntax) returned by the server for that command.</p>
+
+<h4>Example:</h4><pre class="code">
+-- get the syntax of the MODE command
+strHelp = FTP.GetHelp("MODE");
+</pre>
+
+
+<h3><a name="FTP.GetLastResponse">string FTP.GetLastResponse ();</a></h3>
+
+<h4>Description:</h4><p>Returns the text received from the FTP server as a result of the most recent FTP action.</p>
+
+<P class="note"><b>Note:</b> Some FTP actions don't generate any response from the server. In such cases, GetLastResponse() will return an empty string ("").</p>
+
+<h4>Returns:</h4><p><span class="type">(string)</span> The FTP server's response to the last FTP action that was performed.</p>
+
+<h4>Example:</h4><pre class="code">
+-- connect anonymously to the NASA image server
+FTP.Connect("explorer.arc.nasa.gov");
+
+-- get the server's responses to the commands sent by the FTP.Connect action
+strResponse = FTP.GetLastResponse();
+
+-- display the response in an AutoPlay Media Studio paragraph object named "Response"
+-- (note: the paragraph object must already exist on the page)
+Paragraph.SetText("Response", strResponse);
+</pre>
+
+
+<h3><a name="FTP.GetLog">string FTP.GetLog ();</a></h3>
+
+<h4>Description:</h4><p>Returns a log of the interaction with the FTP server, including commands sent to the server and responses received from it.</p>
+
+<P class="note"><b>Note:</b> The log will contain every FTP command and reponse since your application started, or the last time the FTP.ClearLog action was used.</p>
+
+<h4>Returns:</h4><p><span class="type">(string)</span> The current contents of the command/response log.</p>
+
+<h4>Example:</h4><pre class="code">
+-- this function checks the last error code and 
+-- displays the appropriate error message if an error occurred
+local function check_error()
+    err = Application.GetLastError();
+    if err ~= FTP.OK then
+        Dialog.Message("Error", _tblErrorMessages[err]);
+    end
+    
+    -- returns true if OK, false if error
+    return (err == FTP.OK);
+end
+
+-- empty the log
+FTP.ClearLog();
+
+-- connect anonymously to the NASA image server
+FTP.Connect("explorer.arc.nasa.gov");
+if check_error() then
+    -- connected okay
+
+    -- navigate to the /pub/SPACE directory
+    FTP.ChangeDir("/pub/SPACE");
+    if check_error() then
+        -- made it to /pub/SPACE
+        
+        -- get a list of the files and folders here
+        tbContents = FTP.List();
+
+        -- log off
+        FTP.Disconnect();
+    end
+end
+
+-- display a log of all the commands and responses that just transpired
+-- in an AutoPlay Media Studio paragraph object named "Log"
+-- (note: the paragraph object must already exist on the page)
+Paragraph.SetText("Log", FTP.GetLog() );
+</pre>
+
+
+<h3><a name="FTP.GetPassiveMode">boolean FTP.GetPassiveMode ();</a></h3>
+
+<h4>Description:</h4><p>Returns true if the FTP actions will communicate with the server in passive mode (where control and data connections are both originated by the client).</p>
+
+<h4>Returns:</h4><p><span class="type">(boolean)</span> Whether the FTP actions will use passive mode:</p>
+
+<p class="indent">
+<b>true</b> - Passive (firewall-friendly) mode enabled.<BR/>
+<b>false</b> - Normal FTP communication will be used.</p>
+
+<h4>Example:</h4><pre class="code">
+-- display a message if passive mode is enabled
+if FTP.GetPassiveMode() then
+    Dialog.Message("Status", "Passive Mode Enabled");
+end
+</pre>
+
+
+<h3><a name="FTP.GetTransferType">number FTP.GetTransferType ();</a></h3>
+
+<h4>Description:</h4><p>Returns the transfer type (FTP.ASCII or FTP.BINARY) being used for data transfer and storage.</p>
+
+<h4>Returns:</h4><p><span class="type">(number)</span> The transfer type:</p>
+
+<p class="indent">
+<b>0:</b>&nbsp; (FTP.ASCII) - ASCII (type A) transfer type.<BR/>
+<b>1:</b>&nbsp; (FTP.BINARY) - Binary (type I) transfer type.</p>
+
+<h4>Example:</h4><pre class="code">
+-- display the current transfer type
+if FTP.GetTransferType() == FTP.ASCII then
+    Dialog.Message("Current Transfer Type", "ASCII");
+else
+    Dialog.Message("Current Transfer Type", "Binary");
+end
+</pre>
+
+
+<h3><a name="FTP.IsConnected">boolean FTP.IsConnected ();</a></h3>
+
+<h4>Description:</h4><p>Returns true if there is currently a connection with an FTP server.</p>
+
+<h4>Returns:</h4><p><span class="type">(boolean)</span> Whether there is an FTP connection:</p>
+
+<p class="indent">
+<b>true</b> - Connected to an FTP server.<BR/>
+<b>false</b> - Not connected.</p>
+
+<h4>Example:</h4><pre class="code">
+-- check for a connection and log off (if required) before exiting the application
+if FTP.IsConnected() then
+    FTP.Disconnect();
+end
+
+Application.Exit();
+</pre>
+
+
+<h3><a name="FTP.IsValidHostname">boolean FTP.IsValidHostname (string Hostname);</a></h3>
+
+<h4>Description:</h4><p>Returns true if the given hostname or IP address is valid (formatted properly).</p>
+
+<h4>Hostname:</h4><p><span class="type">(string)</span> The hostname or IP address whose format you want to validate.</p>
+
+<h4>Returns:</h4><p><span class="type">(boolean)</span> Whether there is an FTP connection:</p>
+
+<p class="indent">
+<b>true</b> - Hostname/IP address is formatted properly.<BR/>
+<b>false</b> - Invalid hostname/IP address format.</p>
+
+<h4>Example:</h4><pre class="code">
+-- ask user for a hostname/IP address
+strHostname = Dialog.Input("What site do you want to connect to?", "Hostname/IP Address:")
+
+-- does it look valid?
+if FTP.IsValidHostname(strHostname) then
+    Dialog.Message("", "'"..strHostname.."' looks valid to me.");
+else
+    Dialog.Message("", "'"..strHostname.."' is not valid!");
+end
+</pre>
+
+
+<h3><a name="FTP.List">table FTP.List ();</a></h3>
+
+<h4>Description:</h4><p>Returns a numerically indexed table of tables with information about each file or folder in the current directory on the FTP server.</p>
+
+<h4>Returns:</h4><p><span class="type">(table)</span> A numerically indexed 
+table containing one table of information for every file and folder in the 
+current directory.</p>
+
+<p>The total number of files and folders (i.e. the number of directory entries) 
+is stored in a key named Count. You can use this value to determine how many 
+"sub-tables" are in the main table.</p>
+
+<p class="note"><b>Note:</b> The information about the files and folders is 
+stored in the table in the same order as it is returned from the server. It 
+often won't be sorted in any way.</p>
+
+<p>If successful, the following information will be stored for each file or folder in the directory:</p>
+
+<p class="indent"><b>Name:</b><br><span class="type">(string)</span> The name of the file or folder.</p>
+<p class="indent"><b>Size:</b><br><span class="type">(number)</span> The size of the file, in bytes. (For folders, this is usually a fixed value, like 1024 or 4096. The actual value is server specific.)</p>
+<p class="indent"><b>Year:</b><br><span class="type">(number)</span> The year from the file (or folder) date, e.g. 2003.</p>
+<p class="indent"><b>Month:</b><br><span class="type">(number)</span> The month from the file (or folder) date, e.g. 12.</p>
+<p class="indent"><b>Day:</b><br><span class="type">(number)</span> The day from the file (or folder) date, e.g. 25.</p>
+<p class="indent"><b>Hour:</b><br><span class="type">(number)</span> The hour from the file (or folder) date, e.g. 16.</p>
+<p class="indent"><b>Minute:</b><br><span class="type">(number)</span> The minute from the file (or folder) date, e.g. 57.</p>
+<p class="indent"><b>Date:</b><br><span class="type">(string)</span> The file (or folder) date in "&lt;weekday&gt;, &lt;month&gt; &lt;day&gt;, &lt;year&gt;" format, e.g. Thursday, Dec 25, 2003.</p>
+<p class="indent"><b>DateISO:</b><br><span class="type">(string)</span> The file (or folder) date in ISO format, e.g. 2003-12-25T16:57:00.</p>
+<p class="indent"><b>Type:</b><br><span class="type">(number)</span> The type of entry. Either 0 (FTP.FOLDER) or 1 (FTP.FILE).</p>
+
+<h4>Example:</h4><pre class="code">
+-- display the name, size and date for every file and folder in the current directory
+-- in an AutoPlay Media Studio listbox object named "DirList"
+-- (note: the listbox object must already exist on the current page)
+
+-- empty the listbox
+ListBox.DeleteItem("DirList",LB_ALLITEMS);
+
+tbEntries = FTP.List();
+
+-- add each item to the listbox in this format:
+-- &lt;name&gt; (&lt;size&gt;) (&lt;date&gt;)
+for i = 1, tbEntries.Count do
+    local name = tbEntries[i].Name;
+    local size = tbEntries[i].Size;
+    local date = tbEntries[i].Date;
+
+    if tbEntries[i].Type == FTP.FOLDER then
+        -- add a [ ] prefix to make the folders stand out in the listbox
+        ListBox.AddItem("DirList","[ ] "..name.."("..size.." bytes) ("..date..")");
+    else
+        ListBox.AddItem("DirList",name.."("..size.." bytes) ("..date..")");
+    end
+end
+</pre>
+
+
+<h3><a name="FTP.ListFiles">table FTP.ListFiles ();</a></h3>
+
+<h4>Description:</h4><p>Returns a numerically indexed table of tables with information about each file in the current directory on the FTP server.</p>
+
+<h4>Returns:</h4><p><span class="type">(table)</span> A numerically indexed 
+table containing one table of information for every file in the 
+current directory.</p>
+
+<p>The total number of files is stored in a key named Count. You can use this 
+value to determine how many "sub-tables" are in the main table.</p>
+
+<p>If successful, the following information will be stored for each file in the directory:</p>
+
+<p class="indent"><b>Name:</b><br><span class="type">(string)</span> The name of the file.</p>
+<p class="indent"><b>Size:</b><br><span class="type">(number)</span> The size of the file, in bytes.</p>
+<p class="indent"><b>Year:</b><br><span class="type">(number)</span> The year from the file date, e.g. 2003.</p>
+<p class="indent"><b>Month:</b><br><span class="type">(number)</span> The month from the file date, e.g. 12.</p>
+<p class="indent"><b>Day:</b><br><span class="type">(number)</span> The day from the file date, e.g. 25.</p>
+<p class="indent"><b>Hour:</b><br><span class="type">(number)</span> The hour from the file date, e.g. 16.</p>
+<p class="indent"><b>Minute:</b><br><span class="type">(number)</span> The minute from the file date, e.g. 57.</p>
+<p class="indent"><b>Date:</b><br><span class="type">(string)</span> The file date in "&lt;weekday&gt;, &lt;month&gt; &lt;day&gt;, &lt;year&gt;" format, e.g. Thursday, Dec 25, 2003.</p>
+<p class="indent"><b>DateISO:</b><br><span class="type">(string)</span> The file date in ISO format, e.g. 2003-12-25T16:57:00.</p>
+
+<h4>Example:</h4><pre class="code">
+-- display the name, size and date for every file in the current directory
+-- in an AutoPlay Media Studio listbox object named "DirList"
+-- (note: the listbox object must already exist on the current page)
+
+-- empty the listbox
+ListBox.DeleteItem("DirList",LB_ALLITEMS);
+
+tbFiles = FTP.ListFiles();
+
+-- add each item to the listbox in this format:
+-- &lt;name&gt; (&lt;size&gt;) (&lt;date&gt;)
+for i = 1, tbFiles.Count do
+    local name = tbFiles[i].Name;
+    local size = tbFiles[i].Size;
+    local date = tbFiles[i].Date;
+
+    ListBox.AddItem("DirList",name.."("..size.." bytes) ("..date..")");
+end
+</pre>
+
+
+<h3><a name="FTP.ListFolders">table FTP.ListFolders ();</a></h3>
+
+<h4>Description:</h4><p>Returns a numerically indexed table of tables with information about each folder in the current directory on the FTP server.</p>
+
+<h4>Returns:</h4><p><span class="type">(table)</span> A numerically indexed 
+table containing one table of information for every folder in the 
+current directory.</p>
+
+<p>The total number of folders is stored in a key named Count. You can use this 
+value to determine how many "sub-tables" are in the main table.</p>
+
+<p>If successful, the following information will be stored for each folder in the directory:</p>
+
+<p class="indent"><b>Name:</b><br><span class="type">(string)</span> The name of the folder.</p>
+<p class="indent"><b>Size:</b><br><span class="type">(number)</span> Possibly the size of the folder, in bytes...but this is usually a fixed value, like 1024 or 4096. (The actual value is server specific.)</p>
+<p class="indent"><b>Year:</b><br><span class="type">(number)</span> The year from the folder date, e.g. 2003.</p>
+<p class="indent"><b>Month:</b><br><span class="type">(number)</span> The month from the folder date, e.g. 12.</p>
+<p class="indent"><b>Day:</b><br><span class="type">(number)</span> The day from the folder date, e.g. 25.</p>
+<p class="indent"><b>Hour:</b><br><span class="type">(number)</span> The hour from the folder date, e.g. 16.</p>
+<p class="indent"><b>Minute:</b><br><span class="type">(number)</span> The minute from the folder date, e.g. 57.</p>
+<p class="indent"><b>Date:</b><br><span class="type">(string)</span> The folder date in "&lt;weekday&gt;, &lt;month&gt; &lt;day&gt;, &lt;year&gt;" format, e.g. Thursday, Dec 25, 2003.</p>
+<p class="indent"><b>DateISO:</b><br><span class="type">(string)</span> The folder date in ISO format, e.g. 2003-12-25T16:57:00.</p>
+
+<h4>Example:</h4><pre class="code">
+-- display the name, size and date for every folder in the current directory
+-- in an AutoPlay Media Studio listbox object named "DirList"
+-- (note: the listbox object must already exist on the current page)
+
+-- empty the listbox
+ListBox.DeleteItem("DirList",LB_ALLITEMS);
+
+tbFolders = FTP.ListFolders();
+
+-- add each item to the listbox in this format:
+-- &lt;name&gt; (&lt;size&gt;) (&lt;date&gt;)
+for i = 1, tbFolders.Count do
+    local name = tbFolders[i].Name;
+    local size = tbFolders[i].Size;
+    local date = tbFolders[i].Date;
+
+    ListBox.AddItem("DirList",name.."("..size.." bytes) ("..date..")");
+end
+</pre>
+
+
+<h3><a name="FTP.MakeDir">FTP.MakeDir (string DirName);</a></h3>
+
+<h4>Description:</h4><p>Creates a new folder in the current directory on the FTP server.</p>
+
+<h4>DirName:</h4><p><span class="type">(string)</span> The name of the folder you want to create.</p>
+
+<h4>Returns:</h4><p>Nothing.</p>
+
+<h4>Example:</h4><pre class="code">
+-- create a folder named "yippee" in the current directory
+FTP.MakeDir("yippee");
+err = Application.GetLastError();
+if err ~= FTP.OK then
+    Dialog.Message("Error", _tblErrorMessages[err]);
+end
+</pre>
+
+
+<h3><a name="FTP.NoOp">FTP.NoOp ();</a></h3>
+
+<h4>Description:</h4><p>Performs a "no-op" operation (a NOOP command).</p>
+
+<p class="note"><b>Note:</b> This action doesn't do anything beyond triggering a 
+response from the server. It's usually used as part of a "keep-alive" routine to 
+prevent a server from breaking a connection due to inactivity.</p>
+
+<h4>Returns:</h4><p>Nothing.</p>
+
+<h4>Example:</h4><pre class="code">
+-- tickle the server to keep it awake
+FTP.NoOp();
+</pre>
+
+
+<h3><a name="FTP.RemoveDir">FTP.RemoveDir (string DirName);</a></h3>
+
+<h4>Description:</h4><p>Deletes a specific folder in the current directory on the FTP server.</p>
+
+<h4>DirName:</h4><p><span class="type">(string)</span> The name of the folder you want to delete.</p>
+
+<h4>Returns:</h4><p>Nothing.</p>
+
+<h4>Example:</h4><pre class="code">
+-- delete a folder named "yippee" in the current directory
+FTP.RemoveDir("yippee");
+err = Application.GetLastError();
+if err ~= FTP.OK then
+    Dialog.Message("Error", _tblErrorMessages[err]);
+end
+</pre>
+
+
+<h3><a name="FTP.Rename">FTP.Rename (string Oldname, string Newname);</a></h3>
+
+<h4>Description:</h4><p>Renames a file in the current directory on the FTP server.</p>
+
+<h4>Oldname:</h4><p><span class="type">(string)</span> The name of the file you want to rename.</p>
+
+<h4>Newname:</h4><p><span class="type">(string)</span> The new name for the file.</p>
+
+<h4>Returns:</h4><p>Nothing.</p>
+
+<h4>Example:</h4><pre class="code">
+-- rename a file named "jekyll.doc" to "hyde.txt" in the current directory
+FTP.Rename("jekyll.doc", "hyde.txt");
+err = Application.GetLastError();
+if err ~= FTP.OK then
+    Dialog.Message("Error", _tblErrorMessages[err]);
+end
+</pre>
+
+
+<h3><a name="FTP.Resume">FTP.Resume (string Source, string Destination, function CallbackFunction)</span>;</a></h3>
+
+<h4>Description:</h4><p>Resumes downloading a file from the current directory on the FTP server. (Continues downloading a file whose download was interrupted.)</p>
+
+<h4>Source:</h4><p><span class="type">(string)</span> The name of the file that you want to download.</p>
+
+<h4>Destination:</h4><p><span class="type">(string)</span> The full path and 
+filename of the destination file that you want to download to. If a file by that 
+name already exists, and its size is less than the total size of the source 
+file, the download will be "resumed" and the data will be added to the end of 
+the file. If the file doesn't exist, it will be downloaded and created normally 
+(i.e. just like <a href="#FTP.Download">FTP.Download</a>).</p>
+
+<h4>CallbackFunction:</h4><p><span class="type">(string)</span> The 
+name of a function that will be called whenever progress is made in 
+the download operation. (You can use this callback function to display 
+the progress of the download operation in your own custom way.)</p>
+
+<p class="note"><b>Note:</b> If CallbackFunction is set to nil, then 
+the progress information will be sent to the built-in status dialog, 
+assuming it is currently visible. (You can show or hide the status 
+dialog with a StatusDlg.Show or StatusDlg.Hide action.)</p>
+
+<p>The callback function must be able to receive the following parameters:</p>
+
+<div class="CallbackParams"> <h5>Bytes:</h5><p><span 
+class="type">(number)</span> The number of bytes that have been transferred so 
+far.</p>
+
+<h5>TotalBytes:</h5><p><span class="type">(number)</span> The total number of 
+bytes to transfer, or 0 if the total number of bytes is not known.</p>
+
+</div>
+<!-- /CallbackParams -->
+
+<p>The callback function should return a boolean value (true or false) 
+indicating whether the download should continue:</p>
+
+<p class="indent"><b>true</b> - Continue downloading the file.<BR>
+<b>false</b> - Abort the download.</p>
+
+<h4>Returns:</h4><p>Nothing.</p>
+
+<h4>Example:</h4><pre class="code">
+-- resume a previously interruped download
+FTP.Resume("jekyll.txt", _TempFolder .. "\\jekyll.txt");
+err = Application.GetLastError();
+if err == FTP.OK then
+    Dialog.Message("Success!", _TempFolder.."\\jekyll.txt was downloaded successfully!");
+else
+    Dialog.Message("Error", _tblErrorMessages[err]);
+end
+</pre>
+
+
+<h3><a name="FTP.SetCommandCallback">FTP.SetCommandCallback (function CallbackFunction)</span>;</a></h3>
+
+<h4>Description:</h4><p>Registers a callback function to be called whenever a command is sent to the server.</p>
+
+<h4>CallbackFunction:</h4><p><span class="type">(string)</span> The name of a 
+function that will be called whenever a command is sent to the server.</p>
+
+<p class="note"><b>Note:</b> Set CallbackFunction to nil to "unregister" an 
+existing command callback (i.e. to stop the function from being called whenever 
+a command is sent).</p>
+
+<p>The callback function must be able to receive the following parameter:</p>
+
+<div class="CallbackParams"> <h5>Command:</h5><p><span 
+class="type">(string)</span> The command that was sent to the server.</p>
+</div>
+<!-- /CallbackParams -->
+
+<p>The callback function should not return anything.</p>
+
+<h4>Returns:</h4><p>Nothing.</p>
+
+<h4>Example 1:</h4><pre class="code">
+-- this function displays the command strings in an AutoPlay Media Studio paragraph object named "Log"
+-- (note: the paragraph object must already exist on the current page)
+function cbCommand(strCommand)
+
+    -- make sure we don't display the login password
+    if String.Left(strCommand, 4) == "PASS" then
+        -- replace the command string with a safe (phony) string
+        -- note: this only changes the contents of the strCommand variable
+        --       within this function; it has no effect on the command that
+        --       was sent to the server.
+        strCommand = "PASS ****\r\n";
+    end
+
+    -- append the command string to the existing text in the paragraph object
+    local strLog = Paragraph.GetText("Log");
+    Paragraph.SetText("Log",strLog..strCommand);
+
+    -- scroll the paragraph to the bottom
+    Paragraph.SetScrollPos("Log",9999999999);
+end
+
+-- register our command callback function so it gets called for every FTP command
+FTP.SetCommandCallback(cbCommand);
+</pre>
+
+<h4>Example 2:</h4><pre class="code">
+-- this function displays the command strings in a debug window
+function cbCommand(strCommand)
+
+    -- make sure we don't display the login password
+    if String.Left(strCommand, 4) == "PASS" then
+        -- replace the command string with a safe (phony) string
+        -- note: this only changes the contents of the strCommand variable
+        --       within this function; it has no effect on the command that
+        --       was sent to the server.
+        strCommand = "PASS ****\r\n";
+    end
+
+    -- open the debug window if it isn't already open
+    Debug.ShowWindow(true);
+    
+    -- output the command to the debug window
+    Debug.Print(strCommand);
+
+    -- note: the debug window may not update while the plugin is communicating with the server
+    --       so you'll only see the commands in the window after the interaction is complete
+end
+
+-- register our command callback function so it gets called for every FTP command
+FTP.SetCommandCallback(cbCommand);
+</pre>
+
+
+<h3><a name="FTP.SetConnectTimeout">FTP.SetConnectTimeout (number Timeout);</a></h3>
+
+<h4>Description:</h4><p>Sets the number of seconds that the application will 
+wait while attempting to establish a connection with the FTP server.</p>
+
+<h4>Timeout:</h4><p><span class="type">(number)</span> The connection timeout, 
+in seconds.</p>
+
+<h4>Returns:</h4><p>Nothing.</p>
+
+<h4>Example 1:</h4><pre class="code">
+-- wait 15 seconds before giving up when trying to connect
+FTP.SetConnectTimeout(15);
+</pre>
+
+<h4>Example 2:</h4><pre class="code">
+-- increase the current connection timeout by 5 seconds
+FTP.SetConnectTimeout( FTP.GetConnectTimeout() + 5 );
+</pre>
+
+
+<h3><a name="FTP.SetControlPort">FTP.SetControlPort (number ControlPort);</a></h3>
+
+<h4>Description:</h4><p>Sets the control port that will be used for 
+communication with the FTP server.</p>
+
+<h4>ControlPort:</h4><p><span class="type">(number)</span> The control port to use for communication with the FTP server.</p>
+
+<h4>Returns:</h4><p>Nothing.</p>
+
+<h4>Example:</h4><pre class="code">
+-- set the control port to 21
+FTP.SetControlPort(21);
+</pre>
+
+
+<h3><a name="FTP.SetDataPort">FTP.SetDataPort (number DataPort);</a></h3>
+
+<h4>Description:</h4><p>Sets the data port that will be used for communication with the FTP server.</p>
+
+<h4>DataPort:</h4><p><span class="type">(number)</span> The data port to use for communication with the FTP server.</p>
+
+<h4>Returns:</h4><p>Nothing.</p>
+
+<h4>Example:</h4><pre class="code">
+-- set the data port to 1050
+FTP.SetDataPort(1050);
+</pre>
+
+
+<h3><a name="FTP.SetPassiveMode">FTP.SetPassiveMode (boolean PassiveMode);</a></h3>
+
+<h4>Description:</h4><p>Sets the data transfer mode to use when communicating with the server.</p>
+
+<h4>PassiveMode:</h4><p><span class="type">(boolean)</span> Whether to 
+communicate with the server in passive mode:</p>
+
+<p class="indent"><b>true</b> - Turn on passive mode (where control and data connections are both originated by the client).<BR>
+<b>false</b> - Turn off passive mode.</p>
+
+<h4>Returns:</h4><p>Nothing.</p>
+
+<h4>Example:</h4><pre class="code">
+-- turn passive mode on
+FTP.SetPassiveMode(true);
+</pre>
+
+
+<h3><a name="FTP.SetResponseCallback">FTP.SetResponseCallback (function CallbackFunction)</span>;</a></h3>
+
+<h4>Description:</h4><p>Registers a callback function to be called whenever a command response is received from the server.</p>
+
+<h4>CallbackFunction:</h4><p><span class="type">(string)</span> The name of a 
+function that will be called whenever a command response is received from the server.</p>
+
+<p class="note"><b>Note:</b> Set CallbackFunction to nil to "unregister" an 
+existing response callback (i.e. to stop the function from being called whenever 
+a response is received).</p>
+
+<p>The callback function must be able to receive the following parameter:</p>
+
+<div class="CallbackParams"> <h5>Response:</h5><p><span 
+class="type">(string)</span> The response that was received from the server.</p>
+</div>
+<!-- /CallbackParams -->
+
+<p>The callback function should not return anything.</p>
+
+<h4>Returns:</h4><p>Nothing.</p>
+
+<h4>Example:</h4><pre class="code">
+-- this function displays the server responses in an AutoPlay Media Studio paragraph object named "Log"
+-- (note: the paragraph object must already exist on the current page)
+function cbResponse(strResponse)
+
+    -- append the response string to the existing text in the paragraph object
+    local strLog = Paragraph.GetText("Log");
+    Paragraph.SetText("Log",strLog..strResponse);
+
+    -- scroll the paragraph to the bottom
+    Paragraph.SetScrollPos("Log",9999999999);
+end
+
+-- register our response callback function
+FTP.SetResponseCallback(cbResponse);
+</pre>
+
+
+<h3><a name="FTP.SetTransferType">FTP.SetTransferType (number TransferType);</a></h3>
+
+<h4>Description:</h4><p>Sets the data transfer mode to use when communicating with the server.</p>
+
+<h4>TransferType:</h4><p><span class="type">(number)</span> The transfer type to use for uploads and downloads:</p>
+
+<p class="indent">
+<b>0:</b>&nbsp; (FTP.ASCII) - ASCII (type A) transfer type.<BR/>
+<b>1:</b>&nbsp; (FTP.BINARY) - Binary (type I) transfer type.<BR/>
+<b>2:</b>&nbsp; (FTP.AUTO) - Automatically choose the appropriate transfer type based on the file extension.
+</p>
+
+<p class="note"><b>Note:</b> When set to FTP.AUTO, the transfer type will default
+to FTP.BINARY, unless the file extension is found in the special 
+FTP.ASCII_Extensions string.</p>
+
+<p class="tip"><b>Tip:</b> You can control which files will be recognized as 
+ASCII files by modifying the value of FTP.ASCII_Extensions.</p>
+
+<h4>Returns:</h4><p>Nothing.</p>
+
+<h4>Example:</h4><pre class="code">
+-- switch to binary transfer type
+FTP.SetTransferType(FTP.BINARY);
+</pre>
+
+
+<h3><a name="FTP.Upload">FTP.Upload (string Source, string Destination, function CallbackFunction)</span>;</a></h3>
+
+<h4>Description:</h4><p>Uploads a file to the current directory on the FTP server.</p>
+
+<h4>Source:</h4><p><span class="type">(string)</span> The full path and filename of the file that you want to upload.</p>
+
+<h4>Destination:</h4><p><span class="type">(string)</span> The name that you want the uploaded file to have.</p>
+
+<h4>CallbackFunction:</h4><p><span class="type">(string)</span> The 
+name of a function that will be called whenever progress is made in 
+the upload operation. (You can use this callback function to display 
+the progress of the upload operation in your own custom way.)</p>
+
+<p class="note"><b>Note:</b> If CallbackFunction is set to nil, then 
+the progress information will be sent to the built-in status dialog, 
+assuming it is currently visible. (You can show or hide the status 
+dialog with a StatusDlg.Show or StatusDlg.Hide action.)</p>
+
+<p>The callback function must be able to receive the following parameters:</p>
+
+<div class="CallbackParams">
+<h5>Bytes:</h5><p><span class="type">(number)</span> The number of bytes that have been transferred so far.</p>
+
+<h5>TotalBytes:</h5><p><span class="type">(number)</span> The total number of bytes to transfer, or 0 if the total number of bytes is not known.</p>
+
+</div>
+<!-- /CallbackParams -->
+
+<p>The callback function should return a boolean value (true or false) 
+indicating whether the upload should continue:</p>
+
+<p class="indent"><b>true</b> - Continue uploading the file.<BR>
+<b>false</b> - Abort the upload.</p>
+
+<h4>Returns:</h4><p>Nothing.</p>
+
+<h4>Example 1:</h4><pre class="code">
+-- upload a file to the current directory
+-- (note: assumes already connected to an FTP server)
+
+FTP.ChangeDir("/uploads");
+err = Application.GetLastError();
+if err ~= FTP.OK then
+    Dialog.Message("Error", _tblErrorMessages[err]);
+end
+
+-- enable the status dialog's cancel button
+StatusDlg.ShowCancelButton();
+
+-- show the status dialog
+StatusDlg.Show();
+
+-- upload the file
+FTP.Upload("c:\\myfolder\\myfile.txt", "myfile.txt");
+err = Application.GetLastError();
+
+-- hide the status dialog
+StatusDlg.Hide();
+
+-- ...and check whether FTP.Upload generated an error
+if err == FTP.OK then
+    Dialog.Message("Success!", "myfile.txt was uploaded successfully!");
+else
+    Dialog.Message("Error", _tblErrorMessages[err]);
+end
+</pre>
+
+<h4>Example 2:</h4><pre class="code">
+-- upload a file to the current directory
+-- using a custom progress display
+-- (note: assumes already connected to an FTP server)
+
+-- display the progress in an AutoPlay Media Studio paragraph object named "Progress" 
+-- (note: the paragraph object must already exist on the page)
+function cbUpload(nBytes, nTotal)
+    if nTotal == 0 then
+        Paragraph.SetText("Progress", nBytes .. " bytes uploaded!")
+    else
+        Paragraph.SetText("Progress", nBytes / nTotal * 100 .. "% uploaded!")
+    end
+end
+
+FTP.ChangeDir("/uploads");
+err = Application.GetLastError();
+if err ~= FTP.OK then
+    Dialog.Message("Error", _tblErrorMessages[err]);
+end
+
+-- enable the status dialog's cancel button
+StatusDlg.ShowCancelButton();
+
+-- show the status dialog
+StatusDlg.Show();
+
+-- upload the file
+FTP.Upload("c:\\myfolder\\myfile.txt", "myfile.txt", cbUpload);
+err = Application.GetLastError();
+
+-- hide the status dialog
+StatusDlg.Hide();
+
+-- ...and check whether FTP.Upload generated an error
+if err == FTP.OK then
+    Dialog.Message("Success!", "myfile.txt was uploaded successfully!");
+else
+    Dialog.Message("Error", _tblErrorMessages[err]);
+end
+</pre>
+
+
+</div> <!-- /Actions -->
+
+
+<div class="ErrorCodes">
+<h2>Error Codes</h2>
+
+<table>
+  <tr>
+    <th>0</th>
+    <td>(FTP.OK)</td><td>-</td><td>(no error)</td>
+  </tr>
+  <tr>
+    <th>31000</th>
+    <td>(FTP.ERR_BAD_HOSTNAME)</td><td>-</td><td>Invalid hostname.</td>
+  </tr>
+  <tr>
+    <th>31001</th>
+    <td>(FTP.ERR_NO_RESPONSE)</td><td>-</td><td>No response from server.</td>
+  </tr>
+  <tr>
+    <th>31002</th>
+    <td>(FTP.ERR_INVALID_RESPONSE)</td><td>-</td><td>Negative response received from server.</td>
+  </tr>
+  <tr>
+    <th>31003</th>
+    <td>(FTP.ERR_USER_NOT_ACCEPTED)</td><td>-</td><td>Username not accepted.</td>
+  </tr>
+  <tr>
+    <th>31004</th>
+    <td>(FTP.ERR_PASSWORD_NOT_ACCEPTED)</td><td>-</td><td>Password not accepted.</td>
+  </tr>
+  <tr>
+    <th>31005</th>
+    <td>(FTP.ERR_ACCOUNT_NOT_ACCEPTED)</td><td>-</td><td>Account string not accepted.</td>
+  </tr>
+  <tr>
+    <th>31006</th>
+    <td>(FTP.ERR_CONNECT_FAILED)</td><td>-</td><td>Could not connect to FTP site.</td>
+  </tr>
+  <tr>
+    <th>31007</th>
+    <td>(FTP.ERR_REQUEST_DENIED)</td><td>-</td><td>Request denied by server.</td>
+  </tr>
+  <tr>
+    <th>31008</th>
+    <td>(FTP.ERR_INVALID_TRANSFER_TYPE)</td><td>-</td><td>Invalid transfer type. Valid values are 0, 1 and 2 (FTP.ASCII, FTP.BINARY or FTP.AUTO).</td>
+  </tr>
+  <tr>
+    <th>31009</th>
+    <td>(FTP.ERR_INVALID_TIMEOUT_VALUE)</td><td>-</td><td>Invalid timeout value.</td>
+  </tr>
+  <tr>
+    <th>31010</th>
+    <td>(FTP.ERR_SET_CONTROL_PORT_FAILED)</td><td>-</td><td>Could not set the control port.</td>
+  </tr>
+  <tr>
+    <th>31011</th>
+    <td>(FTP.ERR_SET_DATA_PORT_FAILED)</td><td>-</td><td>Could not set the data port.</td>
+  </tr>
+  <tr>
+    <th>31012</th>
+    <td>(FTP.ERR_INVALID_COMMAND)</td><td>-</td><td>FTP command cannot be an empty string.</td>
+  </tr>
+  <tr>
+    <th>31013</th>
+    <td>(FTP.ERR_RENAME_FROM_SOURCE_FAILED)</td><td>-</td><td>Could not rename the file - problem with the "from" file (RNFR command failed).</td>
+  </tr>
+  <tr>
+    <th>31014</th>
+    <td>(FTP.ERR_RENAME_TO_TARGET_FAILED)</td><td>-</td><td>Could not rename the file - problem with the "to" file (RNTO command failed).</td>
+  </tr>
+  <tr>
+    <th>31015</th>
+    <td>(FTP.ERR_DATA_CONNECT_FAILED)</td><td>-</td><td>Data port could not be opened.</td>
+  </tr>
+  <tr>
+    <th>31016</th>
+    <td>(FTP.ERR_PORT_REQUEST_FAILED)</td><td>-</td><td>Request to set data port rejected (PORT command failed).</td>
+  </tr>
+  <tr>
+    <th>31017</th>
+    <td>(FTP.ERR_RETRIEVE_FAILED)</td><td>-</td><td>Unable to download file (RETR command failed).</td>
+  </tr>
+  <tr>
+    <th>31018</th>
+    <td>(FTP.ERR_STORE_FAILED)</td><td>-</td><td>Unable to upload file (STOR command failed).</td>
+  </tr>
+  <tr>
+    <th>31019</th>
+    <td>(FTP.ERR_CONNECTION_TERMINATED)</td><td>-</td><td>Connection was terminated before data transfer was complete.</td>
+  </tr>
+  <tr>
+    <th>31020</th>
+    <td>(FTP.ERR_ABORTED)</td><td>-</td><td>Operation aborted by user.</td>
+  </tr>
+  <tr>
+    <th>31021</th>
+    <td>(FTP.ERR_UNKNOWN_ERROR)</td><td>-</td><td>An unknown error occurred.</td>
+  </tr>
+  <tr>
+    <th>31022</th>
+    <td>(FTP.ERR_INVALID_ADDRESS)</td><td>-</td><td>Invalid address.</td>
+  </tr>
+</table>
+</div> <!-- /ErrorCodes -->
+
+
+<div class="History">
+<h2>Change Log</h2>
+
+<h3>2.0.1.0</h3>
+<ul>
+	<li>Compiled the 32-bit FTP action plugin using a newer compiler.</li>
+	<li>Added a 64-bit version of the FTP action plugin (FTPx64.lmd) and plugin template file (_plugin_template.xml).</li>
+</ul>
+
+
+<h3>2.0.0.0</h3>
+<ul>
+	<li>Updated to version 2.0 of the plugin SDK.</li>
+</ul>
+
+<h3>1.0.1.0</h3>
+<ul>
+	<li>Updated version resource information.</li>
+</ul>
+
+<h3>1.0.0.1</h3>
+<ul>
+	<li>Removed test for no dots and more than 3 dots in the hostname validation routine to allow for unlimited sub-domains and Unix HOSTALIASES (e.g.&nbsp;ftp.pwp.blueyonder.co.uk&nbsp;works&nbsp;now)</li>
+	<li>No longer crashes if you call FTP.Download on a file that doesn't exist and there is no callback function defined</li>
+	<li>F1 help now works if you have Mozilla Firefox installed</li>
+	<li>New error code: XML.ERROR_INVALID_ADDRESS</li>
+</ul>
+
+<h3>1.0.0.0</h3>
+<ul>
+	<li>Initial release</li>
+</ul>
+</div> <!-- /History -->
+
+
+<div class="Info">
+<h2>Additional Information</h2>
+
+<h3>Author:</h3><p>Indigo Rose Corporation<br>
+<a href="http://www.indigorose.com/support/">http://www.indigorose.com/support/</a></p>
+<h3>Copyright:</h3><p>The FTP Actions Plugin is copyright © 2003-2015 Indigo Rose Software Design Corporation.</p>
+<h3>Website:</h3><p><a href="http://www.indigorose.com">http://www.indigorose.com</a></p>
+
+</div> <!-- /info -->
+<hr>
+
+<p align="center">Copyright © 2015 Indigo Rose Software Design Corporation.<br>
+All Rights Reserved.</p>
+
+</body>
+</html>

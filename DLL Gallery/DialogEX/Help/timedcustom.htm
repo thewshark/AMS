@@ -1,0 +1,212 @@
+<html>
+
+<head>
+<meta http-equiv="Content-Language" content="en-gb">
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<title>DialogEX</title>
+</head>
+
+<body link="#0000FF" vlink="#C0C0C0" alink="#FF0000" text="#000000">
+
+<table border="1" width="100%" cellspacing="0" style="border-collapse: collapse">
+	<tr>
+		<td colspan="4"><b><font size="4">&nbsp;DialogEX</font></b><font size="4"><b>.TimedCustomMessage()</b></font></td>
+	</tr>
+	<tr>
+		<td colspan="4">&nbsp;</td>
+	</tr>
+	<tr>
+		<td colspan="4">&nbsp;<br>
+		&nbsp;Presents a dialog to the user With an timed informative message on it, 
+		the user has xx amount of seconds to click a button.<br>
+&nbsp;</td>
+	</tr>
+	<tr>
+		<td colspan="4"><b>&nbsp;<br>
+&nbsp;Arguments<br>
+&nbsp;</b>Below is a list of the function arguments (In order)<br>
+&nbsp;</td>
+	</tr>
+	<tr>
+		<td width="11%"><b><font size="2">&nbsp;Variable Type</font></b></td>
+		<td width="11%"><b><font size="2">&nbsp;Variable</font></b></td>
+		<td width="2%">&nbsp;</td>
+		<td width="74%"><b><font size="2">&nbsp;Description </font></b></td>
+	</tr>
+	<tr>
+		<td width="11%">&nbsp;string</td>
+		<td width="11%">&nbsp;Title</td>
+		<td width="2%">&nbsp;=</td>
+		<td width="74%">&nbsp;The title of the dialog window.</td>
+	</tr>
+	<tr>
+		<td height="21" width="11%">&nbsp;string </td>
+		<td height="21" width="11%">&nbsp;Message</td>
+		<td height="21" width="2%">&nbsp;=</td>
+		<td height="21" width="74%">&nbsp;The text that will appear on the dialog.</td>
+	</tr>
+	<tr>
+		<td width="11%">&nbsp;number</td>
+		<td width="11%">&nbsp;Align</td>
+		<td width="2%">&nbsp;=</td>
+		<td width="74%">&nbsp;Where To align the message text. (See Constants: &quot;<a href="const.htm#Dialog_Text_Align">Dialog 
+		Text Align</a>&quot;)</td>
+	</tr>
+	<tr>
+		<td width="11%">&nbsp;string </td>
+		<td width="11%">&nbsp;ButtonText </td>
+		<td width="2%">&nbsp;=</td>
+		<td width="74%">&nbsp;A delimited string of the button titles, from 0 To 
+		3 buttons <br>
+&nbsp;(&quot;Button1&quot; = 1 button)<br>
+&nbsp;(&quot;Button1|Button 2&quot; = 2 buttons)<br>
+&nbsp;(&quot;Button1|Button 2|Button 3&quot; = 3 buttons)</td>
+	</tr>
+	<tr>
+		<td width="11%">&nbsp;string </td>
+		<td width="11%">&nbsp;TimedButton </td>
+		<td width="2%">&nbsp;=</td>
+		<td width="74%">&nbsp;The index of the button that will display the 
+		countdown timer.<br>
+&nbsp;(1 = 1st button)<br>
+&nbsp;(2 = 2nd button)<br>
+&nbsp;(3 = 3rd button)<br>
+&nbsp;(set to 0 to not display the countdown timer)</td>
+	</tr>
+	<tr>
+		<td width="11%" height="25">&nbsp;string </td>
+		<td width="11%" height="25">&nbsp;ForcedReturn </td>
+		<td width="2%" height="25">&nbsp;=</td>
+		<td width="74%" height="25">&nbsp;Forced Return For when the dialog 
+		times out (counter reached zero)<br>
+&nbsp;This is to force the return of the selected button if the dialog times 
+		out. <br>
+&nbsp;(-1 = &quot;CANCEL&quot;)<br>
+&nbsp;(0 = no forced Return, &quot;TIMEOUT&quot; is returned) <br>
+&nbsp;(1 = &quot;BUTTON1&quot;)<br>
+&nbsp;(2 = &quot;BUTTON2&quot;)<br>
+&nbsp;(3 = &quot;BUTTON3&quot;)</td>
+	</tr>
+	<tr>
+		<td width="11%" height="25">&nbsp;number</td>
+		<td width="11%" height="25">&nbsp;Time </td>
+		<td width="2%" height="25">&nbsp;=</td>
+		<td width="74%" height="25">&nbsp;The time in milliseconds to show the 
+		dialog,the count down will be displayed in the button set in &quot;TimedButton&quot;.</td>
+	</tr>
+	<tr>
+		<td width="11%" height="25">&nbsp;number</td>
+		<td width="11%" height="25">&nbsp;Width</td>
+		<td width="2%" height="25">&nbsp;=</td>
+		<td width="74%" height="25">&nbsp;The width of the dialog.</td>
+	</tr>
+	<tr>
+		<td width="11%">&nbsp;number </td>
+		<td width="11%">&nbsp;Height</td>
+		<td width="2%">&nbsp;=</td>
+		<td width="74%">&nbsp;The height of the dialog.</td>
+	</tr>
+	<tr>
+		<td width="11%">&nbsp;number </td>
+		<td width="11%">&nbsp;Display </td>
+		<td width="2%">&nbsp;=</td>
+		<td width="74%">&nbsp;Where To display the dialog on the screen. (See 
+		Constants: &quot;<a href="const.htm#Display_type">Display type</a>&quot;)</td>
+	</tr>
+	<tr>
+		<td width="11%" height="26">&nbsp;number</td>
+		<td width="11%" height="26">&nbsp;X</td>
+		<td width="2%" height="26">&nbsp;=</td>
+		<td width="74%" height="26">&nbsp;The X position of the dialog, (Ignored 
+		unless Display is set To DEX_SHOW_CUSTOM).</td>
+	</tr>
+	<tr>
+		<td width="11%">&nbsp;number</td>
+		<td width="11%">&nbsp;Y</td>
+		<td width="2%">&nbsp;=</td>
+		<td width="74%">&nbsp;The Y position of the dialog, (Ignored unless 
+		Display is set To DEX_SHOW_CUSTOM).</td>
+	</tr>
+	<tr>
+		<td width="11%">&nbsp;number</td>
+		<td width="11%">&nbsp;BackCol</td>
+		<td width="2%">&nbsp;=</td>
+		<td width="74%">&nbsp;The background color of the dialog. (Use -1 to 
+		disable else any decimal color)</td>
+	</tr>
+	<tr>
+		<td width="11%">&nbsp;number</td>
+		<td width="11%">&nbsp;FrontCol</td>
+		<td width="2%">&nbsp;=</td>
+		<td width="74%">&nbsp;The color of the text on the dialog. (Use -1 to 
+		disable else any decimal color)</td>
+	</tr>
+	<tr>
+		<td width="11%">&nbsp;number</td>
+		<td width="11%">&nbsp;WinType</td>
+		<td width="2%">&nbsp;=</td>
+		<td width="74%">&nbsp;What style To apply To the window. (See Constants: 
+		&quot;<a href="const.htm#Dialog_Type">Dialog Type</a>&quot;)</td>
+	</tr>
+	<tr>
+		<td width="11%">&nbsp;number </td>
+		<td width="11%">&nbsp;IN</td>
+		<td width="2%">&nbsp;=</td>
+		<td width="74%">&nbsp;How To show the dialog. (See Constants: &quot;<a href="const.htm#Dialog_Animation">Dialog 
+		Animation</a>&quot;) </td>
+	</tr>
+	<tr>
+		<td width="11%">&nbsp;number </td>
+		<td width="11%">&nbsp;DELAY</td>
+		<td width="2%">&nbsp;=</td>
+		<td width="74%">&nbsp;The time of the transition in milliseconds.</td>
+	</tr>
+	<tr>
+		<td width="11%">&nbsp;number</td>
+		<td width="11%">&nbsp;OUT</td>
+		<td width="2%">&nbsp;=</td>
+		<td width="74%">&nbsp;How To exit the dialog. (See Constants: &quot;<a href="const.htm#Dialog_Animation">Dialog 
+		Animation</a>&quot;) </td>
+	</tr>
+	<tr>
+		<td width="98%" colspan="4"><b>&nbsp;<br>
+		&nbsp;Return (</b>String<b>)<br>
+&nbsp;</b></td>
+	</tr>
+	<tr>
+		<td width="11%">&nbsp;</td>
+		<td width="11%"><b>&nbsp;Button</b></td>
+		<td width="2%">&nbsp;</td>
+		<td width="74%"><b>&nbsp;Return Value</b></td>
+	</tr>
+	<tr>
+		<td width="11%">&nbsp;</td>
+		<td width="11%">&nbsp;Button 1 </td>
+		<td width="2%">&nbsp;=</td>
+		<td width="74%">&nbsp;&quot;BUTTON1&quot;</td>
+	</tr>
+	<tr>
+		<td width="11%">&nbsp;</td>
+		<td width="11%">&nbsp;Button 2</td>
+		<td width="2%">&nbsp;=</td>
+		<td width="74%">&nbsp;&quot;BUTTON2&quot;</td>
+	</tr>
+	<tr>
+		<td width="11%" height="25">&nbsp;</td>
+		<td width="11%" height="25">&nbsp;Button 3</td>
+		<td width="2%" height="25">&nbsp;=</td>
+		<td width="74%" height="25">&nbsp;&quot;BUTTON3&quot;</td>
+	</tr>
+	<tr>
+		<td width="98%" colspan="4"><br>
+		&nbsp;If the Timeout is not set to zero and timeout reached then &quot;TIMEOUT&quot; is 
+		returned, if ForcedReturn dose not = &quot;&quot; then result of &quot;ForcedReturn&quot; 
+		will be returned, <br>
+&nbsp;Exit button on window also returns &quot;CANCEL&quot;.<br>
+&nbsp;</td>
+	</tr>
+	</table>
+
+</body>
+
+</html>

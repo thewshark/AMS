@@ -1,0 +1,378 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head><title>CurrencyGeran.TableCurrency</title>
+<meta http-equiv="Content-Style-Type" content="text/css">
+<style type="text/css"><!--
+body {
+  margin: 5px 5px 5px 5px;
+  background-color: #ffffff;
+}
+/* ========== Text Styles ========== */
+hr { color: #000000}
+body, table, span.rvts0 /* Normal text */
+{
+ font-size: 10pt;
+ font-family: 'Arial', 'Helvetica', sans-serif;
+ font-style: normal;
+ font-weight: normal;
+ color: #000000;
+ text-decoration: none;
+}
+span.rvts1 /* Heading */
+{
+ font-weight: bold;
+ color: #0000ff;
+}
+span.rvts2 /* Subheading */
+{
+ font-weight: bold;
+ color: #000080;
+}
+span.rvts3 /* Keywords */
+{
+ font-style: italic;
+ color: #800000;
+}
+a.rvts4, span.rvts4 /* Jump 1 */
+{
+ color: #000080;
+ text-decoration: underline;
+}
+a.rvts5, span.rvts5 /* Jump 2 */
+{
+ color: #000080;
+ text-decoration: underline;
+}
+span.rvts6 /* Font Hint */
+{
+ color: #8c8c8c;
+}
+span.rvts7 /* Font Hint Title */
+{
+ font-size: 15pt;
+ font-family: 'Tahoma', 'Geneva', sans-serif;
+ font-weight: bold;
+ color: #6a6a6a;
+}
+span.rvts8 /* Font Hint Bold */
+{
+ font-weight: bold;
+ color: #8c8c8c;
+}
+span.rvts9 /* Font Hint Italic */
+{
+ font-style: italic;
+ color: #8c8c8c;
+}
+span.rvts10
+{
+ font-size: 18pt;
+ font-family: 'Verdana', 'Geneva', sans-serif;
+ font-weight: bold;
+ color: #ffffff;
+}
+span.rvts11
+{
+ font-family: 'Courier New', 'Courier', monospace;
+ color: #000000;
+}
+span.rvts12
+{
+ font-size: 12pt;
+ font-weight: bold;
+ color: #000000;
+}
+span.rvts13
+{
+ font-size: 9pt;
+ font-style: italic;
+ font-weight: bold;
+ color: #3c77b3;
+}
+span.rvts14
+{
+ font-size: 8pt;
+ font-family: 'Verdana', 'Geneva', sans-serif;
+ color: #aaaaaa;
+}
+span.rvts15
+{
+ font-size: 8pt;
+ font-family: 'Verdana', 'Geneva', sans-serif;
+ color: #000000;
+}
+span.rvts16
+{
+ font-size: 9pt;
+ font-family: 'Courier New', 'Courier', monospace;
+ font-style: italic;
+ color: #aabbdd;
+}
+span.rvts17
+{
+ font-size: 9pt;
+ font-family: 'Courier New', 'Courier', monospace;
+ color: #aaaaaa;
+}
+span.rvts18
+{
+ font-weight: bold;
+}
+span.rvts19
+{
+ color: #c0c0c0;
+}
+span.rvts20
+{
+ font-size: 12pt;
+ font-family: 'Times New Roman', 'Times', serif;
+ color: #000000;
+}
+span.rvts21
+{
+ font-size: 8pt;
+ font-family: 'Verdana', 'Geneva', sans-serif;
+}
+span.rvts22
+{
+ font-size: 11pt;
+ font-family: 'Times New Roman', 'Times', serif;
+ color: #808080;
+}
+span.rvts23 /* Font Style */
+{
+ font-size: 16pt;
+ font-family: 'Tahoma', 'Geneva', sans-serif;
+ color: #ffffff;
+}
+span.rvts24 /* Font Style */
+{
+ font-family: 'MS Sans Serif', 'Geneva', sans-serif;
+ color: #808080;
+}
+span.rvts25 /* Font Style */
+{
+ font-family: 'Verdana', 'Geneva', sans-serif;
+ font-style: italic;
+ color: #c0c0c0;
+}
+a.rvts26, span.rvts26 /* Font Style */
+{
+ font-family: 'Verdana', 'Geneva', sans-serif;
+ font-style: italic;
+ color: #6666ff;
+ text-decoration: underline;
+}
+/* ========== Para Styles ========== */
+p,ul,ol /* Paragraph Style */
+{
+ text-align: left;
+ text-indent: 0px;
+ padding: 0px 0px 0px 0px;
+ margin: 0px 0px 0px 0px;
+}
+.rvps1 /* Centered */
+{
+ text-align: center;
+}
+.rvps2
+{
+ text-align: left;
+ text-indent: 0px;
+ border-color: #699bef;
+ border-style: solid;
+ border-width: 1px;
+ border-top: none;
+ background: #699bef;
+ padding: 5px 4px 5px 4px;
+ margin: 0px 0px 0px 0px;
+}
+.rvps3
+{
+ border-color: #c0c0c0;
+ border-style: solid;
+ border-width: 1px;
+ background: #eeeeee;
+ padding: 3px 3px 3px 3px;
+ margin: -3px -3px -3px -3px;
+}
+.rvps4
+{
+ background: #eeeeee;
+}
+.rvps5
+{
+ text-align: left;
+ text-indent: 0px;
+ padding: 0px 0px 0px 0px;
+ margin: 24px 0px 4px 0px;
+}
+.rvps6
+{
+ margin: 7px 0px 14px 35px;
+}
+.rvps7
+{
+ text-align: left;
+ text-indent: 0px;
+ padding: 0px 0px 0px 0px;
+ margin: 24px 0px -8px 0px;
+}
+.rvps8
+{
+ line-height: 1.23;
+ margin: 0px 0px 12px 0px;
+}
+.rvps9
+{
+ text-align: left;
+ text-indent: 0px;
+ padding: 0px 0px 0px 0px;
+ margin: 24px 0px 4px 16px;
+}
+.rvps10
+{
+ line-height: 1.23;
+ margin: 0px 0px 12px 16px;
+}
+.rvps11
+{
+ text-align: left;
+ text-indent: 0px;
+ padding: 0px 0px 0px 0px;
+ margin: 24px 0px 12px 0px;
+}
+.rvps12
+{
+ margin: 0px 0px -4px 0px;
+}
+.rvps13 /* Paragraph Style */
+{
+ background: #9fbed0;
+ padding: 5px 5px 2px 5px;
+ margin: -5px -5px 18px -5px;
+}
+.rvps14 /* Paragraph Style */
+{
+ text-align: center;
+ background: #e4e4e4;
+ margin: 20px 0px 0px 0px;
+}
+.rvps15 /* Paragraph Style */
+{
+ border-color: #c0c0c0;
+ border-style: solid;
+ border-width: 1px;
+ border-right: none;
+ border-bottom: none;
+ border-left: none;
+ background: #ffffff;
+ padding: 3px 0px 0px 0px;
+ margin: 27px 0px 0px 0px;
+}
+--></style>
+<link rel="StyleSheet" href="hnd.css" type="text/css"/>
+<script type="text/javascript">if(top.frames.length == 0) { top.location.href="../CurrencyGeran.htm?1005.html"; }</script>
+<script type="text/javascript" src="jquery.min.js"></script>
+<script type="text/javascript" src="jquery.cookie.js"></script>
+<script type="text/javascript" src="hnd.js"></script>
+<meta name="generator" content="HelpNDoc Freeware Edition"></head>
+<body>
+<p class=rvps13><span class=rvts23>CurrencyGeran</span></p>
+<h1 class=rvps2><a name="RichViewCheckpoint0"></a>
+<span class=rvts0><span class=rvts10>CurrencyGeran.TableCurrency</span></span></h1>
+<p><span class=rvts15><br></span></p>
+<div class=rvps3><table border=0 cellpadding=1 cellspacing=0 style="border-width: 0px;">
+<tr valign=top>
+<td width=350 valign=top><p class=rvps4><span class=rvts16>(Table) </span><span class=rvts11> CurrencyGeran.TableCurrency ( </span></p>
+</td>
+<td width=777 valign=top><p class=rvps4><span class=rvts16>(string) </span><span class=rvts11> sCurrency </span><span class=rvts17>= "EUR 1.000, -"</span><span class=rvts11> )</span></p>
+</td>
+</tr>
+</table>
+</div>
+<h2 class=rvps5><span class=rvts0><span class=rvts12>Descripción</span></span></h2>
+<p class=rvps6><span class=rvts15>Esta accion devuelve una tabla con los valores del tipo de moneda utilizado</span></p>
+<h2 class=rvps7><span class=rvts0><span class=rvts12>Parámetros</span></span></h2>
+<h3 class=rvps9><span class=rvts0><span class=rvts13>sCurrency</span></span></h3>
+<p class=rvps10><span class=rvts14>(string) </span><span class=rvts15> String, representa el valor monetario de un pais determinado.</span></p>
+<p><span class=rvts15><br></span></p>
+<h2 class=rvps11><span class=rvts0><span class=rvts12>Retorno</span></span></h2>
+<p class=rvps8><span class=rvts15>Esta acción devuelve un </span><span class=rvts14>(table)</span><span class=rvts15> de valor.</span></p>
+<p class=rvps8><span class=rvts15><br></span></p>
+<div class=rvps8><table width="100%" border=1 cellpadding=1 cellspacing=2 style="border-color: #000000; border-style: solid;">
+<tr valign=top>
+<td width="28%" style="border-color: #000000; border-style: solid;"><p><span class=rvts18>Table</span></p>
+</td>
+<td width="34%" style="border-color: #000000; border-style: solid;"><p><span class=rvts18>Descripcion</span></p>
+</td>
+</tr>
+<tr valign=top>
+<td width="28%" style="border-color: #000000; border-style: solid;"><p>Number</p>
+</td>
+<td width="34%" style="border-color: #000000; border-style: solid;"><p><span class=rvts19>(number)</span>. Devuelve un numero del valor monetario</p>
+</td>
+</tr>
+<tr valign=top>
+<td width="28%" style="border-color: #000000; border-style: solid;"><p>Country</p>
+</td>
+<td width="34%" style="border-color: #000000; border-style: solid;"><p><span class=rvts19>(string)</span>. Devuelve&nbsp; un string que representa el simbolo monetario del pais</p>
+</td>
+</tr>
+</table>
+</div>
+<p class=rvps8><span class=rvts21><br></span></p>
+<hr noshade size=8 style="color : #f0f0f0">
+<p class=rvps12><span class=rvts21><br></span></p>
+<p class=rvps12><span class=rvts21><br></span></p>
+<p class=rvps12><span class=rvts21><br></span></p>
+<h1 class=rvps2><span class=rvts0><span class=rvts10>Ejemplos</span></span></h1>
+<p class=rvps12><span class=rvts21><br></span></p>
+<p class=rvps12><span class=rvts21><br></span></p>
+<p><span class=rvts20>Ejemplo 1</span></p>
+<p><span class=rvts20><br></span></p>
+<div class=rvps12><table width="100%" border=1 cellpadding=1 cellspacing=2 style="border-color: #000000; border-style: solid;">
+<tr valign=top>
+<td width="108%" style="border-color: #000000; border-style: solid;"><p class=rvps12><span class=rvts22> </span></p>
+<p class=rvps12><span class=rvts22> --Valor Monetario</span></p>
+<p class=rvps12><span class=rvts22><br></span></p>
+<p class=rvps12><span class=rvts22>sMoney = "EUR 1.000,--"</span></p>
+<p class=rvps12><span class=rvts22><br></span></p>
+<p class=rvps12><span class=rvts22>Debug.ShowWindow(true);</span></p>
+<p class=rvps12><span class=rvts22>Debug.Clear();</span></p>
+<p class=rvps12><span class=rvts22><br></span></p>
+<p class=rvps12><span class=rvts22>for j, k in pairs(CurrencyGeran.TableCurrency(sMoney)) do</span></p>
+<p class=rvps12><span class=rvts22></span><span class=rvts22> &nbsp; &nbsp; &nbsp; &nbsp;</span></p>
+<p class=rvps12><span class=rvts22></span><span class=rvts22> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class=rvts22>Debug.Print(j.." = "..k.."\r\n");</span></p>
+<p class=rvps12><span class=rvts22><br></span></p>
+<p class=rvps12><span class=rvts22>end</span></p>
+<p class=rvps12><span class=rvts22><br></span></p>
+</td>
+</tr>
+</table>
+</div>
+<p class=rvps12><span class=rvts20><br></span></p>
+<p class=rvps12><span class=rvts20>Ejemplo 2</span></p>
+<p class=rvps12><span class=rvts20><br></span></p>
+<div class=rvps12><table width="100%" border=1 cellpadding=1 cellspacing=2 style="border-color: #000000; border-style: solid;">
+<tr valign=top>
+<td width="108%" style="border-color: #000000; border-style: solid;"><p class=rvps12><span class=rvts22> </span></p>
+<p class=rvps12><span class=rvts22>--Valor Monetario</span></p>
+<p class=rvps12><span class=rvts22><br></span></p>
+<p class=rvps12><span class=rvts22>sMoney = "EUR 1.000,15"</span></p>
+<p class=rvps12><span class=rvts22><br></span></p>
+<p class=rvps12><span class=rvts22>Debug.ShowWindow(true);</span></p>
+<p class=rvps12><span class=rvts22>Debug.Clear();</span></p>
+<p class=rvps12><span class=rvts22><br></span></p>
+<p class=rvps12><span class=rvts22>for j, k in pairs(CurrencyGeran.TableCurrency(sMoney)) do</span></p>
+<p class=rvps12><span class=rvts22></span><span class=rvts22> &nbsp; &nbsp; &nbsp; &nbsp;</span></p>
+<p class=rvps12><span class=rvts22></span><span class=rvts22> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class=rvts22>Debug.Print(j.." = "..k.."\r\n");</span></p>
+<p class=rvps12><span class=rvts22><br></span></p>
+<p class=rvps12><span class=rvts22>end</span></p>
+<p class=rvps12><span class=rvts22><br></span></p>
+</td>
+</tr>
+</table>
+</div>
+<p class=rvps14><span class=rvts24>Geran@amsspecialist.info</span></p>
+<p class=rvps15><span class=rvts25>Created with the Freeware Edition of HelpNDoc: </span><a class=rvts26 href="http://www.helpndoc.com" target="_blank">Easy CHM and documentation editor</a></p>
+</body></html>

@@ -1,0 +1,1233 @@
+<html>
+<head>
+<title>ColorConversion</title>
+<style>
+
+
+	body {
+	  font-family: Verdana, sans-serif;
+	  font-size: 8pt;
+	  background-color: #ffffff;
+	}
+	  
+	body {
+	  font-family: Verdana, sans-serif;
+	  font-size: 8pt;
+	  background-color: #ffffff;
+	}
+	
+	hr {
+	  text-align: center;
+	  color: #f0f0f0;
+	  width: 100%;
+	  height: 6pt;
+	  margin-top: 0pt;
+	  margin-bottom: -3pt;
+	  border: none;
+	}
+	
+	A:link, A:active, A:visited {
+	  color: #0000ff;
+	  text-decoration: none;
+	}
+	
+	A:hover {
+	  color: #0000ff;
+	  text-decoration: underline;
+	}
+	
+	h1 {
+	  font-family: Verdana;
+	  font-weight: bold;
+	  font-size: 18.0pt;
+	  white-space: nowrap;
+	  color: #fff;
+	  background-color: #699BEF;
+	  padding: 4pt 3pt;
+	  padding: 5px 4px;
+	  margin-top: 0pt;
+	  margin-bottom: 0pt;
+	  border-right: 1px solid #333;
+	  border-left: 1px solid #699BEF;
+	  border-bottom: solid black 1px;
+	}
+	
+	h2 {
+	  font-family: Arial, sans-serif;
+	  font-size: 12.0pt;
+	  letter-spacing: .2ex;
+	  color: #000;
+	  margin-left: 0pt;
+	  margin-right: 0pt;
+	  margin-top: 18pt;
+	  margin-bottom: 9pt;
+	}
+	
+	h2.H2Tight {
+		margin-bottom: -6pt;
+	}
+	
+	h3 {
+	  font-family: Arial, sans-serif;
+	  font-size: 10pt;
+	  font-weight: bold;
+	  font-style: normal;
+	  color: black;
+	  letter-spacing: 0px;
+	  margin-left: 0pt;
+	  margin-right: 0pt;
+	  margin-top: 18pt;
+	  margin-bottom: 3pt;
+	}
+	
+	h3.ParameterHeading {
+		font-family: Arial, sans-serif;
+		margin-left: 12pt;
+		margin-right: 0pt;
+		margin-top: 18pt;
+		margin-bottom: 3pt;
+		font-size: 9pt;
+		font-weight: bold;
+		font-style: italic;
+		letter-spacing: .2ex;
+		color: #3C77B3;
+		x-next-class: ParameterBody;
+		x-next-type: p;
+	}
+	
+	p {
+	  font-family: Verdana;
+	  font-size: 8.0pt;
+	  line-height: 12.0pt;
+	  margin-left: 0pt;
+	  margin-right: 0pt;
+	  margin-top: 0pt;
+	  margin-bottom: 9pt;
+	}
+	  
+	p.NavLocal {
+	  white-space: nowrap;
+	  text-indent: -4px;
+	  font-family: Verdana, Arial, sans-serif;
+	  font-weight: bold;
+	  font-style: normal;
+	  font-size: 13px;
+	  background-color: #e4e4e4;
+	  margin-top: 0px;
+	  margin-bottom: 12pt;
+	  padding-top: 4px;
+	  padding-bottom: 4px;
+	  padding-left: 0px;
+	  padding-right: 0px;
+	
+	  border-bottom: 1px solid #e4e4e4;
+	}
+	  
+	p.ParameterBody {
+		margin-left: 12pt;
+		x-next-class: ParameterHeading;
+		x-next-type: h3;
+	}
+	  
+	div.Actions p, div.Properties p, div.Events p, div.ErrorCodes p {
+	  font-family: Verdana;
+	  font-size: 8.0pt;
+	  line-height: 12.0pt;
+	  margin-top: 0pt;
+	  margin-bottom: 9pt;
+	  margin-left: 12pt;
+	  margin-right: 0pt;
+	}
+	
+	div.Declaration table p {
+		white-space: nowrap;
+		line-height: normal;
+		x-text-tab-stops: repeat 1in;
+		font-family: "Courier New", Courier, monospace;
+		font-size: 10.0pt;
+		background-color: #eee;
+		color: #000000;
+		margin-left: 0px;
+		margin-right: 0px;
+		margin-top: 0px;
+		margin-bottom: 0px;
+		padding: 0pt;
+		border-style: none;
+	}
+	
+	div.Declaration {
+		white-space: nowrap;
+		line-height: normal;
+		x-text-tab-stops: repeat 1in;
+		font-family: "Courier New", Courier, monospace;
+		font-size: 9.0pt;
+		background-color: #eee;
+		color: #000000;
+		width: 100%;
+		margin-left: 0px;
+		margin-right: 0px;
+		margin-top: 0pt;
+		margin-bottom: 9pt;
+		padding: 2pt;
+		border-top: #c0c0c0 1px solid;
+		border-right: #c0c0c0 1px solid;
+		border-left: #c0c0c0 1px solid;
+		border-bottom: #c0c0c0 1px solid;
+	}
+	
+	span.VarType {
+		font-family: "Courier New", monospace;
+		font-size: 9pt;
+		font-style: italic;
+		color: #abd;
+	}
+	
+	span.type {
+		color: #aaa;
+	}
+	
+	span.wab {
+		font-family: Verdana;
+		font-size: 13px;
+		padding: 0px 0px;
+		margin: 0px;
+		border: none;
+		visibility: hidden;
+	}
+
+	span.DefaultValue {
+		white-space: nowrap;
+		font-family: "Courier New", monospace;
+		font-size: 9pt;
+		color: #aaa;
+	}
+	
+	</style>
+</head>
+<body>
+<h1>ColorConversion Help File</h1>
+<p class="NavLocal"><span class=wab>&nbsp;</span><span class="here">Welcome</span></p>
+<hr><div class="Properties">
+<h2>Table of Contents</h2>
+<p><blockquote>
+<A href="#ColorConversion.RGBtoHEX"><b>ColorConversion.RGBtoHEX</b></A>
+<br>
+<A href="#ColorConversion.RGBtoDEC"><b>ColorConversion.RGBtoDEC</b></A>
+<br>
+<A href="#ColorConversion.DECtoRGB"><b>ColorConversion.DECtoRGB</b></A>
+<br>
+<A href="#ColorConversion.HEXtoRGB"><b>ColorConversion.HEXtoRGB</b></A>
+<br>
+<A href="#ColorConversion.HEXtoDEC"><b>ColorConversion.HEXtoDEC</b></A>
+<br>
+<A href="#ColorConversion.DECtoHEX"><b>ColorConversion.DECtoHEX</b></A>
+<br>
+<A href="#ColorConversion.RGBtoHSV"><b>ColorConversion.RGBtoHSV</b></A>
+<br>
+<A href="#ColorConversion.RGBtoCMY"><b>ColorConversion.RGBtoCMY</b></A>
+<br>
+<A href="#ColorConversion.CMYtoCMYK"><b>ColorConversion.CMYtoCMYK</b></A>
+<br>
+<A href="#ColorConversion.CMYtoRGB"><b>ColorConversion.CMYtoRGB</b></A>
+<br>
+<A href="#ColorConversion.RGBtoHSL"><b>ColorConversion.RGBtoHSL</b></A>
+<br>
+<A href="#ColorConversion.HSLtoRGB"><b>ColorConversion.HSLtoRGB</b></A>
+<br>
+<A href="#ColorConversion.CMYKtoCMY"><b>ColorConversion.CMYKtoCMY</b></A>
+<br>
+<A href="#ColorConversion.HSVtoRGB"><b>ColorConversion.HSVtoRGB</b></A>
+<br>
+<A href="#ColorConversion.RGBtoXYZ"><b>ColorConversion.RGBtoXYZ</b></A>
+<br>
+<A href="#ColorConversion.XYZtoRGB"><b>ColorConversion.XYZtoRGB</b></A>
+<br>
+<A href="#ColorConversion.XYZtoYxy"><b>ColorConversion.XYZtoYxy</b></A>
+<br>
+<A href="#ColorConversion.YxytoXYZ"><b>ColorConversion.YxytoXYZ</b></A>
+<br>
+<A href="#ColorConversion.XYZtoHLab"><b>ColorConversion.XYZtoHLab</b></A>
+<br>
+<A href="#ColorConversion.HLabtoXYZ"><b>ColorConversion.HLabtoXYZ</b></A>
+<br>
+<A href="#ColorConversion.XYZtoCIELab"><b>ColorConversion.XYZtoCIELab</b></A>
+<br>
+<A href="#ColorConversion.CIELabtoXYZ"><b>ColorConversion.CIELabtoXYZ</b></A>
+<br>
+<A href="#ColorConversion.XYZtoCIELuv"><b>ColorConversion.XYZtoCIELuv</b></A>
+<br>
+<A href="#ColorConversion.CIELuvtoXYZ"><b>ColorConversion.CIELuvtoXYZ</b></A>
+<br>
+<A href="#ColorConversion.CIELabtoCIELCH"><b>ColorConversion.CIELabtoCIELCH</b></A>
+<br>
+<A href="#ColorConversion.CIELCHtoCIELab"><b>ColorConversion.CIELCHtoCIELab</b></A>
+<br>
+</blockquote></p></div>
+<h1><A name="ColorConversion.RGBtoHEX">ColorConversion.RGBtoHEX</A></h1><br>
+<div class=Declaration>
+<div align=left>
+<table x-use-null-cells
+	style="float: alignleft;
+	x-cell-content-align: Top;
+	border-spacing: 0px;
+	border-spacing: 0px;"
+	cellspacing=0>
+<col>
+<col>
+<tr style="x-cell-content-align: top;" valign=top>
+<td style="padding-right: 0px;
+	padding-left: 0px;
+	border-top-style: none;
+	border-bottom-style: none;
+	border-right-style: none;
+	border-left-style: none;">
+<p><span class=VarType>(string)&nbsp;</span>ColorConversion.RGBtoHEX (&nbsp;</td>
+<td style="padding-right: 0px;
+	padding-left: 0px;
+	border-top-style: none;
+	border-right-style: none;
+	border-bottom-style: none;">
+<p><span class=VarType>(number)&nbsp;</span>Red <span class=DefaultValue> = 0</span>, </p>
+<p><span class=VarType>(number)&nbsp;</span>Green <span class=DefaultValue> = 0</span>, </p>
+<p><span class=VarType>(number)&nbsp;</span>Blue <span class=DefaultValue> = 0</span> )</p>
+</td></tr></table></div></div>
+<h2 style="margin-bottom: 3pt;">Description</h2>
+<p><blockquote>Convert RGB channels color to HEX color</blockquote></p>
+<h2 class="H2Tight">Parameters</h2>
+<h3 class="ParameterHeading">Red</h3>
+<p class="ParameterBody"><span class="type">(number)&nbsp;</span>RGB: Red Channel</p>
+<h3 class="ParameterHeading">Green</h3>
+<p class="ParameterBody"><span class="type">(number)&nbsp;</span>RGB: Green Channel</p>
+<h3 class="ParameterHeading">Blue</h3>
+<p class="ParameterBody"><span class="type">(number)&nbsp;</span>RGB: Blue Channel</p>
+<br>
+<h2>Return</h2><blockquote><p>This action returns a <span class="type">(string)</span> value.<br><br></p></blockquote><br><hr><h1><A name="ColorConversion.RGBtoDEC">ColorConversion.RGBtoDEC</A></h1><br>
+<div class=Declaration>
+<div align=left>
+<table x-use-null-cells
+	style="float: alignleft;
+	x-cell-content-align: Top;
+	border-spacing: 0px;
+	border-spacing: 0px;"
+	cellspacing=0>
+<col>
+<col>
+<tr style="x-cell-content-align: top;" valign=top>
+<td style="padding-right: 0px;
+	padding-left: 0px;
+	border-top-style: none;
+	border-bottom-style: none;
+	border-right-style: none;
+	border-left-style: none;">
+<p><span class=VarType>(number)&nbsp;</span>ColorConversion.RGBtoDEC (&nbsp;</td>
+<td style="padding-right: 0px;
+	padding-left: 0px;
+	border-top-style: none;
+	border-right-style: none;
+	border-bottom-style: none;">
+<p><span class=VarType>(number)&nbsp;</span>Red <span class=DefaultValue> = 0</span>, </p>
+<p><span class=VarType>(number)&nbsp;</span>Green <span class=DefaultValue> = 0</span>, </p>
+<p><span class=VarType>(number)&nbsp;</span>Blue <span class=DefaultValue> = 0</span> )</p>
+</td></tr></table></div></div>
+<h2 style="margin-bottom: 3pt;">Description</h2>
+<p><blockquote>Convert RGB channels color to DEC color</blockquote></p>
+<h2 class="H2Tight">Parameters</h2>
+<h3 class="ParameterHeading">Red</h3>
+<p class="ParameterBody"><span class="type">(number)&nbsp;</span>RGB: Red Channel</p>
+<h3 class="ParameterHeading">Green</h3>
+<p class="ParameterBody"><span class="type">(number)&nbsp;</span>RGB: Green Channel</p>
+<h3 class="ParameterHeading">Blue</h3>
+<p class="ParameterBody"><span class="type">(number)&nbsp;</span>RGB: Blue Channel</p>
+<br>
+<h2>Return</h2><blockquote><p>This action returns a <span class="type">(number)</span> value.<br><br></p></blockquote><br><hr><h1><A name="ColorConversion.DECtoRGB">ColorConversion.DECtoRGB</A></h1><br>
+<div class=Declaration>
+<div align=left>
+<table x-use-null-cells
+	style="float: alignleft;
+	x-cell-content-align: Top;
+	border-spacing: 0px;
+	border-spacing: 0px;"
+	cellspacing=0>
+<col>
+<col>
+<tr style="x-cell-content-align: top;" valign=top>
+<td style="padding-right: 0px;
+	padding-left: 0px;
+	border-top-style: none;
+	border-bottom-style: none;
+	border-right-style: none;
+	border-left-style: none;">
+<p><span class=VarType>(table)&nbsp;</span>ColorConversion.DECtoRGB (&nbsp;</td>
+<td style="padding-right: 0px;
+	padding-left: 0px;
+	border-top-style: none;
+	border-right-style: none;
+	border-bottom-style: none;">
+<p><span class=VarType>(number)&nbsp;</span>Decimal <span class=DefaultValue> = 0</span> )</p>
+</td></tr></table></div></div>
+<h2 style="margin-bottom: 3pt;">Description</h2>
+<p><blockquote>Convert DEC color to RGB channels color</blockquote></p>
+<h2 class="H2Tight">Parameters</h2>
+<h3 class="ParameterHeading">Decimal</h3>
+<p class="ParameterBody"><span class="type">(number)&nbsp;</span>Decimal Color</p>
+<br>
+<h2>Return</h2><blockquote><p>This action returns a <span class="type">(table)</span> value.<br><br></p></blockquote><br><hr><h1><A name="ColorConversion.HEXtoRGB">ColorConversion.HEXtoRGB</A></h1><br>
+<div class=Declaration>
+<div align=left>
+<table x-use-null-cells
+	style="float: alignleft;
+	x-cell-content-align: Top;
+	border-spacing: 0px;
+	border-spacing: 0px;"
+	cellspacing=0>
+<col>
+<col>
+<tr style="x-cell-content-align: top;" valign=top>
+<td style="padding-right: 0px;
+	padding-left: 0px;
+	border-top-style: none;
+	border-bottom-style: none;
+	border-right-style: none;
+	border-left-style: none;">
+<p><span class=VarType>(table)&nbsp;</span>ColorConversion.HEXtoRGB (&nbsp;</td>
+<td style="padding-right: 0px;
+	padding-left: 0px;
+	border-top-style: none;
+	border-right-style: none;
+	border-bottom-style: none;">
+<p><span class=VarType>(string)&nbsp;</span>Hexadecimal <span class=DefaultValue> = "000000"</span> )</p>
+</td></tr></table></div></div>
+<h2 style="margin-bottom: 3pt;">Description</h2>
+<p><blockquote>Convert HEX color to RGB channels color</blockquote></p>
+<h2 class="H2Tight">Parameters</h2>
+<h3 class="ParameterHeading">Hexadecimal</h3>
+<p class="ParameterBody"><span class="type">(string)&nbsp;</span>HEX color</p>
+<br>
+<h2>Return</h2><blockquote><p>This action returns a <span class="type">(table)</span> value.<br><br></p></blockquote><br><hr><h1><A name="ColorConversion.HEXtoDEC">ColorConversion.HEXtoDEC</A></h1><br>
+<div class=Declaration>
+<div align=left>
+<table x-use-null-cells
+	style="float: alignleft;
+	x-cell-content-align: Top;
+	border-spacing: 0px;
+	border-spacing: 0px;"
+	cellspacing=0>
+<col>
+<col>
+<tr style="x-cell-content-align: top;" valign=top>
+<td style="padding-right: 0px;
+	padding-left: 0px;
+	border-top-style: none;
+	border-bottom-style: none;
+	border-right-style: none;
+	border-left-style: none;">
+<p><span class=VarType>(number)&nbsp;</span>ColorConversion.HEXtoDEC (&nbsp;</td>
+<td style="padding-right: 0px;
+	padding-left: 0px;
+	border-top-style: none;
+	border-right-style: none;
+	border-bottom-style: none;">
+<p><span class=VarType>(string)&nbsp;</span>Hexadecimal <span class=DefaultValue> = "000000"</span> )</p>
+</td></tr></table></div></div>
+<h2 style="margin-bottom: 3pt;">Description</h2>
+<p><blockquote>Convert HEX color to DEC color</blockquote></p>
+<h2 class="H2Tight">Parameters</h2>
+<h3 class="ParameterHeading">Hexadecimal</h3>
+<p class="ParameterBody"><span class="type">(string)&nbsp;</span>HEX color</p>
+<br>
+<h2>Return</h2><blockquote><p>This action returns a <span class="type">(number)</span> value.<br><br></p></blockquote><br><hr><h1><A name="ColorConversion.DECtoHEX">ColorConversion.DECtoHEX</A></h1><br>
+<div class=Declaration>
+<div align=left>
+<table x-use-null-cells
+	style="float: alignleft;
+	x-cell-content-align: Top;
+	border-spacing: 0px;
+	border-spacing: 0px;"
+	cellspacing=0>
+<col>
+<col>
+<tr style="x-cell-content-align: top;" valign=top>
+<td style="padding-right: 0px;
+	padding-left: 0px;
+	border-top-style: none;
+	border-bottom-style: none;
+	border-right-style: none;
+	border-left-style: none;">
+<p><span class=VarType>(string)&nbsp;</span>ColorConversion.DECtoHEX (&nbsp;</td>
+<td style="padding-right: 0px;
+	padding-left: 0px;
+	border-top-style: none;
+	border-right-style: none;
+	border-bottom-style: none;">
+<p><span class=VarType>(number)&nbsp;</span>Decimal <span class=DefaultValue> = 0</span> )</p>
+</td></tr></table></div></div>
+<h2 style="margin-bottom: 3pt;">Description</h2>
+<p><blockquote>Convert DEC color to HEX color</blockquote></p>
+<h2 class="H2Tight">Parameters</h2>
+<h3 class="ParameterHeading">Decimal</h3>
+<p class="ParameterBody"><span class="type">(number)&nbsp;</span>DEC color</p>
+<br>
+<h2>Return</h2><blockquote><p>This action returns a <span class="type">(string)</span> value.<br><br></p></blockquote><br><hr><h1><A name="ColorConversion.RGBtoHSV">ColorConversion.RGBtoHSV</A></h1><br>
+<div class=Declaration>
+<div align=left>
+<table x-use-null-cells
+	style="float: alignleft;
+	x-cell-content-align: Top;
+	border-spacing: 0px;
+	border-spacing: 0px;"
+	cellspacing=0>
+<col>
+<col>
+<tr style="x-cell-content-align: top;" valign=top>
+<td style="padding-right: 0px;
+	padding-left: 0px;
+	border-top-style: none;
+	border-bottom-style: none;
+	border-right-style: none;
+	border-left-style: none;">
+<p><span class=VarType>(table)&nbsp;</span>ColorConversion.RGBtoHSV (&nbsp;</td>
+<td style="padding-right: 0px;
+	padding-left: 0px;
+	border-top-style: none;
+	border-right-style: none;
+	border-bottom-style: none;">
+<p><span class=VarType>(number)&nbsp;</span>Red <span class=DefaultValue> = 0</span>, </p>
+<p><span class=VarType>(number)&nbsp;</span>Green <span class=DefaultValue> = 0</span>, </p>
+<p><span class=VarType>(number)&nbsp;</span>Blue <span class=DefaultValue> = 0</span> )</p>
+</td></tr></table></div></div>
+<h2 style="margin-bottom: 3pt;">Description</h2>
+<p><blockquote>Convert RGB channels color to HSV color</blockquote></p>
+<h2 class="H2Tight">Parameters</h2>
+<h3 class="ParameterHeading">Red</h3>
+<p class="ParameterBody"><span class="type">(number)&nbsp;</span>RGB: Red Channel</p>
+<h3 class="ParameterHeading">Green</h3>
+<p class="ParameterBody"><span class="type">(number)&nbsp;</span>RGB: Green Channel</p>
+<h3 class="ParameterHeading">Blue</h3>
+<p class="ParameterBody"><span class="type">(number)&nbsp;</span>RGB: Blue Channel</p>
+<br>
+<h2>Return</h2><blockquote><p>This action returns a <span class="type">(table)</span> value.<br><br></p></blockquote><br><hr><h1><A name="ColorConversion.RGBtoCMY">ColorConversion.RGBtoCMY</A></h1><br>
+<div class=Declaration>
+<div align=left>
+<table x-use-null-cells
+	style="float: alignleft;
+	x-cell-content-align: Top;
+	border-spacing: 0px;
+	border-spacing: 0px;"
+	cellspacing=0>
+<col>
+<col>
+<tr style="x-cell-content-align: top;" valign=top>
+<td style="padding-right: 0px;
+	padding-left: 0px;
+	border-top-style: none;
+	border-bottom-style: none;
+	border-right-style: none;
+	border-left-style: none;">
+<p><span class=VarType>(table)&nbsp;</span>ColorConversion.RGBtoCMY (&nbsp;</td>
+<td style="padding-right: 0px;
+	padding-left: 0px;
+	border-top-style: none;
+	border-right-style: none;
+	border-bottom-style: none;">
+<p><span class=VarType>(number)&nbsp;</span>Red <span class=DefaultValue> = 0</span>, </p>
+<p><span class=VarType>(number)&nbsp;</span>Green <span class=DefaultValue> = 0</span>, </p>
+<p><span class=VarType>(number)&nbsp;</span>Blue <span class=DefaultValue> = 0</span> )</p>
+</td></tr></table></div></div>
+<h2 style="margin-bottom: 3pt;">Description</h2>
+<p><blockquote>Convert RGB channels color to CMY color</blockquote></p>
+<h2 class="H2Tight">Parameters</h2>
+<h3 class="ParameterHeading">Red</h3>
+<p class="ParameterBody"><span class="type">(number)&nbsp;</span>RGB: Red Channel</p>
+<h3 class="ParameterHeading">Green</h3>
+<p class="ParameterBody"><span class="type">(number)&nbsp;</span>RGB: Green Channel</p>
+<h3 class="ParameterHeading">Blue</h3>
+<p class="ParameterBody"><span class="type">(number)&nbsp;</span>RGB: Blue Channel</p>
+<br>
+<h2>Return</h2><blockquote><p>This action returns a <span class="type">(table)</span> value.<br><br></p></blockquote><br><hr><h1><A name="ColorConversion.CMYtoCMYK">ColorConversion.CMYtoCMYK</A></h1><br>
+<div class=Declaration>
+<div align=left>
+<table x-use-null-cells
+	style="float: alignleft;
+	x-cell-content-align: Top;
+	border-spacing: 0px;
+	border-spacing: 0px;"
+	cellspacing=0>
+<col>
+<col>
+<tr style="x-cell-content-align: top;" valign=top>
+<td style="padding-right: 0px;
+	padding-left: 0px;
+	border-top-style: none;
+	border-bottom-style: none;
+	border-right-style: none;
+	border-left-style: none;">
+<p><span class=VarType>(table)&nbsp;</span>ColorConversion.CMYtoCMYK (&nbsp;</td>
+<td style="padding-right: 0px;
+	padding-left: 0px;
+	border-top-style: none;
+	border-right-style: none;
+	border-bottom-style: none;">
+<p><span class=VarType>(number)&nbsp;</span>Cyan <span class=DefaultValue> = 0</span>, </p>
+<p><span class=VarType>(number)&nbsp;</span>Magenta <span class=DefaultValue> = 0</span>, </p>
+<p><span class=VarType>(number)&nbsp;</span>Yellow <span class=DefaultValue> = 0</span> )</p>
+</td></tr></table></div></div>
+<h2 style="margin-bottom: 3pt;">Description</h2>
+<p><blockquote>Convert CMY channels color to CMYK channels color</blockquote></p>
+<h2 class="H2Tight">Parameters</h2>
+<h3 class="ParameterHeading">Cyan</h3>
+<p class="ParameterBody"><span class="type">(number)&nbsp;</span>CMY: Cyan Channel</p>
+<h3 class="ParameterHeading">Magenta</h3>
+<p class="ParameterBody"><span class="type">(number)&nbsp;</span>CMY: Magenta Channel</p>
+<h3 class="ParameterHeading">Yellow</h3>
+<p class="ParameterBody"><span class="type">(number)&nbsp;</span>CMY: Yellow Channel</p>
+<br>
+<h2>Return</h2><blockquote><p>This action returns a <span class="type">(table)</span> value.<br><br></p></blockquote><br><hr><h1><A name="ColorConversion.CMYtoRGB">ColorConversion.CMYtoRGB</A></h1><br>
+<div class=Declaration>
+<div align=left>
+<table x-use-null-cells
+	style="float: alignleft;
+	x-cell-content-align: Top;
+	border-spacing: 0px;
+	border-spacing: 0px;"
+	cellspacing=0>
+<col>
+<col>
+<tr style="x-cell-content-align: top;" valign=top>
+<td style="padding-right: 0px;
+	padding-left: 0px;
+	border-top-style: none;
+	border-bottom-style: none;
+	border-right-style: none;
+	border-left-style: none;">
+<p><span class=VarType>(table)&nbsp;</span>ColorConversion.CMYtoRGB (&nbsp;</td>
+<td style="padding-right: 0px;
+	padding-left: 0px;
+	border-top-style: none;
+	border-right-style: none;
+	border-bottom-style: none;">
+<p><span class=VarType>(number)&nbsp;</span>Cyan <span class=DefaultValue> = 0</span>, </p>
+<p><span class=VarType>(number)&nbsp;</span>Magenta <span class=DefaultValue> = 0</span>, </p>
+<p><span class=VarType>(number)&nbsp;</span>Yellow <span class=DefaultValue> = 0</span> )</p>
+</td></tr></table></div></div>
+<h2 style="margin-bottom: 3pt;">Description</h2>
+<p><blockquote>Convert CMY channels color to RGB channels color</blockquote></p>
+<h2 class="H2Tight">Parameters</h2>
+<h3 class="ParameterHeading">Cyan</h3>
+<p class="ParameterBody"><span class="type">(number)&nbsp;</span>CMY: Cyan Channel</p>
+<h3 class="ParameterHeading">Magenta</h3>
+<p class="ParameterBody"><span class="type">(number)&nbsp;</span>CMY: Magenta Channel</p>
+<h3 class="ParameterHeading">Yellow</h3>
+<p class="ParameterBody"><span class="type">(number)&nbsp;</span>CMY: Yellow Channel</p>
+<br>
+<h2>Return</h2><blockquote><p>This action returns a <span class="type">(table)</span> value.<br><br></p></blockquote><br><hr><h1><A name="ColorConversion.RGBtoHSL">ColorConversion.RGBtoHSL</A></h1><br>
+<div class=Declaration>
+<div align=left>
+<table x-use-null-cells
+	style="float: alignleft;
+	x-cell-content-align: Top;
+	border-spacing: 0px;
+	border-spacing: 0px;"
+	cellspacing=0>
+<col>
+<col>
+<tr style="x-cell-content-align: top;" valign=top>
+<td style="padding-right: 0px;
+	padding-left: 0px;
+	border-top-style: none;
+	border-bottom-style: none;
+	border-right-style: none;
+	border-left-style: none;">
+<p><span class=VarType>(table)&nbsp;</span>ColorConversion.RGBtoHSL (&nbsp;</td>
+<td style="padding-right: 0px;
+	padding-left: 0px;
+	border-top-style: none;
+	border-right-style: none;
+	border-bottom-style: none;">
+<p><span class=VarType>(number)&nbsp;</span>Red <span class=DefaultValue> = 0</span>, </p>
+<p><span class=VarType>(number)&nbsp;</span>Green <span class=DefaultValue> = 0</span>, </p>
+<p><span class=VarType>(number)&nbsp;</span>Blue <span class=DefaultValue> = 0</span> )</p>
+</td></tr></table></div></div>
+<h2 style="margin-bottom: 3pt;">Description</h2>
+<p><blockquote>Convert RGB channels color to HSL channels color</blockquote></p>
+<h2 class="H2Tight">Parameters</h2>
+<h3 class="ParameterHeading">Red</h3>
+<p class="ParameterBody"><span class="type">(number)&nbsp;</span>RGB: Red Channel</p>
+<h3 class="ParameterHeading">Green</h3>
+<p class="ParameterBody"><span class="type">(number)&nbsp;</span>RGB: Green Channel</p>
+<h3 class="ParameterHeading">Blue</h3>
+<p class="ParameterBody"><span class="type">(number)&nbsp;</span>RGB: Blue Channel</p>
+<br>
+<h2>Return</h2><blockquote><p>This action returns a <span class="type">(table)</span> value.<br><br></p></blockquote><br><hr><h1><A name="ColorConversion.HSLtoRGB">ColorConversion.HSLtoRGB</A></h1><br>
+<div class=Declaration>
+<div align=left>
+<table x-use-null-cells
+	style="float: alignleft;
+	x-cell-content-align: Top;
+	border-spacing: 0px;
+	border-spacing: 0px;"
+	cellspacing=0>
+<col>
+<col>
+<tr style="x-cell-content-align: top;" valign=top>
+<td style="padding-right: 0px;
+	padding-left: 0px;
+	border-top-style: none;
+	border-bottom-style: none;
+	border-right-style: none;
+	border-left-style: none;">
+<p><span class=VarType>(table)&nbsp;</span>ColorConversion.HSLtoRGB (&nbsp;</td>
+<td style="padding-right: 0px;
+	padding-left: 0px;
+	border-top-style: none;
+	border-right-style: none;
+	border-bottom-style: none;">
+<p><span class=VarType>(number)&nbsp;</span>Hue <span class=DefaultValue> = 0</span>, </p>
+<p><span class=VarType>(number)&nbsp;</span>Sat <span class=DefaultValue> = 0</span>, </p>
+<p><span class=VarType>(number)&nbsp;</span>Lum <span class=DefaultValue> = 0</span> )</p>
+</td></tr></table></div></div>
+<h2 style="margin-bottom: 3pt;">Description</h2>
+<p><blockquote>Convert HSL channels color to RGB channels color</blockquote></p>
+<h2 class="H2Tight">Parameters</h2>
+<h3 class="ParameterHeading">Hue</h3>
+<p class="ParameterBody"><span class="type">(number)&nbsp;</span>HSL: Hue Channel</p>
+<h3 class="ParameterHeading">Sat</h3>
+<p class="ParameterBody"><span class="type">(number)&nbsp;</span>HSL: Saturation Channel</p>
+<h3 class="ParameterHeading">Lum</h3>
+<p class="ParameterBody"><span class="type">(number)&nbsp;</span>HSL: Luminance Channel</p>
+<br>
+<h2>Return</h2><blockquote><p>This action returns a <span class="type">(table)</span> value.<br><br></p></blockquote><br><hr><h1><A name="ColorConversion.CMYKtoCMY">ColorConversion.CMYKtoCMY</A></h1><br>
+<div class=Declaration>
+<div align=left>
+<table x-use-null-cells
+	style="float: alignleft;
+	x-cell-content-align: Top;
+	border-spacing: 0px;
+	border-spacing: 0px;"
+	cellspacing=0>
+<col>
+<col>
+<tr style="x-cell-content-align: top;" valign=top>
+<td style="padding-right: 0px;
+	padding-left: 0px;
+	border-top-style: none;
+	border-bottom-style: none;
+	border-right-style: none;
+	border-left-style: none;">
+<p><span class=VarType>(table)&nbsp;</span>ColorConversion.CMYKtoCMY (&nbsp;</td>
+<td style="padding-right: 0px;
+	padding-left: 0px;
+	border-top-style: none;
+	border-right-style: none;
+	border-bottom-style: none;">
+<p><span class=VarType>(number)&nbsp;</span>Cyan <span class=DefaultValue> = 0</span>, </p>
+<p><span class=VarType>(number)&nbsp;</span>Magenta <span class=DefaultValue> = 0</span>, </p>
+<p><span class=VarType>(number)&nbsp;</span>Yellow <span class=DefaultValue> = 0</span>, </p>
+<p><span class=VarType>(number)&nbsp;</span>Key <span class=DefaultValue> = 0</span> )</p>
+</td></tr></table></div></div>
+<h2 style="margin-bottom: 3pt;">Description</h2>
+<p><blockquote>Convert CMYK channels color to CMY channels color</blockquote></p>
+<h2 class="H2Tight">Parameters</h2>
+<h3 class="ParameterHeading">Cyan</h3>
+<p class="ParameterBody"><span class="type">(number)&nbsp;</span>CMYK: Cyan Channel</p>
+<h3 class="ParameterHeading">Magenta</h3>
+<p class="ParameterBody"><span class="type">(number)&nbsp;</span>CMYK: Magenta Channel</p>
+<h3 class="ParameterHeading">Yellow</h3>
+<p class="ParameterBody"><span class="type">(number)&nbsp;</span>CMYK: Yellow Channel</p>
+<h3 class="ParameterHeading">Key</h3>
+<p class="ParameterBody"><span class="type">(number)&nbsp;</span>CMYK: Key Channel</p>
+<br>
+<h2>Return</h2><blockquote><p>This action returns a <span class="type">(table)</span> value.<br><br></p></blockquote><br><hr><h1><A name="ColorConversion.HSVtoRGB">ColorConversion.HSVtoRGB</A></h1><br>
+<div class=Declaration>
+<div align=left>
+<table x-use-null-cells
+	style="float: alignleft;
+	x-cell-content-align: Top;
+	border-spacing: 0px;
+	border-spacing: 0px;"
+	cellspacing=0>
+<col>
+<col>
+<tr style="x-cell-content-align: top;" valign=top>
+<td style="padding-right: 0px;
+	padding-left: 0px;
+	border-top-style: none;
+	border-bottom-style: none;
+	border-right-style: none;
+	border-left-style: none;">
+<p><span class=VarType>(table)&nbsp;</span>ColorConversion.HSVtoRGB (&nbsp;</td>
+<td style="padding-right: 0px;
+	padding-left: 0px;
+	border-top-style: none;
+	border-right-style: none;
+	border-bottom-style: none;">
+<p><span class=VarType>(number)&nbsp;</span>H <span class=DefaultValue> = 0</span>, </p>
+<p><span class=VarType>(number)&nbsp;</span>S <span class=DefaultValue> = 0</span>, </p>
+<p><span class=VarType>(number)&nbsp;</span>V <span class=DefaultValue> = 0</span> )</p>
+</td></tr></table></div></div>
+<h2 style="margin-bottom: 3pt;">Description</h2>
+<p><blockquote>Convert HSV channels color to RGB channels color</blockquote></p>
+<h2 class="H2Tight">Parameters</h2>
+<h3 class="ParameterHeading">H</h3>
+<p class="ParameterBody"><span class="type">(number)&nbsp;</span>HSV: Hue Channel</p>
+<h3 class="ParameterHeading">S</h3>
+<p class="ParameterBody"><span class="type">(number)&nbsp;</span>HSV: Saturation Channel</p>
+<h3 class="ParameterHeading">V</h3>
+<p class="ParameterBody"><span class="type">(number)&nbsp;</span>HSV: Value Channel</p>
+<br>
+<h2>Return</h2><blockquote><p>This action returns a <span class="type">(table)</span> value.<br><br></p></blockquote><br><hr><h1><A name="ColorConversion.RGBtoXYZ">ColorConversion.RGBtoXYZ</A></h1><br>
+<div class=Declaration>
+<div align=left>
+<table x-use-null-cells
+	style="float: alignleft;
+	x-cell-content-align: Top;
+	border-spacing: 0px;
+	border-spacing: 0px;"
+	cellspacing=0>
+<col>
+<col>
+<tr style="x-cell-content-align: top;" valign=top>
+<td style="padding-right: 0px;
+	padding-left: 0px;
+	border-top-style: none;
+	border-bottom-style: none;
+	border-right-style: none;
+	border-left-style: none;">
+<p><span class=VarType>(table)&nbsp;</span>ColorConversion.RGBtoXYZ (&nbsp;</td>
+<td style="padding-right: 0px;
+	padding-left: 0px;
+	border-top-style: none;
+	border-right-style: none;
+	border-bottom-style: none;">
+<p><span class=VarType>(number)&nbsp;</span>Red <span class=DefaultValue> = 0</span>, </p>
+<p><span class=VarType>(number)&nbsp;</span>Green <span class=DefaultValue> = 0</span>, </p>
+<p><span class=VarType>(number)&nbsp;</span>Blue <span class=DefaultValue> = 0</span> )</p>
+</td></tr></table></div></div>
+<h2 style="margin-bottom: 3pt;">Description</h2>
+<p><blockquote>Convert RGB channels color to XYZ channels color</blockquote></p>
+<h2 class="H2Tight">Parameters</h2>
+<h3 class="ParameterHeading">Red</h3>
+<p class="ParameterBody"><span class="type">(number)&nbsp;</span>RGB: Red Channel</p>
+<h3 class="ParameterHeading">Green</h3>
+<p class="ParameterBody"><span class="type">(number)&nbsp;</span>RGB: Green Channel</p>
+<h3 class="ParameterHeading">Blue</h3>
+<p class="ParameterBody"><span class="type">(number)&nbsp;</span>RGB: Blue Channel</p>
+<br>
+<h2>Return</h2><blockquote><p>This action returns a <span class="type">(table)</span> value.<br><br></p></blockquote><br><hr><h1><A name="ColorConversion.XYZtoRGB">ColorConversion.XYZtoRGB</A></h1><br>
+<div class=Declaration>
+<div align=left>
+<table x-use-null-cells
+	style="float: alignleft;
+	x-cell-content-align: Top;
+	border-spacing: 0px;
+	border-spacing: 0px;"
+	cellspacing=0>
+<col>
+<col>
+<tr style="x-cell-content-align: top;" valign=top>
+<td style="padding-right: 0px;
+	padding-left: 0px;
+	border-top-style: none;
+	border-bottom-style: none;
+	border-right-style: none;
+	border-left-style: none;">
+<p><span class=VarType>(table)&nbsp;</span>ColorConversion.XYZtoRGB (&nbsp;</td>
+<td style="padding-right: 0px;
+	padding-left: 0px;
+	border-top-style: none;
+	border-right-style: none;
+	border-bottom-style: none;">
+<p><span class=VarType>(number)&nbsp;</span>X <span class=DefaultValue> = 0</span>, </p>
+<p><span class=VarType>(number)&nbsp;</span>Y <span class=DefaultValue> = 0</span>, </p>
+<p><span class=VarType>(number)&nbsp;</span>Z <span class=DefaultValue> = 0</span> )</p>
+</td></tr></table></div></div>
+<h2 style="margin-bottom: 3pt;">Description</h2>
+<p><blockquote>Convert XYZ channels color to RGB channels color</blockquote></p>
+<h2 class="H2Tight">Parameters</h2>
+<h3 class="ParameterHeading">X</h3>
+<p class="ParameterBody"><span class="type">(number)&nbsp;</span>XYZ: X Channel</p>
+<h3 class="ParameterHeading">Y</h3>
+<p class="ParameterBody"><span class="type">(number)&nbsp;</span>XYZ: Y Channel</p>
+<h3 class="ParameterHeading">Z</h3>
+<p class="ParameterBody"><span class="type">(number)&nbsp;</span>XYZ: Z Channel</p>
+<br>
+<h2>Return</h2><blockquote><p>This action returns a <span class="type">(table)</span> value.<br><br></p></blockquote><br><hr><h1><A name="ColorConversion.XYZtoYxy">ColorConversion.XYZtoYxy</A></h1><br>
+<div class=Declaration>
+<div align=left>
+<table x-use-null-cells
+	style="float: alignleft;
+	x-cell-content-align: Top;
+	border-spacing: 0px;
+	border-spacing: 0px;"
+	cellspacing=0>
+<col>
+<col>
+<tr style="x-cell-content-align: top;" valign=top>
+<td style="padding-right: 0px;
+	padding-left: 0px;
+	border-top-style: none;
+	border-bottom-style: none;
+	border-right-style: none;
+	border-left-style: none;">
+<p><span class=VarType>(table)&nbsp;</span>ColorConversion.XYZtoYxy (&nbsp;</td>
+<td style="padding-right: 0px;
+	padding-left: 0px;
+	border-top-style: none;
+	border-right-style: none;
+	border-bottom-style: none;">
+<p><span class=VarType>(number)&nbsp;</span>X <span class=DefaultValue> = 0</span>, </p>
+<p><span class=VarType>(number)&nbsp;</span>Y <span class=DefaultValue> = 0</span>, </p>
+<p><span class=VarType>(number)&nbsp;</span>Z <span class=DefaultValue> = 0</span> )</p>
+</td></tr></table></div></div>
+<h2 style="margin-bottom: 3pt;">Description</h2>
+<p><blockquote>Convert XYZ channels color to Yxy channels color</blockquote></p>
+<h2 class="H2Tight">Parameters</h2>
+<h3 class="ParameterHeading">X</h3>
+<p class="ParameterBody"><span class="type">(number)&nbsp;</span>XYZ: X Channel</p>
+<h3 class="ParameterHeading">Y</h3>
+<p class="ParameterBody"><span class="type">(number)&nbsp;</span>XYZ: Y Channel</p>
+<h3 class="ParameterHeading">Z</h3>
+<p class="ParameterBody"><span class="type">(number)&nbsp;</span>XYZ: Z Channel</p>
+<br>
+<h2>Return</h2><blockquote><p>This action returns a <span class="type">(table)</span> value.<br><br></p></blockquote><br><hr><h1><A name="ColorConversion.YxytoXYZ">ColorConversion.YxytoXYZ</A></h1><br>
+<div class=Declaration>
+<div align=left>
+<table x-use-null-cells
+	style="float: alignleft;
+	x-cell-content-align: Top;
+	border-spacing: 0px;
+	border-spacing: 0px;"
+	cellspacing=0>
+<col>
+<col>
+<tr style="x-cell-content-align: top;" valign=top>
+<td style="padding-right: 0px;
+	padding-left: 0px;
+	border-top-style: none;
+	border-bottom-style: none;
+	border-right-style: none;
+	border-left-style: none;">
+<p><span class=VarType>(table)&nbsp;</span>ColorConversion.YxytoXYZ (&nbsp;</td>
+<td style="padding-right: 0px;
+	padding-left: 0px;
+	border-top-style: none;
+	border-right-style: none;
+	border-bottom-style: none;">
+<p><span class=VarType>(number)&nbsp;</span>Y <span class=DefaultValue> = 0</span>, </p>
+<p><span class=VarType>(number)&nbsp;</span>x <span class=DefaultValue> = 0</span>, </p>
+<p><span class=VarType>(number)&nbsp;</span>y <span class=DefaultValue> = 0</span> )</p>
+</td></tr></table></div></div>
+<h2 style="margin-bottom: 3pt;">Description</h2>
+<p><blockquote>Convert Yxy channels color to XYZ channels color</blockquote></p>
+<h2 class="H2Tight">Parameters</h2>
+<h3 class="ParameterHeading">Y</h3>
+<p class="ParameterBody"><span class="type">(number)&nbsp;</span>Yxy: Y Channel</p>
+<h3 class="ParameterHeading">x</h3>
+<p class="ParameterBody"><span class="type">(number)&nbsp;</span>Yxy: x Channel</p>
+<h3 class="ParameterHeading">y</h3>
+<p class="ParameterBody"><span class="type">(number)&nbsp;</span>Yxy: y Channel</p>
+<br>
+<h2>Return</h2><blockquote><p>This action returns a <span class="type">(table)</span> value.<br><br></p></blockquote><br><hr><h1><A name="ColorConversion.XYZtoHLab">ColorConversion.XYZtoHLab</A></h1><br>
+<div class=Declaration>
+<div align=left>
+<table x-use-null-cells
+	style="float: alignleft;
+	x-cell-content-align: Top;
+	border-spacing: 0px;
+	border-spacing: 0px;"
+	cellspacing=0>
+<col>
+<col>
+<tr style="x-cell-content-align: top;" valign=top>
+<td style="padding-right: 0px;
+	padding-left: 0px;
+	border-top-style: none;
+	border-bottom-style: none;
+	border-right-style: none;
+	border-left-style: none;">
+<p><span class=VarType>(table)&nbsp;</span>ColorConversion.XYZtoHLab (&nbsp;</td>
+<td style="padding-right: 0px;
+	padding-left: 0px;
+	border-top-style: none;
+	border-right-style: none;
+	border-bottom-style: none;">
+<p><span class=VarType>(number)&nbsp;</span>X <span class=DefaultValue> = 0</span>, </p>
+<p><span class=VarType>(number)&nbsp;</span>Y <span class=DefaultValue> = 0</span>, </p>
+<p><span class=VarType>(number)&nbsp;</span>Z <span class=DefaultValue> = 0</span> )</p>
+</td></tr></table></div></div>
+<h2 style="margin-bottom: 3pt;">Description</h2>
+<p><blockquote>Convert XYZ channels color to HLab channels color</blockquote></p>
+<h2 class="H2Tight">Parameters</h2>
+<h3 class="ParameterHeading">X</h3>
+<p class="ParameterBody"><span class="type">(number)&nbsp;</span>XYZ: X Channel</p>
+<h3 class="ParameterHeading">Y</h3>
+<p class="ParameterBody"><span class="type">(number)&nbsp;</span>XYZ: Y Channel</p>
+<h3 class="ParameterHeading">Z</h3>
+<p class="ParameterBody"><span class="type">(number)&nbsp;</span>XYZ: Z Channel</p>
+<br>
+<h2>Return</h2><blockquote><p>This action returns a <span class="type">(table)</span> value.<br><br></p></blockquote><br><hr><h1><A name="ColorConversion.HLabtoXYZ">ColorConversion.HLabtoXYZ</A></h1><br>
+<div class=Declaration>
+<div align=left>
+<table x-use-null-cells
+	style="float: alignleft;
+	x-cell-content-align: Top;
+	border-spacing: 0px;
+	border-spacing: 0px;"
+	cellspacing=0>
+<col>
+<col>
+<tr style="x-cell-content-align: top;" valign=top>
+<td style="padding-right: 0px;
+	padding-left: 0px;
+	border-top-style: none;
+	border-bottom-style: none;
+	border-right-style: none;
+	border-left-style: none;">
+<p><span class=VarType>(table)&nbsp;</span>ColorConversion.HLabtoXYZ (&nbsp;</td>
+<td style="padding-right: 0px;
+	padding-left: 0px;
+	border-top-style: none;
+	border-right-style: none;
+	border-bottom-style: none;">
+<p><span class=VarType>(number)&nbsp;</span>L <span class=DefaultValue> = 0</span>, </p>
+<p><span class=VarType>(number)&nbsp;</span>a <span class=DefaultValue> = 0</span>, </p>
+<p><span class=VarType>(number)&nbsp;</span>b <span class=DefaultValue> = 0</span> )</p>
+</td></tr></table></div></div>
+<h2 style="margin-bottom: 3pt;">Description</h2>
+<p><blockquote>Convert HLab channels color to XYZ channels color</blockquote></p>
+<h2 class="H2Tight">Parameters</h2>
+<h3 class="ParameterHeading">L</h3>
+<p class="ParameterBody"><span class="type">(number)&nbsp;</span>HLab: L Channel</p>
+<h3 class="ParameterHeading">a</h3>
+<p class="ParameterBody"><span class="type">(number)&nbsp;</span>HLab: a Channel</p>
+<h3 class="ParameterHeading">b</h3>
+<p class="ParameterBody"><span class="type">(number)&nbsp;</span>HLab: b Channel</p>
+<br>
+<h2>Return</h2><blockquote><p>This action returns a <span class="type">(table)</span> value.<br><br></p></blockquote><br><hr><h1><A name="ColorConversion.XYZtoCIELab">ColorConversion.XYZtoCIELab</A></h1><br>
+<div class=Declaration>
+<div align=left>
+<table x-use-null-cells
+	style="float: alignleft;
+	x-cell-content-align: Top;
+	border-spacing: 0px;
+	border-spacing: 0px;"
+	cellspacing=0>
+<col>
+<col>
+<tr style="x-cell-content-align: top;" valign=top>
+<td style="padding-right: 0px;
+	padding-left: 0px;
+	border-top-style: none;
+	border-bottom-style: none;
+	border-right-style: none;
+	border-left-style: none;">
+<p><span class=VarType>(table)&nbsp;</span>ColorConversion.XYZtoCIELab (&nbsp;</td>
+<td style="padding-right: 0px;
+	padding-left: 0px;
+	border-top-style: none;
+	border-right-style: none;
+	border-bottom-style: none;">
+<p><span class=VarType>(number)&nbsp;</span>X <span class=DefaultValue> = 0</span>, </p>
+<p><span class=VarType>(number)&nbsp;</span>Y <span class=DefaultValue> = 0</span>, </p>
+<p><span class=VarType>(number)&nbsp;</span>Z <span class=DefaultValue> = 0</span> )</p>
+</td></tr></table></div></div>
+<h2 style="margin-bottom: 3pt;">Description</h2>
+<p><blockquote>Convert XYZ channels color to CIE-L*ab channels color</blockquote></p>
+<h2 class="H2Tight">Parameters</h2>
+<h3 class="ParameterHeading">X</h3>
+<p class="ParameterBody"><span class="type">(number)&nbsp;</span>XYZ: X Channel</p>
+<h3 class="ParameterHeading">Y</h3>
+<p class="ParameterBody"><span class="type">(number)&nbsp;</span>XYZ: Y Channel</p>
+<h3 class="ParameterHeading">Z</h3>
+<p class="ParameterBody"><span class="type">(number)&nbsp;</span>XYZ: Z Channel</p>
+<br>
+<h2>Return</h2><blockquote><p>This action returns a <span class="type">(table)</span> value.<br><br></p></blockquote><br><hr><h1><A name="ColorConversion.CIELabtoXYZ">ColorConversion.CIELabtoXYZ</A></h1><br>
+<div class=Declaration>
+<div align=left>
+<table x-use-null-cells
+	style="float: alignleft;
+	x-cell-content-align: Top;
+	border-spacing: 0px;
+	border-spacing: 0px;"
+	cellspacing=0>
+<col>
+<col>
+<tr style="x-cell-content-align: top;" valign=top>
+<td style="padding-right: 0px;
+	padding-left: 0px;
+	border-top-style: none;
+	border-bottom-style: none;
+	border-right-style: none;
+	border-left-style: none;">
+<p><span class=VarType>(table)&nbsp;</span>ColorConversion.CIELabtoXYZ (&nbsp;</td>
+<td style="padding-right: 0px;
+	padding-left: 0px;
+	border-top-style: none;
+	border-right-style: none;
+	border-bottom-style: none;">
+<p><span class=VarType>(number)&nbsp;</span>L <span class=DefaultValue> = 0</span>, </p>
+<p><span class=VarType>(number)&nbsp;</span>a <span class=DefaultValue> = 0</span>, </p>
+<p><span class=VarType>(number)&nbsp;</span>b <span class=DefaultValue> = 0</span> )</p>
+</td></tr></table></div></div>
+<h2 style="margin-bottom: 3pt;">Description</h2>
+<p><blockquote>Convert CIELab channels color to XYZ channels color</blockquote></p>
+<h2 class="H2Tight">Parameters</h2>
+<h3 class="ParameterHeading">L</h3>
+<p class="ParameterBody"><span class="type">(number)&nbsp;</span>CIELab: L Channel</p>
+<h3 class="ParameterHeading">a</h3>
+<p class="ParameterBody"><span class="type">(number)&nbsp;</span>CIELab: a Channel</p>
+<h3 class="ParameterHeading">b</h3>
+<p class="ParameterBody"><span class="type">(number)&nbsp;</span>CIELab: b Channel</p>
+<br>
+<h2>Return</h2><blockquote><p>This action returns a <span class="type">(table)</span> value.<br><br></p></blockquote><br><hr><h1><A name="ColorConversion.XYZtoCIELuv">ColorConversion.XYZtoCIELuv</A></h1><br>
+<div class=Declaration>
+<div align=left>
+<table x-use-null-cells
+	style="float: alignleft;
+	x-cell-content-align: Top;
+	border-spacing: 0px;
+	border-spacing: 0px;"
+	cellspacing=0>
+<col>
+<col>
+<tr style="x-cell-content-align: top;" valign=top>
+<td style="padding-right: 0px;
+	padding-left: 0px;
+	border-top-style: none;
+	border-bottom-style: none;
+	border-right-style: none;
+	border-left-style: none;">
+<p><span class=VarType>(table)&nbsp;</span>ColorConversion.XYZtoCIELuv (&nbsp;</td>
+<td style="padding-right: 0px;
+	padding-left: 0px;
+	border-top-style: none;
+	border-right-style: none;
+	border-bottom-style: none;">
+<p><span class=VarType>(number)&nbsp;</span>X <span class=DefaultValue> = 0</span>, </p>
+<p><span class=VarType>(number)&nbsp;</span>Y <span class=DefaultValue> = 0</span>, </p>
+<p><span class=VarType>(number)&nbsp;</span>Z <span class=DefaultValue> = 0</span> )</p>
+</td></tr></table></div></div>
+<h2 style="margin-bottom: 3pt;">Description</h2>
+<p><blockquote>Convert XYZ channels color to CIE-L*uv channels color</blockquote></p>
+<h2 class="H2Tight">Parameters</h2>
+<h3 class="ParameterHeading">X</h3>
+<p class="ParameterBody"><span class="type">(number)&nbsp;</span>XYZ: X Channel</p>
+<h3 class="ParameterHeading">Y</h3>
+<p class="ParameterBody"><span class="type">(number)&nbsp;</span>XYZ: Y Channel</p>
+<h3 class="ParameterHeading">Z</h3>
+<p class="ParameterBody"><span class="type">(number)&nbsp;</span>XYZ: Z Channel</p>
+<br>
+<h2>Return</h2><blockquote><p>This action returns a <span class="type">(table)</span> value.<br><br></p></blockquote><br><hr><h1><A name="ColorConversion.CIELuvtoXYZ">ColorConversion.CIELuvtoXYZ</A></h1><br>
+<div class=Declaration>
+<div align=left>
+<table x-use-null-cells
+	style="float: alignleft;
+	x-cell-content-align: Top;
+	border-spacing: 0px;
+	border-spacing: 0px;"
+	cellspacing=0>
+<col>
+<col>
+<tr style="x-cell-content-align: top;" valign=top>
+<td style="padding-right: 0px;
+	padding-left: 0px;
+	border-top-style: none;
+	border-bottom-style: none;
+	border-right-style: none;
+	border-left-style: none;">
+<p><span class=VarType>(table)&nbsp;</span>ColorConversion.CIELuvtoXYZ (&nbsp;</td>
+<td style="padding-right: 0px;
+	padding-left: 0px;
+	border-top-style: none;
+	border-right-style: none;
+	border-bottom-style: none;">
+<p><span class=VarType>(number)&nbsp;</span>L <span class=DefaultValue> = 0</span>, </p>
+<p><span class=VarType>(number)&nbsp;</span>u <span class=DefaultValue> = 0</span>, </p>
+<p><span class=VarType>(number)&nbsp;</span>v <span class=DefaultValue> = 0</span> )</p>
+</td></tr></table></div></div>
+<h2 style="margin-bottom: 3pt;">Description</h2>
+<p><blockquote>Convert CIE-L*uv channels color to XYZ channels color</blockquote></p>
+<h2 class="H2Tight">Parameters</h2>
+<h3 class="ParameterHeading">L</h3>
+<p class="ParameterBody"><span class="type">(number)&nbsp;</span>CIELuv: L Channel</p>
+<h3 class="ParameterHeading">u</h3>
+<p class="ParameterBody"><span class="type">(number)&nbsp;</span>CIELuv: u Channel</p>
+<h3 class="ParameterHeading">v</h3>
+<p class="ParameterBody"><span class="type">(number)&nbsp;</span>CIELuv: v Channel</p>
+<br>
+<h2>Return</h2><blockquote><p>This action returns a <span class="type">(table)</span> value.<br><br></p></blockquote><br><hr><h1><A name="ColorConversion.CIELabtoCIELCH">ColorConversion.CIELabtoCIELCH</A></h1><br>
+<div class=Declaration>
+<div align=left>
+<table x-use-null-cells
+	style="float: alignleft;
+	x-cell-content-align: Top;
+	border-spacing: 0px;
+	border-spacing: 0px;"
+	cellspacing=0>
+<col>
+<col>
+<tr style="x-cell-content-align: top;" valign=top>
+<td style="padding-right: 0px;
+	padding-left: 0px;
+	border-top-style: none;
+	border-bottom-style: none;
+	border-right-style: none;
+	border-left-style: none;">
+<p><span class=VarType>(table)&nbsp;</span>ColorConversion.CIELabtoCIELCH (&nbsp;</td>
+<td style="padding-right: 0px;
+	padding-left: 0px;
+	border-top-style: none;
+	border-right-style: none;
+	border-bottom-style: none;">
+<p><span class=VarType>(number)&nbsp;</span>L <span class=DefaultValue> = 0</span>, </p>
+<p><span class=VarType>(number)&nbsp;</span>a <span class=DefaultValue> = 0</span>, </p>
+<p><span class=VarType>(number)&nbsp;</span>b <span class=DefaultValue> = 0</span> )</p>
+</td></tr></table></div></div>
+<h2 style="margin-bottom: 3pt;">Description</h2>
+<p><blockquote>Convert CIE-L*ab channels color to CIE-L*CH channels color</blockquote></p>
+<h2 class="H2Tight">Parameters</h2>
+<h3 class="ParameterHeading">L</h3>
+<p class="ParameterBody"><span class="type">(number)&nbsp;</span>CIELab: L Channel</p>
+<h3 class="ParameterHeading">a</h3>
+<p class="ParameterBody"><span class="type">(number)&nbsp;</span>CIELab: a Channel</p>
+<h3 class="ParameterHeading">b</h3>
+<p class="ParameterBody"><span class="type">(number)&nbsp;</span>CIELab: b Channel</p>
+<br>
+<h2>Return</h2><blockquote><p>This action returns a <span class="type">(table)</span> value.<br><br></p></blockquote><br><hr><h1><A name="ColorConversion.CIELCHtoCIELab">ColorConversion.CIELCHtoCIELab</A></h1><br>
+<div class=Declaration>
+<div align=left>
+<table x-use-null-cells
+	style="float: alignleft;
+	x-cell-content-align: Top;
+	border-spacing: 0px;
+	border-spacing: 0px;"
+	cellspacing=0>
+<col>
+<col>
+<tr style="x-cell-content-align: top;" valign=top>
+<td style="padding-right: 0px;
+	padding-left: 0px;
+	border-top-style: none;
+	border-bottom-style: none;
+	border-right-style: none;
+	border-left-style: none;">
+<p><span class=VarType>(table)&nbsp;</span>ColorConversion.CIELCHtoCIELab (&nbsp;</td>
+<td style="padding-right: 0px;
+	padding-left: 0px;
+	border-top-style: none;
+	border-right-style: none;
+	border-bottom-style: none;">
+<p><span class=VarType>(number)&nbsp;</span>L <span class=DefaultValue> = 0</span>, </p>
+<p><span class=VarType>(number)&nbsp;</span>C <span class=DefaultValue> = 0</span>, </p>
+<p><span class=VarType>(number)&nbsp;</span>H <span class=DefaultValue> = 0</span> )</p>
+</td></tr></table></div></div>
+<h2 style="margin-bottom: 3pt;">Description</h2>
+<p><blockquote>Convert CIE-L*CH° channels color to CIE-L*ab channels color</blockquote></p>
+<h2 class="H2Tight">Parameters</h2>
+<h3 class="ParameterHeading">L</h3>
+<p class="ParameterBody"><span class="type">(number)&nbsp;</span>CIELCH: L Channel</p>
+<h3 class="ParameterHeading">C</h3>
+<p class="ParameterBody"><span class="type">(number)&nbsp;</span>CIELCH: C Channel</p>
+<h3 class="ParameterHeading">H</h3>
+<p class="ParameterBody"><span class="type">(number)&nbsp;</span>CIELCH: H Channel</p>
+<br>
+<h2>Return</h2><blockquote><p>This action returns a <span class="type">(table)</span> value.<br><br></p></blockquote><br><hr><h2><p align="center">Made with Action Plugin Compiler</p></h2></body></html>

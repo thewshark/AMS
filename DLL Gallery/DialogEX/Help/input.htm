@@ -1,0 +1,169 @@
+<html>
+
+<head>
+<meta http-equiv="Content-Language" content="en-gb">
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<title>DialogEX Constants</title>
+</head>
+
+<body link="#0000FF" vlink="#C0C0C0" alink="#FF0000" text="#000000">
+
+<table border="1" width="100%" cellspacing="0" style="border-collapse: collapse">
+	<tr>
+		<td colspan="4"><b><font size="4">&nbsp;DialogEX</font></b><font size="4"><b>.Input()</b></font></td>
+	</tr>
+	<tr>
+		<td colspan="4">&nbsp;</td>
+	</tr>
+	<tr>
+		<td colspan="4">&nbsp;<br>
+		&nbsp;Presents an input dialog To collect information from the user.<br>
+&nbsp;</td>
+	</tr>
+	<tr>
+		<td colspan="4"><b>&nbsp;<br>
+&nbsp;Arguments<br>
+&nbsp;</b>Below is a list of the function arguments (In order)<br>
+&nbsp;</td>
+	</tr>
+	<tr>
+		<td width="11%"><b><font size="2">&nbsp;Variable Type</font></b></td>
+		<td width="11%"><b><font size="2">&nbsp;Variable</font></b></td>
+		<td width="2%">&nbsp;</td>
+		<td width="73%"><b><font size="2">&nbsp;Description</font></b></td>
+	</tr>
+	<tr>
+		<td width="11%">&nbsp;string </td>
+		<td width="11%">&nbsp;Title</td>
+		<td width="2%">&nbsp;=</td>
+		<td width="73%">&nbsp;The title of the dialog window.</td>
+	</tr>
+	<tr>
+		<td height="21" width="11%">&nbsp;string </td>
+		<td height="21" width="11%">&nbsp;Message</td>
+		<td height="21" width="2%">&nbsp;=</td>
+		<td height="21" width="73%">&nbsp;The text that will appear on the dialog.</td>
+	</tr>
+	<tr>
+		<td width="11%">&nbsp;number</td>
+		<td width="11%">&nbsp;InputType&nbsp; </td>
+		<td width="2%">&nbsp;=</td>
+		<td width="73%">&nbsp;Sets the input type For the dialog.. (See 
+		Constants: &quot;<a href="const.htm#Input_Types">Input Types</a>&quot;)</td>
+	</tr>
+	<tr>
+		<td width="11%">&nbsp;number</td>
+		<td width="11%">&nbsp;Align</td>
+		<td width="2%">&nbsp;=</td>
+		<td width="73%">&nbsp;Where To align the message text. (See Constants: 
+		&quot;<a href="const.htm#Dialog_Text_Align">Dialog Text Align</a>&quot;)</td>
+	</tr>
+	<tr>
+		<td width="11%">&nbsp;string </td>
+		<td width="11%">&nbsp;Default </td>
+		<td width="2%">&nbsp;= </td>
+		<td width="73%">&nbsp;The Default text To show in the input.</td>
+	</tr>
+	<tr>
+		<td width="11%">&nbsp;number</td>
+		<td width="11%">&nbsp;Display </td>
+		<td width="2%">&nbsp;=</td>
+		<td width="73%">&nbsp;Where To display the dialog on the screen. (See 
+		Constants: &quot;<a href="const.htm#Display_type">Display type</a>&quot;)</td>
+	</tr>
+	<tr>
+		<td width="11%" height="26">&nbsp;number</td>
+		<td width="11%" height="26">&nbsp;X</td>
+		<td width="2%" height="26">&nbsp;=</td>
+		<td width="73%" height="26">&nbsp;The X position of the dialog, (Ignored 
+		unless Display is set To DEX_SHOW_CUSTOM).</td>
+	</tr>
+	<tr>
+		<td width="11%">&nbsp;number</td>
+		<td width="11%">&nbsp;Y</td>
+		<td width="2%">&nbsp;=</td>
+		<td width="73%">&nbsp;The Y position of the dialog, (Ignored unless 
+		Display is set To DEX_SHOW_CUSTOM).</td>
+	</tr>
+	<tr>
+		<td width="11%">&nbsp;number</td>
+		<td width="11%">&nbsp;BackCol</td>
+		<td width="2%">&nbsp;=</td>
+		<td width="73%">&nbsp;The background color of the dialog. (Use -1 to 
+		disable else any decimal color)</td>
+	</tr>
+	<tr>
+		<td width="11%">&nbsp;number </td>
+		<td width="11%">&nbsp;FrontCol</td>
+		<td width="2%">&nbsp;=</td>
+		<td width="73%">&nbsp;The color of the text on the dialog. (Use -1 to 
+		disable else any decimal color)</td>
+	</tr>
+	<tr>
+		<td width="11%">&nbsp;number</td>
+		<td width="11%">&nbsp;WinType</td>
+		<td width="2%">&nbsp;=</td>
+		<td width="73%">&nbsp;What style To apply To the window. (See Constants: 
+		&quot;<a href="const.htm#Dialog_Type">Dialog Type</a>&quot;)</td>
+	</tr>
+	<tr>
+		<td width="11%">&nbsp;number</td>
+		<td width="11%">&nbsp;IN</td>
+		<td width="2%">&nbsp;=</td>
+		<td width="73%">&nbsp;How To show the dialog. (See Constants: &quot;<a href="const.htm#Dialog_Animation">Dialog 
+		Animation</a>&quot;) </td>
+	</tr>
+	<tr>
+		<td width="11%">&nbsp;number </td>
+		<td width="11%">&nbsp;DELAY</td>
+		<td width="2%">&nbsp;=</td>
+		<td width="73%">&nbsp;The time of the transition in milliseconds.</td>
+	</tr>
+	<tr>
+		<td width="11%">&nbsp;number</td>
+		<td width="11%">&nbsp;OUT</td>
+		<td width="2%">&nbsp;=</td>
+		<td width="73%">&nbsp;How To exit the dialog. (See Constants: &quot;<a href="const.htm#Dialog_Animation">Dialog 
+		Animation</a>&quot;) </td>
+	</tr>
+	<tr>
+		<td width="11%" valign="top">&nbsp;number</td>
+		<td width="11%" valign="top">&nbsp;Timeout</td>
+		<td width="2%" valign="top">&nbsp;=</td>
+		<td width="73%">&nbsp;How long To display the dialog for in 
+		milliseconds, (set To 0 To disable).<br>
+		<br>
+&nbsp;This can be used to end the dialog if the user takes to long to respond. </td>
+	</tr>
+	<tr>
+		<td width="98%" colspan="4"><b>&nbsp;<br>
+		&nbsp;Return (</b>String<b>)<br>
+&nbsp;</b></td>
+	</tr>
+	<tr>
+		<td width="26%" colspan="3"><b><font size="2">&nbsp;Button</font></b></td>
+		<td width="73%"><b><font size="2">&nbsp;Return Value</font></b></td>
+	</tr>
+	<tr>
+		<td width="23%" colspan="2">&nbsp;OK</td>
+		<td width="2%">&nbsp;=</td>
+		<td width="73%">&nbsp;String from input, if input is blank then the dialog 
+		will not close (flashes dialog)</td>
+	</tr>
+	<tr>
+		<td width="23%" colspan="2">&nbsp;Cancel</td>
+		<td width="2%">&nbsp;=</td>
+		<td width="73%">&nbsp;&quot;CANCEL&quot;</td>
+	</tr>
+	<tr>
+		<td width="98%" colspan="4"><br>
+&nbsp;If the Timeout is not set to zero and timeout reached then &quot;TIMEOUT&quot; is 
+		returned.<br>
+		&nbsp;Exit button on window returns &quot;CANCEL&quot;.<br>
+&nbsp;</td>
+	</tr>
+	</table>
+
+</body>
+
+</html>

@@ -1,0 +1,292 @@
+<ActionTemplates>
+   <Action>
+	    <Name>WebCam.Connect</Name>
+      <Description>Connect to the webcam.</Description>
+      <ReturnValueType></ReturnValueType>
+      <Arguments>
+        <Arg>
+          <Name>hWndParent</Name>
+          <Description>Parent window handle.</Description>
+          <Type>number</Type>
+          <Default>Application.GetWndHandle()</Default>
+          <Required>0</Required>
+          <EasyMode>
+            <Default>Application.GetWndHandle()</Default>
+            <DataType>number</DataType>
+            <Constraints>1,*</Constraints>
+          </EasyMode>
+        </Arg>
+      </Arguments>
+   </Action>
+   <Action>
+	    <Name>WebCam.ConnectEx</Name>
+      <Description>Connect to the webcam.</Description>
+      <ReturnValueType></ReturnValueType>
+      <Arguments>
+        <Arg>
+          <Name>hWndParent</Name>
+          <Description>Parent window handle.</Description>
+          <Type>number</Type>
+          <Default>Application.GetWndHandle()</Default>
+          <Required>0</Required>
+          <EasyMode>
+            <Default>Application.GetWndHandle()</Default>
+            <DataType>number</DataType>
+            <Constraints>1,*</Constraints>
+          </EasyMode>
+        </Arg>
+        <Arg>
+          <Name>x</Name>
+          <Description>The horizontal position of the webcam window.</Description>
+          <Type>number</Type>
+          <Default>0</Default>
+          <Required>0</Required>
+          <EasyMode>
+            <Default>0</Default>
+            <DataType>number</DataType>
+            <Constraints>0,*</Constraints>
+          </EasyMode>
+        </Arg>
+        <Arg>
+          <Name>y</Name>
+          <Description>The vertical position of the webcam window.</Description>
+          <Type>number</Type>
+          <Default>0</Default>
+          <Required>0</Required>
+          <EasyMode>
+            <Default>0</Default>
+            <DataType>number</DataType>
+            <Constraints>0,*</Constraints>
+          </EasyMode>
+        </Arg>
+        <Arg>
+          <Name>width</Name>
+          <Description>The width of the webcam window.</Description>
+          <Type>number</Type>
+          <Default>400</Default>
+          <Required>0</Required>
+          <EasyMode>
+            <Default>400</Default>
+            <DataType>number</DataType>
+            <Constraints>1,*</Constraints>
+          </EasyMode>
+        </Arg>
+        <Arg>
+          <Name>height</Name>
+          <Description>The height of the webcam window.</Description>
+          <Type>number</Type>
+          <Default>300</Default>
+          <Required>0</Required>
+          <EasyMode>
+            <Default>300</Default>
+            <DataType>number</DataType>
+            <Constraints>1,*</Constraints>
+          </EasyMode>
+        </Arg>
+	    </Arguments>
+   </Action>
+   <Action>
+	    <Name>WebCam.Disconnect</Name>
+      <Description>Disconnect webcam.</Description>
+      <ReturnValueType></ReturnValueType>
+   </Action>
+   <Action>
+	    <Name>WebCam.Photo</Name>
+      <Description>Capture photo from webcam.</Description>
+      <ReturnValueType></ReturnValueType>
+      <Arguments>
+        <Arg>
+          <Name>FileName</Name>
+          <Description>The filename for the captured photo.</Description>
+          <Type>string</Type>
+          <Default>"WebCamPhoto.jpg"</Default>
+          <Required>0</Required>
+          <EasyMode>
+            <Default>"WebCamPhoto.jpg"</Default>
+            <DataType>string</DataType>
+            <Constraints>1,*</Constraints>
+          </EasyMode>
+        </Arg>
+	    </Arguments>
+   </Action>
+   <Action>
+	    <Name>WebCam.CaptureStart</Name>
+      <Description>Start video capture.</Description>
+      <ReturnValueType></ReturnValueType>
+      <Arguments>
+        <Arg>
+          <Name>FileName</Name>
+          <Description>The filename for the captured video.</Description>
+          <Type>string</Type>
+          <Default>"WebCamVideo.avi"</Default>
+          <Required>0</Required>
+          <EasyMode>
+            <Default>"WebCamVideo.avi"</Default>
+            <DataType>string</DataType>
+            <Constraints>1,*</Constraints>
+          </EasyMode>
+        </Arg>
+	    </Arguments>
+   </Action>
+   <Action>
+	    <Name>WebCam.CaptureStop</Name>
+      <Description>Stop video capture.</Description>
+      <ReturnValueType></ReturnValueType>
+   </Action>
+   <Action>
+	    <Name>WebCam.GetLocation</Name>
+      <Description>Gets webcam window location.</Description>
+      <ReturnValueType>table</ReturnValueType>
+   </Action>
+   <Action>
+	    <Name>WebCam.GetSize</Name>
+      <Description>Gets webcam window size.</Description>
+      <ReturnValueType>table</ReturnValueType>
+   </Action>
+   <Action>
+	    <Name>WebCam.SetLocation</Name>
+      <Description>Sets webcam window location</Description>
+      <ReturnValueType></ReturnValueType>
+     <Arguments>
+       <Arg>
+         <Name>x</Name>
+         <Description>The horizontal position of the webcam window.</Description>
+         <Type>number</Type>
+         <Default>0</Default>
+         <Required>0</Required>
+         <EasyMode>
+           <Default>0</Default>
+           <DataType>number</DataType>
+           <Constraints>0,*</Constraints>
+         </EasyMode>
+       </Arg>
+       <Arg>
+         <Name>y</Name>
+         <Description>The vertical position of the webcam window.</Description>
+         <Type>number</Type>
+         <Default>0</Default>
+         <Required>0</Required>
+         <EasyMode>
+           <Default>0</Default>
+           <DataType>number</DataType>
+           <Constraints>0,*</Constraints>
+         </EasyMode>
+       </Arg>
+     </Arguments>
+   </Action>
+   <Action>
+	    <Name>WebCam.SetSize</Name>
+      <Description>Sets webcam window size.</Description>
+      <ReturnValueType></ReturnValueType>
+     <Arguments>
+       <Arg>
+         <Name>width</Name>
+         <Description>The width of the webcam window.</Description>
+         <Type>number</Type>
+         <Default>400</Default>
+         <Required>0</Required>
+         <EasyMode>
+           <Default>400</Default>
+           <DataType>number</DataType>
+           <Constraints>1,*</Constraints>
+         </EasyMode>
+       </Arg>
+       <Arg>
+         <Name>height</Name>
+         <Description>The height of the webcam window.</Description>
+         <Type>number</Type>
+         <Default>300</Default>
+         <Required>0</Required>
+         <EasyMode>
+           <Default>300</Default>
+           <DataType>number</DataType>
+           <Constraints>1,*</Constraints>
+         </EasyMode>
+       </Arg>
+     </Arguments>
+   </Action>
+   <Action>
+	    <Name>WebCam.HasVideoSourceDialog</Name>
+      <Description>Gets a value whether webcam supports a video source dialog.</Description>
+      <ReturnValueType>boolean</ReturnValueType>
+   </Action>
+   <Action>
+	    <Name>WebCam.HasVideoFormatDialog</Name>
+      <Description>Gets a value whether webcam supports a video format dialog.</Description>
+      <ReturnValueType>boolean</ReturnValueType>
+   </Action>
+   <Action>
+	    <Name>WebCam.HasVideoDisplayDialog</Name>
+      <Description>Gets a value whether webcam supports a video display dialog.</Description>
+      <ReturnValueType>boolean</ReturnValueType>
+   </Action>
+   <Action>
+	    <Name>WebCam.IsInitialized</Name>
+      <Description>Gets a value whether webcam is connected.</Description>
+      <ReturnValueType>boolean</ReturnValueType>
+   </Action>
+   <Action>
+	    <Name>WebCam.IsCapturing</Name>
+      <Description>Gets a value whether webcam is capturing.</Description>
+      <ReturnValueType>boolean</ReturnValueType>
+   </Action>
+   <Action>
+	    <Name>WebCam.IsUiLocked</Name>
+      <Description>Gets a value whether ui is locked. Default is true. That means user interface will be locked during capture. If false ui will not be locked during capture.</Description>
+      <ReturnValueType>boolean</ReturnValueType>
+   </Action>
+   <Action>
+	    <Name>WebCam.LockUi</Name>
+      <Description>Sets a value whether to lock or not the ui during capture. Default is true. That means user interface will be locked during the capture. To stop capture click esc key or mouse keys. If false ui will not be locked during capture.</Description>
+      <ReturnValueType>boolean</ReturnValueType>
+      <Arguments>
+         <Arg>
+            <Name>Lock</Name>
+            <Description>True or false, whether to lock ui or not during capture.</Description>
+            <Type>boolean</Type>
+            <Default>true</Default>
+            <Required>0</Required>
+            <EasyMode>
+               <Default>true</Default>
+               <DataType>combo</DataType>
+               <Constraints>true,false</Constraints>
+            </EasyMode>
+         </Arg>
+	    </Arguments>
+   </Action>
+   <Action>
+	    <Name>WebCam.VideoSourceDialog</Name>
+      <Description>Show the webcam video source dialog.</Description>
+      <ReturnValueType></ReturnValueType>
+   </Action>
+   <Action>
+	    <Name>WebCam.VideoFormatDialog</Name>
+      <Description>Show the webcam video format dialog.</Description>
+      <ReturnValueType></ReturnValueType>
+   </Action>
+   <Action>
+	    <Name>WebCam.VideoDisplayDialog</Name>
+      <Description>Show the webcam video display dialog.</Description>
+      <ReturnValueType></ReturnValueType>
+   </Action>
+   <Action>
+	    <Name>WebCam.VideoCompressionDialog</Name>
+      <Description>Show the webcam video compression dialog.</Description>
+      <ReturnValueType></ReturnValueType>
+   </Action>
+   <Action>
+	    <Name>WebCam.AudioFormatDialog</Name>
+      <Description>Show the webcam audio format dialog.</Description>
+      <ReturnValueType></ReturnValueType>
+   </Action>
+   <Action>
+	    <Name>WebCam.GetHwnd</Name>
+      <Description>Gets the webcam window handle.</Description>
+      <ReturnValueType></ReturnValueType>
+   </Action>
+   <Action>
+	    <Name>WebCam.GetError</Name>
+      <Description>Gets the error if any occur.</Description>
+      <ReturnValueType>string</ReturnValueType>
+   </Action>
+</ActionTemplates>

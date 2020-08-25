@@ -1,0 +1,33 @@
+==================== EVENT HOOKS ============================================
+
+	ListIconExObject:OnReturn(nRow);
+	ListIconExObject:OnKey(nKey)
+	ListIconExObject:OnDoubleRightClick(nRow)
+	ListIconExObject:OnDoubleClick(nRow)
+	ListIconExObject:OnRightClick(nRow)
+	ListIconExObject:OnHeaderRightClick(nCol)
+	ListIconExObject:OnHeaderClick(nCol)
+	ListIconExObject:OnSelect(nRow)
+	ListIconExObject:OnChecked(nRow, bChecked)
+	ListIconExObject:OnSetFocus()
+	ListIconExObject:OnKillFocus()
+table	ListIconExObject:OnColorRequest(nRow, nColumn)
+number	ListIconExObject:OnFontRequest(nRow, nColumn)
+
+
+==================== EXTRA FUNCTIONS ========================================
+
+table	ListIconExObject:GetSelectedRows()
+table	ListIconExObject:GetCheckedRows()
+number	ListIconExObject:GetSelectedCount()
+number	ListIconExObject:GetCheckedCount()
+	ListIconExObject:CheckAllRows(bChecked)
+	ListIconExObject:SelectAllRows(bChecked)
+	ListIconExObject:InverseChecked()
+	ListIconExObject:InverseSelection()
+variant	ListIconExObject:GetRowData(nRow)
+	ListIconExObject:SetRowData(nRow, vValue)
+
+==================== MODIFIED FUNCTIONS =====================================
+
+	ListIconExObject:AddRow(sText, sData, hIcon)

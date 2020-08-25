@@ -1,0 +1,799 @@
+<html>
+<head>
+<title>TS101</title>
+<style>
+
+
+	body {
+	  font-family: Verdana, sans-serif;
+	  font-size: 8pt;
+	  background-color: #ffffff;
+	}
+	  
+	body {
+	  font-family: Verdana, sans-serif;
+	  font-size: 8pt;
+	  background-color: #ffffff;
+	}
+	
+	hr {
+	  text-align: center;
+	  color: #f0f0f0;
+	  width: 100%;
+	  height: 6pt;
+	  margin-top: 0pt;
+	  margin-bottom: -3pt;
+	  border: none;
+	}
+	
+	A:link, A:active, A:visited {
+	  color: #0000ff;
+	  text-decoration: none;
+	}
+	
+	A:hover {
+	  color: #0000ff;
+	  text-decoration: underline;
+	}
+	
+	h1 {
+	  font-family: Verdana;
+	  font-weight: bold;
+	  font-size: 18.0pt;
+	  white-space: nowrap;
+	  color: #fff;
+	  background-color: #699BEF;
+	  padding: 4pt 3pt;
+	  padding: 5px 4px;
+	  margin-top: 0pt;
+	  margin-bottom: 0pt;
+	  border-right: 1px solid #333;
+	  border-left: 1px solid #699BEF;
+	  border-bottom: solid black 1px;
+	}
+	
+	h2 {
+	  font-family: Arial, sans-serif;
+	  font-size: 12.0pt;
+	  letter-spacing: .2ex;
+	  color: #000;
+	  margin-left: 0pt;
+	  margin-right: 0pt;
+	  margin-top: 18pt;
+	  margin-bottom: 9pt;
+	}
+	
+	h2.H2Tight {
+		margin-bottom: -6pt;
+	}
+	
+	h3 {
+	  font-family: Arial, sans-serif;
+	  font-size: 10pt;
+	  font-weight: bold;
+	  font-style: normal;
+	  color: black;
+	  letter-spacing: 0px;
+	  margin-left: 0pt;
+	  margin-right: 0pt;
+	  margin-top: 18pt;
+	  margin-bottom: 3pt;
+	}
+	
+	h3.ParameterHeading {
+		font-family: Arial, sans-serif;
+		margin-left: 12pt;
+		margin-right: 0pt;
+		margin-top: 18pt;
+		margin-bottom: 3pt;
+		font-size: 9pt;
+		font-weight: bold;
+		font-style: italic;
+		letter-spacing: .2ex;
+		color: #3C77B3;
+		x-next-class: ParameterBody;
+		x-next-type: p;
+	}
+	
+	p {
+	  font-family: Verdana;
+	  font-size: 8.0pt;
+	  line-height: 12.0pt;
+	  margin-left: 0pt;
+	  margin-right: 0pt;
+	  margin-top: 0pt;
+	  margin-bottom: 9pt;
+	}
+	  
+	p.NavLocal {
+	  white-space: nowrap;
+	  text-indent: -4px;
+	  font-family: Verdana, Arial, sans-serif;
+	  font-weight: bold;
+	  font-style: normal;
+	  font-size: 13px;
+	  background-color: #e4e4e4;
+	  margin-top: 0px;
+	  margin-bottom: 12pt;
+	  padding-top: 4px;
+	  padding-bottom: 4px;
+	  padding-left: 0px;
+	  padding-right: 0px;
+	
+	  border-bottom: 1px solid #e4e4e4;
+	}
+	  
+	p.ParameterBody {
+		margin-left: 12pt;
+		x-next-class: ParameterHeading;
+		x-next-type: h3;
+	}
+	  
+	div.Actions p, div.Properties p, div.Events p, div.ErrorCodes p {
+	  font-family: Verdana;
+	  font-size: 8.0pt;
+	  line-height: 12.0pt;
+	  margin-top: 0pt;
+	  margin-bottom: 9pt;
+	  margin-left: 12pt;
+	  margin-right: 0pt;
+	}
+	
+	div.Declaration table p {
+		white-space: nowrap;
+		line-height: normal;
+		x-text-tab-stops: repeat 1in;
+		font-family: "Courier New", Courier, monospace;
+		font-size: 10.0pt;
+		background-color: #eee;
+		color: #000000;
+		margin-left: 0px;
+		margin-right: 0px;
+		margin-top: 0px;
+		margin-bottom: 0px;
+		padding: 0pt;
+		border-style: none;
+	}
+	
+	div.Declaration {
+		white-space: nowrap;
+		line-height: normal;
+		x-text-tab-stops: repeat 1in;
+		font-family: "Courier New", Courier, monospace;
+		font-size: 9.0pt;
+		background-color: #eee;
+		color: #000000;
+		width: 100%;
+		margin-left: 0px;
+		margin-right: 0px;
+		margin-top: 0pt;
+		margin-bottom: 9pt;
+		padding: 2pt;
+		border-top: #c0c0c0 1px solid;
+		border-right: #c0c0c0 1px solid;
+		border-left: #c0c0c0 1px solid;
+		border-bottom: #c0c0c0 1px solid;
+	}
+	
+	span.VarType {
+		font-family: "Courier New", monospace;
+		font-size: 9pt;
+		font-style: italic;
+		color: #abd;
+	}
+	
+	span.type {
+		color: #aaa;
+	}
+	
+	span.wab {
+		font-family: Verdana;
+		font-size: 13px;
+		padding: 0px 0px;
+		margin: 0px;
+		border: none;
+		visibility: hidden;
+	}
+
+	span.DefaultValue {
+		white-space: nowrap;
+		font-family: "Courier New", monospace;
+		font-size: 9pt;
+		color: #aaa;
+	}
+	
+	</style>
+</head>
+<body>
+<h1>TS101 Help File</h1>
+<p class="NavLocal"><span class=wab>&nbsp;</span><span class="here">Welcome</span></p>
+<hr><div class="Properties">
+<h2>Table of Contents</h2>
+<p><blockquote>
+<A href="#TS101.SetDefPrint"><b>TS101.SetDefPrint</b></A>
+<br>
+<A href="#TS101.SetPrintCom"><b>TS101.SetPrintCom</b></A>
+<br>
+<A href="#TS101.AddPrintShare"><b>TS101.AddPrintShare</b></A>
+<br>
+<A href="#TS101.RemPrintShare"><b>TS101.RemPrintShare</b></A>
+<br>
+<A href="#TS101.PrintPrefs"><b>TS101.PrintPrefs</b></A>
+<br>
+<A href="#TS101.PrintProps"><b>TS101.PrintProps</b></A>
+<br>
+<A href="#TS101.PrintServProps"><b>TS101.PrintServProps</b></A>
+<br>
+<A href="#TS101.PrintTest"><b>TS101.PrintTest</b></A>
+<br>
+<A href="#TS101.PrintInstallWiz"><b>TS101.PrintInstallWiz</b></A>
+<br>
+<A href="#TS101.RemLocPrint"><b>TS101.RemLocPrint</b></A>
+<br>
+<A href="#TS101.RemNetPrint"><b>TS101.RemNetPrint</b></A>
+<br>
+<A href="#TS101.RenamePrint"><b>TS101.RenamePrint</b></A>
+<br>
+<A href="#TS101.SetPrintDirect"><b>TS101.SetPrintDirect</b></A>
+<br>
+<A href="#TS101.SetPrintSpool"><b>TS101.SetPrintSpool</b></A>
+<br>
+<A href="#TS101.Print"><b>TS101.Print</b></A>
+<br>
+<A href="#TS101.PausePrint"><b>TS101.PausePrint</b></A>
+<br>
+<A href="#TS101.Spooler"><b>TS101.Spooler</b></A>
+<br>
+</blockquote></p></div>
+<h1><A name="TS101.SetDefPrint">TS101.SetDefPrint</A></h1><br>
+<div class=Declaration>
+<div align=left>
+<table x-use-null-cells
+	style="float: alignleft;
+	x-cell-content-align: Top;
+	border-spacing: 0px;
+	border-spacing: 0px;"
+	cellspacing=0>
+<col>
+<col>
+<tr style="x-cell-content-align: top;" valign=top>
+<td style="padding-right: 0px;
+	padding-left: 0px;
+	border-top-style: none;
+	border-bottom-style: none;
+	border-right-style: none;
+	border-left-style: none;">
+<p><span class=VarType>(string)&nbsp;</span>TS101.SetDefPrint (&nbsp;</td>
+<td style="padding-right: 0px;
+	padding-left: 0px;
+	border-top-style: none;
+	border-right-style: none;
+	border-bottom-style: none;">
+<p><span class=VarType>(string)&nbsp;</span>Printer <span class=DefaultValue> = "Printer"</span> )</p>
+</td></tr></table></div></div>
+<h2 style="margin-bottom: 3pt;">Description</h2>
+<p><blockquote>Sets the given printer as default</blockquote></p>
+<h2 class="H2Tight">Parameters</h2>
+<h3 class="ParameterHeading">Printer</h3>
+<p class="ParameterBody"><span class="type">(string)&nbsp;</span>Name of the Printer</p>
+<br>
+<h2>Return</h2><blockquote><p>This action returns a <span class="type">(string)</span> value.<br><br></p></blockquote><br><hr><h1><A name="TS101.SetPrintCom">TS101.SetPrintCom</A></h1><br>
+<div class=Declaration>
+<div align=left>
+<table x-use-null-cells
+	style="float: alignleft;
+	x-cell-content-align: Top;
+	border-spacing: 0px;
+	border-spacing: 0px;"
+	cellspacing=0>
+<col>
+<col>
+<tr style="x-cell-content-align: top;" valign=top>
+<td style="padding-right: 0px;
+	padding-left: 0px;
+	border-top-style: none;
+	border-bottom-style: none;
+	border-right-style: none;
+	border-left-style: none;">
+<p><span class=VarType>(string)&nbsp;</span>TS101.SetPrintCom (&nbsp;</td>
+<td style="padding-right: 0px;
+	padding-left: 0px;
+	border-top-style: none;
+	border-right-style: none;
+	border-bottom-style: none;">
+<p><span class=VarType>(string)&nbsp;</span>Printer <span class=DefaultValue> = "Printer"</span>, </p>
+<p><span class=VarType>(string)&nbsp;</span>Comment <span class=DefaultValue> = "My Printer"</span> )</p>
+</td></tr></table></div></div>
+<h2 style="margin-bottom: 3pt;">Description</h2>
+<p><blockquote>Sets the comment for the given printer</blockquote></p>
+<h2 class="H2Tight">Parameters</h2>
+<h3 class="ParameterHeading">Printer</h3>
+<p class="ParameterBody"><span class="type">(string)&nbsp;</span>Name of the printer</p>
+<h3 class="ParameterHeading">Comment</h3>
+<p class="ParameterBody"><span class="type">(string)&nbsp;</span>Comment to add to the printer</p>
+<br>
+<h2>Return</h2><blockquote><p>This action returns a <span class="type">(string)</span> value.<br><br></p></blockquote><br><hr><h1><A name="TS101.AddPrintShare">TS101.AddPrintShare</A></h1><br>
+<div class=Declaration>
+<div align=left>
+<table x-use-null-cells
+	style="float: alignleft;
+	x-cell-content-align: Top;
+	border-spacing: 0px;
+	border-spacing: 0px;"
+	cellspacing=0>
+<col>
+<col>
+<tr style="x-cell-content-align: top;" valign=top>
+<td style="padding-right: 0px;
+	padding-left: 0px;
+	border-top-style: none;
+	border-bottom-style: none;
+	border-right-style: none;
+	border-left-style: none;">
+<p><span class=VarType>(string)&nbsp;</span>TS101.AddPrintShare (&nbsp;</td>
+<td style="padding-right: 0px;
+	padding-left: 0px;
+	border-top-style: none;
+	border-right-style: none;
+	border-bottom-style: none;">
+<p><span class=VarType>(string)&nbsp;</span>Printer <span class=DefaultValue> = "Printer"</span>, </p>
+<p><span class=VarType>(string)&nbsp;</span>Sharename <span class=DefaultValue> = "MyPrinter"</span> )</p>
+</td></tr></table></div></div>
+<h2 style="margin-bottom: 3pt;">Description</h2>
+<p><blockquote>Sets the given printer as shared</blockquote></p>
+<h2 class="H2Tight">Parameters</h2>
+<h3 class="ParameterHeading">Printer</h3>
+<p class="ParameterBody"><span class="type">(string)&nbsp;</span>Name of the printer</p>
+<h3 class="ParameterHeading">Sharename</h3>
+<p class="ParameterBody"><span class="type">(string)&nbsp;</span>Name that you want the printer to be shared as</p>
+<br>
+<h2>Return</h2><blockquote><p>This action returns a <span class="type">(string)</span> value.<br><br></p></blockquote><br><hr><h1><A name="TS101.RemPrintShare">TS101.RemPrintShare</A></h1><br>
+<div class=Declaration>
+<div align=left>
+<table x-use-null-cells
+	style="float: alignleft;
+	x-cell-content-align: Top;
+	border-spacing: 0px;
+	border-spacing: 0px;"
+	cellspacing=0>
+<col>
+<col>
+<tr style="x-cell-content-align: top;" valign=top>
+<td style="padding-right: 0px;
+	padding-left: 0px;
+	border-top-style: none;
+	border-bottom-style: none;
+	border-right-style: none;
+	border-left-style: none;">
+<p><span class=VarType>(string)&nbsp;</span>TS101.RemPrintShare (&nbsp;</td>
+<td style="padding-right: 0px;
+	padding-left: 0px;
+	border-top-style: none;
+	border-right-style: none;
+	border-bottom-style: none;">
+<p><span class=VarType>(string)&nbsp;</span>Printer <span class=DefaultValue> = "Printer"</span>, </p>
+<p><span class=VarType>(string)&nbsp;</span>Sharename <span class=DefaultValue> = "MyPrinter"</span> )</p>
+</td></tr></table></div></div>
+<h2 style="margin-bottom: 3pt;">Description</h2>
+<p><blockquote>Sets the given printer as unshared</blockquote></p>
+<h2 class="H2Tight">Parameters</h2>
+<h3 class="ParameterHeading">Printer</h3>
+<p class="ParameterBody"><span class="type">(string)&nbsp;</span>Name of the printer</p>
+<h3 class="ParameterHeading">Sharename</h3>
+<p class="ParameterBody"><span class="type">(string)&nbsp;</span>Name in which you want the printer shared as</p>
+<br>
+<h2>Return</h2><blockquote><p>This action returns a <span class="type">(string)</span> value.<br><br></p></blockquote><br><hr><h1><A name="TS101.PrintPrefs">TS101.PrintPrefs</A></h1><br>
+<div class=Declaration>
+<div align=left>
+<table x-use-null-cells
+	style="float: alignleft;
+	x-cell-content-align: Top;
+	border-spacing: 0px;
+	border-spacing: 0px;"
+	cellspacing=0>
+<col>
+<col>
+<tr style="x-cell-content-align: top;" valign=top>
+<td style="padding-right: 0px;
+	padding-left: 0px;
+	border-top-style: none;
+	border-bottom-style: none;
+	border-right-style: none;
+	border-left-style: none;">
+<p><span class=VarType>(string)&nbsp;</span>TS101.PrintPrefs (&nbsp;</td>
+<td style="padding-right: 0px;
+	padding-left: 0px;
+	border-top-style: none;
+	border-right-style: none;
+	border-bottom-style: none;">
+<p><span class=VarType>(string)&nbsp;</span>Printer <span class=DefaultValue> = "MyPrinter"</span> )</p>
+</td></tr></table></div></div>
+<h2 style="margin-bottom: 3pt;">Description</h2>
+<p><blockquote>Opens the printer preferences dialog for the given printer</blockquote></p>
+<h2 class="H2Tight">Parameters</h2>
+<h3 class="ParameterHeading">Printer</h3>
+<p class="ParameterBody"><span class="type">(string)&nbsp;</span>Name of the Printer</p>
+<br>
+<h2>Return</h2><blockquote><p>This action returns a <span class="type">(string)</span> value.<br><br></p></blockquote><br><hr><h1><A name="TS101.PrintProps">TS101.PrintProps</A></h1><br>
+<div class=Declaration>
+<div align=left>
+<table x-use-null-cells
+	style="float: alignleft;
+	x-cell-content-align: Top;
+	border-spacing: 0px;
+	border-spacing: 0px;"
+	cellspacing=0>
+<col>
+<col>
+<tr style="x-cell-content-align: top;" valign=top>
+<td style="padding-right: 0px;
+	padding-left: 0px;
+	border-top-style: none;
+	border-bottom-style: none;
+	border-right-style: none;
+	border-left-style: none;">
+<p><span class=VarType>(string)&nbsp;</span>TS101.PrintProps (&nbsp;</td>
+<td style="padding-right: 0px;
+	padding-left: 0px;
+	border-top-style: none;
+	border-right-style: none;
+	border-bottom-style: none;">
+<p><span class=VarType>(string)&nbsp;</span>Printer <span class=DefaultValue> = "MyPrinter"</span> )</p>
+</td></tr></table></div></div>
+<h2 style="margin-bottom: 3pt;">Description</h2>
+<p><blockquote>Opens the printer properties dialog for the given printer</blockquote></p>
+<h2 class="H2Tight">Parameters</h2>
+<h3 class="ParameterHeading">Printer</h3>
+<p class="ParameterBody"><span class="type">(string)&nbsp;</span>Name of the printer</p>
+<br>
+<h2>Return</h2><blockquote><p>This action returns a <span class="type">(string)</span> value.<br><br></p></blockquote><br><hr><h1><A name="TS101.PrintServProps">TS101.PrintServProps</A></h1><br>
+<div class=Declaration>
+<div align=left>
+<table x-use-null-cells
+	style="float: alignleft;
+	x-cell-content-align: Top;
+	border-spacing: 0px;
+	border-spacing: 0px;"
+	cellspacing=0>
+<col>
+<col>
+<tr style="x-cell-content-align: top;" valign=top>
+<td style="padding-right: 0px;
+	padding-left: 0px;
+	border-top-style: none;
+	border-bottom-style: none;
+	border-right-style: none;
+	border-left-style: none;">
+<p><span class=VarType>(string)&nbsp;</span>TS101.PrintServProps ()</td>
+<td style="padding-right: 0px;
+	padding-left: 0px;
+	border-top-style: none;
+	border-right-style: none;
+	border-bottom-style: none;">
+</td></tr></table></div></div>
+<h2 style="margin-bottom: 3pt;">Description</h2>
+<p><blockquote>Opens the print server properties dialog</blockquote></p>
+<h2 class="H2Tight">Parameters</h2><h3 class="ParameterHeading">None</h3><br>
+<h2>Return</h2><blockquote><p>This action returns a <span class="type">(string)</span> value.<br><br></p></blockquote><br><hr><h1><A name="TS101.PrintTest">TS101.PrintTest</A></h1><br>
+<div class=Declaration>
+<div align=left>
+<table x-use-null-cells
+	style="float: alignleft;
+	x-cell-content-align: Top;
+	border-spacing: 0px;
+	border-spacing: 0px;"
+	cellspacing=0>
+<col>
+<col>
+<tr style="x-cell-content-align: top;" valign=top>
+<td style="padding-right: 0px;
+	padding-left: 0px;
+	border-top-style: none;
+	border-bottom-style: none;
+	border-right-style: none;
+	border-left-style: none;">
+<p><span class=VarType>(string)&nbsp;</span>TS101.PrintTest (&nbsp;</td>
+<td style="padding-right: 0px;
+	padding-left: 0px;
+	border-top-style: none;
+	border-right-style: none;
+	border-bottom-style: none;">
+<p><span class=VarType>(string)&nbsp;</span>Printer <span class=DefaultValue> = "MyPrinter"</span> )</p>
+</td></tr></table></div></div>
+<h2 style="margin-bottom: 3pt;">Description</h2>
+<p><blockquote>Prints a printer test page to the given printer</blockquote></p>
+<h2 class="H2Tight">Parameters</h2>
+<h3 class="ParameterHeading">Printer</h3>
+<p class="ParameterBody"><span class="type">(string)&nbsp;</span>Name of the printer</p>
+<br>
+<h2>Return</h2><blockquote><p>This action returns a <span class="type">(string)</span> value.<br><br></p></blockquote><br><hr><h1><A name="TS101.PrintInstallWiz">TS101.PrintInstallWiz</A></h1><br>
+<div class=Declaration>
+<div align=left>
+<table x-use-null-cells
+	style="float: alignleft;
+	x-cell-content-align: Top;
+	border-spacing: 0px;
+	border-spacing: 0px;"
+	cellspacing=0>
+<col>
+<col>
+<tr style="x-cell-content-align: top;" valign=top>
+<td style="padding-right: 0px;
+	padding-left: 0px;
+	border-top-style: none;
+	border-bottom-style: none;
+	border-right-style: none;
+	border-left-style: none;">
+<p><span class=VarType>(string)&nbsp;</span>TS101.PrintInstallWiz ()</td>
+<td style="padding-right: 0px;
+	padding-left: 0px;
+	border-top-style: none;
+	border-right-style: none;
+	border-bottom-style: none;">
+</td></tr></table></div></div>
+<h2 style="margin-bottom: 3pt;">Description</h2>
+<p><blockquote>Opens the printer installation wizard dialog</blockquote></p>
+<h2 class="H2Tight">Parameters</h2><h3 class="ParameterHeading">None</h3><br>
+<h2>Return</h2><blockquote><p>This action returns a <span class="type">(string)</span> value.<br><br></p></blockquote><br><hr><h1><A name="TS101.RemLocPrint">TS101.RemLocPrint</A></h1><br>
+<div class=Declaration>
+<div align=left>
+<table x-use-null-cells
+	style="float: alignleft;
+	x-cell-content-align: Top;
+	border-spacing: 0px;
+	border-spacing: 0px;"
+	cellspacing=0>
+<col>
+<col>
+<tr style="x-cell-content-align: top;" valign=top>
+<td style="padding-right: 0px;
+	padding-left: 0px;
+	border-top-style: none;
+	border-bottom-style: none;
+	border-right-style: none;
+	border-left-style: none;">
+<p><span class=VarType>(string)&nbsp;</span>TS101.RemLocPrint (&nbsp;</td>
+<td style="padding-right: 0px;
+	padding-left: 0px;
+	border-top-style: none;
+	border-right-style: none;
+	border-bottom-style: none;">
+<p><span class=VarType>(string)&nbsp;</span>Printer <span class=DefaultValue> = "MyPrinter"</span> )</p>
+</td></tr></table></div></div>
+<h2 style="margin-bottom: 3pt;">Description</h2>
+<p><blockquote>Removes the specified local printer from the system</blockquote></p>
+<h2 class="H2Tight">Parameters</h2>
+<h3 class="ParameterHeading">Printer</h3>
+<p class="ParameterBody"><span class="type">(string)&nbsp;</span>The name of the printer</p>
+<br>
+<h2>Return</h2><blockquote><p>This action returns a <span class="type">(string)</span> value.<br><br></p></blockquote><br><hr><h1><A name="TS101.RemNetPrint">TS101.RemNetPrint</A></h1><br>
+<div class=Declaration>
+<div align=left>
+<table x-use-null-cells
+	style="float: alignleft;
+	x-cell-content-align: Top;
+	border-spacing: 0px;
+	border-spacing: 0px;"
+	cellspacing=0>
+<col>
+<col>
+<tr style="x-cell-content-align: top;" valign=top>
+<td style="padding-right: 0px;
+	padding-left: 0px;
+	border-top-style: none;
+	border-bottom-style: none;
+	border-right-style: none;
+	border-left-style: none;">
+<p><span class=VarType>(string)&nbsp;</span>TS101.RemNetPrint (&nbsp;</td>
+<td style="padding-right: 0px;
+	padding-left: 0px;
+	border-top-style: none;
+	border-right-style: none;
+	border-bottom-style: none;">
+<p><span class=VarType>(string)&nbsp;</span>Printer <span class=DefaultValue> = "\\\\ComputerName\\MyPrinterShare"</span> )</p>
+</td></tr></table></div></div>
+<h2 style="margin-bottom: 3pt;">Description</h2>
+<p><blockquote>Removes the specified network printer from the system</blockquote></p>
+<h2 class="H2Tight">Parameters</h2>
+<h3 class="ParameterHeading">Printer</h3>
+<p class="ParameterBody"><span class="type">(string)&nbsp;</span>Name of the printer</p>
+<br>
+<h2>Return</h2><blockquote><p>This action returns a <span class="type">(string)</span> value.<br><br></p></blockquote><br><hr><h1><A name="TS101.RenamePrint">TS101.RenamePrint</A></h1><br>
+<div class=Declaration>
+<div align=left>
+<table x-use-null-cells
+	style="float: alignleft;
+	x-cell-content-align: Top;
+	border-spacing: 0px;
+	border-spacing: 0px;"
+	cellspacing=0>
+<col>
+<col>
+<tr style="x-cell-content-align: top;" valign=top>
+<td style="padding-right: 0px;
+	padding-left: 0px;
+	border-top-style: none;
+	border-bottom-style: none;
+	border-right-style: none;
+	border-left-style: none;">
+<p><span class=VarType>(string)&nbsp;</span>TS101.RenamePrint (&nbsp;</td>
+<td style="padding-right: 0px;
+	padding-left: 0px;
+	border-top-style: none;
+	border-right-style: none;
+	border-bottom-style: none;">
+<p><span class=VarType>(string)&nbsp;</span>Printer <span class=DefaultValue> = "MyPrinter"</span>, </p>
+<p><span class=VarType>(string)&nbsp;</span>PrinterName <span class=DefaultValue> = "MyNewPrinter"</span> )</p>
+</td></tr></table></div></div>
+<h2 style="margin-bottom: 3pt;">Description</h2>
+<p><blockquote>Renames the specified printer to the given name</blockquote></p>
+<h2 class="H2Tight">Parameters</h2>
+<h3 class="ParameterHeading">Printer</h3>
+<p class="ParameterBody"><span class="type">(string)&nbsp;</span>Name of the printer</p>
+<h3 class="ParameterHeading">PrinterName</h3>
+<p class="ParameterBody"><span class="type">(string)&nbsp;</span>The name to be used as the new printer name</p>
+<br>
+<h2>Return</h2><blockquote><p>This action returns a <span class="type">(string)</span> value.<br><br></p></blockquote><br><hr><h1><A name="TS101.SetPrintDirect">TS101.SetPrintDirect</A></h1><br>
+<div class=Declaration>
+<div align=left>
+<table x-use-null-cells
+	style="float: alignleft;
+	x-cell-content-align: Top;
+	border-spacing: 0px;
+	border-spacing: 0px;"
+	cellspacing=0>
+<col>
+<col>
+<tr style="x-cell-content-align: top;" valign=top>
+<td style="padding-right: 0px;
+	padding-left: 0px;
+	border-top-style: none;
+	border-bottom-style: none;
+	border-right-style: none;
+	border-left-style: none;">
+<p><span class=VarType>(string)&nbsp;</span>TS101.SetPrintDirect (&nbsp;</td>
+<td style="padding-right: 0px;
+	padding-left: 0px;
+	border-top-style: none;
+	border-right-style: none;
+	border-bottom-style: none;">
+<p><span class=VarType>(string)&nbsp;</span>Printer <span class=DefaultValue> = "MyPrinter"</span> )</p>
+</td></tr></table></div></div>
+<h2 style="margin-bottom: 3pt;">Description</h2>
+<p><blockquote>Set the printer driver to send documents directly to printer (no spooling)</blockquote></p>
+<h2 class="H2Tight">Parameters</h2>
+<h3 class="ParameterHeading">Printer</h3>
+<p class="ParameterBody"><span class="type">(string)&nbsp;</span>Name of the printer</p>
+<br>
+<h2>Return</h2><blockquote><p>This action returns a <span class="type">(string)</span> value.<br><br></p></blockquote><br><hr><h1><A name="TS101.SetPrintSpool">TS101.SetPrintSpool</A></h1><br>
+<div class=Declaration>
+<div align=left>
+<table x-use-null-cells
+	style="float: alignleft;
+	x-cell-content-align: Top;
+	border-spacing: 0px;
+	border-spacing: 0px;"
+	cellspacing=0>
+<col>
+<col>
+<tr style="x-cell-content-align: top;" valign=top>
+<td style="padding-right: 0px;
+	padding-left: 0px;
+	border-top-style: none;
+	border-bottom-style: none;
+	border-right-style: none;
+	border-left-style: none;">
+<p><span class=VarType>(string)&nbsp;</span>TS101.SetPrintSpool (&nbsp;</td>
+<td style="padding-right: 0px;
+	padding-left: 0px;
+	border-top-style: none;
+	border-right-style: none;
+	border-bottom-style: none;">
+<p><span class=VarType>(string)&nbsp;</span>Printer <span class=DefaultValue> = "MyPrinter"</span> )</p>
+</td></tr></table></div></div>
+<h2 style="margin-bottom: 3pt;">Description</h2>
+<p><blockquote>Sets the printer driver to spool all documents instead of sending directly to printer (spooling)</blockquote></p>
+<h2 class="H2Tight">Parameters</h2>
+<h3 class="ParameterHeading">Printer</h3>
+<p class="ParameterBody"><span class="type">(string)&nbsp;</span>Name of the printer</p>
+<br>
+<h2>Return</h2><blockquote><p>This action returns a <span class="type">(string)</span> value.<br><br></p></blockquote><br><hr><h1><A name="TS101.Print">TS101.Print</A></h1><br>
+<div class=Declaration>
+<div align=left>
+<table x-use-null-cells
+	style="float: alignleft;
+	x-cell-content-align: Top;
+	border-spacing: 0px;
+	border-spacing: 0px;"
+	cellspacing=0>
+<col>
+<col>
+<tr style="x-cell-content-align: top;" valign=top>
+<td style="padding-right: 0px;
+	padding-left: 0px;
+	border-top-style: none;
+	border-bottom-style: none;
+	border-right-style: none;
+	border-left-style: none;">
+<p><span class=VarType>(string)&nbsp;</span>TS101.Print (&nbsp;</td>
+<td style="padding-right: 0px;
+	padding-left: 0px;
+	border-top-style: none;
+	border-right-style: none;
+	border-bottom-style: none;">
+<p><span class=VarType>(string)&nbsp;</span>Printer <span class=DefaultValue> = "MyPrinter"</span>, </p>
+<p><span class=VarType>(string)&nbsp;</span>FilePath <span class=DefaultValue> = "C:\\MyFile.txt"</span> )</p>
+</td></tr></table></div></div>
+<h2 style="margin-bottom: 3pt;">Description</h2>
+<p><blockquote>Prints a document to the specified printer</blockquote></p>
+<h2 class="H2Tight">Parameters</h2>
+<h3 class="ParameterHeading">Printer</h3>
+<p class="ParameterBody"><span class="type">(string)&nbsp;</span>Name of the printer</p>
+<h3 class="ParameterHeading">FilePath</h3>
+<p class="ParameterBody"><span class="type">(string)&nbsp;</span>The path to the file to be printed</p>
+<br>
+<h2>Return</h2><blockquote><p>This action returns a <span class="type">(string)</span> value.<br><br></p></blockquote><br><hr><h1><A name="TS101.PausePrint">TS101.PausePrint</A></h1><br>
+<div class=Declaration>
+<div align=left>
+<table x-use-null-cells
+	style="float: alignleft;
+	x-cell-content-align: Top;
+	border-spacing: 0px;
+	border-spacing: 0px;"
+	cellspacing=0>
+<col>
+<col>
+<tr style="x-cell-content-align: top;" valign=top>
+<td style="padding-right: 0px;
+	padding-left: 0px;
+	border-top-style: none;
+	border-bottom-style: none;
+	border-right-style: none;
+	border-left-style: none;">
+<p><span class=VarType>(string)&nbsp;</span>TS101.PausePrint (&nbsp;</td>
+<td style="padding-right: 0px;
+	padding-left: 0px;
+	border-top-style: none;
+	border-right-style: none;
+	border-bottom-style: none;">
+<p><span class=VarType>(string)&nbsp;</span>Printer <span class=DefaultValue> = "MyPrinter"</span> )</p>
+</td></tr></table></div></div>
+<h2 style="margin-bottom: 3pt;">Description</h2>
+<p><blockquote>Pauses the specified printer</blockquote></p>
+<h2 class="H2Tight">Parameters</h2>
+<h3 class="ParameterHeading">Printer</h3>
+<p class="ParameterBody"><span class="type">(string)&nbsp;</span>Name of the printer</p>
+<br>
+<h2>Return</h2><blockquote><p>This action returns a <span class="type">(string)</span> value.<br><br></p></blockquote><br><hr><h1><A name="TS101.Spooler">TS101.Spooler</A></h1><br>
+<div class=Declaration>
+<div align=left>
+<table x-use-null-cells
+	style="float: alignleft;
+	x-cell-content-align: Top;
+	border-spacing: 0px;
+	border-spacing: 0px;"
+	cellspacing=0>
+<col>
+<col>
+<tr style="x-cell-content-align: top;" valign=top>
+<td style="padding-right: 0px;
+	padding-left: 0px;
+	border-top-style: none;
+	border-bottom-style: none;
+	border-right-style: none;
+	border-left-style: none;">
+<p><span class=VarType>(string)&nbsp;</span>TS101.Spooler (&nbsp;</td>
+<td style="padding-right: 0px;
+	padding-left: 0px;
+	border-top-style: none;
+	border-right-style: none;
+	border-bottom-style: none;">
+<p><span class=VarType>(string)&nbsp;</span>Command <span class=DefaultValue> = "Start"</span> )</p>
+</td></tr></table></div></div>
+<h2 style="margin-bottom: 3pt;">Description</h2>
+<p><blockquote>Starts or Stops the printer spooler service</blockquote></p>
+<h2 class="H2Tight">Parameters</h2>
+<h3 class="ParameterHeading">Command</h3>
+<p class="ParameterBody"><span class="type">(string)&nbsp;</span>The command to be passed to the spooler service</p>
+<br>
+<h2>Return</h2><blockquote><p>This action returns a <span class="type">(string)</span> value.<br><br></p></blockquote><br><hr><h2><p align="center">Made with Action Plugin Compiler</p></h2></body></html>

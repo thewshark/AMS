@@ -1,0 +1,608 @@
+<ActionTemplates>
+   <Action>
+	    <Name>WebBrowserWindow.GetTitle</Name>
+      <Description>Get the title of the web browser window.</Description>
+      <ReturnValueType>string</ReturnValueType>
+      <Arguments>
+      </Arguments>
+   </Action>
+   <Action>
+	    <Name>WebBrowserWindow.GetPosition</Name>
+      <Description>Get the web browser window position.</Description>
+      <ReturnValueType>string</ReturnValueType>
+      <Arguments>
+	    </Arguments>
+   </Action>
+   <Action>
+	    <Name>WebBrowserWindow.GetSize</Name>
+      <Description>Get the web browser window size.</Description>
+      <ReturnValueType>string</ReturnValueType>
+      <Arguments>
+	    </Arguments>
+   </Action>
+   <Action>
+	    <Name>WebBrowserWindow.GetWindowState</Name>
+      <Description>Get the web browser window state.</Description>
+      <ReturnValueType>string</ReturnValueType>
+      <Arguments>
+	    </Arguments>
+   </Action>
+   <Action>
+	    <Name>WebBrowserWindow.GetWindowStyle</Name>
+      <Description>Get the web browser window style.</Description>
+      <ReturnValueType></ReturnValueType>
+      <Arguments>
+	    </Arguments>
+   </Action>
+   <Action>
+	    <Name>WebBrowserWindow.GetReadyState</Name>
+      <Description>Returns the web browser window current state. The current state can be one of the following values: Complete, Interactive, Loaded, Loading, Uninitialized.</Description>
+      <ReturnValueType>string</ReturnValueType>
+   </Action>
+   <Action>
+	    <Name>WebBrowserWindow.GetNavigationStatus</Name>
+      <Description>Returns the web browser window navigation status. The navigation status can be one of the following values: Uninitialized, Navigating, Navigated, PageLoaded.</Description>
+      <ReturnValueType>string</ReturnValueType>
+   </Action>
+   <Action>
+	    <Name>WebBrowserWindow.GetHtmlContent</Name>
+      <Description>Returns the html contents of the page displayed in the web browser window.</Description>
+      <ReturnValueType>string</ReturnValueType>
+   </Action>
+   <Action>
+	    <Name>WebBrowserWindow.GetTextContent</Name>
+      <Description>Returns the text contents of the page displayed in the web browser window.</Description>
+      <ReturnValueType>string</ReturnValueType>
+   </Action>
+   <Action>
+	    <Name>WebBrowserWindow.GetUrl</Name>
+      <Description>Returns the url of the page displayed in the web browser window.</Description>
+      <ReturnValueType>string</ReturnValueType>
+   </Action>
+   <Action>
+	    <Name>WebBrowserWindow.GetOpacity</Name>
+      <Description>Returns the opacity (transparency) of the web browser window.</Description>
+      <ReturnValueType>string</ReturnValueType>
+   </Action>
+   <Action>
+	    <Name>WebBrowserWindow.GetIcon</Name>
+      <Description>Returns the iconfile of the web browser window that was previosly set with WebBrowserWindow.SetIcon.</Description>
+      <ReturnValueType>string</ReturnValueType>
+   </Action>
+   <Action>
+	    <Name>WebBrowserWindow.GetError</Name>
+      <Description>Returns the error if any occur.</Description>
+      <ReturnValueType>string</ReturnValueType>
+   </Action>
+   <Action>
+	    <Name>WebBrowserWindow.SetTitle</Name>
+      <Description>Set the title of the web browser window.</Description>
+      <ReturnValueType></ReturnValueType>
+      <Arguments>
+         <Arg>
+           <Name>Title</Name>
+           <Description>Title of the web browser window.</Description>
+           <Type>string</Type>
+           <Default/>
+           <Required>0</Required>
+           <EasyMode>
+             <Default>"Web Browser Window"</Default>
+             <DataType>string</DataType>
+             <Constraints>1,*</Constraints>
+           </EasyMode>
+         </Arg>
+      </Arguments>
+   </Action>
+   <Action>
+	    <Name>WebBrowserWindow.SetPosition</Name>
+      <Description>Set the web browser window position.</Description>
+      <ReturnValueType></ReturnValueType>
+      <Arguments>
+         <Arg>
+            <Name>x</Name>
+            <Description>x position.</Description>
+            <Type>number</Type>
+            <Default/>
+            <Required>1</Required>
+            <EasyMode>
+               <Default>0</Default>
+               <DataType>number</DataType>
+               <Constraints>0,*</Constraints>
+            </EasyMode>
+         </Arg>
+         <Arg>
+            <Name>y</Name>
+            <Description>y position.</Description>
+            <Type>number</Type>
+            <Default/>
+            <Required>1</Required>
+            <EasyMode>
+               <Default>0</Default>
+               <DataType>number</DataType>
+               <Constraints>0,*</Constraints>
+            </EasyMode>
+         </Arg>
+	    </Arguments>
+   </Action>
+   <Action>
+	    <Name>WebBrowserWindow.SetSize</Name>
+      <Description>Set the web browser window size.</Description>
+      <ReturnValueType></ReturnValueType>
+      <Arguments>
+         <Arg>
+            <Name>Width</Name>
+            <Description>Web browser window width.</Description>
+            <Type>number</Type>
+            <Default/>
+            <Required>1</Required>
+            <EasyMode>
+               <Default>750</Default>
+               <DataType>number</DataType>
+               <Constraints>1,*</Constraints>
+            </EasyMode>
+         </Arg>
+         <Arg>
+            <Name>Height</Name>
+            <Description>Web browser window height.</Description>
+            <Type>number</Type>
+            <Default/>
+            <Required>1</Required>
+            <EasyMode>
+               <Default>500</Default>
+               <DataType>number</DataType>
+               <Constraints>1,*</Constraints>
+            </EasyMode>
+         </Arg>
+	    </Arguments>
+   </Action>
+   <Action>
+	    <Name>WebBrowserWindow.SetWindowState</Name>
+      <Description>Set the web browser window state.</Description>
+      <ReturnValueType></ReturnValueType>
+      <Arguments>
+         <Arg>
+            <Name>WindowState</Name>
+            <Description>Web browser window state.</Description>
+            <Type>number</Type>
+            <Default/>
+            <Required>1</Required>
+            <EasyMode>
+               <Default>WindowState.Normal</Default>
+               <DataType>combo</DataType>
+               <Constraints>WindowState.Minimized,WindowState.Normal,WindowState.Maximized,WindowState.FullScreen</Constraints>
+            </EasyMode>
+         </Arg>
+	    </Arguments>
+   </Action>
+   <Action>
+	    <Name>WebBrowserWindow.SetWindowStyle</Name>
+      <Description>Set the web browser window style.</Description>
+      <ReturnValueType></ReturnValueType>
+      <Arguments>
+         <Arg>
+            <Name>WindowStyle</Name>
+            <Description>Web browser window style.</Description>
+            <Type>number</Type>
+            <Default/>
+            <Required>1</Required>
+            <EasyMode>
+               <Default>WindowStyle.Sizable</Default>
+               <DataType>combo</DataType>
+               <Constraints>WindowStyle.Fixed,WindowStyle.Sizable</Constraints>
+            </EasyMode>
+         </Arg>
+	    </Arguments>
+   </Action>
+   <Action>
+	    <Name>WebBrowserWindow.SetHtmlContent</Name>
+      <Description>Set the html content of the page displayed int web browser window.</Description>
+      <ReturnValueType></ReturnValueType>
+      <Arguments>
+         <Arg>
+           <Name>HtmlContent</Name>
+           <Description>Html content to be displayed.</Description>
+           <Type>string</Type>
+           <Default/>
+           <Required>0</Required>
+           <EasyMode>
+             <Default>"Html content goes here..."</Default>
+             <DataType>string</DataType>
+             <Constraints>1,*</Constraints>
+           </EasyMode>
+         </Arg>
+      </Arguments>
+   </Action>
+   <Action>
+	    <Name>WebBrowserWindow.SetTextContent</Name>
+      <Description>Set the text content of the page displayed int web browser window.</Description>
+      <ReturnValueType></ReturnValueType>
+      <Arguments>
+         <Arg>
+           <Name>TextContent</Name>
+           <Description>Text content to be displayed.</Description>
+           <Type>string</Type>
+           <Default/>
+           <Required>0</Required>
+           <EasyMode>
+             <Default>"Text content goes here..."</Default>
+             <DataType>string</DataType>
+             <Constraints>1,*</Constraints>
+           </EasyMode>
+         </Arg>
+      </Arguments>
+   </Action>
+   <Action>
+	    <Name>WebBrowserWindow.SetUrl</Name>
+      <Description>Set the url of the web browser window.</Description>
+      <ReturnValueType></ReturnValueType>
+      <Arguments>
+         <Arg>
+           <Name>Url</Name>
+           <Description>Url.</Description>
+           <Type>string</Type>
+           <Default/>
+           <Required>0</Required>
+           <EasyMode>
+             <Default>"http://cnn.com"</Default>
+             <DataType>string</DataType>
+             <Constraints>1,*</Constraints>
+           </EasyMode>
+         </Arg>
+      </Arguments>
+   </Action>
+   <Action>
+	    <Name>WebBrowserWindow.SetOpacity</Name>
+      <Description>Set the opacity (transparency) of the web browser window.</Description>
+      <ReturnValueType></ReturnValueType>
+      <Arguments>
+         <Arg>
+           <Name>Opacity</Name>
+           <Description>Opacity (transparency).</Description>
+           <Type>number</Type>
+           <Default/>
+           <Required>0</Required>
+           <EasyMode>
+             <Default>100</Default>
+             <DataType>number</DataType>
+             <Constraints>0,100</Constraints>
+           </EasyMode>
+         </Arg>
+      </Arguments>
+   </Action>
+   <Action>
+	    <Name>WebBrowserWindow.SetIcon</Name>
+      <Description>Set the icon of the web browser window.</Description>
+      <ReturnValueType></ReturnValueType>
+      <Arguments>
+         <Arg>
+           <Name>Icon</Name>
+           <Description>Icon file.</Description>
+           <Type>string</Type>
+           <Default/>
+           <Required>0</Required>
+           <EasyMode>
+             <Default>"AutoPlay\\Icons\\myIcon.ico"</Default>
+             <DataType>string</DataType>
+             <Constraints>1,*</Constraints>
+           </EasyMode>
+         </Arg>
+      </Arguments>
+   </Action>
+   <Action>
+	    <Name>WebBrowserWindow.Show</Name>
+      <Description>Show web browser window.</Description>
+      <ReturnValueType></ReturnValueType>
+      <Arguments></Arguments>
+   </Action>
+   <Action>
+	    <Name>WebBrowserWindow.ShowDialog</Name>
+      <Description>Show web browser window.</Description>
+      <ReturnValueType></ReturnValueType>
+      <Arguments></Arguments>
+   </Action>
+   <Action>
+	    <Name>WebBrowserWindow.Hide</Name>
+      <Description>Hide web browser window.</Description>
+      <ReturnValueType></ReturnValueType>
+      <Arguments></Arguments>
+   </Action>
+   <Action>
+	    <Name>WebBrowserWindow.Close</Name>
+      <Description>Close web browser window.</Description>
+      <ReturnValueType></ReturnValueType>
+      <Arguments></Arguments>
+   </Action>
+   <Action>
+	    <Name>WebBrowserWindow.Navigate</Name>
+      <Description>Navigate the web browser window at the specified url.</Description>
+      <ReturnValueType></ReturnValueType>
+      <Arguments>
+         <Arg>
+            <Name>Url</Name>
+            <Description>Url to navigate to.</Description>
+            <Type>string</Type>
+            <Default/>
+            <Required>1</Required>
+            <EasyMode>
+               <Default>"http://cnn.com/"</Default>
+               <DataType>string</DataType>
+               <Constraints>1,*</Constraints>
+            </EasyMode>
+         </Arg>
+	    </Arguments>
+   </Action>
+   <Action>
+	    <Name>WebBrowserWindow.Back</Name>
+      <Description>Navigates the web browser window to the previous page in the navigation history, if one is available.</Description>
+      <ReturnValueType></ReturnValueType>
+      <Arguments></Arguments>
+   </Action>
+   <Action>
+	    <Name>WebBrowserWindow.Forward</Name>
+      <Description>Navigates the web browser window to the next page in the navigation history, if one is available.</Description>
+      <ReturnValueType></ReturnValueType>
+      <Arguments></Arguments>
+   </Action>
+   <Action>
+	    <Name>WebBrowserWindow.Home</Name>
+      <Description>Navigates the web browser window to the home page of the current user.</Description>
+      <ReturnValueType></ReturnValueType>
+      <Arguments></Arguments>
+   </Action>
+   <Action>
+	    <Name>WebBrowserWindow.Search</Name>
+      <Description>Navigates the web browser window to the default search page of the current user.</Description>
+      <ReturnValueType></ReturnValueType>
+      <Arguments></Arguments>
+   </Action>
+   <Action>
+	    <Name>WebBrowserWindow.Stop</Name>
+      <Description>Cancels any pending navigation and stops any dynamic page elements, such as background sounds and animations.</Description>
+      <ReturnValueType></ReturnValueType>
+      <Arguments></Arguments>
+   </Action>
+   <Action>
+	    <Name>WebBrowserWindow.Print</Name>
+      <Description>Prints the document currently displayed in the web browser window using the current print and page settings.</Description>
+      <ReturnValueType></ReturnValueType>
+      <Arguments></Arguments>
+   </Action>
+   <Action>
+	    <Name>WebBrowserWindow.Refresh</Name>
+      <Description>Reloads the document currently displayed in the web browser window by checking the server for an updated version.</Description>
+      <ReturnValueType></ReturnValueType>
+      <Arguments></Arguments>
+   </Action>
+   <Action>
+	    <Name>WebBrowserWindow.PageSetupDialog</Name>
+      <Description>Opens the Internet Explorer Page Setup dialog box.</Description>
+      <ReturnValueType></ReturnValueType>
+      <Arguments></Arguments>
+   </Action>
+   <Action>
+	    <Name>WebBrowserWindow.PrintPreviewDialog</Name>
+      <Description>Opens the Internet Explorer Print Preview dialog box.</Description>
+      <ReturnValueType></ReturnValueType>
+      <Arguments></Arguments>
+   </Action>
+   <Action>
+	    <Name>WebBrowserWindow.PrintDialog</Name>
+      <Description>Opens the Internet Explorer Print dialog box.</Description>
+      <ReturnValueType></ReturnValueType>
+      <Arguments></Arguments>
+   </Action>
+   <Action>
+	    <Name>WebBrowserWindow.PropertiesDialog</Name>
+      <Description>Opens the Internet Explorer Properties dialog box for the current document.</Description>
+      <ReturnValueType></ReturnValueType>
+      <Arguments></Arguments>
+   </Action>
+   <Action>
+	    <Name>WebBrowserWindow.SaveAsDialog</Name>
+      <Description>Opens the Internet Explorer Save Web Page dialog box or the Save dialog box of the hosted document if it is not an HTML page.</Description>
+      <ReturnValueType></ReturnValueType>
+      <Arguments></Arguments>
+   </Action>
+   <Action>
+	    <Name>WebBrowserWindow.EnableNavigation</Name>
+      <Description>Enable or disable web browser window navigation.</Description>
+      <ReturnValueType></ReturnValueType>
+      <Arguments>
+         <Arg>
+            <Name>Enable</Name>
+            <Description>Whether to enable or disable web browser window navigation.</Description>
+            <Type>boolean</Type>
+            <Default>false</Default>
+            <Required>0</Required>
+            <EasyMode>
+               <Default>false</Default>
+               <DataType>boolean</DataType>
+               <Constraints>none</Constraints>
+            </EasyMode>
+         </Arg>
+	    </Arguments>
+   </Action>
+   <Action>
+	    <Name>WebBrowserWindow.EnableDrop</Name>
+      <Description>Enable or disable web browser window navigation to documents that are dropped onto it.</Description>
+      <ReturnValueType></ReturnValueType>
+      <Arguments>
+         <Arg>
+            <Name>Enable</Name>
+            <Description>Whether to enable or disable drop.</Description>
+            <Type>boolean</Type>
+            <Default>false</Default>
+            <Required>0</Required>
+            <EasyMode>
+               <Default>false</Default>
+               <DataType>boolean</DataType>
+               <Constraints>none</Constraints>
+            </EasyMode>
+         </Arg>
+	    </Arguments>
+   </Action>
+   <Action>
+	    <Name>WebBrowserWindow.EnableContextMenu</Name>
+      <Description>Enable or disable web browser window context menu.</Description>
+      <ReturnValueType></ReturnValueType>
+      <Arguments>
+         <Arg>
+            <Name>Enable</Name>
+            <Description>Whether to enable or disable context menu.</Description>
+            <Type>boolean</Type>
+            <Default>false</Default>
+            <Required>0</Required>
+            <EasyMode>
+               <Default>false</Default>
+               <DataType>boolean</DataType>
+               <Constraints>none</Constraints>
+            </EasyMode>
+         </Arg>
+	    </Arguments>
+   </Action>
+   <Action>
+	    <Name>WebBrowserWindow.EnableScrollBars</Name>
+      <Description>Enable or disable web browser window scroll bars.</Description>
+      <ReturnValueType></ReturnValueType>
+      <Arguments>
+         <Arg>
+            <Name>Enable</Name>
+            <Description>Whether to enable or disable scroll bars.</Description>
+            <Type>boolean</Type>
+            <Default>false</Default>
+            <Required>0</Required>
+            <EasyMode>
+               <Default>false</Default>
+               <DataType>boolean</DataType>
+               <Constraints>none</Constraints>
+            </EasyMode>
+         </Arg>
+	    </Arguments>
+   </Action>
+   <Action>
+	    <Name>WebBrowserWindow.EnableShortcuts</Name>
+      <Description>Enable or disable web browser window keyboard shortcuts.</Description>
+      <ReturnValueType></ReturnValueType>
+      <Arguments>
+         <Arg>
+            <Name>Enable</Name>
+            <Description>Whether to enable or disable keyboard shortcuts.</Description>
+            <Type>boolean</Type>
+            <Default>false</Default>
+            <Required>0</Required>
+            <EasyMode>
+               <Default>false</Default>
+               <DataType>boolean</DataType>
+               <Constraints>none</Constraints>
+            </EasyMode>
+         </Arg>
+	    </Arguments>
+   </Action>
+   <Action>
+	    <Name>WebBrowserWindow.EnableScriptErrors</Name>
+      <Description>Enable or disable web browser window to show error dialogs for scripts errors.</Description>
+      <ReturnValueType></ReturnValueType>
+      <Arguments>
+         <Arg>
+            <Name>Enable</Name>
+            <Description>Whether to enable or disable error dialogs for scripts errors.</Description>
+            <Type>boolean</Type>
+            <Default>false</Default>
+            <Required>0</Required>
+            <EasyMode>
+               <Default>false</Default>
+               <DataType>boolean</DataType>
+               <Constraints>none</Constraints>
+            </EasyMode>
+         </Arg>
+	    </Arguments>
+   </Action>
+   <Action>
+	    <Name>WebBrowserWindow.EnablePopupWindow</Name>
+      <Description>Enable or disable web browser window to show popup windows. Default is false.</Description>
+      <ReturnValueType></ReturnValueType>
+      <Arguments>
+         <Arg>
+            <Name>Enable</Name>
+            <Description>Whether to enable or disable popup windows.</Description>
+            <Type>boolean</Type>
+            <Default>false</Default>
+            <Required>0</Required>
+            <EasyMode>
+               <Default>false</Default>
+               <DataType>boolean</DataType>
+               <Constraints>none</Constraints>
+            </EasyMode>
+         </Arg>
+	    </Arguments>
+   </Action>
+   <Action>
+	    <Name>WebBrowserWindow.EnableLoadPopupInMainWindow</Name>
+      <Description>Enable or disable web browser window to load popup windows in main window. Default is false.</Description>
+      <ReturnValueType></ReturnValueType>
+      <Arguments>
+         <Arg>
+            <Name>Enable</Name>
+            <Description>Whether to enable or disable the loading of popup windows in main window.</Description>
+            <Type>boolean</Type>
+            <Default>false</Default>
+            <Required>0</Required>
+            <EasyMode>
+               <Default>false</Default>
+               <DataType>boolean</DataType>
+               <Constraints>none</Constraints>
+            </EasyMode>
+         </Arg>
+	    </Arguments>
+   </Action>
+   <Action>
+	    <Name>WebBrowserWindow.IsNavigationEnabled</Name>
+      <Description>Returns an value whether web browser window navigation is enabled.</Description>
+      <ReturnValueType>boolean</ReturnValueType>
+   </Action>
+   <Action>
+	    <Name>WebBrowserWindow.IsDropEnabled</Name>
+      <Description>Returns a value whether document drop is enabled.</Description>
+      <ReturnValueType>boolean</ReturnValueType>
+   </Action>
+   <Action>
+	    <Name>WebBrowserWindow.IsContextMenuEnabled</Name>
+      <Description>Returns an value whether web browser window context menu is enabled.</Description>
+      <ReturnValueType>boolean</ReturnValueType>
+   </Action>
+   <Action>
+	    <Name>WebBrowserWindow.IsScrollBarsEnabled</Name>
+      <Description>Returns an value whether web browser window scroll bars are enabled.</Description>
+      <ReturnValueType>boolean</ReturnValueType>
+   </Action>
+   <Action>
+	    <Name>WebBrowserWindow.IsShortcutsEnabled</Name>
+      <Description>Returns an value whether web browser window keyboards are enabled.</Description>
+      <ReturnValueType>boolean</ReturnValueType>
+   </Action>
+   <Action>
+	    <Name>WebBrowserWindow.IsScriptErrorsEnabled</Name>
+      <Description>Returns an value whether web browser window error dialogs for script errors are enabled.</Description>
+      <ReturnValueType>boolean</ReturnValueType>
+   </Action>
+   <Action>
+	    <Name>WebBrowserWindow.IsPopupWindowEnabled</Name>
+      <Description>Returns an value whether popup windows are enabled.</Description>
+      <ReturnValueType>boolean</ReturnValueType>
+   </Action>
+   <Action>
+	    <Name>WebBrowserWindow.IsLoadPopupInMainWindowEnabled</Name>
+      <Description>Returns an value whether popup windows can load in the main window.</Description>
+      <ReturnValueType>boolean</ReturnValueType>
+   </Action>
+   <Action>
+	    <Name>WebBrowserWindow.IsBusy</Name>
+      <Description>Returns an value whether web browser window is busy.</Description>
+      <ReturnValueType>boolean</ReturnValueType>
+   </Action>
+   <Action>
+	    <Name>WebBrowserWindow.IsOffline</Name>
+      <Description>Returns an value whether web browser window is in offline mode.</Description>
+      <ReturnValueType>boolean</ReturnValueType>
+   </Action>
+</ActionTemplates>

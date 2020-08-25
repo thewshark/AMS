@@ -1,0 +1,721 @@
+<!doctype HTML public "-//W3C//DTD HTML 4.0 Frameset//EN">
+
+<html>
+<head>
+<title>Media Player Object Plugin Help</title>
+
+<meta http-equiv=content-type content="text/html; charset=windows-1252">
+
+<style>
+
+/* ELEMENTS */
+
+body {
+  font-family: Verdana, sans-serif;
+  font-size: 8pt;
+  background-color: #ffffff;
+}
+
+hr {
+  text-align: center;
+  color: #f0f0f0;
+  width: 100%;
+  height: 6pt;
+
+  margin-top: 0pt;
+  margin-bottom: -3pt;
+
+  border: none;
+}
+
+A:link, A:active, A:visited {
+  color: #0000ff;
+  text-decoration: none;
+}
+
+A:hover {
+  color: #0000ff;
+  text-decoration: underline;
+}
+
+h1 {
+  font-family: Verdana;
+  font-weight: bold;
+  font-size: 18.0pt;
+  white-space: nowrap;
+  color: #fff;
+  background-color: #699BEF;
+
+  padding: 4pt 3pt;
+  padding: 5px 4px;
+
+  margin-top: 0pt;
+  margin-bottom: 0pt;
+
+  border-right: 1px solid #333;
+  border-left: 1px solid #699BEF;
+  border-bottom: solid black 1px;
+}
+
+h2 {
+  font-family: Arial, sans-serif;
+  font-size: 12.0pt;
+  letter-spacing: .2ex;
+  color: #000;
+
+  margin-left: 0pt;
+  margin-right: 0pt;
+  margin-top: 18pt;
+  margin-bottom: 9pt;
+}
+
+h3 {
+  font-family: Arial, sans-serif;
+  font-size: 10pt;
+  font-weight: bold;
+  font-style: normal;
+  color: black;
+  letter-spacing: 0px;
+
+  margin-left: 0pt;
+  margin-right: 0pt;
+  margin-top: 18pt;
+  margin-bottom: 3pt;
+}
+
+p {
+  font-family: Verdana;
+  font-size: 8.0pt;
+  line-height: 12.0pt;
+  
+  margin-left: 0pt;
+  margin-right: 0pt;
+  margin-top: 0pt;
+  margin-bottom: 9pt;
+}
+
+/* CLASSES */
+
+div.Actions h3, div.Properties h3, div.Events h3 {
+  font-family: Arial, sans-serif;
+  font-size: 10pt;
+  font-weight: bold;
+  font-style: italic;
+  color: #3C77B3;
+  letter-spacing: 0px;
+  
+  margin-left: 12pt;
+  margin-right: 0pt;
+  margin-top: 18pt;
+  margin-bottom: 3pt;
+}
+
+div.Events h4, div.Actions h4, div.info h3 {
+  font-family: Verdana;
+  font-size: 8.0pt;
+  line-height: 12.0pt;
+  font-weight: bold;
+  
+  margin-top: 9pt;
+  margin-bottom: 0pt;
+  margin-left: 28pt;
+  margin-right: 0pt;
+}
+
+div.Actions p, div.Properties p, div.Events p, div.ErrorCodes p {
+  font-family: Verdana;
+  font-size: 8.0pt;
+  line-height: 12.0pt;
+  
+  margin-top: 0pt;
+  margin-bottom: 9pt;
+  margin-left: 12pt;
+  margin-right: 0pt;
+}
+
+div.ErrorCodes table {
+  font-family: Verdana, sans-serif;
+  font-size: 8.0pt;
+  line-height: 12.0pt;
+  margin: 0px 0px 9pt 28pt;
+  border-collapse: collapse; 
+  border: none;
+}
+
+div.ErrorCodes table th,
+div.ErrorCodes table td {
+  border-bottom: 1px solid #ddd;
+  padding: 1ex;
+}
+
+div.ErrorCodes table th {
+  text-align: left;
+  padding-left: 0px;
+  padding-right: 2ex;
+}
+
+p.NavLocal {
+  white-space: nowrap;
+  text-indent: -4px;
+  font-family: Verdana, Arial, sans-serif;
+  font-weight: bold;
+  font-style: normal;
+  font-size: 13px;
+  background-color: #e4e4e4;
+
+  margin-top: 0px;
+  margin-bottom: 12pt;
+
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 0px;
+  padding-right: 0px;
+
+  border-bottom: 1px solid #e4e4e4;
+}
+
+p.Note {
+	font-family: Verdana;
+	font-size: 8.0pt;
+	line-height: 12.0pt;
+	color: #000000;
+	background-color: #ffffe8;
+
+	margin-top: 0pt;
+	margin-bottom: 9pt;
+	margin-left: 0pt;
+	margin-right: 5%;
+
+	padding-left: 2pt;
+	padding-right: 2pt;
+	padding-top: 1pt;
+	padding-bottom: 2pt;
+}
+
+p.Tip {
+	font-family: Verdana;
+	font-size: 8.0pt;
+	line-height: 12.0pt;
+	color: #000000;
+	background-color: #EAF4E8;
+
+	margin-top: 0pt;
+	margin-bottom: 9pt;
+	margin-left: 0pt;
+	margin-right: 5%;
+
+	padding-left: 2pt;
+	padding-right: 2pt;
+	padding-top: 1pt;
+	padding-bottom: 2pt;
+}
+
+div.Actions p.Note, div.Events p.Note,
+div.Actions p.Tip, div.Events p.Tip {
+	margin-left: 28pt;
+}
+
+div.Properties p.Note,
+div.Properties p.Tip {
+	margin-left: 18pt;
+}
+
+pre.code {
+  white-space: pre;
+  font-family: Courier New, Courier, Arial, sans-serif;
+  font-size: 10pt;
+  font-weight: normal;
+  font-style: normal;
+  letter-spacing: normal;
+  color: #000;
+  background-color: #f9f9f9;
+  
+  margin-top: 3pt;
+  margin-bottom: 9pt;
+  margin-left: 0pt;
+  margin-left: 0pt;
+  
+  padding: 10px;
+  
+  border: 1px dotted #ccc;
+}
+
+div.Actions pre.code, div.Events pre.code {
+  margin-left: 28pt;
+}
+
+div.Actions h2, div.Properties h2, div.Events h2 {
+  margin-bottom: -6pt;
+}
+
+div.actions p, div.ErrorCodes p, div.info p {
+  margin-left: 28pt;
+}
+
+div.actions p.indent {
+  margin-left: 38pt;
+}
+
+div.e_vars p {
+  margin-left: 28pt;
+}
+
+span.here { /* blue tab effect in navbar (NavLocal) */
+  font-weight: bold;
+  color: #fff;
+  background-color: #699BEF;
+
+  margin: 0px;
+
+  padding: 4px 8px;
+
+  border-top: 1px solid #699BEF;
+  border-bottom: 1px solid #333;
+  border-left: none;
+  border-right: 1px solid #333;
+}
+
+span.type {
+	color: #aaa;
+}
+
+div.history h2 + h3 {
+	margin-top: 3pt;
+}
+</style>
+</head>
+<body>
+
+<h1>Media Player Object Plugin</h1>
+
+<p class="NavLocal"><span class=wab>&nbsp;</span><span class="here">Online Help</span></p>
+
+<h2>Description</h2>
+
+<p>The Media Player object plugin allows you to display any Windows Media 
+Player-compatible file format (including MPEG and WMV files) on the 
+page. It does this by taking advantage of the Windows Media Player 
+ActiveX control that is found on most systems.</p>
+
+<p>Specifically, it embeds this Windows Media Player control directly 
+into your application. This essentially "borrows" Windows 
+Media Player and uses it to display media files in your application.</p>
+
+<p class="Note"><b>Note:</b> You can detect whether or not the Media 
+Player ActiveX control is installed at run time using the Dependecies 
+feature of AutoPlay Media Studio (see Project > Dependencies).</p>
+
+
+<h2>Important Information</h2>
+
+<p>Please note that there are many different versions of the Windows Media Player ActiveX control. Some versions of the control do not look and operate the same as previous versions. In creating this plugin we have tried to maintain compatibility for versions 6.4-9.0 of the ActiveX control. However, you should be aware that there can be many potential issues when using any third-party ActiveX control, especially the Windows Media Player control. Therefore we strongly recommend that you test any projects that use this plugin thoroughly and use the plugin at your own risk.</p>
+
+<div class="Properties">
+<h2>Properties</h2>
+
+<h3>Automatically start playing on load</h3>
+
+<p>If checked, the object will automatically start playing media files 
+that are loaded using MediaPlayer.Load.</p>
+
+<h3>Show transport controls</h3>
+
+<p>If checked, the transport controls will be displayed at run time. 
+These controls include play, pause, stop buttons as well as volume, 
+status and slider controls.</p>
+
+<h3>Automatically rewind when clip is stopped</h3>
+
+<p>If checked, the media will rewind to the beginning of the clip when 
+the stop button is pressed or the MediaPlayer.Stop action is 
+executed.</p>
+
+<h3>Show context menu</h3>
+
+<p>If checked, the default Media Player context menu will be displayed 
+if the user right-clicks the mouse on the video window. If uncheckd, 
+no context menu will appear.</p>
+
+</div> <!-- /Properties -->
+
+
+<div class="Events">
+<h2>Events</h2>
+
+<h3>On Play</h3>
+
+<p>Fires when a media clip starts playing or continues playing in 
+response to the user clicking the play button, a MediaPlayer.Play 
+action being executed or if a clip is loaded and the "Automatically 
+start playing on load" setting is turned on.</p>
+
+<h3>On Pause</h3>
+
+<p>Fires when a media clip pauses in response to the user clicking the 
+pause button or a MediaPlayer.Pause action being executed.</p>
+
+<h3>On Stop</h3>
+
+<p>Fires when a media clip stops in response to the user clicking the 
+stop button, a MediaPlayer.stop action being executed or the end of 
+the clip being reached.</p>
+
+<h3>On Finish</h3>
+
+<p>Fires when a media clip reaches the end of the stream during playback.</p>
+
+</div> <!-- /Events -->
+
+
+<div class="Actions">
+<h2>Actions</h2>
+
+<p style="margin-top:18pt;margin-left:12pt;">In addition to the generic "Plugin" actions supported by all plugin objects, the Media Player plugin also supports the following actions:</p>
+
+<h3>number MediaPlayer.GetCurrentPos (string ObjectName);</h3>
+
+<h4>Description:</h4>
+<p>Gets the current playback position (in seconds) of a Media Player object.</p>
+
+<h4>ObjectName:</h4>
+<p><span class="type">(string)</span> The name of the Media Player object that you want to apply this action to.</p>
+
+<h4>Returns:</h4>
+<p><span class="type">(number)</span> The current playback position of the Media Player object, in seconds.</p>
+ 
+<h4>Example:</h4>
+<pre class="code">
+-- Get the current playback position and the total clip length
+-- and display the information in a label object. This could be
+-- done on a page's "On Timer" event to display playback progress
+local length = MediaPlayer.GetLength("media_player");
+<b>local pos = MediaPlayer.GetCurrentPos("media_player");</b>
+local msg = string.format("%.2f/%.2f",pos,length);
+Label.SetText("time",msg);
+</pre>
+
+
+<h3>number MediaPlayer.GetLength (string ObjectName);</h3>
+
+<h4>Description:</h4>
+<p>Gets the length of the currently loaded media (in seconds) of a Media Player object.</p>
+
+<h4>ObjectName:</h4>
+<p><span class="type">(string)</span> The name of the Media Player object that you want to apply this action to.</p>
+
+<h4>Returns:</h4>
+<p><span class="type">(number)</span> The length of the currently loaded media, in seconds.</p>
+ 
+<h4>Example:</h4>
+<pre class="code">
+-- Get the current playback position and the total clip length
+-- and display the information in a label object. This could be
+-- done on a page's "On Timer" event to display playback progress
+<b>local length = MediaPlayer.GetLength("media_player");</b>
+local pos = MediaPlayer.GetCurrentPos("media_player");
+local msg = string.format("%.2f/%.2f",pos,length);
+Label.SetText("time",msg);
+</pre>
+
+
+<h3>number MediaPlayer.GetState (string ObjectName);</h3>
+
+<h4>Description:</h4>
+<p>Gets the current state of a Media Player object.</p>
+
+<h4>ObjectName:</h4>
+<p><span class="type">(string)</span> The name of the Media Player object that you want to apply this action to.</p>
+
+<h4>Returns:</h4>
+<p><span class="type">(number)</span> The state of the Media Player object:</p>
+
+<p class="indent">
+<b>VIDEO_STOPPED</b> (0) - Stopped.<br>
+<b>VIDEO_PAUSED</b> (1) - Paused.<br>
+<b>VIDEO_PLAYING</b> (2) - Playing.
+</p>
+ 
+<h4>Example:</h4>
+<pre class="code">
+-- This script could be put onto a play/pause toggle button's On Click 
+-- event in order to toggle the text on the button
+<b>if((MediaPlayer.GetState("media_player") == VIDEO_PAUSED) or (MediaPlayer.GetState("media_player") == VIDEO_STOPPED))then</b>
+    MediaPlayer.Play("media_player");
+    Button.SetText("ButtonPlay", "PAUSE");
+else
+    MediaPlayer.Pause("media_player");
+    Button.SetText("ButtonPlay", "PLAY");
+end
+</pre>
+
+
+<h3>number MediaPlayer.GetVolume (string ObjectName);</h3>
+
+<h4>Description:</h4>
+<p>Gets the volume of a Media Player object.
+
+<p class="note"><b>Note:</b> This action does not work reliably with the Media Player 6.4 ActiveX control, but it works fine with the Media Player 9.0+ control.</b></p>
+
+<h4>ObjectName:</h4>
+<p><span class="type">(string)</span> The name of the Media Player object that you want to apply this action to.</p>
+
+<h4>Returns:</h4>
+<p><span class="type">(number)</span> The current volume of the Media Player object. 0 means silent, 100 is maximum volume.</p>
+ 
+<h4>Example:</h4>
+<pre class="code">
+-- Get the current volume level of a Media Player object
+<b>nVolume = MediaPlayer.GetVolume("media_player");</b>
+</pre>
+
+
+<h3>MediaPlayer.Load (string ObjectName, string Filename);</h3>
+
+<h4>Description:</h4>
+<p>Loads a media file into a Media Player object.</p>
+
+<h4>ObjectName:</h4>
+<p><span class="type">(string)</span> The name of the Media Player object that you want to apply this action to.</p>
+
+<h4>Filename:</h4>
+<p><span class="type">(string)</span> The fully qualified path and filename of the media file to load.</p>
+
+<h4>Returns:</h4>
+<p>Nothing.</p>
+ 
+<h4>Example:</h4>
+<pre class="code">
+-- Display a File Browse Dialog, and then play the video that they select    
+
+-- Pick a nice default folder to start the browsing in (My Documents)    
+myfolder = Shell.GetFolder(SHF_MYDOCUMENTS);    
+
+-- Show the file browse dialog    
+strExtensions = "All Video Files (*.avi;*.mpg;*.wmv;*.asf)|*.avi;*.mpg;*.wmv;*.asf|All Files (*.*)|*.*|";    
+tFiles = Dialog.FileBrowse(true, "Load Video", myfolder, strExtensions, "", "", false, true);    
+
+-- Only load the video if they did not press Cancel    
+if tFiles[1] ~= "CANCEL" then    
+    -- make sure the object is visible before trying to load a video    
+    Plugin.SetVisible("media_player", true);    
+	    
+    -- Load the video File    
+    <b>MediaPlayer.Load("media_player",tFiles[1]);</b>    
+    
+    -- Play the video    
+    Video.Play("Video1");    
+end    
+</pre>
+
+
+<h3>MediaPlayer.Pause (string ObjectName);</h3>
+
+<h4>Description:</h4>
+<p>Pauses the playback of a Media Player object.</p>
+
+<h4>ObjectName:</h4>
+<p><span class="type">(string)</span> The name of the Media Player object that you want to apply this action to.</p>
+ 
+<h4>Returns:</h4>
+<p>Nothing.</p>
+ 
+<h4>Example:</h4>
+<pre class="code">
+-- Pause playback in a Media Player object
+MediaPlayer.Pause("media_player");
+</pre>
+
+
+<h3>MediaPlayer.Play (string ObjectName);</h3>
+
+<h4>Description:</h4>
+<p>Starts the playback of a Media Player object.</p>
+
+<h4>ObjectName:</h4>
+<p><span class="type">(string)</span> The name of the Media Player object that you want to apply this action to.</p>
+ 
+<h4>Returns:</h4>
+<p>Nothing.</p>
+ 
+<h4>Example:</h4>
+<pre class="code">
+-- Start playback in a Media Player object
+MediaPlayer.Play("media_player");
+</pre>
+
+
+<h3>MediaPlayer.Seek (string ObjectName, number SeekType, number SeekTime = 0);</h3>
+
+<h4>Description:</h4>
+<p>Seeks to a position in a media clip that is loaded in a Media Player object.</p>
+
+<h4>ObjectName:</h4>
+<p><span class="type">(string)</span> The name of the Media Player object that you want to apply this action to.</p>
+
+<h4>SeekType:</h4><p><span class="type">(number)</span> The type of seek to perform:</p>
+
+<p class="indent">
+<b>SEEK_BEGINNING</b> (0) - Seek to the beginning of the current track.<BR>
+<b>SEEK_END</b> (1) - Seek to the end of the current track.<BR>
+<b>SEEK_FORWARD</b> (2) - Seek forward.<BR>
+<b>SEEK_BACKWARD</b> (3) - Seek backward.<BR>
+<b>SEEK_SPECIFIC</b> (4) - Seek to a specific time within the track.</p>
+
+<h4>SeekTime:</h4><p><span class="type">(number)</span> The time in seconds to seek to (or seek by). Defaults to 0.</p>
+
+<p class="note"><b>Note:</b> SeekTime is only used if SeekType is 2, 3 or 4.</p>
+
+<h4>Returns:</h4>
+<p>Nothing.</p>
+
+<h4>Example:</h4>
+<pre class="code">
+-- Rewind the media clip    
+MediaPlayer.Seek("media_player", SEEK_BEGINNING);    
+
+-- Seek forward seven and one half seconds    
+MediaPlayer.Seek("media_player", SEEK_FORWARD, 7.5);    
+
+-- Seek to fifteen seconds into the clip    
+MediaPlayer.Seek("media_player", SEEK_SPECIFIC, 15);    
+</pre>
+
+
+<h3>MediaPlayer.SetFullScreen (string ObjectName, boolean Fullscreen);</h3>
+
+<h4>Description:</h4>
+<p>Controls whether a Media Player object will play in full screen mode or at its normal size.</p>
+
+<h4>ObjectName:</h4>
+<p><span class="type">(string)</span> The name of the Media Player object that you want to apply this action to.</p>
+ 
+<h4>Fullscreen:</h4>
+<p><span class="type">(boolean)</span> Whether the Media Player window 
+should go to full screen mode. If true, the Media Player window will 
+go to full screen mode (if it isn't already full screen). If false, it will return 
+to normal size (if it isn't already normal).</p>
+
+<p class="note"><b>Note:</b> For Windows Media Player 9.0+ you must call this action <i>after</i> loading your media file. Calling this action before you load your media file will have no effect.</p>
+
+<h4>Returns:</h4>
+<p>Nothing.</p>
+ 
+<h4>Example:</h4>
+<pre class="code">
+-- Make the Media Player object go full screen
+MediaPlayer.SetFullScreen("media_player", true);
+</pre>
+
+
+<h3>MediaPlayer.SetVolume (string ObjectName, number Volume);</h3>
+
+<h4>Description:</h4>
+<p>Sets the volume level of a Media Player object. The volume can range from 0 (silent) to 100 (full).</p>
+
+<p class="note"><b>Note:</b> This action does not work reliably with the Media Player 6.4 ActiveX control, but it works fine with the Media Player 9.0+ control.</b></p>
+
+<h4>ObjectName:</h4>
+<p><span class="type">(string)</span> The name of the Media Player object that you want to apply this action to.</p>
+
+<h4>Volume:</h4>
+<p><span class="type">(number)</span> The volume level to set (0-100).</p>
+ 
+<h4>Returns:</h4>
+<p>Nothing.</p>
+
+<h4>Example:</h4>
+<pre class="code">
+-- Set the volume to 50%
+MediaPlayer.SetVolume("media_player", 127);
+</pre>
+
+
+<h3>MediaPlayer.Stop (string ObjectName);</h3>
+
+<h4>Description:</h4>
+<p>Stops the playback of a Media Player object.</p>
+
+<h4>ObjectName:</h4>
+<p><span class="type">(string)</span> The name of the Media Player object that you want to apply this action to.</p>
+
+<h4>Returns:</h4>
+<p>Nothing.</p>
+ 
+<h4>Example:</h4>
+<pre class="code">
+-- Stop the playback in a Media Player object
+MediaPlayer.Stop("media_player");
+</pre>
+
+</div> <!-- /Actions -->
+
+
+<div class="ErrorCodes">
+<h2>Error Codes</h2>
+<p>
+<b>1100</b> - Could not find the specified plugin object or the plugin object is of the wrong type.<br>
+</p>
+
+</div> <!-- /ErrorCodes -->
+
+
+<div class="History">
+<h2>Change Log</h2>
+
+<h3>2.0.0.0</h3>
+<ul>
+	<li>Updated to version 2.0 of the plugin SDK.</li>
+</ul>
+
+<h3>1.0.2.0</h3>
+<ul>
+	<li>Fixed a bug that would cause problems in AMS70 when using the auto-resize options.</li>
+	<li>Updated version information.</li>
+</ul>
+
+<h3>1.0.1.0</h3>
+<ul>
+	<li>Updated version information.</li>
+</ul>
+
+<h3>1.0.0.6</h3>
+<ul>
+	<li>Fixed a bug where the Filename parameter in the MediaPlayer.Load action was incorrectly labeled a number in the action wizard</li>
+	<li>F1 help now works if you have Mozilla Firefox installed</li>
+</ul>
+
+<h3>1.0.0.5</h3>
+<ul>
+	<li>Miscellaneous bug fixes</li>
+</ul>
+
+<h3>1.0.0.4</h3>
+<ul>
+	<li>Initial release</li>
+</ul>
+</div> <!-- /History -->
+
+
+<div class="Info">
+<h2>Additional Information</h2>
+
+<h3>Author:</h3><p>Indigo Rose Corporation<br>
+<a href="http://support.indigorose.com">support.indigorose.com</a></p>
+
+<h3>Copyright:</h3>
+<p>The Media Player Plugin Object is copyright © 2003-2010 Indigo Rose Software Design Corporation.</p>
+
+<h3>Website:</h3>
+<p><a href="http://www.indigorose.com">http://www.indigorose.com</a></p>
+
+<h3>Media Player:</h3>
+<p><a href="http://www.microsoft.com/windows/windowsmedia">http://www.microsoft.com/windows/windowsmedia</a></p>
+
+</div> <!-- /info -->
+<hr>
+
+<p align="center">Copyright © 2003-2010 Indigo Rose Software Design Corporation.<br>
+All Rights Reserved.</p>
+
+</body>
+</html>

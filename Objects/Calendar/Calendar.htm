@@ -1,0 +1,889 @@
+<!doctype HTML public "-//W3C//DTD HTML 4.0 Frameset//EN">
+
+<html>
+<head>
+<title>Calendar Object Plugin Help</title>
+
+<meta http-equiv=content-type content="text/html; charset=windows-1252">
+
+<style>
+
+/* ELEMENTS */
+
+body {
+  font-family: Verdana, sans-serif;
+  font-size: 8pt;
+  background-color: #ffffff;
+}
+
+hr {
+  text-align: center;
+  color: #f0f0f0;
+  width: 100%;
+  height: 6pt;
+
+  margin-top: 0pt;
+  margin-bottom: -3pt;
+
+  border: none;
+}
+
+A:link, A:active, A:visited {
+  color: #0000ff;
+  text-decoration: none;
+}
+
+A:hover {
+  color: #0000ff;
+  text-decoration: underline;
+}
+
+h1 {
+  font-family: Verdana;
+  font-weight: bold;
+  font-size: 18.0pt;
+  white-space: nowrap;
+  color: #fff;
+  background-color: #699BEF;
+
+  padding: 4pt 3pt;
+  padding: 5px 4px;
+
+  margin-top: 0pt;
+  margin-bottom: 0pt;
+
+  border-right: 1px solid #333;
+  border-left: 1px solid #699BEF;
+  border-bottom: solid black 1px;
+}
+
+h2 {
+  font-family: Arial, sans-serif;
+  font-size: 12.0pt;
+  letter-spacing: .2ex;
+  color: #000;
+
+  margin-left: 0pt;
+  margin-right: 0pt;
+  margin-top: 18pt;
+  margin-bottom: 9pt;
+}
+
+h3 {
+  font-family: Arial, sans-serif;
+  font-size: 10pt;
+  font-weight: bold;
+  font-style: normal;
+  color: black;
+  letter-spacing: 0px;
+
+  margin-left: 0pt;
+  margin-right: 0pt;
+  margin-top: 18pt;
+  margin-bottom: 3pt;
+}
+
+p {
+  font-family: Verdana;
+  font-size: 8.0pt;
+  line-height: 12.0pt;
+  
+  margin-left: 0pt;
+  margin-right: 0pt;
+  margin-top: 0pt;
+  margin-bottom: 9pt;
+}
+
+/* CLASSES */
+
+div.Actions h3, div.Properties h3, div.Events h3 {
+  font-family: Arial, sans-serif;
+  font-size: 10pt;
+  font-weight: bold;
+  font-style: italic;
+  color: #3C77B3;
+  letter-spacing: 0px;
+  
+  margin-left: 12pt;
+  margin-right: 0pt;
+  margin-top: 18pt;
+  margin-bottom: 3pt;
+}
+
+div.Events h4, div.Actions h4, div.info h3 {
+  font-family: Verdana;
+  font-size: 8.0pt;
+  line-height: 12.0pt;
+  font-weight: bold;
+  
+  margin-top: 9pt;
+  margin-bottom: 0pt;
+  margin-left: 28pt;
+  margin-right: 0pt;
+}
+
+div.Actions p, div.Properties p, div.Events p, div.ErrorCodes p {
+  font-family: Verdana;
+  font-size: 8.0pt;
+  line-height: 12.0pt;
+  
+  margin-top: 0pt;
+  margin-bottom: 9pt;
+  margin-left: 12pt;
+  margin-right: 0pt;
+}
+
+div.ErrorCodes table {
+  font-family: Verdana, sans-serif;
+  font-size: 8.0pt;
+  line-height: 12.0pt;
+  margin: 0px 0px 9pt 28pt;
+  border-collapse: collapse; 
+  border: none;
+}
+
+div.ErrorCodes table th,
+div.ErrorCodes table td {
+  border-bottom: 1px solid #ddd;
+  padding: 1ex;
+}
+
+div.ErrorCodes table th {
+  text-align: left;
+  padding-left: 0px;
+  padding-right: 2ex;
+}
+
+p.NavLocal {
+  white-space: nowrap;
+  text-indent: -4px;
+  font-family: Verdana, Arial, sans-serif;
+  font-weight: bold;
+  font-style: normal;
+  font-size: 13px;
+  background-color: #e4e4e4;
+
+  margin-top: 0px;
+  margin-bottom: 12pt;
+
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 0px;
+  padding-right: 0px;
+
+  border-bottom: 1px solid #e4e4e4;
+}
+
+p.Note {
+	font-family: Verdana;
+	font-size: 8.0pt;
+	line-height: 12.0pt;
+	color: #000000;
+	background-color: #ffffe8;
+
+	margin-top: 0pt;
+	margin-bottom: 9pt;
+	margin-left: 0pt;
+	margin-right: 5%;
+
+	padding-left: 2pt;
+	padding-right: 2pt;
+	padding-top: 1pt;
+	padding-bottom: 2pt;
+}
+
+p.Tip {
+	font-family: Verdana;
+	font-size: 8.0pt;
+	line-height: 12.0pt;
+	color: #000000;
+	background-color: #EAF4E8;
+
+	margin-top: 0pt;
+	margin-bottom: 9pt;
+	margin-left: 0pt;
+	margin-right: 5%;
+
+	padding-left: 2pt;
+	padding-right: 2pt;
+	padding-top: 1pt;
+	padding-bottom: 2pt;
+}
+
+div.Actions p.Note, div.Events p.Note,
+div.Actions p.Tip, div.Events p.Tip {
+	margin-left: 28pt;
+}
+
+div.Properties p.Note,
+div.Properties p.Tip {
+	margin-left: 18pt;
+}
+
+pre.code {
+  white-space: pre;
+  font-family: Courier New, Courier, Arial, sans-serif;
+  font-size: 10pt;
+  font-weight: normal;
+  font-style: normal;
+  letter-spacing: normal;
+  color: #000;
+  background-color: #f9f9f9;
+  
+  margin-top: 3pt;
+  margin-bottom: 9pt;
+  margin-left: 0pt;
+  margin-left: 0pt;
+  
+  padding: 10px;
+  
+  border: 1px dotted #ccc;
+}
+
+div.Actions pre.code, div.Events pre.code {
+  margin-left: 28pt;
+}
+
+div.Actions h2, div.Properties h2, div.Events h2 {
+  margin-bottom: -6pt;
+}
+
+div.actions p, div.ErrorCodes p, div.info p {
+  margin-left: 28pt;
+}
+
+div.actions p.indent {
+  margin-left: 38pt;
+}
+
+div.e_vars p {
+  margin-left: 28pt;
+}
+
+span.here { /* blue tab effect in navbar (NavLocal) */
+  font-weight: bold;
+  color: #fff;
+  background-color: #699BEF;
+
+  margin: 0px;
+
+  padding: 4px 8px;
+
+  border-top: 1px solid #699BEF;
+  border-bottom: 1px solid #333;
+  border-left: none;
+  border-right: 1px solid #333;
+}
+
+span.type {
+	color: #aaa;
+}
+
+div.history h2 + h3 {
+	margin-top: 3pt;
+}
+</style>
+</head>
+<body>
+
+<h1>Calendar Object Plugin</h1>
+
+<p class="NavLocal"><span class=wab>&nbsp;</span><span class="here">Online Help</span></p>
+
+<h2>Description</h2>
+
+<p>The Calendar object plugin allows you to add an Outlook-style calendar right into your AutoPlay Media Studio applications. Drop it on your page and you've got a great looking and super flexible calendar, that's ready for you to customize!</p>
+
+<p>While it looks great right out of the box, we've made it easy to configure with flexible drawing options, fonts, colors, borders, special days and much more. Events like "On Select" and "On Month Select" make it easy to detect when a day (or series of days) is clicked or a month is selected.</p>
+
+<p>It's great for use in a variety of applications, such as scheduling, reminders, bulletin boards, timesheets, general calenders and so much more.</p>
+
+<div class="Properties">
+<h2>Properties</h2>
+
+<h3>Rows</h3>
+
+<p>Controls the number of rows of calendars what will be drawn within the objects bounding rectangle.  
+This number can be between 1 and 100 inclusive.</p>
+
+<h3>Columns</h3>
+
+<p>Controls the number of columns of calendars what will be drawn within the objects bounding rectangle.  
+This number can be between 1 and 100 inclusive.</p>
+
+<p class="Note"><b>Note:</b> The object size will not grow or shrink to fit the correct number of rows or columns.  
+If the number of rows and columns is too large to fit the objects bounding rectangle, the calendars will still 
+be drawn but they may not be visible.  Make sure to re-size your calendar object to fit all of your specified 
+rows and columns.</p>
+
+<p class="Note"><b>Note:</b> The calendar that exists at row one and column one is referred to as the "focus calendar".</p>
+
+<h3>General Font</h3>
+
+<p>This is the font that will be applied to the calendar in general. It will control the appearance of the date numerals, 
+the day of the week headings, and the month/year calendar headings.</p>
+
+<h3>Special Days Font</h3>
+
+<p>This font will control the appearance of dates that have been marked special using the Calendar.AddSpecialDate() action. 
+This font will only alter the appearance of the date numerals that have been marked special.</p>
+
+<h3>Multi-Select</h3>
+
+<p>Enables or disables the ability to select more then one date on the calendar at runtime.  If checked the user will
+be able to select multiple dates on the calendar.  If unchecked only one date can be selected at a time.</p>
+
+<h3>Highlight Today</h3>
+
+<p>Highlights that date that is currently specified to be "today".  By default "today" is the current day when the runtime 
+is active, however the "today" date can be changed programmatically using the Calendar.SetToday() action.  If checked the
+"today" date will be marked with a red bounding rectangle. If unchecked the "today" date will not be marked in any way.</p>
+
+<h3>Non-Month Days</h3>
+
+<p>Displays date numerals in the calendar that do not correspond to the current month.  If checked date numerals corresponding
+to the previous and next month will be displayed in the current calendar month.  If unchecked those date numerals will be left out.</p>
+
+<p class="Note"><b>Note:</b> If multiple rows and columns are used this will only affect the focus calendar and the 
+calendar that appears at the bottom right.</p>
+
+<h3>3D Border</h3>
+
+<p>Surrounds the calendar plugin with a three-dimensional border.  If checked the calendar object will be surrounded 
+with a three-dimensional border, if unchecked the calendar object will have the "flat" look applied to it.</p>
+
+<h3>Background Color</h3>
+
+<p>Controls the color of the calendar's background.</p>
+
+<h3>Month Days Color</h3>
+
+<p>Controls the color of the calendar's date numerals, not including the non-month days.</p>
+
+<h3>Non-Month Days Color</h3>
+
+<p>Controls the color of the calendar's non-month date numerals.</p>
+
+<h3>Special Days Color</h3>
+
+<p>Controls the color of the calendar's date numerals that have been marked as special.  This will not affect any other
+dates and will control the appearance of special date numerals in conjunction with the special date font.</p>
+
+</div> <!-- /Properties -->
+
+
+<div class="Events">
+<h2>Events</h2>
+
+<h3>On Select</h3>
+
+<p>Fires when the calendar selection changes.  This event will be fired if the selection is programmatically using the 
+Calendar.SetSelection() action or if the end-user selects days using the mouse. The following event variables are
+ automatically set whenever this event is triggered:</p>
+
+<div class="e_vars">
+
+<h4>e_StartDate:</h4>
+<p><span class="type">(string)</span> The start date of the selection in the format: "YYYY-MM-DD".  If the calendar does not 
+have multiple selection enabled e_EndDate will be equal to this value.</p>
+
+<h4>e_EndDate:</h4>
+<p><span class="type">(string)</span> The end date of the selection in the format: "YYYY-MM-DD".  If the calendar does not 
+have multiple selection enabled e_EndDate will be equal to e_StartDate.</p>
+
+</div> <!-- /e_vars -->
+
+<h3>On Month Select</h3>
+
+<p>Fires when the a month is selected in the calendar's month heading list. This event will be fired if the selection 
+is set programmatically using the Calendar.SetCurrentMonthYear() action or if the end-user selects the month using the mouse. 
+The following event variables are automatically set whenever this event is triggered:</p>
+
+<div class="e_vars">
+
+<h4>e_CurrMonthYear:</h4>
+<p><span class="type">(string)</span> The current month year in the format: "YYYY-MM".  This value will always correspond 
+to the current month year in the focus calendar.</p>
+
+<h4>e_SelMonthYear:</h4>
+<p><span class="type">(string)</span> The selected month year in the format: "YYYY-MM". If the selection is not altered this 
+may be equal to e_CurrMonthYear.  This value corresponds to the month year value that the calendar where the selection occurred 
+will contain.  It is not tied to the focus calendar.</p>
+
+</div> <!-- /e_vars -->
+
+
+</div> <!-- /Events -->
+
+
+<div class="Actions">
+<h2>Actions</h2>
+		
+<p style="margin-top: 18pt; margin-left: 12pt;">
+<a href="#Calendar.AddSpecialDate">Calendar.AddSpecialDate</a><br/>
+<a href="#Calendar.ClearSelection">Calendar.ClearSelection</a><br/>
+<a href="#Calendar.ClearSpecialDates">Calendar.ClearSpecialDates</a><br/>
+<a href="#Calendar.GetCurrentMonthYear">Calendar.GetCurrentMonthYear</a><br/>
+<a href="#Calendar.GetSelection">Calendar.GetSelection</a><br/>
+<a href="#Calendar.GetSpecialDates">Calendar.GetSpecialDates</a><br/>
+<a href="#Calendar.GetToday">Calendar.GetToday</a><br/>
+<a href="#Calendar.SetCurrentMonthYear">Calendar.SetCurrentMonthYear</a><br/>
+<a href="#Calendar.SetSelection">Calendar.SetSelection</a><br/>
+<a href="#Calendar.SetToday">Calendar.SetToday</a><br/>
+<a href="#Calendar.SetWeekStartDay">Calendar.SetWeekStartDay</a><br/>
+<a href="#Calendar.ShowToday">Calendar.ShowToday</a><br/>
+</p>
+
+<h3><a name="Calendar.AddSpecialDate">Calendar.AddSpecialDate (string ObjectName, string Date)</a></h3>
+
+<h4>Description:</h4>
+<p>Adds an special date to a calendar object.</p>
+
+<h4>ObjectName:</h4>
+<p><span class="type">(string)</span> The name of the calendar object.</p>
+ 
+<h4>Date:</h4>
+<p><span class="type">(string)</span> The special date (YYYY-MM-DD).</p>
+
+<h4>Returns:</h4>
+<p>Nothing. You can use Application.GetLastError() to determine whether this action failed, and why.</p>
+ 
+<h4>Example:</h4>
+<pre class="code">
+-- Prompt the user for a special day they wish to add to the calendar.
+date_entered = Dialog.MaskedInput("Special Day", "Please enter the special day to you want to add:", "####-##-##", "2003-12-25", MB_ICONQUESTION, " ");
+
+-- If the user didn't press the Cancel button...
+if (date_entered ~= nil) then
+	-- Marks the user input date as a special day on the "Calendar1" calendar object.
+	-- The date will display in red.
+	Calendar.AddSpecialDate("Calendar1", date_entered.Displayed);
+	
+	-- See if an error occurred calling Calendar.AddSpecialDate.
+	-- If an error occurred, display the error message.
+	error = Application.GetLastError();
+	if (error ~= 0) then
+		Dialog.Message("Error", _tblErrorMessages[error], MB_OK, MB_ICONEXCLAMATION);
+	end
+else
+	-- Display a dialog notifying the user the date could not be set as special.
+	Dialog.Message("Notice", "An error occurred, please retry inputting the date.", MB_OK, MB_ICONEXCLAMATION, MB_DEFBUTTON1);
+end
+</pre>
+
+
+
+
+<h3><a name="Calendar.ClearSelection">Calendar.ClearSelection (string ObjectName)</a></h3>
+
+<h4>Description:</h4>
+<p>Removes the selection (if any) from the specified calendar.</p>
+
+<h4>ObjectName:</h4>
+<p><span class="type">(string)</span> The name of the calendar object.</p>
+
+<h4>Returns:</h4>
+<p>Nothing. You can use Application.GetLastError() to determine whether this action failed, and why.</p>
+
+<h4>Example:</h4>
+<pre class="code">
+-- Clears the date(s) currently selected on the calendar.
+Calendar.ClearSelection("Calendar1");
+</pre>
+
+
+
+
+
+<h3><a name="Calendar.ClearSpecialDates">Calendar.ClearSpecialDates (string ObjectName)</a></h3>
+
+<h4>Description:</h4>
+<p>Removes all special dates (if any) from the specified calendar.</p>
+
+<h4>ObjectName:</h4>
+<p><span class="type">(string)</span> The name of the calendar object.</p>
+
+<h4>Returns:</h4>
+<p>Nothing. You can use Application.GetLastError() to determine whether this action failed, and why.</p>
+
+<h4>Example:</h4>
+<pre class="code">
+-- Clears all special dates marked on the calendar object.
+Calendar.ClearSpecialDates("Calendar1");
+</pre>
+
+
+
+
+
+
+
+<h3><a name="Calendar.GetCurrentMonthYear">string Calendar.GetCurrentMonthYear (string ObjectName)</a></h3>
+
+<h4>Description:</h4>
+<p>Returns the current month and year displayed in the focus calendar (YYYY-MM).</p>
+
+<h4>ObjectName:</h4>
+<p><span class="type">(string)</span> The name of the calendar object.</p>
+
+<h4>Returns:</h4>
+<p><span class="type">(string)</span> The current month year displayed in the focus calendar (YYYY-MM). If an error
+occurs, an empty string ("") is returned.</p>
+
+<h4>Example:</h4>
+<pre class="code">
+-- Get the current year and month displayed in the calendar object.
+current_monthyear = Calendar.GetCurrentMonthYear("Calendar1");
+
+-- Check if an error occurred.
+error = Application.GetLastError();
+
+if (current_monthyear ~= "") then
+	-- Display a dialog containing the current year and month.
+	Dialog.Message("Currently Year-Month", "The current year and month in the calendar is "..current_monthyear, MB_OK, MB_ICONINFORMATION);
+else
+	-- If an error occurred, display the error message.
+	Dialog.Message("Error", _tblErrorMessages[error], MB_OK, MB_ICONEXCLAMATION, MB_DEFBUTTON1);
+end
+</pre>
+
+
+
+
+<h3><a name="Calendar.GetSelection">table Calendar.GetSelection (string ObjectName)</a></h3>
+
+<h4>Description:</h4>
+<p>Returns a table containing the beginning and ending selection dates.</p>
+
+<h4>ObjectName:</h4>
+<p><span class="type">(string)</span> The name of the calendar object.</p>
+
+<h4>Returns:</h4>
+<p><span class="type">(table)</span> A table containing the beginning and ending selection dates in the format YYYY-MM-DD. The
+table entries are indexed by the keys "Begin" and "End". You can access the values by tb.Begin and tb.End. If there are no dates selected
+or an error occurs, nil is returned.</p>
+
+<h4>Example:</h4>
+<pre class="code">
+-- Get the beginning and ending of the selection in the "Calendar1" calendar object.
+selection = Calendar.GetSelection("Calendar1");
+
+-- If a selection was made, display the dates in a dialog.
+-- If no selection is made, notify the user in a dialog.
+if (selection ~= nil) then
+	Dialog.Message("Calendar Selection", "The beginning of the selection is: "..selection.Begin.."\r\nThe end of the selection is: "..selection.End, MB_OK, MB_ICONINFORMATION, MB_DEFBUTTON1);
+else
+	Dialog.Message("Notice", "There are no dates selected.", MB_OK, MB_ICONINFORMATION, MB_DEFBUTTON1);
+end
+</pre>
+
+
+
+
+
+<h3><a name="Calendar.GetSpecialDates">table Calendar.GetSpecialDates (string ObjectName)</a></h3>
+
+<h4>Description:</h4>
+<p>Returns a numerically indexed table of all the special dates.</p>
+
+<h4>ObjectName:</h4>
+<p><span class="type">(string)</span> The name of the calendar object.</p>
+
+<h4>Returns:</h4>
+<p><span class="type">(table)</span> A numerically indexed table containing all of the special dates associated
+with the calendar.  The dates will be in the ISO date format: YYYY-MM-DD. If no special dates are marked, or an error occurs, nil is returned.</p>
+
+<h4>Example:</h4>
+<pre class="code">
+-- Get the special dates on the "Calendar1" calendar object.
+special_dates = Calendar.GetSpecialDates("Calendar1");
+
+-- If at least one special date is selected...
+if (special_dates ~= nil) then
+	-- Convert the table of dates to a formatted string with newlines as delimiters.
+	special_date_string = Table.Concat(special_dates, "\r\n", 1, TABLE_ALL);
+	
+	-- Display all of the special dates in a dialog.
+	Dialog.Message("Special Dates", "The special dates marked on the calendar are: \r\n\r\n"..special_date_string, MB_OK, MB_ICONINFORMATION, MB_DEFBUTTON1);
+else
+	-- Notify the user that no special dates are marked.
+	Dialog.Message("Notice", "There are currently no special dates marked on the calendar.", MB_OK, MB_ICONINFORMATION, MB_DEFBUTTON1);
+end
+</pre>
+
+
+
+
+
+<h3><a name="Calendar.GetToday">string Calendar.GetToday (string ObjectName)</a></h3>
+
+<h4>Description:</h4>
+<p>Returns the current today date for the calendar (YYYY-MM-DD).</p>
+
+<h4>ObjectName:</h4>
+<p><span class="type">(string)</span> The name of the calendar object.</p>
+
+<h4>Returns:</h4>
+<p><span class="type">(string)</span> The current today date for the calendar (YYYY-MM-DD). If an error occurs, an empty
+string ("") is returned.</p>
+
+<h4>Example:</h4>
+<pre class="code">
+-- Get the current date in the calendar.
+date_today = Calendar.GetToday("Calendar1");
+
+-- If the date was retrieved successfully, display it in a dialog.
+if (date_today ~= "") then
+	Dialog.Message("Today's Date", "Today's date is "..date_today, MB_OK, MB_ICONINFORMATION);
+end
+</pre>
+
+
+
+
+<h3><a name="Calendar.SetCurrentMonthYear">Calendar.SetCurrentMonthYear (string ObjectName, string MonthYear)</a></h3>
+
+<h4>Description:</h4>
+<p>Sets the current month and year displayed in the focus calendar.</p>
+
+<h4>ObjectName:</h4>
+<p><span class="type">(string)</span> The name of the calendar object.</p>
+ 
+<h4>MonthYear:</h4>
+<p><span class="type">(string)</span> The month and year to set in the focus calendar (YYYY-MM or YYYY-MM-DD).</p>
+
+<h4>Returns:</h4>
+<p>Nothing. You can use Application.GetLastError() to determine whether this action failed, and why.</p>
+
+<h4>Example:</h4>
+<pre class="code">
+-- Sets the visible month and year in the calendar to "2004-01-01".
+Calendar.SetCurrentMonthYear("Calendar1", "2004-01-01");
+</pre>
+
+
+
+
+<h3><a name="Calendar.SetSelection">Calendar.SetSelection (string ObjectName, string StartDate, string EndDate = "")</a></h3>
+
+<h4>Description:</h4>
+<p>Sets the selected dates in the calendar object.</p>
+
+<h4>ObjectName:</h4>
+<p><span class="type">(string)</span> The name of the calendar object.</p>
+ 
+<h4>StartDate:</h4>
+<p><span class="type">(string)</span> The starting date of the selection (YYYY-MM-DD).</p>
+
+<h4>EndDate:</h4>
+<p><span class="type">(string)</span> The ending date of the selection, defaults to the starting date (YYYY-MM-DD). 
+If not specified a single day specified by StartDate will be selected.</p>
+
+<h4>Returns:</h4>
+<p>Nothing. You can use Application.GetLastError() to determine whether this action failed, and why.</p>
+
+<h4>Example:</h4>
+<pre class="code">
+-- Prompt the user for the beginning date to be selected in the calendar.
+begin_date = Dialog.MaskedInput("Selection Date - Begin", "Please enter the beginning date to be selected:", "####-##-##", "2003-12-24", MB_ICONQUESTION, " ");
+
+-- Prompt the user for the end date to be selected in the calendar.
+end_date = Dialog.MaskedInput("Selection Date - End", "Please enter the end date to be selected:", "####-##-##", "2003-12-25", MB_ICONQUESTION, " ");
+
+-- If the user didn't press the Cancel button...
+if ((begin_date ~= nil) and (end_date ~= nil)) then
+	
+	-- Set the selection in the calendar to the beginning and end days the user entered.
+	Calendar.SetSelection("Calendar1", begin_date.Displayed, end_date.Displayed);
+	
+	-- See if an error occurred calling Calendar.SetSelection.
+	-- If an error occurred, display the error message.
+	error = Application.GetLastError();
+	if (error ~= 0) then
+		Dialog.Message("Error", _tblErrorMessages[error], MB_OK, MB_ICONEXCLAMATION);
+	end
+else
+	-- Display a dialog notifying the user the dates could not be set.
+	Dialog.Message("Notice", "An error occurred, please retry inputting the dates.", MB_OK, MB_ICONEXCLAMATION, MB_DEFBUTTON1);
+end
+</pre>
+
+
+
+
+
+<h3><a name="Calendar.SetToday">Calendar.SetToday (string ObjectName, string Today)</a></h3>
+
+<h4>Description:</h4>
+<p>Sets the date that will be highlighted as "today".</p>
+
+<h4>ObjectName:</h4>
+<p><span class="type">(string)</span> The name of the calendar object.</p>
+ 
+<h4>Today:</h4>
+<p><span class="type">(string)</span> The date that will be used as the today date (YYYY-MM-DD).</p>
+
+<h4>Returns:</h4>
+<p>Nothing. You can use Application.GetLastError() to determine whether this action failed, and why.</p>
+
+<h4>Example:</h4>
+<pre class="code">
+-- Prompt the user for the date they would like to set as today's date.
+date_entered = Dialog.MaskedInput("Today's Date", "Please enter the date you want to set as today:", "####-##-##", "2003-12-25", MB_ICONQUESTION, " ");
+
+-- If the user didn't press the Cancel button...
+if (date_entered ~= nil) then
+	-- Set the input date as today's date on the calendar.
+	Calendar.SetToday("Calendar1", date_entered.Displayed);
+	
+	-- See if an error occurred calling Calendar.SetToday.
+	-- If an error occurred, display the error message.
+	error = Application.GetLastError();
+	if (error ~= 0) then
+		Dialog.Message("Error", _tblErrorMessages[error], MB_OK, MB_ICONEXCLAMATION);
+	end
+else
+	-- Display a dialog notifying the user the date could not be set.
+	Dialog.Message("Notice", "An error occurred, please retry inputting the date.", MB_OK, MB_ICONEXCLAMATION, MB_DEFBUTTON1);
+end
+</pre>
+
+
+
+<h3><a name="Calendar.SetWeekStartDay">Calendar.SetWeekStartDay (string ObjectName, number Day)</a></h3>
+
+<h4>Description:</h4> <p>Sets which day of the week will be the "first" day of 
+the week displayed in the calendar (i.e., whether the week should start on 
+Sunday, Monday, etc.).</p>
+
+<p class="note"><b>Note:</b> The "first" day of the week is displayed the furthest to the left.</p>
+
+<h4>ObjectName:</h4>
+<p><span class="type">(string)</span> The name of the calendar object.</p>
+ 
+<h4>Day:</h4>
+<p><span class="type">(number)</span> The day of the week that will be used as the first day of the week, represented by a number from one to seven:
+</p>
+<p class="indent">
+<b>1</b> - Sunday<br>
+<b>2</b> - Monday<br>
+<b>3</b> - Tuesday<br>
+<b>4</b> - Wednesday<br>
+<b>5</b> - Thursday<br>
+<b>6</b> - Friday<br>
+<b>7</b> - Saturday<br>
+</p>
+
+
+<h4>Returns:</h4>
+<p>Nothing. You can use Application.GetLastError() to determine whether this action failed, and why.</p>
+
+<h4>Example:</h4>
+<pre class="code">
+-- make the calendar's weeks start on Monday<br>
+Calendar.SetWeekStartDay("Calendar1", 2);
+</pre>
+
+
+
+<h3><a name="Calendar.ShowToday">Calendar.ShowToday (string ObjectName)</a></h3>
+
+<h4>Description:</h4>
+<p>Forces the currently specified "today" date to be visible in the calendar.</p>
+
+<h4>ObjectName:</h4>
+<p><span class="type">(string)</span> The name of the calendar object.</p>
+
+<h4>Returns:</h4>
+<p>Nothing. You can use Application.GetLastError() to determine whether this action failed, and why.</p>
+
+<h4>Example:</h4>
+<pre class="code">
+-- Force the currently specified "today" date to display in the calendar.
+Calendar.ShowToday("Calendar1");
+</pre>
+
+
+
+
+</div> <!-- /Actions -->
+
+
+<div class="ErrorCodes">
+<h2>Error Codes</h2>
+<table>
+  <tr>
+    <th>0</th>
+    <td>(Calendar.OK)</td><td>-</td><td>(no error)</td>
+  </tr>
+  <tr>
+    <th>1100</th>
+    <td>&nbsp;</td><td>-</td><td>The specified object could not be found.</td>
+  </tr>
+  <tr>
+    <th>78001</th>
+    <td>(Calendar.ERR_DATE_VALUE_OUT_OF_RANGE)</td><td>-</td><td>The specified date value is out of range. ("100-01-01" - "9999-12-31")</td>
+  </tr>
+  <tr>
+    <th>78002</th>
+    <td>(Calendar.ERR_DATE_INVALID)</td><td>-</td><td>The specified date is invalid.</td>
+  </tr>
+<tr>
+    <th>78003</th>
+    <td>(Calendar.ERR_DAY_OUT_OF_RANGE)</td><td>-</td><td>The day of the week value is out of range. (1-7)</td>
+  </tr>
+</table>
+</div> <!-- /ErrorCodes -->
+
+
+<div class="History">
+<h2>Change Log</h2>
+
+<h3>2.0.0.0</h3>
+<ul>
+	<li>Updated to version 2.0 of the plugin SDK.</li>
+</ul>
+
+<h3>1.0.2.0</h3>
+<ul>
+	<li>Fixed a bug where the right and left arrows weren't firing the "On Month Select" event.</li>
+</ul>
+
+<h3>1.0.1.0</h3>
+<ul>
+	<li>Updated version and product information.</li>
+</ul>
+
+<h3>1.0.0.1</h3>
+<ul>
+	<li>Added the SetWeekStartDay() action that lets you choose which day will start the week</li>
+	<li>F1 help now works if you have Mozilla Firefox installed</li>
+</ul>
+
+<h3>1.0.0.0</h3>
+<ul>
+	<li>Initial release</li>
+</ul>
+</div> <!-- /History -->
+
+
+<div class="Info">
+<h2>Additional Information</h2>
+
+<h3>Author:</h3><p>Indigo Rose Corporation<br>
+<a href="http://support.indigorose.com">support.indigorose.com</a></p>
+
+<h3>Copyright:</h3>
+<p>The Calendar Object Plugin is copyright © 2003-2010 Indigo Rose Software Design Corporation.</p>
+
+<h3>Website:</h3>
+<p><a href="http://www.indigorose.com">http://www.indigorose.com</a></p>
+
+</div> <!-- /info -->
+<hr>
+
+<p align="center">Copyright © 2010 Indigo Rose Software Design Corporation.<br>
+All Rights Reserved.</p>
+
+</body>
+</html>

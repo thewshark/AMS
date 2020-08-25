@@ -1,0 +1,2149 @@
+<!doctype HTML public "-//W3C//DTD HTML 4.0 Frameset//EN">
+
+<html>
+<head>
+<title>Memory Help</title>
+
+<meta http-equiv=content-type content="text/html; charset=windows-1252">
+
+<style>
+
+/* ELEMENTS */
+
+body {
+  font-family: Verdana, sans-serif;
+  font-size: 8pt;
+  background-color: #ffffff;
+}
+
+hr {
+  text-align: center;
+  color: #f0f0f0;
+  width: 100%;
+  height: 6pt;
+
+  margin-top: 0pt;
+  margin-bottom: -3pt;
+
+  border: none;
+}
+
+A:link, A:active, A:visited {
+  color: #0000ff;
+  text-decoration: none;
+}
+
+A:hover {
+  color: #0000ff;
+  text-decoration: underline;
+}
+
+h1 {
+  font-family: Verdana;
+  font-weight: bold;
+  font-size: 18.0pt;
+  white-space: nowrap;
+  color: #fff;
+  background-color: #699BEF;
+
+  padding: 4pt 3pt;
+  padding: 5px 4px;
+
+  margin-top: 0pt;
+  margin-bottom: 0pt;
+
+  border-right: 1px solid #333;
+  border-left: 1px solid #699BEF;
+  border-bottom: solid black 1px;
+}
+
+h2 {
+  font-family: Arial, sans-serif;
+  font-size: 12.0pt;
+  letter-spacing: .2ex;
+  color: #000;
+  
+  margin-left: 0pt;
+  margin-right: 0pt;
+  margin-top: 18pt;
+  margin-bottom: 9pt;
+}
+
+h3 {
+  font-family: Arial, sans-serif;
+  font-size: 10pt;
+  font-weight: bold;
+  font-style: normal;
+  color: black;
+  letter-spacing: 0px;
+
+  margin-left: 0pt;
+  margin-right: 0pt;
+  margin-top: 18pt;
+  margin-bottom: 3pt;
+}
+
+p {
+  font-family: Verdana;
+  font-size: 8.0pt;
+  line-height: 12.0pt;
+  
+  margin-left: 0pt;
+  margin-right: 0pt;
+  margin-top: 0pt;
+  margin-bottom: 9pt;
+}
+
+/* CLASSES */
+
+div.Actions h3, div.Events h3 {
+  font-family: Arial, sans-serif;
+  font-size: 10pt;
+  font-weight: bold;
+  font-style: italic;
+  color: #3C77B3;
+  letter-spacing: 0px;
+  
+  margin-left: 12pt;
+  margin-right: 0pt;
+  margin-top: 18pt;
+  margin-bottom: 3pt;
+}
+
+div.Actions h4, div.info h3 {
+  font-family: Verdana;
+  font-size: 8.0pt;
+  line-height: 12.0pt;
+  font-style: bold;
+  
+  margin-top: 9pt;
+  margin-bottom: 0pt;
+  margin-left: 28pt;
+  margin-right: 0pt;
+}
+
+div.Actions p, div.Events p, div.ErrorCodes p {
+  font-family: Verdana;
+  font-size: 8.0pt;
+  line-height: 12.0pt;
+  
+  margin-top: 0pt;
+  margin-bottom: 9pt;
+  margin-left: 12pt;
+  margin-right: 0pt;
+}
+
+p.NavLocal {
+  white-space: nowrap;
+  text-indent: -4px;
+  font-family: Verdana, Arial, sans-serif;
+  font-weight: bold;
+  font-style: normal;
+  font-size: 13px;
+  background-color: #e4e4e4;
+
+  margin-top: 0px;
+  margin-bottom: 12pt;
+
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 0px;
+  padding-right: 0px;
+
+  border-bottom: 1px solid #e4e4e4;
+}
+
+p.Note {
+	font-family: Verdana;
+	font-size: 8.0pt;
+	line-height: 12.0pt;
+	color: #000000;
+	background-color: #ffffe8;
+
+	margin-top: 0pt;
+	margin-bottom: 9pt;
+	margin-left: 0pt;
+	margin-right: 5%;
+
+	padding-left: 2pt;
+	padding-right: 2pt;
+	padding-top: 1pt;
+	padding-bottom: 2pt;
+}
+
+p.Tip {
+	font-family: Verdana;
+	font-size: 8.0pt;
+	line-height: 12.0pt;
+	color: #000000;
+	background-color: #EAF4E8;
+
+	margin-top: 0pt;
+	margin-bottom: 9pt;
+	margin-left: 0pt;
+	margin-right: 5%;
+
+	padding-left: 2pt;
+	padding-right: 2pt;
+	padding-top: 1pt;
+	padding-bottom: 2pt;
+}
+
+div.Actions p.Note, div.Events p.Note,
+div.Actions p.Tip, div.Events p.Tip {
+	margin-left: 28pt;
+}
+
+pre.code {
+  white-space: pre;
+  font-family: Courier New, Courier, Arial, sans-serif;
+  font-size: 10pt;
+  font-weight: normal;
+  font-style: normal;
+  letter-spacing: normal;
+  color: #000;
+  background-color: #f9f9f9;
+  
+  margin-top: 3pt;
+  margin-bottom: 9pt;
+  margin-left: 0pt;
+  margin-left: 0pt;
+  
+  padding: 10px;
+  
+  border: 1px dotted #ccc;
+}
+
+div.Actions pre.code, div.Events pre.code {
+  margin-left: 28pt;
+}
+
+div.Actions h2 {
+  margin-bottom: -6pt;
+}
+
+div.actions p, div.info p, div.ErrorCodes p {
+  margin-left: 28pt;
+}
+
+div.actions p.indent {
+  margin-left: 38pt;
+}
+
+span.here { /* blue tab effect in navbar (NavLocal) */
+  font-weight: bold;
+  color: #fff;
+  background-color: #699BEF;
+
+  margin: 0px;
+
+  padding: 4px 8px;
+
+  border-top: 1px solid #699BEF;
+  border-bottom: 1px solid #333;
+  border-left: none;
+  border-right: 1px solid #333;
+}
+
+span.type {
+	color: #aaa;
+}
+</style>
+</head>
+<body>
+
+<h1>Memory Plugin</h1>
+
+<h2>Description</h2>
+
+<p>
+Sometimes, it's very useful have access to the system memory (RAM) to process some time consumming operations and speed 
+them up. This Plugin allows to allocate any number of memory buffers and to use them directly within AutoPlay Media Studio.
+This Plugin allows to create all Structures and arrays(but One Dimension).
+</p>
+
+<div class="Actions">
+<h2>Actions</h2>
+
+<p style="margin-top: 18pt; margin-left: 12pt;">
+<a href="#Memory.Allocate">Memory.Allocate</a><br/>
+<a href="#Memory.Compare">Memory.Compare</a><br/>
+<a href="#Memory.CompareString">Memory.CompareString</a><br/>
+<a href="#Memory.Copy">Memory.Copy</a><br/>
+<a href="#Memory.CopyString">Memory.CopyString</a><br/>
+<a href="#Memory.Free">Memory.Free</a><br/>
+<a href="#Memory.Allocate">Memory.Move</a><br/>
+<a href="#Memory.ReAllocate">Memory.ReAllocate</a><br/>
+<a href="#Memory.Size">Memory.Size</a><br/>
+<a href="#Memory.SizeString">Memory.SizeString</a><br/>
+<a href="#Memory.Zero">Memory.Zero</a><br/>
+<a href="#Memory.GetByte">Memory.GetByte</a><br/>
+<a href="#Memory.GetChar">Memory.GetChar</a><br/>
+<a href="#Memory.GetDouble">Memory.GetDouble</a><br/>
+<a href="#Memory.GetFloat">Memory.GetFloat</a><br/>
+<a href="#Memory.GetInt">Memory.GetInt</a><br/>
+<a href="#Memory.GetInt64">Memory.GetInt64</a><br/>
+<a href="#Memory.GetLong">Memory.GetLong</a><br/>
+<a href="#Memory.GetShort">Memory.GetShort</a><br/>
+<a href="#Memory.GetString">Memory.GetString</a><br/>
+<a href="#Memory.PutByte">Memory.PutByte</a><br/>
+<a href="#Memory.PutChar">Memory.PutChar</a><br/>
+<a href="#Memory.PutDouble">Memory.PutDouble</a><br/>
+<a href="#Memory.PutFloat">Memory.PutFloat</a><br/>
+<a href="#Memory.PutInt">Memory.PutInt</a><br/>
+<a href="#Memory.PutInt64">Memory.PutInt64</a><br/>
+<a href="#Memory.PutLong">Memory.PutLong</a><br/>
+<a href="#Memory.PutShort">Memory.PutShort</a><br/>
+<a href="#Memory.PutString">Memory.PutString</a><br/>
+<a href="#Memory.CreateStructure">Memory.CreateStructure</a><br/>
+<a href="#Memory.SetStructureData">Memory.SetStructureData</a><br/>
+<a href="#Memory.GetStructureData">Memory.GetStructureData</a><br/>
+<a href="#Memory.FreeStructure">Memory.FreeStructure</a><br/>
+<a href="#Memory.CreateArray">Memory.CreateArray</a><br/>
+<a href="#Memory.SetArrayData">Memory.SetArrayData</a><br/>
+<a href="#Memory.GetArrayData">Memory.GetArrayData</a><br/>
+<a href="#Memory.FreeArray">Memory.FreeArray</a><br/>
+<a href="#Memory.CreateWindowSubClass">Memory.CreateWindowSubClass</a><br/>
+<a href="#Memory.FreeWindowSubClass">Memory.FreeWindowSubClass</a><br/>
+<a href="#Memory.BitAND">Memory.BitAND</a><br/>
+<a href="#Memory.BitOR">Memory.BitOR</a><br/>
+<a href="#Memory.BitXOR">Memory.BitXOR</a><br/>
+<a href="#Memory.BitNOT">Memory.BitNOT</a><br/>
+<a href="#Memory.ShiftRight">Memory.ShiftRight</a><br/>
+<a href="#Memory.ShiftLeft">Memory.ShiftLeft</a><br/>
+<a href="#Memory.OpenLibrary">Memory.OpenLibrary</a><br/>
+<a href="#Memory.OpenFunction">Memory.OpenFunction</a><br/>
+<a href="#Memory.CallFunction">Memory.CallFunction</a><br/>
+<a href="#Memory.CloseLibrary">Memory.CloseLibrary</a><br/>
+<a href="#Memory.RunProgram">Memory.RunProgram</a><br/>
+<a href="#Memory.CreateObject">Memory.CreateObject</a><br/>
+<a href="#Memory.SetObjectProperty">Memory.SetObjectProperty</a><br/>
+<a href="#Memory.CallObjectFunction">Memory.CallObjectFunction</a><br/>
+<a href="#Memory.GetObjectProperty">Memory.GetObjectProperty</a><br/>
+<a href="#Memory.GetObjectEventParam">Memory.GetObjectEventParam</a><br/>
+<a href="#Memory.ReleaseObject">Memory.ReleaseObject</a><br/>
+</p>
+
+<h3><a name="Memory.Allocate">Memory.Allocate(number Size);</a></h3>
+
+<h4>Description:</h4>
+<p> Allocates a contiguous memory area according to the specified size (in bytes).</p>
+ 
+<h4>Size:</h4>
+<p><span class="type">(number)</span> Specifies the number of bytes to be allocated.</p>
+ 
+<h4>Returns:</h4>
+<p><span class="type"></span> A pointer to a Memory Block for use.(this number is the first byte in the memory block)</p>
+
+
+<h4>Example:</h4>
+<pre class="code">
+mem = Memory.Allocate(1024);
+Dialog.Message("", mem);
+Memory.Free(mem)
+</pre>
+
+
+<h3><a name="Memory.Compare">Memory.Compare(number Memory1, number Memory2, number Length);</a></h3>
+
+
+<h4>Description:</h4>
+<p> Compare two memory areas.</p>
+
+<h4>Memory1:</h4>
+<p><span class="type">(number)</span> Address of Memory1.</p>
+
+<h4>Memory2:</h4>
+<p><span class="type">(number)</span> Address of Memory1.</p>
+
+<h4>Length:</h4>
+<p><span class="type">(number)</span> number of Byte that you want compared in both memory block.</p>
+ 
+<h4>Returns:</h4>
+<p><span class="type">(number)</span> returns 1 if its equal or 0 if it doesn't match.</p>
+
+<h4>Example:</h4>
+<pre class="code">
+mem = Memory.Allocate(1024);
+mem2 = Memory.Allocate(1024);
+Memory.PutString(mem, "AMSWaves", -1, "Ascii");
+Memory.PutString(mem2, "AMSWaveS", -1, "Ascii");
+result = Memory.Compare(mem, mem2, 8); -- Set Length to 7 and see Result
+
+if result == 1 then
+  Dialog.Message("Compare Memory Result", "Mem1 and Mem2 are Equal");
+else
+  Dialog.Message("Compare Memory Result", "Mem1 and Mem2 are not Equal");
+end
+
+Memory.Free(mem)
+Memory.Free(mem2)
+</pre>
+
+
+<h3><a name="Memory.CompareString">Memory.CompareString(number Memory1, number Memory2, boolan String NoCase, number Length);</a></h3>
+
+<h4>Description:</h4>
+<p> Compares two string at the specified memory address.</p>
+
+<h4>Memory1:</h4>
+<p><span class="type">(number)</span> Address of Memory1.</p>
+
+<h4>Memory2:</h4>
+<p><span class="type">(number)</span> Address of Memory1.</p>
+
+<h4>String NoCase:</h4>
+<p><span class="type">(boolan)</span> String comparison is case insensitive (a ~= A). By default the comparison is case sensitive.</p>
+
+<h4>Length:</h4>
+<p><span class="type">(number)</span> Number of Char that want compared if you want all char in both memory block
+compared set it -1.</p>
+ 
+<h4>Returns:</h4>
+<p><span class="type">(number)</span> returns 0 if Memory1 equals to Memory2, returns 1 if Memory1 greater than Memory2
+, returns -1 if Memory1 is lower than Memory2.</p>
+
+<h4>Example:</h4>
+<pre class="code">
+mem = Memory.Allocate(1024)
+mem2 = Memory.Allocate(1024)
+Memory.PutString(mem, "AMSWaves", -1, "Ascii")
+Memory.PutString(mem2, "AMSWAVES", -1, "Ascii")
+result = Memory.CompareString(mem, mem2, false, -1);
+
+if result == 1 then
+  Dialog.Message("Compare Memory String Result", "Mem1 greater than Mem2")
+elseif result == 0 then
+  Dialog.Message("Compare Memory String Result", "Mem1 equals to Mem2")
+else
+  Dialog.Message("Compare Memory String Result", "Mem1 is lower than Mem2")
+end
+
+Memory.Free(mem)
+Memory.Free(mem2)
+</pre>
+
+
+<h3><a name="Memory.Copy">Memory.Copy(number SourceMemory, number DestinationMemory, number Length);</a></h3>
+
+<h4>Description:</h4>
+<p>Copy a memory area starting from the SourceMemory (the start memory address) to the DestinationMemory
+ (address of the destination memory) with the specified length (in bytes).</p>
+ 
+<h4>SourceMemory:</h4>
+<p><span class="type">(number)</span> Address of SourceMemory.</p>
+
+<h4>DestinationMemory:</h4>
+<p><span class="type">(number)</span> Address of DestinationMemory.</p>
+
+<h4>Length:</h4>
+<p><span class="type">(number)</span> Specified length (in bytes) if you want all bytes copys set it -1.</p>
+ 
+<h4>Returns:</h4>
+<p><span class="type"></span> nothing</p>
+
+
+<h4>Example:</h4>
+<pre class="code">
+mem = Memory.Allocate(1024)
+mem2 = Memory.Allocate(1024)
+
+Memory.PutString(mem, "AMSWaves", -1, "Ascii")
+
+Memory.Copy(mem, mem2, -1);
+
+Dialog.Message("Memory Copied", Memory.GetString(mem2, -1, "Ascii"))
+
+Memory.Free(mem)
+Memory.Free(mem2)
+</pre>
+
+
+<h3><a name="Memory.CopyString">Memory.CopyString(number Memory, string Text);</a></h3>
+
+<h4>Description:</h4>
+<p>Copy the Text at the specified address to the destination memory address if specified, or at the end of the 
+current buffer if omitted.</p>
+ 
+<h4>Memory:</h4>
+<p><span class="type">(number)</span> Address of Memory.</p>
+
+<h4>Text:</h4>
+<p><span class="type">(string)</span> Text that want copied to buffer.</p>
+ 
+<h4>Returns:</h4>
+<p><span class="type"></span> nothing</p>
+
+
+<h4>Example:</h4>
+<pre class="code">
+mem = Memory.Allocate(1024)
+
+Memory.PutString(mem, "AMSWaves", -1, "Ascii")
+
+Memory.CopyString(mem, "\r\n");
+Memory.CopyString(mem, "2009");
+
+Dialog.Message("Test", Memory.GetString(mem, -1, "Ascii"))
+
+Memory.Free(mem)
+</pre>
+
+
+<h3><a name="Memory.Free">Memory.Free(number Memory);</a></h3>
+
+<h4>Description:</h4>
+<p> Free (Release) the memory previously allocated with Memory.Allocate() or Memory.ReAllocate(), all remaining allocated 
+memory blocks are automatically freed when the program ends.</p>
+ 
+<h4>Memory:</h4>
+<p><span class="type">(number)</span> Address of Memory.</p>
+ 
+<h4>Returns:</h4>
+<p><span class="type"></span> nothing</p>
+
+
+<h4>Example:</h4>
+<pre class="code">
+mem = Memory.Allocate(1024)
+Memory.Free(mem)
+</pre>
+
+
+<h3><a name="Memory.Move">Memory.Move(number SourceMemory, number DestinationMemory, number Length);</a></h3>
+
+<h4>Description:</h4>
+<p> Copy a memory area starting from the SourceMemory (the start memory address) to the DestinationMemory 
+(address of the destination memory) with the specified length (in bytes). Unlike Memory.Copy(), the source and destinations 
+memory area can overlap. Memory.Move() is slower than Memory.Copy(), so it's better to use it only when necessary.</p>
+ 
+<h4>SourceMemory:</h4>
+<p><span class="type">(number)</span> Address of SourceMemory.</p>
+  
+<h4>DestinationMemory:</h4>
+<p><span class="type">(number)</span> Address of DestinationMemory.</p>
+
+<h4>Length:</h4>
+<p><span class="type">(number)</span> Specified length (in bytes) if you want all bytes copys set it -1.</p>
+
+<h4>Returns:</h4>
+<p><span class="type"></span> nothing</p>
+
+
+<h4>Example:</h4>
+<pre class="code">
+mem = Memory.Allocate(1024)
+mem2 = Memory.Allocate(1024)
+
+Memory.PutString(mem, "AMSWaves", -1, "Ascii")
+
+Memory.Move(mem, mem2, -1);
+
+Dialog.Message("Memory Moved", Memory.GetString(mem2, -1, "Ascii"))
+
+Memory.Free(mem)
+Memory.Free(mem2)
+</pre>
+
+
+<h3><a name="Memory.ReAllocate">Memory.ReAllocate(number Memory, number NewSize);</a></h3>
+
+<h4>Description:</h4>
+<p> Allocates (when parameter Memory is 0) a new or re-allocates (with a valid Memory as parameter) an existing 
+contiguous memory area according to the specified size (in bytes). </p>
+ 
+<h4>Memory:</h4>
+<p><span class="type">(number)</span> Address of SourceMemory.</p>
+  
+<h4>NewSize:</h4>
+<p><span class="type">(number)</span>Specified length (in bytes).</p>
+
+<h4>Returns:</h4>
+<p><span class="type">(number)</span> If the needed memory is available, the return value will get the start address 
+of the memory area, else it will be 0 (the existing memory area will remain then, as well its previous Memory stay valid).
+The content of the previous memory area 'Memory' is kept. If the new 'size' of the memory area is smaller than the previous 
+one, the end is cutted. If the new 'size' is larger than the previous one, the memory area will be filled up with Null.</p>
+
+
+<h4>Example:</h4>
+<pre class="code">
+mem = Memory.Allocate(1024)
+Dialog.Message("Size of Memory", Memory.Size(mem))
+mem = Memory.ReAllocate(mem, 2048)
+Dialog.Message("NewSize of Memory", Memory.Size(mem))
+Memory.Free(mem)
+</pre>
+
+
+<h3><a name="Memory.Size">Memory.Size(number Memory);</a></h3>
+
+<h4>Description:</h4>
+<p> Returns the length (in bytes) of the given 'Memory' when 'Memory' be memory address, 
+Returns SizeOf Structure if 'Memory' be structure address and returns size of your array if 'Memory be 
+array address.</p>
+ 
+<h4>Memory:</h4>
+<p><span class="type">(number)</span> Memory address or Structure address or Array address.</p>
+  
+<h4>Returns:</h4>
+<p><span class="type">(number)</span> Returns the length (in bytes) of the given 'Memory' when 'Memory' be 
+memory address, Returns SizeOf Structure if 'Memory' be structure address and returns size of your array if 
+'Memory' be array address.</p>
+
+
+<h4>Example:</h4>
+<pre class="code">
+mem = Memory.Allocate(1024)
+Dialog.Message("Size of Memory", Memory.Size(mem))
+Memory.Free(mem)
+</pre>
+
+<h4>Example2:</h4>
+<pre class="code">
+struct = Memory.CreateStructure("long, short, int, double, float")
+Dialog.Message("Size of Structure", Memory.Size(struct))
+Memory.FreeStructure(struct)
+</pre>
+
+<h4>Example3:</h4>
+<pre class="code">
+array = Memory.CreateArray(ARRAY_INT, 20)
+Dialog.Message("Size of Array", Memory.Size(array))
+Memory.FreeArray(array)
+</pre>
+
+
+<h3><a name="Memory.SizeString">Memory.SizeString(number Memory);</a></h3>
+
+<h4>Description:</h4>
+<p> Returns the length (in characters) of the given zero terminated string.</p>
+ 
+<h4>Memory:</h4>
+<p><span class="type">(number)</span> Address of Memory.</p>
+  
+<h4>Returns:</h4>
+<p><span class="type">(number)</span> Returns the length (in characters) of the given zero terminated string.</p>
+
+
+<h4>Example:</h4>
+<pre class="code">
+mem = Memory.Allocate(1024)
+Memory.PutString(mem, "Hi", -1, "Ascii")
+Dialog.Message("Size of String in Memory", Memory.SizeString(mem))
+Memory.Free(mem)
+</pre>
+
+
+<h3><a name="Memory.Zero">Memory.Zero(number Memory);</a></h3>
+
+<h4>Description:</h4>
+<p> Zero all memory, this means all bytes in memory filled by Null.</p>
+ 
+<h4>Memory:</h4>
+<p><span class="type">(number)</span> Address of Memory.</p>
+  
+<h4>Returns:</h4>
+<p><span class="type"></span> nothing</p>
+
+
+<h4>Example:</h4>
+<pre class="code">
+mem = Memory.Allocate(1024)
+Memory.PutString(mem, "Hi", -1, "Ascii")
+Dialog.Message("Before Zero Memory", Memory.GetString(mem, -1, "Ascii"))
+Memory.Zero(mem)
+Dialog.Message("After Zero Memory", Memory.GetString(mem, -1, "Ascii"))
+Memory.Free(mem)
+</pre>
+
+
+<h3><a name="Memory.GetByte">Memory.GetByte(number Memory);</a></h3>
+
+<h4>Description:</h4>
+<p> reads a byte (1 byte) number from the specified memory address.</p>
+ 
+<h4>Memory:</h4>
+<p><span class="type">(number)</span> Address of Memory.</p>
+  
+<h4>Returns:</h4>
+<p><span class="type">(number)</span> return Byte that reads from memory</p>
+
+<h4>Range:</h4>
+<p><span class="type"></span> -128 to +127</p>
+
+
+<h4>Example:</h4>
+<pre class="code">
+mem = Memory.Allocate(1024)
+Memory.PutString(mem, "Hi", -1, "Ascii")
+Dialog.Message("", Memory.GetByte(mem)) -- Print Ascii of H ( H = 72)
+Memory.Free(mem)
+</pre>
+
+
+<h3><a name="Memory.GetChar">Memory.GetChar(number Memory);</a></h3>
+
+<h4>Description:</h4>
+<p> reads a Char (1 byte) number from the specified memory address.</p>
+ 
+<h4>Memory:</h4>
+<p><span class="type">(number)</span> Address of Memory.</p>
+  
+<h4>Returns:</h4>
+<p><span class="type">(number)</span> return Char that reads from memory</p>
+
+<h4>Range:</h4>
+<p><span class="type"></span> 0 to +255</p>
+
+
+<h4>Example:</h4>
+<pre class="code">
+mem = Memory.Allocate(1024)
+Memory.PutString(mem, "±i", -1, "Ascii")
+Dialog.Message("", Memory.GetChar(mem)) -- Print Ascii of ± ( ± = 177)
+Memory.Free(mem)
+</pre>
+
+
+<h3><a name="Memory.GetDouble">Memory.GetDouble(number Memory);</a></h3>
+
+<h4>Description:</h4>
+<p> reads a double (8 bytes) number from the specified memory address.</p>
+ 
+<h4>Memory:</h4>
+<p><span class="type">(number)</span> Address of Memory.</p>
+  
+<h4>Returns:</h4>
+<p><span class="type">(number)</span> return Double that reads from memory</p>
+
+<h4>Range:</h4>
+<p><span class="type"></span> unlimited</p>
+
+
+<h4>Example:</h4>
+<pre class="code">
+mem = Memory.Allocate(1024)
+Memory.PutDouble(mem, 102487.56)
+Dialog.Message("", Memory.GetDouble(mem)) -- Print 102487.56
+Memory.Free(mem)
+</pre>
+
+
+<h3><a name="Memory.GetFloat">Memory.GetFloat(number Memory);</a></h3>
+
+<h4>Description:</h4>
+<p> reads a float (4 bytes) from the specified memory address.</p>
+ 
+<h4>Memory:</h4>
+<p><span class="type">(number)</span> Address of Memory.</p>
+  
+<h4>Returns:</h4>
+<p><span class="type">(number)</span> return Float that reads from memory</p>
+
+<h4>Range:</h4>
+<p><span class="type"></span> unlimited</p>
+
+
+<h4>Example:</h4>
+<pre class="code">
+mem = Memory.Allocate(1024)
+Memory.PutFloat(mem, 1024.56)
+Dialog.Message("", Memory.GetFloat(mem)) -- Print 1024.5600585938
+Memory.Free(mem)
+</pre>
+
+
+<h3><a name="Memory.GetInt">Memory.GetInt(number Memory);</a></h3>
+
+<h4>Description:</h4>
+<p> reads an integer (4 bytes on 32 bits processors, 8 bytes on 64 bits processors) number from the specified memory address</p>
+ 
+<h4>Memory:</h4>
+<p><span class="type">(number)</span> Address of Memory.</p>
+  
+<h4>Returns:</h4>
+<p><span class="type">(number)</span> return Integer that reads from memory</p>
+
+<h4>Range On 32Bit:</h4>
+<p><span class="type"></span> -2147483648 to +2147483647</p>
+
+<h4>Range On 64Bit:</h4>
+<p><span class="type"></span> -9223372036854775808 to +9223372036854775807</p>
+
+<h4>Example:</h4>
+<pre class="code">
+mem = Memory.Allocate(1024)
+Memory.PutInt(mem, 1024547)
+Dialog.Message("", Memory.GetInt(mem)) -- Print 1024547
+Memory.Free(mem)
+</pre>
+
+
+<h3><a name="Memory.GetInt64">Memory.GetInt64(number Memory);</a></h3>
+
+<h4>Description:</h4>
+<p> reads a Int64 (8 bytes) number from the specified memory address.</p>
+ 
+<h4>Memory:</h4>
+<p><span class="type">(number)</span> Address of Memory.</p>
+  
+<h4>Returns:</h4>
+<p><span class="type">(string)</span> return integer 64 that reads from memory</p>
+
+<h4>Range:</h4>
+<p><span class="type"></span> -9223372036854775808 to +9223372036854775807</p>
+
+<h4>Example:</h4>
+<pre class="code">
+mem = Memory.Allocate(1024)
+Memory.PutInt64(mem, "9876974526712182279")
+Dialog.Message("", Memory.GetInt64(mem)) -- Print 9876974526712182279
+Memory.Free(mem)
+</pre>
+
+
+<h3><a name="Memory.GetLong">Memory.GetLong(number Memory);</a></h3>
+
+<h4>Description:</h4>
+<p> reads a long (4 bytes) number from the specified memory address.</p>
+ 
+<h4>Memory:</h4>
+<p><span class="type">(number)</span> Address of Memory.</p>
+  
+<h4>Returns:</h4>
+<p><span class="type">(number)</span> return Long that reads from memory</p>
+
+<h4>Range:</h4>
+<p><span class="type"></span> -2147483648 to +2147483647</p>
+
+<h4>Example:</h4>
+<pre class="code">
+mem = Memory.Allocate(1024)
+Memory.PutLong(mem, 10245)
+Dialog.Message("", Memory.GetLong(mem)) -- Print 10245
+Memory.Free(mem)
+</pre>
+
+
+<h3><a name="Memory.GetShort">Memory.GetShort(number Memory);</a></h3>
+
+<h4>Description:</h4>
+<p> reads a short (2 bytes) number from the specified memory address.</p>
+ 
+<h4>Memory:</h4>
+<p><span class="type">(number)</span> Address of Memory.</p>
+  
+<h4>Returns:</h4>
+<p><span class="type">(number)</span> return short that reads from memory</p>
+
+<h4>Range:</h4>
+<p><span class="type"></span> -32768 to +32767</p>
+
+<h4>Example:</h4>
+<pre class="code">
+mem = Memory.Allocate(1024)
+Memory.PutShort(mem, 10245)
+Dialog.Message("", Memory.GetShort(mem)) -- Print 10245
+Memory.Free(mem)
+</pre>
+
+
+<h3><a name="Memory.GetString">Memory.GetString(number Memory, number Length, string mode);</a></h3>
+
+<h4>Description:</h4>
+<p> reads a short (2 bytes) number from the specified memory address.</p>
+ 
+<h4>Memory:</h4>
+<p><span class="type">(number)</span> Address of Memory.</p>
+   
+<h4>Length:</h4>
+<p><span class="type">(number)</span> Specified length(in bytes) if you want get all char set it -1.</p>
+
+<h4>Mode:</h4>
+<p><span class="type">(number)</span> Get string in memory as unicode, ascii or utf8 (this parameter now 
+is optional and default is ascii).</p>
+
+<h4>Returns:</h4>
+<p><span class="type">(string)</span> return String that reads from memory</p>
+
+<h4>Range:</h4>
+<p><span class="type"></span> unlimited</p>
+
+<h4>Example:</h4>
+<pre class="code">
+mem = Memory.Allocate(1024)
+Memory.PutString(mem, "Hi", -1, "Ascii")
+Dialog.Message("", Memory.GetString(mem, -1, "Ascii")) -- Print Hi
+Memory.Free(mem)
+</pre>
+
+
+<h3><a name="Memory.PutByte">Memory.PutByte(number Memory, number Byte);</a></h3>
+
+<h4>Description:</h4>
+<p> writes a byte (1 byte) number to the specified memory address.</p>
+ 
+<h4>Memory:</h4>
+<p><span class="type">(number)</span> Address of Memory.</p>
+   
+<h4>Byte:</h4>
+<p><span class="type">(number)</span> Number of Byte.</p>
+
+<h4>Returns:</h4>
+<p><span class="type"></span> nothing</p>
+
+<h4>Range:</h4>
+<p><span class="type"></span> -128 to 127</p>
+
+<h4>Example:</h4>
+<pre class="code">
+mem = Memory.Allocate(1024)
+Memory.PutByte(mem, 72)
+Memory.PutByte(mem+1, 105)
+Dialog.Message("", Memory.GetString(mem, -1, "Ascii")) -- Print Hi
+Memory.Free(mem)
+</pre>
+
+
+<h3><a name="Memory.PutChar">Memory.PutChar(number Memory, number Char);</a></h3>
+
+<h4>Description:</h4>
+<p> writes a character (1 byte) number to the specified memory address.</p>
+ 
+<h4>Memory:</h4>
+<p><span class="type">(number)</span> Address of Memory.</p>
+   
+<h4>Char:</h4>
+<p><span class="type">(number)</span> Number of Char.</p>
+
+<h4>Returns:</h4>
+<p><span class="type"></span> nothing</p>
+
+<h4>Range:</h4>
+<p><span class="type"></span> 0 to +255</p>
+
+<h4>Example:</h4>
+<pre class="code">
+mem = Memory.Allocate(1024)
+Memory.PutChar(mem, 72)
+Memory.PutChar(mem+1, 105)
+Dialog.Message("", Memory.GetString(mem, -1, "Ascii")) -- Print Hi
+Memory.Free(mem)
+</pre>
+
+
+<h3><a name="Memory.PutDouble">Memory.PutDouble(number Memory, number Double);</a></h3>
+
+<h4>Description:</h4>
+<p> writes a double (8 bytes) number to the specified memory address.</p>
+ 
+<h4>Memory:</h4>
+<p><span class="type">(number)</span> Address of Memory.</p>
+   
+<h4>Double:</h4>
+<p><span class="type">(number)</span> Number of Double.</p>
+
+<h4>Returns:</h4>
+<p><span class="type"></span> nothing</p>
+
+<h4>Range:</h4>
+<p><span class="type"></span> unlimited</p>
+
+<h4>Example:</h4>
+<pre class="code">
+mem = Memory.Allocate(1024)
+Memory.PutDouble(mem, 72.58)
+Dialog.Message("", Memory.GetDouble(mem)) -- Print 72.58
+Memory.Free(mem)
+</pre>
+
+
+<h3><a name="Memory.PutFloat">Memory.PutFloat(number Memory, number Float);</a></h3>
+
+<h4>Description:</h4>
+<p> writes a float (4 bytes) to the specified memory address.</p>
+ 
+<h4>Memory:</h4>
+<p><span class="type">(number)</span> Address of Memory.</p>
+   
+<h4>Float:</h4>
+<p><span class="type">(number)</span> Number of Float.</p>
+
+<h4>Returns:</h4>
+<p><span class="type"></span> nothing</p>
+
+<h4>Range:</h4>
+<p><span class="type"></span> unlimited</p>
+
+<h4>Example:</h4>
+<pre class="code">
+mem = Memory.Allocate(1024)
+Memory.PutFloat(mem, 72.58)
+Dialog.Message("", Memory.GetFloat(mem)) -- Print 72.580001831055
+Memory.Free(mem)
+</pre>
+
+
+<h3><a name="Memory.PutInt">Memory.PutInt(number Memory, number Int);</a></h3>
+
+<h4>Description:</h4>
+<p> writes an integer (4 bytes on 32 bits processors, 8 bytes on 64 bits processors) number to the specified memory address.</p>
+ 
+<h4>Memory:</h4>
+<p><span class="type">(number)</span> Address of Memory.</p>
+   
+<h4>Int:</h4>
+<p><span class="type">(number)</span> Number of Int.</p>
+
+<h4>Returns:</h4>
+<p><span class="type"></span> nothing</p>
+
+<h4>Range On 32Bit:</h4>
+<p><span class="type"></span> -2147483648 to +2147483647</p>
+
+<h4>Range On 64Bit:</h4>
+<p><span class="type"></span> -9223372036854775808 to +9223372036854775807</p>
+
+<h4>Example:</h4>
+<pre class="code">
+mem = Memory.Allocate(1024)
+Memory.PutInt(mem, 65894)
+Dialog.Message("", Memory.GetInt(mem)) -- Print 65894
+Memory.Free(mem)
+</pre>
+
+
+<h3><a name="Memory.PutInt64">Memory.PutInt64(number Memory, string Int64);</a></h3>
+
+<h4>Description:</h4>
+<p> writes a Int64 (8 bytes) number to the specified memory address.</p>
+ 
+<h4>Memory:</h4>
+<p><span class="type">(number)</span> Address of Memory.</p>
+   
+<h4>Int64:</h4>
+<p><span class="type">(string)</span> Number of Int64.</p>
+
+<h4>Returns:</h4>
+<p><span class="type"></span> nothing</p>
+
+<h4>Range:</h4>
+<p><span class="type"></span> -9223372036854775808 to +9223372036854775807</p>
+
+<h4>Example:</h4>
+<pre class="code">
+mem = Memory.Allocate(1024)
+Memory.PutInt64(mem, "9876974526712182279")
+Dialog.Message("", Memory.GetInt64(mem)) -- Print 9876974526712182279
+Memory.Free(mem)
+</pre>
+
+
+<h3><a name="Memory.PutLong">Memory.PutLong(number Memory, number Long);</a></h3>
+
+<h4>Description:</h4>
+<p> writes a long (4 bytes) number to the specified memory address.</p>
+ 
+<h4>Memory:</h4>
+<p><span class="type">(number)</span> Address of Memory.</p>
+   
+<h4>Long:</h4>
+<p><span class="type">(number)</span> Number of Long.</p>
+
+<h4>Returns:</h4>
+<p><span class="type"></span> nothing</p>
+
+<h4>Range:</h4>
+<p><span class="type"></span> -2147483648 to +2147483647</p>
+
+<h4>Example:</h4>
+<pre class="code">
+mem = Memory.Allocate(1024)
+Memory.PutLong(mem, 65894)
+Dialog.Message("", Memory.GetLong(mem)) -- Print 65894
+Memory.Free(mem)
+</pre>
+
+
+<h3><a name="Memory.PutShort">Memory.PutShort(number Memory, number Short);</a></h3>
+
+<h4>Description:</h4>
+<p> write a short (2 bytes) number to the specified memory address.</p>
+ 
+<h4>Memory:</h4>
+<p><span class="type">(number)</span> Address of Memory.</p>
+   
+<h4>Short:</h4>
+<p><span class="type">(number)</span> Number of Short.</p>
+
+<h4>Returns:</h4>
+<p><span class="type"></span> nothing</p>
+
+<h4>Range:</h4>
+<p><span class="type"></span> -32768 to +32767</p>
+
+<h4>Example:</h4>
+<pre class="code">
+mem = Memory.Allocate(1024)
+Memory.PutShort(mem, 65894)
+Dialog.Message("", Memory.GetShort(mem)) -- Print 65894
+Memory.Free(mem)
+</pre>
+
+
+<h3><a name="Memory.PutString">Memory.PutString(number Memory, string Text, number Length, string mode);</a></h3>
+
+<h4>Description:</h4>
+<p> Writes a string (including the ending '0') to the specified memory address.</p>
+ 
+<h4>Memory:</h4>
+<p><span class="type">(number)</span> Address of Memory.</p>
+   
+<h4>Text:</h4>
+<p><span class="type">(string)</span> Text String that filled in memory.</p>
+   
+<h4>Length:</h4>
+<p><span class="type">(number)</span> number of char that you want filled in memory, if you want fill all char in text set it -1.</p>
+
+<h4>Mode:</h4>
+<p><span class="type">(number)</span> Put string in memory as unicode, ascii or utf8 (this parameter now 
+is optional and default is ascii).</p>
+
+<h4>Returns:</h4>
+<p><span class="type"></span> nothing</p>
+
+<h4>Range:</h4>
+<p><span class="type"></span> unlimited</p>
+
+<h4>Example:</h4>
+<pre class="code">
+mem = Memory.Allocate(1024)
+Memory.PutString(mem, "Im in Your Memory", -1, "Ascii")
+Dialog.Message("", Memory.GetString(mem, -1, "Ascii")) -- Print Im in Your Memory
+Memory.PutString(mem, "Im in Your Memory", 7, "Ascii")
+Dialog.Message("", Memory.GetString(mem, -1, "Ascii")) -- Print Im in Y
+Memory.Free(mem)
+</pre>
+
+
+<h3><a name="Memory.CreateStructure">Memory.CreateStructure(string StructureForm);</a></h3>
+
+<h4>Description:</h4>
+<p> Create a structure with some fields in this form ("first field[multi field], second field, ..." ).</p>
+ 
+<h4>StructureForm:</h4>
+<p><span class="type">(string)</span> structure fields in the string form</p>
+
+<h4>Returns:</h4>
+<p><span class="type">(number)</span> Address of your created Sructure</p>
+
+<h4>Remark:</h4>
+<p><span class="type"></span> for creating sructure you must set your fileds that you want for examp with this 
+we want create a structure with 2 long field "long, long" or "long[2]", or create a structure that have 10 field int
+and 1 field long and 3 field byte and 1 field short "int[10], long, byte[3], short"</p>
+
+<h4>Remark2:</h4>
+<p><span class="type"></span> all fields that this pluin supports are long, int, in64, short, char, float, double, byte.
+ this plugin supports string but creatin a string in structure is troublesome but possible, for this first we must create
+ that field int or long then create a memory buffer with every size we want then set that structure field with the addressof
+ memory buffer.(see Example2)</p>
+
+<h4>Example:</h4>
+<pre class="code">
+struct = Memory.CreateStructure("long[3]")
+Memory.FreeStructure(struct)
+</pre>
+
+<h4>Example2:</h4>
+<pre class="code">
+string_struct = Memory.CreateStructure("short, byte, int") -- instead of "short, byte, string" we use "short, byte, int"
+mem = Memory.Allocate(1024) -- create a memory buffer with 1024 bytes size
+Memory.SetStructureData(string_struct, 3, 0, mem) -- set memory buffer in that field
+--
+-- do some work with structure
+--
+Memory.FreeStructure(string_struct) -- free all allocated memory of our structure
+Memory.Free(mem) -- free our allocated memory of our memory buffer 
+</pre>
+
+
+<h3><a name="Memory.SetStructureData">Memory.SetStructureData(number Structure, number Index, number Dimension, variant Value, string StructureForm);</a></h3>
+
+<h4>Description:</h4>
+<p> Fill one field of your structure</p>
+ 
+<h4>Structure:</h4>
+<p><span class="type">(number)</span> address of your structure (returned number from Memory.CreateStructure)</p>
+
+<h4>Index:</h4>
+<p><span class="type">(number)</span> Index of field that you want filled with value.</p>
+
+<h4>Dimension:</h4>
+<p><span class="type">(number)</span> index of your fileds this arg is optional and used it just when your index refrenced 
+to a field that is multi dimension [] for examp (int[50]) else leave it zero or anything (See Example 2).</p>
+
+<h4>Value:</h4>
+<p><span class="type">(variant)</span> Value that you want filled in index of Structure.</p>
+ 
+<h4>StructureForm:</h4>
+<p><span class="type">(string)</span> Set Structure Form for structure that you created (this arg is optional)</p>
+
+<h4>Returns:</h4>
+<p><span class="type"></span> nothing</p>
+
+<h4>Example:</h4>
+<pre class="code">
+struct = Memory.CreateStructure("long, long, long")
+Memory.SetStructureData(struct, 1, 0, 50)
+Memory.SetStructureData(struct, 2, 0, 23)
+Memory.SetStructureData(struct, 3, 0, 51)
+Memory.FreeStructure(struct)
+</pre>
+
+<h4>Example2:</h4>
+<pre class="code">
+struct = Memory.CreateStructure("long[3]")
+Memory.SetStructureData(struct, 1, 1, 50)
+Memory.SetStructureData(struct, 1, 2, 23)
+Memory.SetStructureData(struct, 1, 3, 51)
+Memory.FreeStructure(struct)
+</pre>
+
+
+<h3><a name="Memory.GetStructureData">Memory.GetStructureData(number Structure, number Index, number Dimension, string StructureForm);</a></h3>
+
+<h4>Description:</h4>
+<p> Get one field of your structure</p>
+ 
+<h4>Structure:</h4>
+<p><span class="type">(number)</span> address of your structure (returned number from Memory.CreateStructure)</p>
+
+<h4>Index:</h4>
+<p><span class="type">(number)</span> Index of field that you want filled with value.</p>
+
+<h4>Dimension:</h4>
+<p><span class="type">(number)</span> index of your fileds this arg is optional and used it just when your index refrenced 
+to a field that is multi dimension [] for examp (int[50]) else leave it zero or anything (See Example 2).</p>
+
+<h4>StructureForm:</h4>
+<p><span class="type">(string)</span> Set Structure Form for structure that you created (this arg is optional)</p>
+
+<h4>Returns:</h4>
+<p><span class="type">(variant)</span> return value that stored in that position of structure(if you create
+a field int64 this func returns string instead of number).</p>
+
+<h4>Example:</h4>
+<pre class="code">
+struct = Memory.CreateStructure("long, long, long")
+Memory.SetStructureData(struct, 1, 50)
+Memory.SetStructureData(struct, 2, 23)
+Memory.SetStructureData(struct, 3, 51)
+
+Dialog.Message("Must Be 23", Memory.GetStructureData(struct, 2, 0))
+
+Memory.FreeStructure(struct)
+</pre>
+
+<h4>Example2:</h4>
+<pre class="code">
+struct = Memory.CreateStructure("long[3]")
+Memory.SetStructureData(struct, 1, 1, 50)
+Memory.SetStructureData(struct, 1, 2, 23)
+Memory.SetStructureData(struct, 1, 3, 51)
+
+Dialog.Message("Must Be 23", Memory.GetStructureData(struct, 1, 2))
+
+Memory.FreeStructure(struct)
+</pre>
+
+
+<h3><a name="Memory.FreeStructure">Memory.FreeStructure(number Structure);</a></h3>
+
+<h4>Description:</h4>
+<p> Free memory of your allocated structure</p>
+ 
+<h4>Structure:</h4>
+<p><span class="type">(number)</span> address of your structure (returned number from Memory.CreateStructure)</p>
+
+<h4>Returns:</h4>
+<p><span class="type"></span> Nothing.</p>
+
+<h4>Example:</h4>
+<pre class="code">
+struct = Memory.CreateStructure("long, long, long")
+Memory.FreeStructure(struct)
+</pre>
+
+
+<h3><a name="Memory.CreateArray">Memory.CreateArray(number Type, number Elements);</a></h3>
+
+<h4>Description:</h4>
+<p> Create an array with some elements.</p>
+
+<h4>Type:</h4>
+<p><span class="type">(number)</span> type of your array that you want create</p>
+
+<h4>Elements:</h4>
+<p><span class="type">(number)</span> Size of your array that you want create (this plugin now just support one Dimension array)</p>
+
+<h4>Returns:</h4>
+<p><span class="type">(number)</span> Address of your created Array</p>
+
+<h4>Remark:</h4>
+<p><span class="type"></span> arrays Starts From zero so when we create an array with 10 Elements this func
+ create 11 Elements (from 0 to 10).</p>
+
+<h4>Example:</h4>
+<pre class="code">
+array = Memory.CreateArray(ARRAY_INT, 10)
+Memory.FreeArray(array)
+</pre>
+
+
+<h3><a name="Memory.SetArrayData">Memory.SetArrayData(number Array, number Index, variant Value, number Type);</a></h3>
+
+<h4>Description:</h4>
+<p> Fill one element of your array</p>
+ 
+<h4>Array:</h4>
+<p><span class="type">(number)</span> address of your array (returned number from Memory.CreateArray)</p>
+
+<h4>Index:</h4>
+<p><span class="type">(number)</span> Index of element that you want filled with value.</p>
+
+<h4>Value:</h4>
+<p><span class="type">(variant)</span> Value that you want filled in index of array.</p>
+
+<h4>Type:</h4>
+<p><span class="type">(number)</span> Set Type of your array that you created (this arg is optional).</p>
+
+<h4>Returns:</h4>
+<p><span class="type"></span> nothing</p>
+
+<h4>Example:</h4>
+<pre class="code">
+array = Memory.CreateArray(ARRAY_INT, 2)
+Memory.SetArrayData(array, 0, 50)
+Memory.SetArrayData(array, 1, 23)
+Memory.SetArrayData(array, 2, 51)
+Memory.FreeStructure(array)
+</pre>
+
+
+<h3><a name="Memory.GetArrayData">Memory.GetArrayData(number Array, number Index, number Type);</a></h3>
+
+<h4>Description:</h4>
+<p> Get one element of your array</p>
+ 
+<h4>Array:</h4>
+<p><span class="type">(number)</span> address of your array (returned number from Memory.CreateArray)</p>
+
+<h4>Index:</h4>
+<p><span class="type">(number)</span> Index of element that you want filled with value.</p>
+
+<h4>Type:</h4>
+<p><span class="type">(number)</span> Set Type of your array that you created (this arg is optional).</p>
+
+<h4>Returns:</h4>
+<p><span class="type">(variant)</span> return value that stored in that position of array(if you create
+a int64 array this func returns string instead of number).</p>
+
+<h4>Example:</h4>
+<pre class="code">
+array = Memory.CreateArray(ARRAY_INT, 2)
+Memory.SetArrayData(array, 0, 50)
+Memory.SetArrayData(array, 1, 23)
+Memory.SetArrayData(array, 2, 51)
+
+Dialog.Message("Must Be 23", Memory.GetArrayData(array, 1))
+
+Memory.FreeStructure(array)
+</pre>
+
+
+<h3><a name="Memory.FreeArray">Memory.FreeArray(number Array);</a></h3>
+
+<h4>Description:</h4>
+<p> Free memory of your allocated array</p>
+ 
+<h4>Structure:</h4>
+<p><span class="type">(number)</span> address of your structure (returned number from Memory.CreateArray)</p>
+
+<h4>Returns:</h4>
+<p><span class="type"></span> Nothing.</p>
+
+<h4>Example:</h4>
+<pre class="code">
+arr = Memory.CreateArray(ARRAY_INT, 150)
+Memory.FreeArray(arr)
+</pre>
+
+
+<h3><a name="Memory.CreateWindowSubClass">Memory.CreateWindowSubClass(number Handle, number ID, number Function);</a></h3>
+
+<h4>Description:</h4>
+<p> Create a subclass for program and objects and everything tat have handle.</p>
+
+<h4>Handle:</h4>
+<p><span class="type">(number)</span> Handle of windows, objects, ...</p>
+
+<h4>ID:</h4>
+<p><span class="type">(number)</span> Unique number for your subclass this is require for free it.</p>
+
+<h4>Function:</h4>
+<p><span class="type">(string)</span> Name of function that you want do subclasses jobs.</p>
+
+<h4>Note on CallBack Function:</h4>
+<p><span class="type"></span> Every time your callback function have 4 parameter : (hWnd, uMsg, wParam, lParam).<br>
+hWnd is your handle of object that you subclass it this mean you can create one callback function for many objects 
+and seprate them with their handles.<br>uMsg is some messages that windows send to your object like close, maximize, 
+minimize, moving or any other these message start with WM_*(search them in MSDN or Google).<br>wParam and lParam is 
+some data that send with message for examp when WM_MOVE in message comes wParam is null and lParam is position of 
+object.<br>In the end you dont want return anything until you want return something so be aware on this.</p>
+
+ 
+<h4>Returns:</h4>
+<p><span class="type">(number)</span> returns 1 if its equal or 0 if it doesn't match.</p>
+
+<h4>Example:</h4>
+<pre class="code">
+function test(hWnd, uMsg, wParam, lParam)
+ --do something
+ --do something
+end
+Memory.CreateWindowSubClass(Application.GetWndHandle(), 0, "test");
+Memory.FreeWindowSubClass(0);
+</pre>
+
+<h3><a name="Memory.FreeWindowSubClass">Memory.FreeWindowSubClass(number ID);</a></h3>
+
+<h4>Description:</h4>
+<p> Free memory that your subclass use(this is very important you free your subclass before your program closed)</p>
+
+<h4>ID:</h4>
+<p><span class="type">(number)</span> Unique number that you create your subclass with that.</p>
+
+<h4>Returns:</h4>
+<p><span class="type">(number)</span> returns 1 if its equal or 0 if it doesn't match.</p>
+
+<h4>Example:</h4>
+<pre class="code">
+function test(hWnd, uMsg, wParam, lParam)
+ --do something
+ --do something
+end
+Memory.CreateWindowSubClass(Application.GetWndHandle(), 0, "test");
+Memory.FreeWindowSubClass(0);
+</pre>
+
+<h3><a name="Memory.BitAND">Memory.BitAND(string Number1, string number2, .....);</a></h3>
+
+<h4>Description:</h4>
+<p> Bitwise AND. You should be familiar with binary numbers when using this operator.</p>
+
+<h4>Note1:</h4>
+<p><span class="type"></span> in BitwiseAND, BitwiseOR and BitwiseXOR there is no
+ limit for parameters and you can bitwise 2 till unlimit numbers.</p>
+ 
+<h4>Note2:</h4>
+<p><span class="type"></span> plugin return and get parameters in string mode for 
+some issue(for bug on Int64 numbers) but you can set them as number</p>
+
+<h4>Returns:</h4>
+<p><span class="type">(string)</span> return Bitwised numbers in string mode.</p>
+
+<h4>Example1:</h4>
+<pre class="code">
+num = Memory.BitAND(10, "50", "80", 60, 3)
+Dialog.Message("", num)
+</pre>
+
+<h4>Example2:</h4>
+<pre class="code">
+num = Memory.BitAND(10, 2)
+Dialog.Message("", num)
+</pre>
+
+<h4>Example3:</h4>
+<pre class="code">
+num = Memory.BitAND("90000000000000", 2)
+Dialog.Message("", num)
+</pre>
+
+
+<h3><a name="Memory.BitOR">Memory.BitOR(string Number1, string number2, .....);</a></h3>
+
+<h4>Description:</h4>
+<p> Bitwise OR. You should be familiar with binary numbers when using this operator.</p>
+
+<h4>Note1:</h4>
+<p><span class="type"></span> in BitwiseAND, BitwiseOR and BitwiseXOR there is no
+ limit for parameters and you can bitwise 2 till unlimit numbers.</p>
+ 
+<h4>Note2:</h4>
+<p><span class="type"></span> plugin return and get parameters in string mode for 
+some issue(for bug on Int64 numbers) but you can set them as number</p>
+
+<h4>Returns:</h4>
+<p><span class="type">(string)</span> return Bitwised numbers in string mode.</p>
+
+<h4>Example1:</h4>
+<pre class="code">
+num = Memory.BitOR(10, "50", "80", 60, 3)
+Dialog.Message("", num)
+</pre>
+
+<h4>Example2:</h4>
+<pre class="code">
+num = Memory.BitOR(10, 2)
+Dialog.Message("", num)
+</pre>
+
+<h4>Example3:</h4>
+<pre class="code">
+num = Memory.BitOR("90000000000000", 2)
+Dialog.Message("", num)
+</pre>
+
+
+<h3><a name="Memory.BitXOR">Memory.BitXOR(string Number1, string number2, .....);</a></h3>
+
+<h4>Description:</h4>
+<p> Bitwise XOR. You should be familiar with binary numbers when using this operator.</p>
+
+<h4>Note1:</h4>
+<p><span class="type"></span> in BitwiseAND, BitwiseOR and BitwiseXOR there is no
+ limit for parameters and you can bitwise 2 till unlimit numbers.</p>
+ 
+<h4>Note2:</h4>
+<p><span class="type"></span> plugin return and get parameters in string mode for 
+some issue(for bug on Int64 numbers) but you can set them as number</p>
+
+<h4>Returns:</h4>
+<p><span class="type">(string)</span> return Bitwised numbers in string mode.</p>
+
+<h4>Example1:</h4>
+<pre class="code">
+num = Memory.BitXOR(10, "50", "80", 60, 3)
+Dialog.Message("", num)
+</pre>
+
+<h4>Example2:</h4>
+<pre class="code">
+num = Memory.BitXOR(10, 2)
+Dialog.Message("", num)
+</pre>
+
+<h4>Example3:</h4>
+<pre class="code">
+num = Memory.BitXOR("90000000000000", 2)
+Dialog.Message("", num)
+</pre>
+
+
+<h3><a name="Memory.BitNOT">Memory.BitNOT(string Number);</a></h3>
+
+<h4>Description:</h4>
+<p> Bitwise NOT. You should be familiar with binary numbers when using this operator.</p>
+
+<h4>Number:</h4>
+<p><span class="type">(string)</span> Number that you want get its not.</p>
+
+<h4>Returns:</h4>
+<p><span class="type">(string)</span> return Bitwised numbers in string mode.</p>
+
+<h4>Example1:</h4>
+<pre class="code">
+num = Memory.BitNOT(1)
+Dialog.Message("", num)
+</pre>
+
+<h4>Example2:</h4>
+<pre class="code">
+num = Memory.BitNOT("1")
+Dialog.Message("", num)
+</pre>
+
+
+<h4>Example3:</h4>
+<pre class="code">
+num = Memory.BitNOT(50)
+Dialog.Message("", num)
+</pre>
+
+
+<h3><a name="Memory.ShiftRight">Memory.ShiftRight(string Number, number Count);</a></h3>
+
+<h4>Description:</h4>
+<p> Arithmetic shift right.</p>
+
+<h4>Number:</h4>
+<p><span class="type">(string)</span> Number that you want get Shifting.</p>
+ 
+<h4>Count:</h4>
+<p><span class="type">(number)</span> Number of time that you want your number shift to right.</p>
+
+<h4>Returns:</h4>
+<p><span class="type">(string)</span> return Shifted numbers in string mode.</p>
+
+<h4>Example1:</h4>
+<pre class="code">
+num = Memory.ShiftRight(20, 3)
+Dialog.Message("", num)
+</pre>
+
+<h4>Example2:</h4>
+<pre class="code">
+num = Memory.ShiftRight("20", 3)
+Dialog.Message("", num)
+</pre>
+
+<h4>Example3:</h4>
+<pre class="code">
+num = Memory.ShiftRight("90000000000000", 10)
+Dialog.Message("", num)
+</pre>
+
+
+<h3><a name="Memory.ShiftLeft">Memory.ShiftLeft(string Number, number Count);</a></h3>
+
+<h4>Description:</h4>
+<p> Arithmetic shift left.</p>
+
+<h4>Number:</h4>
+<p><span class="type">(string)</span> Number that you want get Shifting.</p>
+ 
+<h4>Count:</h4>
+<p><span class="type">(number)</span> Number of time that you want your number shift to left.</p>
+
+<h4>Returns:</h4>
+<p><span class="type">(string)</span> return Shifted numbers in string mode.</p>
+
+<h4>Example1:</h4>
+<pre class="code">
+num = Memory.ShiftLeft(20, 3)
+Dialog.Message("", num)
+</pre>
+
+<h4>Example2:</h4>
+<pre class="code">
+num = Memory.ShiftLeft("20", 3)
+Dialog.Message("", num)
+</pre>
+
+<h4>Example3:</h4>
+<pre class="code">
+num = Memory.ShiftLeft("90000000000000", 10)
+Dialog.Message("", num)
+</pre>
+
+
+
+<h3><a name="Memory.OpenLibrary">Memory.OpenLibrary(number ID, string Library);</a></h3>
+
+<h4>Description:</h4>
+<p> Open a Dll or library for calling it.</p>
+
+<h4>ID:</h4>
+<p><span class="type">(number)</span> Number of your library that want open.</p>
+
+<h4>Library:</h4>
+<p><span class="type">(string)</span> The path to the library or Base64 of that library (for load on memory).</p>
+ 
+<h4>Returns:</h4>
+<p><span class="type">(number)</span> returns number of loaded dll but there is no need for it just for advanced user, if an error occured this function returns -1.</p>
+
+<h4>Note1:</h4>
+<p><span class="type"></span> this function can load dlls from memory or from your hard.</p>
+
+<h4>Example1:</h4>
+<pre class="code">
+Memory.OpenLibrary(0, "user32.dll")
+</pre>
+
+<h4>Example2:</h4>
+<pre class="code">
+My_Base64_Dll = TextFile.ReadToString("AutoPlay\\Docs\\Base64DLL.txt")
+a = Memory.OpenLibrary(0, My_Base64_Dll)
+</pre>
+
+
+<h3><a name="Memory.OpenFunction">Memory.OpenFunction(number ID, string FunctionName, number CallConvention, string ReturnType);</a></h3>
+
+<h4>Description:</h4>
+<p> Open a Dll or library for calling it</p>
+
+<h4>ID:</h4>
+<p><span class="type">(number)</span> Number of your library that before you opened it with .OpenLibrary .</p>
+ 
+<h4>FunctionName:</h4>
+<p><span class="type">(string)</span> The name of the function within the DLL or library.</p>
+
+<h4>CallConvention:</h4>
+<p><span class="type">(number)</span> The calling convention that AutoPlay will use when calling the DLL function, two way to call one C call and two is STD call.</p>
+
+<h4>ReturnType:</h4>
+<p><span class="type">(string)</span> The type of value returned from the function.</p>
+
+<h4>Returns:</h4>
+<p><span class="type">(number)</span> one number that must get it for call that function or free it.</p>
+
+<h4>Note1:</h4>
+<p><span class="type"></span> These Apis is in the beta release, be aware.</p>
+
+<h4>Note2:</h4>
+<p><span class="type"></span> These new Apis can't return int64, float and double.</p>
+
+<h4>Example:</h4>
+<pre class="code">
+Memory.OpenLibrary(0, "user32.dll")
+a = Memory.OpenFunction(0, "MessageBoxA", DLL_CALL_STDCALL, DLL_RETURN_INT)
+Dialog.Message("", a)
+</pre>
+
+
+<h3><a name="Memory.CallFunction">Memory.CallFunction(number ID, variant Arg1, variant Arg2, variant Arg3, ..., variant ArgN);</a></h3>
+
+<h4>Description:</h4>
+<p> Calls a function in a dynamically linked library (DLL, ...). It can be used to extend AutoPlay's functionality with your own functions.</p>
+
+<h4>ID:</h4>
+<p><span class="type">(number)</span> Number of your opened dll that before .OpenFunction returned it.</p>
+ 
+<h4>Arg1:</h4>
+<p><span class="type">(variant)</span> first argument of function that just can be number or string.</p>
+
+<h4>Arg2:</h4>
+<p><span class="type">(variant)</span> second argument of function that just can be number or string.</p>
+
+<h4>Arg3:</h4>
+<p><span class="type">(variant)</span> third argument of function that just can be number or string.</p>
+
+<h4>ArgN:</h4>
+<p><span class="type">(variant)</span> Nth argument of function that just can be number or string.</p>
+
+<h4>Returns:</h4>
+<p><span class="type">(variant)</span> return a byte, char, long, int, string or short value depends on that function you open.</p>
+
+<h4>Note1:</h4>
+<p><span class="type"></span> for now this method just can pass number or string in this version there is no datatype, for now sorry.</p>
+
+<h4>Note2:</h4>
+<p><span class="type"></span> this api is amazing you can call functions with real parameter this is simple that IR team method(that you must pass all parameters in one string parameter)</p>
+
+<h4>Example1:</h4>
+<pre class="code">
+-- Call MessageBoxA Function With 4 Parameters
+Memory.OpenLibrary(0, "user32.dll")
+a = Memory.OpenFunction(0, "MessageBoxA", DLL_CALL_STDCALL, DLL_RETURN_INT)
+Memory.CallFunction(a, Application.GetWndHandle(), "Test", "Test From AMSWaves", 36)
+Memory.CloseLibrary(0)
+</pre>
+
+<h4>Example2:</h4>
+<pre class="code">
+-- Call beep Function With 2 Parameters
+Memory.OpenLibrary(0, "kernel32.dll")
+a = Memory.OpenFunction(0, "Beep", DLL_CALL_STDCALL, DLL_RETURN_INT)
+Memory.CallFunction(a, 3000, 1000)
+Memory.CloseLibrary(0)
+</pre>
+
+<h4>Example3:</h4>
+<pre class="code">
+-- Load a HYPOTHETICAL DLL that is coded on Base64 method and want load on memory
+My_Base64_Dll = TextFile.ReadToString("AutoPlay\\Docs\\Base64DLL.txt")
+Memory.OpenLibrary(0, My_Base64_Dll)
+
+-- Call its AMSWaves function (HYPOTHETICAL) With no Parameters and return String
+a = Memory.OpenFunction(0, "AMSWaves", DLL_CALL_STDCALL, DLL_RETURN_STRING)
+result = Memory.CallFunction(a)
+Memory.CloseLibrary(0)
+</pre>
+
+
+<h3><a name="Memory.CloseLibrary">Memory.CloseLibrary(number ID);</a></h3>
+
+<h4>Description:</h4>
+<p> Close opened function that before opens from with .OpenLibrary.</p>
+
+<h4>ID:</h4>
+<p><span class="type">(number)</span> Number of your opened dll that you passed to .OpenLibrary.</p>
+
+<h4>Returns:</h4>
+<p><span class="type">(nothing)</span> return nothing.</p>
+
+<h4>Example:</h4>
+<pre class="code">
+-- Call MessageBoxA Function With 4 Parameters
+Memory.OpenLibrary(0, "user32.dll")
+a = Memory.OpenFunction(0, "MessageBoxA", DLL_CALL_STDCALL, DLL_RETURN_INT)
+Memory.CallFunction(a, Application.GetWndHandle(), "Test", "Test From AMSWaves", 36)
+Memory.CloseLibrary(0)
+</pre>
+
+
+<h3><a name="Memory.RunProgram">Memory.RunProgram(string Program, string Parameters);</a></h3>
+
+<h4>Description:</h4>
+<p> Run A Program From Memory.</p>
+
+<h4>Program:</h4>
+<p><span class="type">(string)</span> Base64 of file.</p>
+
+<h4>Parameters:</h4>
+<p><span class="type">(string)</span> Parameters that you want send to exe from memory.</p>
+
+<h4>Returns:</h4>
+<p><span class="type">(nothing)</span> return nothing.</p>
+
+<h4>Example:</h4>
+<pre class="code">
+-- Rum a program from memory
+-- My_File variable has base64 of a program
+Memory.RunProgram(My_File, "\"First Param\" \"Second Param\"")
+</pre>
+
+
+<h3><a name="Memory.CreateObject">Memory.CreateObject(number Handle, string progID, string EventSink);</a></h3>
+
+<h4>Description:</h4>
+<p> Create a OLE object or any object.</p>
+
+<h4>Handle:</h4>
+<p><span class="type">(number)</span> Handle of of your house object.</p>
+
+<h4>progID:</h4>
+<p><span class="type">(string)</span> friendly-name or component's GUID of the COM component.</p>
+
+<h4>EventSink (Optional):</h4>
+<p><span class="type">(string)</span> Name of function that want get event sink.</p>
+
+<h4>Returns:</h4>
+<p><span class="type">(number)</span> return Object pointer if success else retun zero.</p>
+
+<h4>Note:</h4>
+<p><span class="type"></span> progID can be friendly-name like 'AcroPDF.PDF.1' or be component's GUID like {CA8A9780-280D-11CF-A24D-444553540000}. (use component's GUID with two {} character).</p>
+
+
+<h4>Note On Event Sink function:</h4>
+<p><span class="type"></span> event sink function must have two parameters first for event name and second for number of real parameters to that sends to event name
+so all time event sink function is in the form of 'function some_name(Event, num_of_param)'. with second parameter you can find out how much parameters you can get with 'Memory.GetObjectEventParam' function.
+event sink functions can return anything or nothing this means if your event dont need return anything just leave it alone but if it want you have some way for return all values :<br />
+for return boolean you must return false or true like 'retuen false' or 'return true'.<br />
+for return string just return a string value like 'return "Test Value"'<br />
+for return number as long just return numbers like 'return 12345' but this way just return value as long (beaware)<br />
+for return number as int64, float, double, byte and short you must return a formed string like below :<br />
+for int64 : 'return "int64:875454654787654547"' and for Unsigned int64 : 'return "uint64:875454654787654547"'<br />
+for float : 'return "float:2757.545"' and for Unsigned float : 'return "ufloat:2757.545"'<br />
+for double : 'return "double:2757.545"' and for Unsigned double : 'return "udouble:2757.545"'<br />
+for byte : 'return "byte:150"' and for Unsigned byte : 'return "ubyte:150"'<br />
+for short : 'return "short:150"' and for Unsigned short : 'return "ushort:150"'<br /></p>
+
+
+<h4>Example1:</h4>
+<pre class="code">
+-- Create a PDF Object in a tree
+PDFObject1 = Memory.CreateObject(Tree.GetProperties("Tree1").WindowHandle, "AcroPDF.PDF.1", "")
+PDFObject2 = Memory.CreateObject(Tree.GetProperties("Tree2").WindowHandle, "{CA8A9780-280D-11CF-A24D-444553540000}", "")
+</pre>
+
+<h4>Example2:</h4>
+<pre class="code">
+-- Create a SAPI Object
+Sapi = Memory.CreateObject(0, "SAPI.SpVoice", "")
+</pre>
+
+
+<h3><a name="Memory.SetObjectProperty">Memory.SetObjectProperty(number Object, string Property);</a></h3>
+
+<h4>Description:</h4>
+<p> Set a property value of the COM object.</p>
+
+<h4>Object:</h4>
+<p><span class="type">(number)</span> COM Object that returned from Memory.CreateObject.</p>
+
+<h4>Property:</h4>
+<p><span class="type">(string)</span> Name Of property that you want set value on it.</p>
+
+<h4>Value:</h4>
+<p><span class="type">(variant)</span> Value that want set in Property of COM Object(string or number can be passed).</p>
+
+<h4>Returns:</h4>
+<p><span class="type">(nothing)</span> return nothing.</p>
+
+<h4>Note:</h4>
+<p><span class="type"></span> return nothing.</p>
+
+<h4>Example1:</h4>
+<pre class="code">
+-- Create a PDF Object in a tree
+PDFObject = Memory.CreateObject(Tree.GetProperties("Tree1").WindowHandle, "AcroPDF.PDF.1")
+-- fill src property with the address of test pdf
+Memory.SetObjectProperty(PDFObject, "src", "C:\\Test.pdf")
+</pre>
+
+
+<h3><a name="Memory.CallObjectFunction">Memory.CallObjectFunction(number Object, string FunctionName, variant Arg1, variant Arg2, ..., variant ArgN);</a></h3>
+
+<h4>Description:</h4>
+<p> Call a COM Object Function.</p>
+
+<h4>Object:</h4>
+<p><span class="type">(number)</span> COM Object that returned from Memory.CreateObject.</p>
+
+<h4>FunctionName:</h4>
+<p><span class="type">(string)</span> Name of function that you want call it.</p>
+
+<h4>Arg1:</h4>
+<p><span class="type">(variant)</span> first that must be passed to Com Object (can be string or number).</p>
+
+<h4>Arg2:</h4>
+<p><span class="type">(variant)</span> second that must be passed to Com Object (can be string or number).</p>
+
+<h4>ArgN:</h4>
+<p><span class="type">(variant)</span> Nth that must be passed to Com Object (can be string or number).</p>
+
+<h4>Returns:</h4>
+<p><span class="type">(variant)</span> return value depends on that function you call.</p>
+
+<h4>Example:</h4>
+<pre class="code">
+-- Create a PDF Object in a tree
+PDFObject = Memory.CreateObject(Tree.GetProperties("Tree1").WindowHandle, "AcroPDF.PDF.1")
+-- Call 'GetVersions' function with no parameter
+Ver = Memory.CallObjectFunction(PDFObject, "GetVersions")
+Dialog.Message("", ver)
+</pre>
+
+
+<h3><a name="Memory.GetObjectProperty">Memory.GetObjectProperty(number Object, string Property);</a></h3>
+
+<h4>Description:</h4>
+<p> Get value from a property of COM Object.</p>
+
+<h4>Object:</h4>
+<p><span class="type">(number)</span> COM Object that returned from Memory.CreateObject.</p>
+
+<h4>Property:</h4>
+<p><span class="type">(string)</span> Name Of property that you want get value from it.</p>
+
+<h4>Returns:</h4>
+<p><span class="type">(variant)</span> return value depends on that property that you want get it.</p>
+
+<h4>Example:</h4>
+<pre class="code">
+-- Create a PDF Object in a tree
+PDFObject = Memory.CreateObject(Tree.GetProperties("Tree1").WindowHandle, "AcroPDF.PDF.1")
+-- fill src property with the address of test pdf
+Memory.SetObjectProperty(PDFObject, "src", "C:\\Test.pdf")
+-- get value from 'src' property
+src = Memory.GetObjectProperty(PDFObject, "src")
+Dialog.Message("", src)
+</pre>
+
+
+<h3><a name="Memory.GetObjectEventParam">Memory.GetObjectEventParam(number Object, number Index, number Type);</a></h3>
+
+<h4>Description:</h4>
+<p> Get value from a property of COM Object.</p>
+
+<h4>Object:</h4>
+<p><span class="type">(number)</span> COM Object that returned from Memory.CreateObject.</p>
+
+<h4>Index:</h4>
+<p><span class="type">(number)</span> index of Event parameter.</p>
+
+<h4>Type:</h4>
+<p><span class="type">(number)</span> Type of your event that you want access it.</p>
+
+<h4>Returns:</h4>
+<p><span class="type">(variant)</span> return value depends on what type you choose.</p>
+
+<h4>Note:</h4>
+<p><span class="type">(variant)</span> this function just must call from your event sinker, never use it from out of it, bad use from this function
+just show you crash, Beaware.</p>
+
+<h4>Example:</h4>
+<pre class="code">
+Debug.ShowWindow(true)
+function MyObject_Sink(Event, params)
+	Debug.Print("Event Is : " .. Event .. "\r\n    ")
+	Debug.Print("Number of parameters : " .. params.."\r\n     ")
+	for i = 1, params do
+		Debug.Print("Parameter " .. i .. " : " .. Memory.GetObjectEventParam(My_Object, i, OBJECT_RETURN_STRING) .."\r\n     ")
+	end
+	Debug.Print("--------------------------\r\n")
+end
+My_Object = Memory.CreateObject(Tree.GetProperties("Dummy_Tree").WindowHandle, "Dummy.Object", "MyObject_Sink")
+</pre>
+
+
+<h3><a name="Memory.ReleaseObject">Memory.ReleaseObject(number Object);</a></h3>
+
+<h4>Description:</h4>
+<p> Release a COM object and all allocated memory.</p>
+
+<h4>Object:</h4>
+<p><span class="type">(number)</span> COM Object that returned from Memory.CreateObject.</p>
+
+<h4>Returns:</h4>
+<p><span class="type">(nothing)</span> return nothing.</p>
+
+<h4>Example:</h4>
+<pre class="code">
+-- Create a PDF Object in a tree
+PDFObject = Memory.CreateObject(Tree.GetProperties("Tree1").WindowHandle, "AcroPDF.PDF.1")
+-- Release PDFObject and all of its allocated memory
+Memory.ReleaseObject(PDFObject)
+</pre>
+
+</div> <!-- /Actions -->
+
+
+<div class="History">
+<h2>Change Log</h2>
+<h3>2.0.0.0</h3>
+<ul>
+    <li>Fixed Bad Memory Licking in Memory.FreeStructure().</li>
+</ul>
+<ul>
+    <li>Fixed Bad return data for int64 in Memory.GetArrayData().</li>
+</ul>
+<ul>
+    <li>Fixed Bad return data for double in Memory.CallObjectFunction() and Memory.GetObjectProperty().</li>
+</ul>
+<ul>
+    <li>Fixed some issue for prevent from crashing program in COM Object's functions.</li>
+</ul>
+<ul>
+    <li>Now plugin can handle Event Sink for Objects.(Event Handler)</li>
+</ul>
+<ul>
+    <li>New Function is .GetObjectEventParam.</li>
+</ul>
+<ul>
+    <li>Now Plugin sepretely writed for AMS V >= 8 and AMS V <= 7.5 .</li>
+</ul>
+<ul>
+    <li>Plugin rewrited from first for better memory using and faster speed (Specially in subclass, array and Function librarys).</li>
+</ul>
+<ul>
+    <li>Added DLL_RETURN_VOID value in Memory.OpenFunction() for calling functions without any return.</li>
+</ul>
+
+
+
+<h3>1.5.2.0</h3>
+<ul>
+    <li>New Methods For Creating COM Object(OLE Control) Beta!</li>
+</ul>
+<ul>
+    <li>New Function For Run Program From Memory With Parameters!</li>
+</ul>
+<ul>
+    <li>New Functions are .RunProgram, .CreateObject, .SetObjectProperty, .CallObjectFunction, .GetObjectProperty, .ReleaseObject.</li>
+</ul>
+<ul>
+    <li>Fixed Subclass System(routine of Subclass system rewrited from first for better working)</li>
+</ul>
+
+
+<h3>1.4.2.0</h3>
+<ul>
+    <li>New Methods For Calling Librarys!</li>
+</ul>
+<ul>
+    <li>New Functions are .OpenLibrary, .OpenFunction, .CallFunction, .CloseLibrary.</li>
+</ul>
+<ul>
+    <li>Fixed Bugs on .FreeWindowSubClass that reason of some Application crashes(Find By tavria2)</li>
+</ul>
+
+
+<h3>1.3.2.0</h3>
+<ul>
+    <li>New Methods For Create SubClass into your main funcion of program or object or ...!</li>
+</ul>
+<ul>
+    <li>New Methods For do BitWises operand!.</li>
+</ul>
+<ul>
+    <li>New Methods For do Arithmetic shift!.</li>
+</ul>
+<ul>
+    <li>New Functions are .CreateWindowSubClass, .FreeWindowSubClass, .BitAND, .BitOR, .BitXOR, .BitNOT, .ShiftRight, .ShiftLeft.</li>
+</ul>
+<ul>
+    <li>Change some lines in .GetString and .PutString for more compatible with old version of Memory Plugin(thanks MicroByte)</li>
+</ul>
+
+
+<h3>1.2.2.0</h3>
+<ul>
+    <li>New Methods For Support Arrays!</li>
+</ul>
+<ul>
+    <li>New Functions are .CreateArray, .SetArrayData, .GetArrayData, .FreeArray . </li>
+</ul>
+<ul>
+    <li>Structures Methods improved and have some changed</li>
+</ul>
+<ul>
+    <li>Now Structures Methods support multi fields (like int[12])</li>
+</ul>
+
+
+<h3>1.1.2.0</h3>
+<ul>
+    <li>New Methods For Support Sructures!</li>
+</ul>
+<ul>
+    <li>New Functions are .CreateStructure, .SetStructureData, .GetStructureData, .FreeStructure . </li>
+</ul>
+
+
+<h3>1.0.2.0</h3>
+<ul>
+    <li>Bug Fix in Memory.GetString() and Memory.PutString()</li>
+</ul>
+
+<h3>1.0.1.0</h3>
+<ul>
+    <li>Bug Fix in Memory.GetString() and Memory.PutString()</li>
+</ul>
+<ul>
+    <li>Memory.GetString() and Memory.PutString() now support Ascii, Unicode And UTF8</li>
+</ul>
+<ul>
+    <li>Bug Fix in Memory.GetInt64() and Memory.PutInt64(), these funcs now use string instead of number</li>
+</ul>
+
+<h3>1.0.0.0</h3>
+<ul>
+    <li>Initial release</li>
+</ul>
+
+</div> <!-- /History -->
+
+
+<div class="Info">
+<h2>Additional Information</h2>
+
+<h3>Author:</h3><p>AMSWaves Corporation<br>
+<a href="mailto:support@AMSWaves.com">support@AMSWaves.com</a></p>
+
+<h3>Copyright:</h3>
+<p>Plugin is copyright © 2008-2010 AMSWaves Design Corporation.</p>
+
+<h3>Website:</h3>
+<p><a href="http://www.AMSWaves.com">http://www.AMSWaves.com</a></p>
+
+</div> <!-- /info -->
+<hr>
+
+<p align="center">Copyright © 2010 AMSWaves Design Corporation.<br>
+All Rights Reserved.</p>
+
+</body>
+</html>

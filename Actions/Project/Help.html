@@ -1,0 +1,2742 @@
+<!doctype HTML public "-//W3C//DTD HTML 4.0 Frameset//EN">
+
+<html>
+<head>
+<title>Project</title>
+
+<meta http-equiv=content-type content="text/html; charset=windows-1252">
+
+<style>
+
+
+
+body {
+  font-family: Verdana, sans-serif;
+  font-size: 8pt;
+  background-color: #ffffff;
+}
+
+hr {
+  text-align: center;
+  color: #f0f0f0;
+  width: 100%;
+  height: 6pt;
+
+  margin-top: 0pt;
+  margin-bottom: -3pt;
+
+  border: none;
+}
+
+A:link, A:active, A:visited {
+  color: #0000ff;
+  text-decoration: none;
+}
+
+A:hover {
+  color: #0000ff;
+  text-decoration: underline;
+}
+
+h1 {
+  font-family: Verdana;
+  font-weight: bold;
+  font-size: 18.0pt;
+  white-space: nowrap;
+  color: #fff;
+  background-color: #699BEF;
+
+  padding: 4pt 3pt;
+  padding: 5px 4px;
+
+  margin-top: 0pt;
+  margin-bottom: 0pt;
+
+  border-right: 1px solid #333;
+  border-left: 1px solid #699BEF;
+  border-bottom: solid black 1px;
+}
+
+h2 {
+  font-family: Arial, sans-serif;
+  font-size: 12.0pt;
+  letter-spacing: .2ex;
+  color: #000;
+  
+  margin-left: 0pt;
+  margin-right: 0pt;
+  margin-top: 18pt;
+  margin-bottom: 9pt;
+}
+
+h3 {
+  font-family: Arial, sans-serif;
+  font-size: 10pt;
+  font-weight: bold;
+  font-style: normal;
+  color: black;
+  letter-spacing: 0px;
+
+  margin-left: 0pt;
+  margin-right: 0pt;
+  margin-top: 18pt;
+  margin-bottom: 3pt;
+}
+
+p {
+  font-family: Verdana;
+  font-size: 8.0pt;
+  line-height: 12.0pt;
+  
+  margin-left: 0pt;
+  margin-right: 0pt;
+  margin-top: 0pt;
+  margin-bottom: 9pt;
+}
+
+/* CLASSES */
+
+div.Actions h3, div.Properties h3, div.Events h3 {
+  font-family: Arial, sans-serif;
+  font-size: 10pt;
+  font-weight: bold;
+  font-style: italic;
+  color: #3C77B3;
+  letter-spacing: 0px;
+  
+  margin-left: 12pt;
+  margin-right: 0pt;
+  margin-top: 18pt;
+  margin-bottom: 3pt;
+}
+
+div.Events h4, div.Actions h4, div.info h3 {
+  font-family: Verdana;
+  font-size: 8.0pt;
+  line-height: 12.0pt;
+  font-style: bold;
+  
+  margin-top: 9pt;
+  margin-bottom: 0pt;
+  margin-left: 28pt;
+  margin-right: 0pt;
+}
+
+div.Actions p, div.Properties p, div.Events p, div.ErrorCodes p {
+  font-family: Verdana;
+  font-size: 8.0pt;
+  line-height: 12.0pt;
+  
+  margin-top: 0pt;
+  margin-bottom: 9pt;
+  margin-left: 12pt;
+  margin-right: 0pt;
+}
+
+p.NavLocal {
+  white-space: nowrap;
+  text-indent: -4px;
+  font-family: Verdana, Arial, sans-serif;
+  font-weight: bold;
+  font-style: normal;
+  font-size: 13px;
+  background-color: #e4e4e4;
+
+  margin-top: 0px;
+  margin-bottom: 12pt;
+
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 0px;
+  padding-right: 0px;
+
+  border-bottom: 1px solid #e4e4e4;
+}
+
+p.Note {
+	font-family: Verdana;
+	font-size: 8.0pt;
+	line-height: 12.0pt;
+	color: #000000;
+	background-color: #ffffe8;
+
+	margin-top: 0pt;
+	margin-bottom: 9pt;
+	margin-left: 0pt;
+	margin-right: 5%;
+
+	padding-left: 2pt;
+	padding-right: 2pt;
+	padding-top: 1pt;
+	padding-bottom: 2pt;
+}
+
+p.Tip {
+	font-family: Verdana;
+	font-size: 8.0pt;
+	line-height: 12.0pt;
+	color: #000000;
+	background-color: #EAF4E8;
+
+	margin-top: 0pt;
+	margin-bottom: 9pt;
+	margin-left: 0pt;
+	margin-right: 5%;
+
+	padding-left: 2pt;
+	padding-right: 2pt;
+	padding-top: 1pt;
+	padding-bottom: 2pt;
+}
+
+div.Actions p.Note, div.Events p.Note,
+div.Actions p.Tip, div.Events p.Tip {
+	margin-left: 28pt;
+}
+
+div.Properties p.Note,
+div.Properties p.Tip {
+	margin-left: 18pt;
+}
+
+pre.code {
+  white-space: pre;
+  font-family: Courier New, Courier, Arial, sans-serif;
+  font-size: 10pt;
+  font-weight: normal;
+  font-style: normal;
+  letter-spacing: normal;
+  color: #000;
+  background-color: #f9f9f9;
+  
+  margin-top: 3pt;
+  margin-bottom: 9pt;
+  margin-left: 0pt;
+  margin-left: 0pt;
+  
+  padding: 10px;
+  
+  border: 1px dotted #ccc;
+}
+
+div.Actions pre.code, div.Events pre.code {
+  margin-left: 28pt;
+}
+
+div.Actions h2, div.Properties h2, div.Events h2 {
+  margin-bottom: -6pt;
+}
+
+div.actions p, div.ErrorCodes p, div.info p {
+  margin-left: 28pt;
+}
+
+div.actions p.indent {
+  margin-left: 38pt;
+}
+
+div.e_vars p {
+  margin-left: 28pt;
+}
+
+span.here { /* blue tab effect in navbar (NavLocal) */
+  font-weight: bold;
+  color: #fff;
+  background-color: #699BEF;
+
+  margin: 0px;
+
+  padding: 4px 8px;
+
+  border-top: 1px solid #699BEF;
+  border-bottom: 1px solid #333;
+  border-left: none;
+  border-right: 1px solid #333;
+}
+
+span.type {
+	color: #aaa;
+}
+A:link,
+A:active,
+A:visited {
+	color: #0000ff;
+	x-text-underline: off;
+	x-text-overline: off;
+	x-text-line-through: off;
+	/*begin!kadov{{*/ text-decoration: none none none; /*}}end!kadov*/ 
+}
+
+A:hover {
+	color: #0000ff;
+	x-text-underline: normal;
+	/*begin!kadov{{*/ text-decoration: underline; /*}}end!kadov*/ 
+}
+
+BODY {
+	font-family: Verdana, sans-serif;
+	font-size: 8pt;
+	background-color: #ffffff;
+}
+
+h1 {
+	font-family: Verdana;
+	font-weight: bold;
+	font-size: 18.0pt;
+	white-space: nowrap;
+	color: #ffffff;
+	background-color: #699BEF;
+	padding: 4pt 3pt;
+	padding: 5px 4px;
+	margin-top: 0pt;
+	margin-bottom: 0pt;
+	border-right: 1px solid #333;
+	border-left: 1px solid #699BEF;
+	border-bottom: solid #000000 1px;
+	x-next-class: NavLocal;
+	x-next-type: P;
+}
+
+/*=(Generated Code)=================================================*/
+/*=(WARNING: DO NOT EDIT OR DELETE THIS SECTION!)===================*/
+/*begin!kadov{{=====================================================*/ 
+LI.kadov-h1 {
+	font-family: Verdana;
+	font-weight: bold;
+	font-size: 18.0pt;
+	white-space: nowrap;
+	color: #ffffff;
+}
+/*}}end!kadov=======================================================*/ 
+
+
+
+/* NOTE: for a slightly more web-safe version, replace #699BEF with
+#6699FF throughout this style sheet */
+
+h1 img {
+	margin-left: 2em;
+	vertical-align: middle;
+}
+
+h2 {
+	font-family: Arial, sans-serif;
+	font-size: 12.0pt;
+	letter-spacing: .2ex;
+	color: #000000;
+	margin-left: 0pt;
+	margin-right: 0pt;
+	margin-top: 18pt;
+	margin-bottom: 3pt;
+}
+
+/*=(Generated Code)=================================================*/
+/*=(WARNING: DO NOT EDIT OR DELETE THIS SECTION!)===================*/
+/*begin!kadov{{=====================================================*/ 
+LI.kadov-h2 {
+	font-family: Arial, sans-serif;
+	font-size: 12.0pt;
+	letter-spacing: .2ex;
+	color: #000000;
+}
+/*}}end!kadov=======================================================*/ 
+
+
+
+h3 {
+	font-family: Arial, sans-serif;
+	font-size: 10pt;
+	font-weight: bold;
+	font-style: italic;
+	color: #3C77B3;
+	margin-left: 12pt;
+	margin-right: 0pt;
+	margin-top: 18pt;
+	margin-bottom: 3pt;
+	x-next-class: p;
+	x-next-type: p;
+	font-style: normal;
+	color: #000000;
+	letter-spacing: 0px;
+	margin-left: 0pt;
+}
+
+/*=(Generated Code)=================================================*/
+/*=(WARNING: DO NOT EDIT OR DELETE THIS SECTION!)===================*/
+/*begin!kadov{{=====================================================*/ 
+LI.kadov-h3 {
+	font-family: Arial, sans-serif;
+	font-size: 10pt;
+	font-weight: bold;
+	font-style: italic;
+	color: #3C77B3;
+	font-style: normal;
+	color: #000000;
+	letter-spacing: 0px;
+}
+/*}}end!kadov=======================================================*/ 
+
+
+
+h4 {
+	font-family: Arial, sans-serif;
+	font-size: 10pt;
+	font-weight: bold;
+	font-style: italic;
+	color: #000000;
+	letter-spacing: .2ex;
+	margin-left: 12pt;
+	margin-right: 0pt;
+	margin-top: 12pt;
+	margin-bottom: 3pt;
+	x-next-class: p;
+	x-next-type: p;
+}
+
+/*=(Generated Code)=================================================*/
+/*=(WARNING: DO NOT EDIT OR DELETE THIS SECTION!)===================*/
+/*begin!kadov{{=====================================================*/ 
+LI.kadov-h4 {
+	font-family: Arial, sans-serif;
+	font-size: 10pt;
+	font-weight: bold;
+	font-style: italic;
+	color: #000000;
+	letter-spacing: .2ex;
+}
+/*}}end!kadov=======================================================*/ 
+
+
+
+hr {
+	text-align: center;
+	color: #f0f0f0;
+	width: 100%;
+	height: 6pt;
+	margin-left: 0pt;
+	margin-right: 0pt;
+	margin-top: 0pt;
+	margin-bottom: -3pt;
+	border: none;
+}
+
+ol li {
+	list-style: decimal;
+	line-height: 12pt;
+	margin-bottom: 14pt;
+}
+
+p {
+	font-family: Verdana;
+	font-size: 8.0pt;
+	line-height: 12.0pt;
+	margin-left: 0pt;
+	margin-right: 0pt;
+	margin-top: 0pt;
+	margin-bottom: 9pt;
+}
+
+/*=(Generated Code)=================================================*/
+/*=(WARNING: DO NOT EDIT OR DELETE THIS SECTION!)===================*/
+/*begin!kadov{{=====================================================*/ 
+LI.kadov-p {
+	font-family: Verdana;
+	font-size: 8.0pt;
+	line-height: 12.0pt;
+}
+/*}}end!kadov=======================================================*/ 
+
+
+
+ul {
+	margin-top: 0pt;
+	margin-bottom: 12pt;
+	list-style-type: disc;
+	list-style-image: url(bullet.png);
+}
+
+ul p {
+	margin-bottom: 6pt;
+}
+
+/*=(Generated Code)=================================================*/
+/*=(WARNING: DO NOT EDIT OR DELETE THIS SECTION!)===================*/
+/*begin!kadov{{=====================================================*/ 
+ul LI.kadov-p {
+}
+/*}}end!kadov=======================================================*/ 
+
+
+
+/* CLASSES */
+/* CLASSES */
+/* CLASSES */
+/* CLASSES */
+/* CLASSES */
+
+div.Declaration {
+	white-space: nowrap;
+	line-height: normal;
+	x-text-tab-stops: repeat 1in;
+	font-family: "Courier New", Courier, monospace;
+	font-size: 9.0pt;
+	background-color: #eee;
+	color: #000000;
+	width: 100%;
+	margin-left: 0px;
+	margin-right: 0px;
+	margin-top: 0pt;
+	margin-bottom: 9pt;
+	padding: 2pt;
+	border-top: #c0c0c0 1px solid;
+	border-right: #c0c0c0 1px solid;
+	border-left: #c0c0c0 1px solid;
+	border-bottom: #c0c0c0 1px solid;
+}
+
+div.Declaration a:link,
+div.Declaration a:active,
+div.Declaration a:visited {
+	color: #000000;
+	x-text-underline: off;
+	x-text-overline: off;
+	x-text-line-through: off;
+	/*begin!kadov{{*/ text-decoration: none none none; /*}}end!kadov*/ 
+}
+
+div.Declaration a:hover {
+	color: #0000ff;
+	x-text-underline: off;
+	x-text-overline: off;
+	x-text-line-through: off;
+	/*begin!kadov{{*/ text-decoration: none none none; /*}}end!kadov*/ 
+}
+
+div.Declaration table p {
+	white-space: nowrap;
+	line-height: normal;
+	x-text-tab-stops: repeat 1in;
+	font-family: "Courier New", Courier, monospace;
+	font-size: 10.0pt;
+	background-color: #eee;
+	color: #000000;
+	margin-left: 0px;
+	margin-right: 0px;
+	margin-top: 0px;
+	margin-bottom: 0px;
+	padding: 0pt;
+	border-style: none;
+}
+
+/*=(Generated Code)=================================================*/
+/*=(WARNING: DO NOT EDIT OR DELETE THIS SECTION!)===================*/
+/*begin!kadov{{=====================================================*/ 
+div.Declaration table LI.kadov-p {
+	white-space: nowrap;
+	line-height: normal;
+	x-text-tab-stops: repeat 1in;
+	font-family: "Courier New", Courier, monospace;
+	font-size: 10.0pt;
+	color: #000000;
+}
+/*}}end!kadov=======================================================*/ 
+
+
+
+h2.ExampleHeading {
+	x-next-class: ExampleCode;
+	x-next-type: p;
+	white-space: nowrap;
+	margin-bottom: 3pt;
+}
+
+/*=(Generated Code)=================================================*/
+/*=(WARNING: DO NOT EDIT OR DELETE THIS SECTION!)===================*/
+/*begin!kadov{{=====================================================*/ 
+LI.kadov-h2-CExampleHeading {
+	white-space: nowrap;
+}
+/*}}end!kadov=======================================================*/ 
+
+
+
+h2.GroupHeading {
+	font-family: Arial, sans-serif;
+	font-size: 12pt;
+	font-weight: bold;
+	font-style: normal;
+	color: #999999;
+	margin-top: 18pt;
+	margin-bottom: -6pt;
+	margin-left: 0pt;
+	margin-right: 0pt;
+	x-next-class: FieldHeading;
+	x-next-type: h3;
+}
+
+/*=(Generated Code)=================================================*/
+/*=(WARNING: DO NOT EDIT OR DELETE THIS SECTION!)===================*/
+/*begin!kadov{{=====================================================*/ 
+LI.kadov-h2-CGroupHeading {
+	font-family: Arial, sans-serif;
+	font-size: 12pt;
+	font-weight: bold;
+	font-style: normal;
+	color: #999999;
+}
+/*}}end!kadov=======================================================*/ 
+
+
+
+h2.GroupHeadingLoose {
+	font-family: Arial, sans-serif;
+	font-size: 12pt;
+	font-weight: bold;
+	font-style: normal;
+	color: #999999;
+	margin-top: 18pt;
+	margin-bottom: 9pt;
+	margin-left: 0pt;
+	margin-right: 0pt;
+	x-next-class: GroupBody;
+	x-next-type: p;
+}
+
+/*=(Generated Code)=================================================*/
+/*=(WARNING: DO NOT EDIT OR DELETE THIS SECTION!)===================*/
+/*begin!kadov{{=====================================================*/ 
+LI.kadov-h2-CGroupHeadingLoose {
+	font-family: Arial, sans-serif;
+	font-size: 12pt;
+	font-weight: bold;
+	font-style: normal;
+	color: #999999;
+}
+/*}}end!kadov=======================================================*/ 
+
+
+
+h2.GroupSubHeading {
+	font-family: Arial, sans-serif;
+	font-size: 12pt;
+	font-weight: bold;
+	font-style: italic;
+	color: #aa9999;
+	margin-top: 18pt;
+	margin-bottom: -6pt;
+	margin-left: 6pt;
+	margin-right: 0pt;
+	x-next-class: FieldHeading;
+	x-next-type: h3;
+}
+
+/*=(Generated Code)=================================================*/
+/*=(WARNING: DO NOT EDIT OR DELETE THIS SECTION!)===================*/
+/*begin!kadov{{=====================================================*/ 
+LI.kadov-h2-CGroupSubHeading {
+	font-family: Arial, sans-serif;
+	font-size: 12pt;
+	font-weight: bold;
+	font-style: italic;
+	color: #aa9999;
+}
+/*}}end!kadov=======================================================*/ 
+
+
+
+h2.H2Tight {
+	margin-bottom: -6pt;
+}
+
+/*=(Generated Code)=================================================*/
+/*=(WARNING: DO NOT EDIT OR DELETE THIS SECTION!)===================*/
+/*begin!kadov{{=====================================================*/ 
+LI.kadov-h2-CH2Tight {
+}
+/*}}end!kadov=======================================================*/ 
+
+
+
+h2.HowDoIHeading {
+	font-family: Arial, sans-serif;
+	font-size: 16.0pt;
+	letter-spacing: .2ex;
+	color: #000000;
+	margin-left: 0pt;
+	margin-right: 0pt;
+	margin-top: 18pt;
+	margin-bottom: 3pt;
+	x-next-class: Normal;
+	x-next-type: p;
+}
+
+/*=(Generated Code)=================================================*/
+/*=(WARNING: DO NOT EDIT OR DELETE THIS SECTION!)===================*/
+/*begin!kadov{{=====================================================*/ 
+LI.kadov-h2-CHowDoIHeading {
+	font-family: Arial, sans-serif;
+	font-size: 16.0pt;
+	letter-spacing: .2ex;
+	color: #000000;
+}
+/*}}end!kadov=======================================================*/ 
+
+
+
+h2.ListHeading {
+	margin-bottom: 9pt;
+	x-next-class: ListBody;
+	x-next-type: p;
+	white-space: nowrap;
+}
+
+/*=(Generated Code)=================================================*/
+/*=(WARNING: DO NOT EDIT OR DELETE THIS SECTION!)===================*/
+/*begin!kadov{{=====================================================*/ 
+LI.kadov-h2-CListHeading {
+	white-space: nowrap;
+}
+/*}}end!kadov=======================================================*/ 
+
+
+
+h2.TabHeading {
+	font-family: Arial, sans-serif;
+	font-size: 15.0pt;
+	letter-spacing: normal;
+	background-color: #e4e4e4;
+	color: #999;
+	color: #9c9c9c;
+	margin-left: -8pt;
+	margin-right: -8pt;
+	margin-top: 18pt;
+	margin-bottom: 12pt;
+	padding-left: 8pt;
+	padding-top: 4px;
+	padding-bottom: 4px;
+	border-top: 1px solid #999;
+	border-bottom: 1px solid #999;
+	border-left: none;
+	border-right: none;
+}
+
+/*=(Generated Code)=================================================*/
+/*=(WARNING: DO NOT EDIT OR DELETE THIS SECTION!)===================*/
+/*begin!kadov{{=====================================================*/ 
+LI.kadov-h2-CTabHeading {
+	font-family: Arial, sans-serif;
+	font-size: 15.0pt;
+	letter-spacing: normal;
+	color: #999;
+	color: #9c9c9c;
+}
+/*}}end!kadov=======================================================*/ 
+
+
+
+h2.VarHeading {
+	font-family: Arial;
+	font-size: 10pt;
+	letter-spacing: 0px;
+	margin-left: 12pt;
+	margin-right: 0pt;
+	margin-top: 18pt;
+	margin-bottom: 3pt;
+	x-next-class: VarBody;
+	x-next-type: p;
+	white-space: nowrap;
+}
+
+/*=(Generated Code)=================================================*/
+/*=(WARNING: DO NOT EDIT OR DELETE THIS SECTION!)===================*/
+/*begin!kadov{{=====================================================*/ 
+LI.kadov-h2-CVarHeading {
+	font-family: Arial;
+	font-size: 10pt;
+	letter-spacing: 0px;
+	white-space: nowrap;
+}
+/*}}end!kadov=======================================================*/ 
+
+
+
+h3.ErrHeading {
+	font-family: Arial, sans-serif;
+	font-size: 10pt;
+	font-style: normal;
+	color: #000000;
+	letter-spacing: 0px;
+	margin-left: 12pt;
+	margin-right: 0pt;
+	margin-top: 18pt;
+	margin-bottom: 3pt;
+	x-next-class: ErrBody;
+	x-next-type: p;
+	white-space: nowrap;
+}
+
+/*=(Generated Code)=================================================*/
+/*=(WARNING: DO NOT EDIT OR DELETE THIS SECTION!)===================*/
+/*begin!kadov{{=====================================================*/ 
+LI.kadov-h3-CErrHeading {
+	font-family: Arial, sans-serif;
+	font-size: 10pt;
+	font-style: normal;
+	color: #000000;
+	letter-spacing: 0px;
+	white-space: nowrap;
+}
+/*}}end!kadov=======================================================*/ 
+
+
+
+h3.FieldHeading {
+	font-family: Arial, sans-serif;
+	font-size: 10pt;
+	font-weight: bold;
+	font-style: italic;
+	color: #3C77B3;
+	letter-spacing: 0px;
+	margin-left: 12pt;
+	margin-right: 0pt;
+	margin-top: 18pt;
+	margin-bottom: 3pt;
+	x-next-class: FieldBody;
+	x-next-type: p;
+}
+
+/*=(Generated Code)=================================================*/
+/*=(WARNING: DO NOT EDIT OR DELETE THIS SECTION!)===================*/
+/*begin!kadov{{=====================================================*/ 
+LI.kadov-h3-CFieldHeading {
+	font-family: Arial, sans-serif;
+	font-size: 10pt;
+	font-weight: bold;
+	font-style: italic;
+	color: #3C77B3;
+	letter-spacing: 0px;
+}
+/*}}end!kadov=======================================================*/ 
+
+
+
+h3.FieldSubHeading {
+	font-family: Arial, sans-serif;
+	font-size: 10pt;
+	font-weight: bold;
+	font-style: italic;
+	color: #3C77B3;
+	letter-spacing: 0px;
+	margin-left: 32pt;
+	margin-right: 0pt;
+	margin-top: 18pt;
+	margin-bottom: 3pt;
+	x-next-class: FieldSubBody;
+	x-next-type: p;
+}
+
+/*=(Generated Code)=================================================*/
+/*=(WARNING: DO NOT EDIT OR DELETE THIS SECTION!)===================*/
+/*begin!kadov{{=====================================================*/ 
+LI.kadov-h3-CFieldSubHeading {
+	font-family: Arial, sans-serif;
+	font-size: 10pt;
+	font-weight: bold;
+	font-style: italic;
+	color: #3C77B3;
+	letter-spacing: 0px;
+}
+/*}}end!kadov=======================================================*/ 
+
+
+
+h3.ParameterHeading {
+	font-family: Arial, sans-serif;
+	margin-left: 12pt;
+	margin-right: 0pt;
+	margin-top: 18pt;
+	margin-bottom: 3pt;
+	font-size: 9pt;
+	font-weight: bold;
+	font-style: italic;
+	letter-spacing: .2ex;
+	color: #3C77B3;
+	x-next-class: ParameterBody;
+	x-next-type: p;
+}
+
+/*=(Generated Code)=================================================*/
+/*=(WARNING: DO NOT EDIT OR DELETE THIS SECTION!)===================*/
+/*begin!kadov{{=====================================================*/ 
+LI.kadov-h3-CParameterHeading {
+	font-family: Arial, sans-serif;
+	font-size: 9pt;
+	font-weight: bold;
+	font-style: italic;
+	letter-spacing: .2ex;
+	color: #3C77B3;
+}
+/*}}end!kadov=======================================================*/ 
+
+
+
+h4.OptionHeading {
+	font-family: Verdana, sans-serif;
+	font-size: 8.0pt;
+	font-weight: bold;
+	font-style: normal;
+	line-height: 12.0pt;
+	color: #000000;
+	margin-left: 32.0pt;
+	margin-right: 0pt;
+	margin-top: 12pt;
+	margin-bottom: 0;
+	x-next-class: OptionBody;
+	x-next-type: p;
+}
+
+/*=(Generated Code)=================================================*/
+/*=(WARNING: DO NOT EDIT OR DELETE THIS SECTION!)===================*/
+/*begin!kadov{{=====================================================*/ 
+LI.kadov-h4-COptionHeading {
+	font-family: Verdana, sans-serif;
+	font-size: 8.0pt;
+	font-weight: bold;
+	font-style: normal;
+	line-height: 12.0pt;
+	color: #000000;
+}
+/*}}end!kadov=======================================================*/ 
+
+
+
+h4.OptionSubHeading {
+	font-family: Verdana, sans-serif;
+	font-size: 8.0pt;
+	font-weight: bold;
+	font-style: normal;
+	line-height: 12.0pt;
+	color: #000000;
+	margin-left: 52.0pt;
+	margin-right: 0pt;
+	margin-top: 12pt;
+	margin-bottom: 0;
+	x-next-class: OptionSubBody;
+	x-next-type: p;
+}
+
+/*=(Generated Code)=================================================*/
+/*=(WARNING: DO NOT EDIT OR DELETE THIS SECTION!)===================*/
+/*begin!kadov{{=====================================================*/ 
+LI.kadov-h4-COptionSubHeading {
+	font-family: Verdana, sans-serif;
+	font-size: 8.0pt;
+	font-weight: bold;
+	font-style: normal;
+	line-height: 12.0pt;
+	color: #000000;
+}
+/*}}end!kadov=======================================================*/ 
+
+
+
+P.BodyCode {
+	white-space: nowrap;
+	font-family: "Courier New", Courier, Arial, sans-serif;
+	font-size: 10pt;
+	font-weight: normal;
+	font-style: normal;
+	letter-spacing: normal;
+	color: #000000;
+	background-color: #eee;
+	background-color: #f9f9f9;
+	margin-top: -6pt;
+	margin-bottom: 9pt;
+	margin-left: 0pt;
+	margin-right: 0pt;
+	padding: 10px;
+	border: 1px dotted #ccc;
+	x-next-type: p;
+}
+
+/*=(Generated Code)=================================================*/
+/*=(WARNING: DO NOT EDIT OR DELETE THIS SECTION!)===================*/
+/*begin!kadov{{=====================================================*/ 
+LI.kadov-P-CBodyCode {
+	white-space: nowrap;
+	font-family: "Courier New", Courier, Arial, sans-serif;
+	font-size: 10pt;
+	font-weight: normal;
+	font-style: normal;
+	letter-spacing: normal;
+	color: #000000;
+}
+/*}}end!kadov=======================================================*/ 
+
+
+
+p.Caption {
+	font-size: 7pt;
+	letter-spacing: .5pt;
+	line-height: 14pt;
+	text-align: center;
+	margin-bottom: 0pt;
+	x-next-class: ;
+	x-next-type: P;
+}
+
+/*=(Generated Code)=================================================*/
+/*=(WARNING: DO NOT EDIT OR DELETE THIS SECTION!)===================*/
+/*begin!kadov{{=====================================================*/ 
+LI.kadov-p-CCaption {
+	font-size: 7pt;
+	letter-spacing: .5pt;
+	line-height: 14pt;
+	text-align: center;
+}
+/*}}end!kadov=======================================================*/ 
+
+
+
+P.Code {
+	white-space: nowrap;
+	font-family: "Courier New", Courier, Arial, sans-serif;
+	font-size: 10pt;
+	font-weight: normal;
+	font-style: normal;
+	letter-spacing: normal;
+	color: #000000;
+	background-color: #ffffff;
+	margin-bottom: 9pt;
+	margin-left: 0pt;
+	margin-right: 0pt;
+	padding: 00px;
+	x-next-type: p;
+}
+
+/*=(Generated Code)=================================================*/
+/*=(WARNING: DO NOT EDIT OR DELETE THIS SECTION!)===================*/
+/*begin!kadov{{=====================================================*/ 
+LI.kadov-P-CCode {
+	white-space: nowrap;
+	font-family: "Courier New", Courier, Arial, sans-serif;
+	font-size: 10pt;
+	font-weight: normal;
+	font-style: normal;
+	letter-spacing: normal;
+	color: #000000;
+}
+/*}}end!kadov=======================================================*/ 
+
+
+
+p.ErrBody {
+	margin-left: 12pt;
+	margin-right: 0pt;
+	margin-bottom: 3pt;
+	x-next-class: ErrBody;
+	x-next-type: p;
+	white-space: nowrap;
+}
+
+/*=(Generated Code)=================================================*/
+/*=(WARNING: DO NOT EDIT OR DELETE THIS SECTION!)===================*/
+/*begin!kadov{{=====================================================*/ 
+LI.kadov-p-CErrBody {
+	white-space: nowrap;
+}
+/*}}end!kadov=======================================================*/ 
+
+
+
+p.ErrCode {
+	white-space: nowrap;
+	font-family: "Courier New", Courier, Arial, sans-serif;
+	font-size: 10pt;
+	font-weight: normal;
+	font-style: normal;
+	letter-spacing: normal;
+	color: #052;
+	color: #000000;
+	background-color: #eee;
+	background-color: #f9f9f9;
+	margin-top: 9pt;
+	margin-bottom: 9pt;
+	margin-left: 12pt;
+	margin-right: 0pt;
+	padding: 10px;
+	border: 1px dotted #ccc;
+	x-next-class: ErrBody;
+	x-next-type: p;
+}
+
+/*=(Generated Code)=================================================*/
+/*=(WARNING: DO NOT EDIT OR DELETE THIS SECTION!)===================*/
+/*begin!kadov{{=====================================================*/ 
+LI.kadov-p-CErrCode {
+	white-space: nowrap;
+	font-family: "Courier New", Courier, Arial, sans-serif;
+	font-size: 10pt;
+	font-weight: normal;
+	font-style: normal;
+	letter-spacing: normal;
+	color: #052;
+	color: #000000;
+}
+/*}}end!kadov=======================================================*/ 
+
+
+
+p.ErrNote {
+	font-family: Verdana;
+	font-size: 8.0pt;
+	line-height: 12.0pt;
+	color: #000000;
+	background-color: #ffffe8;
+	margin-top: 9pt;
+	margin-bottom: 9pt;
+	margin-left: 12pt;
+	margin-right: 5%;
+	padding-left: 2pt;
+	padding-right: 2pt;
+	padding-top: 1pt;
+	padding-bottom: 2pt;
+	x-next-class: ErrBody;
+	x-next-type: p;
+}
+
+/*=(Generated Code)=================================================*/
+/*=(WARNING: DO NOT EDIT OR DELETE THIS SECTION!)===================*/
+/*begin!kadov{{=====================================================*/ 
+LI.kadov-p-CErrNote {
+	font-family: Verdana;
+	font-size: 8.0pt;
+	line-height: 12.0pt;
+	color: #000000;
+}
+/*}}end!kadov=======================================================*/ 
+
+
+
+p.ErrTip {
+	font-family: Verdana;
+	font-size: 8.0pt;
+	line-height: 12.0pt;
+	color: #000000;
+	background-color: #EAF4E8;
+	margin-top: 9pt;
+	margin-bottom: 9pt;
+	margin-left: 12pt;
+	margin-right: 5%;
+	padding-left: 2pt;
+	padding-right: 2pt;
+	padding-top: 1pt;
+	padding-bottom: 2pt;
+	x-next-class: ErrBody;
+	x-next-type: p;
+}
+
+/*=(Generated Code)=================================================*/
+/*=(WARNING: DO NOT EDIT OR DELETE THIS SECTION!)===================*/
+/*begin!kadov{{=====================================================*/ 
+LI.kadov-p-CErrTip {
+	font-family: Verdana;
+	font-size: 8.0pt;
+	line-height: 12.0pt;
+	color: #000000;
+}
+/*}}end!kadov=======================================================*/ 
+
+
+
+P.ExampleBody {
+	margin-right: 0pt;
+	margin-bottom: 9pt;
+	margin-left: 12px;
+}
+
+/*=(Generated Code)=================================================*/
+/*=(WARNING: DO NOT EDIT OR DELETE THIS SECTION!)===================*/
+/*begin!kadov{{=====================================================*/ 
+LI.kadov-P-CExampleBody {
+}
+/*}}end!kadov=======================================================*/ 
+
+
+
+p.ExampleCode {
+	white-space: nowrap;
+	font-family: "Courier New", Courier, Arial, sans-serif;
+	font-size: 10pt;
+	font-weight: normal;
+	font-style: normal;
+	letter-spacing: normal;
+	color: #052;
+	background-color: #f9f9f9;
+	margin-top: 6pt;
+	margin-bottom: 3pt;
+	margin-left: 0pt;
+	margin-right: 0pt;
+	padding: 10px;
+	border: 1px dotted #ccc;
+	x-next-class: ExampleBody;
+	x-next-type: p;
+}
+
+/*=(Generated Code)=================================================*/
+/*=(WARNING: DO NOT EDIT OR DELETE THIS SECTION!)===================*/
+/*begin!kadov{{=====================================================*/ 
+LI.kadov-p-CExampleCode {
+	white-space: nowrap;
+	font-family: "Courier New", Courier, Arial, sans-serif;
+	font-size: 10pt;
+	font-weight: normal;
+	font-style: normal;
+	letter-spacing: normal;
+	color: #052;
+}
+/*}}end!kadov=======================================================*/ 
+
+
+
+p.ExampleNote {
+	font-family: Verdana;
+	font-size: 8.0pt;
+	line-height: 12.0pt;
+	color: #000000;
+	background-color: #ffffe8;
+	margin-top: 0pt;
+	margin-bottom: 9pt;
+	margin-left: 10px;
+	margin-right: 5%;
+	padding-left: 2pt;
+	padding-right: 2pt;
+	padding-top: 1pt;
+	padding-bottom: 2pt;
+	x-next-class: ;
+	x-next-type: p;
+}
+
+/*=(Generated Code)=================================================*/
+/*=(WARNING: DO NOT EDIT OR DELETE THIS SECTION!)===================*/
+/*begin!kadov{{=====================================================*/ 
+LI.kadov-p-CExampleNote {
+	font-family: Verdana;
+	font-size: 8.0pt;
+	line-height: 12.0pt;
+	color: #000000;
+}
+/*}}end!kadov=======================================================*/ 
+
+
+
+p.ExampleTip {
+	font-family: Verdana;
+	font-size: 8.0pt;
+	line-height: 12.0pt;
+	color: #000000;
+	background-color: #EAF4E8;
+	margin-top: 0pt;
+	margin-bottom: 9pt;
+	margin-left: 10px;
+	margin-right: 5%;
+	padding-left: 2pt;
+	padding-right: 2pt;
+	padding-top: 1pt;
+	padding-bottom: 2pt;
+	x-next-class: FieldBody;
+	x-next-type: p;
+}
+
+/*=(Generated Code)=================================================*/
+/*=(WARNING: DO NOT EDIT OR DELETE THIS SECTION!)===================*/
+/*begin!kadov{{=====================================================*/ 
+LI.kadov-p-CExampleTip {
+	font-family: Verdana;
+	font-size: 8.0pt;
+	line-height: 12.0pt;
+	color: #000000;
+}
+/*}}end!kadov=======================================================*/ 
+
+
+
+p.FieldBody {
+	font-family: Verdana;
+	font-size: 8.0pt;
+	line-height: 12.0pt;
+	margin-top: 0pt;
+	margin-bottom: 9pt;
+	margin-left: 12pt;
+	margin-right: 0pt;
+	x-next-class: FieldBody;
+	x-next-type: p;
+}
+
+/*=(Generated Code)=================================================*/
+/*=(WARNING: DO NOT EDIT OR DELETE THIS SECTION!)===================*/
+/*begin!kadov{{=====================================================*/ 
+LI.kadov-p-CFieldBody {
+	font-family: Verdana;
+	font-size: 8.0pt;
+	line-height: 12.0pt;
+}
+/*}}end!kadov=======================================================*/ 
+
+
+
+p.FieldSubBody {
+	font-family: Verdana;
+	font-size: 8.0pt;
+	line-height: 12.0pt;
+	margin-top: 0pt;
+	margin-bottom: 9pt;
+	margin-left: 32pt;
+	margin-right: 0pt;
+	x-next-class: FieldSubBody;
+	x-next-type: p;
+}
+
+/*=(Generated Code)=================================================*/
+/*=(WARNING: DO NOT EDIT OR DELETE THIS SECTION!)===================*/
+/*begin!kadov{{=====================================================*/ 
+LI.kadov-p-CFieldSubBody {
+	font-family: Verdana;
+	font-size: 8.0pt;
+	line-height: 12.0pt;
+}
+/*}}end!kadov=======================================================*/ 
+
+
+
+p.FieldNote {
+	font-family: Verdana;
+	font-size: 8.0pt;
+	line-height: 12.0pt;
+	color: #000000;
+	background-color: #ffffe8;
+	margin-top: 0pt;
+	margin-bottom: 9pt;
+	margin-left: 12pt;
+	margin-right: 5%;
+	padding-left: 2pt;
+	padding-right: 2pt;
+	padding-top: 1pt;
+	padding-bottom: 2pt;
+	x-next-class: FieldBody;
+	x-next-type: p;
+}
+
+/*=(Generated Code)=================================================*/
+/*=(WARNING: DO NOT EDIT OR DELETE THIS SECTION!)===================*/
+/*begin!kadov{{=====================================================*/ 
+LI.kadov-p-CFieldNote {
+	font-family: Verdana;
+	font-size: 8.0pt;
+	line-height: 12.0pt;
+	color: #000000;
+}
+/*}}end!kadov=======================================================*/ 
+
+
+
+p.FieldSubNote {
+	font-family: Verdana;
+	font-size: 8.0pt;
+	line-height: 12.0pt;
+	color: #000000;
+	background-color: #ffffe8;
+	margin-top: 0pt;
+	margin-bottom: 9pt;
+	margin-left: 32pt;
+	margin-right: 5%;
+	padding-left: 2pt;
+	padding-right: 2pt;
+	padding-top: 1pt;
+	padding-bottom: 2pt;
+	x-next-class: FieldBody;
+	x-next-type: p;
+}
+
+/*=(Generated Code)=================================================*/
+/*=(WARNING: DO NOT EDIT OR DELETE THIS SECTION!)===================*/
+/*begin!kadov{{=====================================================*/ 
+LI.kadov-p-CFieldSubNote {
+	font-family: Verdana;
+	font-size: 8.0pt;
+	line-height: 12.0pt;
+	color: #000000;
+}
+/*}}end!kadov=======================================================*/ 
+
+
+
+p.FieldSubTip {
+	font-family: Verdana;
+	font-size: 8.0pt;
+	line-height: 12.0pt;
+	color: #000000;
+	background-color: #EAF4E8;
+	margin-top: 0pt;
+	margin-bottom: 9pt;
+	margin-left: 32pt;
+	margin-right: 5%;
+	padding-left: 2pt;
+	padding-right: 2pt;
+	padding-top: 1pt;
+	padding-bottom: 2pt;
+	x-next-class: FieldBody;
+	x-next-type: p;
+}
+
+/*=(Generated Code)=================================================*/
+/*=(WARNING: DO NOT EDIT OR DELETE THIS SECTION!)===================*/
+/*begin!kadov{{=====================================================*/ 
+LI.kadov-p-CFieldSubTip {
+	font-family: Verdana;
+	font-size: 8.0pt;
+	line-height: 12.0pt;
+	color: #000000;
+}
+/*}}end!kadov=======================================================*/ 
+
+
+
+p.FieldTip {
+	font-family: Verdana;
+	font-size: 8.0pt;
+	line-height: 12.0pt;
+	color: #000000;
+	background-color: #EAF4E8;
+	margin-top: 0pt;
+	margin-bottom: 9pt;
+	margin-left: 12pt;
+	margin-right: 5%;
+	padding-left: 2pt;
+	padding-right: 2pt;
+	padding-top: 1pt;
+	padding-bottom: 2pt;
+	x-next-class: FieldBody;
+	x-next-type: p;
+}
+
+/*=(Generated Code)=================================================*/
+/*=(WARNING: DO NOT EDIT OR DELETE THIS SECTION!)===================*/
+/*begin!kadov{{=====================================================*/ 
+LI.kadov-p-CFieldTip {
+	font-family: Verdana;
+	font-size: 8.0pt;
+	line-height: 12.0pt;
+	color: #000000;
+}
+/*}}end!kadov=======================================================*/ 
+
+
+
+p.FieldWarning {
+	font-family: Verdana;
+	font-size: 8.0pt;
+	line-height: 12.0pt;
+	color: #000000;
+	background-color: #FDF0E8;
+	margin-top: 0pt;
+	margin-bottom: 9pt;
+	margin-left: 12pt;
+	margin-right: 5%;
+	padding-left: 2pt;
+	padding-right: 2pt;
+	padding-top: 1pt;
+	padding-bottom: 2pt;
+	border: 1px dotted #ff0000;
+	border: none;
+	x-next-class: FieldBody;
+	x-next-type: p;
+}
+
+/*=(Generated Code)=================================================*/
+/*=(WARNING: DO NOT EDIT OR DELETE THIS SECTION!)===================*/
+/*begin!kadov{{=====================================================*/ 
+LI.kadov-p-CFieldWarning {
+	font-family: Verdana;
+	font-size: 8.0pt;
+	line-height: 12.0pt;
+	color: #000000;
+}
+/*}}end!kadov=======================================================*/ 
+
+
+
+p.GroupBody {
+	margin-left: 12pt;
+	margin-right: 0pt;
+	margin-top: 0pt;
+	margin-bottom: 9pt;
+	x-next-class: GroupBody;
+	x-next-type: p;
+}
+
+/*=(Generated Code)=================================================*/
+/*=(WARNING: DO NOT EDIT OR DELETE THIS SECTION!)===================*/
+/*begin!kadov{{=====================================================*/ 
+LI.kadov-p-CGroupBody {
+}
+/*}}end!kadov=======================================================*/ 
+
+
+
+p.ListBody {
+	margin-left: 12pt;
+	margin-right: 0pt;
+	margin-bottom: 3pt;
+	x-next-class: ListBody;
+	x-next-type: p;
+}
+
+/*=(Generated Code)=================================================*/
+/*=(WARNING: DO NOT EDIT OR DELETE THIS SECTION!)===================*/
+/*begin!kadov{{=====================================================*/ 
+LI.kadov-p-CListBody {
+}
+/*}}end!kadov=======================================================*/ 
+
+
+
+p.TOC1 {
+	margin-top: 12pt;
+	margin-bottom: 3pt;
+	margin-left: 12pt;
+	margin-right: 0pt;
+	x-next-class: TOC2;
+	x-next-type: p;
+	white-space: nowrap;
+}
+
+/*=(Generated Code)=================================================*/
+/*=(WARNING: DO NOT EDIT OR DELETE THIS SECTION!)===================*/
+/*begin!kadov{{=====================================================*/ 
+LI.kadov-p-CTOC1 {
+	white-space: nowrap;
+}
+/*}}end!kadov=======================================================*/ 
+
+
+
+p.TOC2 {
+	margin-bottom: 3pt;
+	margin-left: 28pt;
+	margin-right: 0pt;
+	x-next-class: TOC2;
+	x-next-type: p;
+	white-space: nowrap;
+}
+
+/*=(Generated Code)=================================================*/
+/*=(WARNING: DO NOT EDIT OR DELETE THIS SECTION!)===================*/
+/*begin!kadov{{=====================================================*/ 
+LI.kadov-p-CTOC2 {
+	white-space: nowrap;
+}
+/*}}end!kadov=======================================================*/ 
+
+
+
+p.TOC3 {
+	font-style: italic;
+	margin-bottom: 3pt;
+	margin-left: 46pt;
+	margin-right: 0pt;
+	x-next-class: TOC3;
+	x-next-type: p;
+	white-space: nowrap;
+}
+
+/*=(Generated Code)=================================================*/
+/*=(WARNING: DO NOT EDIT OR DELETE THIS SECTION!)===================*/
+/*begin!kadov{{=====================================================*/ 
+LI.kadov-p-CTOC3 {
+	font-style: italic;
+	white-space: nowrap;
+}
+/*}}end!kadov=======================================================*/ 
+
+
+
+p.NumBody {
+	margin-left: 30pt;
+	margin-right: 0pt;
+	margin-top: 0pt;
+	margin-bottom: 3pt;
+	x-next-class: ErrBody;
+	x-next-type: p;
+}
+
+/*=(Generated Code)=================================================*/
+/*=(WARNING: DO NOT EDIT OR DELETE THIS SECTION!)===================*/
+/*begin!kadov{{=====================================================*/ 
+LI.kadov-p-CNumBody {
+}
+/*}}end!kadov=======================================================*/ 
+
+
+
+p.VarBody {
+	margin-left: 12pt;
+	margin-right: 0pt;
+	margin-bottom: 3pt;
+	x-next-class: VarBody;
+	x-next-type: p;
+}
+
+/*=(Generated Code)=================================================*/
+/*=(WARNING: DO NOT EDIT OR DELETE THIS SECTION!)===================*/
+/*begin!kadov{{=====================================================*/ 
+LI.kadov-p-CVarBody {
+}
+/*}}end!kadov=======================================================*/ 
+
+
+
+p.VarCode {
+	white-space: nowrap;
+	font-family: "Courier New", Courier, Arial, sans-serif;
+	font-size: 10pt;
+	font-weight: normal;
+	font-style: normal;
+	letter-spacing: normal;
+	color: #052;
+	color: #000000;
+	background-color: #eee;
+	background-color: #f9f9f9;
+	margin-top: 9pt;
+	margin-bottom: 9pt;
+	margin-left: 12pt;
+	margin-right: 0pt;
+	padding: 10px;
+	border: 1px dotted #ccc;
+	x-next-class: VarBody;
+	x-next-type: p;
+}
+
+/*=(Generated Code)=================================================*/
+/*=(WARNING: DO NOT EDIT OR DELETE THIS SECTION!)===================*/
+/*begin!kadov{{=====================================================*/ 
+LI.kadov-p-CVarCode {
+	white-space: nowrap;
+	font-family: "Courier New", Courier, Arial, sans-serif;
+	font-size: 10pt;
+	font-weight: normal;
+	font-style: normal;
+	letter-spacing: normal;
+	color: #052;
+	color: #000000;
+}
+/*}}end!kadov=======================================================*/ 
+
+
+
+p.VarNote {
+	font-family: Verdana;
+	font-size: 8.0pt;
+	line-height: 12.0pt;
+	color: #000000;
+	background-color: #ffffe8;
+	margin-top: 9pt;
+	margin-bottom: 9pt;
+	margin-left: 12pt;
+	margin-right: 5%;
+	padding-left: 2pt;
+	padding-right: 2pt;
+	padding-top: 1pt;
+	padding-bottom: 2pt;
+	x-next-class: VarBody;
+	x-next-type: p;
+}
+
+/*=(Generated Code)=================================================*/
+/*=(WARNING: DO NOT EDIT OR DELETE THIS SECTION!)===================*/
+/*begin!kadov{{=====================================================*/ 
+LI.kadov-p-CVarNote {
+	font-family: Verdana;
+	font-size: 8.0pt;
+	line-height: 12.0pt;
+	color: #000000;
+}
+/*}}end!kadov=======================================================*/ 
+
+
+
+p.VarTip {
+	font-family: Verdana;
+	font-size: 8.0pt;
+	line-height: 12.0pt;
+	color: #000000;
+	background-color: #EAF4E8;
+	margin-top: 9pt;
+	margin-bottom: 9pt;
+	margin-left: 12pt;
+	margin-right: 5%;
+	padding-left: 2pt;
+	padding-right: 2pt;
+	padding-top: 1pt;
+	padding-bottom: 2pt;
+	x-next-class: VarBody;
+	x-next-type: p;
+}
+
+/*=(Generated Code)=================================================*/
+/*=(WARNING: DO NOT EDIT OR DELETE THIS SECTION!)===================*/
+/*begin!kadov{{=====================================================*/ 
+LI.kadov-p-CVarTip {
+	font-family: Verdana;
+	font-size: 8.0pt;
+	line-height: 12.0pt;
+	color: #000000;
+}
+/*}}end!kadov=======================================================*/ 
+
+
+
+p.NavLocal {
+	white-space: nowrap;
+	text-indent: -4px;
+	font-family: Verdana, Arial, sans-serif;
+	font-weight: bold;
+	font-style: normal;
+	font-size: 10pt;
+	font-size: 13px;
+	background-color: #e4e4e4;
+	margin-top: 0px;
+	margin-bottom: 12pt;
+	padding-top: 4px;
+	padding-bottom: 4px;
+	padding-left: 0px;
+	padding-right: 0px;
+	border-bottom: 1px solid #e4e4e4;
+	x-next-class: ;
+	x-next-type: p;
+}
+
+/*=(Generated Code)=================================================*/
+/*=(WARNING: DO NOT EDIT OR DELETE THIS SECTION!)===================*/
+/*begin!kadov{{=====================================================*/ 
+LI.kadov-p-CNavLocal {
+	white-space: nowrap;
+	text-indent: -4px;
+	font-family: Verdana, Arial, sans-serif;
+	font-weight: bold;
+	font-style: normal;
+	font-size: 10pt;
+	font-size: 13px;
+}
+/*}}end!kadov=======================================================*/ 
+
+
+
+/* note:
+
+	Internet Explorer is broken on inline elements with horizontal padding.
+	I had something like this:
+
+	<p class=NavLocal><span class=Here>Overview</span>
+
+	...with span.Here having 4px of padding-left. The problem is, when
+	you resize the IE window narrower than the width of the paragraph
+	(auto, nowrap), it collapses the padding on the left and inserts
+	about one line-height above the element. GRR.
+
+	Oddly enough, if the first element has no extra padding-left, it
+	renders fine. After a couple days of "workaround hell," I came up
+	with two ways that seem to work in all current browsers. One is to
+	remove the padding and put &nbsp;&nbsp; on either side of the
+	content in each element within p.NavLocal. RoboHELP makes it pretty
+	hard to maintain that, though, and it makes adding and removing
+	links a royal PITA. The other way is to just put a single &nbsp; at
+	the start of the paragraph, and then shift the paragraph's text left
+	by the width of one space. This opens up the potential for font
+	rendering issues, but using a pixel size for the font should fix
+	that well enough, and seems to work 100% in my testing. To be safe,
+	I'm enclosing the &nbsp; in a span tag so I can remove it later with
+	a single "display: none" if I have to. Here's the new version:
+
+	<p class=NavLocal><span class=wab>&nbsp;</span><span class=Here>Overview</span>
+
+*/
+
+p.NavLocal a {
+	font-weight: normal;
+	font-weight: bold;
+	font-style: normal;
+	color: #8f8f9f;
+	background-color: #eee;
+	margin-top: 0px;
+	margin-bottom: 0px;
+	padding-top: 4px;
+	padding-bottom: 4px;
+	padding-left: 8px;
+	padding-right: 8px;
+	border-top: none;
+	border-bottom: 1px solid #ddd;
+	border-left: none;
+	border-right: #ddd 1px solid;
+}
+
+/* note: would need to expand border styles for netscape 4...border-right etc. won't work */
+
+p.NavLocal a:link,
+p.NavLocal a:active,
+p.NavLocal a:visited {
+	color: #8f8f9f;
+	x-text-underline: off;
+	x-text-overline: off;
+	x-text-line-through: off;
+	/*begin!kadov{{*/ text-decoration: none none none; /*}}end!kadov*/ 
+}
+
+p.NavLocal a:hover {
+	color: #0000ff;
+	x-text-underline: off;
+	x-text-overline: off;
+	x-text-line-through: off;
+	/*begin!kadov{{*/ text-decoration: none none none; /*}}end!kadov*/ 
+}
+
+p.Note {
+	font-family: Verdana;
+	font-size: 8.0pt;
+	line-height: 12.0pt;
+	color: #000000;
+	background-color: #ffffe8;
+	margin-top: 0pt;
+	margin-bottom: 9pt;
+	margin-left: 0pt;
+	margin-right: 5%;
+	padding-left: 2pt;
+	padding-right: 2pt;
+	padding-top: 1pt;
+	padding-bottom: 2pt;
+	x-next-class: ;
+	x-next-type: p;
+}
+
+/*=(Generated Code)=================================================*/
+/*=(WARNING: DO NOT EDIT OR DELETE THIS SECTION!)===================*/
+/*begin!kadov{{=====================================================*/ 
+LI.kadov-p-CNote {
+	font-family: Verdana;
+	font-size: 8.0pt;
+	line-height: 12.0pt;
+	color: #000000;
+}
+/*}}end!kadov=======================================================*/ 
+
+
+
+p.NumberedList {
+	list-style: decimal;
+	line-height: 12pt;
+	margin-bottom: 14pt;
+}
+
+/*=(Generated Code)=================================================*/
+/*=(WARNING: DO NOT EDIT OR DELETE THIS SECTION!)===================*/
+/*begin!kadov{{=====================================================*/ 
+LI.kadov-p-CNumberedList {
+	list-style: decimal;
+	line-height: 12pt;
+}
+/*}}end!kadov=======================================================*/ 
+
+
+
+p.NumCode {
+	white-space: nowrap;
+	font-family: "Courier New", Courier, Arial, sans-serif;
+	font-size: 10pt;
+	font-weight: normal;
+	font-style: normal;
+	letter-spacing: normal;
+	color: #000000;
+	background-color: #f9f9f9;
+	margin-top: -6pt;
+	margin-bottom: 9pt;
+	margin-left: 28pt;
+	margin-right: 0pt;
+	padding: 10px;
+	border: 1px dotted #ccc;
+	x-next-type: p;
+}
+
+/*=(Generated Code)=================================================*/
+/*=(WARNING: DO NOT EDIT OR DELETE THIS SECTION!)===================*/
+/*begin!kadov{{=====================================================*/ 
+LI.kadov-p-CNumCode {
+	white-space: nowrap;
+	font-family: "Courier New", Courier, Arial, sans-serif;
+	font-size: 10pt;
+	font-weight: normal;
+	font-style: normal;
+	letter-spacing: normal;
+	color: #000000;
+}
+/*}}end!kadov=======================================================*/ 
+
+
+
+p.NumNote {
+	font-family: Verdana;
+	font-size: 8.0pt;
+	line-height: 12.0pt;
+	color: #000000;
+	background-color: #ffffe8;
+	margin-top: 9pt;
+	margin-bottom: 9pt;
+	margin-left: 28pt;
+	margin-right: 5%;
+	padding-left: 2pt;
+	padding-right: 2pt;
+	padding-top: 1pt;
+	padding-bottom: 2pt;
+	x-next-type: p;
+}
+
+/*=(Generated Code)=================================================*/
+/*=(WARNING: DO NOT EDIT OR DELETE THIS SECTION!)===================*/
+/*begin!kadov{{=====================================================*/ 
+LI.kadov-p-CNumNote {
+	font-family: Verdana;
+	font-size: 8.0pt;
+	line-height: 12.0pt;
+	color: #000000;
+}
+/*}}end!kadov=======================================================*/ 
+
+
+
+p.NumText {
+	margin-top: 9pt;
+	margin-bottom: 9pt;
+	margin-left: 28pt;
+	margin-right: 0pt;
+	x-next-type: p;
+}
+
+/*=(Generated Code)=================================================*/
+/*=(WARNING: DO NOT EDIT OR DELETE THIS SECTION!)===================*/
+/*begin!kadov{{=====================================================*/ 
+LI.kadov-p-CNumText {
+}
+/*}}end!kadov=======================================================*/ 
+
+
+
+p.NumTip {
+	font-family: Verdana;
+	font-size: 8.0pt;
+	line-height: 12.0pt;
+	color: #000000;
+	background-color: #EAF4E8;
+	margin-top: 9pt;
+	margin-bottom: 9pt;
+	margin-left: 28pt;
+	margin-right: 5%;
+	padding-left: 2pt;
+	padding-right: 2pt;
+	padding-top: 1pt;
+	padding-bottom: 2pt;
+	x-next-type: p;
+}
+
+/*=(Generated Code)=================================================*/
+/*=(WARNING: DO NOT EDIT OR DELETE THIS SECTION!)===================*/
+/*begin!kadov{{=====================================================*/ 
+LI.kadov-p-CNumTip {
+	font-family: Verdana;
+	font-size: 8.0pt;
+	line-height: 12.0pt;
+	color: #000000;
+}
+/*}}end!kadov=======================================================*/ 
+
+
+
+p.NumWarning {
+	font-family: Verdana;
+	font-size: 8.0pt;
+	line-height: 12.0pt;
+	color: #000000;
+	background-color: #F8F6F6;
+	background-color: #FDF0E8;
+	margin-top: 9pt;
+	margin-bottom: 9pt;
+	margin-left: 28pt;
+	margin-right: 5%;
+	padding-left: 2pt;
+	padding-right: 2pt;
+	padding-top: 1pt;
+	padding-bottom: 2pt;
+	border: 1px dotted #ff0000;
+	border: none;
+	x-next-type: p;
+}
+
+/*=(Generated Code)=================================================*/
+/*=(WARNING: DO NOT EDIT OR DELETE THIS SECTION!)===================*/
+/*begin!kadov{{=====================================================*/ 
+LI.kadov-p-CNumWarning {
+	font-family: Verdana;
+	font-size: 8.0pt;
+	line-height: 12.0pt;
+	color: #000000;
+}
+/*}}end!kadov=======================================================*/ 
+
+
+
+p.OptionBody {
+	margin-left: 32pt;
+	margin-right: 0pt;
+	margin-top: 0pt;
+	margin-bottom: 12pt;
+	x-next-class: OptionHeading;
+	x-next-type: h4;
+}
+
+/*=(Generated Code)=================================================*/
+/*=(WARNING: DO NOT EDIT OR DELETE THIS SECTION!)===================*/
+/*begin!kadov{{=====================================================*/ 
+LI.kadov-p-COptionBody {
+}
+/*}}end!kadov=======================================================*/ 
+
+
+
+p.OptionNote {
+	font-family: Verdana;
+	font-size: 8.0pt;
+	line-height: 12.0pt;
+	color: #000000;
+	background-color: #ffffe8;
+	margin-top: 0pt;
+	margin-bottom: 9pt;
+	margin-left: 32pt;
+	margin-right: 5%;
+	padding-left: 2pt;
+	padding-right: 2pt;
+	padding-top: 1pt;
+	padding-bottom: 2pt;
+	x-next-class: FieldBody;
+	x-next-type: p;
+}
+
+/*=(Generated Code)=================================================*/
+/*=(WARNING: DO NOT EDIT OR DELETE THIS SECTION!)===================*/
+/*begin!kadov{{=====================================================*/ 
+LI.kadov-p-COptionNote {
+	font-family: Verdana;
+	font-size: 8.0pt;
+	line-height: 12.0pt;
+	color: #000000;
+}
+/*}}end!kadov=======================================================*/ 
+
+
+
+p.OptionSubBody {
+	margin-left: 52pt;
+	margin-right: 0pt;
+	margin-top: 0pt;
+	margin-bottom: 12pt;
+	x-next-class: OptionSubHeading;
+	x-next-type: h4;
+}
+
+/*=(Generated Code)=================================================*/
+/*=(WARNING: DO NOT EDIT OR DELETE THIS SECTION!)===================*/
+/*begin!kadov{{=====================================================*/ 
+LI.kadov-p-COptionSubBody {
+}
+/*}}end!kadov=======================================================*/ 
+
+
+
+p.OptionTip {
+	font-family: Verdana;
+	font-size: 8.0pt;
+	line-height: 12.0pt;
+	color: #000000;
+	background-color: #EAF4E8;
+	margin-top: 0pt;
+	margin-bottom: 9pt;
+	margin-left: 32pt;
+	margin-right: 5%;
+	padding-left: 2pt;
+	padding-right: 2pt;
+	padding-top: 1pt;
+	padding-bottom: 2pt;
+	x-next-class: OptionBody;
+	x-next-type: p;
+}
+
+/*=(Generated Code)=================================================*/
+/*=(WARNING: DO NOT EDIT OR DELETE THIS SECTION!)===================*/
+/*begin!kadov{{=====================================================*/ 
+LI.kadov-p-COptionTip {
+	font-family: Verdana;
+	font-size: 8.0pt;
+	line-height: 12.0pt;
+	color: #000000;
+}
+/*}}end!kadov=======================================================*/ 
+
+
+
+p.OptionWarning {
+	font-family: Verdana;
+	font-size: 8.0pt;
+	line-height: 12.0pt;
+	color: #000000;
+	background-color: #FDF0E8;
+	margin-top: 0pt;
+	margin-bottom: 9pt;
+	margin-left: 32pt;
+	margin-right: 5%;
+	padding-left: 2pt;
+	padding-right: 2pt;
+	padding-top: 1pt;
+	padding-bottom: 2pt;
+	border: none;
+	x-next-class: OptionBody;
+	x-next-type: p;
+}
+
+/*=(Generated Code)=================================================*/
+/*=(WARNING: DO NOT EDIT OR DELETE THIS SECTION!)===================*/
+/*begin!kadov{{=====================================================*/ 
+LI.kadov-p-COptionWarning {
+	font-family: Verdana;
+	font-size: 8.0pt;
+	line-height: 12.0pt;
+	color: #000000;
+}
+/*}}end!kadov=======================================================*/ 
+
+
+
+p.ParameterBody {
+	margin-left: 12pt;
+	x-next-class: ParameterHeading;
+	x-next-type: h3;
+}
+
+/*=(Generated Code)=================================================*/
+/*=(WARNING: DO NOT EDIT OR DELETE THIS SECTION!)===================*/
+/*begin!kadov{{=====================================================*/ 
+LI.kadov-p-CParameterBody {
+}
+/*}}end!kadov=======================================================*/ 
+
+
+
+p.ParameterNote {
+	font-family: Verdana;
+	font-size: 8.0pt;
+	line-height: 12.0pt;
+	color: #000000;
+	background-color: #ffffe8;
+	margin-top: 0pt;
+	margin-bottom: 9pt;
+	margin-left: 12pt;
+	margin-right: 5%;
+	padding-left: 2pt;
+	padding-right: 2pt;
+	padding-top: 1pt;
+	padding-bottom: 2pt;
+	x-next-class: ParameterBody;
+	x-next-type: p;
+}
+
+/*=(Generated Code)=================================================*/
+/*=(WARNING: DO NOT EDIT OR DELETE THIS SECTION!)===================*/
+/*begin!kadov{{=====================================================*/ 
+LI.kadov-p-CParameterNote {
+	font-family: Verdana;
+	font-size: 8.0pt;
+	line-height: 12.0pt;
+	color: #000000;
+}
+/*}}end!kadov=======================================================*/ 
+
+
+
+p.ParameterTip {
+	font-family: Verdana;
+	font-size: 8.0pt;
+	line-height: 12.0pt;
+	color: #000000;
+	background-color: #EAF4E8;
+	margin-top: 0pt;
+	margin-bottom: 9pt;
+	margin-left: 12pt;
+	margin-right: 5%;
+	padding-left: 2pt;
+	padding-right: 2pt;
+	padding-top: 1pt;
+	padding-bottom: 2pt;
+	x-next-class: ParameterBody;
+	x-next-type: p;
+}
+
+/*=(Generated Code)=================================================*/
+/*=(WARNING: DO NOT EDIT OR DELETE THIS SECTION!)===================*/
+/*begin!kadov{{=====================================================*/ 
+LI.kadov-p-CParameterTip {
+	font-family: Verdana;
+	font-size: 8.0pt;
+	line-height: 12.0pt;
+	color: #000000;
+}
+/*}}end!kadov=======================================================*/ 
+
+
+
+p.ParameterWarning {
+	font-family: Verdana;
+	font-size: 8.0pt;
+	line-height: 12.0pt;
+	color: #000000;
+	background-color: #FDF0E8;
+	margin-top: 0pt;
+	margin-bottom: 9pt;
+	margin-left: 12pt;
+	margin-right: 5%;
+	padding-left: 2pt;
+	padding-right: 2pt;
+	padding-top: 1pt;
+	padding-bottom: 2pt;
+	x-next-class: ParameterBody;
+	x-next-type: p;
+}
+
+/*=(Generated Code)=================================================*/
+/*=(WARNING: DO NOT EDIT OR DELETE THIS SECTION!)===================*/
+/*begin!kadov{{=====================================================*/ 
+LI.kadov-p-CParameterWarning {
+	font-family: Verdana;
+	font-size: 8.0pt;
+	line-height: 12.0pt;
+	color: #000000;
+}
+/*}}end!kadov=======================================================*/ 
+
+
+
+p.Popup {
+	font-family: Arial;
+	font-size: 14pt;
+	font-weight: bold;
+	font-style: normal;
+	color: #ffffff;
+	padding: 6.0pt;
+}
+
+/*=(Generated Code)=================================================*/
+/*=(WARNING: DO NOT EDIT OR DELETE THIS SECTION!)===================*/
+/*begin!kadov{{=====================================================*/ 
+LI.kadov-p-CPopup {
+	font-family: Arial;
+	font-size: 14pt;
+	font-weight: bold;
+	font-style: normal;
+	color: #ffffff;
+}
+/*}}end!kadov=======================================================*/ 
+
+
+
+p.SeeAlso {
+	font-style: italic;
+	font-weight: normal;
+	font-size: 8pt;
+	padding: 1px 8px 2px;
+	background-color: #f0f3f9;
+	margin-top: 18pt;
+	margin-bottom: 12pt;
+	border: 1px solid #e6e9ef;
+}
+
+/*=(Generated Code)=================================================*/
+/*=(WARNING: DO NOT EDIT OR DELETE THIS SECTION!)===================*/
+/*begin!kadov{{=====================================================*/ 
+LI.kadov-p-CSeeAlso {
+	font-style: italic;
+	font-weight: normal;
+	font-size: 8pt;
+}
+/*}}end!kadov=======================================================*/ 
+
+
+
+p.SeeAlso a:link,
+p.SeeAlso a:active,
+p.SeeAlso a:visited {
+	color: #0000ff;
+	x-text-underline: off;
+	x-text-overline: off;
+	x-text-line-through: off;
+	/*begin!kadov{{*/ text-decoration: none none none; /*}}end!kadov*/ 
+}
+
+p.SeeAlso a:hover {
+	color: #0000ff;
+	x-text-underline: normal;
+	/*begin!kadov{{*/ text-decoration: underline; /*}}end!kadov*/ 
+}
+
+p.TableFormat {
+	margin-left: 0pt;
+	margin-right: 0pt;
+	padding-left: 3pt;
+	padding-right: 3pt;
+	padding-top: 3pt;
+	padding-bottom: 3pt;
+}
+
+/*=(Generated Code)=================================================*/
+/*=(WARNING: DO NOT EDIT OR DELETE THIS SECTION!)===================*/
+/*begin!kadov{{=====================================================*/ 
+LI.kadov-p-CTableFormat {
+}
+/*}}end!kadov=======================================================*/ 
+
+
+
+p.TableHeader {
+	font-weight: bold;
+	display: nowrap;
+}
+
+/*=(Generated Code)=================================================*/
+/*=(WARNING: DO NOT EDIT OR DELETE THIS SECTION!)===================*/
+/*begin!kadov{{=====================================================*/ 
+LI.kadov-p-CTableHeader {
+	font-weight: bold;
+}
+/*}}end!kadov=======================================================*/ 
+
+
+
+p.Tip {
+	font-family: Verdana;
+	font-size: 8.0pt;
+	line-height: 12.0pt;
+	color: #000000;
+	background-color: #EAF4E8;
+	margin-top: 0pt;
+	margin-bottom: 9pt;
+	margin-left: 0pt;
+	margin-right: 5%;
+	padding-left: 2pt;
+	padding-right: 2pt;
+	padding-top: 1pt;
+	padding-bottom: 2pt;
+	x-next-class: ;
+	x-next-type: p;
+}
+
+/*=(Generated Code)=================================================*/
+/*=(WARNING: DO NOT EDIT OR DELETE THIS SECTION!)===================*/
+/*begin!kadov{{=====================================================*/ 
+LI.kadov-p-CTip {
+	font-family: Verdana;
+	font-size: 8.0pt;
+	line-height: 12.0pt;
+	color: #000000;
+}
+/*}}end!kadov=======================================================*/ 
+
+
+
+p.Warning {
+	font-family: Verdana;
+	font-size: 8.0pt;
+	line-height: 12.0pt;
+	color: #000000;
+	background-color: #FDF0E8;
+	margin-top: 0pt;
+	margin-bottom: 9pt;
+	margin-left: 0pt;
+	margin-right: 5%;
+	padding-left: 2pt;
+	padding-right: 2pt;
+	padding-top: 1pt;
+	padding-bottom: 2pt;
+	border: 1px dotted #ff0000;
+	border: none;
+	x-next-class: ;
+	x-next-type: p;
+}
+
+/*=(Generated Code)=================================================*/
+/*=(WARNING: DO NOT EDIT OR DELETE THIS SECTION!)===================*/
+/*begin!kadov{{=====================================================*/ 
+LI.kadov-p-CWarning {
+	font-family: Verdana;
+	font-size: 8.0pt;
+	line-height: 12.0pt;
+	color: #000000;
+}
+/*}}end!kadov=======================================================*/ 
+
+
+
+span.Availability {
+	white-space: nowrap;
+	color: #f27129;
+	margin-left: 3ex;
+}
+
+span.Code {
+	font-family: "Courier New", monospace;
+	font-size: 10pt;
+}
+
+span.Default {
+	font-style: italic;
+	color: #aaa;
+}
+
+span.DefaultValue {
+	white-space: nowrap;
+	font-family: "Courier New", monospace;
+	font-size: 9pt;
+	color: #aaa;
+}
+
+span.DefaultValue a.PopupSpot:link,
+span.DefaultValue a.PopupSpot:active,
+span.DefaultValue a.PopupSpot:visited {
+	x-text-underline: off;
+	x-text-overline: off;
+	x-text-line-through: off;
+	color: #aaa;
+	/*begin!kadov{{*/ text-decoration: none none none; /*}}end!kadov*/ 
+}
+
+span.DefaultValue a.PopupSpot:hover {
+	x-text-underline: off;
+	x-text-overline: off;
+	x-text-line-through: off;
+	color: #0000ff;
+	/*begin!kadov{{*/ text-decoration: none none none; /*}}end!kadov*/ 
+}
+
+span.DialogName {
+	font-style: normal;
+	font-weight: normal;
+}
+
+span.Ellipsis {
+	color: #999;
+}
+
+span.Here {
+	font-weight: bold;
+	color: #ffffff;
+	background-color: #699BEF;
+	margin: 0px;
+	padding: 4px 8px;
+	border-top: 1px solid #699BEF;
+	border-bottom: 1px solid #333;
+	border-left: none;
+	border-right: 1px solid #333;
+}
+/* blue tab effect in navbar (NavLocal) */
+	/**/
+
+	
+
+span.nowrap {
+	white-space: nowrap;
+}
+
+span.nowrap img {
+	vertical-align: middle;
+}
+
+span.Path {
+	font-family: "Courier New", monospace;
+	font-size: 9pt;
+}
+
+span.StartMenuItem {
+	font-weight: bold;
+	font-style: italic;
+}
+
+span.VarType {
+	font-family: "Courier New", monospace;
+	font-size: 9pt;
+	font-style: italic;
+	color: #abd;
+}
+
+span.VarType a.PopupSpot:link,
+span.VarType a.PopupSpot:active,
+span.VarType a.PopupSpot:visited {
+	color: #abd;
+	x-text-underline: off;
+	x-text-overline: off;
+	x-text-line-through: off;
+	/*begin!kadov{{*/ text-decoration: none none none; /*}}end!kadov*/ 
+}
+
+span.VarType a.PopupSpot:hover {
+	color: #0000ff;
+	x-text-underline: off;
+	x-text-overline: off;
+	x-text-line-through: off;
+	/*begin!kadov{{*/ text-decoration: none none none; /*}}end!kadov*/ 
+}
+
+span.VarType a:link,
+span.VarType a:active,
+span.VarType a:visited {
+	color: #abd;
+	x-text-underline: off;
+	x-text-overline: off;
+	x-text-line-through: off;
+	/*begin!kadov{{*/ text-decoration: none none none; /*}}end!kadov*/ 
+}
+
+span.VarType a:hover {
+	color: #0000ff;
+	x-text-underline: off;
+	x-text-overline: off;
+	x-text-line-through: off;
+	/*begin!kadov{{*/ text-decoration: none none none; /*}}end!kadov*/ 
+}
+
+span.type {
+	color: #aaa;
+}
+
+span.wab {
+	font-family: Verdana;
+	font-size: 13px;
+	padding: 0px 0px;
+	margin: 0px;
+	border: none;
+	visibility: hidden;
+}
+/* workaround, baybee! */
+	
+
+table.ActionList {
+	margin-top: 18pt;
+	margin-bottom: 18pt;
+	border-top: #c0c0c0 1px solid;
+	border-right: #c0c0c0 1px solid;
+	border-left: #c0c0c0 1px solid;
+	border-bottom: #c0c0c0 1px solid;
+}
+
+table.ActionList img {
+	vertical-align: middle;
+	margin: 2px 0px;
+	margin: 0px;
+	padding: 0px;
+}
+
+table.ActionList p {
+	margin: 0px;
+	margin-bottom: 3pt;
+	padding: 2px;
+}
+
+/*=(Generated Code)=================================================*/
+/*=(WARNING: DO NOT EDIT OR DELETE THIS SECTION!)===================*/
+/*begin!kadov{{=====================================================*/ 
+table.ActionList LI.kadov-p {
+}
+/*}}end!kadov=======================================================*/ 
+
+
+
+table.ActionList p.ListBody {
+	margin-left: 0px;
+	margin-right: 0px;
+	margin-top: 0px;
+	margin-bottom: 3pt;
+	padding-left: 0px;
+	padding-top: 0px;
+	padding-bottom: 0px;
+	padding: 2px;
+}
+
+/*=(Generated Code)=================================================*/
+/*=(WARNING: DO NOT EDIT OR DELETE THIS SECTION!)===================*/
+/*begin!kadov{{=====================================================*/ 
+table.ActionList LI.kadov-p-CListBody {
+}
+/*}}end!kadov=======================================================*/ 
+
+
+
+table.ActionList tr.Category {
+	background-color: #aaa;
+	background-color: #a0a0a0;
+	color: #ffffff;
+}
+
+table.ActionList tr.Category h2.ListHeading {
+	text-transform: uppercase;
+	font-family: Arial;
+	font-size: 9.0pt;
+	font-style: italic;
+	font-weight: bold;
+	letter-spacing: 1ex;
+	color: #ffffff;
+	white-space: nowrap;
+	margin-top: 0px;
+	margin-bottom: 0px;
+	padding-top: 0px;
+	padding-bottom: 1px;
+	padding-top: 1px;
+	padding-bottom: 1px;
+}
+
+/*=(Generated Code)=================================================*/
+/*=(WARNING: DO NOT EDIT OR DELETE THIS SECTION!)===================*/
+/*begin!kadov{{=====================================================*/ 
+table.ActionList tr.Category LI.kadov-h2-CListHeading {
+	text-transform: uppercase;
+	font-family: Arial;
+	font-size: 9.0pt;
+	font-style: italic;
+	font-weight: bold;
+	letter-spacing: 1ex;
+	color: #ffffff;
+	white-space: nowrap;
+}
+/*}}end!kadov=======================================================*/ 
+
+
+
+table.ActionList tr.Header {
+	background-color: #eee;
+	color: #000000;
+}
+
+table.ActionList tr.Header p {
+	font-family: Verdana;
+	font-size: 8.0pt;
+	font-style: normal;
+	font-weight: bold;
+	color: #3176EA;
+	white-space: nowrap;
+	margin-bottom: 0px;
+	padding-top: 0px;
+	padding-bottom: 1px;
+}
+
+/*=(Generated Code)=================================================*/
+/*=(WARNING: DO NOT EDIT OR DELETE THIS SECTION!)===================*/
+/*begin!kadov{{=====================================================*/ 
+table.ActionList tr.Header LI.kadov-p {
+	font-family: Verdana;
+	font-size: 8.0pt;
+	font-style: normal;
+	font-weight: bold;
+	color: #3176EA;
+	white-space: nowrap;
+}
+/*}}end!kadov=======================================================*/ 
+
+
+
+table.Parameters {
+	margin-top: 6pt;
+	margin-bottom: 9pt;
+}
+
+table.Parameters h4.OptionHeading {
+	margin-left: 12pt;
+}
+
+/*=(Generated Code)=================================================*/
+/*=(WARNING: DO NOT EDIT OR DELETE THIS SECTION!)===================*/
+/*begin!kadov{{=====================================================*/ 
+table.Parameters LI.kadov-h4-COptionHeading {
+}
+/*}}end!kadov=======================================================*/ 
+
+
+
+table.Parameters p {
+	font-weight: normal;
+	color: #000000;
+	margin-left: 3pt;
+	margin-right: 3pt;
+	margin-top: 2pt;
+	margin-bottom: 2pt;
+}
+
+/*=(Generated Code)=================================================*/
+/*=(WARNING: DO NOT EDIT OR DELETE THIS SECTION!)===================*/
+/*begin!kadov{{=====================================================*/ 
+table.Parameters LI.kadov-p {
+	font-weight: normal;
+	color: #000000;
+}
+/*}}end!kadov=======================================================*/ 
+
+
+
+table.Parameters p.OptionBody {
+	margin-left: 12pt;
+	margin-right: 0pt;
+	margin-bottom: 9pt;
+}
+
+/*=(Generated Code)=================================================*/
+/*=(WARNING: DO NOT EDIT OR DELETE THIS SECTION!)===================*/
+/*begin!kadov{{=====================================================*/ 
+table.Parameters LI.kadov-p-COptionBody {
+}
+/*}}end!kadov=======================================================*/ 
+
+
+
+tr.TableHeader td {
+	background-color: #c0c0c0;
+}
+
+tr.TableHeader td p {
+	color: #ffffff;
+	font-weight: bold;
+	white-space: nowrap;
+}
+
+/*=(Generated Code)=================================================*/
+/*=(WARNING: DO NOT EDIT OR DELETE THIS SECTION!)===================*/
+/*begin!kadov{{=====================================================*/ 
+tr.TableHeader td LI.kadov-p {
+	color: #ffffff;
+	font-weight: bold;
+	white-space: nowrap;
+}
+/*}}end!kadov=======================================================*/ 
+
+
+
+</style>
+</head>
+
+<body>
+
+<h1>Project Help File</h1><p class="NavLocal"><span class=wab>&nbsp;</span><span class="here">Welcome</span></p><div class="Properties"><h2>Project Help File</h2><h3>Plugin Name:</h3><p><blockquote>Project</blockquote></p><h3>Current Version:</h3><p><blockquote>1.7.3.0</blockquote></p><h3>Description:</h3><p><blockquote>The Project Action Plugin handles many actions common to most projects.<br><br>Thanks to Jassing for help with the file association code.<br>Thanks to Imagine Programming for help with the compilation status discriminate.</blockquote></p><h3>Licence:</h3><p><blockquote>Free to use and distribute.</blockquote></p><h3>Author:</h3><p><blockquote>Centauri Soldier</blockquote></p><h3>Web:</h3><p><blockquote><a href="http://www.AMSPublic.com" target="_blank">www.AMSPublic.com</a></blockquote></p><h3>E-mail:</h3><p><blockquote><a href="mailto:CentauriSoldier@AMSPublic.com">CentauriSoldier@AMSPublic.com</a></blockquote></p><h3>Copyright:</h3><p><blockquote>Copyright © 2009-2011 AMSPublic.com</blockquote></p><h3>Install Notes:</h3><p><blockquote>Place the "Project" folder in your "AutoPlay Media Studio\Plugins\Actions" folder.</blockquote></p></div><!-- /Properties --><hr><div class="Properties"><h2>Table of Contents</h2><p><blockquote><A href="#Project.Associate"><b>Project.Associate</b></A><br><A href="#Project.CheckCLAs"><b>Project.CheckCLAs</b></A><br><A href="#Project.DeleteResources"><b>Project.DeleteResources</b></A><br><A href="#Project.DidCrash"><b>Project.DidCrash</b></A><br><A href="#Project.Disassociate"><b>Project.Disassociate</b></A><br><A href="#Project.GetCLAArg"><b>Project.GetCLAArg</b></A><br><A href="#Project.GetCLAPairDivider"><b>Project.GetCLAPairDivider</b></A><br><A href="#Project.GetDetails"><b>Project.GetDetails</b></A><br><A href="#Project.GetExecutionPoint"><b>Project.GetExecutionPoint</b></A><br><A href="#Project.GetFileCode"><b>Project.GetFileCode</b></A><br><A href="#Project.GetLastFolder"><b>Project.GetLastFolder</b></A><br><A href="#Project.GetRegValue"><b>Project.GetRegValue</b></A><br><A href="#Project.GetValue"><b>Project.GetValue</b></A><br><A href="#Project.HasRun"><b>Project.HasRun</b></A><br><A href="#Project.Initialize"><b>Project.Initialize</b></A><br><A href="#Project.IsCompiled"><b>Project.IsCompiled</b></A><br><A href="#Project.IsRegistered"><b>Project.IsRegistered</b></A><br><A href="#Project.IsRunning"><b>Project.IsRunning</b></A><br><A href="#Project.ProcessVersion"><b>Project.ProcessVersion</b></A><br><A href="#Project.Register"><b>Project.Register</b></A><br><A href="#Project.RenameResources"><b>Project.RenameResources</b></A><br><A href="#Project.RequireOS"><b>Project.RequireOS</b></A><br><A href="#Project.RestoreAudioSettings"><b>Project.RestoreAudioSettings</b></A><br><A href="#Project.RestoreObjectStates"><b>Project.RestoreObjectStates</b></A><br><A href="#Project.RestoreWindowPos"><b>Project.RestoreWindowPos</b></A><br><A href="#Project.RestoreWindowSize"><b>Project.RestoreWindowSize</b></A><br><A href="#Project.SaveAudioSettings"><b>Project.SaveAudioSettings</b></A><br><A href="#Project.SaveObjectStates"><b>Project.SaveObjectStates</b></A><br><A href="#Project.SaveWindowPos"><b>Project.SaveWindowPos</b></A><br><A href="#Project.SaveWindowSize"><b>Project.SaveWindowSize</b></A><br><A href="#Project.SetCLAPairDivider"><b>Project.SetCLAPairDivider</b></A><br><A href="#Project.SetCLAs"><b>Project.SetCLAs</b></A><br><A href="#Project.SetCrash"><b>Project.SetCrash</b></A><br><A href="#Project.SetLastFolder"><b>Project.SetLastFolder</b></A><br><A href="#Project.SetRegValue"><b>Project.SetRegValue</b></A><br><A href="#Project.SetValue"><b>Project.SetValue</b></A><br><A href="#Project.ShowAbout"><b>Project.ShowAbout</b></A><br><A href="#Project.Shutdown"><b>Project.Shutdown</b></A><br><A href="#Project.Unregister"><b>Project.Unregister</b></A><br><A href="#Project.UpdateRuntime"><b>Project.UpdateRuntime</b></A><br></blockquote></p></div><!-- /Properties --><h1><A name="Project.Associate">Project.Associate</A></h1><br><div class=Declaration><!--(Table)=========================================================--><!--begin!kadov{{--><div align=left><!--}}end!kadov--><table x-use-null-cells		style="float: alignleft;		x-cell-content-align: Top;		border-spacing: 0px;		border-spacing: 0px;"		cellspacing=0><col><col><tr style="x-cell-content-align: top;" valign=top><td style="padding-right: 0px;			padding-left: 0px;			border-top-style: none;			border-bottom-style: none;			border-right-style: none;			border-left-style: none;"><p>Project.Associate (&nbsp;</td><td style="padding-right: 0px;			padding-left: 0px;			border-top-style: none;			border-right-style: none;			border-bottom-style: none;"><p><span class=VarType>(string)&nbsp;</span>Extension <span class=DefaultValue> = "abcd"</span>, </p><p><span class=VarType>(string)&nbsp;</span>Exe <span class=DefaultValue> = "_ExeFolder.."\\"..Project.GetDetails().ExeName"</span>, </p><p><span class=VarType>(string)&nbsp;</span>Icon <span class=DefaultValue> = "_ExeFolder.."\\"..Project.GetDetails().ExeName"</span>, </p><p><span class=VarType>(string)&nbsp;</span>Short Description <span class=DefaultValue> = "Project"</span>, </p><p><span class=VarType>(string)&nbsp;</span>Long Description <span class=DefaultValue> = "Project Manager"</span> )</p></td></tr></table><!--begin!kadov{{--></div><!--}}end!kadov--></div><h2 style="margin-bottom: 3pt;">Description</h2><p><blockquote>Creates a file and icon association with the program for a specified file extension.</blockquote></p><blockquote><p class="Note"> <span style="font-weight: bold;">Note: </span>Warning: If you are compiling your project with "MoleBox Virtualization Solution" then be sure to have your associated file icons OUTSIDE of the compiled exe and be sure that the association icon paths point to them as well or Windows will not be able to see them.</p></blockquote><h2 class="H2Tight">Parameters</h2><h3 class="ParameterHeading">Extension</h3><p class="ParameterBody"><span class="type">(string)&nbsp;</span>The file extension for which to create the association.</p><blockquote><p class="Note"> <span style="font-weight: bold;">Note: </span>You may include OR exclude the "." before the file extension letters.</p></blockquote><h3 class="ParameterHeading">Exe</h3><p class="ParameterBody"><span class="type">(string)&nbsp;</span>The full path to the exe file which will be executed when the specified file type is clicked.</p><blockquote><p class="Note"> <span style="font-weight: bold;">Note: </span>Leave this blank to use the default program exe file.</p></blockquote><h3 class="ParameterHeading">Icon</h3><p class="ParameterBody"><span class="type">(string)&nbsp;</span>The full path to the icon file that will be used for this file type.</p><blockquote><p class="Note"> <span style="font-weight: bold;">Note: </span>Leave this blank to use the default program icon file.</p></blockquote><h3 class="ParameterHeading">Short Description</h3><p class="ParameterBody"><span class="type">(string)&nbsp;</span>It's best to use the project name or something as simple for this.</p><h3 class="ParameterHeading">Long Description</h3><p class="ParameterBody"><span class="type">(string)&nbsp;</span>This text will show up when a user mouse-overs a file.</p><h2>Returns</h2><blockquote><p>This action dose not return any value.</p></blockquote><br><h1><A name="Project.CheckCLAs">Project.CheckCLAs</A></h1><br><div class=Declaration><!--(Table)=========================================================--><!--begin!kadov{{--><div align=left><!--}}end!kadov--><table x-use-null-cells		style="float: alignleft;		x-cell-content-align: Top;		border-spacing: 0px;		border-spacing: 0px;"		cellspacing=0><col><col><tr style="x-cell-content-align: top;" valign=top><td style="padding-right: 0px;			padding-left: 0px;			border-top-style: none;			border-bottom-style: none;			border-right-style: none;			border-left-style: none;"><p>Project.CheckCLAs ()</td><td style="padding-right: 0px;			padding-left: 0px;			border-top-style: none;			border-right-style: none;			border-bottom-style: none;"></td></tr></table><!--begin!kadov{{--></div><!--}}end!kadov--></div><h2 style="margin-bottom: 3pt;">Description</h2><p><blockquote>Checks for the existence of custom command line arguments and processes all present.</blockquote></p><h2>Returns</h2><blockquote><p>This action dose not return any value.</p></blockquote><br><h1><A name="Project.DeleteResources">Project.DeleteResources</A></h1><br><div class=Declaration><!--(Table)=========================================================--><!--begin!kadov{{--><div align=left><!--}}end!kadov--><table x-use-null-cells		style="float: alignleft;		x-cell-content-align: Top;		border-spacing: 0px;		border-spacing: 0px;"		cellspacing=0><col><col><tr style="x-cell-content-align: top;" valign=top><td style="padding-right: 0px;			padding-left: 0px;			border-top-style: none;			border-bottom-style: none;			border-right-style: none;			border-left-style: none;"><p><span class=VarType>(table)&nbsp;</span>Project.DeleteResources (&nbsp;</td><td style="padding-right: 0px;			padding-left: 0px;			border-top-style: none;			border-right-style: none;			border-bottom-style: none;"><p><span class=VarType>(table)&nbsp;</span>Resources <span class=DefaultValue> = tResources</span> )</p></td></tr></table><!--begin!kadov{{--></div><!--}}end!kadov--></div><h2 style="margin-bottom: 3pt;">Description</h2><p><blockquote>Deletes a list of files on the end-user's system. Very usefiul for deleting truncated resources after a runtime update.</blockquote></p><h2 class="H2Tight">Parameters</h2><h3 class="ParameterHeading">Resources</h3><p class="ParameterBody"><span class="type">(table)&nbsp;</span>A table containing the paths of the resources to delete.</p><h2>Returns</h2><blockquote><p><span class=type>(table) </span><br>Returns a table indexed by File and Success.<br>If an error occurs or the table which was passed was nil then nil is returned.</p></blockquote><br><h1><A name="Project.DidCrash">Project.DidCrash</A></h1><br><div class=Declaration><!--(Table)=========================================================--><!--begin!kadov{{--><div align=left><!--}}end!kadov--><table x-use-null-cells		style="float: alignleft;		x-cell-content-align: Top;		border-spacing: 0px;		border-spacing: 0px;"		cellspacing=0><col><col><tr style="x-cell-content-align: top;" valign=top><td style="padding-right: 0px;			padding-left: 0px;			border-top-style: none;			border-bottom-style: none;			border-right-style: none;			border-left-style: none;"><p><span class=VarType>(boolean)&nbsp;</span>Project.DidCrash ()</td><td style="padding-right: 0px;			padding-left: 0px;			border-top-style: none;			border-right-style: none;			border-bottom-style: none;"></td></tr></table><!--begin!kadov{{--></div><!--}}end!kadov--></div><h2 style="margin-bottom: 3pt;">Description</h2><p><blockquote>Determines whether or not the program crashed during its last run.</blockquote></p><h2>Returns</h2><blockquote><p><span class=type>(boolean) </span>Returns true if the program crashed during the last run or false if it shutdown normally.</p></blockquote><br><h1><A name="Project.Disassociate">Project.Disassociate</A></h1><br><div class=Declaration><!--(Table)=========================================================--><!--begin!kadov{{--><div align=left><!--}}end!kadov--><table x-use-null-cells		style="float: alignleft;		x-cell-content-align: Top;		border-spacing: 0px;		border-spacing: 0px;"		cellspacing=0><col><col><tr style="x-cell-content-align: top;" valign=top><td style="padding-right: 0px;			padding-left: 0px;			border-top-style: none;			border-bottom-style: none;			border-right-style: none;			border-left-style: none;"><p>Project.Disassociate (&nbsp;</td><td style="padding-right: 0px;			padding-left: 0px;			border-top-style: none;			border-right-style: none;			border-bottom-style: none;"><p><span class=VarType>(string)&nbsp;</span>Extension <span class=DefaultValue> = ".abcd"</span> )</p></td></tr></table><!--begin!kadov{{--></div><!--}}end!kadov--></div><h2 style="margin-bottom: 3pt;">Description</h2><p><blockquote>Deletes a file and icon association with the program.</blockquote></p><h2 class="H2Tight">Parameters</h2><h3 class="ParameterHeading">Extension</h3><p class="ParameterBody"><span class="type">(string)&nbsp;</span>The file extension for which to create the association.</p><blockquote><p class="Note"> <span style="font-weight: bold;">Note: </span>You may include OR exclude the "." before the file extension letters.</p></blockquote><h2>Returns</h2><blockquote><p>This action dose not return any value.</p></blockquote><br><h1><A name="Project.GetCLAArg">Project.GetCLAArg</A></h1><br><div class=Declaration><!--(Table)=========================================================--><!--begin!kadov{{--><div align=left><!--}}end!kadov--><table x-use-null-cells		style="float: alignleft;		x-cell-content-align: Top;		border-spacing: 0px;		border-spacing: 0px;"		cellspacing=0><col><col><tr style="x-cell-content-align: top;" valign=top><td style="padding-right: 0px;			padding-left: 0px;			border-top-style: none;			border-bottom-style: none;			border-right-style: none;			border-left-style: none;"><p><span class=VarType>(string)&nbsp;</span>Project.GetCLAArg (&nbsp;</td><td style="padding-right: 0px;			padding-left: 0px;			border-top-style: none;			border-right-style: none;			border-bottom-style: none;"><p><span class=VarType>(string)&nbsp;</span>CLA <span class=DefaultValue> = "k"</span> )</p></td></tr></table><!--begin!kadov{{--></div><!--}}end!kadov--></div><h2 style="margin-bottom: 3pt;">Description</h2><p><blockquote>Gets the argument passed to the program via a CLA value/argument pair </blockquote></p><h2 class="H2Tight">Parameters</h2><h3 class="ParameterHeading">CLA</h3><p class="ParameterBody"><span class="type">(string)&nbsp;</span>The value of the CLA value/argument pair for which to find the argument.</p><h2>Returns</h2><blockquote><p><span class=type>(string) </span><br>Returns the argument of the CLA value/argument pair.<br>If an error occurs or the CLA does not exist or was not passed to the program, a blank string is returned.</p></blockquote><br><h1><A name="Project.GetCLAPairDivider">Project.GetCLAPairDivider</A></h1><br><div class=Declaration><!--(Table)=========================================================--><!--begin!kadov{{--><div align=left><!--}}end!kadov--><table x-use-null-cells		style="float: alignleft;		x-cell-content-align: Top;		border-spacing: 0px;		border-spacing: 0px;"		cellspacing=0><col><col><tr style="x-cell-content-align: top;" valign=top><td style="padding-right: 0px;			padding-left: 0px;			border-top-style: none;			border-bottom-style: none;			border-right-style: none;			border-left-style: none;"><p><span class=VarType>(string)&nbsp;</span>Project.GetCLAPairDivider ()</td><td style="padding-right: 0px;			padding-left: 0px;			border-top-style: none;			border-right-style: none;			border-bottom-style: none;"></td></tr></table><!--begin!kadov{{--></div><!--}}end!kadov--></div><h2 style="margin-bottom: 3pt;">Description</h2><p><blockquote>Gets the control character used in separating the value element of a CLA value/argument pair from the argument element.</blockquote></p><h2>Returns</h2><blockquote><p><span class=type>(string) </span><br>Returns the control character.</p></blockquote><br><h1><A name="Project.GetDetails">Project.GetDetails</A></h1><br><div class=Declaration><!--(Table)=========================================================--><!--begin!kadov{{--><div align=left><!--}}end!kadov--><table x-use-null-cells		style="float: alignleft;		x-cell-content-align: Top;		border-spacing: 0px;		border-spacing: 0px;"		cellspacing=0><col><col><tr style="x-cell-content-align: top;" valign=top><td style="padding-right: 0px;			padding-left: 0px;			border-top-style: none;			border-bottom-style: none;			border-right-style: none;			border-left-style: none;"><p><span class=VarType>(table)&nbsp;</span>Project.GetDetails ()</td><td style="padding-right: 0px;			padding-left: 0px;			border-top-style: none;			border-right-style: none;			border-bottom-style: none;"></td></tr></table><!--begin!kadov{{--></div><!--}}end!kadov--></div><h2 style="margin-bottom: 3pt;">Description</h2><p><blockquote>Gets the project's details.</blockquote></p><h2>Returns</h2><blockquote><p><span class=type>(table) </span>Returns a table indexed by the following values:<br><br>Author<br>Company<br>Copyright<br>Email<br>ExeName<br>IconFile<br>License<br>Title<br>Version<br>Website</p></blockquote><br><h1><A name="Project.GetExecutionPoint">Project.GetExecutionPoint</A></h1><br><div class=Declaration><!--(Table)=========================================================--><!--begin!kadov{{--><div align=left><!--}}end!kadov--><table x-use-null-cells		style="float: alignleft;		x-cell-content-align: Top;		border-spacing: 0px;		border-spacing: 0px;"		cellspacing=0><col><col><tr style="x-cell-content-align: top;" valign=top><td style="padding-right: 0px;			padding-left: 0px;			border-top-style: none;			border-bottom-style: none;			border-right-style: none;			border-left-style: none;"><p><span class=VarType>(string)&nbsp;</span>Project.GetExecutionPoint ()</td><td style="padding-right: 0px;			padding-left: 0px;			border-top-style: none;			border-right-style: none;			border-bottom-style: none;"></td></tr></table><!--begin!kadov{{--></div><!--}}end!kadov--></div><h2 style="margin-bottom: 3pt;">Description</h2><p><blockquote>Determines the place-type from where the program is running.</blockquote></p><h2>Returns</h2><blockquote><p><span class=type>(string) </span>Returns "Uncompiled" if the project is not yet compiled.<br><br>If the program is compiled, the returned string indicates the place-type.<br><br>Possible (compiled) return values:<br>"CD/DVD/ISO"<br>"Hard Drive"<br>"Removable Drive"<br>"Network Drive"<br>"RAM Disk"<br>"Unknown"<br>"Invalid"</p></blockquote><br><h1><A name="Project.GetFileCode">Project.GetFileCode</A></h1><br><div class=Declaration><!--(Table)=========================================================--><!--begin!kadov{{--><div align=left><!--}}end!kadov--><table x-use-null-cells		style="float: alignleft;		x-cell-content-align: Top;		border-spacing: 0px;		border-spacing: 0px;"		cellspacing=0><col><col><tr style="x-cell-content-align: top;" valign=top><td style="padding-right: 0px;			padding-left: 0px;			border-top-style: none;			border-bottom-style: none;			border-right-style: none;			border-left-style: none;"><p><span class=VarType>(table)&nbsp;</span>Project.GetFileCode (&nbsp;</td><td style="padding-right: 0px;			padding-left: 0px;			border-top-style: none;			border-right-style: none;			border-bottom-style: none;"><p><span class=VarType>(string)&nbsp;</span>Extension <span class=DefaultValue> = ".txt"</span> )</p></td></tr></table><!--begin!kadov{{--></div><!--}}end!kadov--></div><h2 style="margin-bottom: 3pt;">Description</h2><p><blockquote>Dermines whether or not the program was opened by a calling file with the specified extension.</blockquote></p><h2 class="H2Tight">Parameters</h2><h3 class="ParameterHeading">Extension</h3><p class="ParameterBody"><span class="type">(string)&nbsp;</span>The allowed file type.</p><h2>Returns</h2><blockquote><p><span class=type>(table) </span>Returns a table indexed by Code and File.<br><br>If the program was called by the specified file type then the Code value is 1 and the File value is the path to the calling file.<br><br>If the program was called by a file but not of the specified type then the Code value is -1 and the File value is the path to the calling file.<br><br>If the program was not called by a file then the Code value is 0 and the File value is a blank string.</p></blockquote><br><h2 class=ExampleHeading>Example</h2><p class=ExampleCode>local tReturn = Project.GetFileCode(".skde");<br><br>if tReturn.Code == 1 then<br>Dialog.Message("Success", "Program opened with file...\r\n"..tReturn.File);<br>elseif tReturn.Code == -1 then<br>Dialog.Message("Error", "That file type is not supported.");<br>end</p><br><br><h1><A name="Project.GetLastFolder">Project.GetLastFolder</A></h1><br><div class=Declaration><!--(Table)=========================================================--><!--begin!kadov{{--><div align=left><!--}}end!kadov--><table x-use-null-cells		style="float: alignleft;		x-cell-content-align: Top;		border-spacing: 0px;		border-spacing: 0px;"		cellspacing=0><col><col><tr style="x-cell-content-align: top;" valign=top><td style="padding-right: 0px;			padding-left: 0px;			border-top-style: none;			border-bottom-style: none;			border-right-style: none;			border-left-style: none;"><p><span class=VarType>(string)&nbsp;</span>Project.GetLastFolder ()</td><td style="padding-right: 0px;			padding-left: 0px;			border-top-style: none;			border-right-style: none;			border-bottom-style: none;"></td></tr></table><!--begin!kadov{{--></div><!--}}end!kadov--></div><h2 style="margin-bottom: 3pt;">Description</h2><p><blockquote>Get the last folder set by the Project.SetLastFolder() function.</blockquote></p><h2>Returns</h2><blockquote><p><span class=type>(string) </span>Returns a string.<br>If there was no last folder declared or if an error occurs then a blank string is returned.</p></blockquote><br><h1><A name="Project.GetRegValue">Project.GetRegValue</A></h1><br><div class=Declaration><!--(Table)=========================================================--><!--begin!kadov{{--><div align=left><!--}}end!kadov--><table x-use-null-cells		style="float: alignleft;		x-cell-content-align: Top;		border-spacing: 0px;		border-spacing: 0px;"		cellspacing=0><col><col><tr style="x-cell-content-align: top;" valign=top><td style="padding-right: 0px;			padding-left: 0px;			border-top-style: none;			border-bottom-style: none;			border-right-style: none;			border-left-style: none;"><p><span class=VarType>(string)&nbsp;</span>Project.GetRegValue (&nbsp;</td><td style="padding-right: 0px;			padding-left: 0px;			border-top-style: none;			border-right-style: none;			border-bottom-style: none;"><p><span class=VarType>(string)&nbsp;</span>Value Name <span class=DefaultValue> = "InstalledPath"</span> )</p></td></tr></table><!--begin!kadov{{--></div><!--}}end!kadov--></div><h2 style="margin-bottom: 3pt;">Description</h2><p><blockquote>Gets one of the program's registry value's data.</blockquote></p><h2 class="H2Tight">Parameters</h2><h3 class="ParameterHeading">Value Name</h3><p class="ParameterBody"><span class="type">(string)&nbsp;</span>The value name from which to retrieve the value data.</p><h2>Returns</h2><blockquote><p><span class=type>(string) </span>Returns the value data of the specifed registry value name or a blank string if the key, value name or data does not exist.</p></blockquote><br><h1><A name="Project.GetValue">Project.GetValue</A></h1><br><div class=Declaration><!--(Table)=========================================================--><!--begin!kadov{{--><div align=left><!--}}end!kadov--><table x-use-null-cells		style="float: alignleft;		x-cell-content-align: Top;		border-spacing: 0px;		border-spacing: 0px;"		cellspacing=0><col><col><tr style="x-cell-content-align: top;" valign=top><td style="padding-right: 0px;			padding-left: 0px;			border-top-style: none;			border-bottom-style: none;			border-right-style: none;			border-left-style: none;"><p><span class=VarType>(string)&nbsp;</span>Project.GetValue (&nbsp;</td><td style="padding-right: 0px;			padding-left: 0px;			border-top-style: none;			border-right-style: none;			border-bottom-style: none;"><p><span class=VarType>(string)&nbsp;</span>Section <span class=DefaultValue> = "Section"</span>, </p><p><span class=VarType>(string)&nbsp;</span>Value <span class=DefaultValue> = "Value"</span> )</p></td></tr></table><!--begin!kadov{{--></div><!--}}end!kadov--></div><h2 style="margin-bottom: 3pt;">Description</h2><p><blockquote>Returns a specified value's data from the project ini file.</blockquote></p><h2 class="H2Tight">Parameters</h2><h3 class="ParameterHeading">Section</h3><p class="ParameterBody"><span class="type">(string)&nbsp;</span>The name of the section in the ini file.</p><h3 class="ParameterHeading">Value</h3><p class="ParameterBody"><span class="type">(string)&nbsp;</span>The name of the value in the ini file.</p><h2>Returns</h2><blockquote><p><span class=type>(string) </span>Returns a string containing the data of the specified value. If an error occurs or the value or section does not exist then a blank string is returned.</p></blockquote><br><h1><A name="Project.HasRun">Project.HasRun</A></h1><br><div class=Declaration><!--(Table)=========================================================--><!--begin!kadov{{--><div align=left><!--}}end!kadov--><table x-use-null-cells		style="float: alignleft;		x-cell-content-align: Top;		border-spacing: 0px;		border-spacing: 0px;"		cellspacing=0><col><col><tr style="x-cell-content-align: top;" valign=top><td style="padding-right: 0px;			padding-left: 0px;			border-top-style: none;			border-bottom-style: none;			border-right-style: none;			border-left-style: none;"><p><span class=VarType>(boolean)&nbsp;</span>Project.HasRun ()</td><td style="padding-right: 0px;			padding-left: 0px;			border-top-style: none;			border-right-style: none;			border-bottom-style: none;"></td></tr></table><!--begin!kadov{{--></div><!--}}end!kadov--></div><h2 style="margin-bottom: 3pt;">Description</h2><p><blockquote>Returns true if the project has run before and false if it has not.</blockquote></p><h2>Returns</h2><blockquote><p><span class=type>(boolean) </span></p></blockquote><br><h1><A name="Project.Initialize">Project.Initialize</A></h1><br><div class=Declaration><!--(Table)=========================================================--><!--begin!kadov{{--><div align=left><!--}}end!kadov--><table x-use-null-cells		style="float: alignleft;		x-cell-content-align: Top;		border-spacing: 0px;		border-spacing: 0px;"		cellspacing=0><col><col><tr style="x-cell-content-align: top;" valign=top><td style="padding-right: 0px;			padding-left: 0px;			border-top-style: none;			border-bottom-style: none;			border-right-style: none;			border-left-style: none;"><p>Project.Initialize (&nbsp;</td><td style="padding-right: 0px;			padding-left: 0px;			border-top-style: none;			border-right-style: none;			border-bottom-style: none;"><p><span class=VarType>(string)&nbsp;</span>Title <span class=DefaultValue> = "Test Project"</span>, </p><p><span class=VarType>(string)&nbsp;</span>Author <span class=DefaultValue> = "Stan Stanley"</span>, </p><p><span class=VarType>(string)&nbsp;</span>Company <span class=DefaultValue> = "Datadyne"</span>, </p><p><span class=VarType>(string)&nbsp;</span>Website <span class=DefaultValue> = "www.mysite.com"</span>, </p><p><span class=VarType>(string)&nbsp;</span>Email <span class=DefaultValue> = "me@mysite.com"</span>, </p><p><span class=VarType>(string)&nbsp;</span>Copyright <span class=DefaultValue> = "Copyright  2009 MySite.com"</span>, </p><p><span class=VarType>(string)&nbsp;</span>License <span class=DefaultValue> = "Free to use and distribute"</span>, </p><p><span class=VarType>(string)&nbsp;</span>Exe Filename <span class=DefaultValue> = "Project.exe"</span>, </p><p><span class=VarType>(string)&nbsp;</span>Icon File <span class=DefaultValue> = "MyIcon.ico"</span>, </p><p><span class=VarType>(string)&nbsp;</span>INI File <span class=DefaultValue> = "_ExeFolder.."\\Project.ini""</span>, </p><p><span class=VarType>(string)&nbsp;</span>Data Folder <span class=DefaultValue> = ""</span>, </p><p><span class=VarType>(string)&nbsp;</span>Logo File <span class=DefaultValue> = "C:\\MyLogo.png"</span> )</p></td></tr></table><!--begin!kadov{{--></div><!--}}end!kadov--></div><h2 style="margin-bottom: 3pt;">Description</h2><p><blockquote>This is the core function of the the Project Action Plugin. The plugin will not function properly unless this is executed before all other Project Action Plugin functions.</blockquote></p><h2 class="H2Tight">Parameters</h2><h3 class="ParameterHeading">Title</h3><p class="ParameterBody"><span class="type">(string)&nbsp;</span>The title of the program.</p><h3 class="ParameterHeading">Author</h3><p class="ParameterBody"><span class="type">(string)&nbsp;</span>The author(s) of the program.</p><blockquote><p class="Note"> <span style="font-weight: bold;">Note: </span>This may be left blank.</p></blockquote><h3 class="ParameterHeading">Company</h3><p class="ParameterBody"><span class="type">(string)&nbsp;</span>The company which owns the program.</p><blockquote><p class="Note"> <span style="font-weight: bold;">Note: </span>This may be left blank.</p></blockquote><h3 class="ParameterHeading">Website</h3><p class="ParameterBody"><span class="type">(string)&nbsp;</span>The contact website for the program, author and/or company.</p><blockquote><p class="Note"> <span style="font-weight: bold;">Note: </span>This may be left blank.</p></blockquote><h3 class="ParameterHeading">Email</h3><p class="ParameterBody"><span class="type">(string)&nbsp;</span>The contact email for the program.</p><blockquote><p class="Note"> <span style="font-weight: bold;">Note: </span>This may be left blank.</p></blockquote><h3 class="ParameterHeading">Copyright</h3><p class="ParameterBody"><span class="type">(string)&nbsp;</span>Copyright information for the program.</p><blockquote><p class="Note"> <span style="font-weight: bold;">Note: </span>This may be left blank although it is not recommended.</p></blockquote><h3 class="ParameterHeading">License</h3><p class="ParameterBody"><span class="type">(string)&nbsp;</span>The license summary for the program.</p><blockquote><p class="Note"> <span style="font-weight: bold;">Note: </span>This is not intended as a replacement for a full license file.</p></blockquote><h3 class="ParameterHeading">Exe Filename</h3><p class="ParameterBody"><span class="type">(string)&nbsp;</span>The name of the program file including the extension.</p><blockquote><p class="Note"> <span style="font-weight: bold;">Note: </span>This is case sensitive.</p></blockquote><h3 class="ParameterHeading">Icon File</h3><p class="ParameterBody"><span class="type">(string)&nbsp;</span>The icon file used for the program.</p><h3 class="ParameterHeading">INI File</h3><p class="ParameterBody"><span class="type">(string)&nbsp;</span>The full path to the ini file used by the program.</p><blockquote><p class="Note"> <span style="font-weight: bold;">Note: </span>Leave this blank to have the file created automatically.</p></blockquote><h3 class="ParameterHeading">Data Folder</h3><p class="ParameterBody"><span class="type">(string)&nbsp;</span>The name of the data folder [if different than the default("AutoPlay")].</p><blockquote><p class="Note"> <span style="font-weight: bold;">Note: </span>Use this parameter ONLY if you are NOT using the GlobalPaths Action Plugin and have changed the data folder name.</p></blockquote><h3 class="ParameterHeading">Logo File</h3><p class="ParameterBody"><span class="type">(string)&nbsp;</span>The path to the logo image file.</p><blockquote><p class="Note"> <span style="font-weight: bold;">Note: </span>Leave this blank or nil if you don't use a logo.</p></blockquote><h2>Returns</h2><blockquote><p>This action dose not return any value.</p></blockquote><br><h1><A name="Project.IsCompiled">Project.IsCompiled</A></h1><br><div class=Declaration><!--(Table)=========================================================--><!--begin!kadov{{--><div align=left><!--}}end!kadov--><table x-use-null-cells		style="float: alignleft;		x-cell-content-align: Top;		border-spacing: 0px;		border-spacing: 0px;"		cellspacing=0><col><col><tr style="x-cell-content-align: top;" valign=top><td style="padding-right: 0px;			padding-left: 0px;			border-top-style: none;			border-bottom-style: none;			border-right-style: none;			border-left-style: none;"><p><span class=VarType>(boolean)&nbsp;</span>Project.IsCompiled ()</td><td style="padding-right: 0px;			padding-left: 0px;			border-top-style: none;			border-right-style: none;			border-bottom-style: none;"></td></tr></table><!--begin!kadov{{--></div><!--}}end!kadov--></div><h2 style="margin-bottom: 3pt;">Description</h2><p><blockquote>Determines whether the project is compiled or not.</blockquote></p><h2>Returns</h2><blockquote><p><span class=type>(boolean) </span>Returns true if the project is compiled or false if it is not.</p></blockquote><br><h1><A name="Project.IsRegistered">Project.IsRegistered</A></h1><br><div class=Declaration><!--(Table)=========================================================--><!--begin!kadov{{--><div align=left><!--}}end!kadov--><table x-use-null-cells		style="float: alignleft;		x-cell-content-align: Top;		border-spacing: 0px;		border-spacing: 0px;"		cellspacing=0><col><col><tr style="x-cell-content-align: top;" valign=top><td style="padding-right: 0px;			padding-left: 0px;			border-top-style: none;			border-bottom-style: none;			border-right-style: none;			border-left-style: none;"><p><span class=VarType>(boolean)&nbsp;</span>Project.IsRegistered ()</td><td style="padding-right: 0px;			padding-left: 0px;			border-top-style: none;			border-right-style: none;			border-bottom-style: none;"></td></tr></table><!--begin!kadov{{--></div><!--}}end!kadov--></div><h2 style="margin-bottom: 3pt;">Description</h2><p><blockquote>Determines whether or not the project has been added to the registry.</blockquote></p><h2>Returns</h2><blockquote><p><span class=type>(boolean) </span>Returns true if the project has been added to the registry or false if it has not.</p></blockquote><br><h1><A name="Project.IsRunning">Project.IsRunning</A></h1><br><div class=Declaration><!--(Table)=========================================================--><!--begin!kadov{{--><div align=left><!--}}end!kadov--><table x-use-null-cells		style="float: alignleft;		x-cell-content-align: Top;		border-spacing: 0px;		border-spacing: 0px;"		cellspacing=0><col><col><tr style="x-cell-content-align: top;" valign=top><td style="padding-right: 0px;			padding-left: 0px;			border-top-style: none;			border-bottom-style: none;			border-right-style: none;			border-left-style: none;"><p><span class=VarType>(boolean)&nbsp;</span>Project.IsRunning ()</td><td style="padding-right: 0px;			padding-left: 0px;			border-top-style: none;			border-right-style: none;			border-bottom-style: none;"></td></tr></table><!--begin!kadov{{--></div><!--}}end!kadov--></div><h2 style="margin-bottom: 3pt;">Description</h2><p><blockquote>Determines whether or not there is already an instance of your program running.</blockquote></p><blockquote><p class="Note"> <span style="font-weight: bold;">Note: </span>This is used, primarily, for preventing more than one instance of your program.</p></blockquote><h2>Returns</h2><blockquote><p><span class=type>(boolean) </span><br>Returns true if there is more than one instance of the program running and false if there is only one instance.</p></blockquote><br><h1><A name="Project.ProcessVersion">Project.ProcessVersion</A></h1><br><div class=Declaration><!--(Table)=========================================================--><!--begin!kadov{{--><div align=left><!--}}end!kadov--><table x-use-null-cells		style="float: alignleft;		x-cell-content-align: Top;		border-spacing: 0px;		border-spacing: 0px;"		cellspacing=0><col><col><tr style="x-cell-content-align: top;" valign=top><td style="padding-right: 0px;			padding-left: 0px;			border-top-style: none;			border-bottom-style: none;			border-right-style: none;			border-left-style: none;"><p><span class=VarType>(string)&nbsp;</span>Project.ProcessVersion (&nbsp;</td><td style="padding-right: 0px;			padding-left: 0px;			border-top-style: none;			border-right-style: none;			border-bottom-style: none;"><p><span class=VarType>(string)&nbsp;</span>Version File <span class=DefaultValue> = ""</span>, </p><p><span class=VarType>(number)&nbsp;</span>Version Segments <span class=DefaultValue> = 4</span>, </p><p><span class=VarType>(number)&nbsp;</span>Max Number <span class=DefaultValue> = 9</span> )</p></td></tr></table><!--begin!kadov{{--></div><!--}}end!kadov--></div><h2 style="margin-bottom: 3pt;">Description</h2><p><blockquote>Updates and/or gets the project's internal version (not the file version).</blockquote></p><blockquote><p class="Note"> <span style="font-weight: bold;">Note: </span>Every time the project runs when it is uncompiled, the version is incremented and returned, If the project is compiled the verion is just returned.</p></blockquote><h2 class="H2Tight">Parameters</h2><h3 class="ParameterHeading">Version File</h3><p class="ParameterBody"><span class="type">(string)&nbsp;</span>The full path to the version file. Leave this blank to use the default file.</p><h3 class="ParameterHeading">Version Segments</h3><p class="ParameterBody"><span class="type">(number)&nbsp;</span>The number of version points to use (3 would look like 1.1.3, while 5 would look like 2.6.2.1.5)</p><h3 class="ParameterHeading">Max Number</h3><p class="ParameterBody"><span class="type">(number)&nbsp;</span>The highest number to which each version segment will ascend.</p><blockquote><p class="Note"> <span style="font-weight: bold;">Note: </span>To use a 0-9 system set the Max Number to 9.</p></blockquote><h2>Returns</h2><blockquote><p><span class=type>(string) </span>Returns a string containing the verion number of the program (but not the file version).</p></blockquote><br><h1><A name="Project.Register">Project.Register</A></h1><br><div class=Declaration><!--(Table)=========================================================--><!--begin!kadov{{--><div align=left><!--}}end!kadov--><table x-use-null-cells		style="float: alignleft;		x-cell-content-align: Top;		border-spacing: 0px;		border-spacing: 0px;"		cellspacing=0><col><col><tr style="x-cell-content-align: top;" valign=top><td style="padding-right: 0px;			padding-left: 0px;			border-top-style: none;			border-bottom-style: none;			border-right-style: none;			border-left-style: none;"><p>Project.Register ()</td><td style="padding-right: 0px;			padding-left: 0px;			border-top-style: none;			border-right-style: none;			border-bottom-style: none;"></td></tr></table><!--begin!kadov{{--></div><!--}}end!kadov--></div><h2 style="margin-bottom: 3pt;">Description</h2><p><blockquote>Inputs the project into the registry if it is not already there.</blockquote></p><h2>Returns</h2><blockquote><p>This action dose not return any value.</p></blockquote><br><h1><A name="Project.RenameResources">Project.RenameResources</A></h1><br><div class=Declaration><!--(Table)=========================================================--><!--begin!kadov{{--><div align=left><!--}}end!kadov--><table x-use-null-cells		style="float: alignleft;		x-cell-content-align: Top;		border-spacing: 0px;		border-spacing: 0px;"		cellspacing=0><col><col><tr style="x-cell-content-align: top;" valign=top><td style="padding-right: 0px;			padding-left: 0px;			border-top-style: none;			border-bottom-style: none;			border-right-style: none;			border-left-style: none;"><p><span class=VarType>(table)&nbsp;</span>Project.RenameResources (&nbsp;</td><td style="padding-right: 0px;			padding-left: 0px;			border-top-style: none;			border-right-style: none;			border-bottom-style: none;"><p><span class=VarType>(table)&nbsp;</span>Resources <span class=DefaultValue> = tResources</span> )</p></td></tr></table><!--begin!kadov{{--></div><!--}}end!kadov--></div><h2 style="margin-bottom: 3pt;">Description</h2><p><blockquote>Renames a list of files on the end-user's system. Very usefiul for renaming resources that have changed after a runtime update.</blockquote></p><h2 class="H2Tight">Parameters</h2><h3 class="ParameterHeading">Resources</h3><p class="ParameterBody"><span class="type">(table)&nbsp;</span>A table containing the info about the resources to rename. This must bea numerically-indexed table with indexes Folder, Old and New where Fodler is the folder to the file to be renamed, Old is the filename and extension of the current file and New is the filename and extension to which it will be changed.</p><h2>Returns</h2><blockquote><p><span class=type>(table) </span><br>Returns a table indexed by Old, New and Success.<br>If an error occurs or the table which was passed was nil then nil is returned.</p></blockquote><br><h1><A name="Project.RequireOS">Project.RequireOS</A></h1><br><div class=Declaration><!--(Table)=========================================================--><!--begin!kadov{{--><div align=left><!--}}end!kadov--><table x-use-null-cells		style="float: alignleft;		x-cell-content-align: Top;		border-spacing: 0px;		border-spacing: 0px;"		cellspacing=0><col><col><tr style="x-cell-content-align: top;" valign=top><td style="padding-right: 0px;			padding-left: 0px;			border-top-style: none;			border-bottom-style: none;			border-right-style: none;			border-left-style: none;"><p>Project.RequireOS (&nbsp;</td><td style="padding-right: 0px;			padding-left: 0px;			border-top-style: none;			border-right-style: none;			border-bottom-style: none;"><p><span class=VarType>(string)&nbsp;</span>OS Name <span class=DefaultValue> = "Windows 98"</span> )</p></td></tr></table><!--begin!kadov{{--></div><!--}}end!kadov--></div><h2 style="margin-bottom: 3pt;">Description</h2><p><blockquote>Will allow the program to run only if the user has the specified OS or higher.</blockquote></p><h2 class="H2Tight">Parameters</h2><h3 class="ParameterHeading">OS Name</h3><p class="ParameterBody"><span class="type">(string)&nbsp;</span>The name of the operating system (or higher) required for program execution.</p><!--(Table)=========================================================--><table class=Parameters x-use-null-cells style="x-cell-content-align: Center; margin-left: 32pt; border-spacing: 0px; border spacing: 0px;" cellspacing=0><col><col><col><tr class=TableHeader style="x-cell-content-align: center;" valign=middle><td style="padding-left: 5px; padding-right: 5px; padding-top: 5px; padding-bottom: 5px; border-right-width: 1px; border-right style: Solid; border-bottom-width: 1px; border-bottom-style: Solid; border-left-width: 1px; border-left-style: Solid;"><p>CONSTANT</td><td colspan=1 rowspan=1 style="border-bottom-style: Solid; border-bottom-width: 1px; padding-left: 5px; padding-right: 5px; padding-top: 5px; padding-bottom: 5px;"><p>VALUE</td><td style="border-bottom-style: Solid; border-bottom-width: 1px; padding-left: 5px; padding-right: 5px; padding-top: 5px; paddin -bottom: 5px;"><p>DESCRIPTION</td></tr><tr style="x-cell-content-align: center;" valign=middle><td style="padding-left: 5px; padding-right: 5px; padding-top: 5px; padding-bottom: 5px; border-right-width: 1px; border-right-style: Solid; border-bottom-width: 1px; border-bottom-style: Solid; x-cell-content-align: top; border-left-width: 1px; border-left-style: Solid;" valign=top><p>"Windows 95"</td><td colspan=1 rowspan=1 style="border-right-style: Solid; border-right-width: 1px; border-bottom-style: Solid; border-bottom-width: 1px; padding-left: 5px; padding-right: 5px; padding-top: 5px; padding-bottom: 5px; x-cell-content-align: top;" valign=top><p>NA</td><td style="border-right-style: Solid; border-right-width: 1px; border-bottom-style: Solid; border-bottom-width: 1px; padding-left: 5px; padding-right: 5px; padding-top: 5px; padding-bottom: 5px; x-cell-content-align: top;" valign=top><p>NA</td></tr><tr style="x-cell-content-align: center;" valign=middle><td style="padding-left: 5px; padding-right: 5px; padding-top: 5px; padding-bottom: 5px; border-right-width: 1px; border-right-style: Solid; border-bottom-width: 1px; border-bottom-style: Solid; x-cell-content-align: top; border-left-width: 1px; border-left-style: Solid;" valign=top><p>"Windows 98"</td><td colspan=1 rowspan=1 style="border-right-style: Solid; border-right-width: 1px; border-bottom-style: Solid; border-bottom-width: 1px; padding-left: 5px; padding-right: 5px; padding-top: 5px; padding-bottom: 5px; x-cell-content-align: top;" valign=top><p>NA</td><td style="border-right-style: Solid; border-right-width: 1px; border-bottom-style: Solid; border-bottom-width: 1px; padding-left: 5px; padding-right: 5px; padding-top: 5px; padding-bottom: 5px; x-cell-content-align: top;" valign=top><p>NA</td></tr><tr style="x-cell-content-align: center;" valign=middle><td style="padding-left: 5px; padding-right: 5px; padding-top: 5px; padding-bottom: 5px; border-right-width: 1px; border-right-style: Solid; border-bottom-width: 1px; border-bottom-style: Solid; x-cell-content-align: top; border-left-width: 1px; border-left-style: Solid;" valign=top><p>"Windows ME"</td><td colspan=1 rowspan=1 style="border-right-style: Solid; border-right-width: 1px; border-bottom-style: Solid; border-bottom-width: 1px; padding-left: 5px; padding-right: 5px; padding-top: 5px; padding-bottom: 5px; x-cell-content-align: top;" valign=top><p>NA</td><td style="border-right-style: Solid; border-right-width: 1px; border-bottom-style: Solid; border-bottom-width: 1px; padding-left: 5px; padding-right: 5px; padding-top: 5px; padding-bottom: 5px; x-cell-content-align: top;" valign=top><p>NA</td></tr><tr style="x-cell-content-align: center;" valign=middle><td style="padding-left: 5px; padding-right: 5px; padding-top: 5px; padding-bottom: 5px; border-right-width: 1px; border-right-style: Solid; border-bottom-width: 1px; border-bottom-style: Solid; x-cell-content-align: top; border-left-width: 1px; border-left-style: Solid;" valign=top><p>"Windows NT 3"</td><td colspan=1 rowspan=1 style="border-right-style: Solid; border-right-width: 1px; border-bottom-style: Solid; border-bottom-width: 1px; padding-left: 5px; padding-right: 5px; padding-top: 5px; padding-bottom: 5px; x-cell-content-align: top;" valign=top><p>NA</td><td style="border-right-style: Solid; border-right-width: 1px; border-bottom-style: Solid; border-bottom-width: 1px; padding-left: 5px; padding-right: 5px; padding-top: 5px; padding-bottom: 5px; x-cell-content-align: top;" valign=top><p>NA</td></tr><tr style="x-cell-content-align: center;" valign=middle><td style="padding-left: 5px; padding-right: 5px; padding-top: 5px; padding-bottom: 5px; border-right-width: 1px; border-right-style: Solid; border-bottom-width: 1px; border-bottom-style: Solid; x-cell-content-align: top; border-left-width: 1px; border-left-style: Solid;" valign=top><p>"Windows NT 4"</td><td colspan=1 rowspan=1 style="border-right-style: Solid; border-right-width: 1px; border-bottom-style: Solid; border-bottom-width: 1px; padding-left: 5px; padding-right: 5px; padding-top: 5px; padding-bottom: 5px; x-cell-content-align: top;" valign=top><p>NA</td><td style="border-right-style: Solid; border-right-width: 1px; border-bottom-style: Solid; border-bottom-width: 1px; padding-left: 5px; padding-right: 5px; padding-top: 5px; padding-bottom: 5px; x-cell-content-align: top;" valign=top><p>NA</td></tr><tr style="x-cell-content-align: center;" valign=middle><td style="padding-left: 5px; padding-right: 5px; padding-top: 5px; padding-bottom: 5px; border-right-width: 1px; border-right-style: Solid; border-bottom-width: 1px; border-bottom-style: Solid; x-cell-content-align: top; border-left-width: 1px; border-left-style: Solid;" valign=top><p>"Windows 2000"</td><td colspan=1 rowspan=1 style="border-right-style: Solid; border-right-width: 1px; border-bottom-style: Solid; border-bottom-width: 1px; padding-left: 5px; padding-right: 5px; padding-top: 5px; padding-bottom: 5px; x-cell-content-align: top;" valign=top><p>NA</td><td style="border-right-style: Solid; border-right-width: 1px; border-bottom-style: Solid; border-bottom-width: 1px; padding-left: 5px; padding-right: 5px; padding-top: 5px; padding-bottom: 5px; x-cell-content-align: top;" valign=top><p>NA</td></tr><tr style="x-cell-content-align: center;" valign=middle><td style="padding-left: 5px; padding-right: 5px; padding-top: 5px; padding-bottom: 5px; border-right-width: 1px; border-right-style: Solid; border-bottom-width: 1px; border-bottom-style: Solid; x-cell-content-align: top; border-left-width: 1px; border-left-style: Solid;" valign=top><p>"Windows Server 2003"</td><td colspan=1 rowspan=1 style="border-right-style: Solid; border-right-width: 1px; border-bottom-style: Solid; border-bottom-width: 1px; padding-left: 5px; padding-right: 5px; padding-top: 5px; padding-bottom: 5px; x-cell-content-align: top;" valign=top><p>NA</td><td style="border-right-style: Solid; border-right-width: 1px; border-bottom-style: Solid; border-bottom-width: 1px; padding-left: 5px; padding-right: 5px; padding-top: 5px; padding-bottom: 5px; x-cell-content-align: top;" valign=top><p>NA</td></tr><tr style="x-cell-content-align: center;" valign=middle><td style="padding-left: 5px; padding-right: 5px; padding-top: 5px; padding-bottom: 5px; border-right-width: 1px; border-right-style: Solid; border-bottom-width: 1px; border-bottom-style: Solid; x-cell-content-align: top; border-left-width: 1px; border-left-style: Solid;" valign=top><p>"Windows XP"</td><td colspan=1 rowspan=1 style="border-right-style: Solid; border-right-width: 1px; border-bottom-style: Solid; border-bottom-width: 1px; padding-left: 5px; padding-right: 5px; padding-top: 5px; padding-bottom: 5px; x-cell-content-align: top;" valign=top><p>NA</td><td style="border-right-style: Solid; border-right-width: 1px; border-bottom-style: Solid; border-bottom-width: 1px; padding-left: 5px; padding-right: 5px; padding-top: 5px; padding-bottom: 5px; x-cell-content-align: top;" valign=top><p>NA</td></tr><tr style="x-cell-content-align: center;" valign=middle><td style="padding-left: 5px; padding-right: 5px; padding-top: 5px; padding-bottom: 5px; border-right-width: 1px; border-right-style: Solid; border-bottom-width: 1px; border-bottom-style: Solid; x-cell-content-align: top; border-left-width: 1px; border-left-style: Solid;" valign=top><p>"Windows Server 2008"</td><td colspan=1 rowspan=1 style="border-right-style: Solid; border-right-width: 1px; border-bottom-style: Solid; border-bottom-width: 1px; padding-left: 5px; padding-right: 5px; padding-top: 5px; padding-bottom: 5px; x-cell-content-align: top;" valign=top><p>NA</td><td style="border-right-style: Solid; border-right-width: 1px; border-bottom-style: Solid; border-bottom-width: 1px; padding-left: 5px; padding-right: 5px; padding-top: 5px; padding-bottom: 5px; x-cell-content-align: top;" valign=top><p>NA</td></tr><tr style="x-cell-content-align: center;" valign=middle><td style="padding-left: 5px; padding-right: 5px; padding-top: 5px; padding-bottom: 5px; border-right-width: 1px; border-right-style: Solid; border-bottom-width: 1px; border-bottom-style: Solid; x-cell-content-align: top; border-left-width: 1px; border-left-style: Solid;" valign=top><p>"Windows Vista"</td><td colspan=1 rowspan=1 style="border-right-style: Solid; border-right-width: 1px; border-bottom-style: Solid; border-bottom-width: 1px; padding-left: 5px; padding-right: 5px; padding-top: 5px; padding-bottom: 5px; x-cell-content-align: top;" valign=top><p>NA</td><td style="border-right-style: Solid; border-right-width: 1px; border-bottom-style: Solid; border-bottom-width: 1px; padding-left: 5px; padding-right: 5px; padding-top: 5px; padding-bottom: 5px; x-cell-content-align: top;" valign=top><p>NA</td></tr><tr style="x-cell-content-align: center;" valign=middle><td style="padding-left: 5px; padding-right: 5px; padding-top: 5px; padding-bottom: 5px; border-right-width: 1px; border-right-style: Solid; border-bottom-width: 1px; border-bottom-style: Solid; x-cell-content-align: top; border-left-width: 1px; border-left-style: Solid;" valign=top><p>"Windows 7"</td><td colspan=1 rowspan=1 style="border-right-style: Solid; border-right-width: 1px; border-bottom-style: Solid; border-bottom-width: 1px; padding-left: 5px; padding-right: 5px; padding-top: 5px; padding-bottom: 5px; x-cell-content-align: top;" valign=top><p>NA</td><td style="border-right-style: Solid; border-right-width: 1px; border-bottom-style: Solid; border-bottom-width: 1px; padding-left: 5px; padding-right: 5px; padding-top: 5px; padding-bottom: 5px; x-cell-content-align: top;" valign=top><p>NA</td></tr></table><h2>Returns</h2><blockquote><p>This action dose not return any value.</p></blockquote><br><h1><A name="Project.RestoreAudioSettings">Project.RestoreAudioSettings</A></h1><br><div class=Declaration><!--(Table)=========================================================--><!--begin!kadov{{--><div align=left><!--}}end!kadov--><table x-use-null-cells		style="float: alignleft;		x-cell-content-align: Top;		border-spacing: 0px;		border-spacing: 0px;"		cellspacing=0><col><col><tr style="x-cell-content-align: top;" valign=top><td style="padding-right: 0px;			padding-left: 0px;			border-top-style: none;			border-bottom-style: none;			border-right-style: none;			border-left-style: none;"><p>Project.RestoreAudioSettings (&nbsp;</td><td style="padding-right: 0px;			padding-left: 0px;			border-top-style: none;			border-right-style: none;			border-bottom-style: none;"><p><span class=VarType>(number)&nbsp;</span>Channel <span class=DefaultValue> = CHANNEL_USER1</span> )</p></td></tr></table><!--begin!kadov{{--></div><!--}}end!kadov--></div><h2 style="margin-bottom: 3pt;">Description</h2><p><blockquote>Restores the audio settings for the specified channel(s) based on the information stored by the Project.SaveAudioSettings() function.</blockquote></p><h2 class="H2Tight">Parameters</h2><h3 class="ParameterHeading">Channel</h3><p class="ParameterBody"><span class="type">(number)&nbsp;</span>The channel(s) for which to restore the audio settings.</p><!--(Table)=========================================================--><table class=Parameters x-use-null-cells style="x-cell-content-align: Center; margin-left: 32pt; border-spacing: 0px; border spacing: 0px;" cellspacing=0><col><col><col><tr class=TableHeader style="x-cell-content-align: center;" valign=middle><td style="padding-left: 5px; padding-right: 5px; padding-top: 5px; padding-bottom: 5px; border-right-width: 1px; border-right style: Solid; border-bottom-width: 1px; border-bottom-style: Solid; border-left-width: 1px; border-left-style: Solid;"><p>CONSTANT</td><td colspan=1 rowspan=1 style="border-bottom-style: Solid; border-bottom-width: 1px; padding-left: 5px; padding-right: 5px; padding-top: 5px; padding-bottom: 5px;"><p>VALUE</td><td style="border-bottom-style: Solid; border-bottom-width: 1px; padding-left: 5px; padding-right: 5px; padding-top: 5px; paddin -bottom: 5px;"><p>DESCRIPTION</td></tr><tr style="x-cell-content-align: center;" valign=middle><td style="padding-left: 5px; padding-right: 5px; padding-top: 5px; padding-bottom: 5px; border-right-width: 1px; border-right-style: Solid; border-bottom-width: 1px; border-bottom-style: Solid; x-cell-content-align: top; border-left-width: 1px; border-left-style: Solid;" valign=top><p>CHANNEL_BACKGROUND</td><td colspan=1 rowspan=1 style="border-right-style: Solid; border-right-width: 1px; border-bottom-style: Solid; border-bottom-width: 1px; padding-left: 5px; padding-right: 5px; padding-top: 5px; padding-bottom: 5px; x-cell-content-align: top;" valign=top><p>5</td><td style="border-right-style: Solid; border-right-width: 1px; border-bottom-style: Solid; border-bottom-width: 1px; padding-left: 5px; padding-right: 5px; padding-top: 5px; padding-bottom: 5px; x-cell-content-align: top;" valign=top><p>NA</td></tr><tr style="x-cell-content-align: center;" valign=middle><td style="padding-left: 5px; padding-right: 5px; padding-top: 5px; padding-bottom: 5px; border-right-width: 1px; border-right-style: Solid; border-bottom-width: 1px; border-bottom-style: Solid; x-cell-content-align: top; border-left-width: 1px; border-left-style: Solid;" valign=top><p>CHANNEL_EFFECTS</td><td colspan=1 rowspan=1 style="border-right-style: Solid; border-right-width: 1px; border-bottom-style: Solid; border-bottom-width: 1px; padding-left: 5px; padding-right: 5px; padding-top: 5px; padding-bottom: 5px; x-cell-content-align: top;" valign=top><p>0</td><td style="border-right-style: Solid; border-right-width: 1px; border-bottom-style: Solid; border-bottom-width: 1px; padding-left: 5px; padding-right: 5px; padding-top: 5px; padding-bottom: 5px; x-cell-content-align: top;" valign=top><p>NA</td></tr><tr style="x-cell-content-align: center;" valign=middle><td style="padding-left: 5px; padding-right: 5px; padding-top: 5px; padding-bottom: 5px; border-right-width: 1px; border-right-style: Solid; border-bottom-width: 1px; border-bottom-style: Solid; x-cell-content-align: top; border-left-width: 1px; border-left-style: Solid;" valign=top><p>CHANNEL_NARRATION</td><td colspan=1 rowspan=1 style="border-right-style: Solid; border-right-width: 1px; border-bottom-style: Solid; border-bottom-width: 1px; padding-left: 5px; padding-right: 5px; padding-top: 5px; padding-bottom: 5px; x-cell-content-align: top;" valign=top><p>6</td><td style="border-right-style: Solid; border-right-width: 1px; border-bottom-style: Solid; border-bottom-width: 1px; padding-left: 5px; padding-right: 5px; padding-top: 5px; padding-bottom: 5px; x-cell-content-align: top;" valign=top><p>NA</td></tr><tr style="x-cell-content-align: center;" valign=middle><td style="padding-left: 5px; padding-right: 5px; padding-top: 5px; padding-bottom: 5px; border-right-width: 1px; border-right-style: Solid; border-bottom-width: 1px; border-bottom-style: Solid; x-cell-content-align: top; border-left-width: 1px; border-left-style: Solid;" valign=top><p>CHANNEL_USER1</td><td colspan=1 rowspan=1 style="border-right-style: Solid; border-right-width: 1px; border-bottom-style: Solid; border-bottom-width: 1px; padding-left: 5px; padding-right: 5px; padding-top: 5px; padding-bottom: 5px; x-cell-content-align: top;" valign=top><p>1</td><td style="border-right-style: Solid; border-right-width: 1px; border-bottom-style: Solid; border-bottom-width: 1px; padding-left: 5px; padding-right: 5px; padding-top: 5px; padding-bottom: 5px; x-cell-content-align: top;" valign=top><p>NA</td></tr><tr style="x-cell-content-align: center;" valign=middle><td style="padding-left: 5px; padding-right: 5px; padding-top: 5px; padding-bottom: 5px; border-right-width: 1px; border-right-style: Solid; border-bottom-width: 1px; border-bottom-style: Solid; x-cell-content-align: top; border-left-width: 1px; border-left-style: Solid;" valign=top><p>CHANNEL_USER2</td><td colspan=1 rowspan=1 style="border-right-style: Solid; border-right-width: 1px; border-bottom-style: Solid; border-bottom-width: 1px; padding-left: 5px; padding-right: 5px; padding-top: 5px; padding-bottom: 5px; x-cell-content-align: top;" valign=top><p>2</td><td style="border-right-style: Solid; border-right-width: 1px; border-bottom-style: Solid; border-bottom-width: 1px; padding-left: 5px; padding-right: 5px; padding-top: 5px; padding-bottom: 5px; x-cell-content-align: top;" valign=top><p>NA</td></tr><tr style="x-cell-content-align: center;" valign=middle><td style="padding-left: 5px; padding-right: 5px; padding-top: 5px; padding-bottom: 5px; border-right-width: 1px; border-right-style: Solid; border-bottom-width: 1px; border-bottom-style: Solid; x-cell-content-align: top; border-left-width: 1px; border-left-style: Solid;" valign=top><p>CHANNEL_USER3</td><td colspan=1 rowspan=1 style="border-right-style: Solid; border-right-width: 1px; border-bottom-style: Solid; border-bottom-width: 1px; padding-left: 5px; padding-right: 5px; padding-top: 5px; padding-bottom: 5px; x-cell-content-align: top;" valign=top><p>3</td><td style="border-right-style: Solid; border-right-width: 1px; border-bottom-style: Solid; border-bottom-width: 1px; padding-left: 5px; padding-right: 5px; padding-top: 5px; padding-bottom: 5px; x-cell-content-align: top;" valign=top><p>NA</td></tr><tr style="x-cell-content-align: center;" valign=middle><td style="padding-left: 5px; padding-right: 5px; padding-top: 5px; padding-bottom: 5px; border-right-width: 1px; border-right-style: Solid; border-bottom-width: 1px; border-bottom-style: Solid; x-cell-content-align: top; border-left-width: 1px; border-left-style: Solid;" valign=top><p>CHANNEL_USER4</td><td colspan=1 rowspan=1 style="border-right-style: Solid; border-right-width: 1px; border-bottom-style: Solid; border-bottom-width: 1px; padding-left: 5px; padding-right: 5px; padding-top: 5px; padding-bottom: 5px; x-cell-content-align: top;" valign=top><p>4</td><td style="border-right-style: Solid; border-right-width: 1px; border-bottom-style: Solid; border-bottom-width: 1px; padding-left: 5px; padding-right: 5px; padding-top: 5px; padding-bottom: 5px; x-cell-content-align: top;" valign=top><p>NA</td></tr><tr style="x-cell-content-align: center;" valign=middle><td style="padding-left: 5px; padding-right: 5px; padding-top: 5px; padding-bottom: 5px; border-right-width: 1px; border-right-style: Solid; border-bottom-width: 1px; border-bottom-style: Solid; x-cell-content-align: top; border-left-width: 1px; border-left-style: Solid;" valign=top><p>CHANNEL_ALL</td><td colspan=1 rowspan=1 style="border-right-style: Solid; border-right-width: 1px; border-bottom-style: Solid; border-bottom-width: 1px; padding-left: 5px; padding-right: 5px; padding-top: 5px; padding-bottom: 5px; x-cell-content-align: top;" valign=top><p>-3</td><td style="border-right-style: Solid; border-right-width: 1px; border-bottom-style: Solid; border-bottom-width: 1px; padding-left: 5px; padding-right: 5px; padding-top: 5px; padding-bottom: 5px; x-cell-content-align: top;" valign=top><p>NA</td></tr></table><h2>Returns</h2><blockquote><p>This action dose not return any value.</p></blockquote><br><h1><A name="Project.RestoreObjectStates">Project.RestoreObjectStates</A></h1><br><div class=Declaration><!--(Table)=========================================================--><!--begin!kadov{{--><div align=left><!--}}end!kadov--><table x-use-null-cells		style="float: alignleft;		x-cell-content-align: Top;		border-spacing: 0px;		border-spacing: 0px;"		cellspacing=0><col><col><tr style="x-cell-content-align: top;" valign=top><td style="padding-right: 0px;			padding-left: 0px;			border-top-style: none;			border-bottom-style: none;			border-right-style: none;			border-left-style: none;"><p>Project.RestoreObjectStates ()</td><td style="padding-right: 0px;			padding-left: 0px;			border-top-style: none;			border-right-style: none;			border-bottom-style: none;"></td></tr></table><!--begin!kadov{{--></div><!--}}end!kadov--></div><h2 style="margin-bottom: 3pt;">Description</h2><p><blockquote>Restores the objects on the current page or dialog to their saved settings.</blockquote></p><h2>Returns</h2><blockquote><p>This action dose not return any value.</p></blockquote><br><h1><A name="Project.RestoreWindowPos">Project.RestoreWindowPos</A></h1><br><div class=Declaration><!--(Table)=========================================================--><!--begin!kadov{{--><div align=left><!--}}end!kadov--><table x-use-null-cells		style="float: alignleft;		x-cell-content-align: Top;		border-spacing: 0px;		border-spacing: 0px;"		cellspacing=0><col><col><tr style="x-cell-content-align: top;" valign=top><td style="padding-right: 0px;			padding-left: 0px;			border-top-style: none;			border-bottom-style: none;			border-right-style: none;			border-left-style: none;"><p>Project.RestoreWindowPos ()</td><td style="padding-right: 0px;			padding-left: 0px;			border-top-style: none;			border-right-style: none;			border-bottom-style: none;"></td></tr></table><!--begin!kadov{{--></div><!--}}end!kadov--></div><h2 style="margin-bottom: 3pt;">Description</h2><p><blockquote>Restores the position of the current page or dialog based on the values stored in the project ini by the Project.SaveWindowPos() function.</blockquote></p><h2>Returns</h2><blockquote><p>This action dose not return any value.</p></blockquote><br><h1><A name="Project.RestoreWindowSize">Project.RestoreWindowSize</A></h1><br><div class=Declaration><!--(Table)=========================================================--><!--begin!kadov{{--><div align=left><!--}}end!kadov--><table x-use-null-cells		style="float: alignleft;		x-cell-content-align: Top;		border-spacing: 0px;		border-spacing: 0px;"		cellspacing=0><col><col><tr style="x-cell-content-align: top;" valign=top><td style="padding-right: 0px;			padding-left: 0px;			border-top-style: none;			border-bottom-style: none;			border-right-style: none;			border-left-style: none;"><p>Project.RestoreWindowSize ()</td><td style="padding-right: 0px;			padding-left: 0px;			border-top-style: none;			border-right-style: none;			border-bottom-style: none;"></td></tr></table><!--begin!kadov{{--></div><!--}}end!kadov--></div><h2 style="margin-bottom: 3pt;">Description</h2><p><blockquote>Restores the size of the current page or dialog based on the values stored in the project ini by the Project.SaveWindowSize() function.</blockquote></p><h2>Returns</h2><blockquote><p>This action dose not return any value.</p></blockquote><br><h1><A name="Project.SaveAudioSettings">Project.SaveAudioSettings</A></h1><br><div class=Declaration><!--(Table)=========================================================--><!--begin!kadov{{--><div align=left><!--}}end!kadov--><table x-use-null-cells		style="float: alignleft;		x-cell-content-align: Top;		border-spacing: 0px;		border-spacing: 0px;"		cellspacing=0><col><col><tr style="x-cell-content-align: top;" valign=top><td style="padding-right: 0px;			padding-left: 0px;			border-top-style: none;			border-bottom-style: none;			border-right-style: none;			border-left-style: none;"><p>Project.SaveAudioSettings (&nbsp;</td><td style="padding-right: 0px;			padding-left: 0px;			border-top-style: none;			border-right-style: none;			border-bottom-style: none;"><p><span class=VarType>(number)&nbsp;</span>Channel <span class=DefaultValue> = CHANNEL_USER1</span> )</p></td></tr></table><!--begin!kadov{{--></div><!--}}end!kadov--></div><h2 style="margin-bottom: 3pt;">Description</h2><p><blockquote>Saves the audio settings for the specified audio channel(s) in the project's ini file for later retrieval.</blockquote></p><h2 class="H2Tight">Parameters</h2><h3 class="ParameterHeading">Channel</h3><p class="ParameterBody"><span class="type">(number)&nbsp;</span>The audio channel(s) for which to save the settings.</p><!--(Table)=========================================================--><table class=Parameters x-use-null-cells style="x-cell-content-align: Center; margin-left: 32pt; border-spacing: 0px; border spacing: 0px;" cellspacing=0><col><col><col><tr class=TableHeader style="x-cell-content-align: center;" valign=middle><td style="padding-left: 5px; padding-right: 5px; padding-top: 5px; padding-bottom: 5px; border-right-width: 1px; border-right style: Solid; border-bottom-width: 1px; border-bottom-style: Solid; border-left-width: 1px; border-left-style: Solid;"><p>CONSTANT</td><td colspan=1 rowspan=1 style="border-bottom-style: Solid; border-bottom-width: 1px; padding-left: 5px; padding-right: 5px; padding-top: 5px; padding-bottom: 5px;"><p>VALUE</td><td style="border-bottom-style: Solid; border-bottom-width: 1px; padding-left: 5px; padding-right: 5px; padding-top: 5px; paddin -bottom: 5px;"><p>DESCRIPTION</td></tr><tr style="x-cell-content-align: center;" valign=middle><td style="padding-left: 5px; padding-right: 5px; padding-top: 5px; padding-bottom: 5px; border-right-width: 1px; border-right-style: Solid; border-bottom-width: 1px; border-bottom-style: Solid; x-cell-content-align: top; border-left-width: 1px; border-left-style: Solid;" valign=top><p>CHANNEL_BACKGROUND</td><td colspan=1 rowspan=1 style="border-right-style: Solid; border-right-width: 1px; border-bottom-style: Solid; border-bottom-width: 1px; padding-left: 5px; padding-right: 5px; padding-top: 5px; padding-bottom: 5px; x-cell-content-align: top;" valign=top><p>5</td><td style="border-right-style: Solid; border-right-width: 1px; border-bottom-style: Solid; border-bottom-width: 1px; padding-left: 5px; padding-right: 5px; padding-top: 5px; padding-bottom: 5px; x-cell-content-align: top;" valign=top><p>NA</td></tr><tr style="x-cell-content-align: center;" valign=middle><td style="padding-left: 5px; padding-right: 5px; padding-top: 5px; padding-bottom: 5px; border-right-width: 1px; border-right-style: Solid; border-bottom-width: 1px; border-bottom-style: Solid; x-cell-content-align: top; border-left-width: 1px; border-left-style: Solid;" valign=top><p>CHANNEL_EFFECTS</td><td colspan=1 rowspan=1 style="border-right-style: Solid; border-right-width: 1px; border-bottom-style: Solid; border-bottom-width: 1px; padding-left: 5px; padding-right: 5px; padding-top: 5px; padding-bottom: 5px; x-cell-content-align: top;" valign=top><p>0</td><td style="border-right-style: Solid; border-right-width: 1px; border-bottom-style: Solid; border-bottom-width: 1px; padding-left: 5px; padding-right: 5px; padding-top: 5px; padding-bottom: 5px; x-cell-content-align: top;" valign=top><p>NA</td></tr><tr style="x-cell-content-align: center;" valign=middle><td style="padding-left: 5px; padding-right: 5px; padding-top: 5px; padding-bottom: 5px; border-right-width: 1px; border-right-style: Solid; border-bottom-width: 1px; border-bottom-style: Solid; x-cell-content-align: top; border-left-width: 1px; border-left-style: Solid;" valign=top><p>CHANNEL_NARRATION</td><td colspan=1 rowspan=1 style="border-right-style: Solid; border-right-width: 1px; border-bottom-style: Solid; border-bottom-width: 1px; padding-left: 5px; padding-right: 5px; padding-top: 5px; padding-bottom: 5px; x-cell-content-align: top;" valign=top><p>6</td><td style="border-right-style: Solid; border-right-width: 1px; border-bottom-style: Solid; border-bottom-width: 1px; padding-left: 5px; padding-right: 5px; padding-top: 5px; padding-bottom: 5px; x-cell-content-align: top;" valign=top><p>NA</td></tr><tr style="x-cell-content-align: center;" valign=middle><td style="padding-left: 5px; padding-right: 5px; padding-top: 5px; padding-bottom: 5px; border-right-width: 1px; border-right-style: Solid; border-bottom-width: 1px; border-bottom-style: Solid; x-cell-content-align: top; border-left-width: 1px; border-left-style: Solid;" valign=top><p>CHANNEL_USER1</td><td colspan=1 rowspan=1 style="border-right-style: Solid; border-right-width: 1px; border-bottom-style: Solid; border-bottom-width: 1px; padding-left: 5px; padding-right: 5px; padding-top: 5px; padding-bottom: 5px; x-cell-content-align: top;" valign=top><p>1</td><td style="border-right-style: Solid; border-right-width: 1px; border-bottom-style: Solid; border-bottom-width: 1px; padding-left: 5px; padding-right: 5px; padding-top: 5px; padding-bottom: 5px; x-cell-content-align: top;" valign=top><p>NA</td></tr><tr style="x-cell-content-align: center;" valign=middle><td style="padding-left: 5px; padding-right: 5px; padding-top: 5px; padding-bottom: 5px; border-right-width: 1px; border-right-style: Solid; border-bottom-width: 1px; border-bottom-style: Solid; x-cell-content-align: top; border-left-width: 1px; border-left-style: Solid;" valign=top><p>CHANNEL_USER2</td><td colspan=1 rowspan=1 style="border-right-style: Solid; border-right-width: 1px; border-bottom-style: Solid; border-bottom-width: 1px; padding-left: 5px; padding-right: 5px; padding-top: 5px; padding-bottom: 5px; x-cell-content-align: top;" valign=top><p>2</td><td style="border-right-style: Solid; border-right-width: 1px; border-bottom-style: Solid; border-bottom-width: 1px; padding-left: 5px; padding-right: 5px; padding-top: 5px; padding-bottom: 5px; x-cell-content-align: top;" valign=top><p>NA</td></tr><tr style="x-cell-content-align: center;" valign=middle><td style="padding-left: 5px; padding-right: 5px; padding-top: 5px; padding-bottom: 5px; border-right-width: 1px; border-right-style: Solid; border-bottom-width: 1px; border-bottom-style: Solid; x-cell-content-align: top; border-left-width: 1px; border-left-style: Solid;" valign=top><p>CHANNEL_USER3</td><td colspan=1 rowspan=1 style="border-right-style: Solid; border-right-width: 1px; border-bottom-style: Solid; border-bottom-width: 1px; padding-left: 5px; padding-right: 5px; padding-top: 5px; padding-bottom: 5px; x-cell-content-align: top;" valign=top><p>3</td><td style="border-right-style: Solid; border-right-width: 1px; border-bottom-style: Solid; border-bottom-width: 1px; padding-left: 5px; padding-right: 5px; padding-top: 5px; padding-bottom: 5px; x-cell-content-align: top;" valign=top><p>NA</td></tr><tr style="x-cell-content-align: center;" valign=middle><td style="padding-left: 5px; padding-right: 5px; padding-top: 5px; padding-bottom: 5px; border-right-width: 1px; border-right-style: Solid; border-bottom-width: 1px; border-bottom-style: Solid; x-cell-content-align: top; border-left-width: 1px; border-left-style: Solid;" valign=top><p>CHANNEL_USER4</td><td colspan=1 rowspan=1 style="border-right-style: Solid; border-right-width: 1px; border-bottom-style: Solid; border-bottom-width: 1px; padding-left: 5px; padding-right: 5px; padding-top: 5px; padding-bottom: 5px; x-cell-content-align: top;" valign=top><p>4</td><td style="border-right-style: Solid; border-right-width: 1px; border-bottom-style: Solid; border-bottom-width: 1px; padding-left: 5px; padding-right: 5px; padding-top: 5px; padding-bottom: 5px; x-cell-content-align: top;" valign=top><p>NA</td></tr><tr style="x-cell-content-align: center;" valign=middle><td style="padding-left: 5px; padding-right: 5px; padding-top: 5px; padding-bottom: 5px; border-right-width: 1px; border-right-style: Solid; border-bottom-width: 1px; border-bottom-style: Solid; x-cell-content-align: top; border-left-width: 1px; border-left-style: Solid;" valign=top><p>CHANNEL_ALL</td><td colspan=1 rowspan=1 style="border-right-style: Solid; border-right-width: 1px; border-bottom-style: Solid; border-bottom-width: 1px; padding-left: 5px; padding-right: 5px; padding-top: 5px; padding-bottom: 5px; x-cell-content-align: top;" valign=top><p>-3</td><td style="border-right-style: Solid; border-right-width: 1px; border-bottom-style: Solid; border-bottom-width: 1px; padding-left: 5px; padding-right: 5px; padding-top: 5px; padding-bottom: 5px; x-cell-content-align: top;" valign=top><p>NA</td></tr></table><h2>Returns</h2><blockquote><p>This action dose not return any value.</p></blockquote><br><h2 class=ExampleHeading>Example</h2><p class=ExampleCode>Project.SaveAudioSettings(CHANNEL_USER1,"Audio\\MyTrack.wav",175,false);</p><br><br><h1><A name="Project.SaveObjectStates">Project.SaveObjectStates</A></h1><br><div class=Declaration><!--(Table)=========================================================--><!--begin!kadov{{--><div align=left><!--}}end!kadov--><table x-use-null-cells		style="float: alignleft;		x-cell-content-align: Top;		border-spacing: 0px;		border-spacing: 0px;"		cellspacing=0><col><col><tr style="x-cell-content-align: top;" valign=top><td style="padding-right: 0px;			padding-left: 0px;			border-top-style: none;			border-bottom-style: none;			border-right-style: none;			border-left-style: none;"><p>Project.SaveObjectStates ()</td><td style="padding-right: 0px;			padding-left: 0px;			border-top-style: none;			border-right-style: none;			border-bottom-style: none;"></td></tr></table><!--begin!kadov{{--></div><!--}}end!kadov--></div><h2 style="margin-bottom: 3pt;">Description</h2><p><blockquote>Save the properties of objects on the current page or dialog.</blockquote></p><h2>Returns</h2><blockquote><p>This action dose not return any value.</p></blockquote><br><h1><A name="Project.SaveWindowPos">Project.SaveWindowPos</A></h1><br><div class=Declaration><!--(Table)=========================================================--><!--begin!kadov{{--><div align=left><!--}}end!kadov--><table x-use-null-cells		style="float: alignleft;		x-cell-content-align: Top;		border-spacing: 0px;		border-spacing: 0px;"		cellspacing=0><col><col><tr style="x-cell-content-align: top;" valign=top><td style="padding-right: 0px;			padding-left: 0px;			border-top-style: none;			border-bottom-style: none;			border-right-style: none;			border-left-style: none;"><p>Project.SaveWindowPos ()</td><td style="padding-right: 0px;			padding-left: 0px;			border-top-style: none;			border-right-style: none;			border-bottom-style: none;"></td></tr></table><!--begin!kadov{{--></div><!--}}end!kadov--></div><h2 style="margin-bottom: 3pt;">Description</h2><p><blockquote>Saves the current window or dialog position in the project ini for later access by the Project.RestoreWindowPos() function.</blockquote></p><h2>Returns</h2><blockquote><p>This action dose not return any value.</p></blockquote><br><h1><A name="Project.SaveWindowSize">Project.SaveWindowSize</A></h1><br><div class=Declaration><!--(Table)=========================================================--><!--begin!kadov{{--><div align=left><!--}}end!kadov--><table x-use-null-cells		style="float: alignleft;		x-cell-content-align: Top;		border-spacing: 0px;		border-spacing: 0px;"		cellspacing=0><col><col><tr style="x-cell-content-align: top;" valign=top><td style="padding-right: 0px;			padding-left: 0px;			border-top-style: none;			border-bottom-style: none;			border-right-style: none;			border-left-style: none;"><p>Project.SaveWindowSize ()</td><td style="padding-right: 0px;			padding-left: 0px;			border-top-style: none;			border-right-style: none;			border-bottom-style: none;"></td></tr></table><!--begin!kadov{{--></div><!--}}end!kadov--></div><h2 style="margin-bottom: 3pt;">Description</h2><p><blockquote>Saves the current window or dialog size in the project ini for later access by the Project.RestoreWindowSize() function.</blockquote></p><h2>Returns</h2><blockquote><p>This action dose not return any value.</p></blockquote><br><h1><A name="Project.SetCLAPairDivider">Project.SetCLAPairDivider</A></h1><br><div class=Declaration><!--(Table)=========================================================--><!--begin!kadov{{--><div align=left><!--}}end!kadov--><table x-use-null-cells		style="float: alignleft;		x-cell-content-align: Top;		border-spacing: 0px;		border-spacing: 0px;"		cellspacing=0><col><col><tr style="x-cell-content-align: top;" valign=top><td style="padding-right: 0px;			padding-left: 0px;			border-top-style: none;			border-bottom-style: none;			border-right-style: none;			border-left-style: none;"><p>Project.SetCLAPairDivider (&nbsp;</td><td style="padding-right: 0px;			padding-left: 0px;			border-top-style: none;			border-right-style: none;			border-bottom-style: none;"><p><span class=VarType>(string)&nbsp;</span>Divider <span class=DefaultValue> = "="</span> )</p></td></tr></table><!--begin!kadov{{--></div><!--}}end!kadov--></div><h2 style="margin-bottom: 3pt;">Description</h2><p><blockquote>Sets the control character used in separating the value element of a CLA value/argument pair from the argument element.</blockquote></p><h2 class="H2Tight">Parameters</h2><h3 class="ParameterHeading">Divider</h3><p class="ParameterBody"><span class="type">(string)&nbsp;</span>The character used as the divider between the value element and the argument element of a CLA value/argument pair.</p><blockquote><p class="Note"> <span style="font-weight: bold;">Note: </span>E.g. web="www.mysite.com" | In this example, the equal sign (=) is the divider.</p></blockquote><h2>Returns</h2><blockquote><p>This action dose not return any value.</p></blockquote><br><h1><A name="Project.SetCLAs">Project.SetCLAs</A></h1><br><div class=Declaration><!--(Table)=========================================================--><!--begin!kadov{{--><div align=left><!--}}end!kadov--><table x-use-null-cells		style="float: alignleft;		x-cell-content-align: Top;		border-spacing: 0px;		border-spacing: 0px;"		cellspacing=0><col><col><tr style="x-cell-content-align: top;" valign=top><td style="padding-right: 0px;			padding-left: 0px;			border-top-style: none;			border-bottom-style: none;			border-right-style: none;			border-left-style: none;"><p>Project.SetCLAs (&nbsp;</td><td style="padding-right: 0px;			padding-left: 0px;			border-top-style: none;			border-right-style: none;			border-bottom-style: none;"><p><span class=VarType>(table)&nbsp;</span>tCLAs <span class=DefaultValue> = {{"m","Dialog.Message(\"\",\"Hello World\")"},{"n","TextFile.WriteFromString(\"C:\\MyFile.txt\", \"Hello World\", false);"}}</span> )</p></td></tr></table><!--begin!kadov{{--></div><!--}}end!kadov--></div><h2 style="margin-bottom: 3pt;">Description</h2><p><blockquote>Sets the Command Line Argument code and arguments for all desired command line arguments.</blockquote></p><h2 class="H2Tight">Parameters</h2><h3 class="ParameterHeading">tCLAs</h3><p class="ParameterBody"><span class="type">(table)&nbsp;</span>The table which contains the argument and code for each CLA table item.</p><h2>Returns</h2><blockquote><p>This action dose not return any value.</p></blockquote><br><h2 class=ExampleHeading>Example</h2><p class=ExampleCode>local tCLAs = {{"m","Dialog.Message(\"\",\"Hello World\")"},{"n","TextFile.WriteFromString(\"C:\\MyFile.txt\", \"Hello World\", false);"}};</p><br><br><h1><A name="Project.SetCrash">Project.SetCrash</A></h1><br><div class=Declaration><!--(Table)=========================================================--><!--begin!kadov{{--><div align=left><!--}}end!kadov--><table x-use-null-cells		style="float: alignleft;		x-cell-content-align: Top;		border-spacing: 0px;		border-spacing: 0px;"		cellspacing=0><col><col><tr style="x-cell-content-align: top;" valign=top><td style="padding-right: 0px;			padding-left: 0px;			border-top-style: none;			border-bottom-style: none;			border-right-style: none;			border-left-style: none;"><p>Project.SetCrash (&nbsp;</td><td style="padding-right: 0px;			padding-left: 0px;			border-top-style: none;			border-right-style: none;			border-bottom-style: none;"><p><span class=VarType>(boolean)&nbsp;</span>Project Did Crash <span class=DefaultValue> = true</span> )</p></td></tr></table><!--begin!kadov{{--></div><!--}}end!kadov--></div><h2 style="margin-bottom: 3pt;">Description</h2><p><blockquote>Allows the setting of the last crash data in the project's ini file.</blockquote></p><h2 class="H2Tight">Parameters</h2><h3 class="ParameterHeading">Project Did Crash</h3><p class="ParameterBody"><span class="type">(boolean)&nbsp;</span>Whether or not the project's last state is set to crash.</p><h2>Returns</h2><blockquote><p>This action dose not return any value.</p></blockquote><br><h2 class=ExampleHeading>Example</h2><p class=ExampleCode>Project.SetCrash(true);</p><br><br><h1><A name="Project.SetLastFolder">Project.SetLastFolder</A></h1><br><div class=Declaration><!--(Table)=========================================================--><!--begin!kadov{{--><div align=left><!--}}end!kadov--><table x-use-null-cells		style="float: alignleft;		x-cell-content-align: Top;		border-spacing: 0px;		border-spacing: 0px;"		cellspacing=0><col><col><tr style="x-cell-content-align: top;" valign=top><td style="padding-right: 0px;			padding-left: 0px;			border-top-style: none;			border-bottom-style: none;			border-right-style: none;			border-left-style: none;"><p>Project.SetLastFolder (&nbsp;</td><td style="padding-right: 0px;			padding-left: 0px;			border-top-style: none;			border-right-style: none;			border-bottom-style: none;"><p><span class=VarType>(string)&nbsp;</span>Folder <span class=DefaultValue> = "C:\\MyFolder"</span> )</p></td></tr></table><!--begin!kadov{{--></div><!--}}end!kadov--></div><h2 style="margin-bottom: 3pt;">Description</h2><p><blockquote>Sets the last folder in your project's ini file for later retrieval by the Project.GetLastFolder() function.</blockquote></p><h2 class="H2Tight">Parameters</h2><h3 class="ParameterHeading">Folder</h3><p class="ParameterBody"><span class="type">(string)&nbsp;</span>The path to the folder to set as the project's last folder accessed.</p><h2>Returns</h2><blockquote><p>This action dose not return any value.</p></blockquote><br><h2 class=ExampleHeading>Example</h2><p class=ExampleCode>Project.SetLastFolder("C:\\MyFolder");</p><br><br><h1><A name="Project.SetRegValue">Project.SetRegValue</A></h1><br><div class=Declaration><!--(Table)=========================================================--><!--begin!kadov{{--><div align=left><!--}}end!kadov--><table x-use-null-cells		style="float: alignleft;		x-cell-content-align: Top;		border-spacing: 0px;		border-spacing: 0px;"		cellspacing=0><col><col><tr style="x-cell-content-align: top;" valign=top><td style="padding-right: 0px;			padding-left: 0px;			border-top-style: none;			border-bottom-style: none;			border-right-style: none;			border-left-style: none;"><p>Project.SetRegValue (&nbsp;</td><td style="padding-right: 0px;			padding-left: 0px;			border-top-style: none;			border-right-style: none;			border-bottom-style: none;"><p><span class=VarType>(string)&nbsp;</span>Value <span class=DefaultValue> = "Serial"</span>, </p><p><span class=VarType>(string)&nbsp;</span>Data <span class=DefaultValue> = "J65F-K64F-MB5E-87Y4-F4E2U"</span> )</p></td></tr></table><!--begin!kadov{{--></div><!--}}end!kadov--></div><h2 style="margin-bottom: 3pt;">Description</h2><p><blockquote>Sets one the program's registry value's data.</blockquote></p><h2 class="H2Tight">Parameters</h2><h3 class="ParameterHeading">Value</h3><p class="ParameterBody"><span class="type">(string)&nbsp;</span>The value name for which to set the data.</p><h3 class="ParameterHeading">Data</h3><p class="ParameterBody"><span class="type">(string)&nbsp;</span>The value's data.</p><h2>Returns</h2><blockquote><p>This action dose not return any value.</p></blockquote><br><h1><A name="Project.SetValue">Project.SetValue</A></h1><br><div class=Declaration><!--(Table)=========================================================--><!--begin!kadov{{--><div align=left><!--}}end!kadov--><table x-use-null-cells		style="float: alignleft;		x-cell-content-align: Top;		border-spacing: 0px;		border-spacing: 0px;"		cellspacing=0><col><col><tr style="x-cell-content-align: top;" valign=top><td style="padding-right: 0px;			padding-left: 0px;			border-top-style: none;			border-bottom-style: none;			border-right-style: none;			border-left-style: none;"><p>Project.SetValue (&nbsp;</td><td style="padding-right: 0px;			padding-left: 0px;			border-top-style: none;			border-right-style: none;			border-bottom-style: none;"><p><span class=VarType>(string)&nbsp;</span>Section <span class=DefaultValue> = "Section"</span>, </p><p><span class=VarType>(string)&nbsp;</span>Value <span class=DefaultValue> = "Value"</span>, </p><p><span class=VarType>(string)&nbsp;</span>Data <span class=DefaultValue> = "Data"</span> )</p></td></tr></table><!--begin!kadov{{--></div><!--}}end!kadov--></div><h2 style="margin-bottom: 3pt;">Description</h2><p><blockquote>Sets the data for a specifed value in the project ini file.</blockquote></p><h2 class="H2Tight">Parameters</h2><h3 class="ParameterHeading">Section</h3><p class="ParameterBody"><span class="type">(string)&nbsp;</span>The name of the section in the ini file.</p><h3 class="ParameterHeading">Value</h3><p class="ParameterBody"><span class="type">(string)&nbsp;</span>The name of the value in the ini file.</p><h3 class="ParameterHeading">Data</h3><p class="ParameterBody"><span class="type">(string)&nbsp;</span>The data to which the value will be set.</p><h2>Returns</h2><blockquote><p>This action dose not return any value.</p></blockquote><br><h1><A name="Project.ShowAbout">Project.ShowAbout</A></h1><br><div class=Declaration><!--(Table)=========================================================--><!--begin!kadov{{--><div align=left><!--}}end!kadov--><table x-use-null-cells		style="float: alignleft;		x-cell-content-align: Top;		border-spacing: 0px;		border-spacing: 0px;"		cellspacing=0><col><col><tr style="x-cell-content-align: top;" valign=top><td style="padding-right: 0px;			padding-left: 0px;			border-top-style: none;			border-bottom-style: none;			border-right-style: none;			border-left-style: none;"><p>Project.ShowAbout ()</td><td style="padding-right: 0px;			padding-left: 0px;			border-top-style: none;			border-right-style: none;			border-bottom-style: none;"></td></tr></table><!--begin!kadov{{--></div><!--}}end!kadov--></div><h2 style="margin-bottom: 3pt;">Description</h2><p><blockquote>Shows an about box listing all of the project details.</blockquote></p><h2>Returns</h2><blockquote><p>This action dose not return any value.</p></blockquote><br><h1><A name="Project.Shutdown">Project.Shutdown</A></h1><br><div class=Declaration><!--(Table)=========================================================--><!--begin!kadov{{--><div align=left><!--}}end!kadov--><table x-use-null-cells		style="float: alignleft;		x-cell-content-align: Top;		border-spacing: 0px;		border-spacing: 0px;"		cellspacing=0><col><col><tr style="x-cell-content-align: top;" valign=top><td style="padding-right: 0px;			padding-left: 0px;			border-top-style: none;			border-bottom-style: none;			border-right-style: none;			border-left-style: none;"><p>Project.Shutdown ()</td><td style="padding-right: 0px;			padding-left: 0px;			border-top-style: none;			border-right-style: none;			border-bottom-style: none;"></td></tr></table><!--begin!kadov{{--></div><!--}}end!kadov--></div><h2 style="margin-bottom: 3pt;">Description</h2><p><blockquote>Required for proper project shutdown.</blockquote></p><blockquote><p class="Note"> <span style="font-weight: bold;">Note: </span>This also fixes the Windows Vista/Windows 7 hang error on program close.</p></blockquote><h2>Returns</h2><blockquote><p>This action dose not return any value.</p></blockquote><br><h1><A name="Project.Unregister">Project.Unregister</A></h1><br><div class=Declaration><!--(Table)=========================================================--><!--begin!kadov{{--><div align=left><!--}}end!kadov--><table x-use-null-cells		style="float: alignleft;		x-cell-content-align: Top;		border-spacing: 0px;		border-spacing: 0px;"		cellspacing=0><col><col><tr style="x-cell-content-align: top;" valign=top><td style="padding-right: 0px;			padding-left: 0px;			border-top-style: none;			border-bottom-style: none;			border-right-style: none;			border-left-style: none;"><p>Project.Unregister ()</td><td style="padding-right: 0px;			padding-left: 0px;			border-top-style: none;			border-right-style: none;			border-bottom-style: none;"></td></tr></table><!--begin!kadov{{--></div><!--}}end!kadov--></div><h2 style="margin-bottom: 3pt;">Description</h2><p><blockquote>Removes the project from the registry if it's there.</blockquote></p><h2>Returns</h2><blockquote><p>This action dose not return any value.</p></blockquote><br><h1><A name="Project.UpdateRuntime">Project.UpdateRuntime</A></h1><br><div class=Declaration><!--(Table)=========================================================--><!--begin!kadov{{--><div align=left><!--}}end!kadov--><table x-use-null-cells		style="float: alignleft;		x-cell-content-align: Top;		border-spacing: 0px;		border-spacing: 0px;"		cellspacing=0><col><col><tr style="x-cell-content-align: top;" valign=top><td style="padding-right: 0px;			padding-left: 0px;			border-top-style: none;			border-bottom-style: none;			border-right-style: none;			border-left-style: none;"><p><span class=VarType>(boolean)&nbsp;</span>Project.UpdateRuntime (&nbsp;</td><td style="padding-right: 0px;			padding-left: 0px;			border-top-style: none;			border-right-style: none;			border-bottom-style: none;"><p><span class=VarType>(string)&nbsp;</span>Runtime <span class=DefaultValue> = "D:\Downloads\MyFile.exe"</span>, </p><p><span class=VarType>(string)&nbsp;</span>CDD <span class=DefaultValue> = "D:\Downloads\MyFile.cdd"</span>, </p><p><span class=VarType>(boolean)&nbsp;</span>Show Update Window <span class=DefaultValue> = true</span>, </p><p><span class=VarType>(string)&nbsp;</span>Background Color <span class=DefaultValue> = 0</span>, </p><p><span class=VarType>(string)&nbsp;</span>Foreground Color <span class=DefaultValue> = 7</span>, </p><p><span class=VarType>(string)&nbsp;</span>Title <span class=DefaultValue> = ""</span>, </p><p><span class=VarType>(string)&nbsp;</span>Pre-timeout Message <span class=DefaultValue> = ""</span>, </p><p><span class=VarType>(string)&nbsp;</span>Post-timeout Message <span class=DefaultValue> = ""</span>, </p><p><span class=VarType>(boolean)&nbsp;</span>Restart Runtime <span class=DefaultValue> = true</span>, </p><p><span class=VarType>(boolean)&nbsp;</span>Force Shutdown <span class=DefaultValue> = false</span> )</p></td></tr></table><!--begin!kadov{{--></div><!--}}end!kadov--></div><h2 style="margin-bottom: 3pt;">Description</h2><p><blockquote>Updates the primary application runtime.</blockquote></p><blockquote><p class="Note"> <span style="font-weight: bold;">Note: </span>Warning! If the project's cdd file is exposed (as it is in a project compiled to hard drive), you must include it's path in the arguments as well. Your program will not work without the new cdd file.</p></blockquote><h2 class="H2Tight">Parameters</h2><h3 class="ParameterHeading">Runtime</h3><p class="ParameterBody"><span class="type">(string)&nbsp;</span>The full path to the new runtime file that will replace the existing one.</p><blockquote><p class="Note"> <span style="font-weight: bold;">Note: </span>This function does NOT handle file extraction. The new file must be ready for processing before your program exits for the update procedure.</p></blockquote><h3 class="ParameterHeading">CDD</h3><p class="ParameterBody"><span class="type">(string)&nbsp;</span>The full path to the new cdd file.</p><blockquote><p class="Note"> <span style="font-weight: bold;">Note: </span>This function does NOT handle file extraction. The new file must be ready for processing before your program exits for the update procedure.</p></blockquote><h3 class="ParameterHeading">Show Update Window</h3><p class="ParameterBody"><span class="type">(boolean)&nbsp;</span>Whether or not to show the command window during the update.</p><h3 class="ParameterHeading">Background Color</h3><p class="ParameterBody"><span class="type">(string)&nbsp;</span>The color of the command window background.</p><!--(Table)=========================================================--><table class=Parameters x-use-null-cells style="x-cell-content-align: Center; margin-left: 32pt; border-spacing: 0px; border spacing: 0px;" cellspacing=0><col><col><col><tr class=TableHeader style="x-cell-content-align: center;" valign=middle><td style="padding-left: 5px; padding-right: 5px; padding-top: 5px; padding-bottom: 5px; border-right-width: 1px; border-right style: Solid; border-bottom-width: 1px; border-bottom-style: Solid; border-left-width: 1px; border-left-style: Solid;"><p>CONSTANT</td><td colspan=1 rowspan=1 style="border-bottom-style: Solid; border-bottom-width: 1px; padding-left: 5px; padding-right: 5px; padding-top: 5px; padding-bottom: 5px;"><p>VALUE</td><td style="border-bottom-style: Solid; border-bottom-width: 1px; padding-left: 5px; padding-right: 5px; padding-top: 5px; paddin -bottom: 5px;"><p>DESCRIPTION</td></tr><tr style="x-cell-content-align: center;" valign=middle><td style="padding-left: 5px; padding-right: 5px; padding-top: 5px; padding-bottom: 5px; border-right-width: 1px; border-right-style: Solid; border-bottom-width: 1px; border-bottom-style: Solid; x-cell-content-align: top; border-left-width: 1px; border-left-style: Solid;" valign=top><p>"0"</td><td colspan=1 rowspan=1 style="border-right-style: Solid; border-right-width: 1px; border-bottom-style: Solid; border-bottom-width: 1px; padding-left: 5px; padding-right: 5px; padding-top: 5px; padding-bottom: 5px; x-cell-content-align: top;" valign=top><p>"0"</td><td style="border-right-style: Solid; border-right-width: 1px; border-bottom-style: Solid; border-bottom-width: 1px; padding-left: 5px; padding-right: 5px; padding-top: 5px; padding-bottom: 5px; x-cell-content-align: top;" valign=top><p>Black</td></tr><tr style="x-cell-content-align: center;" valign=middle><td style="padding-left: 5px; padding-right: 5px; padding-top: 5px; padding-bottom: 5px; border-right-width: 1px; border-right-style: Solid; border-bottom-width: 1px; border-bottom-style: Solid; x-cell-content-align: top; border-left-width: 1px; border-left-style: Solid;" valign=top><p>"1"</td><td colspan=1 rowspan=1 style="border-right-style: Solid; border-right-width: 1px; border-bottom-style: Solid; border-bottom-width: 1px; padding-left: 5px; padding-right: 5px; padding-top: 5px; padding-bottom: 5px; x-cell-content-align: top;" valign=top><p>"1"</td><td style="border-right-style: Solid; border-right-width: 1px; border-bottom-style: Solid; border-bottom-width: 1px; padding-left: 5px; padding-right: 5px; padding-top: 5px; padding-bottom: 5px; x-cell-content-align: top;" valign=top><p>Blue</td></tr><tr style="x-cell-content-align: center;" valign=middle><td style="padding-left: 5px; padding-right: 5px; padding-top: 5px; padding-bottom: 5px; border-right-width: 1px; border-right-style: Solid; border-bottom-width: 1px; border-bottom-style: Solid; x-cell-content-align: top; border-left-width: 1px; border-left-style: Solid;" valign=top><p>"2"</td><td colspan=1 rowspan=1 style="border-right-style: Solid; border-right-width: 1px; border-bottom-style: Solid; border-bottom-width: 1px; padding-left: 5px; padding-right: 5px; padding-top: 5px; padding-bottom: 5px; x-cell-content-align: top;" valign=top><p>"2"</td><td style="border-right-style: Solid; border-right-width: 1px; border-bottom-style: Solid; border-bottom-width: 1px; padding-left: 5px; padding-right: 5px; padding-top: 5px; padding-bottom: 5px; x-cell-content-align: top;" valign=top><p>Green</td></tr><tr style="x-cell-content-align: center;" valign=middle><td style="padding-left: 5px; padding-right: 5px; padding-top: 5px; padding-bottom: 5px; border-right-width: 1px; border-right-style: Solid; border-bottom-width: 1px; border-bottom-style: Solid; x-cell-content-align: top; border-left-width: 1px; border-left-style: Solid;" valign=top><p>"3"</td><td colspan=1 rowspan=1 style="border-right-style: Solid; border-right-width: 1px; border-bottom-style: Solid; border-bottom-width: 1px; padding-left: 5px; padding-right: 5px; padding-top: 5px; padding-bottom: 5px; x-cell-content-align: top;" valign=top><p>"3"</td><td style="border-right-style: Solid; border-right-width: 1px; border-bottom-style: Solid; border-bottom-width: 1px; padding-left: 5px; padding-right: 5px; padding-top: 5px; padding-bottom: 5px; x-cell-content-align: top;" valign=top><p>Aqua</td></tr><tr style="x-cell-content-align: center;" valign=middle><td style="padding-left: 5px; padding-right: 5px; padding-top: 5px; padding-bottom: 5px; border-right-width: 1px; border-right-style: Solid; border-bottom-width: 1px; border-bottom-style: Solid; x-cell-content-align: top; border-left-width: 1px; border-left-style: Solid;" valign=top><p>"4"</td><td colspan=1 rowspan=1 style="border-right-style: Solid; border-right-width: 1px; border-bottom-style: Solid; border-bottom-width: 1px; padding-left: 5px; padding-right: 5px; padding-top: 5px; padding-bottom: 5px; x-cell-content-align: top;" valign=top><p>"4"</td><td style="border-right-style: Solid; border-right-width: 1px; border-bottom-style: Solid; border-bottom-width: 1px; padding-left: 5px; padding-right: 5px; padding-top: 5px; padding-bottom: 5px; x-cell-content-align: top;" valign=top><p>Red</td></tr><tr style="x-cell-content-align: center;" valign=middle><td style="padding-left: 5px; padding-right: 5px; padding-top: 5px; padding-bottom: 5px; border-right-width: 1px; border-right-style: Solid; border-bottom-width: 1px; border-bottom-style: Solid; x-cell-content-align: top; border-left-width: 1px; border-left-style: Solid;" valign=top><p>"5"</td><td colspan=1 rowspan=1 style="border-right-style: Solid; border-right-width: 1px; border-bottom-style: Solid; border-bottom-width: 1px; padding-left: 5px; padding-right: 5px; padding-top: 5px; padding-bottom: 5px; x-cell-content-align: top;" valign=top><p>"5"</td><td style="border-right-style: Solid; border-right-width: 1px; border-bottom-style: Solid; border-bottom-width: 1px; padding-left: 5px; padding-right: 5px; padding-top: 5px; padding-bottom: 5px; x-cell-content-align: top;" valign=top><p>Purple</td></tr><tr style="x-cell-content-align: center;" valign=middle><td style="padding-left: 5px; padding-right: 5px; padding-top: 5px; padding-bottom: 5px; border-right-width: 1px; border-right-style: Solid; border-bottom-width: 1px; border-bottom-style: Solid; x-cell-content-align: top; border-left-width: 1px; border-left-style: Solid;" valign=top><p>"6"</td><td colspan=1 rowspan=1 style="border-right-style: Solid; border-right-width: 1px; border-bottom-style: Solid; border-bottom-width: 1px; padding-left: 5px; padding-right: 5px; padding-top: 5px; padding-bottom: 5px; x-cell-content-align: top;" valign=top><p>"6"</td><td style="border-right-style: Solid; border-right-width: 1px; border-bottom-style: Solid; border-bottom-width: 1px; padding-left: 5px; padding-right: 5px; padding-top: 5px; padding-bottom: 5px; x-cell-content-align: top;" valign=top><p>Yellow</td></tr><tr style="x-cell-content-align: center;" valign=middle><td style="padding-left: 5px; padding-right: 5px; padding-top: 5px; padding-bottom: 5px; border-right-width: 1px; border-right-style: Solid; border-bottom-width: 1px; border-bottom-style: Solid; x-cell-content-align: top; border-left-width: 1px; border-left-style: Solid;" valign=top><p>"7"</td><td colspan=1 rowspan=1 style="border-right-style: Solid; border-right-width: 1px; border-bottom-style: Solid; border-bottom-width: 1px; padding-left: 5px; padding-right: 5px; padding-top: 5px; padding-bottom: 5px; x-cell-content-align: top;" valign=top><p>"7"</td><td style="border-right-style: Solid; border-right-width: 1px; border-bottom-style: Solid; border-bottom-width: 1px; padding-left: 5px; padding-right: 5px; padding-top: 5px; padding-bottom: 5px; x-cell-content-align: top;" valign=top><p>White</td></tr><tr style="x-cell-content-align: center;" valign=middle><td style="padding-left: 5px; padding-right: 5px; padding-top: 5px; padding-bottom: 5px; border-right-width: 1px; border-right-style: Solid; border-bottom-width: 1px; border-bottom-style: Solid; x-cell-content-align: top; border-left-width: 1px; border-left-style: Solid;" valign=top><p>"8"</td><td colspan=1 rowspan=1 style="border-right-style: Solid; border-right-width: 1px; border-bottom-style: Solid; border-bottom-width: 1px; padding-left: 5px; padding-right: 5px; padding-top: 5px; padding-bottom: 5px; x-cell-content-align: top;" valign=top><p>"8"</td><td style="border-right-style: Solid; border-right-width: 1px; border-bottom-style: Solid; border-bottom-width: 1px; padding-left: 5px; padding-right: 5px; padding-top: 5px; padding-bottom: 5px; x-cell-content-align: top;" valign=top><p>Gray</td></tr><tr style="x-cell-content-align: center;" valign=middle><td style="padding-left: 5px; padding-right: 5px; padding-top: 5px; padding-bottom: 5px; border-right-width: 1px; border-right-style: Solid; border-bottom-width: 1px; border-bottom-style: Solid; x-cell-content-align: top; border-left-width: 1px; border-left-style: Solid;" valign=top><p>"9"</td><td colspan=1 rowspan=1 style="border-right-style: Solid; border-right-width: 1px; border-bottom-style: Solid; border-bottom-width: 1px; padding-left: 5px; padding-right: 5px; padding-top: 5px; padding-bottom: 5px; x-cell-content-align: top;" valign=top><p>"9"</td><td style="border-right-style: Solid; border-right-width: 1px; border-bottom-style: Solid; border-bottom-width: 1px; padding-left: 5px; padding-right: 5px; padding-top: 5px; padding-bottom: 5px; x-cell-content-align: top;" valign=top><p>Light Blue</td></tr><tr style="x-cell-content-align: center;" valign=middle><td style="padding-left: 5px; padding-right: 5px; padding-top: 5px; padding-bottom: 5px; border-right-width: 1px; border-right-style: Solid; border-bottom-width: 1px; border-bottom-style: Solid; x-cell-content-align: top; border-left-width: 1px; border-left-style: Solid;" valign=top><p>"A"</td><td colspan=1 rowspan=1 style="border-right-style: Solid; border-right-width: 1px; border-bottom-style: Solid; border-bottom-width: 1px; padding-left: 5px; padding-right: 5px; padding-top: 5px; padding-bottom: 5px; x-cell-content-align: top;" valign=top><p>"A"</td><td style="border-right-style: Solid; border-right-width: 1px; border-bottom-style: Solid; border-bottom-width: 1px; padding-left: 5px; padding-right: 5px; padding-top: 5px; padding-bottom: 5px; x-cell-content-align: top;" valign=top><p>Light Green</td></tr><tr style="x-cell-content-align: center;" valign=middle><td style="padding-left: 5px; padding-right: 5px; padding-top: 5px; padding-bottom: 5px; border-right-width: 1px; border-right-style: Solid; border-bottom-width: 1px; border-bottom-style: Solid; x-cell-content-align: top; border-left-width: 1px; border-left-style: Solid;" valign=top><p>"B"</td><td colspan=1 rowspan=1 style="border-right-style: Solid; border-right-width: 1px; border-bottom-style: Solid; border-bottom-width: 1px; padding-left: 5px; padding-right: 5px; padding-top: 5px; padding-bottom: 5px; x-cell-content-align: top;" valign=top><p>"B"</td><td style="border-right-style: Solid; border-right-width: 1px; border-bottom-style: Solid; border-bottom-width: 1px; padding-left: 5px; padding-right: 5px; padding-top: 5px; padding-bottom: 5px; x-cell-content-align: top;" valign=top><p>Light Aqua</td></tr><tr style="x-cell-content-align: center;" valign=middle><td style="padding-left: 5px; padding-right: 5px; padding-top: 5px; padding-bottom: 5px; border-right-width: 1px; border-right-style: Solid; border-bottom-width: 1px; border-bottom-style: Solid; x-cell-content-align: top; border-left-width: 1px; border-left-style: Solid;" valign=top><p>"C"</td><td colspan=1 rowspan=1 style="border-right-style: Solid; border-right-width: 1px; border-bottom-style: Solid; border-bottom-width: 1px; padding-left: 5px; padding-right: 5px; padding-top: 5px; padding-bottom: 5px; x-cell-content-align: top;" valign=top><p>"C"</td><td style="border-right-style: Solid; border-right-width: 1px; border-bottom-style: Solid; border-bottom-width: 1px; padding-left: 5px; padding-right: 5px; padding-top: 5px; padding-bottom: 5px; x-cell-content-align: top;" valign=top><p>Light Red</td></tr><tr style="x-cell-content-align: center;" valign=middle><td style="padding-left: 5px; padding-right: 5px; padding-top: 5px; padding-bottom: 5px; border-right-width: 1px; border-right-style: Solid; border-bottom-width: 1px; border-bottom-style: Solid; x-cell-content-align: top; border-left-width: 1px; border-left-style: Solid;" valign=top><p>"D"</td><td colspan=1 rowspan=1 style="border-right-style: Solid; border-right-width: 1px; border-bottom-style: Solid; border-bottom-width: 1px; padding-left: 5px; padding-right: 5px; padding-top: 5px; padding-bottom: 5px; x-cell-content-align: top;" valign=top><p>"D"</td><td style="border-right-style: Solid; border-right-width: 1px; border-bottom-style: Solid; border-bottom-width: 1px; padding-left: 5px; padding-right: 5px; padding-top: 5px; padding-bottom: 5px; x-cell-content-align: top;" valign=top><p>Light Purple</td></tr><tr style="x-cell-content-align: center;" valign=middle><td style="padding-left: 5px; padding-right: 5px; padding-top: 5px; padding-bottom: 5px; border-right-width: 1px; border-right-style: Solid; border-bottom-width: 1px; border-bottom-style: Solid; x-cell-content-align: top; border-left-width: 1px; border-left-style: Solid;" valign=top><p>"E"</td><td colspan=1 rowspan=1 style="border-right-style: Solid; border-right-width: 1px; border-bottom-style: Solid; border-bottom-width: 1px; padding-left: 5px; padding-right: 5px; padding-top: 5px; padding-bottom: 5px; x-cell-content-align: top;" valign=top><p>"E"</td><td style="border-right-style: Solid; border-right-width: 1px; border-bottom-style: Solid; border-bottom-width: 1px; padding-left: 5px; padding-right: 5px; padding-top: 5px; padding-bottom: 5px; x-cell-content-align: top;" valign=top><p>Light Yellow</td></tr><tr style="x-cell-content-align: center;" valign=middle><td style="padding-left: 5px; padding-right: 5px; padding-top: 5px; padding-bottom: 5px; border-right-width: 1px; border-right-style: Solid; border-bottom-width: 1px; border-bottom-style: Solid; x-cell-content-align: top; border-left-width: 1px; border-left-style: Solid;" valign=top><p>"F"</td><td colspan=1 rowspan=1 style="border-right-style: Solid; border-right-width: 1px; border-bottom-style: Solid; border-bottom-width: 1px; padding-left: 5px; padding-right: 5px; padding-top: 5px; padding-bottom: 5px; x-cell-content-align: top;" valign=top><p>"F"</td><td style="border-right-style: Solid; border-right-width: 1px; border-bottom-style: Solid; border-bottom-width: 1px; padding-left: 5px; padding-right: 5px; padding-top: 5px; padding-bottom: 5px; x-cell-content-align: top;" valign=top><p>Bright White</td></tr></table><h3 class="ParameterHeading">Foreground Color</h3><p class="ParameterBody"><span class="type">(string)&nbsp;</span>The color of the command window text.</p><!--(Table)=========================================================--><table class=Parameters x-use-null-cells style="x-cell-content-align: Center; margin-left: 32pt; border-spacing: 0px; border spacing: 0px;" cellspacing=0><col><col><col><tr class=TableHeader style="x-cell-content-align: center;" valign=middle><td style="padding-left: 5px; padding-right: 5px; padding-top: 5px; padding-bottom: 5px; border-right-width: 1px; border-right style: Solid; border-bottom-width: 1px; border-bottom-style: Solid; border-left-width: 1px; border-left-style: Solid;"><p>CONSTANT</td><td colspan=1 rowspan=1 style="border-bottom-style: Solid; border-bottom-width: 1px; padding-left: 5px; padding-right: 5px; padding-top: 5px; padding-bottom: 5px;"><p>VALUE</td><td style="border-bottom-style: Solid; border-bottom-width: 1px; padding-left: 5px; padding-right: 5px; padding-top: 5px; paddin -bottom: 5px;"><p>DESCRIPTION</td></tr><tr style="x-cell-content-align: center;" valign=middle><td style="padding-left: 5px; padding-right: 5px; padding-top: 5px; padding-bottom: 5px; border-right-width: 1px; border-right-style: Solid; border-bottom-width: 1px; border-bottom-style: Solid; x-cell-content-align: top; border-left-width: 1px; border-left-style: Solid;" valign=top><p>0</td><td colspan=1 rowspan=1 style="border-right-style: Solid; border-right-width: 1px; border-bottom-style: Solid; border-bottom-width: 1px; padding-left: 5px; padding-right: 5px; padding-top: 5px; padding-bottom: 5px; x-cell-content-align: top;" valign=top><p>0</td><td style="border-right-style: Solid; border-right-width: 1px; border-bottom-style: Solid; border-bottom-width: 1px; padding-left: 5px; padding-right: 5px; padding-top: 5px; padding-bottom: 5px; x-cell-content-align: top;" valign=top><p>Black</td></tr><tr style="x-cell-content-align: center;" valign=middle><td style="padding-left: 5px; padding-right: 5px; padding-top: 5px; padding-bottom: 5px; border-right-width: 1px; border-right-style: Solid; border-bottom-width: 1px; border-bottom-style: Solid; x-cell-content-align: top; border-left-width: 1px; border-left-style: Solid;" valign=top><p>1</td><td colspan=1 rowspan=1 style="border-right-style: Solid; border-right-width: 1px; border-bottom-style: Solid; border-bottom-width: 1px; padding-left: 5px; padding-right: 5px; padding-top: 5px; padding-bottom: 5px; x-cell-content-align: top;" valign=top><p>1</td><td style="border-right-style: Solid; border-right-width: 1px; border-bottom-style: Solid; border-bottom-width: 1px; padding-left: 5px; padding-right: 5px; padding-top: 5px; padding-bottom: 5px; x-cell-content-align: top;" valign=top><p>Blue</td></tr><tr style="x-cell-content-align: center;" valign=middle><td style="padding-left: 5px; padding-right: 5px; padding-top: 5px; padding-bottom: 5px; border-right-width: 1px; border-right-style: Solid; border-bottom-width: 1px; border-bottom-style: Solid; x-cell-content-align: top; border-left-width: 1px; border-left-style: Solid;" valign=top><p>2</td><td colspan=1 rowspan=1 style="border-right-style: Solid; border-right-width: 1px; border-bottom-style: Solid; border-bottom-width: 1px; padding-left: 5px; padding-right: 5px; padding-top: 5px; padding-bottom: 5px; x-cell-content-align: top;" valign=top><p>2</td><td style="border-right-style: Solid; border-right-width: 1px; border-bottom-style: Solid; border-bottom-width: 1px; padding-left: 5px; padding-right: 5px; padding-top: 5px; padding-bottom: 5px; x-cell-content-align: top;" valign=top><p>Green</td></tr><tr style="x-cell-content-align: center;" valign=middle><td style="padding-left: 5px; padding-right: 5px; padding-top: 5px; padding-bottom: 5px; border-right-width: 1px; border-right-style: Solid; border-bottom-width: 1px; border-bottom-style: Solid; x-cell-content-align: top; border-left-width: 1px; border-left-style: Solid;" valign=top><p>3</td><td colspan=1 rowspan=1 style="border-right-style: Solid; border-right-width: 1px; border-bottom-style: Solid; border-bottom-width: 1px; padding-left: 5px; padding-right: 5px; padding-top: 5px; padding-bottom: 5px; x-cell-content-align: top;" valign=top><p>3</td><td style="border-right-style: Solid; border-right-width: 1px; border-bottom-style: Solid; border-bottom-width: 1px; padding-left: 5px; padding-right: 5px; padding-top: 5px; padding-bottom: 5px; x-cell-content-align: top;" valign=top><p>Aqua</td></tr><tr style="x-cell-content-align: center;" valign=middle><td style="padding-left: 5px; padding-right: 5px; padding-top: 5px; padding-bottom: 5px; border-right-width: 1px; border-right-style: Solid; border-bottom-width: 1px; border-bottom-style: Solid; x-cell-content-align: top; border-left-width: 1px; border-left-style: Solid;" valign=top><p>4</td><td colspan=1 rowspan=1 style="border-right-style: Solid; border-right-width: 1px; border-bottom-style: Solid; border-bottom-width: 1px; padding-left: 5px; padding-right: 5px; padding-top: 5px; padding-bottom: 5px; x-cell-content-align: top;" valign=top><p>4</td><td style="border-right-style: Solid; border-right-width: 1px; border-bottom-style: Solid; border-bottom-width: 1px; padding-left: 5px; padding-right: 5px; padding-top: 5px; padding-bottom: 5px; x-cell-content-align: top;" valign=top><p>Red</td></tr><tr style="x-cell-content-align: center;" valign=middle><td style="padding-left: 5px; padding-right: 5px; padding-top: 5px; padding-bottom: 5px; border-right-width: 1px; border-right-style: Solid; border-bottom-width: 1px; border-bottom-style: Solid; x-cell-content-align: top; border-left-width: 1px; border-left-style: Solid;" valign=top><p>5</td><td colspan=1 rowspan=1 style="border-right-style: Solid; border-right-width: 1px; border-bottom-style: Solid; border-bottom-width: 1px; padding-left: 5px; padding-right: 5px; padding-top: 5px; padding-bottom: 5px; x-cell-content-align: top;" valign=top><p>5</td><td style="border-right-style: Solid; border-right-width: 1px; border-bottom-style: Solid; border-bottom-width: 1px; padding-left: 5px; padding-right: 5px; padding-top: 5px; padding-bottom: 5px; x-cell-content-align: top;" valign=top><p>Purple</td></tr><tr style="x-cell-content-align: center;" valign=middle><td style="padding-left: 5px; padding-right: 5px; padding-top: 5px; padding-bottom: 5px; border-right-width: 1px; border-right-style: Solid; border-bottom-width: 1px; border-bottom-style: Solid; x-cell-content-align: top; border-left-width: 1px; border-left-style: Solid;" valign=top><p>6</td><td colspan=1 rowspan=1 style="border-right-style: Solid; border-right-width: 1px; border-bottom-style: Solid; border-bottom-width: 1px; padding-left: 5px; padding-right: 5px; padding-top: 5px; padding-bottom: 5px; x-cell-content-align: top;" valign=top><p>6</td><td style="border-right-style: Solid; border-right-width: 1px; border-bottom-style: Solid; border-bottom-width: 1px; padding-left: 5px; padding-right: 5px; padding-top: 5px; padding-bottom: 5px; x-cell-content-align: top;" valign=top><p>Yellow</td></tr><tr style="x-cell-content-align: center;" valign=middle><td style="padding-left: 5px; padding-right: 5px; padding-top: 5px; padding-bottom: 5px; border-right-width: 1px; border-right-style: Solid; border-bottom-width: 1px; border-bottom-style: Solid; x-cell-content-align: top; border-left-width: 1px; border-left-style: Solid;" valign=top><p>7</td><td colspan=1 rowspan=1 style="border-right-style: Solid; border-right-width: 1px; border-bottom-style: Solid; border-bottom-width: 1px; padding-left: 5px; padding-right: 5px; padding-top: 5px; padding-bottom: 5px; x-cell-content-align: top;" valign=top><p>7</td><td style="border-right-style: Solid; border-right-width: 1px; border-bottom-style: Solid; border-bottom-width: 1px; padding-left: 5px; padding-right: 5px; padding-top: 5px; padding-bottom: 5px; x-cell-content-align: top;" valign=top><p>White</td></tr><tr style="x-cell-content-align: center;" valign=middle><td style="padding-left: 5px; padding-right: 5px; padding-top: 5px; padding-bottom: 5px; border-right-width: 1px; border-right-style: Solid; border-bottom-width: 1px; border-bottom-style: Solid; x-cell-content-align: top; border-left-width: 1px; border-left-style: Solid;" valign=top><p>8</td><td colspan=1 rowspan=1 style="border-right-style: Solid; border-right-width: 1px; border-bottom-style: Solid; border-bottom-width: 1px; padding-left: 5px; padding-right: 5px; padding-top: 5px; padding-bottom: 5px; x-cell-content-align: top;" valign=top><p>8</td><td style="border-right-style: Solid; border-right-width: 1px; border-bottom-style: Solid; border-bottom-width: 1px; padding-left: 5px; padding-right: 5px; padding-top: 5px; padding-bottom: 5px; x-cell-content-align: top;" valign=top><p>Gray</td></tr><tr style="x-cell-content-align: center;" valign=middle><td style="padding-left: 5px; padding-right: 5px; padding-top: 5px; padding-bottom: 5px; border-right-width: 1px; border-right-style: Solid; border-bottom-width: 1px; border-bottom-style: Solid; x-cell-content-align: top; border-left-width: 1px; border-left-style: Solid;" valign=top><p>9</td><td colspan=1 rowspan=1 style="border-right-style: Solid; border-right-width: 1px; border-bottom-style: Solid; border-bottom-width: 1px; padding-left: 5px; padding-right: 5px; padding-top: 5px; padding-bottom: 5px; x-cell-content-align: top;" valign=top><p>9</td><td style="border-right-style: Solid; border-right-width: 1px; border-bottom-style: Solid; border-bottom-width: 1px; padding-left: 5px; padding-right: 5px; padding-top: 5px; padding-bottom: 5px; x-cell-content-align: top;" valign=top><p>Light Blue</td></tr><tr style="x-cell-content-align: center;" valign=middle><td style="padding-left: 5px; padding-right: 5px; padding-top: 5px; padding-bottom: 5px; border-right-width: 1px; border-right-style: Solid; border-bottom-width: 1px; border-bottom-style: Solid; x-cell-content-align: top; border-left-width: 1px; border-left-style: Solid;" valign=top><p>A</td><td colspan=1 rowspan=1 style="border-right-style: Solid; border-right-width: 1px; border-bottom-style: Solid; border-bottom-width: 1px; padding-left: 5px; padding-right: 5px; padding-top: 5px; padding-bottom: 5px; x-cell-content-align: top;" valign=top><p>A</td><td style="border-right-style: Solid; border-right-width: 1px; border-bottom-style: Solid; border-bottom-width: 1px; padding-left: 5px; padding-right: 5px; padding-top: 5px; padding-bottom: 5px; x-cell-content-align: top;" valign=top><p>Light Green</td></tr><tr style="x-cell-content-align: center;" valign=middle><td style="padding-left: 5px; padding-right: 5px; padding-top: 5px; padding-bottom: 5px; border-right-width: 1px; border-right-style: Solid; border-bottom-width: 1px; border-bottom-style: Solid; x-cell-content-align: top; border-left-width: 1px; border-left-style: Solid;" valign=top><p>B</td><td colspan=1 rowspan=1 style="border-right-style: Solid; border-right-width: 1px; border-bottom-style: Solid; border-bottom-width: 1px; padding-left: 5px; padding-right: 5px; padding-top: 5px; padding-bottom: 5px; x-cell-content-align: top;" valign=top><p>B</td><td style="border-right-style: Solid; border-right-width: 1px; border-bottom-style: Solid; border-bottom-width: 1px; padding-left: 5px; padding-right: 5px; padding-top: 5px; padding-bottom: 5px; x-cell-content-align: top;" valign=top><p>Light Aqua</td></tr><tr style="x-cell-content-align: center;" valign=middle><td style="padding-left: 5px; padding-right: 5px; padding-top: 5px; padding-bottom: 5px; border-right-width: 1px; border-right-style: Solid; border-bottom-width: 1px; border-bottom-style: Solid; x-cell-content-align: top; border-left-width: 1px; border-left-style: Solid;" valign=top><p>C</td><td colspan=1 rowspan=1 style="border-right-style: Solid; border-right-width: 1px; border-bottom-style: Solid; border-bottom-width: 1px; padding-left: 5px; padding-right: 5px; padding-top: 5px; padding-bottom: 5px; x-cell-content-align: top;" valign=top><p>C</td><td style="border-right-style: Solid; border-right-width: 1px; border-bottom-style: Solid; border-bottom-width: 1px; padding-left: 5px; padding-right: 5px; padding-top: 5px; padding-bottom: 5px; x-cell-content-align: top;" valign=top><p>Light Red</td></tr><tr style="x-cell-content-align: center;" valign=middle><td style="padding-left: 5px; padding-right: 5px; padding-top: 5px; padding-bottom: 5px; border-right-width: 1px; border-right-style: Solid; border-bottom-width: 1px; border-bottom-style: Solid; x-cell-content-align: top; border-left-width: 1px; border-left-style: Solid;" valign=top><p>D</td><td colspan=1 rowspan=1 style="border-right-style: Solid; border-right-width: 1px; border-bottom-style: Solid; border-bottom-width: 1px; padding-left: 5px; padding-right: 5px; padding-top: 5px; padding-bottom: 5px; x-cell-content-align: top;" valign=top><p>D</td><td style="border-right-style: Solid; border-right-width: 1px; border-bottom-style: Solid; border-bottom-width: 1px; padding-left: 5px; padding-right: 5px; padding-top: 5px; padding-bottom: 5px; x-cell-content-align: top;" valign=top><p>Light Purple</td></tr><tr style="x-cell-content-align: center;" valign=middle><td style="padding-left: 5px; padding-right: 5px; padding-top: 5px; padding-bottom: 5px; border-right-width: 1px; border-right-style: Solid; border-bottom-width: 1px; border-bottom-style: Solid; x-cell-content-align: top; border-left-width: 1px; border-left-style: Solid;" valign=top><p>E</td><td colspan=1 rowspan=1 style="border-right-style: Solid; border-right-width: 1px; border-bottom-style: Solid; border-bottom-width: 1px; padding-left: 5px; padding-right: 5px; padding-top: 5px; padding-bottom: 5px; x-cell-content-align: top;" valign=top><p>E</td><td style="border-right-style: Solid; border-right-width: 1px; border-bottom-style: Solid; border-bottom-width: 1px; padding-left: 5px; padding-right: 5px; padding-top: 5px; padding-bottom: 5px; x-cell-content-align: top;" valign=top><p>Light Yellow</td></tr><tr style="x-cell-content-align: center;" valign=middle><td style="padding-left: 5px; padding-right: 5px; padding-top: 5px; padding-bottom: 5px; border-right-width: 1px; border-right-style: Solid; border-bottom-width: 1px; border-bottom-style: Solid; x-cell-content-align: top; border-left-width: 1px; border-left-style: Solid;" valign=top><p>F</td><td colspan=1 rowspan=1 style="border-right-style: Solid; border-right-width: 1px; border-bottom-style: Solid; border-bottom-width: 1px; padding-left: 5px; padding-right: 5px; padding-top: 5px; padding-bottom: 5px; x-cell-content-align: top;" valign=top><p>F</td><td style="border-right-style: Solid; border-right-width: 1px; border-bottom-style: Solid; border-bottom-width: 1px; padding-left: 5px; padding-right: 5px; padding-top: 5px; padding-bottom: 5px; x-cell-content-align: top;" valign=top><p>Bright White</td></tr></table><h3 class="ParameterHeading">Title</h3><p class="ParameterBody"><span class="type">(string)&nbsp;</span>The title of the command window.</p><blockquote><p class="Note"> <span style="font-weight: bold;">Note: </span>Leave this blank to use the default value.</p></blockquote><h3 class="ParameterHeading">Pre-timeout Message</h3><p class="ParameterBody"><span class="type">(string)&nbsp;</span>The message shown right before the update starts and before the timeout.</p><blockquote><p class="Note"> <span style="font-weight: bold;">Note: </span>Leave this blank to use the default value.</p></blockquote><h3 class="ParameterHeading">Post-timeout Message</h3><p class="ParameterBody"><span class="type">(string)&nbsp;</span>The message shown right before the update starts and after the timeout.</p><blockquote><p class="Note"> <span style="font-weight: bold;">Note: </span>Leave this blank to use the default value.</p></blockquote><h3 class="ParameterHeading">Restart Runtime</h3><p class="ParameterBody"><span class="type">(boolean)&nbsp;</span>Whether or not to restart the runtime after the update is complete.</p><h3 class="ParameterHeading">Force Shutdown</h3><p class="ParameterBody"><span class="type">(boolean)&nbsp;</span>By default, the runtime will be updated when the application shuts down. You can set this argument to true to force the application to shutdown.</p><blockquote><p class="Note"> <span style="font-weight: bold;">Note: </span>If there is an error, such as missing update files or invalid arguments passed to the function, the application will not be shutdown.</p></blockquote><h2>Returns</h2><blockquote><p><span class=type>(boolean) </span><br>Returns true if all of the arguments were passed correctly and if the execution point is valid and false if not.<br><br>Returns nothing if a forced shutdown is requested.<br><br>Valid Execution Points:<br>For the Runtime: "Hard Drive","Removable Drive","Network Drive","Temp Folder"<br>For the cdd file: "Hard Drive","Removable Drive","Network Drive"<br>(You can get the execution point by calling the Project.GetExecutionPoint() function.)<br><br>Note: This function does not check for the existence of the update files until the shutdown procedure.<br>During this stage it will still return true even if the file paths are invalid.<br>At shutdown, however, when the runtime update begins, it will be aborted if the file paths are invalid.</p></blockquote><br><hr>
+
+<p align="center">Copyright © 2009-2011 AMSPublic.com <BR>This File Was Generated With AMS ActionFile Editor</p>
+
+</body>
+</html>

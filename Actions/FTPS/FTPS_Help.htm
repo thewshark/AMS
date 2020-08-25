@@ -1,0 +1,477 @@
+<!doctype HTML public "-//W3C//DTD HTML 4.0 Frameset//EN">
+
+<html>
+<head>
+<title>FTPS Action Plugin Help</title>
+
+<meta http-equiv=content-type content="text/html; charset=windows-1252">
+
+<style>
+
+/* ELEMENTS */
+
+body {
+  font-family: Verdana, sans-serif;
+  font-size: 8pt;
+  background-color: #ffffff;
+}
+
+hr {
+  text-align: center;
+  color: #f0f0f0;
+  width: 100%;
+  height: 6pt;
+
+  margin-top: 0pt;
+  margin-bottom: -3pt;
+
+  border: none;
+}
+
+A:link, A:active, A:visited {
+  color: #0000ff;
+  text-decoration: none;
+}
+
+A:hover {
+  color: #0000ff;
+  text-decoration: underline;
+}
+
+h1 {
+  font-family: Verdana;
+  font-weight: bold;
+  font-size: 18.0pt;
+  white-space: nowrap;
+  color: #fff;
+  background-color: #699BEF;
+
+  padding: 4pt 3pt;
+  padding: 5px 4px;
+
+  margin-top: 0pt;
+  margin-bottom: 0pt;
+
+  border-right: 1px solid #333;
+  border-left: 1px solid #699BEF;
+  border-bottom: solid black 1px;
+}
+
+h2 {
+  font-family: Arial, sans-serif;
+  font-size: 12.0pt;
+  letter-spacing: .2ex;
+  color: #000;
+
+  margin-left: 0pt;
+  margin-right: 0pt;
+  margin-top: 18pt;
+  margin-bottom: 9pt;
+}
+
+h3 {
+  font-family: Arial, sans-serif;
+  font-size: 10pt;
+  font-weight: bold;
+  font-style: normal;
+  color: black;
+  letter-spacing: 0px;
+
+  margin-left: 0pt;
+  margin-right: 0pt;
+  margin-top: 18pt;
+  margin-bottom: 3pt;
+}
+
+p {
+  font-family: Verdana;
+  font-size: 8.0pt;
+  line-height: 12.0pt;
+
+  margin-left: 0pt;
+  margin-right: 0pt;
+  margin-top: 0pt;
+  margin-bottom: 9pt;
+}
+
+/* CLASSES */
+
+div.Actions h3, div.Events h3 {
+  font-family: Arial, sans-serif;
+  font-size: 10pt;
+  font-weight: bold;
+  font-style: italic;
+  color: #3C77B3;
+  letter-spacing: 0px;
+
+  margin-left: 12pt;
+  margin-right: 0pt;
+  margin-top: 18pt;
+  margin-bottom: 3pt;
+}
+
+div.Actions h4, div.info h3 {
+  font-family: Verdana;
+  font-size: 8.0pt;
+  line-height: 12.0pt;
+  font-style: bold;
+
+  margin-top: 9pt;
+  margin-bottom: 0pt;
+  margin-left: 28pt;
+  margin-right: 0pt;
+}
+
+div.Actions p, div.Events p, div.ErrorCodes p {
+  font-family: Verdana;
+  font-size: 8.0pt;
+  line-height: 12.0pt;
+
+  margin-top: 0pt;
+  margin-bottom: 9pt;
+  margin-left: 12pt;
+  margin-right: 0pt;
+}
+
+p.NavLocal {
+  white-space: nowrap;
+  text-indent: -4px;
+  font-family: Verdana, Arial, sans-serif;
+  font-weight: bold;
+  font-style: normal;
+  font-size: 13px;
+  background-color: #e4e4e4;
+
+  margin-top: 0px;
+  margin-bottom: 12pt;
+
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 0px;
+  padding-right: 0px;
+
+  border-bottom: 1px solid #e4e4e4;
+}
+
+p.Note {
+    font-family: Verdana;
+    font-size: 8.0pt;
+    line-height: 12.0pt;
+    color: #000000;
+    background-color: #ffffe8;
+
+    margin-top: 0pt;
+    margin-bottom: 9pt;
+    margin-left: 0pt;
+    margin-right: 5%;
+
+    padding-left: 2pt;
+    padding-right: 2pt;
+    padding-top: 1pt;
+    padding-bottom: 2pt;
+}
+
+p.Tip {
+    font-family: Verdana;
+    font-size: 8.0pt;
+    line-height: 12.0pt;
+    color: #000000;
+    background-color: #EAF4E8;
+
+    margin-top: 0pt;
+    margin-bottom: 9pt;
+    margin-left: 0pt;
+    margin-right: 5%;
+
+    padding-left: 2pt;
+    padding-right: 2pt;
+    padding-top: 1pt;
+    padding-bottom: 2pt;
+}
+
+div.Actions p.Note, div.Events p.Note,
+div.Actions p.Tip, div.Events p.Tip {
+    margin-left: 28pt;
+}
+
+pre.code {
+  white-space: pre;
+  font-family: Courier New, Courier, Arial, sans-serif;
+  font-size: 10pt;
+  font-weight: normal;
+  font-style: normal;
+  letter-spacing: normal;
+  color: #000;
+  background-color: #f9f9f9;
+
+  margin-top: 3pt;
+  margin-bottom: 9pt;
+  margin-left: 0pt;
+  margin-left: 0pt;
+
+  padding: 10px;
+
+  border: 1px dotted #ccc;
+}
+
+div.Actions pre.code, div.Events pre.code {
+  margin-left: 28pt;
+}
+
+div.Actions h2 {
+  margin-bottom: -6pt;
+}
+
+div.actions p, div.info p, div.ErrorCodes p {
+  margin-left: 28pt;
+}
+
+div.actions p.indent {
+  margin-left: 38pt;
+}
+
+span.here { /* blue tab effect in navbar (NavLocal) */
+  font-weight: bold;
+  color: #fff;
+  background-color: #699BEF;
+
+  margin: 0px;
+
+  padding: 4px 8px;
+
+  border-top: 1px solid #699BEF;
+  border-bottom: 1px solid #333;
+  border-left: none;
+  border-right: 1px solid #333;
+}
+
+span.type {
+    color: #aaa;
+}
+</style>
+</head>
+<body>
+
+<h1>FTPS Action Plugin</h1>
+
+<p class="NavLocal"><span class=wab>&nbsp;</span><span class="here">Online Help</span></p>
+
+<h2>Description</h2>
+
+<p>
+FTPS is an action plugin that can be used to connect to secure FTP servers, and exchange files.</p>
+
+<div class="Actions">
+<h2>Actions</h2>
+
+<h3>FTPS.ChangeDir(string Foldername);</h3>
+<h4>Description:</h4>
+<p>Changes to a specific folder on the remote  FTP server.</p>
+<h4>Foldername:</h4>
+<p><span class="type">(string)</span> The path to the directory on the FTP server that you want to navigate to.</p>
+<h4>Returns:</h4>
+<p><span class="type">(number)</span> 0 if success, 1 otherwise. You can use Application.GetLastError to
+determine whether this action failed, and why.</p>
+<h4>Example:</h4>
+<pre class="code">
+res = FTPS.ChangeDir("/www/cgi-bin/");
+if (res ~= 0) then
+    error = Application.GetLastError();
+    Dialog.Message("FTPS", "Could not change to the folder. ("..error..")");
+end
+</pre>
+
+<h3>FTPS.ConnectExplicit(string Hostname, string Username, string Password, number Port, number Passive, number ASCII);</h3>
+<h4>Description:</h4>
+<p>Connects to a secure FTP server, establishing an explicit SSL (AUTH SSL/TLS) connection.</p>
+<h4>Hostname:</h4>
+<p><span class="type">(string)</span> The hostname or IP address of the FTP server to connect to.</p>
+<h4>Username:</h4>
+<p><span class="type">(string)</span> The username to be used on the FTP connection.</p>
+<h4>Password:</h4>
+<p><span class="type">(string)</span> The password to be used.</p>
+<h4>Port:</h4>
+<p><span class="type">(number)</span> The port to connect to. This can be any port, like 21.</p>
+<h4>Passive:</h4>
+<p><span class="type">(boolean)</span> The transfer mode for the files. Passive is more compatible, try it first. Change to active if a firewall blocks the transfer. true = passive, false = active.</p>
+<h4>ASCII:</h4>
+<p><span class="type">(boolean)</span> Specifies binary or text mode file transfers. Use true = ASCII mode, false = binary transfers. Unless you transfer text between Windows and Unix/Linux, use binary. </p>
+<h4>Returns:</h4>
+<p><span class="type">(number)</span> 0 if success, 1 otherwise. You can use Application.GetLastError to
+determine whether this action failed, and why.</p>
+<h4>Example:</h4>
+<pre class="code">
+res = FTPS.ConnectExplicit("192.168.0.14", "Admin", "password", 21, true, false);
+if (res ~= 0) then
+    error = Application.GetLastError();
+    Dialog.Message("FTPS", "Could not open FTP connection. ("..error..")");
+end
+</pre>
+
+<h3>FTPS.ConnectImplicit(string Hostname, string Username, string Password, number Port, boolean Passive, boolean ASCII);</h3>
+<h4>Description:</h4>
+<p>Connects to a secure FTP server, establishing an implicit SSL (AUTH SSL/TLS) connection.</p>
+<h4>Hostname:</h4>
+<p><span class="type">(string)</span> The hostname or IP address of the FTP server to connect to.</p>
+<h4>Username:</h4>
+<p><span class="type">(string)</span> The username to be used on the FTP connection.</p>
+<h4>Password:</h4>
+<p><span class="type">(string)</span> The password to be used.</p>
+<h4>Port:</h4>
+<p><span class="type">(number)</span> The port to connect to. Implicit SSL normally uses port 990, but this can be any port, like 21.</p>
+<h4>Passive:</h4>
+<p><span class="type">(boolean)</span> The transfer mode for the files. Passive is more compatible, try it first. Change to active if a firewall blocks the transfer. true = passive, false = active.</p>
+<h4>ASCII:</h4>
+<p><span class="type">(boolean)</span> Specifies binary or text mode file transfers. Use true = ASCII mode, false = binary transfers. Unless you transfer text between Windows and Unix/Linux, use binary. </p>
+<h4>Returns:</h4>
+<p><span class="type">(number)</span> 0 if success, 1 otherwise. You can use Application.GetLastError to
+determine whether this action failed, and why.</p>
+<h4>Example:</h4>
+<pre class="code">
+res = FTPS.ConnectImplicit("192.168.0.14", "Admin", "password", 21, true, false);
+if (res ~= 0) then
+    error = Application.GetLastError();
+    Dialog.Message("FTPS", "Could not open FTP connection. ("..error..")");
+end
+</pre>
+
+<h3>FTPS.Delete(string Filename);</h3>
+<h4>Description:</h4>
+<p>Deletes one file on the remote  FTP server.</p>
+<h4>Filename:</h4>
+<p><span class="type">(string)</span> The file to be deleted in the current directory on the FTP server.</p>
+<h4>Returns:</h4>
+<p><span class="type">(number)</span> 0 if success, 1 otherwise. You can use Application.GetLastError to
+determine whether this action failed, and why.</p>
+<h4>Example:</h4>
+<pre class="code">
+res = FTPS.Delete("index.html");
+if (res ~= 0) then
+    error = Application.GetLastError();
+    Dialog.Message("FTPS", "Could not delete the file. ("..error..")");
+end
+</pre>
+
+<h3>FTPS.Disconnect();</h3>
+<h4>Description:</h4>
+<p>Closes an open connection to a remote secure FTP server gracefully.</p>
+<h4>Returns:</h4>
+<p><span class="type">(number)</span> 0 if success, 1 otherwise. You can use Application.GetLastError to
+determine whether this action failed, and why.</p>
+<h4>Example:</h4>
+<pre class="code">
+-- finishes data exchange with remote server
+result = FTPS.Disconnect();
+</pre>
+
+<h3>FTPS.Download(string Source,  string Destination);</h3>
+<h4>Description:</h4>
+<p>Downloads a file from  remote  FTP server.</p>
+<h4>Source:</h4>
+<p><span class="type">(string)</span> The name of the remote file to be downloaded.</p>
+<h4>Destination:</h4>
+<p><span class="type">(string)</span> The name for the local file. </p>
+<h4>Returns:</h4>
+<p><span class="type">(number)</span> 0 if success, 1 otherwise. You can use Application.GetLastError to
+determine whether this action failed, and why.</p>
+<h4>Example:</h4>
+<pre class="code">
+res = FTPS.Download(filename, "C:\\TEMP\\downloaded-" .. filename);
+if (res ~= 0) then
+    error = Application.GetLastError();
+    Dialog.Message("FTPS", "Could not download file. ("..error..")");
+end
+</pre>
+
+<h3>FTPS.Rename(string Oldname, string Newname);</h3>
+<h4>Description:</h4>
+<p>Renames one file on the remote  FTP server.</p>
+<h4>Oldname:</h4>
+<p><span class="type">(string)</span> The current filename of the file.</p>
+<h4>Newname:</h4>
+<p><span class="type">(string)</span> The new filename of the file in the current directory on the FTP server.</p>
+<h4>Returns:</h4>
+<p><span class="type">(number)</span> 0 if success, 1 otherwise. You can use Application.GetLastError to
+determine whether this action failed, and why.</p>
+<h4>Example:</h4>
+<pre class="code">
+res = FTPS.Rename("test.html", "newindex.html");
+if (res ~= 0) then
+    error = Application.GetLastError();
+    Dialog.Message("FTPS", "Could not rename the file. ("..error..")");
+end
+</pre>
+
+<h3>FTPS.Upload(string Source,  string Destination);</h3>
+<h4>Description:</h4>
+<p>Uploads a local file to the remote  FTP server.</p>
+<h4>Source:</h4>
+<p><span class="type">(string)</span> The full path to the file to be uploaded.</p>
+<h4>Destination:</h4>
+<p><span class="type">(string)</span> The name to be used for the remote file. </p>
+<h4>Returns:</h4>
+<p><span class="type">(number)</span> 0 if success, 1 otherwise. You can use Application.GetLastError to
+determine whether this action failed, and why.</p>
+<h4>Example:</h4>
+<pre class="code">
+filename = "file-" .. System.GetDate(DATE_FMT_ISO) .. System.GetTime(TIME_FMT_MIN) .. System.GetTime(TIME_FMT_SEC) .. ".file";
+res = FTPS.Upload("C:\\TEMP\\mytestfile.doc", filename);
+if (res ~= 0) then
+    error = Application.GetLastError();
+    Dialog.Message("FTPS", "Could not upload file. ("..error..")");
+end
+</pre>
+</div> <!-- /Actions -->
+
+<div class="ErrorCodes">
+<h2>Error Codes</h2>
+<p>
+<b>12001</b> - Internal error.<br>
+<b>12002</b> - Could not connect to FTP server.<br>
+<b>12003</b> - Not connected to FTP server.<br>
+<b>12004</b> - Could not change to specified remote folder.<br>
+<b>12005</b> - Could not upload file. No permission?<br>
+<b>12006</b> - File not found.<br>
+</p>
+
+</div> <!-- /ErrorCodes -->
+
+<div class="History">
+<h2>Change Log</h2>
+
+<h3>1.0.0.1</h3>
+<ul>
+    <li>Functions renamed for better compatibility with the original AutoPlay &quot;FTP&quot; plugin</li>
+    <li>New function <strong>ChangeDir</strong></li>
+    <li>New function   <strong>Delete</strong></li>
+    <li>New function <strong>Rename</strong>  </li>
+</ul>
+
+<h3>1.0.0.0</h3>
+<ul>
+    <li>Initial release</li>
+</ul>
+</div> <!-- /History -->
+
+
+<div class="Info">
+<h2>Additional Information</h2>
+
+<h3>Author:</h3>
+<p>Ulrich Peters <br>
+<a href="mailto:upeters@mindquake.com.br">upeters@mindquake.com.br</a></p>
+
+<h3>Copyright:</h3>
+<p>Plugin is copyright © 2008 MindQuake Servi&ccedil;os de Inform&aacute;tica Ltda.</p>
+
+<h3>Website:</h3>
+<p><a href="http://www.mindquake.com.br">http://www.mindquake.com.br</a></p>
+
+</div> <!-- /info -->
+<hr>
+
+<p align="center">Copyright © 2008 MindQuake Servi&ccedil;os de Inform&aacute;tica Ltda.<br>
+Todos os direitos reservados.</p>
+
+</body>
+</html>

@@ -1,0 +1,9 @@
+Most credit for this goes to webultra for finding the library, writing the initial code and providing me
+with a very good example. I simply refactored a lot of the code and made it work on a 'object' model.
+
+To make this work, you must install it and copy the spawner-ex.dll to the AutoPlay\Docs folder of your
+project.
+
+~ Shadiku Izayoi
+
+Official source code at GitHub: https://github.com/IllusionProgramming/Spawner

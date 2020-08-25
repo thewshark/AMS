@@ -1,0 +1,572 @@
+<html>
+<head>
+<title>ImageMagikEx</title>
+<style>
+
+
+	body {
+	  font-family: Verdana, sans-serif;
+	  font-size: 8pt;
+	  background-color: #ffffff;
+	}
+	  
+	body {
+	  font-family: Verdana, sans-serif;
+	  font-size: 8pt;
+	  background-color: #ffffff;
+	}
+	
+	hr {
+	  text-align: center;
+	  color: #f0f0f0;
+	  width: 100%;
+	  height: 6pt;
+	  margin-top: 0pt;
+	  margin-bottom: -3pt;
+	  border: none;
+	}
+	
+	A:link, A:active, A:visited {
+	  color: #0000ff;
+	  text-decoration: none;
+	}
+	
+	A:hover {
+	  color: #0000ff;
+	  text-decoration: underline;
+	}
+	
+	h1 {
+	  font-family: Verdana;
+	  font-weight: bold;
+	  font-size: 18.0pt;
+	  white-space: nowrap;
+	  color: #fff;
+	  background-color: #699BEF;
+	  padding: 4pt 3pt;
+	  padding: 5px 4px;
+	  margin-top: 0pt;
+	  margin-bottom: 0pt;
+	  border-right: 1px solid #333;
+	  border-left: 1px solid #699BEF;
+	  border-bottom: solid black 1px;
+	}
+	
+	h2 {
+	  font-family: Arial, sans-serif;
+	  font-size: 12.0pt;
+	  letter-spacing: .2ex;
+	  color: #000;
+	  margin-left: 0pt;
+	  margin-right: 0pt;
+	  margin-top: 18pt;
+	  margin-bottom: 9pt;
+	}
+	
+	h2.H2Tight {
+		margin-bottom: -6pt;
+	}
+	
+	h3 {
+	  font-family: Arial, sans-serif;
+	  font-size: 10pt;
+	  font-weight: bold;
+	  font-style: normal;
+	  color: black;
+	  letter-spacing: 0px;
+	  margin-left: 0pt;
+	  margin-right: 0pt;
+	  margin-top: 18pt;
+	  margin-bottom: 3pt;
+	}
+	
+	h3.ParameterHeading {
+		font-family: Arial, sans-serif;
+		margin-left: 12pt;
+		margin-right: 0pt;
+		margin-top: 18pt;
+		margin-bottom: 3pt;
+		font-size: 9pt;
+		font-weight: bold;
+		font-style: italic;
+		letter-spacing: .2ex;
+		color: #3C77B3;
+		x-next-class: ParameterBody;
+		x-next-type: p;
+	}
+	
+	p {
+	  font-family: Verdana;
+	  font-size: 8.0pt;
+	  line-height: 12.0pt;
+	  margin-left: 0pt;
+	  margin-right: 0pt;
+	  margin-top: 0pt;
+	  margin-bottom: 9pt;
+	}
+	  
+	p.NavLocal {
+	  white-space: nowrap;
+	  text-indent: -4px;
+	  font-family: Verdana, Arial, sans-serif;
+	  font-weight: bold;
+	  font-style: normal;
+	  font-size: 13px;
+	  background-color: #e4e4e4;
+	  margin-top: 0px;
+	  margin-bottom: 12pt;
+	  padding-top: 4px;
+	  padding-bottom: 4px;
+	  padding-left: 0px;
+	  padding-right: 0px;
+	
+	  border-bottom: 1px solid #e4e4e4;
+	}
+	  
+	p.ParameterBody {
+		margin-left: 12pt;
+		x-next-class: ParameterHeading;
+		x-next-type: h3;
+	}
+	  
+	div.Actions p, div.Properties p, div.Events p, div.ErrorCodes p {
+	  font-family: Verdana;
+	  font-size: 8.0pt;
+	  line-height: 12.0pt;
+	  margin-top: 0pt;
+	  margin-bottom: 9pt;
+	  margin-left: 12pt;
+	  margin-right: 0pt;
+	}
+	
+	div.Declaration table p {
+		white-space: nowrap;
+		line-height: normal;
+		x-text-tab-stops: repeat 1in;
+		font-family: "Courier New", Courier, monospace;
+		font-size: 10.0pt;
+		background-color: #eee;
+		color: #000000;
+		margin-left: 0px;
+		margin-right: 0px;
+		margin-top: 0px;
+		margin-bottom: 0px;
+		padding: 0pt;
+		border-style: none;
+	}
+	
+	div.Declaration {
+		white-space: nowrap;
+		line-height: normal;
+		x-text-tab-stops: repeat 1in;
+		font-family: "Courier New", Courier, monospace;
+		font-size: 9.0pt;
+		background-color: #eee;
+		color: #000000;
+		width: 100%;
+		margin-left: 0px;
+		margin-right: 0px;
+		margin-top: 0pt;
+		margin-bottom: 9pt;
+		padding: 2pt;
+		border-top: #c0c0c0 1px solid;
+		border-right: #c0c0c0 1px solid;
+		border-left: #c0c0c0 1px solid;
+		border-bottom: #c0c0c0 1px solid;
+	}
+	
+	span.VarType {
+		font-family: "Courier New", monospace;
+		font-size: 9pt;
+		font-style: italic;
+		color: #abd;
+	}
+	
+	span.type {
+		color: #aaa;
+	}
+	
+	span.wab {
+		font-family: Verdana;
+		font-size: 13px;
+		padding: 0px 0px;
+		margin: 0px;
+		border: none;
+		visibility: hidden;
+	}
+
+	span.DefaultValue {
+		white-space: nowrap;
+		font-family: "Courier New", monospace;
+		font-size: 9pt;
+		color: #aaa;
+	}
+	
+	</style>
+</head>
+<body>
+<h1>ImageMagikEx Help File</h1>
+<p class="NavLocal"><span class=wab>&nbsp;</span><span class="here">Welcome</span></p>
+<hr><div class="Properties">
+<h2>Table of Contents</h2>
+<p><blockquote>
+<A href="#ImageMagikEx.RotateSquare"><b>ImageMagikEx.RotateSquare</b></A>
+<br>
+<A href="#ImageMagikEx.SetExLibrariesPath"><b>ImageMagikEx.SetExLibrariesPath</b></A>
+<br>
+<A href="#ImageMagikEx.RegisterImageMagik"><b>ImageMagikEx.RegisterImageMagik</b></A>
+<br>
+<A href="#ImageMagikEx.CreateNiceTitle"><b>ImageMagikEx.CreateNiceTitle</b></A>
+<br>
+<A href="#ImageMagikEx.CropAt"><b>ImageMagikEx.CropAt</b></A>
+<br>
+<A href="#ImageMagikEx.CreateGraphicTitle"><b>ImageMagikEx.CreateGraphicTitle</b></A>
+<br>
+</blockquote></p></div>
+<h1><A name="ImageMagikEx.RotateSquare">ImageMagikEx.RotateSquare</A></h1><br>
+<div class=Declaration>
+<div align=left>
+<table x-use-null-cells
+	style="float: alignleft;
+	x-cell-content-align: Top;
+	border-spacing: 0px;
+	border-spacing: 0px;"
+	cellspacing=0>
+<col>
+<col>
+<tr style="x-cell-content-align: top;" valign=top>
+<td style="padding-right: 0px;
+	padding-left: 0px;
+	border-top-style: none;
+	border-bottom-style: none;
+	border-right-style: none;
+	border-left-style: none;">
+<p><span class=VarType>(boolean)&nbsp;</span>ImageMagikEx.RotateSquare (&nbsp;</td>
+<td style="padding-right: 0px;
+	padding-left: 0px;
+	border-top-style: none;
+	border-right-style: none;
+	border-bottom-style: none;">
+<p><span class=VarType>(string)&nbsp;</span>imObjectName <span class=DefaultValue> = "Image1"</span>, </p>
+<p><span class=VarType>(string)&nbsp;</span>baseImage <span class=DefaultValue> = "AutoPlay\\Images\\rotate.png"</span>, </p>
+<p><span class=VarType>(number)&nbsp;</span>Angle <span class=DefaultValue> = 0</span>, </p>
+<p><span class=VarType>(number)&nbsp;</span>Direction <span class=DefaultValue> = 1</span>, </p>
+<p><span class=VarType>(number)&nbsp;</span>TimeToWait <span class=DefaultValue> = 20</span>, </p>
+<p><span class=VarType>(boolean)&nbsp;</span>useRunNotShellEx <span class=DefaultValue> = true</span>, </p>
+<p><span class=VarType>(boolean)&nbsp;</span>loadRenderedImage <span class=DefaultValue> = false</span> )</p>
+</td></tr></table></div></div>
+<h2 style="margin-bottom: 3pt;">Description</h2>
+<p><blockquote>RotateSquare: Rotate a .png image, with transparency, Angle and Direction options</blockquote></p>
+<h2 class="H2Tight">Parameters</h2>
+<h3 class="ParameterHeading">imObjectName</h3>
+<p class="ParameterBody"><span class="type">(string)&nbsp;</span>AMS: Object Image Label ID which contain the displayed image file</p>
+<h3 class="ParameterHeading">baseImage</h3>
+<p class="ParameterBody"><span class="type">(string)&nbsp;</span>The full initial image path which will be rotated but never modified.</p>
+<h3 class="ParameterHeading">Angle</h3>
+<p class="ParameterBody"><span class="type">(number)&nbsp;</span>The rotation Angle which will be applied to the BaseImage.</p>
+<h3 class="ParameterHeading">Direction</h3>
+<p class="ParameterBody"><span class="type">(number)&nbsp;</span>The rotation direction can be clock wise or reverse clock wise. ( use 1 ot -1 )</p>
+<h3 class="ParameterHeading">TimeToWait</h3>
+<p class="ParameterBody"><span class="type">(number)&nbsp;</span>The time that application will spend before load the rotated image into his Object Container.</p>
+<h3 class="ParameterHeading">useRunNotShellEx</h3>
+<p class="ParameterBody"><span class="type">(boolean)&nbsp;</span>Use File.Run command instead Shell.execute ( With Shell.Execute, extension: .ƒct need to be registered and then computor need to be restarted )</p>
+<h3 class="ParameterHeading">loadRenderedImage</h3>
+<p class="ParameterBody"><span class="type">(boolean)&nbsp;</span>If set to true the rotated image will be loaded into Object Image (ObjectName)</p>
+<br>
+<h2>Return</h2><blockquote><p>This action returns a <span class="type">(boolean)</span> value.<br><br></p></blockquote><br><hr><h1><A name="ImageMagikEx.SetExLibrariesPath">ImageMagikEx.SetExLibrariesPath</A></h1><br>
+<div class=Declaration>
+<div align=left>
+<table x-use-null-cells
+	style="float: alignleft;
+	x-cell-content-align: Top;
+	border-spacing: 0px;
+	border-spacing: 0px;"
+	cellspacing=0>
+<col>
+<col>
+<tr style="x-cell-content-align: top;" valign=top>
+<td style="padding-right: 0px;
+	padding-left: 0px;
+	border-top-style: none;
+	border-bottom-style: none;
+	border-right-style: none;
+	border-left-style: none;">
+<p><span class=VarType>(boolean)&nbsp;</span>ImageMagikEx.SetExLibrariesPath ()</td>
+<td style="padding-right: 0px;
+	padding-left: 0px;
+	border-top-style: none;
+	border-right-style: none;
+	border-bottom-style: none;">
+</td></tr></table></div></div>
+<h2 style="margin-bottom: 3pt;">Description</h2>
+<p><blockquote>This action change the default libraries path ( Advanced User Only )</blockquote></p>
+<h2 class="H2Tight">Parameters</h2><h3 class="ParameterHeading">None</h3><br>
+<h2>Return</h2><blockquote><p>This action returns a <span class="type">(boolean)</span> value.<br><br></p></blockquote><br><hr><h1><A name="ImageMagikEx.RegisterImageMagik">ImageMagikEx.RegisterImageMagik</A></h1><br>
+<div class=Declaration>
+<div align=left>
+<table x-use-null-cells
+	style="float: alignleft;
+	x-cell-content-align: Top;
+	border-spacing: 0px;
+	border-spacing: 0px;"
+	cellspacing=0>
+<col>
+<col>
+<tr style="x-cell-content-align: top;" valign=top>
+<td style="padding-right: 0px;
+	padding-left: 0px;
+	border-top-style: none;
+	border-bottom-style: none;
+	border-right-style: none;
+	border-left-style: none;">
+<p><span class=VarType>(boolean)&nbsp;</span>ImageMagikEx.RegisterImageMagik ()</td>
+<td style="padding-right: 0px;
+	padding-left: 0px;
+	border-top-style: none;
+	border-right-style: none;
+	border-bottom-style: none;">
+</td></tr></table></div></div>
+<h2 style="margin-bottom: 3pt;">Description</h2>
+<p><blockquote>This action add the extension ".ƒct" to the windows registry ( Used With Shell.Execute Command, Computor need to be restarted, required file: Lib.reg )</blockquote></p>
+<h2 class="H2Tight">Parameters</h2><h3 class="ParameterHeading">None</h3><br>
+<h2>Return</h2><blockquote><p>This action returns a <span class="type">(boolean)</span> value.<br><br></p></blockquote><br><hr><h1><A name="ImageMagikEx.CreateNiceTitle">ImageMagikEx.CreateNiceTitle</A></h1><br>
+<div class=Declaration>
+<div align=left>
+<table x-use-null-cells
+	style="float: alignleft;
+	x-cell-content-align: Top;
+	border-spacing: 0px;
+	border-spacing: 0px;"
+	cellspacing=0>
+<col>
+<col>
+<tr style="x-cell-content-align: top;" valign=top>
+<td style="padding-right: 0px;
+	padding-left: 0px;
+	border-top-style: none;
+	border-bottom-style: none;
+	border-right-style: none;
+	border-left-style: none;">
+<p><span class=VarType>(boolean)&nbsp;</span>ImageMagikEx.CreateNiceTitle (&nbsp;</td>
+<td style="padding-right: 0px;
+	padding-left: 0px;
+	border-top-style: none;
+	border-right-style: none;
+	border-bottom-style: none;">
+<p><span class=VarType>(string)&nbsp;</span>imObjectName <span class=DefaultValue> = "Image1"</span>, </p>
+<p><span class=VarType>(string)&nbsp;</span>imSize <span class=DefaultValue> = "680x180"</span>, </p>
+<p><span class=VarType>(boolean)&nbsp;</span>transparent <span class=DefaultValue> = true</span>, </p>
+<p><span class=VarType>(string)&nbsp;</span>imFont <span class=DefaultValue> = "Comic-Sans-MS"</span>, </p>
+<p><span class=VarType>(number)&nbsp;</span>imPtSize <span class=DefaultValue> = 72</span>, </p>
+<p><span class=VarType>(string)&nbsp;</span>imShadowMove <span class=DefaultValue> = "25,85"</span>, </p>
+<p><span class=VarType>(string)&nbsp;</span>imShadowText <span class=DefaultValue> = "ImageMagikEx"</span>, </p>
+<p><span class=VarType>(number)&nbsp;</span>imBlurSigma <span class=DefaultValue> = 6</span>, </p>
+<p><span class=VarType>(string)&nbsp;</span>imFillColor <span class=DefaultValue> = "#FF8040"</span>, </p>
+<p><span class=VarType>(string)&nbsp;</span>imStrokeColor <span class=DefaultValue> = "#2080FF"</span>, </p>
+<p><span class=VarType>(string)&nbsp;</span>imTitlePosition <span class=DefaultValue> = "20,90"</span>, </p>
+<p><span class=VarType>(string)&nbsp;</span>imText <span class=DefaultValue> = "ImageMagikEx"</span>, </p>
+<p><span class=VarType>(string)&nbsp;</span>outputImageFilename <span class=DefaultValue> = "title.png"</span>, </p>
+<p><span class=VarType>(boolean)&nbsp;</span>LoadRenderedImage <span class=DefaultValue> = true</span>, </p>
+<p><span class=VarType>(boolean)&nbsp;</span>useRunNotShellEx <span class=DefaultValue> = false</span>, </p>
+<p><span class=VarType>(number)&nbsp;</span>imStrokeWidth <span class=DefaultValue> = 4</span> )</p>
+</td></tr></table></div></div>
+<h2 style="margin-bottom: 3pt;">Description</h2>
+<p><blockquote>This action build a title logo image which can be loaded into an object image</blockquote></p>
+<h2 class="H2Tight">Parameters</h2>
+<h3 class="ParameterHeading">imObjectName</h3>
+<p class="ParameterBody"><span class="type">(string)&nbsp;</span>AMS: Object Image Label ID which contain the rendered title image file</p>
+<h3 class="ParameterHeading">imSize</h3>
+<p class="ParameterBody"><span class="type">(string)&nbsp;</span>The size of rendered image title</p>
+<h3 class="ParameterHeading">transparent</h3>
+<p class="ParameterBody"><span class="type">(boolean)&nbsp;</span>This argument must be always true but its fixed in the function ( it will be variable may be in next update of this function )</p>
+<h3 class="ParameterHeading">imFont</h3>
+<p class="ParameterBody"><span class="type">(string)&nbsp;</span>The font that will be used to render the title</p>
+<h3 class="ParameterHeading">imPtSize</h3>
+<p class="ParameterBody"><span class="type">(number)&nbsp;</span>The font size [>24,1000<]</p>
+<h3 class="ParameterHeading">imShadowMove</h3>
+<p class="ParameterBody"><span class="type">(string)&nbsp;</span>The position of the shadow title (X,Y)</p>
+<h3 class="ParameterHeading">imShadowText</h3>
+<p class="ParameterBody"><span class="type">(string)&nbsp;</span>The shadow text effect, usually same as the title text</p>
+<h3 class="ParameterHeading">imBlurSigma</h3>
+<p class="ParameterBody"><span class="type">(number)&nbsp;</span>The argument is th eintensity blur effect on the text</p>
+<h3 class="ParameterHeading">imFillColor</h3>
+<p class="ParameterBody"><span class="type">(string)&nbsp;</span>The title text fill color, an hexadecimal color ( eg: #FF8020 )</p>
+<h3 class="ParameterHeading">imStrokeColor</h3>
+<p class="ParameterBody"><span class="type">(string)&nbsp;</span>The title text Stroke color, an hexadecimal color ( eg: #FF8020 )</p>
+<h3 class="ParameterHeading">imTitlePosition</h3>
+<p class="ParameterBody"><span class="type">(string)&nbsp;</span>The title position (X,Y) - On the global size of the image (imSize)</p>
+<h3 class="ParameterHeading">imText</h3>
+<p class="ParameterBody"><span class="type">(string)&nbsp;</span>THE TITLE TEXT</p>
+<h3 class="ParameterHeading">outputImageFilename</h3>
+<p class="ParameterBody"><span class="type">(string)&nbsp;</span>The rendered image filename (Filename.Extension)</p>
+<h3 class="ParameterHeading">LoadRenderedImage</h3>
+<p class="ParameterBody"><span class="type">(boolean)&nbsp;</span>If set to true the rendered title image will be loaded into Object Image (ObjectName)</p>
+<h3 class="ParameterHeading">useRunNotShellEx</h3>
+<p class="ParameterBody"><span class="type">(boolean)&nbsp;</span>This action if set to true, use File.Run command instead Shell.Execute</p>
+<h3 class="ParameterHeading">imStrokeWidth</h3>
+<p class="ParameterBody"><span class="type">(number)&nbsp;</span>The stroke text width</p>
+<br>
+<h2>Return</h2><blockquote><p>This action returns a <span class="type">(boolean)</span> value.<br><br></p></blockquote><br><hr><h1><A name="ImageMagikEx.CropAt">ImageMagikEx.CropAt</A></h1><br>
+<div class=Declaration>
+<div align=left>
+<table x-use-null-cells
+	style="float: alignleft;
+	x-cell-content-align: Top;
+	border-spacing: 0px;
+	border-spacing: 0px;"
+	cellspacing=0>
+<col>
+<col>
+<tr style="x-cell-content-align: top;" valign=top>
+<td style="padding-right: 0px;
+	padding-left: 0px;
+	border-top-style: none;
+	border-bottom-style: none;
+	border-right-style: none;
+	border-left-style: none;">
+<p><span class=VarType>(boolean)&nbsp;</span>ImageMagikEx.CropAt (&nbsp;</td>
+<td style="padding-right: 0px;
+	padding-left: 0px;
+	border-top-style: none;
+	border-right-style: none;
+	border-bottom-style: none;">
+<p><span class=VarType>(string)&nbsp;</span>imObjectName <span class=DefaultValue> = "Image1"</span>, </p>
+<p><span class=VarType>(string)&nbsp;</span>baseImage <span class=DefaultValue> = "AutoPlay\\Images\\temp.png"</span>, </p>
+<p><span class=VarType>(number)&nbsp;</span>baseWidth <span class=DefaultValue> = 300</span>, </p>
+<p><span class=VarType>(number)&nbsp;</span>baseHeight <span class=DefaultValue> = 300</span>, </p>
+<p><span class=VarType>(number)&nbsp;</span>topHorizontal <span class=DefaultValue> = 0</span>, </p>
+<p><span class=VarType>(number)&nbsp;</span>leftVertical <span class=DefaultValue> = 0</span>, </p>
+<p><span class=VarType>(number)&nbsp;</span>bottomHorizontal <span class=DefaultValue> = 0</span>, </p>
+<p><span class=VarType>(number)&nbsp;</span>rightVertical <span class=DefaultValue> = 0</span>, </p>
+<p><span class=VarType>(string)&nbsp;</span>outputImageFilename <span class=DefaultValue> = "crop.png"</span>, </p>
+<p><span class=VarType>(boolean)&nbsp;</span>loadRenderedImage <span class=DefaultValue> = true</span>, </p>
+<p><span class=VarType>(boolean)&nbsp;</span>useRunNotShellEx <span class=DefaultValue> = false</span> )</p>
+</td></tr></table></div></div>
+<h2 style="margin-bottom: 3pt;">Description</h2>
+<p><blockquote>This action crop an external rectangle region on a picture (image)</blockquote></p>
+<h2 class="H2Tight">Parameters</h2>
+<h3 class="ParameterHeading">imObjectName</h3>
+<p class="ParameterBody"><span class="type">(string)&nbsp;</span>AMS: Object Image Label ID which contain the rendered title image file</p>
+<h3 class="ParameterHeading">baseImage</h3>
+<p class="ParameterBody"><span class="type">(string)&nbsp;</span>The full path to the image that will be croped (recommended use: in root of AutoPlay\\Images or in a folder in that folder, if not use a full path as: c:\\myfolder\\...\\otherfolder... )</p>
+<h3 class="ParameterHeading">baseWidth</h3>
+<p class="ParameterBody"><span class="type">(number)&nbsp;</span>This argument its the width of the final croped image</p>
+<h3 class="ParameterHeading">baseHeight</h3>
+<p class="ParameterBody"><span class="type">(number)&nbsp;</span>This argument its the height of the final croped image</p>
+<h3 class="ParameterHeading">topHorizontal</h3>
+<p class="ParameterBody"><span class="type">(number)&nbsp;</span>This argument is the top horizontal part on the image that will be croped</p>
+<h3 class="ParameterHeading">leftVertical</h3>
+<p class="ParameterBody"><span class="type">(number)&nbsp;</span>This argument is the left vertical part on the image that will be croped</p>
+<h3 class="ParameterHeading">bottomHorizontal</h3>
+<p class="ParameterBody"><span class="type">(number)&nbsp;</span>This argument is the bottom horizontal part on the image that will be croped</p>
+<h3 class="ParameterHeading">rightVertical</h3>
+<p class="ParameterBody"><span class="type">(number)&nbsp;</span>This argument is the right vertical part on the image that will be croped</p>
+<h3 class="ParameterHeading">outputImageFilename</h3>
+<p class="ParameterBody"><span class="type">(string)&nbsp;</span>The rendered image filename (Filename.Extension)</p>
+<h3 class="ParameterHeading">loadRenderedImage</h3>
+<p class="ParameterBody"><span class="type">(boolean)&nbsp;</span>If set to true the croped image will be loaded into Object Image (ObjectName)</p>
+<h3 class="ParameterHeading">useRunNotShellEx</h3>
+<p class="ParameterBody"><span class="type">(boolean)&nbsp;</span>This action if set to true, use File.Run command instead Shell.Execute</p>
+<br>
+<h2>Return</h2><blockquote><p>This action returns a <span class="type">(boolean)</span> value.<br><br></p></blockquote><br><hr><h1><A name="ImageMagikEx.CreateGraphicTitle">ImageMagikEx.CreateGraphicTitle</A></h1><br>
+<div class=Declaration>
+<div align=left>
+<table x-use-null-cells
+	style="float: alignleft;
+	x-cell-content-align: Top;
+	border-spacing: 0px;
+	border-spacing: 0px;"
+	cellspacing=0>
+<col>
+<col>
+<tr style="x-cell-content-align: top;" valign=top>
+<td style="padding-right: 0px;
+	padding-left: 0px;
+	border-top-style: none;
+	border-bottom-style: none;
+	border-right-style: none;
+	border-left-style: none;">
+<p><span class=VarType>(boolean)&nbsp;</span>ImageMagikEx.CreateGraphicTitle (&nbsp;</td>
+<td style="padding-right: 0px;
+	padding-left: 0px;
+	border-top-style: none;
+	border-right-style: none;
+	border-bottom-style: none;">
+<p><span class=VarType>(string)&nbsp;</span>imObjectName <span class=DefaultValue> = "Image1"</span>, </p>
+<p><span class=VarType>(string)&nbsp;</span>imSize <span class=DefaultValue> = "320x120"</span>, </p>
+<p><span class=VarType>(string)&nbsp;</span>backColor <span class=DefaultValue> = "transparent"</span>, </p>
+<p><span class=VarType>(string)&nbsp;</span>rightDrawType <span class=DefaultValue> = "circle"</span>, </p>
+<p><span class=VarType>(string)&nbsp;</span>rightColor <span class=DefaultValue> = "0000FF"</span>, </p>
+<p><span class=VarType>(string)&nbsp;</span>rightPosition <span class=DefaultValue> = "250,30"</span>, </p>
+<p><span class=VarType>(string)&nbsp;</span>rightSize <span class=DefaultValue> = "310,30"</span>, </p>
+<p><span class=VarType>(string)&nbsp;</span>leftDrawType <span class=DefaultValue> = "circle"</span>, </p>
+<p><span class=VarType>(string)&nbsp;</span>leftColor <span class=DefaultValue> = "FF0000"</span>, </p>
+<p><span class=VarType>(string)&nbsp;</span>leftPosition <span class=DefaultValue> = "55,75"</span>, </p>
+<p><span class=VarType>(string)&nbsp;</span>leftSize <span class=DefaultValue> = "15,80"</span>, </p>
+<p><span class=VarType>(string)&nbsp;</span>fontName <span class=DefaultValue> = "Calibri"</span>, </p>
+<p><span class=VarType>(number)&nbsp;</span>fontSize <span class=DefaultValue> = 72</span>, </p>
+<p><span class=VarType>(boolean)&nbsp;</span>fontDecoration <span class=DefaultValue> = true</span>, </p>
+<p><span class=VarType>(string)&nbsp;</span>textFillColor <span class=DefaultValue> = "00FF00"</span>, </p>
+<p><span class=VarType>(string)&nbsp;</span>strokeTextColor <span class=DefaultValue> = "000000"</span>, </p>
+<p><span class=VarType>(number)&nbsp;</span>strokeTextSize <span class=DefaultValue> = 2</span>, </p>
+<p><span class=VarType>(string)&nbsp;</span>textDecalage <span class=DefaultValue> = "10,110"</span>, </p>
+<p><span class=VarType>(number)&nbsp;</span>textRotation <span class=DefaultValue> = -15</span>, </p>
+<p><span class=VarType>(string)&nbsp;</span>textPosition <span class=DefaultValue> = "0,0"</span>, </p>
+<p><span class=VarType>(string)&nbsp;</span>textTitle <span class=DefaultValue> = "ImageMagikEx"</span>, </p>
+<p><span class=VarType>(string)&nbsp;</span>outputFilename <span class=DefaultValue> = "graphic.png"</span>, </p>
+<p><span class=VarType>(boolean)&nbsp;</span>loadRenderedImage <span class=DefaultValue> = false</span>, </p>
+<p><span class=VarType>(boolean)&nbsp;</span>useRunNotShellEx <span class=DefaultValue> = true</span> )</p>
+</td></tr></table></div></div>
+<h2 style="margin-bottom: 3pt;">Description</h2>
+<p><blockquote>This action build a graphic title logo image with draws which can be loaded into an object image</blockquote></p>
+<h2 class="H2Tight">Parameters</h2>
+<h3 class="ParameterHeading">imObjectName</h3>
+<p class="ParameterBody"><span class="type">(string)&nbsp;</span>AMS: Object Image Label ID which contain the rendered title image file</p>
+<h3 class="ParameterHeading">imSize</h3>
+<p class="ParameterBody"><span class="type">(string)&nbsp;</span>The size of rendered image title</p>
+<h3 class="ParameterHeading">backColor</h3>
+<p class="ParameterBody"><span class="type">(string)&nbsp;</span>The Background image color ( must be an hex color in range of "[000000-FFFFFF]" or "transparent")</p>
+<h3 class="ParameterHeading">rightDrawType</h3>
+<p class="ParameterBody"><span class="type">(string)&nbsp;</span>The first geometric figure from the right of the image ( must be "circle" or "rectangle" )</p>
+<h3 class="ParameterHeading">rightColor</h3>
+<p class="ParameterBody"><span class="type">(string)&nbsp;</span>The Background of The first geometric figure from the right ( must be an hex color in range of "[000000-FFFFFF]")</p>
+<h3 class="ParameterHeading">rightPosition</h3>
+<p class="ParameterBody"><span class="type">(string)&nbsp;</span>The Position of The first geometric figure from the right ( eg: "250,30")</p>
+<h3 class="ParameterHeading">rightSize</h3>
+<p class="ParameterBody"><span class="type">(string)&nbsp;</span>The Size of The first geometric figure from the right ( eg: "310,30")</p>
+<h3 class="ParameterHeading">leftDrawType</h3>
+<p class="ParameterBody"><span class="type">(string)&nbsp;</span>The first geometric figure from the left of the image ( must be "circle" or "rectangle" )</p>
+<h3 class="ParameterHeading">leftColor</h3>
+<p class="ParameterBody"><span class="type">(string)&nbsp;</span>The Background of The first geometric figure from the left ( must be an hex color in range of "[000000-FFFFFF]")</p>
+<h3 class="ParameterHeading">leftPosition</h3>
+<p class="ParameterBody"><span class="type">(string)&nbsp;</span>The Position of The first geometric figure from the left ( eg: "55,75")</p>
+<h3 class="ParameterHeading">leftSize</h3>
+<p class="ParameterBody"><span class="type">(string)&nbsp;</span>The Size of The first geometric figure from the left ( eg: "15,80")</p>
+<h3 class="ParameterHeading">fontName</h3>
+<p class="ParameterBody"><span class="type">(string)&nbsp;</span>The font that will be used to render the text ( All font dont work, you must select an appropriate font - one word only in most of cases )</p>
+<h3 class="ParameterHeading">fontSize</h3>
+<p class="ParameterBody"><span class="type">(number)&nbsp;</span>The Size of The font to render the text</p>
+<h3 class="ParameterHeading">fontDecoration</h3>
+<p class="ParameterBody"><span class="type">(boolean)&nbsp;</span>The text Decoration ( only UnderLine available at this time )</p>
+<h3 class="ParameterHeading">textFillColor</h3>
+<p class="ParameterBody"><span class="type">(string)&nbsp;</span>The fill color of The text ( must be an hex color in range of "[000000-FFFFFF]")</p>
+<h3 class="ParameterHeading">strokeTextColor</h3>
+<p class="ParameterBody"><span class="type">(string)&nbsp;</span>The fill color of The text stroke ( must be an hex color in range of "[000000-FFFFFF]")</p>
+<h3 class="ParameterHeading">strokeTextSize</h3>
+<p class="ParameterBody"><span class="type">(number)&nbsp;</span>The size of The text stroke</p>
+<h3 class="ParameterHeading">textDecalage</h3>
+<p class="ParameterBody"><span class="type">(string)&nbsp;</span>Using this value you can move the text on the image eg: "10,110" ( Assuming the top is: 0,0 but not the top of the global image )</p>
+<h3 class="ParameterHeading">textRotation</h3>
+<p class="ParameterBody"><span class="type">(number)&nbsp;</span>The text rotation ( must be in range of [-360/360]</p>
+<h3 class="ParameterHeading">textPosition</h3>
+<p class="ParameterBody"><span class="type">(string)&nbsp;</span>The text position on the globale image eg: 0,0</p>
+<h3 class="ParameterHeading">textTitle</h3>
+<p class="ParameterBody"><span class="type">(string)&nbsp;</span>The TEXT string that will be rendered eg: "ImageMagikEx"</p>
+<h3 class="ParameterHeading">outputFilename</h3>
+<p class="ParameterBody"><span class="type">(string)&nbsp;</span>The output image filename that will be saved in AutoPlay\\Images folder ( A lot of format available: jpg, png, gif, tiff, bmp and more )</p>
+<h3 class="ParameterHeading">loadRenderedImage</h3>
+<p class="ParameterBody"><span class="type">(boolean)&nbsp;</span>If this is set to true the rendered image will be loaded into an AMS image object eg: "Image1"</p>
+<h3 class="ParameterHeading">useRunNotShellEx</h3>
+<p class="ParameterBody"><span class="type">(boolean)&nbsp;</span>If this is set to true RUN command will be used instead ShellExecute command ( extension .ƒct must be registered with ShellExecute cmd)</p>
+<br>
+<h2>Return</h2><blockquote><p>This action returns a <span class="type">(boolean)</span> value.<br><br></p></blockquote><br><hr><h2><p align="center">Made with Action Plugin Compiler</p></h2></body></html>

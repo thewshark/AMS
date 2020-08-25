@@ -1,0 +1,2742 @@
+<!doctype HTML public "-//W3C//DTD HTML 4.0 Frameset//EN">
+
+<html>
+<head>
+<title>Name</title>
+
+<meta http-equiv=content-type content="text/html; charset=windows-1252">
+
+<style>
+
+
+
+body {
+  font-family: Verdana, sans-serif;
+  font-size: 8pt;
+  background-color: #ffffff;
+}
+
+hr {
+  text-align: center;
+  color: #f0f0f0;
+  width: 100%;
+  height: 6pt;
+
+  margin-top: 0pt;
+  margin-bottom: -3pt;
+
+  border: none;
+}
+
+A:link, A:active, A:visited {
+  color: #0000ff;
+  text-decoration: none;
+}
+
+A:hover {
+  color: #0000ff;
+  text-decoration: underline;
+}
+
+h1 {
+  font-family: Verdana;
+  font-weight: bold;
+  font-size: 18.0pt;
+  white-space: nowrap;
+  color: #fff;
+  background-color: #699BEF;
+
+  padding: 4pt 3pt;
+  padding: 5px 4px;
+
+  margin-top: 0pt;
+  margin-bottom: 0pt;
+
+  border-right: 1px solid #333;
+  border-left: 1px solid #699BEF;
+  border-bottom: solid black 1px;
+}
+
+h2 {
+  font-family: Arial, sans-serif;
+  font-size: 12.0pt;
+  letter-spacing: .2ex;
+  color: #000;
+  
+  margin-left: 0pt;
+  margin-right: 0pt;
+  margin-top: 18pt;
+  margin-bottom: 9pt;
+}
+
+h3 {
+  font-family: Arial, sans-serif;
+  font-size: 10pt;
+  font-weight: bold;
+  font-style: normal;
+  color: black;
+  letter-spacing: 0px;
+
+  margin-left: 0pt;
+  margin-right: 0pt;
+  margin-top: 18pt;
+  margin-bottom: 3pt;
+}
+
+p {
+  font-family: Verdana;
+  font-size: 8.0pt;
+  line-height: 12.0pt;
+  
+  margin-left: 0pt;
+  margin-right: 0pt;
+  margin-top: 0pt;
+  margin-bottom: 9pt;
+}
+
+/* CLASSES */
+
+div.Actions h3, div.Properties h3, div.Events h3 {
+  font-family: Arial, sans-serif;
+  font-size: 10pt;
+  font-weight: bold;
+  font-style: italic;
+  color: #3C77B3;
+  letter-spacing: 0px;
+  
+  margin-left: 12pt;
+  margin-right: 0pt;
+  margin-top: 18pt;
+  margin-bottom: 3pt;
+}
+
+div.Events h4, div.Actions h4, div.info h3 {
+  font-family: Verdana;
+  font-size: 8.0pt;
+  line-height: 12.0pt;
+  font-style: bold;
+  
+  margin-top: 9pt;
+  margin-bottom: 0pt;
+  margin-left: 28pt;
+  margin-right: 0pt;
+}
+
+div.Actions p, div.Properties p, div.Events p, div.ErrorCodes p {
+  font-family: Verdana;
+  font-size: 8.0pt;
+  line-height: 12.0pt;
+  
+  margin-top: 0pt;
+  margin-bottom: 9pt;
+  margin-left: 12pt;
+  margin-right: 0pt;
+}
+
+p.NavLocal {
+  white-space: nowrap;
+  text-indent: -4px;
+  font-family: Verdana, Arial, sans-serif;
+  font-weight: bold;
+  font-style: normal;
+  font-size: 13px;
+  background-color: #e4e4e4;
+
+  margin-top: 0px;
+  margin-bottom: 12pt;
+
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 0px;
+  padding-right: 0px;
+
+  border-bottom: 1px solid #e4e4e4;
+}
+
+p.Note {
+	font-family: Verdana;
+	font-size: 8.0pt;
+	line-height: 12.0pt;
+	color: #000000;
+	background-color: #ffffe8;
+
+	margin-top: 0pt;
+	margin-bottom: 9pt;
+	margin-left: 0pt;
+	margin-right: 5%;
+
+	padding-left: 2pt;
+	padding-right: 2pt;
+	padding-top: 1pt;
+	padding-bottom: 2pt;
+}
+
+p.Tip {
+	font-family: Verdana;
+	font-size: 8.0pt;
+	line-height: 12.0pt;
+	color: #000000;
+	background-color: #EAF4E8;
+
+	margin-top: 0pt;
+	margin-bottom: 9pt;
+	margin-left: 0pt;
+	margin-right: 5%;
+
+	padding-left: 2pt;
+	padding-right: 2pt;
+	padding-top: 1pt;
+	padding-bottom: 2pt;
+}
+
+div.Actions p.Note, div.Events p.Note,
+div.Actions p.Tip, div.Events p.Tip {
+	margin-left: 28pt;
+}
+
+div.Properties p.Note,
+div.Properties p.Tip {
+	margin-left: 18pt;
+}
+
+pre.code {
+  white-space: pre;
+  font-family: Courier New, Courier, Arial, sans-serif;
+  font-size: 10pt;
+  font-weight: normal;
+  font-style: normal;
+  letter-spacing: normal;
+  color: #000;
+  background-color: #f9f9f9;
+  
+  margin-top: 3pt;
+  margin-bottom: 9pt;
+  margin-left: 0pt;
+  margin-left: 0pt;
+  
+  padding: 10px;
+  
+  border: 1px dotted #ccc;
+}
+
+div.Actions pre.code, div.Events pre.code {
+  margin-left: 28pt;
+}
+
+div.Actions h2, div.Properties h2, div.Events h2 {
+  margin-bottom: -6pt;
+}
+
+div.actions p, div.ErrorCodes p, div.info p {
+  margin-left: 28pt;
+}
+
+div.actions p.indent {
+  margin-left: 38pt;
+}
+
+div.e_vars p {
+  margin-left: 28pt;
+}
+
+span.here { /* blue tab effect in navbar (NavLocal) */
+  font-weight: bold;
+  color: #fff;
+  background-color: #699BEF;
+
+  margin: 0px;
+
+  padding: 4px 8px;
+
+  border-top: 1px solid #699BEF;
+  border-bottom: 1px solid #333;
+  border-left: none;
+  border-right: 1px solid #333;
+}
+
+span.type {
+	color: #aaa;
+}
+A:link,
+A:active,
+A:visited {
+	color: #0000ff;
+	x-text-underline: off;
+	x-text-overline: off;
+	x-text-line-through: off;
+	/*begin!kadov{{*/ text-decoration: none none none; /*}}end!kadov*/ 
+}
+
+A:hover {
+	color: #0000ff;
+	x-text-underline: normal;
+	/*begin!kadov{{*/ text-decoration: underline; /*}}end!kadov*/ 
+}
+
+BODY {
+	font-family: Verdana, sans-serif;
+	font-size: 8pt;
+	background-color: #ffffff;
+}
+
+h1 {
+	font-family: Verdana;
+	font-weight: bold;
+	font-size: 18.0pt;
+	white-space: nowrap;
+	color: #ffffff;
+	background-color: #699BEF;
+	padding: 4pt 3pt;
+	padding: 5px 4px;
+	margin-top: 0pt;
+	margin-bottom: 0pt;
+	border-right: 1px solid #333;
+	border-left: 1px solid #699BEF;
+	border-bottom: solid #000000 1px;
+	x-next-class: NavLocal;
+	x-next-type: P;
+}
+
+/*=(Generated Code)=================================================*/
+/*=(WARNING: DO NOT EDIT OR DELETE THIS SECTION!)===================*/
+/*begin!kadov{{=====================================================*/ 
+LI.kadov-h1 {
+	font-family: Verdana;
+	font-weight: bold;
+	font-size: 18.0pt;
+	white-space: nowrap;
+	color: #ffffff;
+}
+/*}}end!kadov=======================================================*/ 
+
+
+
+/* NOTE: for a slightly more web-safe version, replace #699BEF with
+#6699FF throughout this style sheet */
+
+h1 img {
+	margin-left: 2em;
+	vertical-align: middle;
+}
+
+h2 {
+	font-family: Arial, sans-serif;
+	font-size: 12.0pt;
+	letter-spacing: .2ex;
+	color: #000000;
+	margin-left: 0pt;
+	margin-right: 0pt;
+	margin-top: 18pt;
+	margin-bottom: 3pt;
+}
+
+/*=(Generated Code)=================================================*/
+/*=(WARNING: DO NOT EDIT OR DELETE THIS SECTION!)===================*/
+/*begin!kadov{{=====================================================*/ 
+LI.kadov-h2 {
+	font-family: Arial, sans-serif;
+	font-size: 12.0pt;
+	letter-spacing: .2ex;
+	color: #000000;
+}
+/*}}end!kadov=======================================================*/ 
+
+
+
+h3 {
+	font-family: Arial, sans-serif;
+	font-size: 10pt;
+	font-weight: bold;
+	font-style: italic;
+	color: #3C77B3;
+	margin-left: 12pt;
+	margin-right: 0pt;
+	margin-top: 18pt;
+	margin-bottom: 3pt;
+	x-next-class: p;
+	x-next-type: p;
+	font-style: normal;
+	color: #000000;
+	letter-spacing: 0px;
+	margin-left: 0pt;
+}
+
+/*=(Generated Code)=================================================*/
+/*=(WARNING: DO NOT EDIT OR DELETE THIS SECTION!)===================*/
+/*begin!kadov{{=====================================================*/ 
+LI.kadov-h3 {
+	font-family: Arial, sans-serif;
+	font-size: 10pt;
+	font-weight: bold;
+	font-style: italic;
+	color: #3C77B3;
+	font-style: normal;
+	color: #000000;
+	letter-spacing: 0px;
+}
+/*}}end!kadov=======================================================*/ 
+
+
+
+h4 {
+	font-family: Arial, sans-serif;
+	font-size: 10pt;
+	font-weight: bold;
+	font-style: italic;
+	color: #000000;
+	letter-spacing: .2ex;
+	margin-left: 12pt;
+	margin-right: 0pt;
+	margin-top: 12pt;
+	margin-bottom: 3pt;
+	x-next-class: p;
+	x-next-type: p;
+}
+
+/*=(Generated Code)=================================================*/
+/*=(WARNING: DO NOT EDIT OR DELETE THIS SECTION!)===================*/
+/*begin!kadov{{=====================================================*/ 
+LI.kadov-h4 {
+	font-family: Arial, sans-serif;
+	font-size: 10pt;
+	font-weight: bold;
+	font-style: italic;
+	color: #000000;
+	letter-spacing: .2ex;
+}
+/*}}end!kadov=======================================================*/ 
+
+
+
+hr {
+	text-align: center;
+	color: #f0f0f0;
+	width: 100%;
+	height: 6pt;
+	margin-left: 0pt;
+	margin-right: 0pt;
+	margin-top: 0pt;
+	margin-bottom: -3pt;
+	border: none;
+}
+
+ol li {
+	list-style: decimal;
+	line-height: 12pt;
+	margin-bottom: 14pt;
+}
+
+p {
+	font-family: Verdana;
+	font-size: 8.0pt;
+	line-height: 12.0pt;
+	margin-left: 0pt;
+	margin-right: 0pt;
+	margin-top: 0pt;
+	margin-bottom: 9pt;
+}
+
+/*=(Generated Code)=================================================*/
+/*=(WARNING: DO NOT EDIT OR DELETE THIS SECTION!)===================*/
+/*begin!kadov{{=====================================================*/ 
+LI.kadov-p {
+	font-family: Verdana;
+	font-size: 8.0pt;
+	line-height: 12.0pt;
+}
+/*}}end!kadov=======================================================*/ 
+
+
+
+ul {
+	margin-top: 0pt;
+	margin-bottom: 12pt;
+	list-style-type: disc;
+	list-style-image: url(bullet.png);
+}
+
+ul p {
+	margin-bottom: 6pt;
+}
+
+/*=(Generated Code)=================================================*/
+/*=(WARNING: DO NOT EDIT OR DELETE THIS SECTION!)===================*/
+/*begin!kadov{{=====================================================*/ 
+ul LI.kadov-p {
+}
+/*}}end!kadov=======================================================*/ 
+
+
+
+/* CLASSES */
+/* CLASSES */
+/* CLASSES */
+/* CLASSES */
+/* CLASSES */
+
+div.Declaration {
+	white-space: nowrap;
+	line-height: normal;
+	x-text-tab-stops: repeat 1in;
+	font-family: "Courier New", Courier, monospace;
+	font-size: 9.0pt;
+	background-color: #eee;
+	color: #000000;
+	width: 100%;
+	margin-left: 0px;
+	margin-right: 0px;
+	margin-top: 0pt;
+	margin-bottom: 9pt;
+	padding: 2pt;
+	border-top: #c0c0c0 1px solid;
+	border-right: #c0c0c0 1px solid;
+	border-left: #c0c0c0 1px solid;
+	border-bottom: #c0c0c0 1px solid;
+}
+
+div.Declaration a:link,
+div.Declaration a:active,
+div.Declaration a:visited {
+	color: #000000;
+	x-text-underline: off;
+	x-text-overline: off;
+	x-text-line-through: off;
+	/*begin!kadov{{*/ text-decoration: none none none; /*}}end!kadov*/ 
+}
+
+div.Declaration a:hover {
+	color: #0000ff;
+	x-text-underline: off;
+	x-text-overline: off;
+	x-text-line-through: off;
+	/*begin!kadov{{*/ text-decoration: none none none; /*}}end!kadov*/ 
+}
+
+div.Declaration table p {
+	white-space: nowrap;
+	line-height: normal;
+	x-text-tab-stops: repeat 1in;
+	font-family: "Courier New", Courier, monospace;
+	font-size: 10.0pt;
+	background-color: #eee;
+	color: #000000;
+	margin-left: 0px;
+	margin-right: 0px;
+	margin-top: 0px;
+	margin-bottom: 0px;
+	padding: 0pt;
+	border-style: none;
+}
+
+/*=(Generated Code)=================================================*/
+/*=(WARNING: DO NOT EDIT OR DELETE THIS SECTION!)===================*/
+/*begin!kadov{{=====================================================*/ 
+div.Declaration table LI.kadov-p {
+	white-space: nowrap;
+	line-height: normal;
+	x-text-tab-stops: repeat 1in;
+	font-family: "Courier New", Courier, monospace;
+	font-size: 10.0pt;
+	color: #000000;
+}
+/*}}end!kadov=======================================================*/ 
+
+
+
+h2.ExampleHeading {
+	x-next-class: ExampleCode;
+	x-next-type: p;
+	white-space: nowrap;
+	margin-bottom: 3pt;
+}
+
+/*=(Generated Code)=================================================*/
+/*=(WARNING: DO NOT EDIT OR DELETE THIS SECTION!)===================*/
+/*begin!kadov{{=====================================================*/ 
+LI.kadov-h2-CExampleHeading {
+	white-space: nowrap;
+}
+/*}}end!kadov=======================================================*/ 
+
+
+
+h2.GroupHeading {
+	font-family: Arial, sans-serif;
+	font-size: 12pt;
+	font-weight: bold;
+	font-style: normal;
+	color: #999999;
+	margin-top: 18pt;
+	margin-bottom: -6pt;
+	margin-left: 0pt;
+	margin-right: 0pt;
+	x-next-class: FieldHeading;
+	x-next-type: h3;
+}
+
+/*=(Generated Code)=================================================*/
+/*=(WARNING: DO NOT EDIT OR DELETE THIS SECTION!)===================*/
+/*begin!kadov{{=====================================================*/ 
+LI.kadov-h2-CGroupHeading {
+	font-family: Arial, sans-serif;
+	font-size: 12pt;
+	font-weight: bold;
+	font-style: normal;
+	color: #999999;
+}
+/*}}end!kadov=======================================================*/ 
+
+
+
+h2.GroupHeadingLoose {
+	font-family: Arial, sans-serif;
+	font-size: 12pt;
+	font-weight: bold;
+	font-style: normal;
+	color: #999999;
+	margin-top: 18pt;
+	margin-bottom: 9pt;
+	margin-left: 0pt;
+	margin-right: 0pt;
+	x-next-class: GroupBody;
+	x-next-type: p;
+}
+
+/*=(Generated Code)=================================================*/
+/*=(WARNING: DO NOT EDIT OR DELETE THIS SECTION!)===================*/
+/*begin!kadov{{=====================================================*/ 
+LI.kadov-h2-CGroupHeadingLoose {
+	font-family: Arial, sans-serif;
+	font-size: 12pt;
+	font-weight: bold;
+	font-style: normal;
+	color: #999999;
+}
+/*}}end!kadov=======================================================*/ 
+
+
+
+h2.GroupSubHeading {
+	font-family: Arial, sans-serif;
+	font-size: 12pt;
+	font-weight: bold;
+	font-style: italic;
+	color: #aa9999;
+	margin-top: 18pt;
+	margin-bottom: -6pt;
+	margin-left: 6pt;
+	margin-right: 0pt;
+	x-next-class: FieldHeading;
+	x-next-type: h3;
+}
+
+/*=(Generated Code)=================================================*/
+/*=(WARNING: DO NOT EDIT OR DELETE THIS SECTION!)===================*/
+/*begin!kadov{{=====================================================*/ 
+LI.kadov-h2-CGroupSubHeading {
+	font-family: Arial, sans-serif;
+	font-size: 12pt;
+	font-weight: bold;
+	font-style: italic;
+	color: #aa9999;
+}
+/*}}end!kadov=======================================================*/ 
+
+
+
+h2.H2Tight {
+	margin-bottom: -6pt;
+}
+
+/*=(Generated Code)=================================================*/
+/*=(WARNING: DO NOT EDIT OR DELETE THIS SECTION!)===================*/
+/*begin!kadov{{=====================================================*/ 
+LI.kadov-h2-CH2Tight {
+}
+/*}}end!kadov=======================================================*/ 
+
+
+
+h2.HowDoIHeading {
+	font-family: Arial, sans-serif;
+	font-size: 16.0pt;
+	letter-spacing: .2ex;
+	color: #000000;
+	margin-left: 0pt;
+	margin-right: 0pt;
+	margin-top: 18pt;
+	margin-bottom: 3pt;
+	x-next-class: Normal;
+	x-next-type: p;
+}
+
+/*=(Generated Code)=================================================*/
+/*=(WARNING: DO NOT EDIT OR DELETE THIS SECTION!)===================*/
+/*begin!kadov{{=====================================================*/ 
+LI.kadov-h2-CHowDoIHeading {
+	font-family: Arial, sans-serif;
+	font-size: 16.0pt;
+	letter-spacing: .2ex;
+	color: #000000;
+}
+/*}}end!kadov=======================================================*/ 
+
+
+
+h2.ListHeading {
+	margin-bottom: 9pt;
+	x-next-class: ListBody;
+	x-next-type: p;
+	white-space: nowrap;
+}
+
+/*=(Generated Code)=================================================*/
+/*=(WARNING: DO NOT EDIT OR DELETE THIS SECTION!)===================*/
+/*begin!kadov{{=====================================================*/ 
+LI.kadov-h2-CListHeading {
+	white-space: nowrap;
+}
+/*}}end!kadov=======================================================*/ 
+
+
+
+h2.TabHeading {
+	font-family: Arial, sans-serif;
+	font-size: 15.0pt;
+	letter-spacing: normal;
+	background-color: #e4e4e4;
+	color: #999;
+	color: #9c9c9c;
+	margin-left: -8pt;
+	margin-right: -8pt;
+	margin-top: 18pt;
+	margin-bottom: 12pt;
+	padding-left: 8pt;
+	padding-top: 4px;
+	padding-bottom: 4px;
+	border-top: 1px solid #999;
+	border-bottom: 1px solid #999;
+	border-left: none;
+	border-right: none;
+}
+
+/*=(Generated Code)=================================================*/
+/*=(WARNING: DO NOT EDIT OR DELETE THIS SECTION!)===================*/
+/*begin!kadov{{=====================================================*/ 
+LI.kadov-h2-CTabHeading {
+	font-family: Arial, sans-serif;
+	font-size: 15.0pt;
+	letter-spacing: normal;
+	color: #999;
+	color: #9c9c9c;
+}
+/*}}end!kadov=======================================================*/ 
+
+
+
+h2.VarHeading {
+	font-family: Arial;
+	font-size: 10pt;
+	letter-spacing: 0px;
+	margin-left: 12pt;
+	margin-right: 0pt;
+	margin-top: 18pt;
+	margin-bottom: 3pt;
+	x-next-class: VarBody;
+	x-next-type: p;
+	white-space: nowrap;
+}
+
+/*=(Generated Code)=================================================*/
+/*=(WARNING: DO NOT EDIT OR DELETE THIS SECTION!)===================*/
+/*begin!kadov{{=====================================================*/ 
+LI.kadov-h2-CVarHeading {
+	font-family: Arial;
+	font-size: 10pt;
+	letter-spacing: 0px;
+	white-space: nowrap;
+}
+/*}}end!kadov=======================================================*/ 
+
+
+
+h3.ErrHeading {
+	font-family: Arial, sans-serif;
+	font-size: 10pt;
+	font-style: normal;
+	color: #000000;
+	letter-spacing: 0px;
+	margin-left: 12pt;
+	margin-right: 0pt;
+	margin-top: 18pt;
+	margin-bottom: 3pt;
+	x-next-class: ErrBody;
+	x-next-type: p;
+	white-space: nowrap;
+}
+
+/*=(Generated Code)=================================================*/
+/*=(WARNING: DO NOT EDIT OR DELETE THIS SECTION!)===================*/
+/*begin!kadov{{=====================================================*/ 
+LI.kadov-h3-CErrHeading {
+	font-family: Arial, sans-serif;
+	font-size: 10pt;
+	font-style: normal;
+	color: #000000;
+	letter-spacing: 0px;
+	white-space: nowrap;
+}
+/*}}end!kadov=======================================================*/ 
+
+
+
+h3.FieldHeading {
+	font-family: Arial, sans-serif;
+	font-size: 10pt;
+	font-weight: bold;
+	font-style: italic;
+	color: #3C77B3;
+	letter-spacing: 0px;
+	margin-left: 12pt;
+	margin-right: 0pt;
+	margin-top: 18pt;
+	margin-bottom: 3pt;
+	x-next-class: FieldBody;
+	x-next-type: p;
+}
+
+/*=(Generated Code)=================================================*/
+/*=(WARNING: DO NOT EDIT OR DELETE THIS SECTION!)===================*/
+/*begin!kadov{{=====================================================*/ 
+LI.kadov-h3-CFieldHeading {
+	font-family: Arial, sans-serif;
+	font-size: 10pt;
+	font-weight: bold;
+	font-style: italic;
+	color: #3C77B3;
+	letter-spacing: 0px;
+}
+/*}}end!kadov=======================================================*/ 
+
+
+
+h3.FieldSubHeading {
+	font-family: Arial, sans-serif;
+	font-size: 10pt;
+	font-weight: bold;
+	font-style: italic;
+	color: #3C77B3;
+	letter-spacing: 0px;
+	margin-left: 32pt;
+	margin-right: 0pt;
+	margin-top: 18pt;
+	margin-bottom: 3pt;
+	x-next-class: FieldSubBody;
+	x-next-type: p;
+}
+
+/*=(Generated Code)=================================================*/
+/*=(WARNING: DO NOT EDIT OR DELETE THIS SECTION!)===================*/
+/*begin!kadov{{=====================================================*/ 
+LI.kadov-h3-CFieldSubHeading {
+	font-family: Arial, sans-serif;
+	font-size: 10pt;
+	font-weight: bold;
+	font-style: italic;
+	color: #3C77B3;
+	letter-spacing: 0px;
+}
+/*}}end!kadov=======================================================*/ 
+
+
+
+h3.ParameterHeading {
+	font-family: Arial, sans-serif;
+	margin-left: 12pt;
+	margin-right: 0pt;
+	margin-top: 18pt;
+	margin-bottom: 3pt;
+	font-size: 9pt;
+	font-weight: bold;
+	font-style: italic;
+	letter-spacing: .2ex;
+	color: #3C77B3;
+	x-next-class: ParameterBody;
+	x-next-type: p;
+}
+
+/*=(Generated Code)=================================================*/
+/*=(WARNING: DO NOT EDIT OR DELETE THIS SECTION!)===================*/
+/*begin!kadov{{=====================================================*/ 
+LI.kadov-h3-CParameterHeading {
+	font-family: Arial, sans-serif;
+	font-size: 9pt;
+	font-weight: bold;
+	font-style: italic;
+	letter-spacing: .2ex;
+	color: #3C77B3;
+}
+/*}}end!kadov=======================================================*/ 
+
+
+
+h4.OptionHeading {
+	font-family: Verdana, sans-serif;
+	font-size: 8.0pt;
+	font-weight: bold;
+	font-style: normal;
+	line-height: 12.0pt;
+	color: #000000;
+	margin-left: 32.0pt;
+	margin-right: 0pt;
+	margin-top: 12pt;
+	margin-bottom: 0;
+	x-next-class: OptionBody;
+	x-next-type: p;
+}
+
+/*=(Generated Code)=================================================*/
+/*=(WARNING: DO NOT EDIT OR DELETE THIS SECTION!)===================*/
+/*begin!kadov{{=====================================================*/ 
+LI.kadov-h4-COptionHeading {
+	font-family: Verdana, sans-serif;
+	font-size: 8.0pt;
+	font-weight: bold;
+	font-style: normal;
+	line-height: 12.0pt;
+	color: #000000;
+}
+/*}}end!kadov=======================================================*/ 
+
+
+
+h4.OptionSubHeading {
+	font-family: Verdana, sans-serif;
+	font-size: 8.0pt;
+	font-weight: bold;
+	font-style: normal;
+	line-height: 12.0pt;
+	color: #000000;
+	margin-left: 52.0pt;
+	margin-right: 0pt;
+	margin-top: 12pt;
+	margin-bottom: 0;
+	x-next-class: OptionSubBody;
+	x-next-type: p;
+}
+
+/*=(Generated Code)=================================================*/
+/*=(WARNING: DO NOT EDIT OR DELETE THIS SECTION!)===================*/
+/*begin!kadov{{=====================================================*/ 
+LI.kadov-h4-COptionSubHeading {
+	font-family: Verdana, sans-serif;
+	font-size: 8.0pt;
+	font-weight: bold;
+	font-style: normal;
+	line-height: 12.0pt;
+	color: #000000;
+}
+/*}}end!kadov=======================================================*/ 
+
+
+
+P.BodyCode {
+	white-space: nowrap;
+	font-family: "Courier New", Courier, Arial, sans-serif;
+	font-size: 10pt;
+	font-weight: normal;
+	font-style: normal;
+	letter-spacing: normal;
+	color: #000000;
+	background-color: #eee;
+	background-color: #f9f9f9;
+	margin-top: -6pt;
+	margin-bottom: 9pt;
+	margin-left: 0pt;
+	margin-right: 0pt;
+	padding: 10px;
+	border: 1px dotted #ccc;
+	x-next-type: p;
+}
+
+/*=(Generated Code)=================================================*/
+/*=(WARNING: DO NOT EDIT OR DELETE THIS SECTION!)===================*/
+/*begin!kadov{{=====================================================*/ 
+LI.kadov-P-CBodyCode {
+	white-space: nowrap;
+	font-family: "Courier New", Courier, Arial, sans-serif;
+	font-size: 10pt;
+	font-weight: normal;
+	font-style: normal;
+	letter-spacing: normal;
+	color: #000000;
+}
+/*}}end!kadov=======================================================*/ 
+
+
+
+p.Caption {
+	font-size: 7pt;
+	letter-spacing: .5pt;
+	line-height: 14pt;
+	text-align: center;
+	margin-bottom: 0pt;
+	x-next-class: ;
+	x-next-type: P;
+}
+
+/*=(Generated Code)=================================================*/
+/*=(WARNING: DO NOT EDIT OR DELETE THIS SECTION!)===================*/
+/*begin!kadov{{=====================================================*/ 
+LI.kadov-p-CCaption {
+	font-size: 7pt;
+	letter-spacing: .5pt;
+	line-height: 14pt;
+	text-align: center;
+}
+/*}}end!kadov=======================================================*/ 
+
+
+
+P.Code {
+	white-space: nowrap;
+	font-family: "Courier New", Courier, Arial, sans-serif;
+	font-size: 10pt;
+	font-weight: normal;
+	font-style: normal;
+	letter-spacing: normal;
+	color: #000000;
+	background-color: #ffffff;
+	margin-bottom: 9pt;
+	margin-left: 0pt;
+	margin-right: 0pt;
+	padding: 00px;
+	x-next-type: p;
+}
+
+/*=(Generated Code)=================================================*/
+/*=(WARNING: DO NOT EDIT OR DELETE THIS SECTION!)===================*/
+/*begin!kadov{{=====================================================*/ 
+LI.kadov-P-CCode {
+	white-space: nowrap;
+	font-family: "Courier New", Courier, Arial, sans-serif;
+	font-size: 10pt;
+	font-weight: normal;
+	font-style: normal;
+	letter-spacing: normal;
+	color: #000000;
+}
+/*}}end!kadov=======================================================*/ 
+
+
+
+p.ErrBody {
+	margin-left: 12pt;
+	margin-right: 0pt;
+	margin-bottom: 3pt;
+	x-next-class: ErrBody;
+	x-next-type: p;
+	white-space: nowrap;
+}
+
+/*=(Generated Code)=================================================*/
+/*=(WARNING: DO NOT EDIT OR DELETE THIS SECTION!)===================*/
+/*begin!kadov{{=====================================================*/ 
+LI.kadov-p-CErrBody {
+	white-space: nowrap;
+}
+/*}}end!kadov=======================================================*/ 
+
+
+
+p.ErrCode {
+	white-space: nowrap;
+	font-family: "Courier New", Courier, Arial, sans-serif;
+	font-size: 10pt;
+	font-weight: normal;
+	font-style: normal;
+	letter-spacing: normal;
+	color: #052;
+	color: #000000;
+	background-color: #eee;
+	background-color: #f9f9f9;
+	margin-top: 9pt;
+	margin-bottom: 9pt;
+	margin-left: 12pt;
+	margin-right: 0pt;
+	padding: 10px;
+	border: 1px dotted #ccc;
+	x-next-class: ErrBody;
+	x-next-type: p;
+}
+
+/*=(Generated Code)=================================================*/
+/*=(WARNING: DO NOT EDIT OR DELETE THIS SECTION!)===================*/
+/*begin!kadov{{=====================================================*/ 
+LI.kadov-p-CErrCode {
+	white-space: nowrap;
+	font-family: "Courier New", Courier, Arial, sans-serif;
+	font-size: 10pt;
+	font-weight: normal;
+	font-style: normal;
+	letter-spacing: normal;
+	color: #052;
+	color: #000000;
+}
+/*}}end!kadov=======================================================*/ 
+
+
+
+p.ErrNote {
+	font-family: Verdana;
+	font-size: 8.0pt;
+	line-height: 12.0pt;
+	color: #000000;
+	background-color: #ffffe8;
+	margin-top: 9pt;
+	margin-bottom: 9pt;
+	margin-left: 12pt;
+	margin-right: 5%;
+	padding-left: 2pt;
+	padding-right: 2pt;
+	padding-top: 1pt;
+	padding-bottom: 2pt;
+	x-next-class: ErrBody;
+	x-next-type: p;
+}
+
+/*=(Generated Code)=================================================*/
+/*=(WARNING: DO NOT EDIT OR DELETE THIS SECTION!)===================*/
+/*begin!kadov{{=====================================================*/ 
+LI.kadov-p-CErrNote {
+	font-family: Verdana;
+	font-size: 8.0pt;
+	line-height: 12.0pt;
+	color: #000000;
+}
+/*}}end!kadov=======================================================*/ 
+
+
+
+p.ErrTip {
+	font-family: Verdana;
+	font-size: 8.0pt;
+	line-height: 12.0pt;
+	color: #000000;
+	background-color: #EAF4E8;
+	margin-top: 9pt;
+	margin-bottom: 9pt;
+	margin-left: 12pt;
+	margin-right: 5%;
+	padding-left: 2pt;
+	padding-right: 2pt;
+	padding-top: 1pt;
+	padding-bottom: 2pt;
+	x-next-class: ErrBody;
+	x-next-type: p;
+}
+
+/*=(Generated Code)=================================================*/
+/*=(WARNING: DO NOT EDIT OR DELETE THIS SECTION!)===================*/
+/*begin!kadov{{=====================================================*/ 
+LI.kadov-p-CErrTip {
+	font-family: Verdana;
+	font-size: 8.0pt;
+	line-height: 12.0pt;
+	color: #000000;
+}
+/*}}end!kadov=======================================================*/ 
+
+
+
+P.ExampleBody {
+	margin-right: 0pt;
+	margin-bottom: 9pt;
+	margin-left: 12px;
+}
+
+/*=(Generated Code)=================================================*/
+/*=(WARNING: DO NOT EDIT OR DELETE THIS SECTION!)===================*/
+/*begin!kadov{{=====================================================*/ 
+LI.kadov-P-CExampleBody {
+}
+/*}}end!kadov=======================================================*/ 
+
+
+
+p.ExampleCode {
+	white-space: nowrap;
+	font-family: "Courier New", Courier, Arial, sans-serif;
+	font-size: 10pt;
+	font-weight: normal;
+	font-style: normal;
+	letter-spacing: normal;
+	color: #052;
+	background-color: #f9f9f9;
+	margin-top: 6pt;
+	margin-bottom: 3pt;
+	margin-left: 0pt;
+	margin-right: 0pt;
+	padding: 10px;
+	border: 1px dotted #ccc;
+	x-next-class: ExampleBody;
+	x-next-type: p;
+}
+
+/*=(Generated Code)=================================================*/
+/*=(WARNING: DO NOT EDIT OR DELETE THIS SECTION!)===================*/
+/*begin!kadov{{=====================================================*/ 
+LI.kadov-p-CExampleCode {
+	white-space: nowrap;
+	font-family: "Courier New", Courier, Arial, sans-serif;
+	font-size: 10pt;
+	font-weight: normal;
+	font-style: normal;
+	letter-spacing: normal;
+	color: #052;
+}
+/*}}end!kadov=======================================================*/ 
+
+
+
+p.ExampleNote {
+	font-family: Verdana;
+	font-size: 8.0pt;
+	line-height: 12.0pt;
+	color: #000000;
+	background-color: #ffffe8;
+	margin-top: 0pt;
+	margin-bottom: 9pt;
+	margin-left: 10px;
+	margin-right: 5%;
+	padding-left: 2pt;
+	padding-right: 2pt;
+	padding-top: 1pt;
+	padding-bottom: 2pt;
+	x-next-class: ;
+	x-next-type: p;
+}
+
+/*=(Generated Code)=================================================*/
+/*=(WARNING: DO NOT EDIT OR DELETE THIS SECTION!)===================*/
+/*begin!kadov{{=====================================================*/ 
+LI.kadov-p-CExampleNote {
+	font-family: Verdana;
+	font-size: 8.0pt;
+	line-height: 12.0pt;
+	color: #000000;
+}
+/*}}end!kadov=======================================================*/ 
+
+
+
+p.ExampleTip {
+	font-family: Verdana;
+	font-size: 8.0pt;
+	line-height: 12.0pt;
+	color: #000000;
+	background-color: #EAF4E8;
+	margin-top: 0pt;
+	margin-bottom: 9pt;
+	margin-left: 10px;
+	margin-right: 5%;
+	padding-left: 2pt;
+	padding-right: 2pt;
+	padding-top: 1pt;
+	padding-bottom: 2pt;
+	x-next-class: FieldBody;
+	x-next-type: p;
+}
+
+/*=(Generated Code)=================================================*/
+/*=(WARNING: DO NOT EDIT OR DELETE THIS SECTION!)===================*/
+/*begin!kadov{{=====================================================*/ 
+LI.kadov-p-CExampleTip {
+	font-family: Verdana;
+	font-size: 8.0pt;
+	line-height: 12.0pt;
+	color: #000000;
+}
+/*}}end!kadov=======================================================*/ 
+
+
+
+p.FieldBody {
+	font-family: Verdana;
+	font-size: 8.0pt;
+	line-height: 12.0pt;
+	margin-top: 0pt;
+	margin-bottom: 9pt;
+	margin-left: 12pt;
+	margin-right: 0pt;
+	x-next-class: FieldBody;
+	x-next-type: p;
+}
+
+/*=(Generated Code)=================================================*/
+/*=(WARNING: DO NOT EDIT OR DELETE THIS SECTION!)===================*/
+/*begin!kadov{{=====================================================*/ 
+LI.kadov-p-CFieldBody {
+	font-family: Verdana;
+	font-size: 8.0pt;
+	line-height: 12.0pt;
+}
+/*}}end!kadov=======================================================*/ 
+
+
+
+p.FieldSubBody {
+	font-family: Verdana;
+	font-size: 8.0pt;
+	line-height: 12.0pt;
+	margin-top: 0pt;
+	margin-bottom: 9pt;
+	margin-left: 32pt;
+	margin-right: 0pt;
+	x-next-class: FieldSubBody;
+	x-next-type: p;
+}
+
+/*=(Generated Code)=================================================*/
+/*=(WARNING: DO NOT EDIT OR DELETE THIS SECTION!)===================*/
+/*begin!kadov{{=====================================================*/ 
+LI.kadov-p-CFieldSubBody {
+	font-family: Verdana;
+	font-size: 8.0pt;
+	line-height: 12.0pt;
+}
+/*}}end!kadov=======================================================*/ 
+
+
+
+p.FieldNote {
+	font-family: Verdana;
+	font-size: 8.0pt;
+	line-height: 12.0pt;
+	color: #000000;
+	background-color: #ffffe8;
+	margin-top: 0pt;
+	margin-bottom: 9pt;
+	margin-left: 12pt;
+	margin-right: 5%;
+	padding-left: 2pt;
+	padding-right: 2pt;
+	padding-top: 1pt;
+	padding-bottom: 2pt;
+	x-next-class: FieldBody;
+	x-next-type: p;
+}
+
+/*=(Generated Code)=================================================*/
+/*=(WARNING: DO NOT EDIT OR DELETE THIS SECTION!)===================*/
+/*begin!kadov{{=====================================================*/ 
+LI.kadov-p-CFieldNote {
+	font-family: Verdana;
+	font-size: 8.0pt;
+	line-height: 12.0pt;
+	color: #000000;
+}
+/*}}end!kadov=======================================================*/ 
+
+
+
+p.FieldSubNote {
+	font-family: Verdana;
+	font-size: 8.0pt;
+	line-height: 12.0pt;
+	color: #000000;
+	background-color: #ffffe8;
+	margin-top: 0pt;
+	margin-bottom: 9pt;
+	margin-left: 32pt;
+	margin-right: 5%;
+	padding-left: 2pt;
+	padding-right: 2pt;
+	padding-top: 1pt;
+	padding-bottom: 2pt;
+	x-next-class: FieldBody;
+	x-next-type: p;
+}
+
+/*=(Generated Code)=================================================*/
+/*=(WARNING: DO NOT EDIT OR DELETE THIS SECTION!)===================*/
+/*begin!kadov{{=====================================================*/ 
+LI.kadov-p-CFieldSubNote {
+	font-family: Verdana;
+	font-size: 8.0pt;
+	line-height: 12.0pt;
+	color: #000000;
+}
+/*}}end!kadov=======================================================*/ 
+
+
+
+p.FieldSubTip {
+	font-family: Verdana;
+	font-size: 8.0pt;
+	line-height: 12.0pt;
+	color: #000000;
+	background-color: #EAF4E8;
+	margin-top: 0pt;
+	margin-bottom: 9pt;
+	margin-left: 32pt;
+	margin-right: 5%;
+	padding-left: 2pt;
+	padding-right: 2pt;
+	padding-top: 1pt;
+	padding-bottom: 2pt;
+	x-next-class: FieldBody;
+	x-next-type: p;
+}
+
+/*=(Generated Code)=================================================*/
+/*=(WARNING: DO NOT EDIT OR DELETE THIS SECTION!)===================*/
+/*begin!kadov{{=====================================================*/ 
+LI.kadov-p-CFieldSubTip {
+	font-family: Verdana;
+	font-size: 8.0pt;
+	line-height: 12.0pt;
+	color: #000000;
+}
+/*}}end!kadov=======================================================*/ 
+
+
+
+p.FieldTip {
+	font-family: Verdana;
+	font-size: 8.0pt;
+	line-height: 12.0pt;
+	color: #000000;
+	background-color: #EAF4E8;
+	margin-top: 0pt;
+	margin-bottom: 9pt;
+	margin-left: 12pt;
+	margin-right: 5%;
+	padding-left: 2pt;
+	padding-right: 2pt;
+	padding-top: 1pt;
+	padding-bottom: 2pt;
+	x-next-class: FieldBody;
+	x-next-type: p;
+}
+
+/*=(Generated Code)=================================================*/
+/*=(WARNING: DO NOT EDIT OR DELETE THIS SECTION!)===================*/
+/*begin!kadov{{=====================================================*/ 
+LI.kadov-p-CFieldTip {
+	font-family: Verdana;
+	font-size: 8.0pt;
+	line-height: 12.0pt;
+	color: #000000;
+}
+/*}}end!kadov=======================================================*/ 
+
+
+
+p.FieldWarning {
+	font-family: Verdana;
+	font-size: 8.0pt;
+	line-height: 12.0pt;
+	color: #000000;
+	background-color: #FDF0E8;
+	margin-top: 0pt;
+	margin-bottom: 9pt;
+	margin-left: 12pt;
+	margin-right: 5%;
+	padding-left: 2pt;
+	padding-right: 2pt;
+	padding-top: 1pt;
+	padding-bottom: 2pt;
+	border: 1px dotted #ff0000;
+	border: none;
+	x-next-class: FieldBody;
+	x-next-type: p;
+}
+
+/*=(Generated Code)=================================================*/
+/*=(WARNING: DO NOT EDIT OR DELETE THIS SECTION!)===================*/
+/*begin!kadov{{=====================================================*/ 
+LI.kadov-p-CFieldWarning {
+	font-family: Verdana;
+	font-size: 8.0pt;
+	line-height: 12.0pt;
+	color: #000000;
+}
+/*}}end!kadov=======================================================*/ 
+
+
+
+p.GroupBody {
+	margin-left: 12pt;
+	margin-right: 0pt;
+	margin-top: 0pt;
+	margin-bottom: 9pt;
+	x-next-class: GroupBody;
+	x-next-type: p;
+}
+
+/*=(Generated Code)=================================================*/
+/*=(WARNING: DO NOT EDIT OR DELETE THIS SECTION!)===================*/
+/*begin!kadov{{=====================================================*/ 
+LI.kadov-p-CGroupBody {
+}
+/*}}end!kadov=======================================================*/ 
+
+
+
+p.ListBody {
+	margin-left: 12pt;
+	margin-right: 0pt;
+	margin-bottom: 3pt;
+	x-next-class: ListBody;
+	x-next-type: p;
+}
+
+/*=(Generated Code)=================================================*/
+/*=(WARNING: DO NOT EDIT OR DELETE THIS SECTION!)===================*/
+/*begin!kadov{{=====================================================*/ 
+LI.kadov-p-CListBody {
+}
+/*}}end!kadov=======================================================*/ 
+
+
+
+p.TOC1 {
+	margin-top: 12pt;
+	margin-bottom: 3pt;
+	margin-left: 12pt;
+	margin-right: 0pt;
+	x-next-class: TOC2;
+	x-next-type: p;
+	white-space: nowrap;
+}
+
+/*=(Generated Code)=================================================*/
+/*=(WARNING: DO NOT EDIT OR DELETE THIS SECTION!)===================*/
+/*begin!kadov{{=====================================================*/ 
+LI.kadov-p-CTOC1 {
+	white-space: nowrap;
+}
+/*}}end!kadov=======================================================*/ 
+
+
+
+p.TOC2 {
+	margin-bottom: 3pt;
+	margin-left: 28pt;
+	margin-right: 0pt;
+	x-next-class: TOC2;
+	x-next-type: p;
+	white-space: nowrap;
+}
+
+/*=(Generated Code)=================================================*/
+/*=(WARNING: DO NOT EDIT OR DELETE THIS SECTION!)===================*/
+/*begin!kadov{{=====================================================*/ 
+LI.kadov-p-CTOC2 {
+	white-space: nowrap;
+}
+/*}}end!kadov=======================================================*/ 
+
+
+
+p.TOC3 {
+	font-style: italic;
+	margin-bottom: 3pt;
+	margin-left: 46pt;
+	margin-right: 0pt;
+	x-next-class: TOC3;
+	x-next-type: p;
+	white-space: nowrap;
+}
+
+/*=(Generated Code)=================================================*/
+/*=(WARNING: DO NOT EDIT OR DELETE THIS SECTION!)===================*/
+/*begin!kadov{{=====================================================*/ 
+LI.kadov-p-CTOC3 {
+	font-style: italic;
+	white-space: nowrap;
+}
+/*}}end!kadov=======================================================*/ 
+
+
+
+p.NumBody {
+	margin-left: 30pt;
+	margin-right: 0pt;
+	margin-top: 0pt;
+	margin-bottom: 3pt;
+	x-next-class: ErrBody;
+	x-next-type: p;
+}
+
+/*=(Generated Code)=================================================*/
+/*=(WARNING: DO NOT EDIT OR DELETE THIS SECTION!)===================*/
+/*begin!kadov{{=====================================================*/ 
+LI.kadov-p-CNumBody {
+}
+/*}}end!kadov=======================================================*/ 
+
+
+
+p.VarBody {
+	margin-left: 12pt;
+	margin-right: 0pt;
+	margin-bottom: 3pt;
+	x-next-class: VarBody;
+	x-next-type: p;
+}
+
+/*=(Generated Code)=================================================*/
+/*=(WARNING: DO NOT EDIT OR DELETE THIS SECTION!)===================*/
+/*begin!kadov{{=====================================================*/ 
+LI.kadov-p-CVarBody {
+}
+/*}}end!kadov=======================================================*/ 
+
+
+
+p.VarCode {
+	white-space: nowrap;
+	font-family: "Courier New", Courier, Arial, sans-serif;
+	font-size: 10pt;
+	font-weight: normal;
+	font-style: normal;
+	letter-spacing: normal;
+	color: #052;
+	color: #000000;
+	background-color: #eee;
+	background-color: #f9f9f9;
+	margin-top: 9pt;
+	margin-bottom: 9pt;
+	margin-left: 12pt;
+	margin-right: 0pt;
+	padding: 10px;
+	border: 1px dotted #ccc;
+	x-next-class: VarBody;
+	x-next-type: p;
+}
+
+/*=(Generated Code)=================================================*/
+/*=(WARNING: DO NOT EDIT OR DELETE THIS SECTION!)===================*/
+/*begin!kadov{{=====================================================*/ 
+LI.kadov-p-CVarCode {
+	white-space: nowrap;
+	font-family: "Courier New", Courier, Arial, sans-serif;
+	font-size: 10pt;
+	font-weight: normal;
+	font-style: normal;
+	letter-spacing: normal;
+	color: #052;
+	color: #000000;
+}
+/*}}end!kadov=======================================================*/ 
+
+
+
+p.VarNote {
+	font-family: Verdana;
+	font-size: 8.0pt;
+	line-height: 12.0pt;
+	color: #000000;
+	background-color: #ffffe8;
+	margin-top: 9pt;
+	margin-bottom: 9pt;
+	margin-left: 12pt;
+	margin-right: 5%;
+	padding-left: 2pt;
+	padding-right: 2pt;
+	padding-top: 1pt;
+	padding-bottom: 2pt;
+	x-next-class: VarBody;
+	x-next-type: p;
+}
+
+/*=(Generated Code)=================================================*/
+/*=(WARNING: DO NOT EDIT OR DELETE THIS SECTION!)===================*/
+/*begin!kadov{{=====================================================*/ 
+LI.kadov-p-CVarNote {
+	font-family: Verdana;
+	font-size: 8.0pt;
+	line-height: 12.0pt;
+	color: #000000;
+}
+/*}}end!kadov=======================================================*/ 
+
+
+
+p.VarTip {
+	font-family: Verdana;
+	font-size: 8.0pt;
+	line-height: 12.0pt;
+	color: #000000;
+	background-color: #EAF4E8;
+	margin-top: 9pt;
+	margin-bottom: 9pt;
+	margin-left: 12pt;
+	margin-right: 5%;
+	padding-left: 2pt;
+	padding-right: 2pt;
+	padding-top: 1pt;
+	padding-bottom: 2pt;
+	x-next-class: VarBody;
+	x-next-type: p;
+}
+
+/*=(Generated Code)=================================================*/
+/*=(WARNING: DO NOT EDIT OR DELETE THIS SECTION!)===================*/
+/*begin!kadov{{=====================================================*/ 
+LI.kadov-p-CVarTip {
+	font-family: Verdana;
+	font-size: 8.0pt;
+	line-height: 12.0pt;
+	color: #000000;
+}
+/*}}end!kadov=======================================================*/ 
+
+
+
+p.NavLocal {
+	white-space: nowrap;
+	text-indent: -4px;
+	font-family: Verdana, Arial, sans-serif;
+	font-weight: bold;
+	font-style: normal;
+	font-size: 10pt;
+	font-size: 13px;
+	background-color: #e4e4e4;
+	margin-top: 0px;
+	margin-bottom: 12pt;
+	padding-top: 4px;
+	padding-bottom: 4px;
+	padding-left: 0px;
+	padding-right: 0px;
+	border-bottom: 1px solid #e4e4e4;
+	x-next-class: ;
+	x-next-type: p;
+}
+
+/*=(Generated Code)=================================================*/
+/*=(WARNING: DO NOT EDIT OR DELETE THIS SECTION!)===================*/
+/*begin!kadov{{=====================================================*/ 
+LI.kadov-p-CNavLocal {
+	white-space: nowrap;
+	text-indent: -4px;
+	font-family: Verdana, Arial, sans-serif;
+	font-weight: bold;
+	font-style: normal;
+	font-size: 10pt;
+	font-size: 13px;
+}
+/*}}end!kadov=======================================================*/ 
+
+
+
+/* note:
+
+	Internet Explorer is broken on inline elements with horizontal padding.
+	I had something like this:
+
+	<p class=NavLocal><span class=Here>Overview</span>
+
+	...with span.Here having 4px of padding-left. The problem is, when
+	you resize the IE window narrower than the width of the paragraph
+	(auto, nowrap), it collapses the padding on the left and inserts
+	about one line-height above the element. GRR.
+
+	Oddly enough, if the first element has no extra padding-left, it
+	renders fine. After a couple days of "workaround hell," I came up
+	with two ways that seem to work in all current browsers. One is to
+	remove the padding and put &nbsp;&nbsp; on either side of the
+	content in each element within p.NavLocal. RoboHELP makes it pretty
+	hard to maintain that, though, and it makes adding and removing
+	links a royal PITA. The other way is to just put a single &nbsp; at
+	the start of the paragraph, and then shift the paragraph's text left
+	by the width of one space. This opens up the potential for font
+	rendering issues, but using a pixel size for the font should fix
+	that well enough, and seems to work 100% in my testing. To be safe,
+	I'm enclosing the &nbsp; in a span tag so I can remove it later with
+	a single "display: none" if I have to. Here's the new version:
+
+	<p class=NavLocal><span class=wab>&nbsp;</span><span class=Here>Overview</span>
+
+*/
+
+p.NavLocal a {
+	font-weight: normal;
+	font-weight: bold;
+	font-style: normal;
+	color: #8f8f9f;
+	background-color: #eee;
+	margin-top: 0px;
+	margin-bottom: 0px;
+	padding-top: 4px;
+	padding-bottom: 4px;
+	padding-left: 8px;
+	padding-right: 8px;
+	border-top: none;
+	border-bottom: 1px solid #ddd;
+	border-left: none;
+	border-right: #ddd 1px solid;
+}
+
+/* note: would need to expand border styles for netscape 4...border-right etc. won't work */
+
+p.NavLocal a:link,
+p.NavLocal a:active,
+p.NavLocal a:visited {
+	color: #8f8f9f;
+	x-text-underline: off;
+	x-text-overline: off;
+	x-text-line-through: off;
+	/*begin!kadov{{*/ text-decoration: none none none; /*}}end!kadov*/ 
+}
+
+p.NavLocal a:hover {
+	color: #0000ff;
+	x-text-underline: off;
+	x-text-overline: off;
+	x-text-line-through: off;
+	/*begin!kadov{{*/ text-decoration: none none none; /*}}end!kadov*/ 
+}
+
+p.Note {
+	font-family: Verdana;
+	font-size: 8.0pt;
+	line-height: 12.0pt;
+	color: #000000;
+	background-color: #ffffe8;
+	margin-top: 0pt;
+	margin-bottom: 9pt;
+	margin-left: 0pt;
+	margin-right: 5%;
+	padding-left: 2pt;
+	padding-right: 2pt;
+	padding-top: 1pt;
+	padding-bottom: 2pt;
+	x-next-class: ;
+	x-next-type: p;
+}
+
+/*=(Generated Code)=================================================*/
+/*=(WARNING: DO NOT EDIT OR DELETE THIS SECTION!)===================*/
+/*begin!kadov{{=====================================================*/ 
+LI.kadov-p-CNote {
+	font-family: Verdana;
+	font-size: 8.0pt;
+	line-height: 12.0pt;
+	color: #000000;
+}
+/*}}end!kadov=======================================================*/ 
+
+
+
+p.NumberedList {
+	list-style: decimal;
+	line-height: 12pt;
+	margin-bottom: 14pt;
+}
+
+/*=(Generated Code)=================================================*/
+/*=(WARNING: DO NOT EDIT OR DELETE THIS SECTION!)===================*/
+/*begin!kadov{{=====================================================*/ 
+LI.kadov-p-CNumberedList {
+	list-style: decimal;
+	line-height: 12pt;
+}
+/*}}end!kadov=======================================================*/ 
+
+
+
+p.NumCode {
+	white-space: nowrap;
+	font-family: "Courier New", Courier, Arial, sans-serif;
+	font-size: 10pt;
+	font-weight: normal;
+	font-style: normal;
+	letter-spacing: normal;
+	color: #000000;
+	background-color: #f9f9f9;
+	margin-top: -6pt;
+	margin-bottom: 9pt;
+	margin-left: 28pt;
+	margin-right: 0pt;
+	padding: 10px;
+	border: 1px dotted #ccc;
+	x-next-type: p;
+}
+
+/*=(Generated Code)=================================================*/
+/*=(WARNING: DO NOT EDIT OR DELETE THIS SECTION!)===================*/
+/*begin!kadov{{=====================================================*/ 
+LI.kadov-p-CNumCode {
+	white-space: nowrap;
+	font-family: "Courier New", Courier, Arial, sans-serif;
+	font-size: 10pt;
+	font-weight: normal;
+	font-style: normal;
+	letter-spacing: normal;
+	color: #000000;
+}
+/*}}end!kadov=======================================================*/ 
+
+
+
+p.NumNote {
+	font-family: Verdana;
+	font-size: 8.0pt;
+	line-height: 12.0pt;
+	color: #000000;
+	background-color: #ffffe8;
+	margin-top: 9pt;
+	margin-bottom: 9pt;
+	margin-left: 28pt;
+	margin-right: 5%;
+	padding-left: 2pt;
+	padding-right: 2pt;
+	padding-top: 1pt;
+	padding-bottom: 2pt;
+	x-next-type: p;
+}
+
+/*=(Generated Code)=================================================*/
+/*=(WARNING: DO NOT EDIT OR DELETE THIS SECTION!)===================*/
+/*begin!kadov{{=====================================================*/ 
+LI.kadov-p-CNumNote {
+	font-family: Verdana;
+	font-size: 8.0pt;
+	line-height: 12.0pt;
+	color: #000000;
+}
+/*}}end!kadov=======================================================*/ 
+
+
+
+p.NumText {
+	margin-top: 9pt;
+	margin-bottom: 9pt;
+	margin-left: 28pt;
+	margin-right: 0pt;
+	x-next-type: p;
+}
+
+/*=(Generated Code)=================================================*/
+/*=(WARNING: DO NOT EDIT OR DELETE THIS SECTION!)===================*/
+/*begin!kadov{{=====================================================*/ 
+LI.kadov-p-CNumText {
+}
+/*}}end!kadov=======================================================*/ 
+
+
+
+p.NumTip {
+	font-family: Verdana;
+	font-size: 8.0pt;
+	line-height: 12.0pt;
+	color: #000000;
+	background-color: #EAF4E8;
+	margin-top: 9pt;
+	margin-bottom: 9pt;
+	margin-left: 28pt;
+	margin-right: 5%;
+	padding-left: 2pt;
+	padding-right: 2pt;
+	padding-top: 1pt;
+	padding-bottom: 2pt;
+	x-next-type: p;
+}
+
+/*=(Generated Code)=================================================*/
+/*=(WARNING: DO NOT EDIT OR DELETE THIS SECTION!)===================*/
+/*begin!kadov{{=====================================================*/ 
+LI.kadov-p-CNumTip {
+	font-family: Verdana;
+	font-size: 8.0pt;
+	line-height: 12.0pt;
+	color: #000000;
+}
+/*}}end!kadov=======================================================*/ 
+
+
+
+p.NumWarning {
+	font-family: Verdana;
+	font-size: 8.0pt;
+	line-height: 12.0pt;
+	color: #000000;
+	background-color: #F8F6F6;
+	background-color: #FDF0E8;
+	margin-top: 9pt;
+	margin-bottom: 9pt;
+	margin-left: 28pt;
+	margin-right: 5%;
+	padding-left: 2pt;
+	padding-right: 2pt;
+	padding-top: 1pt;
+	padding-bottom: 2pt;
+	border: 1px dotted #ff0000;
+	border: none;
+	x-next-type: p;
+}
+
+/*=(Generated Code)=================================================*/
+/*=(WARNING: DO NOT EDIT OR DELETE THIS SECTION!)===================*/
+/*begin!kadov{{=====================================================*/ 
+LI.kadov-p-CNumWarning {
+	font-family: Verdana;
+	font-size: 8.0pt;
+	line-height: 12.0pt;
+	color: #000000;
+}
+/*}}end!kadov=======================================================*/ 
+
+
+
+p.OptionBody {
+	margin-left: 32pt;
+	margin-right: 0pt;
+	margin-top: 0pt;
+	margin-bottom: 12pt;
+	x-next-class: OptionHeading;
+	x-next-type: h4;
+}
+
+/*=(Generated Code)=================================================*/
+/*=(WARNING: DO NOT EDIT OR DELETE THIS SECTION!)===================*/
+/*begin!kadov{{=====================================================*/ 
+LI.kadov-p-COptionBody {
+}
+/*}}end!kadov=======================================================*/ 
+
+
+
+p.OptionNote {
+	font-family: Verdana;
+	font-size: 8.0pt;
+	line-height: 12.0pt;
+	color: #000000;
+	background-color: #ffffe8;
+	margin-top: 0pt;
+	margin-bottom: 9pt;
+	margin-left: 32pt;
+	margin-right: 5%;
+	padding-left: 2pt;
+	padding-right: 2pt;
+	padding-top: 1pt;
+	padding-bottom: 2pt;
+	x-next-class: FieldBody;
+	x-next-type: p;
+}
+
+/*=(Generated Code)=================================================*/
+/*=(WARNING: DO NOT EDIT OR DELETE THIS SECTION!)===================*/
+/*begin!kadov{{=====================================================*/ 
+LI.kadov-p-COptionNote {
+	font-family: Verdana;
+	font-size: 8.0pt;
+	line-height: 12.0pt;
+	color: #000000;
+}
+/*}}end!kadov=======================================================*/ 
+
+
+
+p.OptionSubBody {
+	margin-left: 52pt;
+	margin-right: 0pt;
+	margin-top: 0pt;
+	margin-bottom: 12pt;
+	x-next-class: OptionSubHeading;
+	x-next-type: h4;
+}
+
+/*=(Generated Code)=================================================*/
+/*=(WARNING: DO NOT EDIT OR DELETE THIS SECTION!)===================*/
+/*begin!kadov{{=====================================================*/ 
+LI.kadov-p-COptionSubBody {
+}
+/*}}end!kadov=======================================================*/ 
+
+
+
+p.OptionTip {
+	font-family: Verdana;
+	font-size: 8.0pt;
+	line-height: 12.0pt;
+	color: #000000;
+	background-color: #EAF4E8;
+	margin-top: 0pt;
+	margin-bottom: 9pt;
+	margin-left: 32pt;
+	margin-right: 5%;
+	padding-left: 2pt;
+	padding-right: 2pt;
+	padding-top: 1pt;
+	padding-bottom: 2pt;
+	x-next-class: OptionBody;
+	x-next-type: p;
+}
+
+/*=(Generated Code)=================================================*/
+/*=(WARNING: DO NOT EDIT OR DELETE THIS SECTION!)===================*/
+/*begin!kadov{{=====================================================*/ 
+LI.kadov-p-COptionTip {
+	font-family: Verdana;
+	font-size: 8.0pt;
+	line-height: 12.0pt;
+	color: #000000;
+}
+/*}}end!kadov=======================================================*/ 
+
+
+
+p.OptionWarning {
+	font-family: Verdana;
+	font-size: 8.0pt;
+	line-height: 12.0pt;
+	color: #000000;
+	background-color: #FDF0E8;
+	margin-top: 0pt;
+	margin-bottom: 9pt;
+	margin-left: 32pt;
+	margin-right: 5%;
+	padding-left: 2pt;
+	padding-right: 2pt;
+	padding-top: 1pt;
+	padding-bottom: 2pt;
+	border: none;
+	x-next-class: OptionBody;
+	x-next-type: p;
+}
+
+/*=(Generated Code)=================================================*/
+/*=(WARNING: DO NOT EDIT OR DELETE THIS SECTION!)===================*/
+/*begin!kadov{{=====================================================*/ 
+LI.kadov-p-COptionWarning {
+	font-family: Verdana;
+	font-size: 8.0pt;
+	line-height: 12.0pt;
+	color: #000000;
+}
+/*}}end!kadov=======================================================*/ 
+
+
+
+p.ParameterBody {
+	margin-left: 12pt;
+	x-next-class: ParameterHeading;
+	x-next-type: h3;
+}
+
+/*=(Generated Code)=================================================*/
+/*=(WARNING: DO NOT EDIT OR DELETE THIS SECTION!)===================*/
+/*begin!kadov{{=====================================================*/ 
+LI.kadov-p-CParameterBody {
+}
+/*}}end!kadov=======================================================*/ 
+
+
+
+p.ParameterNote {
+	font-family: Verdana;
+	font-size: 8.0pt;
+	line-height: 12.0pt;
+	color: #000000;
+	background-color: #ffffe8;
+	margin-top: 0pt;
+	margin-bottom: 9pt;
+	margin-left: 12pt;
+	margin-right: 5%;
+	padding-left: 2pt;
+	padding-right: 2pt;
+	padding-top: 1pt;
+	padding-bottom: 2pt;
+	x-next-class: ParameterBody;
+	x-next-type: p;
+}
+
+/*=(Generated Code)=================================================*/
+/*=(WARNING: DO NOT EDIT OR DELETE THIS SECTION!)===================*/
+/*begin!kadov{{=====================================================*/ 
+LI.kadov-p-CParameterNote {
+	font-family: Verdana;
+	font-size: 8.0pt;
+	line-height: 12.0pt;
+	color: #000000;
+}
+/*}}end!kadov=======================================================*/ 
+
+
+
+p.ParameterTip {
+	font-family: Verdana;
+	font-size: 8.0pt;
+	line-height: 12.0pt;
+	color: #000000;
+	background-color: #EAF4E8;
+	margin-top: 0pt;
+	margin-bottom: 9pt;
+	margin-left: 12pt;
+	margin-right: 5%;
+	padding-left: 2pt;
+	padding-right: 2pt;
+	padding-top: 1pt;
+	padding-bottom: 2pt;
+	x-next-class: ParameterBody;
+	x-next-type: p;
+}
+
+/*=(Generated Code)=================================================*/
+/*=(WARNING: DO NOT EDIT OR DELETE THIS SECTION!)===================*/
+/*begin!kadov{{=====================================================*/ 
+LI.kadov-p-CParameterTip {
+	font-family: Verdana;
+	font-size: 8.0pt;
+	line-height: 12.0pt;
+	color: #000000;
+}
+/*}}end!kadov=======================================================*/ 
+
+
+
+p.ParameterWarning {
+	font-family: Verdana;
+	font-size: 8.0pt;
+	line-height: 12.0pt;
+	color: #000000;
+	background-color: #FDF0E8;
+	margin-top: 0pt;
+	margin-bottom: 9pt;
+	margin-left: 12pt;
+	margin-right: 5%;
+	padding-left: 2pt;
+	padding-right: 2pt;
+	padding-top: 1pt;
+	padding-bottom: 2pt;
+	x-next-class: ParameterBody;
+	x-next-type: p;
+}
+
+/*=(Generated Code)=================================================*/
+/*=(WARNING: DO NOT EDIT OR DELETE THIS SECTION!)===================*/
+/*begin!kadov{{=====================================================*/ 
+LI.kadov-p-CParameterWarning {
+	font-family: Verdana;
+	font-size: 8.0pt;
+	line-height: 12.0pt;
+	color: #000000;
+}
+/*}}end!kadov=======================================================*/ 
+
+
+
+p.Popup {
+	font-family: Arial;
+	font-size: 14pt;
+	font-weight: bold;
+	font-style: normal;
+	color: #ffffff;
+	padding: 6.0pt;
+}
+
+/*=(Generated Code)=================================================*/
+/*=(WARNING: DO NOT EDIT OR DELETE THIS SECTION!)===================*/
+/*begin!kadov{{=====================================================*/ 
+LI.kadov-p-CPopup {
+	font-family: Arial;
+	font-size: 14pt;
+	font-weight: bold;
+	font-style: normal;
+	color: #ffffff;
+}
+/*}}end!kadov=======================================================*/ 
+
+
+
+p.SeeAlso {
+	font-style: italic;
+	font-weight: normal;
+	font-size: 8pt;
+	padding: 1px 8px 2px;
+	background-color: #f0f3f9;
+	margin-top: 18pt;
+	margin-bottom: 12pt;
+	border: 1px solid #e6e9ef;
+}
+
+/*=(Generated Code)=================================================*/
+/*=(WARNING: DO NOT EDIT OR DELETE THIS SECTION!)===================*/
+/*begin!kadov{{=====================================================*/ 
+LI.kadov-p-CSeeAlso {
+	font-style: italic;
+	font-weight: normal;
+	font-size: 8pt;
+}
+/*}}end!kadov=======================================================*/ 
+
+
+
+p.SeeAlso a:link,
+p.SeeAlso a:active,
+p.SeeAlso a:visited {
+	color: #0000ff;
+	x-text-underline: off;
+	x-text-overline: off;
+	x-text-line-through: off;
+	/*begin!kadov{{*/ text-decoration: none none none; /*}}end!kadov*/ 
+}
+
+p.SeeAlso a:hover {
+	color: #0000ff;
+	x-text-underline: normal;
+	/*begin!kadov{{*/ text-decoration: underline; /*}}end!kadov*/ 
+}
+
+p.TableFormat {
+	margin-left: 0pt;
+	margin-right: 0pt;
+	padding-left: 3pt;
+	padding-right: 3pt;
+	padding-top: 3pt;
+	padding-bottom: 3pt;
+}
+
+/*=(Generated Code)=================================================*/
+/*=(WARNING: DO NOT EDIT OR DELETE THIS SECTION!)===================*/
+/*begin!kadov{{=====================================================*/ 
+LI.kadov-p-CTableFormat {
+}
+/*}}end!kadov=======================================================*/ 
+
+
+
+p.TableHeader {
+	font-weight: bold;
+	display: nowrap;
+}
+
+/*=(Generated Code)=================================================*/
+/*=(WARNING: DO NOT EDIT OR DELETE THIS SECTION!)===================*/
+/*begin!kadov{{=====================================================*/ 
+LI.kadov-p-CTableHeader {
+	font-weight: bold;
+}
+/*}}end!kadov=======================================================*/ 
+
+
+
+p.Tip {
+	font-family: Verdana;
+	font-size: 8.0pt;
+	line-height: 12.0pt;
+	color: #000000;
+	background-color: #EAF4E8;
+	margin-top: 0pt;
+	margin-bottom: 9pt;
+	margin-left: 0pt;
+	margin-right: 5%;
+	padding-left: 2pt;
+	padding-right: 2pt;
+	padding-top: 1pt;
+	padding-bottom: 2pt;
+	x-next-class: ;
+	x-next-type: p;
+}
+
+/*=(Generated Code)=================================================*/
+/*=(WARNING: DO NOT EDIT OR DELETE THIS SECTION!)===================*/
+/*begin!kadov{{=====================================================*/ 
+LI.kadov-p-CTip {
+	font-family: Verdana;
+	font-size: 8.0pt;
+	line-height: 12.0pt;
+	color: #000000;
+}
+/*}}end!kadov=======================================================*/ 
+
+
+
+p.Warning {
+	font-family: Verdana;
+	font-size: 8.0pt;
+	line-height: 12.0pt;
+	color: #000000;
+	background-color: #FDF0E8;
+	margin-top: 0pt;
+	margin-bottom: 9pt;
+	margin-left: 0pt;
+	margin-right: 5%;
+	padding-left: 2pt;
+	padding-right: 2pt;
+	padding-top: 1pt;
+	padding-bottom: 2pt;
+	border: 1px dotted #ff0000;
+	border: none;
+	x-next-class: ;
+	x-next-type: p;
+}
+
+/*=(Generated Code)=================================================*/
+/*=(WARNING: DO NOT EDIT OR DELETE THIS SECTION!)===================*/
+/*begin!kadov{{=====================================================*/ 
+LI.kadov-p-CWarning {
+	font-family: Verdana;
+	font-size: 8.0pt;
+	line-height: 12.0pt;
+	color: #000000;
+}
+/*}}end!kadov=======================================================*/ 
+
+
+
+span.Availability {
+	white-space: nowrap;
+	color: #f27129;
+	margin-left: 3ex;
+}
+
+span.Code {
+	font-family: "Courier New", monospace;
+	font-size: 10pt;
+}
+
+span.Default {
+	font-style: italic;
+	color: #aaa;
+}
+
+span.DefaultValue {
+	white-space: nowrap;
+	font-family: "Courier New", monospace;
+	font-size: 9pt;
+	color: #aaa;
+}
+
+span.DefaultValue a.PopupSpot:link,
+span.DefaultValue a.PopupSpot:active,
+span.DefaultValue a.PopupSpot:visited {
+	x-text-underline: off;
+	x-text-overline: off;
+	x-text-line-through: off;
+	color: #aaa;
+	/*begin!kadov{{*/ text-decoration: none none none; /*}}end!kadov*/ 
+}
+
+span.DefaultValue a.PopupSpot:hover {
+	x-text-underline: off;
+	x-text-overline: off;
+	x-text-line-through: off;
+	color: #0000ff;
+	/*begin!kadov{{*/ text-decoration: none none none; /*}}end!kadov*/ 
+}
+
+span.DialogName {
+	font-style: normal;
+	font-weight: normal;
+}
+
+span.Ellipsis {
+	color: #999;
+}
+
+span.Here {
+	font-weight: bold;
+	color: #ffffff;
+	background-color: #699BEF;
+	margin: 0px;
+	padding: 4px 8px;
+	border-top: 1px solid #699BEF;
+	border-bottom: 1px solid #333;
+	border-left: none;
+	border-right: 1px solid #333;
+}
+/* blue tab effect in navbar (NavLocal) */
+	/**/
+
+	
+
+span.nowrap {
+	white-space: nowrap;
+}
+
+span.nowrap img {
+	vertical-align: middle;
+}
+
+span.Path {
+	font-family: "Courier New", monospace;
+	font-size: 9pt;
+}
+
+span.StartMenuItem {
+	font-weight: bold;
+	font-style: italic;
+}
+
+span.VarType {
+	font-family: "Courier New", monospace;
+	font-size: 9pt;
+	font-style: italic;
+	color: #abd;
+}
+
+span.VarType a.PopupSpot:link,
+span.VarType a.PopupSpot:active,
+span.VarType a.PopupSpot:visited {
+	color: #abd;
+	x-text-underline: off;
+	x-text-overline: off;
+	x-text-line-through: off;
+	/*begin!kadov{{*/ text-decoration: none none none; /*}}end!kadov*/ 
+}
+
+span.VarType a.PopupSpot:hover {
+	color: #0000ff;
+	x-text-underline: off;
+	x-text-overline: off;
+	x-text-line-through: off;
+	/*begin!kadov{{*/ text-decoration: none none none; /*}}end!kadov*/ 
+}
+
+span.VarType a:link,
+span.VarType a:active,
+span.VarType a:visited {
+	color: #abd;
+	x-text-underline: off;
+	x-text-overline: off;
+	x-text-line-through: off;
+	/*begin!kadov{{*/ text-decoration: none none none; /*}}end!kadov*/ 
+}
+
+span.VarType a:hover {
+	color: #0000ff;
+	x-text-underline: off;
+	x-text-overline: off;
+	x-text-line-through: off;
+	/*begin!kadov{{*/ text-decoration: none none none; /*}}end!kadov*/ 
+}
+
+span.type {
+	color: #aaa;
+}
+
+span.wab {
+	font-family: Verdana;
+	font-size: 13px;
+	padding: 0px 0px;
+	margin: 0px;
+	border: none;
+	visibility: hidden;
+}
+/* workaround, baybee! */
+	
+
+table.ActionList {
+	margin-top: 18pt;
+	margin-bottom: 18pt;
+	border-top: #c0c0c0 1px solid;
+	border-right: #c0c0c0 1px solid;
+	border-left: #c0c0c0 1px solid;
+	border-bottom: #c0c0c0 1px solid;
+}
+
+table.ActionList img {
+	vertical-align: middle;
+	margin: 2px 0px;
+	margin: 0px;
+	padding: 0px;
+}
+
+table.ActionList p {
+	margin: 0px;
+	margin-bottom: 3pt;
+	padding: 2px;
+}
+
+/*=(Generated Code)=================================================*/
+/*=(WARNING: DO NOT EDIT OR DELETE THIS SECTION!)===================*/
+/*begin!kadov{{=====================================================*/ 
+table.ActionList LI.kadov-p {
+}
+/*}}end!kadov=======================================================*/ 
+
+
+
+table.ActionList p.ListBody {
+	margin-left: 0px;
+	margin-right: 0px;
+	margin-top: 0px;
+	margin-bottom: 3pt;
+	padding-left: 0px;
+	padding-top: 0px;
+	padding-bottom: 0px;
+	padding: 2px;
+}
+
+/*=(Generated Code)=================================================*/
+/*=(WARNING: DO NOT EDIT OR DELETE THIS SECTION!)===================*/
+/*begin!kadov{{=====================================================*/ 
+table.ActionList LI.kadov-p-CListBody {
+}
+/*}}end!kadov=======================================================*/ 
+
+
+
+table.ActionList tr.Category {
+	background-color: #aaa;
+	background-color: #a0a0a0;
+	color: #ffffff;
+}
+
+table.ActionList tr.Category h2.ListHeading {
+	text-transform: uppercase;
+	font-family: Arial;
+	font-size: 9.0pt;
+	font-style: italic;
+	font-weight: bold;
+	letter-spacing: 1ex;
+	color: #ffffff;
+	white-space: nowrap;
+	margin-top: 0px;
+	margin-bottom: 0px;
+	padding-top: 0px;
+	padding-bottom: 1px;
+	padding-top: 1px;
+	padding-bottom: 1px;
+}
+
+/*=(Generated Code)=================================================*/
+/*=(WARNING: DO NOT EDIT OR DELETE THIS SECTION!)===================*/
+/*begin!kadov{{=====================================================*/ 
+table.ActionList tr.Category LI.kadov-h2-CListHeading {
+	text-transform: uppercase;
+	font-family: Arial;
+	font-size: 9.0pt;
+	font-style: italic;
+	font-weight: bold;
+	letter-spacing: 1ex;
+	color: #ffffff;
+	white-space: nowrap;
+}
+/*}}end!kadov=======================================================*/ 
+
+
+
+table.ActionList tr.Header {
+	background-color: #eee;
+	color: #000000;
+}
+
+table.ActionList tr.Header p {
+	font-family: Verdana;
+	font-size: 8.0pt;
+	font-style: normal;
+	font-weight: bold;
+	color: #3176EA;
+	white-space: nowrap;
+	margin-bottom: 0px;
+	padding-top: 0px;
+	padding-bottom: 1px;
+}
+
+/*=(Generated Code)=================================================*/
+/*=(WARNING: DO NOT EDIT OR DELETE THIS SECTION!)===================*/
+/*begin!kadov{{=====================================================*/ 
+table.ActionList tr.Header LI.kadov-p {
+	font-family: Verdana;
+	font-size: 8.0pt;
+	font-style: normal;
+	font-weight: bold;
+	color: #3176EA;
+	white-space: nowrap;
+}
+/*}}end!kadov=======================================================*/ 
+
+
+
+table.Parameters {
+	margin-top: 6pt;
+	margin-bottom: 9pt;
+}
+
+table.Parameters h4.OptionHeading {
+	margin-left: 12pt;
+}
+
+/*=(Generated Code)=================================================*/
+/*=(WARNING: DO NOT EDIT OR DELETE THIS SECTION!)===================*/
+/*begin!kadov{{=====================================================*/ 
+table.Parameters LI.kadov-h4-COptionHeading {
+}
+/*}}end!kadov=======================================================*/ 
+
+
+
+table.Parameters p {
+	font-weight: normal;
+	color: #000000;
+	margin-left: 3pt;
+	margin-right: 3pt;
+	margin-top: 2pt;
+	margin-bottom: 2pt;
+}
+
+/*=(Generated Code)=================================================*/
+/*=(WARNING: DO NOT EDIT OR DELETE THIS SECTION!)===================*/
+/*begin!kadov{{=====================================================*/ 
+table.Parameters LI.kadov-p {
+	font-weight: normal;
+	color: #000000;
+}
+/*}}end!kadov=======================================================*/ 
+
+
+
+table.Parameters p.OptionBody {
+	margin-left: 12pt;
+	margin-right: 0pt;
+	margin-bottom: 9pt;
+}
+
+/*=(Generated Code)=================================================*/
+/*=(WARNING: DO NOT EDIT OR DELETE THIS SECTION!)===================*/
+/*begin!kadov{{=====================================================*/ 
+table.Parameters LI.kadov-p-COptionBody {
+}
+/*}}end!kadov=======================================================*/ 
+
+
+
+tr.TableHeader td {
+	background-color: #c0c0c0;
+}
+
+tr.TableHeader td p {
+	color: #ffffff;
+	font-weight: bold;
+	white-space: nowrap;
+}
+
+/*=(Generated Code)=================================================*/
+/*=(WARNING: DO NOT EDIT OR DELETE THIS SECTION!)===================*/
+/*begin!kadov{{=====================================================*/ 
+tr.TableHeader td LI.kadov-p {
+	color: #ffffff;
+	font-weight: bold;
+	white-space: nowrap;
+}
+/*}}end!kadov=======================================================*/ 
+
+
+
+</style>
+</head>
+
+<body>
+
+<h1>Name Help File</h1><p class="NavLocal"><span class=wab>&nbsp;</span><span class="here">Welcome</span></p><div class="Properties"><h2>Name Help File</h2><h3>Plugin Name:</h3><p><blockquote>Name</blockquote></p><h3>Current Version:</h3><p><blockquote>1.0.0.0</blockquote></p><h3>Description:</h3><p><blockquote>Generates random names from a series of pre-defined name creation functions as well as allowing selection from a list of stored names.</blockquote></p><h3>Licence:</h3><p><blockquote>GNU GPL v3</blockquote></p><h3>Author:</h3><p><blockquote>Centauri Soldier</blockquote></p><h3>Web:</h3><p><blockquote><a href="http://www.AMSPublic.com" target="_blank">www.AMSPublic.com</a></blockquote></p><h3>E-mail:</h3><p><blockquote><a href="mailto:CentauriSoldier@AMSPublic.com">CentauriSoldier@AMSPublic.com</a></blockquote></p><h3>Copyright:</h3><p><blockquote>Copyright © 2010 AMSPublic.com</blockquote></p><h3>Install Notes:</h3><p><blockquote>Place the "Name" folder in your "AutoPlay Media Studio\Plugins\Action" folder.</blockquote></p></div><!-- /Properties --><hr><div class="Properties"><h2>Table of Contents</h2><p><blockquote><A href="#Name.Generate"><b>Name.Generate</b></A><br><A href="#Name.GetNames"><b>Name.GetNames</b></A><br><A href="#Name.GetRandom"><b>Name.GetRandom</b></A><br></blockquote></p></div><!-- /Properties --><h1><A name="Name.Generate">Name.Generate</A></h1><br><div class=Declaration><!--(Table)=========================================================--><!--begin!kadov{{--><div align=left><!--}}end!kadov--><table x-use-null-cells		style="float: alignleft;		x-cell-content-align: Top;		border-spacing: 0px;		border-spacing: 0px;"		cellspacing=0><col><col><tr style="x-cell-content-align: top;" valign=top><td style="padding-right: 0px;			padding-left: 0px;			border-top-style: none;			border-bottom-style: none;			border-right-style: none;			border-left-style: none;"><p><span class=VarType>(string)&nbsp;</span>Name.Generate (&nbsp;</td><td style="padding-right: 0px;			padding-left: 0px;			border-top-style: none;			border-right-style: none;			border-bottom-style: none;"><p><span class=VarType>(number)&nbsp;</span>Type <span class=DefaultValue> = NAME_TYPE_VOWEL</span>, </p><p><span class=VarType>(number)&nbsp;</span>Length <span class=DefaultValue> = 5</span> )</p></td></tr></table><!--begin!kadov{{--></div><!--}}end!kadov--></div><h2 style="margin-bottom: 3pt;">Description</h2><p><blockquote>Generates a random name from a series of pre-definded functions, offering a unique result.</blockquote></p><h2 class="H2Tight">Parameters</h2><h3 class="ParameterHeading">Type</h3><p class="ParameterBody"><span class="type">(number)&nbsp;</span>The type of sound with which the name will start.</p><!--(Table)=========================================================--><table class=Parameters x-use-null-cells style="x-cell-content-align: Center; margin-left: 32pt; border-spacing: 0px; border spacing: 0px;" cellspacing=0><col><col><col><tr class=TableHeader style="x-cell-content-align: center;" valign=middle><td style="padding-left: 5px; padding-right: 5px; padding-top: 5px; padding-bottom: 5px; border-right-width: 1px; border-right style: Solid; border-bottom-width: 1px; border-bottom-style: Solid; border-left-width: 1px; border-left-style: Solid;"><p>CONSTANT</td><td colspan=1 rowspan=1 style="border-bottom-style: Solid; border-bottom-width: 1px; padding-left: 5px; padding-right: 5px; padding-top: 5px; padding-bottom: 5px;"><p>VALUE</td><td style="border-bottom-style: Solid; border-bottom-width: 1px; padding-left: 5px; padding-right: 5px; padding-top: 5px; paddin -bottom: 5px;"><p>DESCRIPTION</td></tr><tr style="x-cell-content-align: center;" valign=middle><td style="padding-left: 5px; padding-right: 5px; padding-top: 5px; padding-bottom: 5px; border-right-width: 1px; border-right-style: Solid; border-bottom-width: 1px; border-bottom-style: Solid; x-cell-content-align: top; border-left-width: 1px; border-left-style: Solid;" valign=top><p>NAME_TYPE_VOWEL</td><td colspan=1 rowspan=1 style="border-right-style: Solid; border-right-width: 1px; border-bottom-style: Solid; border-bottom-width: 1px; padding-left: 5px; padding-right: 5px; padding-top: 5px; padding-bottom: 5px; x-cell-content-align: top;" valign=top><p>1</td><td style="border-right-style: Solid; border-right-width: 1px; border-bottom-style: Solid; border-bottom-width: 1px; padding-left: 5px; padding-right: 5px; padding-top: 5px; padding-bottom: 5px; x-cell-content-align: top;" valign=top><p>NA</td></tr><tr style="x-cell-content-align: center;" valign=middle><td style="padding-left: 5px; padding-right: 5px; padding-top: 5px; padding-bottom: 5px; border-right-width: 1px; border-right-style: Solid; border-bottom-width: 1px; border-bottom-style: Solid; x-cell-content-align: top; border-left-width: 1px; border-left-style: Solid;" valign=top><p>NAME_TYPE_CONSONANT</td><td colspan=1 rowspan=1 style="border-right-style: Solid; border-right-width: 1px; border-bottom-style: Solid; border-bottom-width: 1px; padding-left: 5px; padding-right: 5px; padding-top: 5px; padding-bottom: 5px; x-cell-content-align: top;" valign=top><p>2</td><td style="border-right-style: Solid; border-right-width: 1px; border-bottom-style: Solid; border-bottom-width: 1px; padding-left: 5px; padding-right: 5px; padding-top: 5px; padding-bottom: 5px; x-cell-content-align: top;" valign=top><p>NA</td></tr><tr style="x-cell-content-align: center;" valign=middle><td style="padding-left: 5px; padding-right: 5px; padding-top: 5px; padding-bottom: 5px; border-right-width: 1px; border-right-style: Solid; border-bottom-width: 1px; border-bottom-style: Solid; x-cell-content-align: top; border-left-width: 1px; border-left-style: Solid;" valign=top><p>NAME_TYPE_DOUBLE_VOWEL</td><td colspan=1 rowspan=1 style="border-right-style: Solid; border-right-width: 1px; border-bottom-style: Solid; border-bottom-width: 1px; padding-left: 5px; padding-right: 5px; padding-top: 5px; padding-bottom: 5px; x-cell-content-align: top;" valign=top><p>3</td><td style="border-right-style: Solid; border-right-width: 1px; border-bottom-style: Solid; border-bottom-width: 1px; padding-left: 5px; padding-right: 5px; padding-top: 5px; padding-bottom: 5px; x-cell-content-align: top;" valign=top><p>NA</td></tr><tr style="x-cell-content-align: center;" valign=middle><td style="padding-left: 5px; padding-right: 5px; padding-top: 5px; padding-bottom: 5px; border-right-width: 1px; border-right-style: Solid; border-bottom-width: 1px; border-bottom-style: Solid; x-cell-content-align: top; border-left-width: 1px; border-left-style: Solid;" valign=top><p>NAME_TYPE_DOUBLE_CONSONANT</td><td colspan=1 rowspan=1 style="border-right-style: Solid; border-right-width: 1px; border-bottom-style: Solid; border-bottom-width: 1px; padding-left: 5px; padding-right: 5px; padding-top: 5px; padding-bottom: 5px; x-cell-content-align: top;" valign=top><p>4</td><td style="border-right-style: Solid; border-right-width: 1px; border-bottom-style: Solid; border-bottom-width: 1px; padding-left: 5px; padding-right: 5px; padding-top: 5px; padding-bottom: 5px; x-cell-content-align: top;" valign=top><p>NA</td></tr></table><h3 class="ParameterHeading">Length</h3><p class="ParameterBody"><span class="type">(number)&nbsp;</span>The length of the genreated name.</p><h2>Returns</h2><blockquote><p><span class=type>(string) </span><br>Retruns a random name as a string.</p></blockquote><br><h1><A name="Name.GetNames">Name.GetNames</A></h1><br><div class=Declaration><!--(Table)=========================================================--><!--begin!kadov{{--><div align=left><!--}}end!kadov--><table x-use-null-cells		style="float: alignleft;		x-cell-content-align: Top;		border-spacing: 0px;		border-spacing: 0px;"		cellspacing=0><col><col><tr style="x-cell-content-align: top;" valign=top><td style="padding-right: 0px;			padding-left: 0px;			border-top-style: none;			border-bottom-style: none;			border-right-style: none;			border-left-style: none;"><p><span class=VarType>(table)&nbsp;</span>Name.GetNames ()</td><td style="padding-right: 0px;			padding-left: 0px;			border-top-style: none;			border-right-style: none;			border-bottom-style: none;"></td></tr></table><!--begin!kadov{{--></div><!--}}end!kadov--></div><h2 style="margin-bottom: 3pt;">Description</h2><p><blockquote>Gets the list of stored names.</blockquote></p><h2>Returns</h2><blockquote><p><span class=type>(table) </span><br>Returns a table index by "Female" and "Male".<br>Each of those indexes are indexed by upper-case letters of the alphabet.<br>Each of those letters is a numerically-indexed table containing the names.</p></blockquote><br><h2 class=ExampleHeading>Example</h2><p class=ExampleCode>local tNames = Name.GetNames();<br><br>Dialog.Message("Test", tNames["Male"]["C"][44]);</p><br><br><h1><A name="Name.GetRandom">Name.GetRandom</A></h1><br><div class=Declaration><!--(Table)=========================================================--><!--begin!kadov{{--><div align=left><!--}}end!kadov--><table x-use-null-cells		style="float: alignleft;		x-cell-content-align: Top;		border-spacing: 0px;		border-spacing: 0px;"		cellspacing=0><col><col><tr style="x-cell-content-align: top;" valign=top><td style="padding-right: 0px;			padding-left: 0px;			border-top-style: none;			border-bottom-style: none;			border-right-style: none;			border-left-style: none;"><p><span class=VarType>(string)&nbsp;</span>Name.GetRandom (&nbsp;</td><td style="padding-right: 0px;			padding-left: 0px;			border-top-style: none;			border-right-style: none;			border-bottom-style: none;"><p><span class=VarType>(string)&nbsp;</span>Class <span class=DefaultValue> = "Male"</span>, </p><p><span class=VarType>(string)&nbsp;</span>Letter <span class=DefaultValue> = "*"</span> )</p></td></tr></table><!--begin!kadov{{--></div><!--}}end!kadov--></div><h2 style="margin-bottom: 3pt;">Description</h2><p><blockquote>Gets a random name from the list of stored names.</blockquote></p><h2 class="H2Tight">Parameters</h2><h3 class="ParameterHeading">Class</h3><p class="ParameterBody"><span class="type">(string)&nbsp;</span>Female or Male (or both).</p><!--(Table)=========================================================--><table class=Parameters x-use-null-cells style="x-cell-content-align: Center; margin-left: 32pt; border-spacing: 0px; border spacing: 0px;" cellspacing=0><col><col><col><tr class=TableHeader style="x-cell-content-align: center;" valign=middle><td style="padding-left: 5px; padding-right: 5px; padding-top: 5px; padding-bottom: 5px; border-right-width: 1px; border-right style: Solid; border-bottom-width: 1px; border-bottom-style: Solid; border-left-width: 1px; border-left-style: Solid;"><p>CONSTANT</td><td colspan=1 rowspan=1 style="border-bottom-style: Solid; border-bottom-width: 1px; padding-left: 5px; padding-right: 5px; padding-top: 5px; padding-bottom: 5px;"><p>VALUE</td><td style="border-bottom-style: Solid; border-bottom-width: 1px; padding-left: 5px; padding-right: 5px; padding-top: 5px; paddin -bottom: 5px;"><p>DESCRIPTION</td></tr><tr style="x-cell-content-align: center;" valign=middle><td style="padding-left: 5px; padding-right: 5px; padding-top: 5px; padding-bottom: 5px; border-right-width: 1px; border-right-style: Solid; border-bottom-width: 1px; border-bottom-style: Solid; x-cell-content-align: top; border-left-width: 1px; border-left-style: Solid;" valign=top><p>"Female"</td><td colspan=1 rowspan=1 style="border-right-style: Solid; border-right-width: 1px; border-bottom-style: Solid; border-bottom-width: 1px; padding-left: 5px; padding-right: 5px; padding-top: 5px; padding-bottom: 5px; x-cell-content-align: top;" valign=top><p>"Female"</td><td style="border-right-style: Solid; border-right-width: 1px; border-bottom-style: Solid; border-bottom-width: 1px; padding-left: 5px; padding-right: 5px; padding-top: 5px; padding-bottom: 5px; x-cell-content-align: top;" valign=top><p>NA</td></tr><tr style="x-cell-content-align: center;" valign=middle><td style="padding-left: 5px; padding-right: 5px; padding-top: 5px; padding-bottom: 5px; border-right-width: 1px; border-right-style: Solid; border-bottom-width: 1px; border-bottom-style: Solid; x-cell-content-align: top; border-left-width: 1px; border-left-style: Solid;" valign=top><p>"Male"</td><td colspan=1 rowspan=1 style="border-right-style: Solid; border-right-width: 1px; border-bottom-style: Solid; border-bottom-width: 1px; padding-left: 5px; padding-right: 5px; padding-top: 5px; padding-bottom: 5px; x-cell-content-align: top;" valign=top><p>"Male"</td><td style="border-right-style: Solid; border-right-width: 1px; border-bottom-style: Solid; border-bottom-width: 1px; padding-left: 5px; padding-right: 5px; padding-top: 5px; padding-bottom: 5px; x-cell-content-align: top;" valign=top><p>NA</td></tr><tr style="x-cell-content-align: center;" valign=middle><td style="padding-left: 5px; padding-right: 5px; padding-top: 5px; padding-bottom: 5px; border-right-width: 1px; border-right-style: Solid; border-bottom-width: 1px; border-bottom-style: Solid; x-cell-content-align: top; border-left-width: 1px; border-left-style: Solid;" valign=top><p>"*"</td><td colspan=1 rowspan=1 style="border-right-style: Solid; border-right-width: 1px; border-bottom-style: Solid; border-bottom-width: 1px; padding-left: 5px; padding-right: 5px; padding-top: 5px; padding-bottom: 5px; x-cell-content-align: top;" valign=top><p>"*"</td><td style="border-right-style: Solid; border-right-width: 1px; border-bottom-style: Solid; border-bottom-width: 1px; padding-left: 5px; padding-right: 5px; padding-top: 5px; padding-bottom: 5px; x-cell-content-align: top;" valign=top><p>Both Female and Male</td></tr></table><h3 class="ParameterHeading">Letter</h3><p class="ParameterBody"><span class="type">(string)&nbsp;</span>The letter with which the name should start.</p><!--(Table)=========================================================--><table class=Parameters x-use-null-cells style="x-cell-content-align: Center; margin-left: 32pt; border-spacing: 0px; border spacing: 0px;" cellspacing=0><col><col><col><tr class=TableHeader style="x-cell-content-align: center;" valign=middle><td style="padding-left: 5px; padding-right: 5px; padding-top: 5px; padding-bottom: 5px; border-right-width: 1px; border-right style: Solid; border-bottom-width: 1px; border-bottom-style: Solid; border-left-width: 1px; border-left-style: Solid;"><p>CONSTANT</td><td colspan=1 rowspan=1 style="border-bottom-style: Solid; border-bottom-width: 1px; padding-left: 5px; padding-right: 5px; padding-top: 5px; padding-bottom: 5px;"><p>VALUE</td><td style="border-bottom-style: Solid; border-bottom-width: 1px; padding-left: 5px; padding-right: 5px; padding-top: 5px; paddin -bottom: 5px;"><p>DESCRIPTION</td></tr><tr style="x-cell-content-align: center;" valign=middle><td style="padding-left: 5px; padding-right: 5px; padding-top: 5px; padding-bottom: 5px; border-right-width: 1px; border-right-style: Solid; border-bottom-width: 1px; border-bottom-style: Solid; x-cell-content-align: top; border-left-width: 1px; border-left-style: Solid;" valign=top><p>"A"</td><td colspan=1 rowspan=1 style="border-right-style: Solid; border-right-width: 1px; border-bottom-style: Solid; border-bottom-width: 1px; padding-left: 5px; padding-right: 5px; padding-top: 5px; padding-bottom: 5px; x-cell-content-align: top;" valign=top><p>NA</td><td style="border-right-style: Solid; border-right-width: 1px; border-bottom-style: Solid; border-bottom-width: 1px; padding-left: 5px; padding-right: 5px; padding-top: 5px; padding-bottom: 5px; x-cell-content-align: top;" valign=top><p>NA</td></tr><tr style="x-cell-content-align: center;" valign=middle><td style="padding-left: 5px; padding-right: 5px; padding-top: 5px; padding-bottom: 5px; border-right-width: 1px; border-right-style: Solid; border-bottom-width: 1px; border-bottom-style: Solid; x-cell-content-align: top; border-left-width: 1px; border-left-style: Solid;" valign=top><p>"B"</td><td colspan=1 rowspan=1 style="border-right-style: Solid; border-right-width: 1px; border-bottom-style: Solid; border-bottom-width: 1px; padding-left: 5px; padding-right: 5px; padding-top: 5px; padding-bottom: 5px; x-cell-content-align: top;" valign=top><p>NA</td><td style="border-right-style: Solid; border-right-width: 1px; border-bottom-style: Solid; border-bottom-width: 1px; padding-left: 5px; padding-right: 5px; padding-top: 5px; padding-bottom: 5px; x-cell-content-align: top;" valign=top><p>NA</td></tr><tr style="x-cell-content-align: center;" valign=middle><td style="padding-left: 5px; padding-right: 5px; padding-top: 5px; padding-bottom: 5px; border-right-width: 1px; border-right-style: Solid; border-bottom-width: 1px; border-bottom-style: Solid; x-cell-content-align: top; border-left-width: 1px; border-left-style: Solid;" valign=top><p>"C"</td><td colspan=1 rowspan=1 style="border-right-style: Solid; border-right-width: 1px; border-bottom-style: Solid; border-bottom-width: 1px; padding-left: 5px; padding-right: 5px; padding-top: 5px; padding-bottom: 5px; x-cell-content-align: top;" valign=top><p>NA</td><td style="border-right-style: Solid; border-right-width: 1px; border-bottom-style: Solid; border-bottom-width: 1px; padding-left: 5px; padding-right: 5px; padding-top: 5px; padding-bottom: 5px; x-cell-content-align: top;" valign=top><p>NA</td></tr><tr style="x-cell-content-align: center;" valign=middle><td style="padding-left: 5px; padding-right: 5px; padding-top: 5px; padding-bottom: 5px; border-right-width: 1px; border-right-style: Solid; border-bottom-width: 1px; border-bottom-style: Solid; x-cell-content-align: top; border-left-width: 1px; border-left-style: Solid;" valign=top><p>"D"</td><td colspan=1 rowspan=1 style="border-right-style: Solid; border-right-width: 1px; border-bottom-style: Solid; border-bottom-width: 1px; padding-left: 5px; padding-right: 5px; padding-top: 5px; padding-bottom: 5px; x-cell-content-align: top;" valign=top><p>NA</td><td style="border-right-style: Solid; border-right-width: 1px; border-bottom-style: Solid; border-bottom-width: 1px; padding-left: 5px; padding-right: 5px; padding-top: 5px; padding-bottom: 5px; x-cell-content-align: top;" valign=top><p>NA</td></tr><tr style="x-cell-content-align: center;" valign=middle><td style="padding-left: 5px; padding-right: 5px; padding-top: 5px; padding-bottom: 5px; border-right-width: 1px; border-right-style: Solid; border-bottom-width: 1px; border-bottom-style: Solid; x-cell-content-align: top; border-left-width: 1px; border-left-style: Solid;" valign=top><p>"E"</td><td colspan=1 rowspan=1 style="border-right-style: Solid; border-right-width: 1px; border-bottom-style: Solid; border-bottom-width: 1px; padding-left: 5px; padding-right: 5px; padding-top: 5px; padding-bottom: 5px; x-cell-content-align: top;" valign=top><p>NA</td><td style="border-right-style: Solid; border-right-width: 1px; border-bottom-style: Solid; border-bottom-width: 1px; padding-left: 5px; padding-right: 5px; padding-top: 5px; padding-bottom: 5px; x-cell-content-align: top;" valign=top><p>NA</td></tr><tr style="x-cell-content-align: center;" valign=middle><td style="padding-left: 5px; padding-right: 5px; padding-top: 5px; padding-bottom: 5px; border-right-width: 1px; border-right-style: Solid; border-bottom-width: 1px; border-bottom-style: Solid; x-cell-content-align: top; border-left-width: 1px; border-left-style: Solid;" valign=top><p>"F"</td><td colspan=1 rowspan=1 style="border-right-style: Solid; border-right-width: 1px; border-bottom-style: Solid; border-bottom-width: 1px; padding-left: 5px; padding-right: 5px; padding-top: 5px; padding-bottom: 5px; x-cell-content-align: top;" valign=top><p>NA</td><td style="border-right-style: Solid; border-right-width: 1px; border-bottom-style: Solid; border-bottom-width: 1px; padding-left: 5px; padding-right: 5px; padding-top: 5px; padding-bottom: 5px; x-cell-content-align: top;" valign=top><p>NA</td></tr><tr style="x-cell-content-align: center;" valign=middle><td style="padding-left: 5px; padding-right: 5px; padding-top: 5px; padding-bottom: 5px; border-right-width: 1px; border-right-style: Solid; border-bottom-width: 1px; border-bottom-style: Solid; x-cell-content-align: top; border-left-width: 1px; border-left-style: Solid;" valign=top><p>"G"</td><td colspan=1 rowspan=1 style="border-right-style: Solid; border-right-width: 1px; border-bottom-style: Solid; border-bottom-width: 1px; padding-left: 5px; padding-right: 5px; padding-top: 5px; padding-bottom: 5px; x-cell-content-align: top;" valign=top><p>NA</td><td style="border-right-style: Solid; border-right-width: 1px; border-bottom-style: Solid; border-bottom-width: 1px; padding-left: 5px; padding-right: 5px; padding-top: 5px; padding-bottom: 5px; x-cell-content-align: top;" valign=top><p>NA</td></tr><tr style="x-cell-content-align: center;" valign=middle><td style="padding-left: 5px; padding-right: 5px; padding-top: 5px; padding-bottom: 5px; border-right-width: 1px; border-right-style: Solid; border-bottom-width: 1px; border-bottom-style: Solid; x-cell-content-align: top; border-left-width: 1px; border-left-style: Solid;" valign=top><p>"H"</td><td colspan=1 rowspan=1 style="border-right-style: Solid; border-right-width: 1px; border-bottom-style: Solid; border-bottom-width: 1px; padding-left: 5px; padding-right: 5px; padding-top: 5px; padding-bottom: 5px; x-cell-content-align: top;" valign=top><p>NA</td><td style="border-right-style: Solid; border-right-width: 1px; border-bottom-style: Solid; border-bottom-width: 1px; padding-left: 5px; padding-right: 5px; padding-top: 5px; padding-bottom: 5px; x-cell-content-align: top;" valign=top><p>NA</td></tr><tr style="x-cell-content-align: center;" valign=middle><td style="padding-left: 5px; padding-right: 5px; padding-top: 5px; padding-bottom: 5px; border-right-width: 1px; border-right-style: Solid; border-bottom-width: 1px; border-bottom-style: Solid; x-cell-content-align: top; border-left-width: 1px; border-left-style: Solid;" valign=top><p>"I"</td><td colspan=1 rowspan=1 style="border-right-style: Solid; border-right-width: 1px; border-bottom-style: Solid; border-bottom-width: 1px; padding-left: 5px; padding-right: 5px; padding-top: 5px; padding-bottom: 5px; x-cell-content-align: top;" valign=top><p>NA</td><td style="border-right-style: Solid; border-right-width: 1px; border-bottom-style: Solid; border-bottom-width: 1px; padding-left: 5px; padding-right: 5px; padding-top: 5px; padding-bottom: 5px; x-cell-content-align: top;" valign=top><p>NA</td></tr><tr style="x-cell-content-align: center;" valign=middle><td style="padding-left: 5px; padding-right: 5px; padding-top: 5px; padding-bottom: 5px; border-right-width: 1px; border-right-style: Solid; border-bottom-width: 1px; border-bottom-style: Solid; x-cell-content-align: top; border-left-width: 1px; border-left-style: Solid;" valign=top><p>"J"</td><td colspan=1 rowspan=1 style="border-right-style: Solid; border-right-width: 1px; border-bottom-style: Solid; border-bottom-width: 1px; padding-left: 5px; padding-right: 5px; padding-top: 5px; padding-bottom: 5px; x-cell-content-align: top;" valign=top><p>NA</td><td style="border-right-style: Solid; border-right-width: 1px; border-bottom-style: Solid; border-bottom-width: 1px; padding-left: 5px; padding-right: 5px; padding-top: 5px; padding-bottom: 5px; x-cell-content-align: top;" valign=top><p>NA</td></tr><tr style="x-cell-content-align: center;" valign=middle><td style="padding-left: 5px; padding-right: 5px; padding-top: 5px; padding-bottom: 5px; border-right-width: 1px; border-right-style: Solid; border-bottom-width: 1px; border-bottom-style: Solid; x-cell-content-align: top; border-left-width: 1px; border-left-style: Solid;" valign=top><p>"K"</td><td colspan=1 rowspan=1 style="border-right-style: Solid; border-right-width: 1px; border-bottom-style: Solid; border-bottom-width: 1px; padding-left: 5px; padding-right: 5px; padding-top: 5px; padding-bottom: 5px; x-cell-content-align: top;" valign=top><p>NA</td><td style="border-right-style: Solid; border-right-width: 1px; border-bottom-style: Solid; border-bottom-width: 1px; padding-left: 5px; padding-right: 5px; padding-top: 5px; padding-bottom: 5px; x-cell-content-align: top;" valign=top><p>NA</td></tr><tr style="x-cell-content-align: center;" valign=middle><td style="padding-left: 5px; padding-right: 5px; padding-top: 5px; padding-bottom: 5px; border-right-width: 1px; border-right-style: Solid; border-bottom-width: 1px; border-bottom-style: Solid; x-cell-content-align: top; border-left-width: 1px; border-left-style: Solid;" valign=top><p>"L"</td><td colspan=1 rowspan=1 style="border-right-style: Solid; border-right-width: 1px; border-bottom-style: Solid; border-bottom-width: 1px; padding-left: 5px; padding-right: 5px; padding-top: 5px; padding-bottom: 5px; x-cell-content-align: top;" valign=top><p>NA</td><td style="border-right-style: Solid; border-right-width: 1px; border-bottom-style: Solid; border-bottom-width: 1px; padding-left: 5px; padding-right: 5px; padding-top: 5px; padding-bottom: 5px; x-cell-content-align: top;" valign=top><p>NA</td></tr><tr style="x-cell-content-align: center;" valign=middle><td style="padding-left: 5px; padding-right: 5px; padding-top: 5px; padding-bottom: 5px; border-right-width: 1px; border-right-style: Solid; border-bottom-width: 1px; border-bottom-style: Solid; x-cell-content-align: top; border-left-width: 1px; border-left-style: Solid;" valign=top><p>"M"</td><td colspan=1 rowspan=1 style="border-right-style: Solid; border-right-width: 1px; border-bottom-style: Solid; border-bottom-width: 1px; padding-left: 5px; padding-right: 5px; padding-top: 5px; padding-bottom: 5px; x-cell-content-align: top;" valign=top><p>NA</td><td style="border-right-style: Solid; border-right-width: 1px; border-bottom-style: Solid; border-bottom-width: 1px; padding-left: 5px; padding-right: 5px; padding-top: 5px; padding-bottom: 5px; x-cell-content-align: top;" valign=top><p>NA</td></tr><tr style="x-cell-content-align: center;" valign=middle><td style="padding-left: 5px; padding-right: 5px; padding-top: 5px; padding-bottom: 5px; border-right-width: 1px; border-right-style: Solid; border-bottom-width: 1px; border-bottom-style: Solid; x-cell-content-align: top; border-left-width: 1px; border-left-style: Solid;" valign=top><p>"N"</td><td colspan=1 rowspan=1 style="border-right-style: Solid; border-right-width: 1px; border-bottom-style: Solid; border-bottom-width: 1px; padding-left: 5px; padding-right: 5px; padding-top: 5px; padding-bottom: 5px; x-cell-content-align: top;" valign=top><p>NA</td><td style="border-right-style: Solid; border-right-width: 1px; border-bottom-style: Solid; border-bottom-width: 1px; padding-left: 5px; padding-right: 5px; padding-top: 5px; padding-bottom: 5px; x-cell-content-align: top;" valign=top><p>NA</td></tr><tr style="x-cell-content-align: center;" valign=middle><td style="padding-left: 5px; padding-right: 5px; padding-top: 5px; padding-bottom: 5px; border-right-width: 1px; border-right-style: Solid; border-bottom-width: 1px; border-bottom-style: Solid; x-cell-content-align: top; border-left-width: 1px; border-left-style: Solid;" valign=top><p>"O"</td><td colspan=1 rowspan=1 style="border-right-style: Solid; border-right-width: 1px; border-bottom-style: Solid; border-bottom-width: 1px; padding-left: 5px; padding-right: 5px; padding-top: 5px; padding-bottom: 5px; x-cell-content-align: top;" valign=top><p>NA</td><td style="border-right-style: Solid; border-right-width: 1px; border-bottom-style: Solid; border-bottom-width: 1px; padding-left: 5px; padding-right: 5px; padding-top: 5px; padding-bottom: 5px; x-cell-content-align: top;" valign=top><p>NA</td></tr><tr style="x-cell-content-align: center;" valign=middle><td style="padding-left: 5px; padding-right: 5px; padding-top: 5px; padding-bottom: 5px; border-right-width: 1px; border-right-style: Solid; border-bottom-width: 1px; border-bottom-style: Solid; x-cell-content-align: top; border-left-width: 1px; border-left-style: Solid;" valign=top><p>"P"</td><td colspan=1 rowspan=1 style="border-right-style: Solid; border-right-width: 1px; border-bottom-style: Solid; border-bottom-width: 1px; padding-left: 5px; padding-right: 5px; padding-top: 5px; padding-bottom: 5px; x-cell-content-align: top;" valign=top><p>NA</td><td style="border-right-style: Solid; border-right-width: 1px; border-bottom-style: Solid; border-bottom-width: 1px; padding-left: 5px; padding-right: 5px; padding-top: 5px; padding-bottom: 5px; x-cell-content-align: top;" valign=top><p>NA</td></tr><tr style="x-cell-content-align: center;" valign=middle><td style="padding-left: 5px; padding-right: 5px; padding-top: 5px; padding-bottom: 5px; border-right-width: 1px; border-right-style: Solid; border-bottom-width: 1px; border-bottom-style: Solid; x-cell-content-align: top; border-left-width: 1px; border-left-style: Solid;" valign=top><p>"Q"</td><td colspan=1 rowspan=1 style="border-right-style: Solid; border-right-width: 1px; border-bottom-style: Solid; border-bottom-width: 1px; padding-left: 5px; padding-right: 5px; padding-top: 5px; padding-bottom: 5px; x-cell-content-align: top;" valign=top><p>NA</td><td style="border-right-style: Solid; border-right-width: 1px; border-bottom-style: Solid; border-bottom-width: 1px; padding-left: 5px; padding-right: 5px; padding-top: 5px; padding-bottom: 5px; x-cell-content-align: top;" valign=top><p>NA</td></tr><tr style="x-cell-content-align: center;" valign=middle><td style="padding-left: 5px; padding-right: 5px; padding-top: 5px; padding-bottom: 5px; border-right-width: 1px; border-right-style: Solid; border-bottom-width: 1px; border-bottom-style: Solid; x-cell-content-align: top; border-left-width: 1px; border-left-style: Solid;" valign=top><p>"R"</td><td colspan=1 rowspan=1 style="border-right-style: Solid; border-right-width: 1px; border-bottom-style: Solid; border-bottom-width: 1px; padding-left: 5px; padding-right: 5px; padding-top: 5px; padding-bottom: 5px; x-cell-content-align: top;" valign=top><p>NA</td><td style="border-right-style: Solid; border-right-width: 1px; border-bottom-style: Solid; border-bottom-width: 1px; padding-left: 5px; padding-right: 5px; padding-top: 5px; padding-bottom: 5px; x-cell-content-align: top;" valign=top><p>NA</td></tr><tr style="x-cell-content-align: center;" valign=middle><td style="padding-left: 5px; padding-right: 5px; padding-top: 5px; padding-bottom: 5px; border-right-width: 1px; border-right-style: Solid; border-bottom-width: 1px; border-bottom-style: Solid; x-cell-content-align: top; border-left-width: 1px; border-left-style: Solid;" valign=top><p>"S"</td><td colspan=1 rowspan=1 style="border-right-style: Solid; border-right-width: 1px; border-bottom-style: Solid; border-bottom-width: 1px; padding-left: 5px; padding-right: 5px; padding-top: 5px; padding-bottom: 5px; x-cell-content-align: top;" valign=top><p>NA</td><td style="border-right-style: Solid; border-right-width: 1px; border-bottom-style: Solid; border-bottom-width: 1px; padding-left: 5px; padding-right: 5px; padding-top: 5px; padding-bottom: 5px; x-cell-content-align: top;" valign=top><p>NA</td></tr><tr style="x-cell-content-align: center;" valign=middle><td style="padding-left: 5px; padding-right: 5px; padding-top: 5px; padding-bottom: 5px; border-right-width: 1px; border-right-style: Solid; border-bottom-width: 1px; border-bottom-style: Solid; x-cell-content-align: top; border-left-width: 1px; border-left-style: Solid;" valign=top><p>"T"</td><td colspan=1 rowspan=1 style="border-right-style: Solid; border-right-width: 1px; border-bottom-style: Solid; border-bottom-width: 1px; padding-left: 5px; padding-right: 5px; padding-top: 5px; padding-bottom: 5px; x-cell-content-align: top;" valign=top><p>NA</td><td style="border-right-style: Solid; border-right-width: 1px; border-bottom-style: Solid; border-bottom-width: 1px; padding-left: 5px; padding-right: 5px; padding-top: 5px; padding-bottom: 5px; x-cell-content-align: top;" valign=top><p>NA</td></tr><tr style="x-cell-content-align: center;" valign=middle><td style="padding-left: 5px; padding-right: 5px; padding-top: 5px; padding-bottom: 5px; border-right-width: 1px; border-right-style: Solid; border-bottom-width: 1px; border-bottom-style: Solid; x-cell-content-align: top; border-left-width: 1px; border-left-style: Solid;" valign=top><p>"U"</td><td colspan=1 rowspan=1 style="border-right-style: Solid; border-right-width: 1px; border-bottom-style: Solid; border-bottom-width: 1px; padding-left: 5px; padding-right: 5px; padding-top: 5px; padding-bottom: 5px; x-cell-content-align: top;" valign=top><p>NA</td><td style="border-right-style: Solid; border-right-width: 1px; border-bottom-style: Solid; border-bottom-width: 1px; padding-left: 5px; padding-right: 5px; padding-top: 5px; padding-bottom: 5px; x-cell-content-align: top;" valign=top><p>NA</td></tr><tr style="x-cell-content-align: center;" valign=middle><td style="padding-left: 5px; padding-right: 5px; padding-top: 5px; padding-bottom: 5px; border-right-width: 1px; border-right-style: Solid; border-bottom-width: 1px; border-bottom-style: Solid; x-cell-content-align: top; border-left-width: 1px; border-left-style: Solid;" valign=top><p>"V"</td><td colspan=1 rowspan=1 style="border-right-style: Solid; border-right-width: 1px; border-bottom-style: Solid; border-bottom-width: 1px; padding-left: 5px; padding-right: 5px; padding-top: 5px; padding-bottom: 5px; x-cell-content-align: top;" valign=top><p>NA</td><td style="border-right-style: Solid; border-right-width: 1px; border-bottom-style: Solid; border-bottom-width: 1px; padding-left: 5px; padding-right: 5px; padding-top: 5px; padding-bottom: 5px; x-cell-content-align: top;" valign=top><p>NA</td></tr><tr style="x-cell-content-align: center;" valign=middle><td style="padding-left: 5px; padding-right: 5px; padding-top: 5px; padding-bottom: 5px; border-right-width: 1px; border-right-style: Solid; border-bottom-width: 1px; border-bottom-style: Solid; x-cell-content-align: top; border-left-width: 1px; border-left-style: Solid;" valign=top><p>"W"</td><td colspan=1 rowspan=1 style="border-right-style: Solid; border-right-width: 1px; border-bottom-style: Solid; border-bottom-width: 1px; padding-left: 5px; padding-right: 5px; padding-top: 5px; padding-bottom: 5px; x-cell-content-align: top;" valign=top><p>NA</td><td style="border-right-style: Solid; border-right-width: 1px; border-bottom-style: Solid; border-bottom-width: 1px; padding-left: 5px; padding-right: 5px; padding-top: 5px; padding-bottom: 5px; x-cell-content-align: top;" valign=top><p>NA</td></tr><tr style="x-cell-content-align: center;" valign=middle><td style="padding-left: 5px; padding-right: 5px; padding-top: 5px; padding-bottom: 5px; border-right-width: 1px; border-right-style: Solid; border-bottom-width: 1px; border-bottom-style: Solid; x-cell-content-align: top; border-left-width: 1px; border-left-style: Solid;" valign=top><p>"X"</td><td colspan=1 rowspan=1 style="border-right-style: Solid; border-right-width: 1px; border-bottom-style: Solid; border-bottom-width: 1px; padding-left: 5px; padding-right: 5px; padding-top: 5px; padding-bottom: 5px; x-cell-content-align: top;" valign=top><p>NA</td><td style="border-right-style: Solid; border-right-width: 1px; border-bottom-style: Solid; border-bottom-width: 1px; padding-left: 5px; padding-right: 5px; padding-top: 5px; padding-bottom: 5px; x-cell-content-align: top;" valign=top><p>NA</td></tr><tr style="x-cell-content-align: center;" valign=middle><td style="padding-left: 5px; padding-right: 5px; padding-top: 5px; padding-bottom: 5px; border-right-width: 1px; border-right-style: Solid; border-bottom-width: 1px; border-bottom-style: Solid; x-cell-content-align: top; border-left-width: 1px; border-left-style: Solid;" valign=top><p>"Y"</td><td colspan=1 rowspan=1 style="border-right-style: Solid; border-right-width: 1px; border-bottom-style: Solid; border-bottom-width: 1px; padding-left: 5px; padding-right: 5px; padding-top: 5px; padding-bottom: 5px; x-cell-content-align: top;" valign=top><p>NA</td><td style="border-right-style: Solid; border-right-width: 1px; border-bottom-style: Solid; border-bottom-width: 1px; padding-left: 5px; padding-right: 5px; padding-top: 5px; padding-bottom: 5px; x-cell-content-align: top;" valign=top><p>NA</td></tr><tr style="x-cell-content-align: center;" valign=middle><td style="padding-left: 5px; padding-right: 5px; padding-top: 5px; padding-bottom: 5px; border-right-width: 1px; border-right-style: Solid; border-bottom-width: 1px; border-bottom-style: Solid; x-cell-content-align: top; border-left-width: 1px; border-left-style: Solid;" valign=top><p>"Z"</td><td colspan=1 rowspan=1 style="border-right-style: Solid; border-right-width: 1px; border-bottom-style: Solid; border-bottom-width: 1px; padding-left: 5px; padding-right: 5px; padding-top: 5px; padding-bottom: 5px; x-cell-content-align: top;" valign=top><p>NA</td><td style="border-right-style: Solid; border-right-width: 1px; border-bottom-style: Solid; border-bottom-width: 1px; padding-left: 5px; padding-right: 5px; padding-top: 5px; padding-bottom: 5px; x-cell-content-align: top;" valign=top><p>NA</td></tr><tr style="x-cell-content-align: center;" valign=middle><td style="padding-left: 5px; padding-right: 5px; padding-top: 5px; padding-bottom: 5px; border-right-width: 1px; border-right-style: Solid; border-bottom-width: 1px; border-bottom-style: Solid; x-cell-content-align: top; border-left-width: 1px; border-left-style: Solid;" valign=top><p>"*"</td><td colspan=1 rowspan=1 style="border-right-style: Solid; border-right-width: 1px; border-bottom-style: Solid; border-bottom-width: 1px; padding-left: 5px; padding-right: 5px; padding-top: 5px; padding-bottom: 5px; x-cell-content-align: top;" valign=top><p>NA</td><td style="border-right-style: Solid; border-right-width: 1px; border-bottom-style: Solid; border-bottom-width: 1px; padding-left: 5px; padding-right: 5px; padding-top: 5px; padding-bottom: 5px; x-cell-content-align: top;" valign=top><p>Choose from all letters</td></tr></table><h2>Returns</h2><blockquote><p><span class=type>(string) </span><br>Retruns a random name as a string.</p></blockquote><br><hr>
+
+<p align="center">Copyright © 2010 AMSPublic.com <BR>This File Was Generated With AMS ActionFile Editor</p>
+
+</body>
+</html>

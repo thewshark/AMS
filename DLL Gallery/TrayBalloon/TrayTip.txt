@@ -1,0 +1,22 @@
+-- TrayTip Title
+strTitle ="Title";
+
+-- TrayTip Body Text
+strText = "Body Text...";
+---- TrayTip Icon
+-- 0 = None
+-- 1 = Information
+-- 2 = Exclaimation
+-- 3 = Error
+-- 4 = Default
+-- 7 = Question
+-- 13 = EXE Window
+
+strIcon = "4";
+
+-- TrayTip Delay (milliseconds)
+strDelay = "3000";
+
+strArgument = '"'..strTitle..'" "'..strText..'" '..strIcon..' '..strDelay;
+
+result = File.Run("AutoPlay\\Docs\\TrayTip.exe", strArgument, "", SW_SHOWNORMAL, false);

@@ -1,0 +1,1738 @@
+<html>
+<head>
+<title>AE</title>
+<style>
+
+
+	body {
+	  font-family: Verdana, sans-serif;
+	  font-size: 8pt;
+	  background-color: #ffffff;
+	}
+	  
+	body {
+	  font-family: Verdana, sans-serif;
+	  font-size: 8pt;
+	  background-color: #ffffff;
+	}
+	
+	hr {
+	  text-align: center;
+	  color: #f0f0f0;
+	  width: 100%;
+	  height: 6pt;
+	  margin-top: 0pt;
+	  margin-bottom: -3pt;
+	  border: none;
+	}
+	
+	A:link, A:active, A:visited {
+	  color: #0000ff;
+	  text-decoration: none;
+	}
+	
+	A:hover {
+	  color: #0000ff;
+	  text-decoration: underline;
+	}
+	
+	h1 {
+	  font-family: Verdana;
+	  font-weight: bold;
+	  font-size: 18.0pt;
+	  white-space: nowrap;
+	  color: #fff;
+	  background-color: #699BEF;
+	  padding: 4pt 3pt;
+	  padding: 5px 4px;
+	  margin-top: 0pt;
+	  margin-bottom: 0pt;
+	  border-right: 1px solid #333;
+	  border-left: 1px solid #699BEF;
+	  border-bottom: solid black 1px;
+	}
+	
+	h2 {
+	  font-family: Arial, sans-serif;
+	  font-size: 12.0pt;
+	  letter-spacing: .2ex;
+	  color: #000;
+	  margin-left: 0pt;
+	  margin-right: 0pt;
+	  margin-top: 18pt;
+	  margin-bottom: 9pt;
+	}
+	
+	h2.H2Tight {
+		margin-bottom: -6pt;
+	}
+	
+	h3 {
+	  font-family: Arial, sans-serif;
+	  font-size: 10pt;
+	  font-weight: bold;
+	  font-style: normal;
+	  color: black;
+	  letter-spacing: 0px;
+	  margin-left: 0pt;
+	  margin-right: 0pt;
+	  margin-top: 18pt;
+	  margin-bottom: 3pt;
+	}
+	
+	h3.ParameterHeading {
+		font-family: Arial, sans-serif;
+		margin-left: 12pt;
+		margin-right: 0pt;
+		margin-top: 18pt;
+		margin-bottom: 3pt;
+		font-size: 9pt;
+		font-weight: bold;
+		font-style: italic;
+		letter-spacing: .2ex;
+		color: #3C77B3;
+		x-next-class: ParameterBody;
+		x-next-type: p;
+	}
+	
+	p {
+	  font-family: Verdana;
+	  font-size: 8.0pt;
+	  line-height: 12.0pt;
+	  margin-left: 0pt;
+	  margin-right: 0pt;
+	  margin-top: 0pt;
+	  margin-bottom: 9pt;
+	}
+	  
+	p.NavLocal {
+	  white-space: nowrap;
+	  text-indent: -4px;
+	  font-family: Verdana, Arial, sans-serif;
+	  font-weight: bold;
+	  font-style: normal;
+	  font-size: 13px;
+	  background-color: #e4e4e4;
+	  margin-top: 0px;
+	  margin-bottom: 12pt;
+	  padding-top: 4px;
+	  padding-bottom: 4px;
+	  padding-left: 0px;
+	  padding-right: 0px;
+	
+	  border-bottom: 1px solid #e4e4e4;
+	}
+	  
+	p.ParameterBody {
+		margin-left: 12pt;
+		x-next-class: ParameterHeading;
+		x-next-type: h3;
+	}
+	  
+	div.Actions p, div.Properties p, div.Events p, div.ErrorCodes p {
+	  font-family: Verdana;
+	  font-size: 8.0pt;
+	  line-height: 12.0pt;
+	  margin-top: 0pt;
+	  margin-bottom: 9pt;
+	  margin-left: 12pt;
+	  margin-right: 0pt;
+	}
+	
+	div.Declaration table p {
+		white-space: nowrap;
+		line-height: normal;
+		x-text-tab-stops: repeat 1in;
+		font-family: "Courier New", Courier, monospace;
+		font-size: 10.0pt;
+		background-color: #eee;
+		color: #000000;
+		margin-left: 0px;
+		margin-right: 0px;
+		margin-top: 0px;
+		margin-bottom: 0px;
+		padding: 0pt;
+		border-style: none;
+	}
+	
+	div.Declaration {
+		white-space: nowrap;
+		line-height: normal;
+		x-text-tab-stops: repeat 1in;
+		font-family: "Courier New", Courier, monospace;
+		font-size: 9.0pt;
+		background-color: #eee;
+		color: #000000;
+		width: 100%;
+		margin-left: 0px;
+		margin-right: 0px;
+		margin-top: 0pt;
+		margin-bottom: 9pt;
+		padding: 2pt;
+		border-top: #c0c0c0 1px solid;
+		border-right: #c0c0c0 1px solid;
+		border-left: #c0c0c0 1px solid;
+		border-bottom: #c0c0c0 1px solid;
+	}
+	
+	span.VarType {
+		font-family: "Courier New", monospace;
+		font-size: 9pt;
+		font-style: italic;
+		color: #abd;
+	}
+	
+	span.type {
+		color: #aaa;
+	}
+	
+	span.wab {
+		font-family: Verdana;
+		font-size: 13px;
+		padding: 0px 0px;
+		margin: 0px;
+		border: none;
+		visibility: hidden;
+	}
+
+	span.DefaultValue {
+		white-space: nowrap;
+		font-family: "Courier New", monospace;
+		font-size: 9pt;
+		color: #aaa;
+	}
+	
+	</style>
+</head>
+<body>
+<h1>AE Help File</h1>
+<p class="NavLocal"><span class=wab>&nbsp;</span><span class="here">Welcome</span></p>
+<hr><div class="Properties">
+<h2>Table of Contents</h2>
+<p><blockquote>
+<A href="#AE.AudioSecToTime"><b>AE.AudioSecToTime</b></A>
+<br>
+<A href="#AE.GridFindSelected"><b>AE.GridFindSelected</b></A>
+<br>
+<A href="#AE.GridFindCellText"><b>AE.GridFindCellText</b></A>
+<br>
+<A href="#AE.GridResetCellColor"><b>AE.GridResetCellColor</b></A>
+<br>
+<A href="#AE.ImageSetCurProgress"><b>AE.ImageSetCurProgress</b></A>
+<br>
+<A href="#AE.ImageGetCurProgress"><b>AE.ImageGetCurProgress</b></A>
+<br>
+<A href="#AE.ImageLoadFadeImage"><b>AE.ImageLoadFadeImage</b></A>
+<br>
+<A href="#AE.ImageFadeIn"><b>AE.ImageFadeIn</b></A>
+<br>
+<A href="#AE.ImageFadeOut"><b>AE.ImageFadeOut</b></A>
+<br>
+<A href="#AE.InputSetWordWrap"><b>AE.InputSetWordWrap</b></A>
+<br>
+<A href="#AE.InputGetWordWrap"><b>AE.InputGetWordWrap</b></A>
+<br>
+<A href="#AE.InputSaveToFile"><b>AE.InputSaveToFile</b></A>
+<br>
+<A href="#AE.InputLoadFromFile"><b>AE.InputLoadFromFile</b></A>
+<br>
+<A href="#AE.InputAlignText"><b>AE.InputAlignText</b></A>
+<br>
+<A href="#AE.ListBoxAddCharacter"><b>AE.ListBoxAddCharacter</b></A>
+<br>
+<A href="#AE.ListBoxDelCharacter"><b>AE.ListBoxDelCharacter</b></A>
+<br>
+<A href="#AE.ListBoxDeleteItemsRepeat"><b>AE.ListBoxDeleteItemsRepeat</b></A>
+<br>
+<A href="#AE.PageOverObject"><b>AE.PageOverObject</b></A>
+<br>
+<A href="#AE.PageDragAndDrop"><b>AE.PageDragAndDrop</b></A>
+<br>
+<A href="#AE.PageMoveGroup"><b>AE.PageMoveGroup</b></A>
+<br>
+<A href="#AE.SessionVarExpand"><b>AE.SessionVarExpand</b></A>
+<br>
+<A href="#AE.SessionVarGet"><b>AE.SessionVarGet</b></A>
+<br>
+<A href="#AE.SessionVarRemove"><b>AE.SessionVarRemove</b></A>
+<br>
+<A href="#AE.SessionVarSet"><b>AE.SessionVarSet</b></A>
+<br>
+<A href="#AE.SessionVarGetAll"><b>AE.SessionVarGetAll</b></A>
+<br>
+<A href="#AE.StringRandomFromPattern"><b>AE.StringRandomFromPattern</b></A>
+<br>
+<A href="#AE.StringDelimitedToTable"><b>AE.StringDelimitedToTable</b></A>
+<br>
+<A href="#AE.StringGetLastFolder"><b>AE.StringGetLastFolder</b></A>
+<br>
+<A href="#AE.StringGetAllFolder"><b>AE.StringGetAllFolder</b></A>
+<br>
+<A href="#AE.SystemFindAndCloseProcess"><b>AE.SystemFindAndCloseProcess</b></A>
+<br>
+<A href="#AE.SystemLogOff"><b>AE.SystemLogOff</b></A>
+<br>
+<A href="#AE.SystemClose"><b>AE.SystemClose</b></A>
+<br>
+<A href="#AE.TableDelimitedToString"><b>AE.TableDelimitedToString</b></A>
+<br>
+<A href="#AE.WindowSetPosAlwais"><b>AE.WindowSetPosAlwais</b></A>
+<br>
+<A href="#AE.ZipAddFile"><b>AE.ZipAddFile</b></A>
+<br>
+<A href="#AE.ZipAddFolderTree"><b>AE.ZipAddFolderTree</b></A>
+<br>
+<A href="#AE.TablePrint"><b>AE.TablePrint</b></A>
+<br>
+<A href="#AE.InputSetTextAppend"><b>AE.InputSetTextAppend</b></A>
+<br>
+<A href="#AE.GridExSaveToFile"><b>AE.GridExSaveToFile</b></A>
+<br>
+<A href="#AE.GridExLoadFromFile"><b>AE.GridExLoadFromFile</b></A>
+<br>
+</blockquote></p></div>
+<h1><A name="AE.AudioSecToTime">AE.AudioSecToTime</A></h1><br>
+<div class=Declaration>
+<div align=left>
+<table x-use-null-cells
+	style="float: alignleft;
+	x-cell-content-align: Top;
+	border-spacing: 0px;
+	border-spacing: 0px;"
+	cellspacing=0>
+<col>
+<col>
+<tr style="x-cell-content-align: top;" valign=top>
+<td style="padding-right: 0px;
+	padding-left: 0px;
+	border-top-style: none;
+	border-bottom-style: none;
+	border-right-style: none;
+	border-left-style: none;">
+<p><span class=VarType>(table)&nbsp;</span>AE.AudioSecToTime (&nbsp;</td>
+<td style="padding-right: 0px;
+	padding-left: 0px;
+	border-top-style: none;
+	border-right-style: none;
+	border-bottom-style: none;">
+<p><span class=VarType>(number)&nbsp;</span>Seconds, </p>
+<p><span class=VarType>(boolean)&nbsp;</span>TableMode <span class=DefaultValue> = false</span> )</p>
+</td></tr></table></div></div>
+<h2 style="margin-bottom: 3pt;">Description</h2>
+<p><blockquote>It turns seconds into format time. The time is represented as a number based 60. (limited in 86400 Secs = Day).
+if active table mode return system is, Example: result.Hours or result.Minutes or result.Seconds or result.Complete.</blockquote></p>
+<h2 class="H2Tight">Parameters</h2>
+<h3 class="ParameterHeading">Seconds</h3>
+<p class="ParameterBody"><span class="type">(number)&nbsp;</span>Secons to convert in format time.</p>
+<h3 class="ParameterHeading">TableMode</h3>
+<p class="ParameterBody"><span class="type">(boolean)&nbsp;</span>Table mode is for return table with all values. Example:
+result.Hours or result.Minutes or result.Seconds or result.Complete.</p>
+<br>
+<h2>Return</h2><blockquote><p>This action returns a <span class="type">(table)</span> value.<br><br></p></blockquote><br><hr><h1><A name="AE.GridFindSelected">AE.GridFindSelected</A></h1><br>
+<div class=Declaration>
+<div align=left>
+<table x-use-null-cells
+	style="float: alignleft;
+	x-cell-content-align: Top;
+	border-spacing: 0px;
+	border-spacing: 0px;"
+	cellspacing=0>
+<col>
+<col>
+<tr style="x-cell-content-align: top;" valign=top>
+<td style="padding-right: 0px;
+	padding-left: 0px;
+	border-top-style: none;
+	border-bottom-style: none;
+	border-right-style: none;
+	border-left-style: none;">
+<p><span class=VarType>(table)&nbsp;</span>AE.GridFindSelected (&nbsp;</td>
+<td style="padding-right: 0px;
+	padding-left: 0px;
+	border-top-style: none;
+	border-right-style: none;
+	border-bottom-style: none;">
+<p><span class=VarType>(string)&nbsp;</span>ObjectName )</p>
+</td></tr></table></div></div>
+<h2 style="margin-bottom: 3pt;">Description</h2>
+<p><blockquote>Find selected to return Row and Column.</blockquote></p>
+<h2 class="H2Tight">Parameters</h2>
+<h3 class="ParameterHeading">ObjectName</h3>
+<p class="ParameterBody"><span class="type">(string)&nbsp;</span>The name of the object.</p>
+<br>
+<h2>Return</h2><blockquote><p>This action returns a <span class="type">(table)</span> value.<br><br></p></blockquote><br><hr><h1><A name="AE.GridFindCellText">AE.GridFindCellText</A></h1><br>
+<div class=Declaration>
+<div align=left>
+<table x-use-null-cells
+	style="float: alignleft;
+	x-cell-content-align: Top;
+	border-spacing: 0px;
+	border-spacing: 0px;"
+	cellspacing=0>
+<col>
+<col>
+<tr style="x-cell-content-align: top;" valign=top>
+<td style="padding-right: 0px;
+	padding-left: 0px;
+	border-top-style: none;
+	border-bottom-style: none;
+	border-right-style: none;
+	border-left-style: none;">
+<p>AE.GridFindCellText (&nbsp;</td>
+<td style="padding-right: 0px;
+	padding-left: 0px;
+	border-top-style: none;
+	border-right-style: none;
+	border-bottom-style: none;">
+<p><span class=VarType>(string)&nbsp;</span>ObjectName, </p>
+<p><span class=VarType>(string)&nbsp;</span>FindText <span class=DefaultValue> = ""</span>, </p>
+<p><span class=VarType>(number)&nbsp;</span>ColorHighlighted <span class=DefaultValue> = 10092543</span>, </p>
+<p><span class=VarType>(boolean)&nbsp;</span>ResetColor <span class=DefaultValue> = true</span>, </p>
+<p><span class=VarType>(table)&nbsp;</span>PropertiesTable )</p>
+</td></tr></table></div></div>
+<h2 style="margin-bottom: 3pt;">Description</h2>
+<p><blockquote>Find the text in the object.</blockquote></p>
+<h2 class="H2Tight">Parameters</h2>
+<h3 class="ParameterHeading">ObjectName</h3>
+<p class="ParameterBody"><span class="type">(string)&nbsp;</span>The name of the object.</p>
+<h3 class="ParameterHeading">FindText</h3>
+<p class="ParameterBody"><span class="type">(string)&nbsp;</span>The text you want in the object.</p>
+<h3 class="ParameterHeading">ColorHighlighted</h3>
+<p class="ParameterBody"><span class="type">(number)&nbsp;</span>The color highlighted cell.</p>
+<h3 class="ParameterHeading">ResetColor</h3>
+<p class="ParameterBody"><span class="type">(boolean)&nbsp;</span>Reset the color highlighted cell.</p>
+<h3 class="ParameterHeading">PropertiesTable</h3>
+<p class="ParameterBody"><span class="type">(table)&nbsp;</span>The table of properties to set color cells.</p>
+<br>
+<h2>Return</h2><blockquote><p>This action dose not return any value.<br><br></p></blockquote><br><hr><h1><A name="AE.GridResetCellColor">AE.GridResetCellColor</A></h1><br>
+<div class=Declaration>
+<div align=left>
+<table x-use-null-cells
+	style="float: alignleft;
+	x-cell-content-align: Top;
+	border-spacing: 0px;
+	border-spacing: 0px;"
+	cellspacing=0>
+<col>
+<col>
+<tr style="x-cell-content-align: top;" valign=top>
+<td style="padding-right: 0px;
+	padding-left: 0px;
+	border-top-style: none;
+	border-bottom-style: none;
+	border-right-style: none;
+	border-left-style: none;">
+<p>AE.GridResetCellColor (&nbsp;</td>
+<td style="padding-right: 0px;
+	padding-left: 0px;
+	border-top-style: none;
+	border-right-style: none;
+	border-bottom-style: none;">
+<p><span class=VarType>(string)&nbsp;</span>ObjectName, </p>
+<p><span class=VarType>(boolean)&nbsp;</span>DefineColors <span class=DefaultValue> = false</span>, </p>
+<p><span class=VarType>(number)&nbsp;</span>BackgroundColor <span class=DefaultValue> = 16777215</span>, </p>
+<p><span class=VarType>(number)&nbsp;</span>TextColor <span class=DefaultValue> = 0</span> )</p>
+</td></tr></table></div></div>
+<h2 style="margin-bottom: 3pt;">Description</h2>
+<p><blockquote>To Reset the cell colors.</blockquote></p>
+<h2 class="H2Tight">Parameters</h2>
+<h3 class="ParameterHeading">ObjectName</h3>
+<p class="ParameterBody"><span class="type">(string)&nbsp;</span>The name of the object.</p>
+<h3 class="ParameterHeading">DefineColors</h3>
+<p class="ParameterBody"><span class="type">(boolean)&nbsp;</span>To define colors of items in the object.</p>
+<h3 class="ParameterHeading">BackgroundColor</h3>
+<p class="ParameterBody"><span class="type">(number)&nbsp;</span>The BackgroundColor.</p>
+<h3 class="ParameterHeading">TextColor</h3>
+<p class="ParameterBody"><span class="type">(number)&nbsp;</span>The Text color.</p>
+<br>
+<h2>Return</h2><blockquote><p>This action dose not return any value.<br><br></p></blockquote><br><hr><h1><A name="AE.ImageSetCurProgress">AE.ImageSetCurProgress</A></h1><br>
+<div class=Declaration>
+<div align=left>
+<table x-use-null-cells
+	style="float: alignleft;
+	x-cell-content-align: Top;
+	border-spacing: 0px;
+	border-spacing: 0px;"
+	cellspacing=0>
+<col>
+<col>
+<tr style="x-cell-content-align: top;" valign=top>
+<td style="padding-right: 0px;
+	padding-left: 0px;
+	border-top-style: none;
+	border-bottom-style: none;
+	border-right-style: none;
+	border-left-style: none;">
+<p>AE.ImageSetCurProgress (&nbsp;</td>
+<td style="padding-right: 0px;
+	padding-left: 0px;
+	border-top-style: none;
+	border-right-style: none;
+	border-bottom-style: none;">
+<p><span class=VarType>(string)&nbsp;</span>ObjectName, </p>
+<p><span class=VarType>(number)&nbsp;</span>SizeImageWidth, </p>
+<p><span class=VarType>(number)&nbsp;</span>ProgressPosition, </p>
+<p><span class=VarType>(function)&nbsp;</span>CallbackFunction <span class=DefaultValue> = nil</span> )</p>
+</td></tr></table></div></div>
+<h2 style="margin-bottom: 3pt;">Description</h2>
+<p><blockquote>Set current position progress to select image.</blockquote></p>
+<h2 class="H2Tight">Parameters</h2>
+<h3 class="ParameterHeading">ObjectName</h3>
+<p class="ParameterBody"><span class="type">(string)&nbsp;</span>The name of the image object.</p>
+<h3 class="ParameterHeading">SizeImageWidth</h3>
+<p class="ParameterBody"><span class="type">(number)&nbsp;</span>Width size to select image file.</p>
+<h3 class="ParameterHeading">ProgressPosition</h3>
+<p class="ParameterBody"><span class="type">(number)&nbsp;</span>Current pogress position to select image file.</p>
+<h3 class="ParameterHeading">CallbackFunction</h3>
+<p class="ParameterBody"><span class="type">(function)&nbsp;</span>The name of a function that will be called whenever progress is made in the copy operation.</p>
+<br>
+<h2>Return</h2><blockquote><p>This action dose not return any value.<br><br></p></blockquote><br><hr><h1><A name="AE.ImageGetCurProgress">AE.ImageGetCurProgress</A></h1><br>
+<div class=Declaration>
+<div align=left>
+<table x-use-null-cells
+	style="float: alignleft;
+	x-cell-content-align: Top;
+	border-spacing: 0px;
+	border-spacing: 0px;"
+	cellspacing=0>
+<col>
+<col>
+<tr style="x-cell-content-align: top;" valign=top>
+<td style="padding-right: 0px;
+	padding-left: 0px;
+	border-top-style: none;
+	border-bottom-style: none;
+	border-right-style: none;
+	border-left-style: none;">
+<p><span class=VarType>(number)&nbsp;</span>AE.ImageGetCurProgress (&nbsp;</td>
+<td style="padding-right: 0px;
+	padding-left: 0px;
+	border-top-style: none;
+	border-right-style: none;
+	border-bottom-style: none;">
+<p><span class=VarType>(string)&nbsp;</span>ObjectName, </p>
+<p><span class=VarType>(number)&nbsp;</span>SizeImageWidth )</p>
+</td></tr></table></div></div>
+<h2 style="margin-bottom: 3pt;">Description</h2>
+<p><blockquote>Returns progress from the specified image file.</blockquote></p>
+<h2 class="H2Tight">Parameters</h2>
+<h3 class="ParameterHeading">ObjectName</h3>
+<p class="ParameterBody"><span class="type">(string)&nbsp;</span>The name of the image object.</p>
+<h3 class="ParameterHeading">SizeImageWidth</h3>
+<p class="ParameterBody"><span class="type">(number)&nbsp;</span>Width size to select image file.</p>
+<br>
+<h2>Return</h2><blockquote><p>This action returns a <span class="type">(number)</span> value.<br><br></p></blockquote><br><hr><h1><A name="AE.ImageLoadFadeImage">AE.ImageLoadFadeImage</A></h1><br>
+<div class=Declaration>
+<div align=left>
+<table x-use-null-cells
+	style="float: alignleft;
+	x-cell-content-align: Top;
+	border-spacing: 0px;
+	border-spacing: 0px;"
+	cellspacing=0>
+<col>
+<col>
+<tr style="x-cell-content-align: top;" valign=top>
+<td style="padding-right: 0px;
+	padding-left: 0px;
+	border-top-style: none;
+	border-bottom-style: none;
+	border-right-style: none;
+	border-left-style: none;">
+<p>AE.ImageLoadFadeImage (&nbsp;</td>
+<td style="padding-right: 0px;
+	padding-left: 0px;
+	border-top-style: none;
+	border-right-style: none;
+	border-bottom-style: none;">
+<p><span class=VarType>(string)&nbsp;</span>ObjectName, </p>
+<p><span class=VarType>(string)&nbsp;</span>ImageFile, </p>
+<p><span class=VarType>(number)&nbsp;</span>MaximunOpacity, </p>
+<p><span class=VarType>(number)&nbsp;</span>MinimumOpacity, </p>
+<p><span class=VarType>(number)&nbsp;</span>TimeOut, </p>
+<p><span class=VarType>(function)&nbsp;</span>FunctionInBetween <span class=DefaultValue> = nil</span> )</p>
+</td></tr></table></div></div>
+<h2 style="margin-bottom: 3pt;">Description</h2>
+<p><blockquote>This action loads an image and in the meanwhile it fades the old loaded image out. When loading this image, it will fade in.</blockquote></p>
+<h2 class="H2Tight">Parameters</h2>
+<h3 class="ParameterHeading">ObjectName</h3>
+<p class="ParameterBody"><span class="type">(string)&nbsp;</span>Image object, must be a string and ofcourse of type OBJECT_IMAGE</p>
+<h3 class="ParameterHeading">ImageFile</h3>
+<p class="ParameterBody"><span class="type">(string)&nbsp;</span>Image File, Must exist, be string and an image file</p>
+<h3 class="ParameterHeading">MaximunOpacity</h3>
+<p class="ParameterBody"><span class="type">(number)&nbsp;</span>Maximum Opacity, Must be of type number and lower than 100, higher than 0."OPTIONAL"</p>
+<h3 class="ParameterHeading">MinimumOpacity</h3>
+<p class="ParameterBody"><span class="type">(number)&nbsp;</span>Minimum Opacity, Must be of type number and higher than 0, lower than 100."OPTIONAL"</p>
+<h3 class="ParameterHeading">TimeOut</h3>
+<p class="ParameterBody"><span class="type">(number)&nbsp;</span>Timeout, The timeout in miliseconds between every opacity change."OPTIONAL"</p>
+<h3 class="ParameterHeading">FunctionInBetween</h3>
+<p class="ParameterBody"><span class="type">(function)&nbsp;</span>Function in between, You can parse a function that will be executed between fading out and fading in the image."OPTIONAL"</p>
+<br>
+<h2>Return</h2><blockquote><p>This action dose not return any value.<br><br></p></blockquote><br><hr><h1><A name="AE.ImageFadeIn">AE.ImageFadeIn</A></h1><br>
+<div class=Declaration>
+<div align=left>
+<table x-use-null-cells
+	style="float: alignleft;
+	x-cell-content-align: Top;
+	border-spacing: 0px;
+	border-spacing: 0px;"
+	cellspacing=0>
+<col>
+<col>
+<tr style="x-cell-content-align: top;" valign=top>
+<td style="padding-right: 0px;
+	padding-left: 0px;
+	border-top-style: none;
+	border-bottom-style: none;
+	border-right-style: none;
+	border-left-style: none;">
+<p><span class=VarType>(boolean)&nbsp;</span>AE.ImageFadeIn (&nbsp;</td>
+<td style="padding-right: 0px;
+	padding-left: 0px;
+	border-top-style: none;
+	border-right-style: none;
+	border-bottom-style: none;">
+<p><span class=VarType>(string)&nbsp;</span>ObjectName, </p>
+<p><span class=VarType>(number)&nbsp;</span>MaximunOpacity, </p>
+<p><span class=VarType>(number)&nbsp;</span>TimeOut )</p>
+</td></tr></table></div></div>
+<h2 style="margin-bottom: 3pt;">Description</h2>
+<p><blockquote>Image Object, Must be of type OBJECT_IMAGE and must be parsed as string.</blockquote></p>
+<h2 class="H2Tight">Parameters</h2>
+<h3 class="ParameterHeading">ObjectName</h3>
+<p class="ParameterBody"><span class="type">(string)&nbsp;</span>The name of the image object.</p>
+<h3 class="ParameterHeading">MaximunOpacity</h3>
+<p class="ParameterBody"><span class="type">(number)&nbsp;</span>Maximum Opacity, Must be of type number and lower than 100, higher than 0."OPTIONAL"</p>
+<h3 class="ParameterHeading">TimeOut</h3>
+<p class="ParameterBody"><span class="type">(number)&nbsp;</span>Timeout, The timeout in miliseconds between every opacity change."OPTIONAL"</p>
+<br>
+<h2>Return</h2><blockquote><p>This action returns a <span class="type">(boolean)</span> value.<br><br></p></blockquote><br><hr><h1><A name="AE.ImageFadeOut">AE.ImageFadeOut</A></h1><br>
+<div class=Declaration>
+<div align=left>
+<table x-use-null-cells
+	style="float: alignleft;
+	x-cell-content-align: Top;
+	border-spacing: 0px;
+	border-spacing: 0px;"
+	cellspacing=0>
+<col>
+<col>
+<tr style="x-cell-content-align: top;" valign=top>
+<td style="padding-right: 0px;
+	padding-left: 0px;
+	border-top-style: none;
+	border-bottom-style: none;
+	border-right-style: none;
+	border-left-style: none;">
+<p><span class=VarType>(boolean)&nbsp;</span>AE.ImageFadeOut (&nbsp;</td>
+<td style="padding-right: 0px;
+	padding-left: 0px;
+	border-top-style: none;
+	border-right-style: none;
+	border-bottom-style: none;">
+<p><span class=VarType>(string)&nbsp;</span>ObjectName, </p>
+<p><span class=VarType>(number)&nbsp;</span>MinimumOpacity, </p>
+<p><span class=VarType>(number)&nbsp;</span>TimeOut )</p>
+</td></tr></table></div></div>
+<h2 style="margin-bottom: 3pt;">Description</h2>
+<p><blockquote>Image Object, Must be of type OBJECT_IMAGE and must be parsed as string.</blockquote></p>
+<h2 class="H2Tight">Parameters</h2>
+<h3 class="ParameterHeading">ObjectName</h3>
+<p class="ParameterBody"><span class="type">(string)&nbsp;</span>The name of the image object.</p>
+<h3 class="ParameterHeading">MinimumOpacity</h3>
+<p class="ParameterBody"><span class="type">(number)&nbsp;</span>Minimum Opacity, Must be of type number and higher than 0, lower than 100."OPTIONAL"</p>
+<h3 class="ParameterHeading">TimeOut</h3>
+<p class="ParameterBody"><span class="type">(number)&nbsp;</span>Timeout, The timeout in miliseconds between every opacity change."OPTIONAL"</p>
+<br>
+<h2>Return</h2><blockquote><p>This action returns a <span class="type">(boolean)</span> value.<br><br></p></blockquote><br><hr><h1><A name="AE.InputSetWordWrap">AE.InputSetWordWrap</A></h1><br>
+<div class=Declaration>
+<div align=left>
+<table x-use-null-cells
+	style="float: alignleft;
+	x-cell-content-align: Top;
+	border-spacing: 0px;
+	border-spacing: 0px;"
+	cellspacing=0>
+<col>
+<col>
+<tr style="x-cell-content-align: top;" valign=top>
+<td style="padding-right: 0px;
+	padding-left: 0px;
+	border-top-style: none;
+	border-bottom-style: none;
+	border-right-style: none;
+	border-left-style: none;">
+<p>AE.InputSetWordWrap (&nbsp;</td>
+<td style="padding-right: 0px;
+	padding-left: 0px;
+	border-top-style: none;
+	border-right-style: none;
+	border-bottom-style: none;">
+<p><span class=VarType>(string)&nbsp;</span>ObjectName, </p>
+<p><span class=VarType>(boolean)&nbsp;</span>HorizontalScroll <span class=DefaultValue> = true</span> )</p>
+</td></tr></table></div></div>
+<h2 style="margin-bottom: 3pt;">Description</h2>
+<p><blockquote>Set Horizontal Scroll to select input.</blockquote></p>
+<h2 class="H2Tight">Parameters</h2>
+<h3 class="ParameterHeading">ObjectName</h3>
+<p class="ParameterBody"><span class="type">(string)&nbsp;</span>The name of the input object.</p>
+<h3 class="ParameterHeading">HorizontalScroll</h3>
+<p class="ParameterBody"><span class="type">(boolean)&nbsp;</span>Show Horizontal Scroll to input object true or false.</p>
+<br>
+<h2>Return</h2><blockquote><p>This action dose not return any value.<br><br></p></blockquote><br><hr><h1><A name="AE.InputGetWordWrap">AE.InputGetWordWrap</A></h1><br>
+<div class=Declaration>
+<div align=left>
+<table x-use-null-cells
+	style="float: alignleft;
+	x-cell-content-align: Top;
+	border-spacing: 0px;
+	border-spacing: 0px;"
+	cellspacing=0>
+<col>
+<col>
+<tr style="x-cell-content-align: top;" valign=top>
+<td style="padding-right: 0px;
+	padding-left: 0px;
+	border-top-style: none;
+	border-bottom-style: none;
+	border-right-style: none;
+	border-left-style: none;">
+<p><span class=VarType>(boolean)&nbsp;</span>AE.InputGetWordWrap (&nbsp;</td>
+<td style="padding-right: 0px;
+	padding-left: 0px;
+	border-top-style: none;
+	border-right-style: none;
+	border-bottom-style: none;">
+<p><span class=VarType>(string)&nbsp;</span>ObjectName )</p>
+</td></tr></table></div></div>
+<h2 style="margin-bottom: 3pt;">Description</h2>
+<p><blockquote>Return if Horizontal Scroll is enable or disable.</blockquote></p>
+<h2 class="H2Tight">Parameters</h2>
+<h3 class="ParameterHeading">ObjectName</h3>
+<p class="ParameterBody"><span class="type">(string)&nbsp;</span>The name of the input object.</p>
+<br>
+<h2>Return</h2><blockquote><p>This action returns a <span class="type">(boolean)</span> value.<br><br></p></blockquote><br><hr><h1><A name="AE.InputSaveToFile">AE.InputSaveToFile</A></h1><br>
+<div class=Declaration>
+<div align=left>
+<table x-use-null-cells
+	style="float: alignleft;
+	x-cell-content-align: Top;
+	border-spacing: 0px;
+	border-spacing: 0px;"
+	cellspacing=0>
+<col>
+<col>
+<tr style="x-cell-content-align: top;" valign=top>
+<td style="padding-right: 0px;
+	padding-left: 0px;
+	border-top-style: none;
+	border-bottom-style: none;
+	border-right-style: none;
+	border-left-style: none;">
+<p>AE.InputSaveToFile (&nbsp;</td>
+<td style="padding-right: 0px;
+	padding-left: 0px;
+	border-top-style: none;
+	border-right-style: none;
+	border-bottom-style: none;">
+<p><span class=VarType>(string)&nbsp;</span>ObjectName, </p>
+<p><span class=VarType>(string)&nbsp;</span>FileName, </p>
+<p><span class=VarType>(boolean)&nbsp;</span>Append <span class=DefaultValue> = false</span> )</p>
+</td></tr></table></div></div>
+<h2 style="margin-bottom: 3pt;">Description</h2>
+<p><blockquote>For save text to input object in file.</blockquote></p>
+<h2 class="H2Tight">Parameters</h2>
+<h3 class="ParameterHeading">ObjectName</h3>
+<p class="ParameterBody"><span class="type">(string)&nbsp;</span>The name of the input object.</p>
+<h3 class="ParameterHeading">FileName</h3>
+<p class="ParameterBody"><span class="type">(string)&nbsp;</span>The path to the destination file that you want save.</p>
+<h3 class="ParameterHeading">Append</h3>
+<p class="ParameterBody"><span class="type">(boolean)&nbsp;</span>Whether to append the string to the end of the text file.</p>
+<br>
+<h2>Return</h2><blockquote><p>This action dose not return any value.<br><br></p></blockquote><br><hr><h1><A name="AE.InputLoadFromFile">AE.InputLoadFromFile</A></h1><br>
+<div class=Declaration>
+<div align=left>
+<table x-use-null-cells
+	style="float: alignleft;
+	x-cell-content-align: Top;
+	border-spacing: 0px;
+	border-spacing: 0px;"
+	cellspacing=0>
+<col>
+<col>
+<tr style="x-cell-content-align: top;" valign=top>
+<td style="padding-right: 0px;
+	padding-left: 0px;
+	border-top-style: none;
+	border-bottom-style: none;
+	border-right-style: none;
+	border-left-style: none;">
+<p>AE.InputLoadFromFile (&nbsp;</td>
+<td style="padding-right: 0px;
+	padding-left: 0px;
+	border-top-style: none;
+	border-right-style: none;
+	border-bottom-style: none;">
+<p><span class=VarType>(string)&nbsp;</span>ObjectName, </p>
+<p><span class=VarType>(string)&nbsp;</span>FileName )</p>
+</td></tr></table></div></div>
+<h2 style="margin-bottom: 3pt;">Description</h2>
+<p><blockquote>For load text and print in input object from file.</blockquote></p>
+<h2 class="H2Tight">Parameters</h2>
+<h3 class="ParameterHeading">ObjectName</h3>
+<p class="ParameterBody"><span class="type">(string)&nbsp;</span>The name of the input object.</p>
+<h3 class="ParameterHeading">FileName</h3>
+<p class="ParameterBody"><span class="type">(string)&nbsp;</span>The path to the destination file that you want load.</p>
+<br>
+<h2>Return</h2><blockquote><p>This action dose not return any value.<br><br></p></blockquote><br><hr><h1><A name="AE.InputAlignText">AE.InputAlignText</A></h1><br>
+<div class=Declaration>
+<div align=left>
+<table x-use-null-cells
+	style="float: alignleft;
+	x-cell-content-align: Top;
+	border-spacing: 0px;
+	border-spacing: 0px;"
+	cellspacing=0>
+<col>
+<col>
+<tr style="x-cell-content-align: top;" valign=top>
+<td style="padding-right: 0px;
+	padding-left: 0px;
+	border-top-style: none;
+	border-bottom-style: none;
+	border-right-style: none;
+	border-left-style: none;">
+<p>AE.InputAlignText (&nbsp;</td>
+<td style="padding-right: 0px;
+	padding-left: 0px;
+	border-top-style: none;
+	border-right-style: none;
+	border-bottom-style: none;">
+<p><span class=VarType>(string)&nbsp;</span>ObjectName, </p>
+<p><span class=VarType>(number)&nbsp;</span>Align <span class=DefaultValue> = ALIGN_LEFT</span> )</p>
+</td></tr></table></div></div>
+<h2 style="margin-bottom: 3pt;">Description</h2>
+<p><blockquote>For set align text in input object.</blockquote></p>
+<h2 class="H2Tight">Parameters</h2>
+<h3 class="ParameterHeading">ObjectName</h3>
+<p class="ParameterBody"><span class="type">(string)&nbsp;</span>The name of the input object.</p>
+<h3 class="ParameterHeading">Align</h3>
+<p class="ParameterBody"><span class="type">(number)&nbsp;</span>Set align text.</p>
+<br>
+<h2>Return</h2><blockquote><p>This action dose not return any value.<br><br></p></blockquote><br><hr><h1><A name="AE.ListBoxAddCharacter">AE.ListBoxAddCharacter</A></h1><br>
+<div class=Declaration>
+<div align=left>
+<table x-use-null-cells
+	style="float: alignleft;
+	x-cell-content-align: Top;
+	border-spacing: 0px;
+	border-spacing: 0px;"
+	cellspacing=0>
+<col>
+<col>
+<tr style="x-cell-content-align: top;" valign=top>
+<td style="padding-right: 0px;
+	padding-left: 0px;
+	border-top-style: none;
+	border-bottom-style: none;
+	border-right-style: none;
+	border-left-style: none;">
+<p>AE.ListBoxAddCharacter (&nbsp;</td>
+<td style="padding-right: 0px;
+	padding-left: 0px;
+	border-top-style: none;
+	border-right-style: none;
+	border-bottom-style: none;">
+<p><span class=VarType>(string)&nbsp;</span>ObjectName, </p>
+<p><span class=VarType>(string)&nbsp;</span>Char <span class=DefaultValue> = "*"</span>, </p>
+<p><span class=VarType>(boolean)&nbsp;</span>OtherChar <span class=DefaultValue> = false</span> )</p>
+</td></tr></table></div></div>
+<h2 style="margin-bottom: 3pt;">Description</h2>
+<p><blockquote>To add a character predefined or personalized in front of all the items of a listbox.</blockquote></p>
+<h2 class="H2Tight">Parameters</h2>
+<h3 class="ParameterHeading">ObjectName</h3>
+<p class="ParameterBody"><span class="type">(string)&nbsp;</span>The name of the listbox object.</p>
+<h3 class="ParameterHeading">Char</h3>
+<p class="ParameterBody"><span class="type">(string)&nbsp;</span>The char to add.</p>
+<h3 class="ParameterHeading">OtherChar</h3>
+<p class="ParameterBody"><span class="type">(boolean)&nbsp;</span>Use others char not default.</p>
+<br>
+<h2>Return</h2><blockquote><p>This action dose not return any value.<br><br></p></blockquote><br><hr><h1><A name="AE.ListBoxDelCharacter">AE.ListBoxDelCharacter</A></h1><br>
+<div class=Declaration>
+<div align=left>
+<table x-use-null-cells
+	style="float: alignleft;
+	x-cell-content-align: Top;
+	border-spacing: 0px;
+	border-spacing: 0px;"
+	cellspacing=0>
+<col>
+<col>
+<tr style="x-cell-content-align: top;" valign=top>
+<td style="padding-right: 0px;
+	padding-left: 0px;
+	border-top-style: none;
+	border-bottom-style: none;
+	border-right-style: none;
+	border-left-style: none;">
+<p>AE.ListBoxDelCharacter (&nbsp;</td>
+<td style="padding-right: 0px;
+	padding-left: 0px;
+	border-top-style: none;
+	border-right-style: none;
+	border-bottom-style: none;">
+<p><span class=VarType>(string)&nbsp;</span>ObjectName, </p>
+<p><span class=VarType>(string)&nbsp;</span>Char <span class=DefaultValue> = "*"</span>, </p>
+<p><span class=VarType>(boolean)&nbsp;</span>OtherChar <span class=DefaultValue> = false</span> )</p>
+</td></tr></table></div></div>
+<h2 style="margin-bottom: 3pt;">Description</h2>
+<p><blockquote>To delete a character predefined or personalized of all the item of a listbox</blockquote></p>
+<h2 class="H2Tight">Parameters</h2>
+<h3 class="ParameterHeading">ObjectName</h3>
+<p class="ParameterBody"><span class="type">(string)&nbsp;</span>The name of the listbox object.</p>
+<h3 class="ParameterHeading">Char</h3>
+<p class="ParameterBody"><span class="type">(string)&nbsp;</span>The char to add.</p>
+<h3 class="ParameterHeading">OtherChar</h3>
+<p class="ParameterBody"><span class="type">(boolean)&nbsp;</span>Use others char not default.</p>
+<br>
+<h2>Return</h2><blockquote><p>This action dose not return any value.<br><br></p></blockquote><br><hr><h1><A name="AE.ListBoxDeleteItemsRepeat">AE.ListBoxDeleteItemsRepeat</A></h1><br>
+<div class=Declaration>
+<div align=left>
+<table x-use-null-cells
+	style="float: alignleft;
+	x-cell-content-align: Top;
+	border-spacing: 0px;
+	border-spacing: 0px;"
+	cellspacing=0>
+<col>
+<col>
+<tr style="x-cell-content-align: top;" valign=top>
+<td style="padding-right: 0px;
+	padding-left: 0px;
+	border-top-style: none;
+	border-bottom-style: none;
+	border-right-style: none;
+	border-left-style: none;">
+<p>AE.ListBoxDeleteItemsRepeat (&nbsp;</td>
+<td style="padding-right: 0px;
+	padding-left: 0px;
+	border-top-style: none;
+	border-right-style: none;
+	border-bottom-style: none;">
+<p><span class=VarType>(string)&nbsp;</span>ObjectName )</p>
+</td></tr></table></div></div>
+<h2 style="margin-bottom: 3pt;">Description</h2>
+<p><blockquote>To delete the repeated items of an object of listbox.</blockquote></p>
+<h2 class="H2Tight">Parameters</h2>
+<h3 class="ParameterHeading">ObjectName</h3>
+<p class="ParameterBody"><span class="type">(string)&nbsp;</span>The name of the listbox object.</p>
+<br>
+<h2>Return</h2><blockquote><p>This action dose not return any value.<br><br></p></blockquote><br><hr><h1><A name="AE.PageOverObject">AE.PageOverObject</A></h1><br>
+<div class=Declaration>
+<div align=left>
+<table x-use-null-cells
+	style="float: alignleft;
+	x-cell-content-align: Top;
+	border-spacing: 0px;
+	border-spacing: 0px;"
+	cellspacing=0>
+<col>
+<col>
+<tr style="x-cell-content-align: top;" valign=top>
+<td style="padding-right: 0px;
+	padding-left: 0px;
+	border-top-style: none;
+	border-bottom-style: none;
+	border-right-style: none;
+	border-left-style: none;">
+<p><span class=VarType>(boolean)&nbsp;</span>AE.PageOverObject (&nbsp;</td>
+<td style="padding-right: 0px;
+	padding-left: 0px;
+	border-top-style: none;
+	border-right-style: none;
+	border-bottom-style: none;">
+<p><span class=VarType>(string)&nbsp;</span>ObjectName )</p>
+</td></tr></table></div></div>
+<h2 style="margin-bottom: 3pt;">Description</h2>
+<p><blockquote>Based in IsInRectEX Function. Is to detect if the mouse cursor is inside an object's rectangle of the specified object.</blockquote></p>
+<h2 class="H2Tight">Parameters</h2>
+<h3 class="ParameterHeading">ObjectName</h3>
+<p class="ParameterBody"><span class="type">(string)&nbsp;</span>The name of the object.</p>
+<br>
+<h2>Return</h2><blockquote><p>This action returns a <span class="type">(boolean)</span> value.<br><br></p></blockquote><br><hr><h1><A name="AE.PageDragAndDrop">AE.PageDragAndDrop</A></h1><br>
+<div class=Declaration>
+<div align=left>
+<table x-use-null-cells
+	style="float: alignleft;
+	x-cell-content-align: Top;
+	border-spacing: 0px;
+	border-spacing: 0px;"
+	cellspacing=0>
+<col>
+<col>
+<tr style="x-cell-content-align: top;" valign=top>
+<td style="padding-right: 0px;
+	padding-left: 0px;
+	border-top-style: none;
+	border-bottom-style: none;
+	border-right-style: none;
+	border-left-style: none;">
+<p>AE.PageDragAndDrop (&nbsp;</td>
+<td style="padding-right: 0px;
+	padding-left: 0px;
+	border-top-style: none;
+	border-right-style: none;
+	border-bottom-style: none;">
+<p><span class=VarType>(string)&nbsp;</span>NamePage, </p>
+<p><span class=VarType>(string)&nbsp;</span>NameObject )</p>
+</td></tr></table></div></div>
+<h2 style="margin-bottom: 3pt;">Description</h2>
+<p><blockquote>Moves object on page.</blockquote></p>
+<h2 class="H2Tight">Parameters</h2>
+<h3 class="ParameterHeading">NamePage</h3>
+<p class="ParameterBody"><span class="type">(string)&nbsp;</span>Name page.</p>
+<h3 class="ParameterHeading">NameObject</h3>
+<p class="ParameterBody"><span class="type">(string)&nbsp;</span>name object</p>
+<br>
+<h2>Return</h2><blockquote><p>This action dose not return any value.<br><br></p></blockquote><br><hr><h1><A name="AE.PageMoveGroup">AE.PageMoveGroup</A></h1><br>
+<div class=Declaration>
+<div align=left>
+<table x-use-null-cells
+	style="float: alignleft;
+	x-cell-content-align: Top;
+	border-spacing: 0px;
+	border-spacing: 0px;"
+	cellspacing=0>
+<col>
+<col>
+<tr style="x-cell-content-align: top;" valign=top>
+<td style="padding-right: 0px;
+	padding-left: 0px;
+	border-top-style: none;
+	border-bottom-style: none;
+	border-right-style: none;
+	border-left-style: none;">
+<p>AE.PageMoveGroup (&nbsp;</td>
+<td style="padding-right: 0px;
+	padding-left: 0px;
+	border-top-style: none;
+	border-right-style: none;
+	border-bottom-style: none;">
+<p><span class=VarType>(table)&nbsp;</span>Group Objects <span class=DefaultValue> = {"Button1", "Button2"}</span>, </p>
+<p><span class=VarType>(number)&nbsp;</span>X Difference <span class=DefaultValue> = 100</span>, </p>
+<p><span class=VarType>(number)&nbsp;</span>Y Difference <span class=DefaultValue> = 100</span>, </p>
+<p><span class=VarType>(boolean)&nbsp;</span>Redraw <span class=DefaultValue> = false</span> )</p>
+</td></tr></table></div></div>
+<h2 style="margin-bottom: 3pt;">Description</h2>
+<p><blockquote>This action moves all of the items in a group by a specific value X and Y.</blockquote></p>
+<h2 class="H2Tight">Parameters</h2>
+<h3 class="ParameterHeading">Group Objects</h3>
+<p class="ParameterBody"><span class="type">(table)&nbsp;</span>The name of the items with which to work. (In table Format)</p>
+<h3 class="ParameterHeading">X Difference</h3>
+<p class="ParameterBody"><span class="type">(number)&nbsp;</span>The number of pixles by which to move the group horizontally.</p>
+<h3 class="ParameterHeading">Y Difference</h3>
+<p class="ParameterBody"><span class="type">(number)&nbsp;</span>The number of pixles by which to move the group vertically.</p>
+<h3 class="ParameterHeading">Redraw</h3>
+<p class="ParameterBody"><span class="type">(boolean)&nbsp;</span>Whether or not to redraw the application during the process.</p>
+<br>
+<h2>Return</h2><blockquote><p>This action dose not return any value.<br><br></p></blockquote><br><hr><h1><A name="AE.SessionVarExpand">AE.SessionVarExpand</A></h1><br>
+<div class=Declaration>
+<div align=left>
+<table x-use-null-cells
+	style="float: alignleft;
+	x-cell-content-align: Top;
+	border-spacing: 0px;
+	border-spacing: 0px;"
+	cellspacing=0>
+<col>
+<col>
+<tr style="x-cell-content-align: top;" valign=top>
+<td style="padding-right: 0px;
+	padding-left: 0px;
+	border-top-style: none;
+	border-bottom-style: none;
+	border-right-style: none;
+	border-left-style: none;">
+<p><span class=VarType>(string)&nbsp;</span>AE.SessionVarExpand (&nbsp;</td>
+<td style="padding-right: 0px;
+	padding-left: 0px;
+	border-top-style: none;
+	border-right-style: none;
+	border-bottom-style: none;">
+<p><span class=VarType>(string)&nbsp;</span>Text )</p>
+</td></tr></table></div></div>
+<h2 style="margin-bottom: 3pt;">Description</h2>
+<p><blockquote>Returns a string containing the contents of the given session variable.</blockquote></p>
+<h2 class="H2Tight">Parameters</h2>
+<h3 class="ParameterHeading">Text</h3>
+<p class="ParameterBody"><span class="type">(string)&nbsp;</span>The session variable string you want to expand.</p>
+<br>
+<h2>Return</h2><blockquote><p>This action returns a <span class="type">(string)</span> value.<br><br></p></blockquote><br><hr><h1><A name="AE.SessionVarGet">AE.SessionVarGet</A></h1><br>
+<div class=Declaration>
+<div align=left>
+<table x-use-null-cells
+	style="float: alignleft;
+	x-cell-content-align: Top;
+	border-spacing: 0px;
+	border-spacing: 0px;"
+	cellspacing=0>
+<col>
+<col>
+<tr style="x-cell-content-align: top;" valign=top>
+<td style="padding-right: 0px;
+	padding-left: 0px;
+	border-top-style: none;
+	border-bottom-style: none;
+	border-right-style: none;
+	border-left-style: none;">
+<p><span class=VarType>(string)&nbsp;</span>AE.SessionVarGet (&nbsp;</td>
+<td style="padding-right: 0px;
+	padding-left: 0px;
+	border-top-style: none;
+	border-right-style: none;
+	border-bottom-style: none;">
+<p><span class=VarType>(string)&nbsp;</span>VariableName )</p>
+</td></tr></table></div></div>
+<h2 style="margin-bottom: 3pt;">Description</h2>
+<p><blockquote>Returns the unexpanded contents of a session variable.</blockquote></p>
+<h2 class="H2Tight">Parameters</h2>
+<h3 class="ParameterHeading">VariableName</h3>
+<p class="ParameterBody"><span class="type">(string)&nbsp;</span>The name of the session variable whose contents you want.</p>
+<br>
+<h2>Return</h2><blockquote><p>This action returns a <span class="type">(string)</span> value.<br><br></p></blockquote><br><hr><h1><A name="AE.SessionVarRemove">AE.SessionVarRemove</A></h1><br>
+<div class=Declaration>
+<div align=left>
+<table x-use-null-cells
+	style="float: alignleft;
+	x-cell-content-align: Top;
+	border-spacing: 0px;
+	border-spacing: 0px;"
+	cellspacing=0>
+<col>
+<col>
+<tr style="x-cell-content-align: top;" valign=top>
+<td style="padding-right: 0px;
+	padding-left: 0px;
+	border-top-style: none;
+	border-bottom-style: none;
+	border-right-style: none;
+	border-left-style: none;">
+<p>AE.SessionVarRemove (&nbsp;</td>
+<td style="padding-right: 0px;
+	padding-left: 0px;
+	border-top-style: none;
+	border-right-style: none;
+	border-bottom-style: none;">
+<p><span class=VarType>(string)&nbsp;</span>VariableName )</p>
+</td></tr></table></div></div>
+<h2 style="margin-bottom: 3pt;">Description</h2>
+<p><blockquote>Removes the given session variable from the session variable manager at runtime.</blockquote></p>
+<h2 class="H2Tight">Parameters</h2>
+<h3 class="ParameterHeading">VariableName</h3>
+<p class="ParameterBody"><span class="type">(string)&nbsp;</span>The name of the session variable you want to remove (undefine).</p>
+<br>
+<h2>Return</h2><blockquote><p>This action dose not return any value.<br><br></p></blockquote><br><hr><h1><A name="AE.SessionVarSet">AE.SessionVarSet</A></h1><br>
+<div class=Declaration>
+<div align=left>
+<table x-use-null-cells
+	style="float: alignleft;
+	x-cell-content-align: Top;
+	border-spacing: 0px;
+	border-spacing: 0px;"
+	cellspacing=0>
+<col>
+<col>
+<tr style="x-cell-content-align: top;" valign=top>
+<td style="padding-right: 0px;
+	padding-left: 0px;
+	border-top-style: none;
+	border-bottom-style: none;
+	border-right-style: none;
+	border-left-style: none;">
+<p>AE.SessionVarSet (&nbsp;</td>
+<td style="padding-right: 0px;
+	padding-left: 0px;
+	border-top-style: none;
+	border-right-style: none;
+	border-bottom-style: none;">
+<p><span class=VarType>(string)&nbsp;</span>VariableName, </p>
+<p><span class=VarType>(string)&nbsp;</span>Value )</p>
+</td></tr></table></div></div>
+<h2 style="margin-bottom: 3pt;">Description</h2>
+<p><blockquote>Sets the given session variable to the specified value.</blockquote></p>
+<h2 class="H2Tight">Parameters</h2>
+<h3 class="ParameterHeading">VariableName</h3>
+<p class="ParameterBody"><span class="type">(string)&nbsp;</span>The name of the session variable whose value you want to set.</p>
+<h3 class="ParameterHeading">Value</h3>
+<p class="ParameterBody"><span class="type">(string)&nbsp;</span>The value you want to set the session variable to.</p>
+<br>
+<h2>Return</h2><blockquote><p>This action dose not return any value.<br><br></p></blockquote><br><hr><h1><A name="AE.SessionVarGetAll">AE.SessionVarGetAll</A></h1><br>
+<div class=Declaration>
+<div align=left>
+<table x-use-null-cells
+	style="float: alignleft;
+	x-cell-content-align: Top;
+	border-spacing: 0px;
+	border-spacing: 0px;"
+	cellspacing=0>
+<col>
+<col>
+<tr style="x-cell-content-align: top;" valign=top>
+<td style="padding-right: 0px;
+	padding-left: 0px;
+	border-top-style: none;
+	border-bottom-style: none;
+	border-right-style: none;
+	border-left-style: none;">
+<p><span class=VarType>(table)&nbsp;</span>AE.SessionVarGetAll ()</td>
+<td style="padding-right: 0px;
+	padding-left: 0px;
+	border-top-style: none;
+	border-right-style: none;
+	border-bottom-style: none;">
+</td></tr></table></div></div>
+<h2 style="margin-bottom: 3pt;">Description</h2>
+<p><blockquote>Returns all contents of a session variable.</blockquote></p>
+<h2 class="H2Tight">Parameters</h2><h3 class="ParameterHeading">None</h3><br>
+<h2>Return</h2><blockquote><p>This action returns a <span class="type">(table)</span> value.<br><br></p></blockquote><br><hr><h1><A name="AE.StringRandomFromPattern">AE.StringRandomFromPattern</A></h1><br>
+<div class=Declaration>
+<div align=left>
+<table x-use-null-cells
+	style="float: alignleft;
+	x-cell-content-align: Top;
+	border-spacing: 0px;
+	border-spacing: 0px;"
+	cellspacing=0>
+<col>
+<col>
+<tr style="x-cell-content-align: top;" valign=top>
+<td style="padding-right: 0px;
+	padding-left: 0px;
+	border-top-style: none;
+	border-bottom-style: none;
+	border-right-style: none;
+	border-left-style: none;">
+<p><span class=VarType>(string)&nbsp;</span>AE.StringRandomFromPattern (&nbsp;</td>
+<td style="padding-right: 0px;
+	padding-left: 0px;
+	border-top-style: none;
+	border-right-style: none;
+	border-bottom-style: none;">
+<p><span class=VarType>(string)&nbsp;</span>Pattern )</p>
+</td></tr></table></div></div>
+<h2 style="margin-bottom: 3pt;">Description</h2>
+<p><blockquote>To return a random string based on a given pattern.</blockquote></p>
+<h2 class="H2Tight">Parameters</h2>
+<h3 class="ParameterHeading">Pattern</h3>
+<p class="ParameterBody"><span class="type">(string)&nbsp;</span> The pattern to base the random string on. # = (0-9), * = (A-Z), @ = (a-z), ? = (0-9,A-Z), ~ = (0-9,A-Z,a-z). Any other charater is the same.
+More information:			
+# - A random digit (0-9)
+* - A random uppercase letter (A-Z)
+@ - A random lowercase letter (a-z)
+? - A random digit or uppercase letter (0-9,A-Z)
+~ - A random digit, upppercase or lowercase letter (0-9,A-Z,a-z)
+Any other charater - Remains the same.
+
+Examples:
+String.RandomFromPattern("###-###"); -- could produce: "6355-0989"
+String.RandomFromPattern("TEST-***"); -- could produce: "TEST-HAJ"
+String.RandomFromPattern("~~~~~~~~~~"); -- could produce: "7Hg543fp02"</p>
+<br>
+<h2>Return</h2><blockquote><p>This action returns a <span class="type">(string)</span> value.<br><br></p></blockquote><br><hr><h1><A name="AE.StringDelimitedToTable">AE.StringDelimitedToTable</A></h1><br>
+<div class=Declaration>
+<div align=left>
+<table x-use-null-cells
+	style="float: alignleft;
+	x-cell-content-align: Top;
+	border-spacing: 0px;
+	border-spacing: 0px;"
+	cellspacing=0>
+<col>
+<col>
+<tr style="x-cell-content-align: top;" valign=top>
+<td style="padding-right: 0px;
+	padding-left: 0px;
+	border-top-style: none;
+	border-bottom-style: none;
+	border-right-style: none;
+	border-left-style: none;">
+<p><span class=VarType>(table)&nbsp;</span>AE.StringDelimitedToTable (&nbsp;</td>
+<td style="padding-right: 0px;
+	padding-left: 0px;
+	border-top-style: none;
+	border-right-style: none;
+	border-bottom-style: none;">
+<p><span class=VarType>(string)&nbsp;</span>DelimitedString, </p>
+<p><span class=VarType>(string)&nbsp;</span>Delimiter )</p>
+</td></tr></table></div></div>
+<h2 style="margin-bottom: 3pt;">Description</h2>
+<p><blockquote>Breaks up a string given a delimiter into a table. Returns A numerically indexed table with the string elements.</blockquote></p>
+<h2 class="H2Tight">Parameters</h2>
+<h3 class="ParameterHeading">DelimitedString</h3>
+<p class="ParameterBody"><span class="type">(string)&nbsp;</span>The string to parse.</p>
+<h3 class="ParameterHeading">Delimiter</h3>
+<p class="ParameterBody"><span class="type">(string)&nbsp;</span>The delimiter.</p>
+<br>
+<h2>Return</h2><blockquote><p>This action returns a <span class="type">(table)</span> value.<br><br></p></blockquote><br><hr><h1><A name="AE.StringGetLastFolder">AE.StringGetLastFolder</A></h1><br>
+<div class=Declaration>
+<div align=left>
+<table x-use-null-cells
+	style="float: alignleft;
+	x-cell-content-align: Top;
+	border-spacing: 0px;
+	border-spacing: 0px;"
+	cellspacing=0>
+<col>
+<col>
+<tr style="x-cell-content-align: top;" valign=top>
+<td style="padding-right: 0px;
+	padding-left: 0px;
+	border-top-style: none;
+	border-bottom-style: none;
+	border-right-style: none;
+	border-left-style: none;">
+<p><span class=VarType>(string)&nbsp;</span>AE.StringGetLastFolder (&nbsp;</td>
+<td style="padding-right: 0px;
+	padding-left: 0px;
+	border-top-style: none;
+	border-right-style: none;
+	border-bottom-style: none;">
+<p><span class=VarType>(string)&nbsp;</span>FilePath )</p>
+</td></tr></table></div></div>
+<h2 style="margin-bottom: 3pt;">Description</h2>
+<p><blockquote>Returns a last folder path.</blockquote></p>
+<h2 class="H2Tight">Parameters</h2>
+<h3 class="ParameterHeading">FilePath</h3>
+<p class="ParameterBody"><span class="type">(string)&nbsp;</span>The file path you want the last folder.</p>
+<br>
+<h2>Return</h2><blockquote><p>This action returns a <span class="type">(string)</span> value.<br><br></p></blockquote><br><hr><h1><A name="AE.StringGetAllFolder">AE.StringGetAllFolder</A></h1><br>
+<div class=Declaration>
+<div align=left>
+<table x-use-null-cells
+	style="float: alignleft;
+	x-cell-content-align: Top;
+	border-spacing: 0px;
+	border-spacing: 0px;"
+	cellspacing=0>
+<col>
+<col>
+<tr style="x-cell-content-align: top;" valign=top>
+<td style="padding-right: 0px;
+	padding-left: 0px;
+	border-top-style: none;
+	border-bottom-style: none;
+	border-right-style: none;
+	border-left-style: none;">
+<p><span class=VarType>(string)&nbsp;</span>AE.StringGetAllFolder (&nbsp;</td>
+<td style="padding-right: 0px;
+	padding-left: 0px;
+	border-top-style: none;
+	border-right-style: none;
+	border-bottom-style: none;">
+<p><span class=VarType>(string)&nbsp;</span>FilePath )</p>
+</td></tr></table></div></div>
+<h2 style="margin-bottom: 3pt;">Description</h2>
+<p><blockquote>Returns all folders in the specified path.</blockquote></p>
+<h2 class="H2Tight">Parameters</h2>
+<h3 class="ParameterHeading">FilePath</h3>
+<p class="ParameterBody"><span class="type">(string)&nbsp;</span>The file path you want to abbreviate.</p>
+<br>
+<h2>Return</h2><blockquote><p>This action returns a <span class="type">(string)</span> value.<br><br></p></blockquote><br><hr><h1><A name="AE.SystemFindAndCloseProcess">AE.SystemFindAndCloseProcess</A></h1><br>
+<div class=Declaration>
+<div align=left>
+<table x-use-null-cells
+	style="float: alignleft;
+	x-cell-content-align: Top;
+	border-spacing: 0px;
+	border-spacing: 0px;"
+	cellspacing=0>
+<col>
+<col>
+<tr style="x-cell-content-align: top;" valign=top>
+<td style="padding-right: 0px;
+	padding-left: 0px;
+	border-top-style: none;
+	border-bottom-style: none;
+	border-right-style: none;
+	border-left-style: none;">
+<p>AE.SystemFindAndCloseProcess (&nbsp;</td>
+<td style="padding-right: 0px;
+	padding-left: 0px;
+	border-top-style: none;
+	border-right-style: none;
+	border-bottom-style: none;">
+<p><span class=VarType>(string)&nbsp;</span>Programname, </p>
+<p><span class=VarType>(boolean)&nbsp;</span>Question <span class=DefaultValue> = true</span>, </p>
+<p><span class=VarType>(string)&nbsp;</span>Personalizedquestion )</p>
+</td></tr></table></div></div>
+<h2 style="margin-bottom: 3pt;">Description</h2>
+<p><blockquote>Find and close running process on the local system.</blockquote></p>
+<h2 class="H2Tight">Parameters</h2>
+<h3 class="ParameterHeading">Programname</h3>
+<p class="ParameterBody"><span class="type">(string)&nbsp;</span>The full name of program.</p>
+<h3 class="ParameterHeading">Question</h3>
+<p class="ParameterBody"><span class="type">(boolean)&nbsp;</span>To activate question to close the application.</p>
+<h3 class="ParameterHeading">Personalizedquestion</h3>
+<p class="ParameterBody"><span class="type">(string)&nbsp;</span>This is for personalized text of question.</p>
+<br>
+<h2>Return</h2><blockquote><p>This action dose not return any value.<br><br></p></blockquote><br><hr><h1><A name="AE.SystemLogOff">AE.SystemLogOff</A></h1><br>
+<div class=Declaration>
+<div align=left>
+<table x-use-null-cells
+	style="float: alignleft;
+	x-cell-content-align: Top;
+	border-spacing: 0px;
+	border-spacing: 0px;"
+	cellspacing=0>
+<col>
+<col>
+<tr style="x-cell-content-align: top;" valign=top>
+<td style="padding-right: 0px;
+	padding-left: 0px;
+	border-top-style: none;
+	border-bottom-style: none;
+	border-right-style: none;
+	border-left-style: none;">
+<p>AE.SystemLogOff ()</td>
+<td style="padding-right: 0px;
+	padding-left: 0px;
+	border-top-style: none;
+	border-right-style: none;
+	border-bottom-style: none;">
+</td></tr></table></div></div>
+<h2 style="margin-bottom: 3pt;">Description</h2>
+<p><blockquote>Log off the user's system.</blockquote></p>
+<h2 class="H2Tight">Parameters</h2><h3 class="ParameterHeading">None</h3><br>
+<h2>Return</h2><blockquote><p>This action dose not return any value.<br><br></p></blockquote><br><hr><h1><A name="AE.SystemClose">AE.SystemClose</A></h1><br>
+<div class=Declaration>
+<div align=left>
+<table x-use-null-cells
+	style="float: alignleft;
+	x-cell-content-align: Top;
+	border-spacing: 0px;
+	border-spacing: 0px;"
+	cellspacing=0>
+<col>
+<col>
+<tr style="x-cell-content-align: top;" valign=top>
+<td style="padding-right: 0px;
+	padding-left: 0px;
+	border-top-style: none;
+	border-bottom-style: none;
+	border-right-style: none;
+	border-left-style: none;">
+<p>AE.SystemClose ()</td>
+<td style="padding-right: 0px;
+	padding-left: 0px;
+	border-top-style: none;
+	border-right-style: none;
+	border-bottom-style: none;">
+</td></tr></table></div></div>
+<h2 style="margin-bottom: 3pt;">Description</h2>
+<p><blockquote>Close the user's system.</blockquote></p>
+<h2 class="H2Tight">Parameters</h2><h3 class="ParameterHeading">None</h3><br>
+<h2>Return</h2><blockquote><p>This action dose not return any value.<br><br></p></blockquote><br><hr><h1><A name="AE.TableDelimitedToString">AE.TableDelimitedToString</A></h1><br>
+<div class=Declaration>
+<div align=left>
+<table x-use-null-cells
+	style="float: alignleft;
+	x-cell-content-align: Top;
+	border-spacing: 0px;
+	border-spacing: 0px;"
+	cellspacing=0>
+<col>
+<col>
+<tr style="x-cell-content-align: top;" valign=top>
+<td style="padding-right: 0px;
+	padding-left: 0px;
+	border-top-style: none;
+	border-bottom-style: none;
+	border-right-style: none;
+	border-left-style: none;">
+<p><span class=VarType>(variant)&nbsp;</span>AE.TableDelimitedToString (&nbsp;</td>
+<td style="padding-right: 0px;
+	padding-left: 0px;
+	border-top-style: none;
+	border-right-style: none;
+	border-bottom-style: none;">
+<p><span class=VarType>(table)&nbsp;</span>Table, </p>
+<p><span class=VarType>(string)&nbsp;</span>Delimiter )</p>
+</td></tr></table></div></div>
+<h2 style="margin-bottom: 3pt;">Description</h2>
+<p><blockquote>Makes a table into a delimited string. Returns a delimited string of the table elements.</blockquote></p>
+<h2 class="H2Tight">Parameters</h2>
+<h3 class="ParameterHeading">Table</h3>
+<p class="ParameterBody"><span class="type">(table)&nbsp;</span>The table to make into a string.</p>
+<h3 class="ParameterHeading">Delimiter</h3>
+<p class="ParameterBody"><span class="type">(string)&nbsp;</span>The delimiter.</p>
+<br>
+<h2>Return</h2><blockquote><p>This action returns a <span class="type">(variant)</span> value.<br><br></p></blockquote><br><hr><h1><A name="AE.WindowSetPosAlwais">AE.WindowSetPosAlwais</A></h1><br>
+<div class=Declaration>
+<div align=left>
+<table x-use-null-cells
+	style="float: alignleft;
+	x-cell-content-align: Top;
+	border-spacing: 0px;
+	border-spacing: 0px;"
+	cellspacing=0>
+<col>
+<col>
+<tr style="x-cell-content-align: top;" valign=top>
+<td style="padding-right: 0px;
+	padding-left: 0px;
+	border-top-style: none;
+	border-bottom-style: none;
+	border-right-style: none;
+	border-left-style: none;">
+<p>AE.WindowSetPosAlwais (&nbsp;</td>
+<td style="padding-right: 0px;
+	padding-left: 0px;
+	border-top-style: none;
+	border-right-style: none;
+	border-bottom-style: none;">
+<p><span class=VarType>(variant)&nbsp;</span>Position )</p>
+</td></tr></table></div></div>
+<h2 style="margin-bottom: 3pt;">Description</h2>
+<p><blockquote>Set the position of the application using a predefined parameters, respecting the taskbar.</blockquote></p>
+<h2 class="H2Tight">Parameters</h2>
+<h3 class="ParameterHeading">Position</h3>
+<p class="ParameterBody"><span class="type">(variant)&nbsp;</span>Set Application Position.</p>
+<br>
+<h2>Return</h2><blockquote><p>This action dose not return any value.<br><br></p></blockquote><br><hr><h1><A name="AE.ZipAddFile">AE.ZipAddFile</A></h1><br>
+<div class=Declaration>
+<div align=left>
+<table x-use-null-cells
+	style="float: alignleft;
+	x-cell-content-align: Top;
+	border-spacing: 0px;
+	border-spacing: 0px;"
+	cellspacing=0>
+<col>
+<col>
+<tr style="x-cell-content-align: top;" valign=top>
+<td style="padding-right: 0px;
+	padding-left: 0px;
+	border-top-style: none;
+	border-bottom-style: none;
+	border-right-style: none;
+	border-left-style: none;">
+<p>AE.ZipAddFile (&nbsp;</td>
+<td style="padding-right: 0px;
+	padding-left: 0px;
+	border-top-style: none;
+	border-right-style: none;
+	border-bottom-style: none;">
+<p><span class=VarType>(string)&nbsp;</span>ZipFile, </p>
+<p><span class=VarType>(table)&nbsp;</span>FilesToAdd, </p>
+<p><span class=VarType>(boolean)&nbsp;</span>IncludeFolderNames <span class=DefaultValue> = true</span>, </p>
+<p><span class=VarType>(string)&nbsp;</span>Password <span class=DefaultValue> = ""</span>, </p>
+<p><span class=VarType>(number)&nbsp;</span>CompFactor <span class=DefaultValue> = 5</span>, </p>
+<p><span class=VarType>(function)&nbsp;</span>CallbackFunction <span class=DefaultValue> = nil</span>, </p>
+<p><span class=VarType>(boolean)&nbsp;</span>Recurse <span class=DefaultValue> = false</span> )</p>
+</td></tr></table></div></div>
+<h2 style="margin-bottom: 3pt;">Description</h2>
+<p><blockquote>Adds a file (or multiple files if you use a mask) to a Zip file by filename instead of using a table to specify filenames. Same Arguments as Zip.Add except that the second argument (FileToAdd) is a filename instead of a table.</blockquote></p>
+<h2 class="H2Tight">Parameters</h2>
+<h3 class="ParameterHeading">ZipFile</h3>
+<p class="ParameterBody"><span class="type">(string)&nbsp;</span>The full path and file name of the Zip archive file.</p>
+<h3 class="ParameterHeading">FilesToAdd</h3>
+<p class="ParameterBody"><span class="type">(table)&nbsp;</span>A table containing the full paths to all of the files you want to add.</p>
+<h3 class="ParameterHeading">IncludeFolderNames</h3>
+<p class="ParameterBody"><span class="type">(boolean)&nbsp;</span>Whether to preserve folder names in the archive when adding files.</p>
+<h3 class="ParameterHeading">Password</h3>
+<p class="ParameterBody"><span class="type">(string)&nbsp;</span>The password to use to protect the Zip file. This password will be needed to extract the files. This parameter is optional. If you don't want to protect the Zip file, just leave this parameter blank.</p>
+<h3 class="ParameterHeading">CompFactor</h3>
+<p class="ParameterBody"><span class="type">(number)&nbsp;</span>The compression factor to use for the Zip file (0-9). 0 is the fastest and compresses the least, 9 is the slowest and compresses the most. The default is 5.</p>
+<h3 class="ParameterHeading">CallbackFunction</h3>
+<p class="ParameterBody"><span class="type">(function)&nbsp;</span>The name of a function that will be called whenever progress is made in adding a file to the Zip archive. (You can use this callback function to display the progress of each file's archiving in your own custom way.).</p>
+<h3 class="ParameterHeading">Recurse</h3>
+<p class="ParameterBody"><span class="type">(boolean)&nbsp;</span>Whether to recurse subfolders when wildcards are used.</p>
+<br>
+<h2>Return</h2><blockquote><p>This action dose not return any value.<br><br></p></blockquote><br><hr><h1><A name="AE.ZipAddFolderTree">AE.ZipAddFolderTree</A></h1><br>
+<div class=Declaration>
+<div align=left>
+<table x-use-null-cells
+	style="float: alignleft;
+	x-cell-content-align: Top;
+	border-spacing: 0px;
+	border-spacing: 0px;"
+	cellspacing=0>
+<col>
+<col>
+<tr style="x-cell-content-align: top;" valign=top>
+<td style="padding-right: 0px;
+	padding-left: 0px;
+	border-top-style: none;
+	border-bottom-style: none;
+	border-right-style: none;
+	border-left-style: none;">
+<p>AE.ZipAddFolderTree (&nbsp;</td>
+<td style="padding-right: 0px;
+	padding-left: 0px;
+	border-top-style: none;
+	border-right-style: none;
+	border-bottom-style: none;">
+<p><span class=VarType>(string)&nbsp;</span>ZipFile, </p>
+<p><span class=VarType>(table)&nbsp;</span>BaseFolder, </p>
+<p><span class=VarType>(string)&nbsp;</span>Password <span class=DefaultValue> = ""</span>, </p>
+<p><span class=VarType>(number)&nbsp;</span>CompFactor <span class=DefaultValue> = 5</span>, </p>
+<p><span class=VarType>(function)&nbsp;</span>CallbackFunction <span class=DefaultValue> = nil</span> )</p>
+</td></tr></table></div></div>
+<h2 style="margin-bottom: 3pt;">Description</h2>
+<p><blockquote>Adds an entire folder tree (a folder, the files it contains and all files in all subfolders.Same as Zip.Add except that the second argument (BaseFolder) is a folder path instead of a table and the  IncludeFolderNames and Recurse arguments are not passed in (they are set automatically).</blockquote></p>
+<h2 class="H2Tight">Parameters</h2>
+<h3 class="ParameterHeading">ZipFile</h3>
+<p class="ParameterBody"><span class="type">(string)&nbsp;</span>The full path and file name of the Zip archive file.</p>
+<h3 class="ParameterHeading">BaseFolder</h3>
+<p class="ParameterBody"><span class="type">(table)&nbsp;</span>Full paths to all of the folder you want to add.</p>
+<h3 class="ParameterHeading">Password</h3>
+<p class="ParameterBody"><span class="type">(string)&nbsp;</span>The password to use to protect the Zip file. This password will be needed to extract the files. This parameter is optional. If you don't want to protect the Zip file, just leave this parameter blank.</p>
+<h3 class="ParameterHeading">CompFactor</h3>
+<p class="ParameterBody"><span class="type">(number)&nbsp;</span>The compression factor to use for the Zip file (0-9). 0 is the fastest and compresses the least, 9 is the slowest and compresses the most. The default is 5.</p>
+<h3 class="ParameterHeading">CallbackFunction</h3>
+<p class="ParameterBody"><span class="type">(function)&nbsp;</span>The name of a function that will be called whenever progress is made in adding a file to the Zip archive. (You can use this callback function to display the progress of each file's archiving in your own custom way.).</p>
+<br>
+<h2>Return</h2><blockquote><p>This action dose not return any value.<br><br></p></blockquote><br><hr><h1><A name="AE.TablePrint">AE.TablePrint</A></h1><br>
+<div class=Declaration>
+<div align=left>
+<table x-use-null-cells
+	style="float: alignleft;
+	x-cell-content-align: Top;
+	border-spacing: 0px;
+	border-spacing: 0px;"
+	cellspacing=0>
+<col>
+<col>
+<tr style="x-cell-content-align: top;" valign=top>
+<td style="padding-right: 0px;
+	padding-left: 0px;
+	border-top-style: none;
+	border-bottom-style: none;
+	border-right-style: none;
+	border-left-style: none;">
+<p><span class=VarType>(string)&nbsp;</span>AE.TablePrint (&nbsp;</td>
+<td style="padding-right: 0px;
+	padding-left: 0px;
+	border-top-style: none;
+	border-right-style: none;
+	border-bottom-style: none;">
+<p><span class=VarType>(table)&nbsp;</span>tbl )</p>
+</td></tr></table></div></div>
+<h2 style="margin-bottom: 3pt;">Description</h2>
+<p><blockquote>Print tables (thanks webultra)</blockquote></p>
+<h2 class="H2Tight">Parameters</h2>
+<h3 class="ParameterHeading">tbl</h3>
+<p class="ParameterBody"><span class="type">(table)&nbsp;</span>Table to print</p>
+<br>
+<h2>Return</h2><blockquote><p>This action returns a <span class="type">(string)</span> value.<br><br></p></blockquote><br><hr><h1><A name="AE.InputSetTextAppend">AE.InputSetTextAppend</A></h1><br>
+<div class=Declaration>
+<div align=left>
+<table x-use-null-cells
+	style="float: alignleft;
+	x-cell-content-align: Top;
+	border-spacing: 0px;
+	border-spacing: 0px;"
+	cellspacing=0>
+<col>
+<col>
+<tr style="x-cell-content-align: top;" valign=top>
+<td style="padding-right: 0px;
+	padding-left: 0px;
+	border-top-style: none;
+	border-bottom-style: none;
+	border-right-style: none;
+	border-left-style: none;">
+<p>AE.InputSetTextAppend (&nbsp;</td>
+<td style="padding-right: 0px;
+	padding-left: 0px;
+	border-top-style: none;
+	border-right-style: none;
+	border-bottom-style: none;">
+<p><span class=VarType>(string)&nbsp;</span>ObjectName, </p>
+<p><span class=VarType>(string)&nbsp;</span>Text, </p>
+<p><span class=VarType>(boolean)&nbsp;</span>Append <span class=DefaultValue> = true</span> )</p>
+</td></tr></table></div></div>
+<h2 style="margin-bottom: 3pt;">Description</h2>
+<p><blockquote>Set text to imput and opcion append</blockquote></p>
+<h2 class="H2Tight">Parameters</h2>
+<h3 class="ParameterHeading">ObjectName</h3>
+<p class="ParameterBody"><span class="type">(string)&nbsp;</span>Name of the object</p>
+<h3 class="ParameterHeading">Text</h3>
+<p class="ParameterBody"><span class="type">(string)&nbsp;</span>Text to print</p>
+<h3 class="ParameterHeading">Append</h3>
+<p class="ParameterBody"><span class="type">(boolean)&nbsp;</span>True append , false not append</p>
+<br>
+<h2>Return</h2><blockquote><p>This action dose not return any value.<br><br></p></blockquote><br><hr><h1><A name="AE.GridExSaveToFile">AE.GridExSaveToFile</A></h1><br>
+<div class=Declaration>
+<div align=left>
+<table x-use-null-cells
+	style="float: alignleft;
+	x-cell-content-align: Top;
+	border-spacing: 0px;
+	border-spacing: 0px;"
+	cellspacing=0>
+<col>
+<col>
+<tr style="x-cell-content-align: top;" valign=top>
+<td style="padding-right: 0px;
+	padding-left: 0px;
+	border-top-style: none;
+	border-bottom-style: none;
+	border-right-style: none;
+	border-left-style: none;">
+<p>AE.GridExSaveToFile (&nbsp;</td>
+<td style="padding-right: 0px;
+	padding-left: 0px;
+	border-top-style: none;
+	border-right-style: none;
+	border-bottom-style: none;">
+<p><span class=VarType>(string)&nbsp;</span>ObjectName, </p>
+<p><span class=VarType>(string)&nbsp;</span>Delimitier <span class=DefaultValue> = ","</span> )</p>
+</td></tr></table></div></div>
+<h2 style="margin-bottom: 3pt;">Description</h2>
+<p><blockquote>Use to save GridEx Object plugin data to file, delimitier string</blockquote></p>
+<h2 class="H2Tight">Parameters</h2>
+<h3 class="ParameterHeading">ObjectName</h3>
+<p class="ParameterBody"><span class="type">(string)&nbsp;</span>Name of te Gridex Object</p>
+<h3 class="ParameterHeading">Delimitier</h3>
+<p class="ParameterBody"><span class="type">(string)&nbsp;</span>Delimitier used</p>
+<br>
+<h2>Return</h2><blockquote><p>This action dose not return any value.<br><br></p></blockquote><br><hr><h1><A name="AE.GridExLoadFromFile">AE.GridExLoadFromFile</A></h1><br>
+<div class=Declaration>
+<div align=left>
+<table x-use-null-cells
+	style="float: alignleft;
+	x-cell-content-align: Top;
+	border-spacing: 0px;
+	border-spacing: 0px;"
+	cellspacing=0>
+<col>
+<col>
+<tr style="x-cell-content-align: top;" valign=top>
+<td style="padding-right: 0px;
+	padding-left: 0px;
+	border-top-style: none;
+	border-bottom-style: none;
+	border-right-style: none;
+	border-left-style: none;">
+<p>AE.GridExLoadFromFile (&nbsp;</td>
+<td style="padding-right: 0px;
+	padding-left: 0px;
+	border-top-style: none;
+	border-right-style: none;
+	border-bottom-style: none;">
+<p><span class=VarType>(string)&nbsp;</span>ObjectName, </p>
+<p><span class=VarType>(string)&nbsp;</span>FilePath, </p>
+<p><span class=VarType>(string)&nbsp;</span>Delimitier )</p>
+</td></tr></table></div></div>
+<h2 style="margin-bottom: 3pt;">Description</h2>
+<p><blockquote>Load gridex data from file</blockquote></p>
+<h2 class="H2Tight">Parameters</h2>
+<h3 class="ParameterHeading">ObjectName</h3>
+<p class="ParameterBody"><span class="type">(string)&nbsp;</span>Name of the Object</p>
+<h3 class="ParameterHeading">FilePath</h3>
+<p class="ParameterBody"><span class="type">(string)&nbsp;</span>File path </p>
+<h3 class="ParameterHeading">Delimitier</h3>
+<p class="ParameterBody"><span class="type">(string)&nbsp;</span>Delimitier used</p>
+<br>
+<h2>Return</h2><blockquote><p>This action dose not return any value.<br><br></p></blockquote><br><hr><h2><p align="center">Made with Action Plugin Compiler</p></h2></body></html>

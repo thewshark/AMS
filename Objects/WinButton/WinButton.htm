@@ -1,0 +1,535 @@
+<!doctype HTML public "-//W3C//DTD HTML 4.0 Frameset//EN">
+
+<html>
+<head>
+<title>WinButton Object Plugin Help</title>
+
+<meta http-equiv=content-type content="text/html; charset=windows-1252">
+
+<style>
+
+/* ELEMENTS */
+
+body {
+  font-family: Verdana, sans-serif;
+  font-size: 8pt;
+  background-color: #ffffff;
+}
+
+hr {
+  text-align: center;
+  color: #f0f0f0;
+  width: 100%;
+  height: 6pt;
+
+  margin-top: 0pt;
+  margin-bottom: -3pt;
+
+  border: none;
+}
+
+A:link, A:active, A:visited {
+  color: #0000ff;
+  text-decoration: none;
+}
+
+A:hover {
+  color: #0000ff;
+  text-decoration: underline;
+}
+
+h1 {
+  font-family: Verdana;
+  font-weight: bold;
+  font-size: 18.0pt;
+  white-space: nowrap;
+  color: #fff;
+  background-color: #699BEF;
+
+  padding: 4pt 3pt;
+  padding: 5px 4px;
+
+  margin-top: 0pt;
+  margin-bottom: 0pt;
+
+  border-right: 1px solid #333;
+  border-left: 1px solid #699BEF;
+  border-bottom: solid black 1px;
+}
+
+h2 {
+  font-family: Arial, sans-serif;
+  font-size: 12.0pt;
+  letter-spacing: .2ex;
+  color: #000;
+
+  margin-left: 0pt;
+  margin-right: 0pt;
+  margin-top: 18pt;
+  margin-bottom: 9pt;
+}
+
+h3 {
+  font-family: Arial, sans-serif;
+  font-size: 10pt;
+  font-weight: bold;
+  font-style: normal;
+  color: black;
+  letter-spacing: 0px;
+
+  margin-left: 0pt;
+  margin-right: 0pt;
+  margin-top: 18pt;
+  margin-bottom: 3pt;
+}
+
+p {
+  font-family: Verdana;
+  font-size: 8.0pt;
+  line-height: 12.0pt;
+  
+  margin-left: 0pt;
+  margin-right: 0pt;
+  margin-top: 0pt;
+  margin-bottom: 9pt;
+}
+
+/* CLASSES */
+
+div.Actions h3, div.Properties h3, div.Events h3 {
+  font-family: Arial, sans-serif;
+  font-size: 10pt;
+  font-weight: bold;
+  font-style: italic;
+  color: #3C77B3;
+  letter-spacing: 0px;
+  
+  margin-left: 12pt;
+  margin-right: 0pt;
+  margin-top: 18pt;
+  margin-bottom: 3pt;
+}
+
+div.Events h4, div.Actions h4, div.info h3 {
+  font-family: Verdana;
+  font-size: 8.0pt;
+  line-height: 12.0pt;
+  font-weight: bold;
+  
+  margin-top: 9pt;
+  margin-bottom: 0pt;
+  margin-left: 28pt;
+  margin-right: 0pt;
+}
+
+div.Actions p, div.Properties p, div.Events p, div.ErrorCodes p {
+  font-family: Verdana;
+  font-size: 8.0pt;
+  line-height: 12.0pt;
+  
+  margin-top: 0pt;
+  margin-bottom: 9pt;
+  margin-left: 12pt;
+  margin-right: 0pt;
+}
+
+div.ErrorCodes table {
+  font-family: Verdana, sans-serif;
+  font-size: 8.0pt;
+  line-height: 12.0pt;
+  margin: 0px 0px 9pt 28pt;
+  border-collapse: collapse; 
+  border: none;
+}
+
+div.ErrorCodes table th,
+div.ErrorCodes table td {
+  border-bottom: 1px solid #ddd;
+  padding: 1ex;
+}
+
+div.ErrorCodes table th {
+  text-align: left;
+  padding-left: 0px;
+  padding-right: 2ex;
+}
+
+p.NavLocal {
+  white-space: nowrap;
+  text-indent: -4px;
+  font-family: Verdana, Arial, sans-serif;
+  font-weight: bold;
+  font-style: normal;
+  font-size: 13px;
+  background-color: #e4e4e4;
+
+  margin-top: 0px;
+  margin-bottom: 12pt;
+
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 0px;
+  padding-right: 0px;
+
+  border-bottom: 1px solid #e4e4e4;
+}
+
+p.Note {
+	font-family: Verdana;
+	font-size: 8.0pt;
+	line-height: 12.0pt;
+	color: #000000;
+	background-color: #ffffe8;
+
+	margin-top: 0pt;
+	margin-bottom: 9pt;
+	margin-left: 0pt;
+	margin-right: 5%;
+
+	padding-left: 2pt;
+	padding-right: 2pt;
+	padding-top: 1pt;
+	padding-bottom: 2pt;
+}
+
+p.Tip {
+	font-family: Verdana;
+	font-size: 8.0pt;
+	line-height: 12.0pt;
+	color: #000000;
+	background-color: #EAF4E8;
+
+	margin-top: 0pt;
+	margin-bottom: 9pt;
+	margin-left: 0pt;
+	margin-right: 5%;
+
+	padding-left: 2pt;
+	padding-right: 2pt;
+	padding-top: 1pt;
+	padding-bottom: 2pt;
+}
+
+div.Actions p.Note, div.Events p.Note,
+div.Actions p.Tip, div.Events p.Tip {
+	margin-left: 28pt;
+}
+
+div.Properties p.Note,
+div.Properties p.Tip {
+	margin-left: 18pt;
+}
+
+pre.code {
+  white-space: pre;
+  font-family: Courier New, Courier, Arial, sans-serif;
+  font-size: 10pt;
+  font-weight: normal;
+  font-style: normal;
+  letter-spacing: normal;
+  color: #000;
+  background-color: #f9f9f9;
+  
+  margin-top: 3pt;
+  margin-bottom: 9pt;
+  margin-left: 0pt;
+  margin-left: 0pt;
+  
+  padding: 10px;
+  
+  border: 1px dotted #ccc;
+}
+
+div.Actions pre.code, div.Events pre.code {
+  margin-left: 28pt;
+}
+
+div.Actions h2, div.Properties h2, div.Events h2 {
+  margin-bottom: -6pt;
+}
+
+div.actions p, div.ErrorCodes p, div.info p {
+  margin-left: 28pt;
+}
+
+div.actions p.indent {
+  margin-left: 38pt;
+}
+
+div.e_vars p {
+  margin-left: 28pt;
+}
+
+span.here { /* blue tab effect in navbar (NavLocal) */
+  font-weight: bold;
+  color: #fff;
+  background-color: #699BEF;
+
+  margin: 0px;
+
+  padding: 4px 8px;
+
+  border-top: 1px solid #699BEF;
+  border-bottom: 1px solid #333;
+  border-left: none;
+  border-right: 1px solid #333;
+}
+
+span.type {
+	color: #aaa;
+}
+
+div.history h2 + h3 {
+	margin-top: 3pt;
+}
+</style>
+</head>
+<body>
+
+<h1>WinButton Object Plugin</h1>
+
+<p class="NavLocal"><span class=wab>&nbsp;</span><span class="here">Online Help</span></p>
+
+<h2>Description</h2>
+
+<p>The WinButton plugin object that allows you to include standard Windows-style buttons in your application. This allows you to present simple Windows buttons to your users that they are used to working with in many of their Windows applications. The button will even take on the Windows XP look according to the user's system settings on Windows XP.</p>
+
+<div class="Properties">
+<h2>Properties</h2>
+
+<h3>Text</h3>
+
+<p>The text you want displayed on your button.  For example, "Ok" or "Cancel".</p>
+
+<h3>Alignment</h3>
+
+<p>How you want to align the text (Left, Center, Right).</p>
+
+<h3>Type</h3>
+
+<p>The type of button you want this to be (Regular or Toggle).</p>
+
+</div> <!-- /Properties -->
+
+
+<div class="Events">
+<h2>Events</h2>
+
+<h3>On Click</h3>
+
+<p>Fires when the WinButton is clicked.</p>
+
+<h3>On Focus</h3>
+
+<p>Fires when the WinButton gets page focus.</p>
+
+<h3>On Key</h3>
+
+<p>Fires when the WinButton has focus and a key is pressed.</p>
+
+</div> <!-- /Events -->
+
+
+<div class="Actions">
+<h2>Actions</h2>
+
+<p style="margin-top: 18pt; margin-left: 12pt;">
+<a href="#WinButton.GetState">WinButton.GetState</a><br/>
+<a href="#WinButton.GetText">WinButton.GetText</a><br/>
+<a href="#WinButton.SetState">WinButton.SetState</a><br/>
+<a href="#WinButton.SetText">WinButton.SetText</a><br/>
+</p>
+
+
+<h3><a name="WinButton.GetState">number WinButton.GetState(string ObjectName)</a></h3>
+
+<h4>Description:</h4>
+<p>Returns the current up/down state of a WinButton.</p>
+
+<h4>ObjectName:</h4>
+<p><span class="type">(string)</span> The name of the WinButton object.</p>
+ 
+<h4>Returns:</h4>
+<p><span class="type">(number)</span> The state of the WinButton:</p>
+<p class="indent">
+<b>0</b>&nbsp; (BTN_UP) - Button is up (normal).<BR>
+<b>1</b>&nbsp; (BTN_DOWN) - Button is down (pressed).</p>
+<p>
+If an error occurs, -1 will be returned. You can also use Application.GetLastError to determine whether this action failed, and why.
+</p>
+ 
+<h4>Example:</h4>
+<pre class="code">
+-- Get the current state of WinButton1
+nCurrentState = WinButton.GetState("WinButton1");
+
+-- Check to see if any errors occurred calling the WinButton.GetState action.
+-- If any error occurred, display the error message.
+error = Application.GetLastError();
+if (error ~= 0) then
+    Dialog.Message("Error", _tblErrorMessages[error], MB_OK, MB_ICONEXCLAMATION, MB_DEFBUTTON1);
+end
+
+-- Display a dialog if the button is up
+if nCurrentState == 0 then
+    Dialog.Message("", "The WinButton is UP!!!! UP IT IS!!!");
+end
+</pre>
+
+
+
+<h3><a name="WinButton.GetText">string WinButton.GetText(string ObjectName)</a></h3>
+
+<h4>Description:</h4>
+<p>Returns the text displayed on a WinButton.</p>
+
+<h4>ObjectName:</h4>
+<p><span class="type">(string)</span> The name of the WinButton object.</p>
+ 
+<h4>Returns:</h4>
+<p><span class="type">(string)</span> The text that is currently displayed on the WinButton object. If an error occurs, a blank string ("") will be returned. You can use Application.GetLastError to determine whether this action failed, and why.</p>
+ 
+<h4>Example:</h4>
+<pre class="code">
+-- Retrieve the current text from WinButton1
+sWinButtonText = WinButton.GetText("WinButton1");
+
+-- Check to see if any errors occurred calling the WinButton.GetState action.
+-- If any error occurred, display the error message.
+error = Application.GetLastError();
+if (error ~= 0) then
+    Dialog.Message("Error", _tblErrorMessages[error], MB_OK, MB_ICONEXCLAMATION, MB_DEFBUTTON1);
+end
+
+-- Output the current winbutton text to the debug window
+Debug.Print("WinButtonText:  " .. sWinButtonText .. "\r\n");
+
+</pre>
+
+
+
+<h3><a name="WinButton.SetState">WinButton.SetState(string ObjectName, number State = BTN_UP)</a></h3>
+
+<h4>Description:</h4>
+<p>Returns the up/down state of a WinButton.</p>
+
+<h4>ObjectName:</h4>
+<p><span class="type">(string)</span> The name of the WinButton object.</p>
+ 
+<h4>State:</h4>
+<p><span class="type">(number)</span> The state you want to set the WinButton to.</p>
+
+<h4>Returns:</h4>
+<p>Nothing. You can use Application.GetLastError() to determine whether this action failed, and why.</p>
+ 
+<h4>Example:</h4>
+<pre class="code">
+-- Set the state of WinButton1 to 'down'
+WinButton.SetState("WinButton1", BTN_DOWN);
+
+-- Check to see if any errors occurred calling the WinButton.SetState action.
+-- If any error occurred, display the error message.
+error = Application.GetLastError();
+if (error ~= 0) then
+    Dialog.Message("Error", _tblErrorMessages[error], MB_OK, MB_ICONEXCLAMATION, MB_DEFBUTTON1);
+end
+</pre>
+
+
+
+<h3><a name="WinButton.SetText">WinButton.SetText(string ObjectName, string Text)</a></h3>
+
+<h4>Description:</h4>
+<p>Sets the text to be displayed on a WinButton object.</p>
+
+<h4>ObjectName:</h4>
+<p><span class="type">(string)</span> The name of the WinButton object.</p>
+ 
+<h4>Text:</h4>
+<p><span class="type">(string)</span> The text you want to display.</p>
+
+<h4>Returns:</h4>
+<p>Nothing. You can use Application.GetLastError() to determine whether this action failed, and why.</p>
+ 
+<h4>Example:</h4>
+<pre class="code">
+-- Set the text of WinButton1 to 'I am a button!!!'
+WinButton.SetText("WinButton1", "I am a button!!!");
+
+-- Check to see if any errors occurred calling the WinButton.SetText action.
+-- If any error occurred, display the error message.
+error = Application.GetLastError();
+if (error ~= 0) then
+    Dialog.Message("Error", _tblErrorMessages[error], MB_OK, MB_ICONEXCLAMATION, MB_DEFBUTTON1);
+end
+</pre>
+
+
+</div> <!-- /Actions -->
+
+
+<div class="ErrorCodes">
+<h2>Error Codes</h2>
+<table>
+  <tr>
+    <th>0</th>
+    <td>&nbsp;</td><td>-</td><td>(no error)</td>
+  </tr>
+  <tr>
+    <th>1100</th>
+    <td>&nbsp;</td><td>-</td><td>The specified object could not be found.</td>
+  </tr>
+</table>
+</div> <!-- /ErrorCodes -->
+
+
+<div class="History">
+<h2>Change Log</h2>
+
+<h3>2.0.0.0</h3>
+<ul>
+	<li>Updated to Lua 5.1 and made compatible with AutoPlay Media Studio 8.0.</li>
+</ul>
+
+<h3>1.0.2.0</h3>
+<ul>
+	<li>Fixed a bug where the On Click event was being fired even if the cursor was not on the object.</li>
+</ul>
+
+<h3>1.0.1.0</h3>
+<ul>
+	<li>Updated version resource information.</li>
+</ul>
+
+<h3>1.0.0.1</h3>
+<ul>
+	<li>F1 help now works if you have Mozilla Firefox installed</li>
+</ul>
+
+<h3>1.0.0.0</h3>
+<ul>
+	<li>Initial release</li>
+</ul>
+</div> <!-- /History -->
+
+
+<div class="Info">
+<h2>Additional Information</h2>
+
+<h3>Author:</h3><p>Indigo Rose Corporation<br>
+<a href="http://support.indigorose.com">support.indigorose.com</a></p>
+
+<h3>Copyright:</h3>
+<p>The WinButton Object Plugin is copyright © 2003-2010 Indigo Rose Software Design Corporation.</p>
+
+<h3>Website:</h3>
+<p><a href="http://www.indigorose.com">http://www.indigorose.com</a></p>
+
+</div> <!-- /info -->
+<hr>
+
+<p align="center">Copyright © 2003-2010 Indigo Rose Software Design Corporation.<br>
+All Rights Reserved.</p>
+
+</body>
+</html>

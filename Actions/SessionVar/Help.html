@@ -1,0 +1,511 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML><HEAD><TITLE>SessionVar</TITLE>
+<META content="text/html; charset=windows-1252" http-equiv=Content-Type>
+<STYLE>
+
+
+	body {
+	  font-family: Verdana, sans-serif;
+	  font-size: 8pt;
+	  background-color: #ffffff;
+	}
+	  
+	body {
+	  font-family: Verdana, sans-serif;
+	  font-size: 8pt;
+	  background-color: #ffffff;
+	}
+	
+	hr {
+	  text-align: center;
+	  color: #f0f0f0;
+	  width: 100%;
+	  height: 6pt;
+	  margin-top: 0pt;
+	  margin-bottom: -3pt;
+	  border: none;
+	}
+	
+	A:link, A:active, A:visited {
+	  color: #0000ff;
+	  text-decoration: none;
+	}
+	
+	A:hover {
+	  color: #0000ff;
+	  text-decoration: underline;
+	}
+	
+	h1 {
+	  font-family: Verdana;
+	  font-weight: bold;
+	  font-size: 18.0pt;
+	  white-space: nowrap;
+	  color: #fff;
+	  background-color: #699BEF;
+	  padding: 4pt 3pt;
+	  padding: 5px 4px;
+	  margin-top: 0pt;
+	  margin-bottom: 0pt;
+	  border-right: 1px solid #333;
+	  border-left: 1px solid #699BEF;
+	  border-bottom: solid black 1px;
+	}
+	
+	h2 {
+	  font-family: Arial, sans-serif;
+	  font-size: 12.0pt;
+	  letter-spacing: .2ex;
+	  color: #000;
+	  margin-left: 0pt;
+	  margin-right: 0pt;
+	  margin-top: 18pt;
+	  margin-bottom: 9pt;
+	}
+	
+	h2.H2Tight {
+		margin-bottom: -6pt;
+	}
+	
+	h3 {
+	  font-family: Arial, sans-serif;
+	  font-size: 10pt;
+	  font-weight: bold;
+	  font-style: normal;
+	  color: black;
+	  letter-spacing: 0px;
+	  margin-left: 0pt;
+	  margin-right: 0pt;
+	  margin-top: 18pt;
+	  margin-bottom: 3pt;
+	}
+	
+	h3.ParameterHeading {
+		font-family: Arial, sans-serif;
+		margin-left: 12pt;
+		margin-right: 0pt;
+		margin-top: 18pt;
+		margin-bottom: 3pt;
+		font-size: 9pt;
+		font-weight: bold;
+		font-style: italic;
+		letter-spacing: .2ex;
+		color: #3C77B3;
+		x-next-class: ParameterBody;
+		x-next-type: p;
+	}
+	
+	p {
+	  font-family: Verdana;
+	  font-size: 8.0pt;
+	  line-height: 12.0pt;
+	  margin-left: 0pt;
+	  margin-right: 0pt;
+	  margin-top: 0pt;
+	  margin-bottom: 9pt;
+	}
+	  
+	p.NavLocal {
+	  white-space: nowrap;
+	  text-indent: -4px;
+	  font-family: Verdana, Arial, sans-serif;
+	  font-weight: bold;
+	  font-style: normal;
+	  font-size: 13px;
+	  background-color: #e4e4e4;
+	  margin-top: 0px;
+	  margin-bottom: 12pt;
+	  padding-top: 4px;
+	  padding-bottom: 4px;
+	  padding-left: 0px;
+	  padding-right: 0px;
+	
+	  border-bottom: 1px solid #e4e4e4;
+	}
+	  
+	p.ParameterBody {
+		margin-left: 12pt;
+		x-next-class: ParameterHeading;
+		x-next-type: h3;
+	}
+	  
+	div.Actions p, div.Properties p, div.Events p, div.ErrorCodes p {
+	  font-family: Verdana;
+	  font-size: 8.0pt;
+	  line-height: 12.0pt;
+	  margin-top: 0pt;
+	  margin-bottom: 9pt;
+	  margin-left: 12pt;
+	  margin-right: 0pt;
+	}
+	
+	div.Declaration table p {
+		white-space: nowrap;
+		line-height: normal;
+		x-text-tab-stops: repeat 1in;
+		font-family: "Courier New", Courier, monospace;
+		font-size: 10.0pt;
+		background-color: #eee;
+		color: #000000;
+		margin-left: 0px;
+		margin-right: 0px;
+		margin-top: 0px;
+		margin-bottom: 0px;
+		padding: 0pt;
+		border-style: none;
+	}
+	
+	div.Declaration {
+		white-space: nowrap;
+		line-height: normal;
+		x-text-tab-stops: repeat 1in;
+		font-family: "Courier New", Courier, monospace;
+		font-size: 9.0pt;
+		background-color: #eee;
+		color: #000000;
+		width: 100%;
+		margin-left: 0px;
+		margin-right: 0px;
+		margin-top: 0pt;
+		margin-bottom: 9pt;
+		padding: 2pt;
+		border-top: #c0c0c0 1px solid;
+		border-right: #c0c0c0 1px solid;
+		border-left: #c0c0c0 1px solid;
+		border-bottom: #c0c0c0 1px solid;
+	}
+	
+	span.VarType {
+		font-family: "Courier New", monospace;
+		font-size: 9pt;
+		font-style: italic;
+		color: #abd;
+	}
+	
+	span.type {
+		color: #aaa;
+	}
+	
+	span.wab {
+		font-family: Verdana;
+		font-size: 13px;
+		padding: 0px 0px;
+		margin: 0px;
+		border: none;
+		visibility: hidden;
+	}
+
+	span.DefaultValue {
+		white-space: nowrap;
+		font-family: "Courier New", monospace;
+		font-size: 9pt;
+		color: #aaa;
+	}
+	
+	</STYLE>
+
+<META name=GENERATOR content="MSHTML 8.00.7600.16588"></HEAD>
+<BODY>
+<H1>SessionVar Help File</H1>
+<P class=NavLocal><SPAN class=wab>&nbsp;</SPAN><SPAN 
+class=here>Welcome</SPAN></P>
+<HR>
+
+<DIV class=Properties>
+<H2>Table of Contents</H2>
+<P>
+<BLOCKQUOTE>
+  <DIV><A href="#SessionVar.Expand"><B>SessionVar.Expand</B></A> <BR><A 
+  href="#SessionVar.Get"><B>SessionVar.Get</B></A> <BR><A 
+  href="#SessionVar.Remove"><B>SessionVar.Remove</B></A> <BR><A 
+  href="#SessionVar.Set"><B>SessionVar.Set</B></A> <BR><A 
+  href="#SessionVar.GetAll"><B>SessionVar.GetAll</B></A><BR><BR><A 
+  href="#SessionVariables"><B>SessionVariables</B></A> </DIV>
+  <DIV><BR>&nbsp;</DIV></BLOCKQUOTE>
+<P></P></DIV>
+<H1><A name=SessionVar.Expand>SessionVar.Expand</A></H1><BR>
+<DIV class=Declaration>
+<DIV align=left>
+<TABLE style="BORDER-SPACING: 0px; x-cell-content-align: Top" cellSpacing=0 
+x-use-null-cells>
+  <COLGROUP>
+  <COL>
+  <COL>
+  <TBODY>
+  <TR style="x-cell-content-align: top" vAlign=top>
+    <TD 
+    style="BORDER-BOTTOM-STYLE: none; BORDER-RIGHT-STYLE: none; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; BORDER-TOP-STYLE: none; BORDER-LEFT-STYLE: none">
+      <P><SPAN class=VarType>(string)&nbsp;</SPAN>SessionVar.Expand 
+    (&nbsp;</P></TD>
+    <TD 
+    style="BORDER-BOTTOM-STYLE: none; BORDER-RIGHT-STYLE: none; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; BORDER-TOP-STYLE: none">
+      <P><SPAN class=VarType>(string)&nbsp;</SPAN>Text 
+)</P></TD></TR></TBODY></TABLE></DIV></DIV>
+<H2 style="MARGIN-BOTTOM: 3pt">Description</H2>
+<P>
+<BLOCKQUOTE>Returns a string containing the contents of the given session 
+  variable.</BLOCKQUOTE>
+<P></P>
+<H2 class=H2Tight>Parameters</H2>
+<H3 class=ParameterHeading>Text</H3>
+<P class=ParameterBody><SPAN class=type>(string)&nbsp;</SPAN>The session 
+variable string you want to expand.</P><BR>
+<H2>Return</H2>
+<BLOCKQUOTE>
+  <P>This action returns a <SPAN class=type>(string)</SPAN> 
+value.<BR><BR></P></BLOCKQUOTE><BR>
+<HR>
+
+<H1><A name=SessionVar.Get>SessionVar.Get</A></H1><BR>
+<DIV class=Declaration>
+<DIV align=left>
+<TABLE style="BORDER-SPACING: 0px; x-cell-content-align: Top" cellSpacing=0 
+x-use-null-cells>
+  <COLGROUP>
+  <COL>
+  <COL>
+  <TBODY>
+  <TR style="x-cell-content-align: top" vAlign=top>
+    <TD 
+    style="BORDER-BOTTOM-STYLE: none; BORDER-RIGHT-STYLE: none; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; BORDER-TOP-STYLE: none; BORDER-LEFT-STYLE: none">
+      <P><SPAN class=VarType>(string)&nbsp;</SPAN>SessionVar.Get (&nbsp;</P></TD>
+    <TD 
+    style="BORDER-BOTTOM-STYLE: none; BORDER-RIGHT-STYLE: none; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; BORDER-TOP-STYLE: none">
+      <P><SPAN class=VarType>(string)&nbsp;</SPAN>VariableName 
+  )</P></TD></TR></TBODY></TABLE></DIV></DIV>
+<H2 style="MARGIN-BOTTOM: 3pt">Description</H2>
+<P>
+<BLOCKQUOTE>Returns the unexpanded contents of a session variable.</BLOCKQUOTE>
+<P></P>
+<H2 class=H2Tight>Parameters</H2>
+<H3 class=ParameterHeading>VariableName</H3>
+<P class=ParameterBody><SPAN class=type>(string)&nbsp;</SPAN>The name of the 
+session variable whose contents you want.</P><BR>
+<H2>Return</H2>
+<BLOCKQUOTE>
+  <P>This action returns a <SPAN class=type>(string)</SPAN> 
+value.<BR><BR></P></BLOCKQUOTE><BR>
+<HR>
+
+<H1><A name=SessionVar.Remove>SessionVar.Remove</A></H1><BR>
+<DIV class=Declaration>
+<DIV align=left>
+<TABLE style="BORDER-SPACING: 0px; x-cell-content-align: Top" cellSpacing=0 
+x-use-null-cells>
+  <COLGROUP>
+  <COL>
+  <COL>
+  <TBODY>
+  <TR style="x-cell-content-align: top" vAlign=top>
+    <TD 
+    style="BORDER-BOTTOM-STYLE: none; BORDER-RIGHT-STYLE: none; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; BORDER-TOP-STYLE: none; BORDER-LEFT-STYLE: none">
+      <P>SessionVar.Remove (&nbsp;</P></TD>
+    <TD 
+    style="BORDER-BOTTOM-STYLE: none; BORDER-RIGHT-STYLE: none; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; BORDER-TOP-STYLE: none">
+      <P><SPAN class=VarType>(string)&nbsp;</SPAN>VariableName 
+  )</P></TD></TR></TBODY></TABLE></DIV></DIV>
+<H2 style="MARGIN-BOTTOM: 3pt">Description</H2>
+<P>
+<BLOCKQUOTE>Removes the given session variable from the session variable 
+  manager at runtime.</BLOCKQUOTE>
+<P></P>
+<H2 class=H2Tight>Parameters</H2>
+<H3 class=ParameterHeading>VariableName</H3>
+<P class=ParameterBody><SPAN class=type>(string)&nbsp;</SPAN>The name of the 
+session variable you want to remove (undefine).</P><BR>
+<H2>Return</H2>
+<BLOCKQUOTE>
+  <P>This action dose not return any value.<BR><BR></P></BLOCKQUOTE><BR>
+<HR>
+
+<H1><A name=SessionVar.Set>SessionVar.Set</A></H1><BR>
+<DIV class=Declaration>
+<DIV align=left>
+<TABLE style="BORDER-SPACING: 0px; x-cell-content-align: Top" cellSpacing=0 
+x-use-null-cells>
+  <COLGROUP>
+  <COL>
+  <COL>
+  <TBODY>
+  <TR style="x-cell-content-align: top" vAlign=top>
+    <TD 
+    style="BORDER-BOTTOM-STYLE: none; BORDER-RIGHT-STYLE: none; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; BORDER-TOP-STYLE: none; BORDER-LEFT-STYLE: none">
+      <P>SessionVar.Set (&nbsp;</P></TD>
+    <TD 
+    style="BORDER-BOTTOM-STYLE: none; BORDER-RIGHT-STYLE: none; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; BORDER-TOP-STYLE: none">
+      <P><SPAN class=VarType>(string)&nbsp;</SPAN>VariableName, </P>
+      <P><SPAN class=VarType>(string)&nbsp;</SPAN>Value 
+)</P></TD></TR></TBODY></TABLE></DIV></DIV>
+<H2 style="MARGIN-BOTTOM: 3pt">Description</H2>
+<P>
+<BLOCKQUOTE>Sets the given session variable to the specified value.</BLOCKQUOTE>
+<P></P>
+<H2 class=H2Tight>Parameters</H2>
+<H3 class=ParameterHeading>VariableName</H3>
+<P class=ParameterBody><SPAN class=type>(string)&nbsp;</SPAN>The name of the 
+session variable whose value you want to set.</P>
+<H3 class=ParameterHeading>Value</H3>
+<P class=ParameterBody><SPAN class=type>(string)&nbsp;</SPAN>The value you want 
+to set the session variable to.</P><BR>
+<H2>Return</H2>
+<BLOCKQUOTE>
+  <P>This action dose not return any value.<BR><BR></P></BLOCKQUOTE><BR>
+<HR>
+
+<H1><A name=SessionVar.GetAll>SessionVar.GetAll</A></H1><BR>
+<DIV class=Declaration>
+<DIV align=left>
+<TABLE style="BORDER-SPACING: 0px; x-cell-content-align: Top" cellSpacing=0 
+x-use-null-cells>
+  <COLGROUP>
+  <COL>
+  <COL>
+  <TBODY>
+  <TR style="x-cell-content-align: top" vAlign=top>
+    <TD 
+    style="BORDER-BOTTOM-STYLE: none; BORDER-RIGHT-STYLE: none; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; BORDER-TOP-STYLE: none; BORDER-LEFT-STYLE: none">
+      <P><SPAN class=VarType>(table)&nbsp;</SPAN>SessionVar.GetAll ()</P></TD>
+    <TD 
+    style="BORDER-BOTTOM-STYLE: none; BORDER-RIGHT-STYLE: none; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; BORDER-TOP-STYLE: none"></TD></TR></TBODY></TABLE></DIV></DIV>
+<H2 style="MARGIN-BOTTOM: 3pt">Description</H2>
+<P>
+<BLOCKQUOTE>Returns all contents of a session variable.</BLOCKQUOTE>
+<P></P>
+<H2 class=H2Tight>Parameters</H2>
+<H3 class=ParameterHeading>None</H3><BR>
+<H2>Return</H2>
+<BLOCKQUOTE>
+  <P>This action returns a <SPAN class=type>(table)</SPAN> 
+value.<BR><BR></P></BLOCKQUOTE><BR>
+<HR>
+
+<H1><A name=SessionVariables>Session Variables</A></H1>
+<DIV>&nbsp;</DIV>
+<DIV><BR>Session variables are special types of variables that are expanded at 
+runtime when they are used. When they are used on screens, their values are 
+automatically expanded for you, however if a session variable is used in an 
+action script, it must be manually expanded using the SessionVar.Expand 
+action.</DIV>
+<DIV>&nbsp;</DIV>
+<DIV>While there are predefined session variables available to use, you can also 
+create custom session variables at design time and run time. At design time, 
+they can be defined on the Session Variables tab of the Project Settings dialog. 
+At run time, you can create and manipulate session variables using the available 
+SessionVar actions. </DIV>
+<DIV>&nbsp;</DIV>
+<DIV>&nbsp;</DIV>
+<DIV>The following pre-defined session variables are available in this 
+plugin:</DIV>
+<DIV>&nbsp;</DIV>
+<DIV>&nbsp;</DIV>
+<DIV><STRONG>%ApplicationDataFolder%</STRONG><BR>The path to the per-user 
+Application Data folder on the user's system. This folder serves as a common 
+repository for application-specific data. Typically, this path is something like 
+"C:\Documents and Settings\YourName\Application Data." On Windows Vista or 
+later, it would return something like "C:\Users\YourName\AppData\Roaming."</DIV>
+<DIV>&nbsp;</DIV>
+<DIV><STRONG>%ApplicationDataFolderCommon%</STRONG><BR>The path to the all-user 
+Application Data folder on the user's system. This folder servers as a common 
+repository for application-specific data. Typically this is something like 
+"C:\Documents and Settings\All Users\Application Data." On Windows Vista or 
+later, this returns "C:\ProgramData."</DIV>
+<DIV>&nbsp;</DIV>
+<DIV><STRONG>%CommonDocumentsFolder%</STRONG><BR>The path to the documents 
+folder common to all users. Usually this is something like "C:\Documents and 
+Settings\All Users\Documents."</DIV>
+<DIV>&nbsp;</DIV>
+<DIV><STRONG>%CommonFilesFolder%</STRONG><BR>The user's Common Files folder. 
+Typically, this is something like: C:\Program Files\Common Files.</DIV>
+<DIV>&nbsp;</DIV>
+<DIV><STRONG>%DesktopFolder%</STRONG><BR>The path to the user's Desktop folder. 
+On Windows NT/2000/XP/Vista or later, this is the path from the per-user 
+profile.</DIV>
+<DIV>&nbsp;</DIV>
+<DIV><STRONG>%DesktopFolderCommon%</STRONG><BR>The path to the user's Desktop 
+folder. On Windows NT/2000/XP,Vista or later this is the path from the All Users 
+profile. On a non-Windows NT system, this will simply be the path to the user's 
+Desktop folder (the same as _DesktopFolder).</DIV>
+<DIV>&nbsp;</DIV>
+<DIV><STRONG>%FontsFolder%</STRONG><BR>The path to the user’s font directory 
+(e.g. "C:\Windows\Fonts").</DIV>
+<DIV>&nbsp;</DIV>
+<DIV><STRONG>%MyMusicFolder%</STRONG><BR>The path to the user's My Music folder. 
+For example "C:\Documents and Settings\User\My Documents\My Music."</DIV>
+<DIV>&nbsp;</DIV>
+<DIV><STRONG>%MyMusicFolderCommon%</STRONG><BR>The path to the All Users profile 
+My Music folder, for example "C:\Documents and Settings\All Users\Documents\My 
+Music." Only available on Windows XP/Vista or later.</DIV>
+<DIV>&nbsp;</DIV>
+<DIV><STRONG>%MyPicturesFolder%</STRONG><BR>The path to the user's My Pictures 
+folder. For example "C:\Documents and Settings\username\My Documents\My 
+Pictures." Only available on Windows 98 SE or later with minimum IE 5.0 
+installed.</DIV>
+<DIV>&nbsp;</DIV>
+<DIV><STRONG>%MyPicturesFolderCommon%</STRONG><BR>The path to the All User 
+profile My Pictures folder, for example "C:\Documents and Settings\All 
+Users\Documents\My Pictures." Only available on Windows XP/Vista or later.</DIV>
+<DIV>&nbsp;</DIV>
+<DIV><STRONG>%MyVideosFolder%</STRONG><BR>The path to the user's My Videos 
+folder. For example "C:\Documents and Settings\username\My Documents\My Videos." 
+Only available on Windows XP/Vista or later.</DIV>
+<DIV>&nbsp;</DIV>
+<DIV><STRONG>%MyVideosFolderCommon%</STRONG><BR>The path to the All User profile 
+My Videos folder. For example "C:\Documents and Settings\All Users\Documents\My 
+Videos." Only available on Windows XP/Vista or later.</DIV>
+<DIV>&nbsp;</DIV>
+<DIV><STRONG>%ProgramFilesFolder%</STRONG><BR>The user's Program Files folder 
+(typically, this is something like "C:\Program Files").</DIV>
+<DIV>&nbsp;</DIV>
+<DIV><STRONG>%SourceFolder%</STRONG><BR>The full path to the folder that the 
+installation executable was run from (e.g. "C:\Downloads" or "D:\").</DIV>
+<DIV>&nbsp;</DIV>
+<DIV><STRONG>%StartFolder%</STRONG><BR>The path to the user's Start menu folder. 
+On Windows NT/2000/XP/Vista or later, this is the path from the per-user 
+profile.</DIV>
+<DIV>&nbsp;</DIV>
+<DIV><STRONG>%StartFolderCommon%<BR></STRONG>The path to the user's Start menu 
+folder. On Windows NT/2000/XP/Vista or later, this is the path from the All 
+Users profile. On a non-Windows NT system, this will simply be the path to the 
+user's Start menu folder (the same as %StartFolder%).</DIV>
+<DIV>&nbsp;</DIV>
+<DIV><STRONG>%StartProgramsFolder%<BR></STRONG>The path to the Programs folder 
+in the user's Start menu. On Windows NT/2000/XP/Vista or later, this is the path 
+from the per-user profile.</DIV>
+<DIV>&nbsp;</DIV>
+<DIV><STRONG>%StartProgramsFolderCommon%</STRONG><BR>The path to the Programs 
+folder in the user's Start menu. On Windows NT/2000/XP/Vista or later, this is 
+the path from the All Users profile. On a non-Windows NT system, this will 
+simply be the path to the Programs folder in the user's Start menu (the same as 
+%StartProgramsFolder%).</DIV>
+<DIV>&nbsp;</DIV>
+<DIV><STRONG>%StartupFolder%</STRONG><BR>The path to the user's Startup folder. 
+On Windows NT/2000/XP/Vista or later, this is the path from the per-user 
+profile.</DIV>
+<DIV>&nbsp;</DIV>
+<DIV><STRONG>%StartupFolderCommon%</STRONG><BR>The path to the user's Startup 
+folder. On Windows NT/2000/XP/Vista or later, this is the path from the All 
+Users profile. On a non-Windows NT system, this will be the path to the user's 
+Startup folder (the same as %StartupFolder%).</DIV>
+<DIV>&nbsp;</DIV>
+<DIV><STRONG>%SystemFolder%</STRONG><BR>The path to the user’s Windows System 
+folder (e.g. "C:\Windows\System" on non-NT systems, and "C:\Windows\system32" on 
+NT-based OS's).</DIV>
+<DIV>&nbsp;</DIV>
+<DIV><STRONG>%TempFolder%<BR></STRONG>The path to the user's Temp folder.</DIV>
+<DIV>&nbsp;</DIV>
+<DIV><STRONG>%TempLaunchFolder%</STRONG><BR>The path to the temporary directory 
+where Setup Factory extracts the files it will need for the installation. (For 
+example, this is the directory where Primer files are extracted to.) During the 
+uninstall, this variable contains the path to the uninstall files folder. This 
+is the folder that the uninstall configuration file is located.</DIV>
+<DIV>&nbsp;</DIV>
+<DIV>Usually this directory will be the user's temporary directory, unless the 
+user overrides the temporary directory with the /T command line option.</DIV>
+<DIV>&nbsp;</DIV>
+<DIV><STRONG>%WindowsFolder%</STRONG><BR>The path to the user’s Windows folder 
+(e.g. "C:\Windows").</DIV>
+<DIV><BR><BR>
+<HR>
+</DIV>
+<H2>
+<P align=center>Made with Action Plugin Compiler</P></H2></BODY></HTML>

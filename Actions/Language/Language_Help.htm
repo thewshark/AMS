@@ -1,0 +1,334 @@
+<!doctype HTML public "-//W3C//DTD HTML 4.0 Frameset//EN">
+
+<html>
+<head>
+<title>Language Action Plugin Help</title>
+
+<meta http-equiv=content-type content="text/html; charset=windows-1252">
+
+<style>
+
+/* ELEMENTS */
+
+body {
+  font-family: Verdana, sans-serif;
+  font-size: 8pt;
+  background-color: #ffffff;
+}
+
+hr {
+  text-align: center;
+  color: #f0f0f0;
+  width: 100%;
+  height: 6pt;
+
+  margin-top: 0pt;
+  margin-bottom: -3pt;
+
+  border: none;
+}
+
+A:link, A:active, A:visited {
+  color: #0000ff;
+  text-decoration: none;
+}
+
+A:hover {
+  color: #0000ff;
+  text-decoration: underline;
+}
+
+h1 {
+  font-family: Verdana;
+  font-weight: bold;
+  font-size: 18.0pt;
+  white-space: nowrap;
+  color: #fff;
+  background-color: #699BEF;
+
+  padding: 4pt 3pt;
+  padding: 5px 4px;
+
+  margin-top: 0pt;
+  margin-bottom: 0pt;
+
+  border-right: 1px solid #333;
+  border-left: 1px solid #699BEF;
+  border-bottom: solid black 1px;
+}
+
+h2 {
+  font-family: Arial, sans-serif;
+  font-size: 12.0pt;
+  letter-spacing: .2ex;
+  color: #000;
+
+  margin-left: 0pt;
+  margin-right: 0pt;
+  margin-top: 18pt;
+  margin-bottom: 9pt;
+}
+
+h3 {
+  font-family: Arial, sans-serif;
+  font-size: 10pt;
+  font-weight: bold;
+  font-style: normal;
+  color: black;
+  letter-spacing: 0px;
+
+  margin-left: 0pt;
+  margin-right: 0pt;
+  margin-top: 18pt;
+  margin-bottom: 3pt;
+}
+
+p {
+  font-family: Verdana;
+  font-size: 8.0pt;
+  line-height: 12.0pt;
+
+  margin-left: 0pt;
+  margin-right: 0pt;
+  margin-top: 0pt;
+  margin-bottom: 9pt;
+}
+
+/* CLASSES */
+
+div.Actions h3, div.Events h3 {
+  font-family: Arial, sans-serif;
+  font-size: 10pt;
+  font-weight: bold;
+  font-style: italic;
+  color: #3C77B3;
+  letter-spacing: 0px;
+
+  margin-left: 12pt;
+  margin-right: 0pt;
+  margin-top: 18pt;
+  margin-bottom: 3pt;
+}
+
+div.Actions h4, div.info h3 {
+  font-family: Verdana;
+  font-size: 8.0pt;
+  line-height: 12.0pt;
+  font-style: bold;
+
+  margin-top: 9pt;
+  margin-bottom: 0pt;
+  margin-left: 28pt;
+  margin-right: 0pt;
+}
+
+div.Actions p, div.Events p, div.ErrorCodes p {
+  font-family: Verdana;
+  font-size: 8.0pt;
+  line-height: 12.0pt;
+
+  margin-top: 0pt;
+  margin-bottom: 9pt;
+  margin-left: 12pt;
+  margin-right: 0pt;
+}
+
+p.NavLocal {
+  white-space: nowrap;
+  text-indent: -4px;
+  font-family: Verdana, Arial, sans-serif;
+  font-weight: bold;
+  font-style: normal;
+  font-size: 13px;
+  background-color: #e4e4e4;
+
+  margin-top: 0px;
+  margin-bottom: 12pt;
+
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 0px;
+  padding-right: 0px;
+
+  border-bottom: 1px solid #e4e4e4;
+}
+
+p.Note {
+    font-family: Verdana;
+    font-size: 8.0pt;
+    line-height: 12.0pt;
+    color: #000000;
+    background-color: #ffffe8;
+
+    margin-top: 0pt;
+    margin-bottom: 9pt;
+    margin-left: 0pt;
+    margin-right: 5%;
+
+    padding-left: 2pt;
+    padding-right: 2pt;
+    padding-top: 1pt;
+    padding-bottom: 2pt;
+}
+
+p.Tip {
+    font-family: Verdana;
+    font-size: 8.0pt;
+    line-height: 12.0pt;
+    color: #000000;
+    background-color: #EAF4E8;
+
+    margin-top: 0pt;
+    margin-bottom: 9pt;
+    margin-left: 0pt;
+    margin-right: 5%;
+
+    padding-left: 2pt;
+    padding-right: 2pt;
+    padding-top: 1pt;
+    padding-bottom: 2pt;
+}
+
+div.Actions p.Note, div.Events p.Note,
+div.Actions p.Tip, div.Events p.Tip {
+    margin-left: 28pt;
+}
+
+pre.code {
+  white-space: pre;
+  font-family: Courier New, Courier, Arial, sans-serif;
+  font-size: 10pt;
+  font-weight: normal;
+  font-style: normal;
+  letter-spacing: normal;
+  color: #000;
+  background-color: #f9f9f9;
+
+  margin-top: 3pt;
+  margin-bottom: 9pt;
+  margin-left: 0pt;
+  margin-left: 0pt;
+
+  padding: 10px;
+
+  border: 1px dotted #ccc;
+}
+
+div.Actions pre.code, div.Events pre.code {
+  margin-left: 28pt;
+}
+
+div.Actions h2 {
+  margin-bottom: -6pt;
+}
+
+div.actions p, div.info p, div.ErrorCodes p {
+  margin-left: 28pt;
+}
+
+div.actions p.indent {
+  margin-left: 38pt;
+}
+
+span.here { /* blue tab effect in navbar (NavLocal) */
+  font-weight: bold;
+  color: #fff;
+  background-color: #699BEF;
+
+  margin: 0px;
+
+  padding: 4px 8px;
+
+  border-top: 1px solid #699BEF;
+  border-bottom: 1px solid #333;
+  border-left: none;
+  border-right: 1px solid #333;
+}
+
+span.type {
+    color: #aaa;
+}
+</style>
+</head>
+<body>
+
+<h1>Language Actions Plugin</h1>
+
+<p class="NavLocal"><span class=wab>&nbsp;</span><span class="here">Online Help</span></p>
+
+<h2>Description</h2>
+
+<p>
+This is a small action plugin that allows you to determine the original install language of the Windows operating system, and the display language selected by the current user.</p>
+<p>The action System.GetDefaultLangID() returns the primary and secondary language as adjusted in the &quot;Current language for non-Unicode programs&quot; setting, found in the Control Panel, under Region and Language &gt; Administrative.</p>
+<p>This plugin complements the former action, adding two functions to check for the original language of Windows when it was installed (the &quot;install language&quot;), and the current dsiplay language, if a language pack was applied and is selected for the current user. For example, you may have purchased an English version of Windows, and then you installed the language pack for German. In this case, GetInstallLanguage() will return 9 (English) and GetDisplayLanguage() will return 7 (German). It is up to you to decide which of the three available language codes should be used to determine which language to use in your application. </p>
+<div class="Actions">
+<h2>Actions</h2>
+
+<h3>Language.GetInstallLanguage();</h3>
+<h4>Description:</h4>
+<p>Returns a table containing the primary and secondary language ID code for the install language of the local system.</p>
+<h4>Returns:</h4>
+<p><span class="type">(table)</span> A table containing the primary and secondary language ID code as documented in the main help file, indexed by "Primary" and "Secondary." If the language information cannot be determined or an error occurs, nil is returned. You can use Application.GetLastError to determine whether this action failed, and why.</p>
+<h4>Example:</h4>
+<pre class="code">
+-- determine the install language
+tLang = Language.GetInstallLanguage();
+error = Application.GetLastError();
+if (error ~= 0) then
+	Dialog.Message("Error", _tblErrorMessages[error], MB_OK, MB_ICONEXCLAMATION);
+else
+	Label.SetText("Lang03", "GetInstallLanguage() Primary: "..tLang.Primary..", Secondary: "..tLang.Secondary);
+end
+</pre>
+
+<h3>Language.GetDisplayLanguage();</h3>
+<h4>Description:</h4>
+<p>Returns a table containing the primary and secondary language ID code for the display language of the current user.</p>
+<h4>Returns:</h4>
+<p><span class="type">(table)</span>A table containing the primary and secondary language ID code as documented in the main help file, indexed by "Primary" and "Secondary." If the language information cannot be determined or an error occurs, nil is returned. You can use Application.GetLastError to determine whether this action failed, and why.</p>
+<h4>Example:</h4>
+<pre class="code">
+-- GetDisplayLanguage (this is the UI language, as set with a language pack)
+tLang = Language.GetDisplayLanguage();
+error = Application.GetLastError();
+if (error ~= 0) then
+	Dialog.Message("Error", _tblErrorMessages[error], MB_OK, MB_ICONEXCLAMATION);
+else
+	Label.SetText("Lang04", "GetDisplayLanguage() Primary: "..tLang.Primary..", Secondary: "..tLang.Secondary);
+end
+</pre>
+</div>
+<!-- /Actions -->
+
+<div class="History">
+<h2>Change Log</h2>
+<h3>2.0.1.0</h3>
+<ul>
+    <li>First public release </li>
+</ul>
+<h3>&nbsp;</h3>
+</div>
+<!-- /History -->
+
+<div class="Info">
+<h2>Additional Information</h2>
+
+<h3>Author:</h3>
+<p>Ulrich Peters <br>
+<a href="mailto:upeters@mindquake.com.br">upeters@mindquake.com.br</a></p>
+
+<h3>Copyright:</h3>
+<p>Plugin is copyright &copy; 2011 MindQuake Servi&ccedil;os de Inform&aacute;tica Ltda.</p>
+
+<h3>Website:</h3>
+<p><a href="http://www.mindquake.com.br">http://www.mindquake.com.br</a></p>
+
+</div> <!-- /info -->
+<hr>
+
+<p align="center">Copyright &copy; 2011 MindQuake Servi&ccedil;os de Inform&aacute;tica Ltda.<br>
+Todos os direitos reservados.</p>
+
+</body>
+</html>

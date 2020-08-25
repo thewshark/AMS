@@ -1,0 +1,174 @@
+<ActionTemplates>
+   <Action>
+      <Name>AudioCapture.GetQuality</Name>
+      <Description>Gets audio capture quality.</Description>
+      <ReturnValueType>string</ReturnValueType>
+      <Arguments></Arguments>
+   </Action>
+   <Action>
+      <Name>AudioCapture.GetSettings</Name>
+      <Description>Gets audio capture settings. [channels = 1 (mono), 2 (stereo); samplesPerSec = 8000 (hz), 11025 (hz), 22050 (hz), 44100 (hz); bitsPerSample = 8, 16;]</Description>
+      <ReturnValueType>table</ReturnValueType>
+      <Arguments></Arguments>
+   </Action>
+   <Action>
+      <Name>AudioCapture.GetPosition</Name>
+      <Description>Gets audio capture time position in milliseconds.</Description>
+      <ReturnValueType>number</ReturnValueType>
+      <Arguments></Arguments>
+   </Action>
+   <Action>
+      <Name>AudioCapture.GetLength</Name>
+      <Description>Gets audio capture length in milliseconds.</Description>
+      <ReturnValueType>number</ReturnValueType>
+      <Arguments></Arguments>
+   </Action>
+   <Action>
+      <Name>AudioCapture.GetSize</Name>
+      <Description>Gets audio capture size in bytes.</Description>
+      <ReturnValueType>number</ReturnValueType>
+      <Arguments></Arguments>
+   </Action>
+   <Action>
+      <Name>AudioCapture.GetStatus</Name>
+      <Description>Gets audio capture mode status.</Description>
+      <ReturnValueType>string</ReturnValueType>
+      <Arguments></Arguments>
+   </Action>
+   <Action>
+      <Name>AudioCapture.SetQuality</Name>
+      <Description>Sets audio capture quality.</Description>
+      <ReturnValueType></ReturnValueType>
+      <Arguments>
+        <Arg>
+          <Name>Quality</Name>
+          <Description>Audio capture quality.</Description>
+          <Type>number</Type>
+          <Default>1</Default>
+          <Required>0</Required>
+          <EasyMode>
+            <Default>AudioCaptureQuality.Low</Default>
+            <DataType>combo</DataType>
+            <Constraints>AudioCaptureQuality.Low,AudioCaptureQuality.Medium,AudioCaptureQuality.High</Constraints>
+          </EasyMode>
+        </Arg>
+      </Arguments>
+   </Action>
+   <Action>
+      <Name>AudioCapture.SetSettings</Name>
+      <Description>Sets audio capture settings. [channels = 1 (mono), 2 (stereo); samplesPerSec = 8000 (hz), 11025 (hz), 22050 (hz), 44100 (hz); bitsPerSample = 8, 16;]</Description>
+      <ReturnValueType></ReturnValueType>
+      <Arguments>
+        <Arg>
+          <Name>Channels</Name>
+          <Description>Audio capture channels.</Description>
+          <Type>number</Type>
+          <Default>1</Default>
+          <Required>0</Required>
+          <EasyMode>
+            <Default>1</Default>
+            <DataType>combo</DataType>
+            <Constraints>1,2</Constraints>
+          </EasyMode>
+        </Arg>
+        <Arg>
+          <Name>SamplesPerSec</Name>
+          <Description>Audio capture samples per second.</Description>
+          <Type>number</Type>
+          <Default>2</Default>
+          <Required>0</Required>
+          <EasyMode>
+            <Default>2</Default>
+            <DataType>combo</DataType>
+            <Constraints>8000,11025,22050,44100</Constraints>
+          </EasyMode>
+        </Arg>
+        <Arg>
+          <Name>BitsPerSample</Name>
+          <Description>Audio capture bits per sample.</Description>
+          <Type>number</Type>
+          <Default>1</Default>
+          <Required>0</Required>
+          <EasyMode>
+            <Default>1</Default>
+            <DataType>combo</DataType>
+            <Constraints>8,16</Constraints>
+          </EasyMode>
+        </Arg>
+      </Arguments>
+   </Action>
+   <Action>
+      <Name>AudioCapture.SetPosition</Name>
+      <Description>Sets audio capture time position in milliseconds.</Description>
+      <ReturnValueType></ReturnValueType>
+      <Arguments>
+        <Arg>
+          <Name>Position</Name>
+          <Description>Sets audio capture time position in milliseconds.</Description>
+          <Type>number</Type>
+          <Default>0</Default>
+          <Required>0</Required>
+          <EasyMode>
+            <Default>0</Default>
+            <DataType>number</DataType>
+            <Constraints>0,*</Constraints>
+          </EasyMode>
+        </Arg>
+      </Arguments>
+   </Action>
+   <Action>
+      <Name>AudioCapture.CaptureStart</Name>
+      <Description>Start audio capture.</Description>
+      <ReturnValueType></ReturnValueType>
+      <Arguments></Arguments>
+   </Action>
+   <Action>
+      <Name>AudioCapture.CaptureStop</Name>
+      <Description>Stop audio capture.</Description>
+      <ReturnValueType></ReturnValueType>
+      <Arguments></Arguments>
+   </Action>
+   <Action>
+      <Name>AudioCapture.PlayStart</Name>
+      <Description>Start playing captured audio.</Description>
+      <ReturnValueType></ReturnValueType>
+      <Arguments></Arguments>
+   </Action>
+   <Action>
+      <Name>AudioCapture.PlayStop</Name>
+      <Description>Stop playing captured audio.</Description>
+      <ReturnValueType></ReturnValueType>
+      <Arguments></Arguments>
+   </Action>
+   <Action>
+      <Name>AudioCapture.Save</Name>
+      <Description>Save captured audio.</Description>
+      <ReturnValueType></ReturnValueType>
+      <Arguments>
+        <Arg>
+          <Name>FileName</Name>
+          <Description>Filename for the captured audio file.</Description>
+          <Type>string</Type>
+          <Default>"AudioCapture.wav"</Default>
+          <Required>0</Required>
+          <EasyMode>
+            <Default>"AudioCapture.wav"</Default>
+            <DataType>string</DataType>
+            <Constraints>0,*</Constraints>
+          </EasyMode>
+        </Arg>
+      </Arguments>
+   </Action>
+   <Action>
+      <Name>AudioCapture.Clear</Name>
+      <Description>Clear captured audio.</Description>
+      <ReturnValueType></ReturnValueType>
+      <Arguments></Arguments>
+   </Action>
+   <Action>
+      <Name>AudioCapture.GetError</Name>
+      <Description>Gets the error if any occur.</Description>
+      <ReturnValueType>string</ReturnValueType>
+      <Arguments></Arguments>
+   </Action>
+</ActionTemplates>

@@ -1,0 +1,1442 @@
+<!doctype HTML public "-//W3C//DTD HTML 4.0 Frameset//EN">
+
+<html>
+<head>
+<title>SQLite3 Actions Plugin Help</title>
+
+<meta http-equiv=content-type content="text/html; charset=windows-1252">
+
+<style>
+
+/* ELEMENTS */
+
+body {
+  font-family: Verdana, sans-serif;
+  font-size: 8pt;
+  background-color: #ffffff;
+}
+
+hr {
+  text-align: center;
+  color: #f0f0f0;
+  width: 100%;
+  height: 6pt;
+
+  margin-top: 0pt;
+  margin-bottom: -3pt;
+
+  border: none;
+}
+
+A:link, A:active, A:visited {
+  color: #0000ff;
+  text-decoration: none;
+}
+
+A:hover {
+  color: #0000ff;
+  text-decoration: underline;
+}
+
+h1 {
+  font-family: Verdana;
+  font-weight: bold;
+  font-size: 18.0pt;
+  white-space: nowrap;
+  color: #fff;
+  background-color: #699BEF;
+
+  padding: 4pt 3pt;
+  padding: 5px 4px;
+
+  margin-top: 0pt;
+  margin-bottom: 0pt;
+
+  border-right: 1px solid #333;
+  border-left: 1px solid #699BEF;
+  border-bottom: solid black 1px;
+}
+
+h2 {
+  font-family: Arial, sans-serif;
+  font-size: 12.0pt;
+  letter-spacing: .2ex;
+  color: #000;
+
+  margin-left: 0pt;
+  margin-right: 0pt;
+  margin-top: 18pt;
+  margin-bottom: 9pt;
+}
+
+h3 {
+  font-family: Arial, sans-serif;
+  font-size: 10pt;
+  font-weight: bold;
+  font-style: normal;
+  color: black;
+  letter-spacing: 0px;
+
+  margin-left: 0pt;
+  margin-right: 0pt;
+  margin-top: 18pt;
+  margin-bottom: 3pt;
+}
+
+p {
+  font-family: Verdana;
+  font-size: 8.0pt;
+  line-height: 12.0pt;
+
+  margin-left: 0pt;
+  margin-right: 0pt;
+  margin-top: 0pt;
+  margin-bottom: 9pt;
+}
+
+/* CLASSES */
+
+div.Actions h3, div.Events h3 {
+  font-family: Arial, sans-serif;
+  font-size: 10pt;
+  font-weight: bold;
+  font-style: italic;
+  color: #3C77B3;
+  letter-spacing: 0px;
+
+  margin-left: 12pt;
+  margin-right: 0pt;
+  margin-top: 18pt;
+  margin-bottom: 3pt;
+}
+
+div.Actions h4, div.info h3 {
+  font-family: Verdana;
+  font-size: 8.0pt;
+  line-height: 12.0pt;
+  font-weight: bold;
+
+  margin-top: 9pt;
+  margin-bottom: 0pt;
+  margin-left: 28pt;
+  margin-right: 0pt;
+}
+
+div.Actions p, div.Events p, div.ErrorCodes p {
+  font-family: Verdana;
+  font-size: 8.0pt;
+  line-height: 12.0pt;
+
+  margin-top: 0pt;
+  margin-bottom: 9pt;
+  margin-left: 12pt;
+  margin-right: 0pt;
+}
+
+div.ErrorCodes table {
+  font-family: Verdana, sans-serif;
+  font-size: 8.0pt;
+  line-height: 12.0pt;
+  margin: 0px 0px 9pt 28pt;
+  border-collapse: collapse;
+  border: none;
+}
+
+div.ErrorCodes table th,
+div.ErrorCodes table td {
+  border-bottom: 1px solid #ddd;
+  padding: 1ex;
+}
+
+div.ErrorCodes table th {
+  text-align: left;
+  padding-left: 0px;
+  padding-right: 2ex;
+}
+
+p.NavLocal {
+  white-space: nowrap;
+  text-indent: -4px;
+  font-family: Verdana, Arial, sans-serif;
+  font-weight: bold;
+  font-style: normal;
+  font-size: 13px;
+  background-color: #e4e4e4;
+
+  margin-top: 0px;
+  margin-bottom: 12pt;
+
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 0px;
+  padding-right: 0px;
+
+  border-bottom: 1px solid #e4e4e4;
+}
+
+p.Note {
+	font-family: Verdana;
+	font-size: 8.0pt;
+	line-height: 12.0pt;
+	color: #000000;
+	background-color: #ffffe8;
+
+	margin-top: 0pt;
+	margin-bottom: 9pt;
+	margin-left: 0pt;
+	margin-right: 5%;
+
+	padding-left: 2pt;
+	padding-right: 2pt;
+	padding-top: 1pt;
+	padding-bottom: 2pt;
+}
+
+p.Tip {
+	font-family: Verdana;
+	font-size: 8.0pt;
+	line-height: 12.0pt;
+	color: #000000;
+	background-color: #EAF4E8;
+
+	margin-top: 0pt;
+	margin-bottom: 9pt;
+	margin-left: 0pt;
+	margin-right: 5%;
+
+	padding-left: 2pt;
+	padding-right: 2pt;
+	padding-top: 1pt;
+	padding-bottom: 2pt;
+}
+
+div.Actions p.Note, div.Events p.Note,
+div.Actions p.Tip, div.Events p.Tip {
+	margin-left: 28pt;
+}
+
+div.CallbackParams p.Note,
+div.CallbackParams p.Tip {
+	margin-left: 38pt;
+}
+
+
+pre.code {
+  white-space: pre;
+  font-family: Courier New, Courier, Arial, sans-serif;
+  font-size: 10pt;
+  font-weight: normal;
+  font-style: normal;
+  letter-spacing: normal;
+  color: #000;
+  background-color: #f9f9f9;
+
+  margin-top: 3pt;
+  margin-bottom: 9pt;
+  margin-left: 0pt;
+  margin-left: 0pt;
+
+  padding: 10px;
+
+  border: 1px dotted #ccc;
+}
+
+div.Actions pre.code, div.Events pre.code {
+  margin-left: 28pt;
+}
+
+div.Actions h2 {
+  margin-bottom: -6pt;
+}
+
+div.actions p, div.info p, div.ErrorCodes p {
+  margin-left: 28pt;
+}
+
+div.actions p.indent {
+  margin-left: 38pt;
+}
+
+div.CallbackParams h5 {
+  font-family: Verdana;
+  font-size: 8.0pt;
+  line-height: 12.0pt;
+  font-weight: bold;
+
+  margin-top: 9pt;
+  margin-bottom: 0pt;
+  margin-left: 38pt;
+  margin-right: 0pt;
+}
+
+div.CallbackParams p {
+  font-family: Verdana;
+  font-size: 8.0pt;
+  line-height: 12.0pt;
+
+  margin-top: 0pt;
+  margin-bottom: 9pt;
+  margin-left: 38pt;
+  margin-right: 0pt;
+}
+
+div.history h2 + h3 {
+	margin-top: 3pt;
+}
+
+div.sidebar {
+  font-weight: normal;
+  font-style: normal;
+  letter-spacing: normal;
+  color: #000;
+  background-color: #e9e9e9;
+
+  margin-top: 18pt;
+  margin-bottom: 18pt;
+  margin-left: 28pt;
+  margin-right: 0pt;
+
+  padding: 10px;
+
+  border: 1px solid #999;
+}
+
+div.sidebar h1 {
+  font-family: Arial, sans-serif;
+  font-size: 10pt;
+  font-weight: bold;
+  font-style: normal;
+  color: black;
+  letter-spacing: 0px;
+  background: transparent;
+  border: none;
+  padding: 0px;
+}
+
+span.here { /* blue tab effect in navbar (NavLocal) */
+  font-weight: bold;
+  color: #fff;
+  background-color: #699BEF;
+
+  margin: 0px;
+
+  padding: 4px 8px;
+
+  border-top: 1px solid #699BEF;
+  border-bottom: 1px solid #333;
+  border-left: none;
+  border-right: 1px solid #333;
+}
+
+span.type {
+	color: #aaa;
+}
+
+.crypto {
+	background-color: #feff79;
+	padding: 2px 2px 2px 2px;
+	border-color: #ff9268;
+	border-style: solid;
+	border-width: 1px;
+	margin: -2px;
+
+}
+.style1 {
+	font-family: "Courier New", Courier, monospace;
+	font-size: 10pt;
+}
+.style3 {color: #FF0000}
+</style>
+</head>
+<body>
+
+<h1>SQLite3 Actions Plugin</h1>
+
+<p class="NavLocal"><span class=wab>&nbsp;</span><span class="here">Online Help</span></p>
+
+<h2>Description</h2>
+
+<p>SQLite3 is an action plugin that makes use of the <i>SQLite Embeddable SQL Database Engine</i> to add high-performance database functionality to your application. </p>
+
+<p class="note"><b>Note:</b> The SQLite database engine is <b>not</b> a
+client used to connect to a big database server. It <b>is</b>
+the server. The SQLite database engine reads and writes directly to
+and from database files on disk.</p>
+
+<p>Highlights of the SQLite Database Engine:</p>
+
+<ul>
+<li>Implements most of SQL92.
+    (<a target="_new" href="http://www.sqlite.org/omitted.html">Features not supported</a>)</li>
+<li>Each complete database (with multiple tables and indices) is
+    stored in a single disk file.</li>
+<li>Atomic commit and rollback protect data integrity.</li>
+<li>Database files can be freely shared between machines with
+    different byte orders.</li>
+<li>Supports databases up to 2 terabytes (2^41 bytes) in size.</li>
+<li><a target="_new" href="http://www.sqlite.org/speed.html">Two times faster</a> than PostgreSQL and
+    MySQL for many common operations.</li>
+<li>Self-contained: no external dependencies!</li>
+</ul>
+</p>
+
+<p>For more information on the SQLite database engine, see the SQLite website at <a target="_new" href="http://www.sqlite.org">www.sqlite.org</a>.</p>
+
+<h2>What's new?</h2>
+<p>If you have used the SQLite actions plugin provided with AutoPlay Media Studio in the past, you can see items which have changed or are new additions marked <span class="crypto">like this</span>. </p>
+
+<h2>Quick Start</h2>
+
+<p>Working with a SQLite database consists of three basic steps: opening a database, querying the database, and then closing the database once you're done with it.</p>
+
+<h3>Opening a database</h3>
+<p>The first step to working with a SQLite database is to open an existing database file (or create a new database file) using <b>SQLite3.Open()</b>:</p>
+
+<pre class="code">
+db = SQLite3.Open("sesame.db");
+</pre>
+
+<p>Note that SQLite3.Open returns a database handle, which is needed
+for most other SQLite actions. Each handle uniquely identifies one
+open database, so you can use multiple handles to interact with
+several databases at the same time.</p>
+
+<h3>Querying the database</h3>
+While you have a database open, you can use the <a target="_new" href="http://www.sqlite.org/lang.html">SQLite Query Language</a> to
+interact with the database.</p>
+
+<p>There are three basic methods you can use to perform a SQLite query on the database:</p>
+
+<ul><li>
+<p>Use the <b>SQLite3.Query()</b> action. This is the best method to use
+when executing query statements that don't return any results. For example:</p>
+
+<pre class="code">
+SQLite3.Query(db, "create table Users(userid integer primary key, LastName text, FirstName text, Age integer)");
+</pre>
+
+<p>If you need to process the query results, you can provide an optional callback function and it will be called
+once for every row in the result set. For example:</p>
+
+<pre class="code">
+function myfunc(db, nRow, nColumns, tbRowDataAssoc, tbRowDataArray, tbColumnNamesArray, tbColumnTypesArray, tbColumnTypesAssoc)
+    -- do something here
+end
+
+sql = "select * from users";
+SQLite3.Query(db, sql, myfunc);
+</pre>
+
+</li>
+<li>
+<p>Use the <b>SQLite3.QueryToTable()</b> action, which returns the results of the query in a table. For example:</p>
+
+<pre class="code">
+sql = "select * from users";
+tbResults = SQLite3.QueryToTable(db, sql);
+
+-- get the value in FirstName in row 1 of the result set
+first_name = tbResults.Data[1]["FirstName"];
+</pre>
+
+</li>
+<li>
+<p>Use the <b>SQLite3.Compile()</b> action to compile the query into a
+"virtual machine" so you can step through query one row at a time. For example, your would first compile a query like this:</p>
+
+<pre class="code">
+SQLite3.Compile(db, "select * from users");
+</pre>
+
+<p>Once you have the query compiled, you can repeatedly call <b>SQLite3.Step()</b> to process it:</p>
+
+<pre class="code">
+repeat
+    SQLite3.Step(db);
+    err = Application.GetLastError();
+until  err ~= SQLite3.ROW
+</pre>
+
+<p>At each step, you can retrieve the current row of data by using one of the "GetRow..." actions:</p>
+
+<pre class="code">
+tbRow = SQLite3.GetRowDataAssoc(db);
+first_name = tbRow["FirstName"];
+</pre>
+
+<p>Once you're done with a compiled query, you must call <b>SQLite3.Finalize()</b> to finalize it:
+
+<pre class="code">
+SQLite3.Finalize(db);
+</pre>
+</li>
+</ul>
+
+<div class="sidebar">
+<h1>Choosing Between the Three Query Methods</h1>
+<p><br>
+  SQLite3.QueryToTable() is the most straightforward method...it just performs
+the entire query immediately and returns the results as a Lua table. This is the
+easiest one to work with, however it doesn't allow you to abort the query at
+all, and (at least theoretically) needs more memory than the other two actions,
+since the entire results of the query are copied into a Lua table.</p>
+
+<p>SQLite3.Query() and SQLite3.Compile()/Step()/Finalize() are essentially two
+different ways of doing the same thing: performing a query that gives you the
+results one row at a time and that you can stop after any row. They both have
+the same effect, but allow you to achieve that effect in different ways.</p>
+
+<p>SQLite3.Query() is the best choice for simple queries where you aren't trying
+to get any results back, but are just performing some action on the database
+(e.g. creating a table). The reason it's the best choice is simply because it
+lets you get the job done with 1 action instead of 3.</p>
+
+<p>However, SQLite3.Query doesn't return any data unless you use a callback
+function.</p>
+
+<p>The other three actions (Compile, Step and Finalize) are provided as an
+alternative so you don't have to use a callback function. Instead, you "start" a
+query with SQLite3.Compile(), and then "step" through the results with SQLite3.Step().
+SQLite3.Step() actually perfoms another "step" of the query and puts the results
+into memory where the 5 result-getting actions (the "GetRow..." actions) can
+access them. When you're done getting results for this query, you "stop" it with
+SQLite3.Finalize().</p>
+
+<p>The decision of whether to use SQLite3.Query() or
+SQLite3.Compile()/Step()/Finalize() is really just personal preference.</p>
+
+</div> <!-- sidebar -->
+
+<h3>Closing the database</h3>
+<p>When you're done with a database, you should call <b>SQLite3.Close()</b> to close it.</p>
+
+<pre class="code">
+SQLite3.Close(db);
+</pre>
+
+<h3><span class="crypto">Database conversion</span></h3>
+<div class="sidebar">
+<h1>Converting an existing database from SQLite2 to SQLite3</h1>
+<p><br>
+  I you have an existing database created with SQLite 2.x and you desire to use it with the new SQLite3 engine, then you need to convert it first. This can be done easily with a couple of steps, as shown below.</p>
+<p>In the &quot;Plugins\Actions\SQLite3&quot; sub folder of your AutoPlay Media Studio installation folder (or &quot;Includes\Plugins\SQLite3&quot; if you are using Setup Factory 9), you will find two programs, named <strong>sqlite.exe</strong> and <strong>sqlite3.exe</strong>. These are the command line tools to work with SQLite databases directly.</p>
+<p>First, convert your SQLite2 database  to a SQL text file, where <span class="style1">database.db</span> is the name of the file you wish to convert: </p>
+<pre class="code">sqlite.exe <em>database.db</em> .dump > database.sql</pre>
+
+<p>Now, use the SQL dump file and create a new SQLite3 database from it, using this command line syntax:</p>
+<pre class="code">sqlite3.exe <em>newdatabase.db</em> &lt; database.sql</pre>
+<p>This will create a new database with the same contents as your previous version. You may notice that the new file is smaller - this is one of the many benefits of using the newer version of SQLite.</p>
+<p>Opening a SQLite2 database file in a text editor may look similar to this:</p>
+<p><img src="img/sqlimg1.png" width="859" height="213"> </p>
+<p>The same database after conversion to SQLite3 looks like this:</p>
+<p><img src="img/slqimg2.png" width="859" height="213"> </p>
+</div>
+
+<div class="Actions">
+<h2>Actions</h2>
+
+<p style="margin-top: 18pt; margin-left: 12pt;">
+<a href="#SQLite3.Close">SQLite3.Close</a><br/>
+<a href="#SQLite3.Compile">SQLite3.Compile</a><br/>
+<a href="#SQLite3.Finalize">SQLite3.Finalize</a><br/>
+<a href="#SQLite3.GetChanges">SQLite3.GetChanges</a><br/>
+<a href="#SQLite3.GetEncoding">SQLite3.GetEncoding</a><br/>
+<a href="#SQLite3.GetErrorString">SQLite3.GetErrorString</a><br/>
+<a href="#SQLite3.GetLastErrorString">SQLite3.GetLastErrorString</a><br/>
+<a href="#SQLite3.GetLastInsertRowID">SQLite3.GetLastInsertRowID</a><br/>
+<a href="#SQLite3.GetNullString">SQLite3.GetNullString</a><br/>
+<a href="#SQLite3.GetRowColumnNamesArray">SQLite3.GetRowColumnNamesArray</a><br/>
+<a href="#SQLite3.GetRowColumnTypesArray">SQLite3.GetRowColumnTypesArray</a><br/>
+<a href="#SQLite3.GetRowColumnTypesAssoc">SQLite3.GetRowColumnTypesAssoc</a><br/>
+<a href="#SQLite3.GetRowDataArray">SQLite3.GetRowDataArray</a><br/>
+<a href="#SQLite3.GetRowDataAssoc">SQLite3.GetRowDataAssoc</a><br/>
+<a href="#SQLite3.GetVersion">SQLite3.GetVersion</a><br/>
+<a href="#SQLite3.Interrupt">SQLite3.Interrupt</a><br/>
+<a href="#SQLite3.Open">SQLite3.Open</a><br/>
+<a href="#SQLite3.Query">SQLite3.Query</a><br/>
+<a href="#SQLite3.QueryToTable">SQLite3.QueryToTable</a><br/>
+<a href="#SQLite3.SetBusyTimeout">SQLite3.SetBusyTimeout</a><br/>
+<a href="#SQLite3.SetNullString">SQLite3.SetNullString</a><br/>
+<a href="#SQLite3.Step">SQLite3.Step</a><br/>
+</p>
+
+<h3><a name="SQLite3.Close">SQLite3.Close (database dbHandle);</a></h3>
+
+<h4>Description:</h4><p>Closes a SQLite database.</p>
+
+<p class="note"><b>Note:</b> This releases the database handle and reclaims any memory that the database was using.</p>
+
+<h4>dbHandle:</h4><p><span class="type">(database)</span> The handle to the database that you want to close.</p>
+
+<h4>Returns:</h4><p>Nothing.</p>
+
+<h4>Example:</h4><pre class="code">
+-- Close the database
+SQLite3.Close(db);
+</pre>
+
+
+<h3><a name="SQLite3.Compile">number SQLite3.Compile (database dbHandle, string Query);</a></h3>
+
+<h4>Description:</h4><p>Compiles a query so it can be stepped through one row at a time using SQLite3.Step.</p>
+
+<h4>dbHandle:</h4><p><span class="type">(database)</span> The handle to the database that you want to operate on.</p>
+
+<h4>Query:</h4><p><span class="type">(string)</span> The SQLite query string that you want to perform. See the <a target="_new" href="http://www.sqlite.org/lang.html">SQLite Query Language</a> for more information.</p>
+
+<h4>Returns:</h4><p><span class="type">(number)</span> The length of the query string that was processed.</p>
+
+<h4>Example:</h4><pre class="code">
+-- Compile a query in the database
+sql = "SELECT * FROM Users";
+nLen = SQLite3.Compile(db, sql);
+if nLen ~= len(sql) then
+    Debug.Print("Possible error: length of compiled query doesn't match original query length");
+end
+</pre>
+
+
+<h3><a name="SQLite3.Finalize">SQLite3.Finalize (database dbHandle);</a></h3>
+
+<h4>Description:</h4><p>Completes a compiled query and frees the associated memory.</p>
+
+<h4>dbHandle:</h4><p><span class="type">(database)</span> The handle to the database that you want to finalize.</p>
+
+<h4>Returns:</h4><p>Nothing.</p>
+
+<h4>Example:</h4><pre class="code">
+-- Done with the compiled query
+SQLite3.Finalize(db);
+</pre>
+
+
+<h3><a name="SQLite3.GetChanges">number SQLite3.GetChanges (database dbHandle);</a></h3>
+
+<h4>Description:</h4><p>Returns the number of rows modified by the last query.</p>
+
+<h4>dbHandle:</h4><p><span class="type">(database)</span> The handle to the database that you want to operate on.</p>
+
+<h4>Returns:</h4><p><span class="type">(number)</span> The number of rows that were modified by the last query performed on the specified database.</p>
+
+<h4>Example:</h4><pre class="code">
+-- how many changes were made?
+nChanges = SQLite3.GetChanges(db);
+</pre>
+
+
+<h3><a name="SQLite3.GetEncoding">string SQLite3.GetEncoding ();</a></h3>
+
+<h4>Description:</h4><p>Returns the character encoding that the SQLite database engine is using.</p>
+
+<h4>Returns:</h4><p class="crypto"><span class="type">(string)</span> This action will always return "utf-8" and is provided for compatibility with older code only.</p>
+
+<h4>Example:</h4><pre class="code">
+-- get a string describing the current encoding method
+strEncoding = SQLite3.GetEncoding();
+</pre>
+
+
+<h3><a name="SQLite3.GetErrorString">string SQLite3.GetErrorString (number ErrorCode);</a></h3>
+
+<h4>Description:</h4><p>Returns the error string that corresponds to a specific SQLite error code.</p>
+
+<h4>ErrorCode:</h4><p><span class="type">(number)</span> A SQLite error code that you want to get the error message for.</p>
+<p class="Tip"><b>Tip:</b> Use nil or pass nothing to get the error message for the last internal error (exactly the same as calling SQLite3.GetLastErrorString).</p>
+
+<h4>Returns:</h4><p><span class="type">(string)</span> The error string that corresponds to the specified error code.</p>
+
+<h4>Example:</h4><pre class="code">
+-- what error message is associated with SQLite3.CANTOPEN?
+strErrMsg = SQLite3.GetErrorString(SQLite3.CANTOPEN);
+</pre>
+
+
+<h3><a name="SQLite3.GetLastErrorString">string SQLite3.GetLastErrorString ();</a></h3>
+
+<h4>Description:</h4><p>Returns the error string for the last internal error that occurred.</p>
+
+<p class="Tip"><b>Tip:</b> Use this to get the internal error message returned by sqlite on SQLite3.ERROR.</p>
+
+<h4>Returns:</h4><p><span class="type">(string)</span> The error string for the last internal error.</p>
+
+<h4>Example:</h4><pre class="code">
+err = Application.GetLastError();
+if err == SQLite3.ERROR then
+    strErrMsg = SQLite3.GetLastErrorString();
+    Debug.Print("Error: " .. strErrMsg);
+end
+</pre>
+
+
+<h3><a name="SQLite3.GetLastInsertRowID">number SQLite3.GetLastInsertRowID (database dbHandle);</a></h3>
+
+<h4>Description:</h4><p>Returns the row ID of the most recent insert in the database.</p>
+
+<p class="note"><b>Note:</b> This action is similar to the mysql_insert_id() function in MySQL.</p>
+
+<h4>dbHandle:</h4><p><span class="type">(database)</span> The handle to the database that you want to operate on.</p>
+
+<h4>Returns:</h4><p><span class="type">(number)</span> The ID of the row that was modified by the last "insert" operation.</p>
+
+<p class="note"><b>Note:</b> Each entry in an SQLite table has a unique
+integer key. The key is the value of the INTEGER PRIMARY KEY column if
+there is such a column, otherwise the key is generated at random.</p>
+
+<h4>Example:</h4><pre class="code">
+SQLite3.Query(db,"insert into Users values('Sellers','Ted','Mr.')");
+
+-- which row was modified?
+nRID = SQLite3.GetLastInsertRowID(db);
+</pre>
+
+
+<h3><a name="SQLite3.GetNullString">string SQLite3.GetNullString ();</a></h3>
+
+<h4>Description:</h4><p>Returns the string that will be used to represent NULL values in query results.</p>
+
+<h4>Returns:</h4><p><span class="type">(string)</span> The string that will be used to represent NULL values in query results.</p>
+
+<h4>Example:</h4><pre class="code">
+-- get the current null string
+strNullValue = SQLite3.GetNullString();
+</pre>
+
+
+<h3><a name="SQLite3.GetRowColumnNamesArray">table SQLite3.GetRowColumnNamesArray (database dbHandle);</a></h3>
+
+<h4>Description:</h4><p>Returns the column names for the current row of data from a compiled query as a numerically indexed table.</p>
+
+<h4>dbHandle:</h4><p><span class="type">(database)</span> The handle to the database that you want to operate on.</p>
+
+<h4>Returns:</h4><p><span class="type">(table)</span> A numerically indexed table containing the column names for the current row of data.</p>
+
+<h4>Example:</h4><pre class="code">
+-- get the column names
+tbColumnNames = SQLite3.GetRowColumnNamesArray(db);
+
+-- display them in a debug window
+Debug.ShowWindow(true);
+for i = 1, Table.Count(tbColumnNames) do
+    Debug.Print("Name of column "..i.." is: " .. tbColumnNames[i] .."\r\n");
+end
+</pre>
+
+
+<h3><a name="SQLite3.GetRowColumnTypesArray">table SQLite3.GetRowColumnTypesArray (database dbHandle);</a></h3>
+
+<h4>Description:</h4><p>Returns the column types for the current row of data from a compiled query as a numerically indexed table.</p>
+
+<p class="note"><b>Note:</b> The database must have a compiled query in it or a syntax error will be generated.</p>
+
+<h4>dbHandle:</h4><p><span class="type">(database)</span> The handle to the database that you want to operate on.</p>
+
+<h4>Returns:</h4><p><span class="type">(table)</span> A numerically indexed table containing the column types for the current row of data.</p>
+
+<p class="note"><b>Note:</b> This returns the types that were declared for the columns when they were created. Since SQLite is typeless, the actual values in the columns can be of any type. (The column type is not enforced.)</p>
+
+<h4>Example:</h4><pre class="code">
+-- get the column types
+tbColumnNames = SQLite3.GetRowColumnTypesArray(db);
+
+-- display them in a debug window
+Debug.ShowWindow(true);
+for i = 1, Table.Count(tbColumnTypes) do
+    Debug.Print("Type of column "..i.." is: " .. tbColumnTypes[i] .."\r\n");
+end
+</pre>
+
+
+<h3><a name="SQLite3.GetRowColumnTypesAssoc">table SQLite3.GetRowColumnTypesAssoc (database dbHandle);</a></h3>
+
+<h4>Description:</h4><p>Returns the column types for the current row of data from a compiled query as an associative table indexed by column name.</p>
+
+<p class="note"><b>Note:</b> The database must have a compiled query in it or a syntax error will be generated.</p>
+
+<h4>dbHandle:</h4><p><span class="type">(database)</span> The handle to the database that you want to operate on.</p>
+
+<h4>Returns:</h4><p><span class="type">(table)</span> A table containing the column types for the current row of data, indexed by column name.</p>
+
+<p class="note"><b>Note:</b> This returns the types that were declared for the columns when they were created. Since SQLite is typeless, the actual values in the columns can be of any type. (The column type is not enforced.)</p>
+
+<h4>Example:</h4><pre class="code">
+-- get the column types
+tbColumnNames = SQLite3.GetRowColumnTypesAssoc(db);
+
+-- display them in a debug window
+Debug.ShowWindow(true);
+for strColumnName, strColumnType in pairs(tbColumnTypes) do
+    Debug.Print("Type of column '"..strColumName.."' is: " .. strColumnType .."\r\n");
+end
+</pre>
+
+
+<h3><a name="SQLite3.GetRowDataArray">table SQLite3.GetRowDataArray (database dbHandle, <span class="crypto">boolean bConvert</span>);</a></h3>
+
+<h4>Description:</h4><p>Returns the current row of data from a compiled query as a numerically indexed table.</p>
+
+<p class="note"><b>Note:</b> The database must have a compiled query in it or a syntax error will be generated.</p>
+
+<h4>dbHandle:</h4><p><span class="type">(database)</span> The handle to the database that you want to operate on.</p>
+<a name="conversion"></a><h4>bConvert:</h4>
+<p><span class="type">(boolean)</span> Optional, default value is "false". Specifies if the data should be converted from UTF-8 to MBCS.</p>
+<table border="0">
+<tr><td align="center" valign="top"><p><img src="img/sqlimg4.png" width="362" height="87"><br>Without UTF-8 to MBCS conversion</p></td>
+<td align="center" valign="top"><p><img src="img/sqlimg5.png" width="362" height="87"><br>
+  With UTF-8 to MBCS conversion</p></td>
+</tr>
+</table>
+<h4>Returns:</h4><p><span class="type">(table)</span> A numerically indexed table containing the current row of data in the compiled query.</p>
+
+<h4>Example:</h4><pre class="code">
+-- get the data indexed by column #
+tbRow = SQLite3.GetRowDataArray(db);
+
+-- display the values in a debug window
+Debug.ShowWindow(true);
+for i = 1, Table.Count(tbRow) do
+    Debug.Print("Data in column "..i.." is: " .. tbRow[i] .."\r\n");
+end
+</pre>
+
+
+<h3><a name="SQLite3.GetRowDataAssoc">table SQLite3.GetRowDataAssoc (database dbHandle, <span class="crypto">boolean bConvert</span>);</a></h3>
+
+<h4>Description:</h4><p>Returns the current row of data from a compiled query as an associative table indexed by column name.</p>
+
+<p class="note"><b>Note:</b> The database must have a compiled query in it or a syntax error will be generated.</p>
+
+<h4>dbHandle:</h4><p><span class="type">(database)</span> The handle to the database that you want to operate on.</p>
+<h4>bConvert:</h4>
+<p><span class="type">(boolean)</span> Optional, default value is "false". Specifies if the data should be converted from UTF-8 to MBCS. See sample <a href="#conversion">here</a>.</p>
+<h4>Returns:</h4><p><span class="type">(table)</span> A table containing the current row of data in the compiled query, indexed by column name.</p>
+
+<h4>Example:</h4><pre class="code">
+-- get the data indexed by column name
+tbRow = SQLite3.GetRowDataAssoc(db);
+
+-- display the values in a debug window
+Debug.ShowWindow(true);
+for strColumn, strData in pairs(tbRow) do
+    Debug.Print(strColumn .. " = " .. strData .. "\r\n");
+end
+</pre>
+
+
+<h3><a name="SQLite3.GetVersion">string SQLite3.GetVersion ();</a></h3>
+
+<h4>Description:</h4><p>Returns the version of the plugin's SQLite database engine.</p>
+
+<h4>Returns:</h4><p><span class="type">(string)</span> The version number of the SQLite database engine.</p>
+
+<h4>Example:</h4><pre class="code">
+-- what version of the SQLite database does the plugin use?
+strVer = SQLite3.GetVersion();
+</pre>
+
+
+<h3><a name="SQLite3.Interrupt">SQLite3.Interrupt (database dbHandle);</a></h3>
+
+<h4>Description:</h4><p>Aborts the query presently running in the database.</p>
+
+<h4>dbHandle:</h4><p><span class="type">(database)</span> The handle to the database that you want to operate on.</p>
+
+<h4>Returns:</h4><p>Nothing.</p>
+
+<h4>Example:</h4><pre class="code">
+-- Aroooga! Aroooga!
+SQLite3.Interrupt(db);
+</pre>
+
+
+<h3><a name="SQLite3.Open">database SQLite3.Open (string Filename);</a></h3>
+
+<h4>Description:</h4><p>Opens a SQLite3 database. If the database does not exist, it is created. This action will not open database files created in previous versions of SQLite, like 2.x.</p>
+
+<h4>Filename:</h4><p><span class="type">(string)</span> The full path
+and filename of the database file that you want to open. Use
+":memory:" to open a temporary database that only exists in the
+computer's memory.</p>
+
+<p class="note"><b>Note:</b> The special ":memory:" filename is
+primarily useful for temporary processing, as the in-memory database
+will be destroyed when the database is closed.
+
+<h4>Returns:</h4><p><span class="type">(database)</span> A handle to the database that you can use in other SQLite actions.</p>
+
+<p>Note that you can open multiple databases at the same time. Each database connection is identified by a unique database handle.</p>
+
+<h4>Example 1:</h4><pre class="code">
+-- open a database file in the user's temp folder
+handle = SQLite3.Open(_TempFolder .. "\\MyDatabase.db");
+</pre>
+
+<h4>Example 2:</h4><pre class="code">
+-- open a database file in memory and create a 3-column table in it
+db = SQLite3.Open(":memory:");
+SQLite3.Query(db,"CREATE TABLE Users(userid INTEGER PRIMARY KEY, LastName TEXT, FirstName TEXT, Age INTEGER)");
+</pre>
+
+
+<h3><a name="SQLite3.Query">SQLite3.Query (database dbHandle, string Query, <span class="crypto">string</span> CallbackFunction, <span class="crypto">boolean bConvert</span>);</a></h3>
+
+<h4>Description:</h4><p>Performs a query on an SQLite database.</p>
+
+<h4>dbHandle:</h4><p><span class="type">(database)</span> The handle to the database that you want to operate on.</p>
+
+<h4>Query:</h4><p><span class="type">(string)</span> The SQLite query string that you want to perform. See the <a target="_new" href="http://www.sqlite.org/lang.html">SQLite Query Language</a> for more information.</p>
+
+<h4>CallbackFunction:</h4>
+<p><span class="type">(string)</span> The name of
+a function that will be called for every row returned from the query.
+(You can use this callback function to collect the results returned
+from the query.)</p>
+<h4>bConvert:</h4><p><span class="type">(boolean)</span> Optional, default value is "false". Specifies if the data should be converted from UTF-8 to MBCS.  See sample <a href="#conversion">here</a>.</p>
+<p class="note"><b>Note:</b> The CallbackFunction is optional...if you don't need to process the results, you may set this parameter to nil (or omit it completely).</p>
+
+<p>The callback function must be able to receive the following parameters:</p>
+
+<div class="CallbackParams">
+<h5>dbHandle:</h5><p><span class="type">(database)</span> A handle to the database that is being operated on.</p>
+
+<h5>nRow:</h5><p><span class="type">(number)</span> The current row in the query result. (This number gets incremented each time the callback is called.)</p>
+
+<h5>nColumns:</h5><p><span class="type">(number)</span> The number of columns in the query result.</p>
+
+<h5>tbRowDataAssoc:</h5><p><span class="type">(table)</span> A table containing the row data indexed by column name.</p>
+
+<p>If the EMPTY_RESULT_CALLBACKS <a target="_new" href="http://www.sqlite.org/lang.html#pragma">pragma</a> is on, and the query didn't return any results, tbRowDataAssoc will be nil.</p>
+
+<h5>tbRowDataArray:</h5><p><span class="type">(table)</span> A table containing the row data indexed numerically.</p>
+
+<p>If the EMPTY_RESULT_CALLBACKS <a target="_new" href="http://www.sqlite.org/lang.html#pragma">pragma</a> is on, and the query didn't return any results, tbRowDataArray will be nil.</p>
+
+<h5>tbColumnNamesArray:</h5><p><span class="type">(table)</span> A table containing the column names indexed numerically.</p>
+
+<h5>tbColumnTypesArray:</h5><p><span class="type">(table)</span> A table containing the column types indexed numerically.</p>
+
+<p>If the SHOW_DATATYPES <a target="_new" href="http://www.sqlite.org/lang.html#pragma">pragma</a> is off, tbColumnTypesArray will be nil.</p>
+
+<h5>tbColumnTypesAssoc:</h5><p><span class="type">(table)</span> A table containing the column types indexed by column name.</p>
+
+<p>If the SHOW_DATATYPES <a target="_new" href="http://www.sqlite.org/lang.html#pragma">pragma</a> is off, tbColumnTypesAssoc will be nil.</p>
+
+<p class="note"><b>Note:</b> The SHOW_DATATYPES pragma is off by default.</p>
+
+</div>
+<!-- /CallbackParams -->
+
+<p>The callback function should return a boolean value (true or false) indicating whether the query should continue:</p>
+
+<p class="indent"><b>true</b> - Continue performing the query.<BR>
+<b>false</b> - Abort the query.</p>
+
+<h4>Returns:</h4><p>Nothing.</p>
+
+<h4>Example 1:</h4><pre class="code">
+-- open a temporary database in memory
+db = SQLite3.Open(":memory:");
+
+-- create a table with 3 columns
+SQLite3.Query(db,"create table foo(a integer primary key, b text, c integer)");");
+</pre>
+
+<h4>Example 2:</h4>
+<pre class="code">
+--[[ cbPrintRow function.
+     Use this to print a row of data to the debug window (assumes the debug window is already open). ]]
+function cbPrintRow(db, nRow, nColumns, tbRowDataAssoc, tbRowDataArray, tbColumnNamesArray, tbColumnTypesArray, tbColumnTypesAssoc)
+
+    Debug.Print("**  ROW " .. nRow .. " IN RESULT SET HAS " .. nColumns .. " COLUMNS **\r\n");
+
+    --[[ note: always make sure tbRowDataAssoc, tbRowDataArray,
+               tbColumnTypesArray, and tbColumnTypesAssoc are NOT nil
+               before working with them. An easy way to do this is to
+               test those variables to see if they contain something
+               that is considered "true." Only the values nil and false
+               are considered "false"...anything else (including a table)
+               is considered true. ]]
+
+    if tbRowDataAssoc then
+
+        Debug.Print("\r\nRow ".. nRow .." data (associative style):\r\n");
+
+        for strColumnName, strData in pairs(tbRowDataAssoc) do
+            nCol = 1;
+            Debug.Print(strColumnName .. " = " .. strData);
+    		if nCol ~= nColumns then
+    			Debug.Print(", ");
+    		end
+        end
+        Debug.Print("\r\n");
+    end
+
+    if tbRowDataArray then
+
+        Debug.Print("\r\nRow ".. nRow .." data (array style):\r\n");
+
+        for nCol = 1,nColumns do
+            Debug.Print(tbColumnNamesArray[nCol] .. " = " .. tbRowDataArray[nCol] );
+    		if nCol ~= nColumns then
+    			Debug.Print(", ");
+    		end
+        end
+        Debug.Print("\r\n");
+    end
+
+    if tbColumnTypesAssoc then
+
+        Debug.Print("\r\nColumn types (associative style):\r\n\r\n");
+
+        for strColumnName, strColumnType in pairs(tbColumnTypesAssoc) do
+            Debug.Print(strColumnName .. " type: " .. strColumnType .. "\r\n");
+        end
+    end
+
+    if tbColumnTypesArray then
+        Debug.Print("\r\nColumn types (array style):\r\n\r\n");
+
+        for i, strColumnType in pairs(tbColumnTypesArray) do
+            Debug.Print ("Column " .. i .. " type: " .. strColumnType .. "\r\n");
+        end
+    end
+
+    Debug.Print("\r\n");
+
+    -- continue with the query
+    return true;
+end
+
+
+-- create a database in memory
+db = SQLite3.Open(":memory:");
+err = Application.GetLastError();
+if err == SQLite3.OK then
+    -- create a table and fill it with data
+    SQLite3.Query(db,"create table Users(userid integer primary key, LastName text, FirstName text, Age integer)");
+    SQLite3.Query(db,"insert into Users values(1,'Sellers','Ted',48)");
+    SQLite3.Query(db,"insert into Users values(2,'Blow','Joe',64)");
+    SQLite3.Query(db,"insert into Users values(NULL,'Dandy','Jim',31)");
+    SQLite3.Query(db,"insert into Users values(NULL,'Osborne','Super Dave',47)");
+    SQLite3.Query(db,"insert into Users values(NULL,'Hakimoto','Fuji',52)");
+
+    --[[ note: to keep this example from getting too complicated, we'll assume that
+               the table can be created and filled with no errors. In practice,
+               you should check for errors after each call to SQLite3.Query. ]]
+
+    -- open the debug window
+    Debug.ShowWindow(true);
+
+	-- turn on the SHOW_DATATYPES option in this database
+	-- so the callback function will display the column types
+	SQLite3.Query(db,"PRAGMA SHOW_DATATYPES=ON;")
+
+    -- Perform a query and use our callback function to print the results to the debug window
+    SQLite3.Query(db,"SELECT * FROM Users", &quot;cbPrintRow&quot;);
+    err = Application.GetLastError();
+    if err ~= SQLite3.OK then
+        Debug.Print( "Error: " .. SQLite3.GetErrorString(err) );
+    end
+
+    -- close the database
+    SQLite3.Close(db);
+else
+    -- error trying to open the database
+    Debug.Print( "Error: " .. SQLite3.GetErrorString(err) );
+end
+</pre>
+
+
+<h3><a name="SQLite3.QueryToTable">SQLite3.QueryToTable (database dbHandle, string Query, <span class="crypto">boolean bConvert</span>);</a></h3>
+
+<h4>Description:</h4><p>Performs a query on an SQLite database and returns a table containing the results.</p>
+
+<h4>dbHandle:</h4><p><span class="type">(database)</span> The handle to the database that you want to operate on.</p>
+<h4>Query:</h4><p><span class="type">(string)</span> The SQLite query string that you want to perform. See the <a target="_new" href="http://www.sqlite.org/lang.html">SQLite Query Language</a> for more information.</p>
+<h4>bConvert:</h4>
+<p><span class="type">(boolean)</span> Optional, default value is "false". Specifies if the data should be converted from UTF-8 to MBCS. See sample <a href="#conversion">here</a>.</p>
+
+<h4>Returns:</h4><p><span class="type">(table)</span> A table containing the query results. If an error occurs, this action returns nil.</p>
+
+<p>If successful, the following information will be stored in the table:</p>
+
+<p class="indent"><b>Rows:</b><br><span class="type">(number)</span> The number of rows in the query result.</p>
+<p class="indent"><b>Columns:</b><br><span class="type">(number)</span> The number of columns in the query result.</p>
+<p class="indent"><b>ColumnNames:</b><br><span class="type">(table)</span> A numerically indexed table containing the names of the columns in the query result.</p>
+<p class="indent">Use <span style="white-space:nowrap; font-style:italic;">.ColumnNames[&lt;column_number&gt;]</span> to get the name of a column:<br/>
+<span style="color: #963;">column_three = tbResult.ColumnNames[3];</span></p>
+
+<p class="indent"><b>Data:</b><br><span class="type">(table)</span> A
+table containing the data returned by the query. The data is organized
+into sub-tables, one for each row in the query result. Each sub-table
+contains the data from one row, indexed by column name.</p>
+
+<p class="indent">Use <span style="white-space:nowrap; font-style:italic;">.Data[&lt;row_number&gt;]</span> to access a row of data:<br/>
+<span style="color: #963">tbRow2 = tbResult.Data[2];</span></p>
+<p class="indent">Then use <span style="white-space:nowrap; font-style:italic;">[&lt;column_name&gt;]</span> to access a cell value:<br/>
+<span style="color: #963">strLastName = tbRow2["LastName"];</span></p>
+<p class="indent">Or, use <span style="white-space:nowrap; font-style:italic;">.Data[&lt;row_number&gt;][&lt;column_name&gt;]</span> to access a cell value directly:<br/>
+<span style="color: #963">strLastName = tbResult.Data[2]["LastName"];</span></p>
+
+<h4>Example 1:</h4><pre class="code">
+tbResult = SQLite3.QueryToTable(mydb, "select * from players,teams where teamid=7;");
+
+-- get the name of player 7:
+tbRow2 = tbResult.Data[2];
+player_name = tbRow2["FirstName"] .. " " .. tbRow2["LastName"];
+</pre>
+
+<h4>Example 2:</h4><pre class="code">
+tbResult = SQLite3.QueryToTable(mydb, "select * from players,teams where teamid=7;");
+
+-- get the name of player 7:
+player_name = tbResult.Data[2]["FirstName"] .. " " .. tbResult.Data[2]["LastName"];
+</pre>
+
+<h4>Example 3:</h4><pre class="code">
+-- open the debug window
+Debug.ShowWindow(true);
+
+-- create a database in memory
+dbname = ":memory:";
+db = SQLite3.Open(dbname);
+err = Application.GetLastError();
+if err == SQLite3.OK then
+
+    Debug.Print("Opening database: \"" .. dbname .. "\"\r\n\r\n");
+
+    -- create a table and fill it with data
+    SQLite3.Query(db,"create table Users(userid integer primary key, LastName text, FirstName text, Age integer)");
+    SQLite3.Query(db,"insert into Users values(1,'Sellers','Ted',48)");
+    SQLite3.Query(db,"insert into Users values(2,'Blow','Joe',64)");
+    SQLite3.Query(db,"insert into Users values(NULL,'Dandy','Jim',31)");
+    SQLite3.Query(db,"insert into Users values(NULL,'Osborne','Super Dave',47)");
+    SQLite3.Query(db,"insert into Users values(NULL,'Hakimoto','Fuji',52)");
+
+    --[[ note: to keep this example from getting too complicated, we'll assume that
+               the table can be created and filled with no errors. In practice,
+               you should check for errors after each call to SQLite3.Query. ]]
+
+    -- perform a query and store all of the results in a table called tbUsers
+    tbUsers = SQLite3.QueryToTable(db,"SELECT * FROM Users");
+    err = Application.GetLastError();
+    if err ~= SQLite3.OK then
+        Debug.Print( "Error: " .. SQLite3.GetErrorString(err) );
+    end
+
+    -- display the contents of the table
+
+    Debug.Print("Results returned from QueryToTable:\r\n\r\n");
+
+    Debug.Print(tbUsers.Columns .." Columns\r\n");
+    Debug.Print(tbUsers.Rows    .." Rows\r\n\r\n");
+
+    for n = 1,tbUsers.Columns do
+    	Debug.Print("Name of column "..n.." is: "..tbUsers.ColumnNames[n].."\r\n");
+    end
+
+    Debug.Print("\r\n\r\n");
+
+    for nRow = 1,tbUsers.Rows do
+        Debug.Print("Row "..nRow..":\r\n\r\n");
+        Debug.Print("   User ID: "..tbUsers.Data[nRow]["userid"].."\r\n");
+        Debug.Print("   First name: "..tbUsers.Data[nRow]["FirstName"].."\r\n");
+        Debug.Print("   Last name: "..tbUsers.Data[nRow]["LastName"].."\r\n");
+        Debug.Print("   Age: "..tbUsers.Data[nRow]["Age"].."\r\n\r\n");
+    end
+
+    for nRow = 1,tbUsers.Rows do
+        Debug.Print("Row "..nRow..": ");
+    	for nCol = 1, tbUsers.Columns do
+    		strColumnName = tbUsers.ColumnNames[nCol];
+    		Debug.Print(strColumnName .."="..tbUsers.Data[nRow][strColumnName]);
+    		if nCol ~= tbUsers.Columns then
+    			Debug.Print(", ");
+    		end
+    	end
+    	Debug.Print("\r\n");
+    end
+
+    -- close the database
+    Debug.Print("\r\nClosing database: \"" .. dbname .. "\"\r\n\r\n");
+    SQLite3.Close(db)
+
+else
+    -- error trying to open the database
+    Debug.Print( "Error: " .. SQLite3.GetErrorString(err) );
+end
+</pre>
+
+
+<h3><a name="SQLite3.SetBusyTimeout">SQLite3.SetBusyTimeout (database dbHandle, number Timeout);</a></h3>
+
+<h4>Description:</h4><p>Sets the busy timeout for the database.</p>
+
+<h4>dbHandle:</h4><p><span class="type">(database)</span> The handle to the database that you want to operate on.</p>
+
+<h4>Timeout:</h4><p><span class="type">(number)</span> The value you want to set the busy timeout to, in milliseconds.</p>
+
+<h4>Returns:</h4><p>Nothing.</p>
+
+<h4>Example:</h4><pre class="code">
+-- Set busy timeout to 10 seconds
+SQLite3.SetBusyTimeout(db, 10000);
+</pre>
+
+
+<h3><a name="SQLite3.SetNullString">SQLite3.SetNullString (string NullString);</a></h3>
+
+<h4>Description:</h4><p>Sets the string that will be used to represent NULL values in query results.</p>
+
+<p class="note"><b>Note:</b> The null string is set to "NULL" by default.</p>
+
+<h4>NullString:</h4><p><span class="type">(number)</span> The string that you want to use to represent NULL values in query results.</p>
+
+<h4>Returns:</h4><p>Nothing.</p>
+
+<h4>Example:</h4><pre class="code">
+-- Set the null string to "Oh yeah, it's null!"
+SQLite3.SetNullString("Oh yeah, it's null!");
+</pre>
+
+
+<h3><a name="SQLite3.Step">SQLite3.Step (database dbHandle);</a></h3>
+
+<h4>Description:</h4><p>Advances a compiled query to the next row.</p>
+
+<p>After a query has been compiled using SQLite3.Compile, it is
+actually performed by one or more calls to SQLite3.Step. Each
+invocation of SQLite3.Step, except the last one, returns a single row
+of the result. To access these results, use one of the following actions:</p>
+
+<p class="indent">
+GetRowDataArray<br/>
+GetRowDataAssoc<br/>
+GetRowColumnNamesArray<br/>
+GetRowColumnTypesArray<br/>
+GetRowColumnTypesAssoc<br/>
+</p>
+
+<p>You can use Application.GetLastError() immediately after calling
+SQLite3.Step to determine what happened during that step. The resulting
+error code may be SQLite3.BUSY, SQLite3.ROW, SQLite3.DONE, SQLite3.ERROR,
+or SQLite3.MISUSE.</p>
+
+<p>Whenever another row of result data is available, the error code
+will be SQLite3.ROW.</p>
+
+<p>When all processing is complete, the error code will either be
+SQLite3.DONE or SQLite3.ERROR. SQLite3.DONE indicates that the statement
+completed successfully and SQLite3.ERROR indicates that there was a
+run-time error. It is incorrect to attempt calling SQLite3.Step again
+after it has generated SQLite3.DONE or SQLite3.ERROR.</p>
+
+<h4>dbHandle:</h4><p><span class="type">(database)</span> The handle to the database that you want to operate on.</p>
+
+<p class="note"><b>Note:</b> The database must have a compiled query in it or a syntax error will be generated.</p>
+
+<h4>Returns:</h4><p>Nothing.</p>
+
+<h4>Example:</h4><pre class="code">
+sql="select * from Users";
+SQLite3.Compile(db,sql);
+err = Application.GetLastError();
+if (err ~= SQLite3.OK ) then
+    Debug.Print("Error (".. err .."): ".. SQLite3.GetErrorString(err) .. "\r\n");
+else
+    Debug.ShowWindow(true);
+
+    repeat
+        SQLite3.Step(db);
+	    err = Application.GetLastError();
+        if (err == SQLite3.ROW) then
+            tbRow=SQLite3.GetRowDataAssoc(db)
+            for strColumnName,strValue in pairs(tbRow) do
+                Debug.Print(strColumnName.." = "..strValue.."\r\n");
+            end
+            Debug.Print("----\r\n");
+        end
+    until (err ~= SQLite3.ROW)
+
+    SQLite3.Finalize(db)
+    err = Application.GetLastError();
+    if (err ~= SQLite3.OK ) then
+        Debug.Print("Error (".. err .."): ".. SQLite3.GetErrorString(err) .. "\r\n");
+    end
+end
+</pre>
+
+</div> <!-- /Actions -->
+
+
+<div class="ErrorCodes">
+<h2>Error Codes</h2>
+
+<table>
+  <tr>
+    <th>0</th>
+    <td>(SQLite3.OK)</td><td>-</td><td>Successful result</td>
+  </tr>
+  <tr>
+    <th>30001</th>
+    <td>(SQLite3.ERROR)</td><td>-</td><td>SQL error or missing database</td>
+  </tr>
+  <tr>
+    <th>30002</th>
+    <td>(SQLite3.INTERNAL)</td><td>-</td><td>An internal logic error in SQLite</td>
+  </tr>
+  <tr>
+    <th>30003</th>
+    <td>(SQLite3.PERM)</td><td>-</td><td>Access permission denied</td>
+  </tr>
+  <tr>
+    <th>30004</th>
+    <td>(SQLite3.ABORT)</td><td>-</td><td>Callback routine requested an abort</td>
+  </tr>
+  <tr>
+    <th>30005</th>
+    <td>(SQLite3.BUSY)</td><td>-</td><td>The database file is locked</td>
+  </tr>
+  <tr>
+    <th>30006</th>
+    <td>(SQLite3.LOCKED)</td><td>-</td><td>A table in the database is locked</td>
+  </tr>
+  <tr>
+    <th>30007</th>
+    <td>(SQLite3.NOMEM)</td><td>-</td><td>A memory allocation failed</td>
+  </tr>
+  <tr>
+    <th>30008</th>
+    <td>(SQLite3.READONLY)</td><td>-</td><td>Attempt to write a readonly database</td>
+  </tr>
+  <tr>
+    <th>30009</th>
+    <td>(SQLite3.INTERRUPT)</td><td>-</td><td>Operation terminated by SQLite3.Interrupt()</td>
+  </tr>
+  <tr>
+    <th>30010</th>
+    <td>(SQLite3.IOERR)</td><td>-</td><td>Some kind of disk I/O error occurred</td>
+  </tr>
+  <tr>
+    <th>30011</th>
+    <td>(SQLite3.CORRUPT)</td><td>-</td><td>The database disk image is malformed</td>
+  </tr>
+  <tr>
+    <th>30012</th>
+    <td>(SQLite3.NOTFOUND)</td><td>-</td><td>(Internal Only) Table or record not found</td>
+  </tr>
+  <tr>
+    <th>30013</th>
+    <td>(SQLite3.FULL)</td><td>-</td><td>Insertion failed because database is full</td>
+  </tr>
+  <tr>
+    <th>30014</th>
+    <td>(SQLite3.CANTOPEN)</td><td>-</td><td>Unable to open the database file</td>
+  </tr>
+  <tr>
+    <th>30015</th>
+    <td>(SQLite3.PROTOCOL)</td><td>-</td><td>Database lock protocol error</td>
+  </tr>
+  <tr>
+    <th>30016</th>
+    <td>(SQLite3.EMPTY)</td><td>-</td><td>(Internal Only) Database table is empty</td>
+  </tr>
+  <tr>
+    <th>30017</th>
+    <td>(SQLite3.SCHEMA)</td><td>-</td><td>The database schema changed</td>
+  </tr>
+  <tr>
+    <th>30018</th>
+    <td>(SQLite3.TOOBIG)</td><td>-</td><td>Too much data for one row of a table</td>
+  </tr>
+  <tr>
+    <th>30019</th>
+    <td>(SQLite3.CONSTRAINT)</td><td>-</td><td>Abort due to constraint violation</td>
+  </tr>
+  <tr>
+    <th>30020</th>
+    <td>(SQLite3.MISMATCH)</td><td>-</td><td>Data type mismatch</td>
+  </tr>
+  <tr>
+    <th>30021</th>
+    <td>(SQLite3.MISUSE)</td><td>-</td><td>Library used incorrectly</td>
+  </tr>
+  <tr>
+    <th>30022</th>
+    <td>(SQLite3.NOLFS)</td><td>-</td><td>Uses OS features not supported on host</td>
+  </tr>
+  <tr>
+    <th>30023</th>
+    <td>(SQLite3.AUTH)</td><td>-</td><td>Authorization denied</td>
+  </tr>
+  <tr>
+    <th>30024</th>
+    <td>(SQLite3.FORMAT)</td><td>-</td><td>Auxiliary database format error</td>
+  </tr>
+  <tr>
+    <th>30100</th>
+    <td>(SQLite3.ROW)</td><td>-</td><td>SQLite3.Step() has another row ready</td>
+  </tr>
+  <tr>
+    <th>30101</th>
+    <td>(SQLite3.DONE)</td><td>-</td><td>SQLite3.Step() has finished executing</td>
+  </tr>
+  <tr>
+    <th>30200</th>
+    <td>(SQLite3.UNCOMPILED)</td><td>-</td><td>Database does not have a compiled query in it</td>
+  </tr>
+</table>
+</div> <!-- /ErrorCodes -->
+
+<!--
+<div class="History">
+<h2>Change Log</h2>
+
+<h3>2.0.0.0</h3>
+<ul>
+	<li>Updated to Lua 5.1 and made compatible with AutoPlay Media Studio 8.0.</li>
+</ul>
+
+<h3>1.0.1.0</h3>
+<ul>
+	<li>Updated version resource information.</li>
+</ul>
+
+<h3>1.0.0.1</h3>
+<ul>
+	<li>Added some information to the documentation about choosing between the three different query methods</li>
+	<li>Added a short note about the SQLite3.Close() action to the documentation</li>
+	<li>F1 help now works if you have Mozilla Firefox installed</li>
+</ul>
+
+<h3>1.0.0.0</h3>
+<ul>
+	<li>Initial release</li>
+</ul>
+</div> -->
+
+
+<div class="Info">
+<h2>Credits</h2>
+
+<h3>SQLite Database Engine:</h3>
+<p>The source code of the database engine is in the public domain and can be downloaded <a href="http://www.sqlite.org" target="www">here</a>.</p>
+<h3>Help file:</h3>
+<p>This document is based on the original help file provided for SQLite (version 2.x) by Indigo Rose as part of the AutoPlay Media Studio 8 distribution.</p>
+</div>
+
+<div class="Info">
+<h2>Additional Information</h2>
+
+<h3>Author:</h3><p>Ulrich Peters, MindQuake Serviços de Informática Ltda.<br>
+<a href="http://www.mindquake.com.br/en/contact" target="www">http://www.mindquake.com.br/en/contact</a></p>
+<h3>Copyright:</h3><p>The SQLite Actions Plugin is copyright © 2012 MindQuake Serviços de Informática Ltda.</p>
+<h3>Website:</h3><p><a href="http://www.mindquake.com.br" target="www">http://www.mindquake.com.br</a></p>
+
+</div> <!-- /info -->
+<hr>
+
+<p align="center">Copyright © 2012 MindQuake Serviços de Informática Ltda.<br>
+All Rights Reserved.</p>
+
+</body>
+</html>

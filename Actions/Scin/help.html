@@ -1,0 +1,2742 @@
+<!doctype HTML public "-//W3C//DTD HTML 4.0 Frameset//EN">
+
+<html>
+<head>
+<title>Scin</title>
+
+<meta http-equiv=content-type content="text/html; charset=windows-1252">
+
+<style>
+
+
+
+body {
+  font-family: Verdana, sans-serif;
+  font-size: 8pt;
+  background-color: #ffffff;
+}
+
+hr {
+  text-align: center;
+  color: #f0f0f0;
+  width: 100%;
+  height: 6pt;
+
+  margin-top: 0pt;
+  margin-bottom: -3pt;
+
+  border: none;
+}
+
+A:link, A:active, A:visited {
+  color: #0000ff;
+  text-decoration: none;
+}
+
+A:hover {
+  color: #0000ff;
+  text-decoration: underline;
+}
+
+h1 {
+  font-family: Verdana;
+  font-weight: bold;
+  font-size: 18.0pt;
+  white-space: nowrap;
+  color: #fff;
+  background-color: #699BEF;
+
+  padding: 4pt 3pt;
+  padding: 5px 4px;
+
+  margin-top: 0pt;
+  margin-bottom: 0pt;
+
+  border-right: 1px solid #333;
+  border-left: 1px solid #699BEF;
+  border-bottom: solid black 1px;
+}
+
+h2 {
+  font-family: Arial, sans-serif;
+  font-size: 12.0pt;
+  letter-spacing: .2ex;
+  color: #000;
+  
+  margin-left: 0pt;
+  margin-right: 0pt;
+  margin-top: 18pt;
+  margin-bottom: 9pt;
+}
+
+h3 {
+  font-family: Arial, sans-serif;
+  font-size: 10pt;
+  font-weight: bold;
+  font-style: normal;
+  color: black;
+  letter-spacing: 0px;
+
+  margin-left: 0pt;
+  margin-right: 0pt;
+  margin-top: 18pt;
+  margin-bottom: 3pt;
+}
+
+p {
+  font-family: Verdana;
+  font-size: 8.0pt;
+  line-height: 12.0pt;
+  
+  margin-left: 0pt;
+  margin-right: 0pt;
+  margin-top: 0pt;
+  margin-bottom: 9pt;
+}
+
+/* CLASSES */
+
+div.Actions h3, div.Properties h3, div.Events h3 {
+  font-family: Arial, sans-serif;
+  font-size: 10pt;
+  font-weight: bold;
+  font-style: italic;
+  color: #3C77B3;
+  letter-spacing: 0px;
+  
+  margin-left: 12pt;
+  margin-right: 0pt;
+  margin-top: 18pt;
+  margin-bottom: 3pt;
+}
+
+div.Events h4, div.Actions h4, div.info h3 {
+  font-family: Verdana;
+  font-size: 8.0pt;
+  line-height: 12.0pt;
+  font-style: bold;
+  
+  margin-top: 9pt;
+  margin-bottom: 0pt;
+  margin-left: 28pt;
+  margin-right: 0pt;
+}
+
+div.Actions p, div.Properties p, div.Events p, div.ErrorCodes p {
+  font-family: Verdana;
+  font-size: 8.0pt;
+  line-height: 12.0pt;
+  
+  margin-top: 0pt;
+  margin-bottom: 9pt;
+  margin-left: 12pt;
+  margin-right: 0pt;
+}
+
+p.NavLocal {
+  white-space: nowrap;
+  text-indent: -4px;
+  font-family: Verdana, Arial, sans-serif;
+  font-weight: bold;
+  font-style: normal;
+  font-size: 13px;
+  background-color: #e4e4e4;
+
+  margin-top: 0px;
+  margin-bottom: 12pt;
+
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 0px;
+  padding-right: 0px;
+
+  border-bottom: 1px solid #e4e4e4;
+}
+
+p.Note {
+	font-family: Verdana;
+	font-size: 8.0pt;
+	line-height: 12.0pt;
+	color: #000000;
+	background-color: #ffffe8;
+
+	margin-top: 0pt;
+	margin-bottom: 9pt;
+	margin-left: 0pt;
+	margin-right: 5%;
+
+	padding-left: 2pt;
+	padding-right: 2pt;
+	padding-top: 1pt;
+	padding-bottom: 2pt;
+}
+
+p.Tip {
+	font-family: Verdana;
+	font-size: 8.0pt;
+	line-height: 12.0pt;
+	color: #000000;
+	background-color: #EAF4E8;
+
+	margin-top: 0pt;
+	margin-bottom: 9pt;
+	margin-left: 0pt;
+	margin-right: 5%;
+
+	padding-left: 2pt;
+	padding-right: 2pt;
+	padding-top: 1pt;
+	padding-bottom: 2pt;
+}
+
+div.Actions p.Note, div.Events p.Note,
+div.Actions p.Tip, div.Events p.Tip {
+	margin-left: 28pt;
+}
+
+div.Properties p.Note,
+div.Properties p.Tip {
+	margin-left: 18pt;
+}
+
+pre.code {
+  white-space: pre;
+  font-family: Courier New, Courier, Arial, sans-serif;
+  font-size: 10pt;
+  font-weight: normal;
+  font-style: normal;
+  letter-spacing: normal;
+  color: #000;
+  background-color: #f9f9f9;
+  
+  margin-top: 3pt;
+  margin-bottom: 9pt;
+  margin-left: 0pt;
+  margin-left: 0pt;
+  
+  padding: 10px;
+  
+  border: 1px dotted #ccc;
+}
+
+div.Actions pre.code, div.Events pre.code {
+  margin-left: 28pt;
+}
+
+div.Actions h2, div.Properties h2, div.Events h2 {
+  margin-bottom: -6pt;
+}
+
+div.actions p, div.ErrorCodes p, div.info p {
+  margin-left: 28pt;
+}
+
+div.actions p.indent {
+  margin-left: 38pt;
+}
+
+div.e_vars p {
+  margin-left: 28pt;
+}
+
+span.here { /* blue tab effect in navbar (NavLocal) */
+  font-weight: bold;
+  color: #fff;
+  background-color: #699BEF;
+
+  margin: 0px;
+
+  padding: 4px 8px;
+
+  border-top: 1px solid #699BEF;
+  border-bottom: 1px solid #333;
+  border-left: none;
+  border-right: 1px solid #333;
+}
+
+span.type {
+	color: #aaa;
+}
+A:link,
+A:active,
+A:visited {
+	color: #0000ff;
+	x-text-underline: off;
+	x-text-overline: off;
+	x-text-line-through: off;
+	/*begin!kadov{{*/ text-decoration: none none none; /*}}end!kadov*/ 
+}
+
+A:hover {
+	color: #0000ff;
+	x-text-underline: normal;
+	/*begin!kadov{{*/ text-decoration: underline; /*}}end!kadov*/ 
+}
+
+BODY {
+	font-family: Verdana, sans-serif;
+	font-size: 8pt;
+	background-color: #ffffff;
+}
+
+h1 {
+	font-family: Verdana;
+	font-weight: bold;
+	font-size: 18.0pt;
+	white-space: nowrap;
+	color: #ffffff;
+	background-color: #699BEF;
+	padding: 4pt 3pt;
+	padding: 5px 4px;
+	margin-top: 0pt;
+	margin-bottom: 0pt;
+	border-right: 1px solid #333;
+	border-left: 1px solid #699BEF;
+	border-bottom: solid #000000 1px;
+	x-next-class: NavLocal;
+	x-next-type: P;
+}
+
+/*=(Generated Code)=================================================*/
+/*=(WARNING: DO NOT EDIT OR DELETE THIS SECTION!)===================*/
+/*begin!kadov{{=====================================================*/ 
+LI.kadov-h1 {
+	font-family: Verdana;
+	font-weight: bold;
+	font-size: 18.0pt;
+	white-space: nowrap;
+	color: #ffffff;
+}
+/*}}end!kadov=======================================================*/ 
+
+
+
+/* NOTE: for a slightly more web-safe version, replace #699BEF with
+#6699FF throughout this style sheet */
+
+h1 img {
+	margin-left: 2em;
+	vertical-align: middle;
+}
+
+h2 {
+	font-family: Arial, sans-serif;
+	font-size: 12.0pt;
+	letter-spacing: .2ex;
+	color: #000000;
+	margin-left: 0pt;
+	margin-right: 0pt;
+	margin-top: 18pt;
+	margin-bottom: 3pt;
+}
+
+/*=(Generated Code)=================================================*/
+/*=(WARNING: DO NOT EDIT OR DELETE THIS SECTION!)===================*/
+/*begin!kadov{{=====================================================*/ 
+LI.kadov-h2 {
+	font-family: Arial, sans-serif;
+	font-size: 12.0pt;
+	letter-spacing: .2ex;
+	color: #000000;
+}
+/*}}end!kadov=======================================================*/ 
+
+
+
+h3 {
+	font-family: Arial, sans-serif;
+	font-size: 10pt;
+	font-weight: bold;
+	font-style: italic;
+	color: #3C77B3;
+	margin-left: 12pt;
+	margin-right: 0pt;
+	margin-top: 18pt;
+	margin-bottom: 3pt;
+	x-next-class: p;
+	x-next-type: p;
+	font-style: normal;
+	color: #000000;
+	letter-spacing: 0px;
+	margin-left: 0pt;
+}
+
+/*=(Generated Code)=================================================*/
+/*=(WARNING: DO NOT EDIT OR DELETE THIS SECTION!)===================*/
+/*begin!kadov{{=====================================================*/ 
+LI.kadov-h3 {
+	font-family: Arial, sans-serif;
+	font-size: 10pt;
+	font-weight: bold;
+	font-style: italic;
+	color: #3C77B3;
+	font-style: normal;
+	color: #000000;
+	letter-spacing: 0px;
+}
+/*}}end!kadov=======================================================*/ 
+
+
+
+h4 {
+	font-family: Arial, sans-serif;
+	font-size: 10pt;
+	font-weight: bold;
+	font-style: italic;
+	color: #000000;
+	letter-spacing: .2ex;
+	margin-left: 12pt;
+	margin-right: 0pt;
+	margin-top: 12pt;
+	margin-bottom: 3pt;
+	x-next-class: p;
+	x-next-type: p;
+}
+
+/*=(Generated Code)=================================================*/
+/*=(WARNING: DO NOT EDIT OR DELETE THIS SECTION!)===================*/
+/*begin!kadov{{=====================================================*/ 
+LI.kadov-h4 {
+	font-family: Arial, sans-serif;
+	font-size: 10pt;
+	font-weight: bold;
+	font-style: italic;
+	color: #000000;
+	letter-spacing: .2ex;
+}
+/*}}end!kadov=======================================================*/ 
+
+
+
+hr {
+	text-align: center;
+	color: #f0f0f0;
+	width: 100%;
+	height: 6pt;
+	margin-left: 0pt;
+	margin-right: 0pt;
+	margin-top: 0pt;
+	margin-bottom: -3pt;
+	border: none;
+}
+
+ol li {
+	list-style: decimal;
+	line-height: 12pt;
+	margin-bottom: 14pt;
+}
+
+p {
+	font-family: Verdana;
+	font-size: 8.0pt;
+	line-height: 12.0pt;
+	margin-left: 0pt;
+	margin-right: 0pt;
+	margin-top: 0pt;
+	margin-bottom: 9pt;
+}
+
+/*=(Generated Code)=================================================*/
+/*=(WARNING: DO NOT EDIT OR DELETE THIS SECTION!)===================*/
+/*begin!kadov{{=====================================================*/ 
+LI.kadov-p {
+	font-family: Verdana;
+	font-size: 8.0pt;
+	line-height: 12.0pt;
+}
+/*}}end!kadov=======================================================*/ 
+
+
+
+ul {
+	margin-top: 0pt;
+	margin-bottom: 12pt;
+	list-style-type: disc;
+	list-style-image: url(bullet.png);
+}
+
+ul p {
+	margin-bottom: 6pt;
+}
+
+/*=(Generated Code)=================================================*/
+/*=(WARNING: DO NOT EDIT OR DELETE THIS SECTION!)===================*/
+/*begin!kadov{{=====================================================*/ 
+ul LI.kadov-p {
+}
+/*}}end!kadov=======================================================*/ 
+
+
+
+/* CLASSES */
+/* CLASSES */
+/* CLASSES */
+/* CLASSES */
+/* CLASSES */
+
+div.Declaration {
+	white-space: nowrap;
+	line-height: normal;
+	x-text-tab-stops: repeat 1in;
+	font-family: "Courier New", Courier, monospace;
+	font-size: 9.0pt;
+	background-color: #eee;
+	color: #000000;
+	width: 100%;
+	margin-left: 0px;
+	margin-right: 0px;
+	margin-top: 0pt;
+	margin-bottom: 9pt;
+	padding: 2pt;
+	border-top: #c0c0c0 1px solid;
+	border-right: #c0c0c0 1px solid;
+	border-left: #c0c0c0 1px solid;
+	border-bottom: #c0c0c0 1px solid;
+}
+
+div.Declaration a:link,
+div.Declaration a:active,
+div.Declaration a:visited {
+	color: #000000;
+	x-text-underline: off;
+	x-text-overline: off;
+	x-text-line-through: off;
+	/*begin!kadov{{*/ text-decoration: none none none; /*}}end!kadov*/ 
+}
+
+div.Declaration a:hover {
+	color: #0000ff;
+	x-text-underline: off;
+	x-text-overline: off;
+	x-text-line-through: off;
+	/*begin!kadov{{*/ text-decoration: none none none; /*}}end!kadov*/ 
+}
+
+div.Declaration table p {
+	white-space: nowrap;
+	line-height: normal;
+	x-text-tab-stops: repeat 1in;
+	font-family: "Courier New", Courier, monospace;
+	font-size: 10.0pt;
+	background-color: #eee;
+	color: #000000;
+	margin-left: 0px;
+	margin-right: 0px;
+	margin-top: 0px;
+	margin-bottom: 0px;
+	padding: 0pt;
+	border-style: none;
+}
+
+/*=(Generated Code)=================================================*/
+/*=(WARNING: DO NOT EDIT OR DELETE THIS SECTION!)===================*/
+/*begin!kadov{{=====================================================*/ 
+div.Declaration table LI.kadov-p {
+	white-space: nowrap;
+	line-height: normal;
+	x-text-tab-stops: repeat 1in;
+	font-family: "Courier New", Courier, monospace;
+	font-size: 10.0pt;
+	color: #000000;
+}
+/*}}end!kadov=======================================================*/ 
+
+
+
+h2.ExampleHeading {
+	x-next-class: ExampleCode;
+	x-next-type: p;
+	white-space: nowrap;
+	margin-bottom: 3pt;
+}
+
+/*=(Generated Code)=================================================*/
+/*=(WARNING: DO NOT EDIT OR DELETE THIS SECTION!)===================*/
+/*begin!kadov{{=====================================================*/ 
+LI.kadov-h2-CExampleHeading {
+	white-space: nowrap;
+}
+/*}}end!kadov=======================================================*/ 
+
+
+
+h2.GroupHeading {
+	font-family: Arial, sans-serif;
+	font-size: 12pt;
+	font-weight: bold;
+	font-style: normal;
+	color: #999999;
+	margin-top: 18pt;
+	margin-bottom: -6pt;
+	margin-left: 0pt;
+	margin-right: 0pt;
+	x-next-class: FieldHeading;
+	x-next-type: h3;
+}
+
+/*=(Generated Code)=================================================*/
+/*=(WARNING: DO NOT EDIT OR DELETE THIS SECTION!)===================*/
+/*begin!kadov{{=====================================================*/ 
+LI.kadov-h2-CGroupHeading {
+	font-family: Arial, sans-serif;
+	font-size: 12pt;
+	font-weight: bold;
+	font-style: normal;
+	color: #999999;
+}
+/*}}end!kadov=======================================================*/ 
+
+
+
+h2.GroupHeadingLoose {
+	font-family: Arial, sans-serif;
+	font-size: 12pt;
+	font-weight: bold;
+	font-style: normal;
+	color: #999999;
+	margin-top: 18pt;
+	margin-bottom: 9pt;
+	margin-left: 0pt;
+	margin-right: 0pt;
+	x-next-class: GroupBody;
+	x-next-type: p;
+}
+
+/*=(Generated Code)=================================================*/
+/*=(WARNING: DO NOT EDIT OR DELETE THIS SECTION!)===================*/
+/*begin!kadov{{=====================================================*/ 
+LI.kadov-h2-CGroupHeadingLoose {
+	font-family: Arial, sans-serif;
+	font-size: 12pt;
+	font-weight: bold;
+	font-style: normal;
+	color: #999999;
+}
+/*}}end!kadov=======================================================*/ 
+
+
+
+h2.GroupSubHeading {
+	font-family: Arial, sans-serif;
+	font-size: 12pt;
+	font-weight: bold;
+	font-style: italic;
+	color: #aa9999;
+	margin-top: 18pt;
+	margin-bottom: -6pt;
+	margin-left: 6pt;
+	margin-right: 0pt;
+	x-next-class: FieldHeading;
+	x-next-type: h3;
+}
+
+/*=(Generated Code)=================================================*/
+/*=(WARNING: DO NOT EDIT OR DELETE THIS SECTION!)===================*/
+/*begin!kadov{{=====================================================*/ 
+LI.kadov-h2-CGroupSubHeading {
+	font-family: Arial, sans-serif;
+	font-size: 12pt;
+	font-weight: bold;
+	font-style: italic;
+	color: #aa9999;
+}
+/*}}end!kadov=======================================================*/ 
+
+
+
+h2.H2Tight {
+	margin-bottom: -6pt;
+}
+
+/*=(Generated Code)=================================================*/
+/*=(WARNING: DO NOT EDIT OR DELETE THIS SECTION!)===================*/
+/*begin!kadov{{=====================================================*/ 
+LI.kadov-h2-CH2Tight {
+}
+/*}}end!kadov=======================================================*/ 
+
+
+
+h2.HowDoIHeading {
+	font-family: Arial, sans-serif;
+	font-size: 16.0pt;
+	letter-spacing: .2ex;
+	color: #000000;
+	margin-left: 0pt;
+	margin-right: 0pt;
+	margin-top: 18pt;
+	margin-bottom: 3pt;
+	x-next-class: Normal;
+	x-next-type: p;
+}
+
+/*=(Generated Code)=================================================*/
+/*=(WARNING: DO NOT EDIT OR DELETE THIS SECTION!)===================*/
+/*begin!kadov{{=====================================================*/ 
+LI.kadov-h2-CHowDoIHeading {
+	font-family: Arial, sans-serif;
+	font-size: 16.0pt;
+	letter-spacing: .2ex;
+	color: #000000;
+}
+/*}}end!kadov=======================================================*/ 
+
+
+
+h2.ListHeading {
+	margin-bottom: 9pt;
+	x-next-class: ListBody;
+	x-next-type: p;
+	white-space: nowrap;
+}
+
+/*=(Generated Code)=================================================*/
+/*=(WARNING: DO NOT EDIT OR DELETE THIS SECTION!)===================*/
+/*begin!kadov{{=====================================================*/ 
+LI.kadov-h2-CListHeading {
+	white-space: nowrap;
+}
+/*}}end!kadov=======================================================*/ 
+
+
+
+h2.TabHeading {
+	font-family: Arial, sans-serif;
+	font-size: 15.0pt;
+	letter-spacing: normal;
+	background-color: #e4e4e4;
+	color: #999;
+	color: #9c9c9c;
+	margin-left: -8pt;
+	margin-right: -8pt;
+	margin-top: 18pt;
+	margin-bottom: 12pt;
+	padding-left: 8pt;
+	padding-top: 4px;
+	padding-bottom: 4px;
+	border-top: 1px solid #999;
+	border-bottom: 1px solid #999;
+	border-left: none;
+	border-right: none;
+}
+
+/*=(Generated Code)=================================================*/
+/*=(WARNING: DO NOT EDIT OR DELETE THIS SECTION!)===================*/
+/*begin!kadov{{=====================================================*/ 
+LI.kadov-h2-CTabHeading {
+	font-family: Arial, sans-serif;
+	font-size: 15.0pt;
+	letter-spacing: normal;
+	color: #999;
+	color: #9c9c9c;
+}
+/*}}end!kadov=======================================================*/ 
+
+
+
+h2.VarHeading {
+	font-family: Arial;
+	font-size: 10pt;
+	letter-spacing: 0px;
+	margin-left: 12pt;
+	margin-right: 0pt;
+	margin-top: 18pt;
+	margin-bottom: 3pt;
+	x-next-class: VarBody;
+	x-next-type: p;
+	white-space: nowrap;
+}
+
+/*=(Generated Code)=================================================*/
+/*=(WARNING: DO NOT EDIT OR DELETE THIS SECTION!)===================*/
+/*begin!kadov{{=====================================================*/ 
+LI.kadov-h2-CVarHeading {
+	font-family: Arial;
+	font-size: 10pt;
+	letter-spacing: 0px;
+	white-space: nowrap;
+}
+/*}}end!kadov=======================================================*/ 
+
+
+
+h3.ErrHeading {
+	font-family: Arial, sans-serif;
+	font-size: 10pt;
+	font-style: normal;
+	color: #000000;
+	letter-spacing: 0px;
+	margin-left: 12pt;
+	margin-right: 0pt;
+	margin-top: 18pt;
+	margin-bottom: 3pt;
+	x-next-class: ErrBody;
+	x-next-type: p;
+	white-space: nowrap;
+}
+
+/*=(Generated Code)=================================================*/
+/*=(WARNING: DO NOT EDIT OR DELETE THIS SECTION!)===================*/
+/*begin!kadov{{=====================================================*/ 
+LI.kadov-h3-CErrHeading {
+	font-family: Arial, sans-serif;
+	font-size: 10pt;
+	font-style: normal;
+	color: #000000;
+	letter-spacing: 0px;
+	white-space: nowrap;
+}
+/*}}end!kadov=======================================================*/ 
+
+
+
+h3.FieldHeading {
+	font-family: Arial, sans-serif;
+	font-size: 10pt;
+	font-weight: bold;
+	font-style: italic;
+	color: #3C77B3;
+	letter-spacing: 0px;
+	margin-left: 12pt;
+	margin-right: 0pt;
+	margin-top: 18pt;
+	margin-bottom: 3pt;
+	x-next-class: FieldBody;
+	x-next-type: p;
+}
+
+/*=(Generated Code)=================================================*/
+/*=(WARNING: DO NOT EDIT OR DELETE THIS SECTION!)===================*/
+/*begin!kadov{{=====================================================*/ 
+LI.kadov-h3-CFieldHeading {
+	font-family: Arial, sans-serif;
+	font-size: 10pt;
+	font-weight: bold;
+	font-style: italic;
+	color: #3C77B3;
+	letter-spacing: 0px;
+}
+/*}}end!kadov=======================================================*/ 
+
+
+
+h3.FieldSubHeading {
+	font-family: Arial, sans-serif;
+	font-size: 10pt;
+	font-weight: bold;
+	font-style: italic;
+	color: #3C77B3;
+	letter-spacing: 0px;
+	margin-left: 32pt;
+	margin-right: 0pt;
+	margin-top: 18pt;
+	margin-bottom: 3pt;
+	x-next-class: FieldSubBody;
+	x-next-type: p;
+}
+
+/*=(Generated Code)=================================================*/
+/*=(WARNING: DO NOT EDIT OR DELETE THIS SECTION!)===================*/
+/*begin!kadov{{=====================================================*/ 
+LI.kadov-h3-CFieldSubHeading {
+	font-family: Arial, sans-serif;
+	font-size: 10pt;
+	font-weight: bold;
+	font-style: italic;
+	color: #3C77B3;
+	letter-spacing: 0px;
+}
+/*}}end!kadov=======================================================*/ 
+
+
+
+h3.ParameterHeading {
+	font-family: Arial, sans-serif;
+	margin-left: 12pt;
+	margin-right: 0pt;
+	margin-top: 18pt;
+	margin-bottom: 3pt;
+	font-size: 9pt;
+	font-weight: bold;
+	font-style: italic;
+	letter-spacing: .2ex;
+	color: #3C77B3;
+	x-next-class: ParameterBody;
+	x-next-type: p;
+}
+
+/*=(Generated Code)=================================================*/
+/*=(WARNING: DO NOT EDIT OR DELETE THIS SECTION!)===================*/
+/*begin!kadov{{=====================================================*/ 
+LI.kadov-h3-CParameterHeading {
+	font-family: Arial, sans-serif;
+	font-size: 9pt;
+	font-weight: bold;
+	font-style: italic;
+	letter-spacing: .2ex;
+	color: #3C77B3;
+}
+/*}}end!kadov=======================================================*/ 
+
+
+
+h4.OptionHeading {
+	font-family: Verdana, sans-serif;
+	font-size: 8.0pt;
+	font-weight: bold;
+	font-style: normal;
+	line-height: 12.0pt;
+	color: #000000;
+	margin-left: 32.0pt;
+	margin-right: 0pt;
+	margin-top: 12pt;
+	margin-bottom: 0;
+	x-next-class: OptionBody;
+	x-next-type: p;
+}
+
+/*=(Generated Code)=================================================*/
+/*=(WARNING: DO NOT EDIT OR DELETE THIS SECTION!)===================*/
+/*begin!kadov{{=====================================================*/ 
+LI.kadov-h4-COptionHeading {
+	font-family: Verdana, sans-serif;
+	font-size: 8.0pt;
+	font-weight: bold;
+	font-style: normal;
+	line-height: 12.0pt;
+	color: #000000;
+}
+/*}}end!kadov=======================================================*/ 
+
+
+
+h4.OptionSubHeading {
+	font-family: Verdana, sans-serif;
+	font-size: 8.0pt;
+	font-weight: bold;
+	font-style: normal;
+	line-height: 12.0pt;
+	color: #000000;
+	margin-left: 52.0pt;
+	margin-right: 0pt;
+	margin-top: 12pt;
+	margin-bottom: 0;
+	x-next-class: OptionSubBody;
+	x-next-type: p;
+}
+
+/*=(Generated Code)=================================================*/
+/*=(WARNING: DO NOT EDIT OR DELETE THIS SECTION!)===================*/
+/*begin!kadov{{=====================================================*/ 
+LI.kadov-h4-COptionSubHeading {
+	font-family: Verdana, sans-serif;
+	font-size: 8.0pt;
+	font-weight: bold;
+	font-style: normal;
+	line-height: 12.0pt;
+	color: #000000;
+}
+/*}}end!kadov=======================================================*/ 
+
+
+
+P.BodyCode {
+	white-space: nowrap;
+	font-family: "Courier New", Courier, Arial, sans-serif;
+	font-size: 10pt;
+	font-weight: normal;
+	font-style: normal;
+	letter-spacing: normal;
+	color: #000000;
+	background-color: #eee;
+	background-color: #f9f9f9;
+	margin-top: -6pt;
+	margin-bottom: 9pt;
+	margin-left: 0pt;
+	margin-right: 0pt;
+	padding: 10px;
+	border: 1px dotted #ccc;
+	x-next-type: p;
+}
+
+/*=(Generated Code)=================================================*/
+/*=(WARNING: DO NOT EDIT OR DELETE THIS SECTION!)===================*/
+/*begin!kadov{{=====================================================*/ 
+LI.kadov-P-CBodyCode {
+	white-space: nowrap;
+	font-family: "Courier New", Courier, Arial, sans-serif;
+	font-size: 10pt;
+	font-weight: normal;
+	font-style: normal;
+	letter-spacing: normal;
+	color: #000000;
+}
+/*}}end!kadov=======================================================*/ 
+
+
+
+p.Caption {
+	font-size: 7pt;
+	letter-spacing: .5pt;
+	line-height: 14pt;
+	text-align: center;
+	margin-bottom: 0pt;
+	x-next-class: ;
+	x-next-type: P;
+}
+
+/*=(Generated Code)=================================================*/
+/*=(WARNING: DO NOT EDIT OR DELETE THIS SECTION!)===================*/
+/*begin!kadov{{=====================================================*/ 
+LI.kadov-p-CCaption {
+	font-size: 7pt;
+	letter-spacing: .5pt;
+	line-height: 14pt;
+	text-align: center;
+}
+/*}}end!kadov=======================================================*/ 
+
+
+
+P.Code {
+	white-space: nowrap;
+	font-family: "Courier New", Courier, Arial, sans-serif;
+	font-size: 10pt;
+	font-weight: normal;
+	font-style: normal;
+	letter-spacing: normal;
+	color: #000000;
+	background-color: #ffffff;
+	margin-bottom: 9pt;
+	margin-left: 0pt;
+	margin-right: 0pt;
+	padding: 00px;
+	x-next-type: p;
+}
+
+/*=(Generated Code)=================================================*/
+/*=(WARNING: DO NOT EDIT OR DELETE THIS SECTION!)===================*/
+/*begin!kadov{{=====================================================*/ 
+LI.kadov-P-CCode {
+	white-space: nowrap;
+	font-family: "Courier New", Courier, Arial, sans-serif;
+	font-size: 10pt;
+	font-weight: normal;
+	font-style: normal;
+	letter-spacing: normal;
+	color: #000000;
+}
+/*}}end!kadov=======================================================*/ 
+
+
+
+p.ErrBody {
+	margin-left: 12pt;
+	margin-right: 0pt;
+	margin-bottom: 3pt;
+	x-next-class: ErrBody;
+	x-next-type: p;
+	white-space: nowrap;
+}
+
+/*=(Generated Code)=================================================*/
+/*=(WARNING: DO NOT EDIT OR DELETE THIS SECTION!)===================*/
+/*begin!kadov{{=====================================================*/ 
+LI.kadov-p-CErrBody {
+	white-space: nowrap;
+}
+/*}}end!kadov=======================================================*/ 
+
+
+
+p.ErrCode {
+	white-space: nowrap;
+	font-family: "Courier New", Courier, Arial, sans-serif;
+	font-size: 10pt;
+	font-weight: normal;
+	font-style: normal;
+	letter-spacing: normal;
+	color: #052;
+	color: #000000;
+	background-color: #eee;
+	background-color: #f9f9f9;
+	margin-top: 9pt;
+	margin-bottom: 9pt;
+	margin-left: 12pt;
+	margin-right: 0pt;
+	padding: 10px;
+	border: 1px dotted #ccc;
+	x-next-class: ErrBody;
+	x-next-type: p;
+}
+
+/*=(Generated Code)=================================================*/
+/*=(WARNING: DO NOT EDIT OR DELETE THIS SECTION!)===================*/
+/*begin!kadov{{=====================================================*/ 
+LI.kadov-p-CErrCode {
+	white-space: nowrap;
+	font-family: "Courier New", Courier, Arial, sans-serif;
+	font-size: 10pt;
+	font-weight: normal;
+	font-style: normal;
+	letter-spacing: normal;
+	color: #052;
+	color: #000000;
+}
+/*}}end!kadov=======================================================*/ 
+
+
+
+p.ErrNote {
+	font-family: Verdana;
+	font-size: 8.0pt;
+	line-height: 12.0pt;
+	color: #000000;
+	background-color: #ffffe8;
+	margin-top: 9pt;
+	margin-bottom: 9pt;
+	margin-left: 12pt;
+	margin-right: 5%;
+	padding-left: 2pt;
+	padding-right: 2pt;
+	padding-top: 1pt;
+	padding-bottom: 2pt;
+	x-next-class: ErrBody;
+	x-next-type: p;
+}
+
+/*=(Generated Code)=================================================*/
+/*=(WARNING: DO NOT EDIT OR DELETE THIS SECTION!)===================*/
+/*begin!kadov{{=====================================================*/ 
+LI.kadov-p-CErrNote {
+	font-family: Verdana;
+	font-size: 8.0pt;
+	line-height: 12.0pt;
+	color: #000000;
+}
+/*}}end!kadov=======================================================*/ 
+
+
+
+p.ErrTip {
+	font-family: Verdana;
+	font-size: 8.0pt;
+	line-height: 12.0pt;
+	color: #000000;
+	background-color: #EAF4E8;
+	margin-top: 9pt;
+	margin-bottom: 9pt;
+	margin-left: 12pt;
+	margin-right: 5%;
+	padding-left: 2pt;
+	padding-right: 2pt;
+	padding-top: 1pt;
+	padding-bottom: 2pt;
+	x-next-class: ErrBody;
+	x-next-type: p;
+}
+
+/*=(Generated Code)=================================================*/
+/*=(WARNING: DO NOT EDIT OR DELETE THIS SECTION!)===================*/
+/*begin!kadov{{=====================================================*/ 
+LI.kadov-p-CErrTip {
+	font-family: Verdana;
+	font-size: 8.0pt;
+	line-height: 12.0pt;
+	color: #000000;
+}
+/*}}end!kadov=======================================================*/ 
+
+
+
+P.ExampleBody {
+	margin-right: 0pt;
+	margin-bottom: 9pt;
+	margin-left: 12px;
+}
+
+/*=(Generated Code)=================================================*/
+/*=(WARNING: DO NOT EDIT OR DELETE THIS SECTION!)===================*/
+/*begin!kadov{{=====================================================*/ 
+LI.kadov-P-CExampleBody {
+}
+/*}}end!kadov=======================================================*/ 
+
+
+
+p.ExampleCode {
+	white-space: nowrap;
+	font-family: "Courier New", Courier, Arial, sans-serif;
+	font-size: 10pt;
+	font-weight: normal;
+	font-style: normal;
+	letter-spacing: normal;
+	color: #052;
+	background-color: #f9f9f9;
+	margin-top: 6pt;
+	margin-bottom: 3pt;
+	margin-left: 0pt;
+	margin-right: 0pt;
+	padding: 10px;
+	border: 1px dotted #ccc;
+	x-next-class: ExampleBody;
+	x-next-type: p;
+}
+
+/*=(Generated Code)=================================================*/
+/*=(WARNING: DO NOT EDIT OR DELETE THIS SECTION!)===================*/
+/*begin!kadov{{=====================================================*/ 
+LI.kadov-p-CExampleCode {
+	white-space: nowrap;
+	font-family: "Courier New", Courier, Arial, sans-serif;
+	font-size: 10pt;
+	font-weight: normal;
+	font-style: normal;
+	letter-spacing: normal;
+	color: #052;
+}
+/*}}end!kadov=======================================================*/ 
+
+
+
+p.ExampleNote {
+	font-family: Verdana;
+	font-size: 8.0pt;
+	line-height: 12.0pt;
+	color: #000000;
+	background-color: #ffffe8;
+	margin-top: 0pt;
+	margin-bottom: 9pt;
+	margin-left: 10px;
+	margin-right: 5%;
+	padding-left: 2pt;
+	padding-right: 2pt;
+	padding-top: 1pt;
+	padding-bottom: 2pt;
+	x-next-class: ;
+	x-next-type: p;
+}
+
+/*=(Generated Code)=================================================*/
+/*=(WARNING: DO NOT EDIT OR DELETE THIS SECTION!)===================*/
+/*begin!kadov{{=====================================================*/ 
+LI.kadov-p-CExampleNote {
+	font-family: Verdana;
+	font-size: 8.0pt;
+	line-height: 12.0pt;
+	color: #000000;
+}
+/*}}end!kadov=======================================================*/ 
+
+
+
+p.ExampleTip {
+	font-family: Verdana;
+	font-size: 8.0pt;
+	line-height: 12.0pt;
+	color: #000000;
+	background-color: #EAF4E8;
+	margin-top: 0pt;
+	margin-bottom: 9pt;
+	margin-left: 10px;
+	margin-right: 5%;
+	padding-left: 2pt;
+	padding-right: 2pt;
+	padding-top: 1pt;
+	padding-bottom: 2pt;
+	x-next-class: FieldBody;
+	x-next-type: p;
+}
+
+/*=(Generated Code)=================================================*/
+/*=(WARNING: DO NOT EDIT OR DELETE THIS SECTION!)===================*/
+/*begin!kadov{{=====================================================*/ 
+LI.kadov-p-CExampleTip {
+	font-family: Verdana;
+	font-size: 8.0pt;
+	line-height: 12.0pt;
+	color: #000000;
+}
+/*}}end!kadov=======================================================*/ 
+
+
+
+p.FieldBody {
+	font-family: Verdana;
+	font-size: 8.0pt;
+	line-height: 12.0pt;
+	margin-top: 0pt;
+	margin-bottom: 9pt;
+	margin-left: 12pt;
+	margin-right: 0pt;
+	x-next-class: FieldBody;
+	x-next-type: p;
+}
+
+/*=(Generated Code)=================================================*/
+/*=(WARNING: DO NOT EDIT OR DELETE THIS SECTION!)===================*/
+/*begin!kadov{{=====================================================*/ 
+LI.kadov-p-CFieldBody {
+	font-family: Verdana;
+	font-size: 8.0pt;
+	line-height: 12.0pt;
+}
+/*}}end!kadov=======================================================*/ 
+
+
+
+p.FieldSubBody {
+	font-family: Verdana;
+	font-size: 8.0pt;
+	line-height: 12.0pt;
+	margin-top: 0pt;
+	margin-bottom: 9pt;
+	margin-left: 32pt;
+	margin-right: 0pt;
+	x-next-class: FieldSubBody;
+	x-next-type: p;
+}
+
+/*=(Generated Code)=================================================*/
+/*=(WARNING: DO NOT EDIT OR DELETE THIS SECTION!)===================*/
+/*begin!kadov{{=====================================================*/ 
+LI.kadov-p-CFieldSubBody {
+	font-family: Verdana;
+	font-size: 8.0pt;
+	line-height: 12.0pt;
+}
+/*}}end!kadov=======================================================*/ 
+
+
+
+p.FieldNote {
+	font-family: Verdana;
+	font-size: 8.0pt;
+	line-height: 12.0pt;
+	color: #000000;
+	background-color: #ffffe8;
+	margin-top: 0pt;
+	margin-bottom: 9pt;
+	margin-left: 12pt;
+	margin-right: 5%;
+	padding-left: 2pt;
+	padding-right: 2pt;
+	padding-top: 1pt;
+	padding-bottom: 2pt;
+	x-next-class: FieldBody;
+	x-next-type: p;
+}
+
+/*=(Generated Code)=================================================*/
+/*=(WARNING: DO NOT EDIT OR DELETE THIS SECTION!)===================*/
+/*begin!kadov{{=====================================================*/ 
+LI.kadov-p-CFieldNote {
+	font-family: Verdana;
+	font-size: 8.0pt;
+	line-height: 12.0pt;
+	color: #000000;
+}
+/*}}end!kadov=======================================================*/ 
+
+
+
+p.FieldSubNote {
+	font-family: Verdana;
+	font-size: 8.0pt;
+	line-height: 12.0pt;
+	color: #000000;
+	background-color: #ffffe8;
+	margin-top: 0pt;
+	margin-bottom: 9pt;
+	margin-left: 32pt;
+	margin-right: 5%;
+	padding-left: 2pt;
+	padding-right: 2pt;
+	padding-top: 1pt;
+	padding-bottom: 2pt;
+	x-next-class: FieldBody;
+	x-next-type: p;
+}
+
+/*=(Generated Code)=================================================*/
+/*=(WARNING: DO NOT EDIT OR DELETE THIS SECTION!)===================*/
+/*begin!kadov{{=====================================================*/ 
+LI.kadov-p-CFieldSubNote {
+	font-family: Verdana;
+	font-size: 8.0pt;
+	line-height: 12.0pt;
+	color: #000000;
+}
+/*}}end!kadov=======================================================*/ 
+
+
+
+p.FieldSubTip {
+	font-family: Verdana;
+	font-size: 8.0pt;
+	line-height: 12.0pt;
+	color: #000000;
+	background-color: #EAF4E8;
+	margin-top: 0pt;
+	margin-bottom: 9pt;
+	margin-left: 32pt;
+	margin-right: 5%;
+	padding-left: 2pt;
+	padding-right: 2pt;
+	padding-top: 1pt;
+	padding-bottom: 2pt;
+	x-next-class: FieldBody;
+	x-next-type: p;
+}
+
+/*=(Generated Code)=================================================*/
+/*=(WARNING: DO NOT EDIT OR DELETE THIS SECTION!)===================*/
+/*begin!kadov{{=====================================================*/ 
+LI.kadov-p-CFieldSubTip {
+	font-family: Verdana;
+	font-size: 8.0pt;
+	line-height: 12.0pt;
+	color: #000000;
+}
+/*}}end!kadov=======================================================*/ 
+
+
+
+p.FieldTip {
+	font-family: Verdana;
+	font-size: 8.0pt;
+	line-height: 12.0pt;
+	color: #000000;
+	background-color: #EAF4E8;
+	margin-top: 0pt;
+	margin-bottom: 9pt;
+	margin-left: 12pt;
+	margin-right: 5%;
+	padding-left: 2pt;
+	padding-right: 2pt;
+	padding-top: 1pt;
+	padding-bottom: 2pt;
+	x-next-class: FieldBody;
+	x-next-type: p;
+}
+
+/*=(Generated Code)=================================================*/
+/*=(WARNING: DO NOT EDIT OR DELETE THIS SECTION!)===================*/
+/*begin!kadov{{=====================================================*/ 
+LI.kadov-p-CFieldTip {
+	font-family: Verdana;
+	font-size: 8.0pt;
+	line-height: 12.0pt;
+	color: #000000;
+}
+/*}}end!kadov=======================================================*/ 
+
+
+
+p.FieldWarning {
+	font-family: Verdana;
+	font-size: 8.0pt;
+	line-height: 12.0pt;
+	color: #000000;
+	background-color: #FDF0E8;
+	margin-top: 0pt;
+	margin-bottom: 9pt;
+	margin-left: 12pt;
+	margin-right: 5%;
+	padding-left: 2pt;
+	padding-right: 2pt;
+	padding-top: 1pt;
+	padding-bottom: 2pt;
+	border: 1px dotted #ff0000;
+	border: none;
+	x-next-class: FieldBody;
+	x-next-type: p;
+}
+
+/*=(Generated Code)=================================================*/
+/*=(WARNING: DO NOT EDIT OR DELETE THIS SECTION!)===================*/
+/*begin!kadov{{=====================================================*/ 
+LI.kadov-p-CFieldWarning {
+	font-family: Verdana;
+	font-size: 8.0pt;
+	line-height: 12.0pt;
+	color: #000000;
+}
+/*}}end!kadov=======================================================*/ 
+
+
+
+p.GroupBody {
+	margin-left: 12pt;
+	margin-right: 0pt;
+	margin-top: 0pt;
+	margin-bottom: 9pt;
+	x-next-class: GroupBody;
+	x-next-type: p;
+}
+
+/*=(Generated Code)=================================================*/
+/*=(WARNING: DO NOT EDIT OR DELETE THIS SECTION!)===================*/
+/*begin!kadov{{=====================================================*/ 
+LI.kadov-p-CGroupBody {
+}
+/*}}end!kadov=======================================================*/ 
+
+
+
+p.ListBody {
+	margin-left: 12pt;
+	margin-right: 0pt;
+	margin-bottom: 3pt;
+	x-next-class: ListBody;
+	x-next-type: p;
+}
+
+/*=(Generated Code)=================================================*/
+/*=(WARNING: DO NOT EDIT OR DELETE THIS SECTION!)===================*/
+/*begin!kadov{{=====================================================*/ 
+LI.kadov-p-CListBody {
+}
+/*}}end!kadov=======================================================*/ 
+
+
+
+p.TOC1 {
+	margin-top: 12pt;
+	margin-bottom: 3pt;
+	margin-left: 12pt;
+	margin-right: 0pt;
+	x-next-class: TOC2;
+	x-next-type: p;
+	white-space: nowrap;
+}
+
+/*=(Generated Code)=================================================*/
+/*=(WARNING: DO NOT EDIT OR DELETE THIS SECTION!)===================*/
+/*begin!kadov{{=====================================================*/ 
+LI.kadov-p-CTOC1 {
+	white-space: nowrap;
+}
+/*}}end!kadov=======================================================*/ 
+
+
+
+p.TOC2 {
+	margin-bottom: 3pt;
+	margin-left: 28pt;
+	margin-right: 0pt;
+	x-next-class: TOC2;
+	x-next-type: p;
+	white-space: nowrap;
+}
+
+/*=(Generated Code)=================================================*/
+/*=(WARNING: DO NOT EDIT OR DELETE THIS SECTION!)===================*/
+/*begin!kadov{{=====================================================*/ 
+LI.kadov-p-CTOC2 {
+	white-space: nowrap;
+}
+/*}}end!kadov=======================================================*/ 
+
+
+
+p.TOC3 {
+	font-style: italic;
+	margin-bottom: 3pt;
+	margin-left: 46pt;
+	margin-right: 0pt;
+	x-next-class: TOC3;
+	x-next-type: p;
+	white-space: nowrap;
+}
+
+/*=(Generated Code)=================================================*/
+/*=(WARNING: DO NOT EDIT OR DELETE THIS SECTION!)===================*/
+/*begin!kadov{{=====================================================*/ 
+LI.kadov-p-CTOC3 {
+	font-style: italic;
+	white-space: nowrap;
+}
+/*}}end!kadov=======================================================*/ 
+
+
+
+p.NumBody {
+	margin-left: 30pt;
+	margin-right: 0pt;
+	margin-top: 0pt;
+	margin-bottom: 3pt;
+	x-next-class: ErrBody;
+	x-next-type: p;
+}
+
+/*=(Generated Code)=================================================*/
+/*=(WARNING: DO NOT EDIT OR DELETE THIS SECTION!)===================*/
+/*begin!kadov{{=====================================================*/ 
+LI.kadov-p-CNumBody {
+}
+/*}}end!kadov=======================================================*/ 
+
+
+
+p.VarBody {
+	margin-left: 12pt;
+	margin-right: 0pt;
+	margin-bottom: 3pt;
+	x-next-class: VarBody;
+	x-next-type: p;
+}
+
+/*=(Generated Code)=================================================*/
+/*=(WARNING: DO NOT EDIT OR DELETE THIS SECTION!)===================*/
+/*begin!kadov{{=====================================================*/ 
+LI.kadov-p-CVarBody {
+}
+/*}}end!kadov=======================================================*/ 
+
+
+
+p.VarCode {
+	white-space: nowrap;
+	font-family: "Courier New", Courier, Arial, sans-serif;
+	font-size: 10pt;
+	font-weight: normal;
+	font-style: normal;
+	letter-spacing: normal;
+	color: #052;
+	color: #000000;
+	background-color: #eee;
+	background-color: #f9f9f9;
+	margin-top: 9pt;
+	margin-bottom: 9pt;
+	margin-left: 12pt;
+	margin-right: 0pt;
+	padding: 10px;
+	border: 1px dotted #ccc;
+	x-next-class: VarBody;
+	x-next-type: p;
+}
+
+/*=(Generated Code)=================================================*/
+/*=(WARNING: DO NOT EDIT OR DELETE THIS SECTION!)===================*/
+/*begin!kadov{{=====================================================*/ 
+LI.kadov-p-CVarCode {
+	white-space: nowrap;
+	font-family: "Courier New", Courier, Arial, sans-serif;
+	font-size: 10pt;
+	font-weight: normal;
+	font-style: normal;
+	letter-spacing: normal;
+	color: #052;
+	color: #000000;
+}
+/*}}end!kadov=======================================================*/ 
+
+
+
+p.VarNote {
+	font-family: Verdana;
+	font-size: 8.0pt;
+	line-height: 12.0pt;
+	color: #000000;
+	background-color: #ffffe8;
+	margin-top: 9pt;
+	margin-bottom: 9pt;
+	margin-left: 12pt;
+	margin-right: 5%;
+	padding-left: 2pt;
+	padding-right: 2pt;
+	padding-top: 1pt;
+	padding-bottom: 2pt;
+	x-next-class: VarBody;
+	x-next-type: p;
+}
+
+/*=(Generated Code)=================================================*/
+/*=(WARNING: DO NOT EDIT OR DELETE THIS SECTION!)===================*/
+/*begin!kadov{{=====================================================*/ 
+LI.kadov-p-CVarNote {
+	font-family: Verdana;
+	font-size: 8.0pt;
+	line-height: 12.0pt;
+	color: #000000;
+}
+/*}}end!kadov=======================================================*/ 
+
+
+
+p.VarTip {
+	font-family: Verdana;
+	font-size: 8.0pt;
+	line-height: 12.0pt;
+	color: #000000;
+	background-color: #EAF4E8;
+	margin-top: 9pt;
+	margin-bottom: 9pt;
+	margin-left: 12pt;
+	margin-right: 5%;
+	padding-left: 2pt;
+	padding-right: 2pt;
+	padding-top: 1pt;
+	padding-bottom: 2pt;
+	x-next-class: VarBody;
+	x-next-type: p;
+}
+
+/*=(Generated Code)=================================================*/
+/*=(WARNING: DO NOT EDIT OR DELETE THIS SECTION!)===================*/
+/*begin!kadov{{=====================================================*/ 
+LI.kadov-p-CVarTip {
+	font-family: Verdana;
+	font-size: 8.0pt;
+	line-height: 12.0pt;
+	color: #000000;
+}
+/*}}end!kadov=======================================================*/ 
+
+
+
+p.NavLocal {
+	white-space: nowrap;
+	text-indent: -4px;
+	font-family: Verdana, Arial, sans-serif;
+	font-weight: bold;
+	font-style: normal;
+	font-size: 10pt;
+	font-size: 13px;
+	background-color: #e4e4e4;
+	margin-top: 0px;
+	margin-bottom: 12pt;
+	padding-top: 4px;
+	padding-bottom: 4px;
+	padding-left: 0px;
+	padding-right: 0px;
+	border-bottom: 1px solid #e4e4e4;
+	x-next-class: ;
+	x-next-type: p;
+}
+
+/*=(Generated Code)=================================================*/
+/*=(WARNING: DO NOT EDIT OR DELETE THIS SECTION!)===================*/
+/*begin!kadov{{=====================================================*/ 
+LI.kadov-p-CNavLocal {
+	white-space: nowrap;
+	text-indent: -4px;
+	font-family: Verdana, Arial, sans-serif;
+	font-weight: bold;
+	font-style: normal;
+	font-size: 10pt;
+	font-size: 13px;
+}
+/*}}end!kadov=======================================================*/ 
+
+
+
+/* note:
+
+	Internet Explorer is broken on inline elements with horizontal padding.
+	I had something like this:
+
+	<p class=NavLocal><span class=Here>Overview</span>
+
+	...with span.Here having 4px of padding-left. The problem is, when
+	you resize the IE window narrower than the width of the paragraph
+	(auto, nowrap), it collapses the padding on the left and inserts
+	about one line-height above the element. GRR.
+
+	Oddly enough, if the first element has no extra padding-left, it
+	renders fine. After a couple days of "workaround hell," I came up
+	with two ways that seem to work in all current browsers. One is to
+	remove the padding and put &nbsp;&nbsp; on either side of the
+	content in each element within p.NavLocal. RoboHELP makes it pretty
+	hard to maintain that, though, and it makes adding and removing
+	links a royal PITA. The other way is to just put a single &nbsp; at
+	the start of the paragraph, and then shift the paragraph's text left
+	by the width of one space. This opens up the potential for font
+	rendering issues, but using a pixel size for the font should fix
+	that well enough, and seems to work 100% in my testing. To be safe,
+	I'm enclosing the &nbsp; in a span tag so I can remove it later with
+	a single "display: none" if I have to. Here's the new version:
+
+	<p class=NavLocal><span class=wab>&nbsp;</span><span class=Here>Overview</span>
+
+*/
+
+p.NavLocal a {
+	font-weight: normal;
+	font-weight: bold;
+	font-style: normal;
+	color: #8f8f9f;
+	background-color: #eee;
+	margin-top: 0px;
+	margin-bottom: 0px;
+	padding-top: 4px;
+	padding-bottom: 4px;
+	padding-left: 8px;
+	padding-right: 8px;
+	border-top: none;
+	border-bottom: 1px solid #ddd;
+	border-left: none;
+	border-right: #ddd 1px solid;
+}
+
+/* note: would need to expand border styles for netscape 4...border-right etc. won't work */
+
+p.NavLocal a:link,
+p.NavLocal a:active,
+p.NavLocal a:visited {
+	color: #8f8f9f;
+	x-text-underline: off;
+	x-text-overline: off;
+	x-text-line-through: off;
+	/*begin!kadov{{*/ text-decoration: none none none; /*}}end!kadov*/ 
+}
+
+p.NavLocal a:hover {
+	color: #0000ff;
+	x-text-underline: off;
+	x-text-overline: off;
+	x-text-line-through: off;
+	/*begin!kadov{{*/ text-decoration: none none none; /*}}end!kadov*/ 
+}
+
+p.Note {
+	font-family: Verdana;
+	font-size: 8.0pt;
+	line-height: 12.0pt;
+	color: #000000;
+	background-color: #ffffe8;
+	margin-top: 0pt;
+	margin-bottom: 9pt;
+	margin-left: 0pt;
+	margin-right: 5%;
+	padding-left: 2pt;
+	padding-right: 2pt;
+	padding-top: 1pt;
+	padding-bottom: 2pt;
+	x-next-class: ;
+	x-next-type: p;
+}
+
+/*=(Generated Code)=================================================*/
+/*=(WARNING: DO NOT EDIT OR DELETE THIS SECTION!)===================*/
+/*begin!kadov{{=====================================================*/ 
+LI.kadov-p-CNote {
+	font-family: Verdana;
+	font-size: 8.0pt;
+	line-height: 12.0pt;
+	color: #000000;
+}
+/*}}end!kadov=======================================================*/ 
+
+
+
+p.NumberedList {
+	list-style: decimal;
+	line-height: 12pt;
+	margin-bottom: 14pt;
+}
+
+/*=(Generated Code)=================================================*/
+/*=(WARNING: DO NOT EDIT OR DELETE THIS SECTION!)===================*/
+/*begin!kadov{{=====================================================*/ 
+LI.kadov-p-CNumberedList {
+	list-style: decimal;
+	line-height: 12pt;
+}
+/*}}end!kadov=======================================================*/ 
+
+
+
+p.NumCode {
+	white-space: nowrap;
+	font-family: "Courier New", Courier, Arial, sans-serif;
+	font-size: 10pt;
+	font-weight: normal;
+	font-style: normal;
+	letter-spacing: normal;
+	color: #000000;
+	background-color: #f9f9f9;
+	margin-top: -6pt;
+	margin-bottom: 9pt;
+	margin-left: 28pt;
+	margin-right: 0pt;
+	padding: 10px;
+	border: 1px dotted #ccc;
+	x-next-type: p;
+}
+
+/*=(Generated Code)=================================================*/
+/*=(WARNING: DO NOT EDIT OR DELETE THIS SECTION!)===================*/
+/*begin!kadov{{=====================================================*/ 
+LI.kadov-p-CNumCode {
+	white-space: nowrap;
+	font-family: "Courier New", Courier, Arial, sans-serif;
+	font-size: 10pt;
+	font-weight: normal;
+	font-style: normal;
+	letter-spacing: normal;
+	color: #000000;
+}
+/*}}end!kadov=======================================================*/ 
+
+
+
+p.NumNote {
+	font-family: Verdana;
+	font-size: 8.0pt;
+	line-height: 12.0pt;
+	color: #000000;
+	background-color: #ffffe8;
+	margin-top: 9pt;
+	margin-bottom: 9pt;
+	margin-left: 28pt;
+	margin-right: 5%;
+	padding-left: 2pt;
+	padding-right: 2pt;
+	padding-top: 1pt;
+	padding-bottom: 2pt;
+	x-next-type: p;
+}
+
+/*=(Generated Code)=================================================*/
+/*=(WARNING: DO NOT EDIT OR DELETE THIS SECTION!)===================*/
+/*begin!kadov{{=====================================================*/ 
+LI.kadov-p-CNumNote {
+	font-family: Verdana;
+	font-size: 8.0pt;
+	line-height: 12.0pt;
+	color: #000000;
+}
+/*}}end!kadov=======================================================*/ 
+
+
+
+p.NumText {
+	margin-top: 9pt;
+	margin-bottom: 9pt;
+	margin-left: 28pt;
+	margin-right: 0pt;
+	x-next-type: p;
+}
+
+/*=(Generated Code)=================================================*/
+/*=(WARNING: DO NOT EDIT OR DELETE THIS SECTION!)===================*/
+/*begin!kadov{{=====================================================*/ 
+LI.kadov-p-CNumText {
+}
+/*}}end!kadov=======================================================*/ 
+
+
+
+p.NumTip {
+	font-family: Verdana;
+	font-size: 8.0pt;
+	line-height: 12.0pt;
+	color: #000000;
+	background-color: #EAF4E8;
+	margin-top: 9pt;
+	margin-bottom: 9pt;
+	margin-left: 28pt;
+	margin-right: 5%;
+	padding-left: 2pt;
+	padding-right: 2pt;
+	padding-top: 1pt;
+	padding-bottom: 2pt;
+	x-next-type: p;
+}
+
+/*=(Generated Code)=================================================*/
+/*=(WARNING: DO NOT EDIT OR DELETE THIS SECTION!)===================*/
+/*begin!kadov{{=====================================================*/ 
+LI.kadov-p-CNumTip {
+	font-family: Verdana;
+	font-size: 8.0pt;
+	line-height: 12.0pt;
+	color: #000000;
+}
+/*}}end!kadov=======================================================*/ 
+
+
+
+p.NumWarning {
+	font-family: Verdana;
+	font-size: 8.0pt;
+	line-height: 12.0pt;
+	color: #000000;
+	background-color: #F8F6F6;
+	background-color: #FDF0E8;
+	margin-top: 9pt;
+	margin-bottom: 9pt;
+	margin-left: 28pt;
+	margin-right: 5%;
+	padding-left: 2pt;
+	padding-right: 2pt;
+	padding-top: 1pt;
+	padding-bottom: 2pt;
+	border: 1px dotted #ff0000;
+	border: none;
+	x-next-type: p;
+}
+
+/*=(Generated Code)=================================================*/
+/*=(WARNING: DO NOT EDIT OR DELETE THIS SECTION!)===================*/
+/*begin!kadov{{=====================================================*/ 
+LI.kadov-p-CNumWarning {
+	font-family: Verdana;
+	font-size: 8.0pt;
+	line-height: 12.0pt;
+	color: #000000;
+}
+/*}}end!kadov=======================================================*/ 
+
+
+
+p.OptionBody {
+	margin-left: 32pt;
+	margin-right: 0pt;
+	margin-top: 0pt;
+	margin-bottom: 12pt;
+	x-next-class: OptionHeading;
+	x-next-type: h4;
+}
+
+/*=(Generated Code)=================================================*/
+/*=(WARNING: DO NOT EDIT OR DELETE THIS SECTION!)===================*/
+/*begin!kadov{{=====================================================*/ 
+LI.kadov-p-COptionBody {
+}
+/*}}end!kadov=======================================================*/ 
+
+
+
+p.OptionNote {
+	font-family: Verdana;
+	font-size: 8.0pt;
+	line-height: 12.0pt;
+	color: #000000;
+	background-color: #ffffe8;
+	margin-top: 0pt;
+	margin-bottom: 9pt;
+	margin-left: 32pt;
+	margin-right: 5%;
+	padding-left: 2pt;
+	padding-right: 2pt;
+	padding-top: 1pt;
+	padding-bottom: 2pt;
+	x-next-class: FieldBody;
+	x-next-type: p;
+}
+
+/*=(Generated Code)=================================================*/
+/*=(WARNING: DO NOT EDIT OR DELETE THIS SECTION!)===================*/
+/*begin!kadov{{=====================================================*/ 
+LI.kadov-p-COptionNote {
+	font-family: Verdana;
+	font-size: 8.0pt;
+	line-height: 12.0pt;
+	color: #000000;
+}
+/*}}end!kadov=======================================================*/ 
+
+
+
+p.OptionSubBody {
+	margin-left: 52pt;
+	margin-right: 0pt;
+	margin-top: 0pt;
+	margin-bottom: 12pt;
+	x-next-class: OptionSubHeading;
+	x-next-type: h4;
+}
+
+/*=(Generated Code)=================================================*/
+/*=(WARNING: DO NOT EDIT OR DELETE THIS SECTION!)===================*/
+/*begin!kadov{{=====================================================*/ 
+LI.kadov-p-COptionSubBody {
+}
+/*}}end!kadov=======================================================*/ 
+
+
+
+p.OptionTip {
+	font-family: Verdana;
+	font-size: 8.0pt;
+	line-height: 12.0pt;
+	color: #000000;
+	background-color: #EAF4E8;
+	margin-top: 0pt;
+	margin-bottom: 9pt;
+	margin-left: 32pt;
+	margin-right: 5%;
+	padding-left: 2pt;
+	padding-right: 2pt;
+	padding-top: 1pt;
+	padding-bottom: 2pt;
+	x-next-class: OptionBody;
+	x-next-type: p;
+}
+
+/*=(Generated Code)=================================================*/
+/*=(WARNING: DO NOT EDIT OR DELETE THIS SECTION!)===================*/
+/*begin!kadov{{=====================================================*/ 
+LI.kadov-p-COptionTip {
+	font-family: Verdana;
+	font-size: 8.0pt;
+	line-height: 12.0pt;
+	color: #000000;
+}
+/*}}end!kadov=======================================================*/ 
+
+
+
+p.OptionWarning {
+	font-family: Verdana;
+	font-size: 8.0pt;
+	line-height: 12.0pt;
+	color: #000000;
+	background-color: #FDF0E8;
+	margin-top: 0pt;
+	margin-bottom: 9pt;
+	margin-left: 32pt;
+	margin-right: 5%;
+	padding-left: 2pt;
+	padding-right: 2pt;
+	padding-top: 1pt;
+	padding-bottom: 2pt;
+	border: none;
+	x-next-class: OptionBody;
+	x-next-type: p;
+}
+
+/*=(Generated Code)=================================================*/
+/*=(WARNING: DO NOT EDIT OR DELETE THIS SECTION!)===================*/
+/*begin!kadov{{=====================================================*/ 
+LI.kadov-p-COptionWarning {
+	font-family: Verdana;
+	font-size: 8.0pt;
+	line-height: 12.0pt;
+	color: #000000;
+}
+/*}}end!kadov=======================================================*/ 
+
+
+
+p.ParameterBody {
+	margin-left: 12pt;
+	x-next-class: ParameterHeading;
+	x-next-type: h3;
+}
+
+/*=(Generated Code)=================================================*/
+/*=(WARNING: DO NOT EDIT OR DELETE THIS SECTION!)===================*/
+/*begin!kadov{{=====================================================*/ 
+LI.kadov-p-CParameterBody {
+}
+/*}}end!kadov=======================================================*/ 
+
+
+
+p.ParameterNote {
+	font-family: Verdana;
+	font-size: 8.0pt;
+	line-height: 12.0pt;
+	color: #000000;
+	background-color: #ffffe8;
+	margin-top: 0pt;
+	margin-bottom: 9pt;
+	margin-left: 12pt;
+	margin-right: 5%;
+	padding-left: 2pt;
+	padding-right: 2pt;
+	padding-top: 1pt;
+	padding-bottom: 2pt;
+	x-next-class: ParameterBody;
+	x-next-type: p;
+}
+
+/*=(Generated Code)=================================================*/
+/*=(WARNING: DO NOT EDIT OR DELETE THIS SECTION!)===================*/
+/*begin!kadov{{=====================================================*/ 
+LI.kadov-p-CParameterNote {
+	font-family: Verdana;
+	font-size: 8.0pt;
+	line-height: 12.0pt;
+	color: #000000;
+}
+/*}}end!kadov=======================================================*/ 
+
+
+
+p.ParameterTip {
+	font-family: Verdana;
+	font-size: 8.0pt;
+	line-height: 12.0pt;
+	color: #000000;
+	background-color: #EAF4E8;
+	margin-top: 0pt;
+	margin-bottom: 9pt;
+	margin-left: 12pt;
+	margin-right: 5%;
+	padding-left: 2pt;
+	padding-right: 2pt;
+	padding-top: 1pt;
+	padding-bottom: 2pt;
+	x-next-class: ParameterBody;
+	x-next-type: p;
+}
+
+/*=(Generated Code)=================================================*/
+/*=(WARNING: DO NOT EDIT OR DELETE THIS SECTION!)===================*/
+/*begin!kadov{{=====================================================*/ 
+LI.kadov-p-CParameterTip {
+	font-family: Verdana;
+	font-size: 8.0pt;
+	line-height: 12.0pt;
+	color: #000000;
+}
+/*}}end!kadov=======================================================*/ 
+
+
+
+p.ParameterWarning {
+	font-family: Verdana;
+	font-size: 8.0pt;
+	line-height: 12.0pt;
+	color: #000000;
+	background-color: #FDF0E8;
+	margin-top: 0pt;
+	margin-bottom: 9pt;
+	margin-left: 12pt;
+	margin-right: 5%;
+	padding-left: 2pt;
+	padding-right: 2pt;
+	padding-top: 1pt;
+	padding-bottom: 2pt;
+	x-next-class: ParameterBody;
+	x-next-type: p;
+}
+
+/*=(Generated Code)=================================================*/
+/*=(WARNING: DO NOT EDIT OR DELETE THIS SECTION!)===================*/
+/*begin!kadov{{=====================================================*/ 
+LI.kadov-p-CParameterWarning {
+	font-family: Verdana;
+	font-size: 8.0pt;
+	line-height: 12.0pt;
+	color: #000000;
+}
+/*}}end!kadov=======================================================*/ 
+
+
+
+p.Popup {
+	font-family: Arial;
+	font-size: 14pt;
+	font-weight: bold;
+	font-style: normal;
+	color: #ffffff;
+	padding: 6.0pt;
+}
+
+/*=(Generated Code)=================================================*/
+/*=(WARNING: DO NOT EDIT OR DELETE THIS SECTION!)===================*/
+/*begin!kadov{{=====================================================*/ 
+LI.kadov-p-CPopup {
+	font-family: Arial;
+	font-size: 14pt;
+	font-weight: bold;
+	font-style: normal;
+	color: #ffffff;
+}
+/*}}end!kadov=======================================================*/ 
+
+
+
+p.SeeAlso {
+	font-style: italic;
+	font-weight: normal;
+	font-size: 8pt;
+	padding: 1px 8px 2px;
+	background-color: #f0f3f9;
+	margin-top: 18pt;
+	margin-bottom: 12pt;
+	border: 1px solid #e6e9ef;
+}
+
+/*=(Generated Code)=================================================*/
+/*=(WARNING: DO NOT EDIT OR DELETE THIS SECTION!)===================*/
+/*begin!kadov{{=====================================================*/ 
+LI.kadov-p-CSeeAlso {
+	font-style: italic;
+	font-weight: normal;
+	font-size: 8pt;
+}
+/*}}end!kadov=======================================================*/ 
+
+
+
+p.SeeAlso a:link,
+p.SeeAlso a:active,
+p.SeeAlso a:visited {
+	color: #0000ff;
+	x-text-underline: off;
+	x-text-overline: off;
+	x-text-line-through: off;
+	/*begin!kadov{{*/ text-decoration: none none none; /*}}end!kadov*/ 
+}
+
+p.SeeAlso a:hover {
+	color: #0000ff;
+	x-text-underline: normal;
+	/*begin!kadov{{*/ text-decoration: underline; /*}}end!kadov*/ 
+}
+
+p.TableFormat {
+	margin-left: 0pt;
+	margin-right: 0pt;
+	padding-left: 3pt;
+	padding-right: 3pt;
+	padding-top: 3pt;
+	padding-bottom: 3pt;
+}
+
+/*=(Generated Code)=================================================*/
+/*=(WARNING: DO NOT EDIT OR DELETE THIS SECTION!)===================*/
+/*begin!kadov{{=====================================================*/ 
+LI.kadov-p-CTableFormat {
+}
+/*}}end!kadov=======================================================*/ 
+
+
+
+p.TableHeader {
+	font-weight: bold;
+	display: nowrap;
+}
+
+/*=(Generated Code)=================================================*/
+/*=(WARNING: DO NOT EDIT OR DELETE THIS SECTION!)===================*/
+/*begin!kadov{{=====================================================*/ 
+LI.kadov-p-CTableHeader {
+	font-weight: bold;
+}
+/*}}end!kadov=======================================================*/ 
+
+
+
+p.Tip {
+	font-family: Verdana;
+	font-size: 8.0pt;
+	line-height: 12.0pt;
+	color: #000000;
+	background-color: #EAF4E8;
+	margin-top: 0pt;
+	margin-bottom: 9pt;
+	margin-left: 0pt;
+	margin-right: 5%;
+	padding-left: 2pt;
+	padding-right: 2pt;
+	padding-top: 1pt;
+	padding-bottom: 2pt;
+	x-next-class: ;
+	x-next-type: p;
+}
+
+/*=(Generated Code)=================================================*/
+/*=(WARNING: DO NOT EDIT OR DELETE THIS SECTION!)===================*/
+/*begin!kadov{{=====================================================*/ 
+LI.kadov-p-CTip {
+	font-family: Verdana;
+	font-size: 8.0pt;
+	line-height: 12.0pt;
+	color: #000000;
+}
+/*}}end!kadov=======================================================*/ 
+
+
+
+p.Warning {
+	font-family: Verdana;
+	font-size: 8.0pt;
+	line-height: 12.0pt;
+	color: #000000;
+	background-color: #FDF0E8;
+	margin-top: 0pt;
+	margin-bottom: 9pt;
+	margin-left: 0pt;
+	margin-right: 5%;
+	padding-left: 2pt;
+	padding-right: 2pt;
+	padding-top: 1pt;
+	padding-bottom: 2pt;
+	border: 1px dotted #ff0000;
+	border: none;
+	x-next-class: ;
+	x-next-type: p;
+}
+
+/*=(Generated Code)=================================================*/
+/*=(WARNING: DO NOT EDIT OR DELETE THIS SECTION!)===================*/
+/*begin!kadov{{=====================================================*/ 
+LI.kadov-p-CWarning {
+	font-family: Verdana;
+	font-size: 8.0pt;
+	line-height: 12.0pt;
+	color: #000000;
+}
+/*}}end!kadov=======================================================*/ 
+
+
+
+span.Availability {
+	white-space: nowrap;
+	color: #f27129;
+	margin-left: 3ex;
+}
+
+span.Code {
+	font-family: "Courier New", monospace;
+	font-size: 10pt;
+}
+
+span.Default {
+	font-style: italic;
+	color: #aaa;
+}
+
+span.DefaultValue {
+	white-space: nowrap;
+	font-family: "Courier New", monospace;
+	font-size: 9pt;
+	color: #aaa;
+}
+
+span.DefaultValue a.PopupSpot:link,
+span.DefaultValue a.PopupSpot:active,
+span.DefaultValue a.PopupSpot:visited {
+	x-text-underline: off;
+	x-text-overline: off;
+	x-text-line-through: off;
+	color: #aaa;
+	/*begin!kadov{{*/ text-decoration: none none none; /*}}end!kadov*/ 
+}
+
+span.DefaultValue a.PopupSpot:hover {
+	x-text-underline: off;
+	x-text-overline: off;
+	x-text-line-through: off;
+	color: #0000ff;
+	/*begin!kadov{{*/ text-decoration: none none none; /*}}end!kadov*/ 
+}
+
+span.DialogName {
+	font-style: normal;
+	font-weight: normal;
+}
+
+span.Ellipsis {
+	color: #999;
+}
+
+span.Here {
+	font-weight: bold;
+	color: #ffffff;
+	background-color: #699BEF;
+	margin: 0px;
+	padding: 4px 8px;
+	border-top: 1px solid #699BEF;
+	border-bottom: 1px solid #333;
+	border-left: none;
+	border-right: 1px solid #333;
+}
+/* blue tab effect in navbar (NavLocal) */
+	/**/
+
+	
+
+span.nowrap {
+	white-space: nowrap;
+}
+
+span.nowrap img {
+	vertical-align: middle;
+}
+
+span.Path {
+	font-family: "Courier New", monospace;
+	font-size: 9pt;
+}
+
+span.StartMenuItem {
+	font-weight: bold;
+	font-style: italic;
+}
+
+span.VarType {
+	font-family: "Courier New", monospace;
+	font-size: 9pt;
+	font-style: italic;
+	color: #abd;
+}
+
+span.VarType a.PopupSpot:link,
+span.VarType a.PopupSpot:active,
+span.VarType a.PopupSpot:visited {
+	color: #abd;
+	x-text-underline: off;
+	x-text-overline: off;
+	x-text-line-through: off;
+	/*begin!kadov{{*/ text-decoration: none none none; /*}}end!kadov*/ 
+}
+
+span.VarType a.PopupSpot:hover {
+	color: #0000ff;
+	x-text-underline: off;
+	x-text-overline: off;
+	x-text-line-through: off;
+	/*begin!kadov{{*/ text-decoration: none none none; /*}}end!kadov*/ 
+}
+
+span.VarType a:link,
+span.VarType a:active,
+span.VarType a:visited {
+	color: #abd;
+	x-text-underline: off;
+	x-text-overline: off;
+	x-text-line-through: off;
+	/*begin!kadov{{*/ text-decoration: none none none; /*}}end!kadov*/ 
+}
+
+span.VarType a:hover {
+	color: #0000ff;
+	x-text-underline: off;
+	x-text-overline: off;
+	x-text-line-through: off;
+	/*begin!kadov{{*/ text-decoration: none none none; /*}}end!kadov*/ 
+}
+
+span.type {
+	color: #aaa;
+}
+
+span.wab {
+	font-family: Verdana;
+	font-size: 13px;
+	padding: 0px 0px;
+	margin: 0px;
+	border: none;
+	visibility: hidden;
+}
+/* workaround, baybee! */
+	
+
+table.ActionList {
+	margin-top: 18pt;
+	margin-bottom: 18pt;
+	border-top: #c0c0c0 1px solid;
+	border-right: #c0c0c0 1px solid;
+	border-left: #c0c0c0 1px solid;
+	border-bottom: #c0c0c0 1px solid;
+}
+
+table.ActionList img {
+	vertical-align: middle;
+	margin: 2px 0px;
+	margin: 0px;
+	padding: 0px;
+}
+
+table.ActionList p {
+	margin: 0px;
+	margin-bottom: 3pt;
+	padding: 2px;
+}
+
+/*=(Generated Code)=================================================*/
+/*=(WARNING: DO NOT EDIT OR DELETE THIS SECTION!)===================*/
+/*begin!kadov{{=====================================================*/ 
+table.ActionList LI.kadov-p {
+}
+/*}}end!kadov=======================================================*/ 
+
+
+
+table.ActionList p.ListBody {
+	margin-left: 0px;
+	margin-right: 0px;
+	margin-top: 0px;
+	margin-bottom: 3pt;
+	padding-left: 0px;
+	padding-top: 0px;
+	padding-bottom: 0px;
+	padding: 2px;
+}
+
+/*=(Generated Code)=================================================*/
+/*=(WARNING: DO NOT EDIT OR DELETE THIS SECTION!)===================*/
+/*begin!kadov{{=====================================================*/ 
+table.ActionList LI.kadov-p-CListBody {
+}
+/*}}end!kadov=======================================================*/ 
+
+
+
+table.ActionList tr.Category {
+	background-color: #aaa;
+	background-color: #a0a0a0;
+	color: #ffffff;
+}
+
+table.ActionList tr.Category h2.ListHeading {
+	text-transform: uppercase;
+	font-family: Arial;
+	font-size: 9.0pt;
+	font-style: italic;
+	font-weight: bold;
+	letter-spacing: 1ex;
+	color: #ffffff;
+	white-space: nowrap;
+	margin-top: 0px;
+	margin-bottom: 0px;
+	padding-top: 0px;
+	padding-bottom: 1px;
+	padding-top: 1px;
+	padding-bottom: 1px;
+}
+
+/*=(Generated Code)=================================================*/
+/*=(WARNING: DO NOT EDIT OR DELETE THIS SECTION!)===================*/
+/*begin!kadov{{=====================================================*/ 
+table.ActionList tr.Category LI.kadov-h2-CListHeading {
+	text-transform: uppercase;
+	font-family: Arial;
+	font-size: 9.0pt;
+	font-style: italic;
+	font-weight: bold;
+	letter-spacing: 1ex;
+	color: #ffffff;
+	white-space: nowrap;
+}
+/*}}end!kadov=======================================================*/ 
+
+
+
+table.ActionList tr.Header {
+	background-color: #eee;
+	color: #000000;
+}
+
+table.ActionList tr.Header p {
+	font-family: Verdana;
+	font-size: 8.0pt;
+	font-style: normal;
+	font-weight: bold;
+	color: #3176EA;
+	white-space: nowrap;
+	margin-bottom: 0px;
+	padding-top: 0px;
+	padding-bottom: 1px;
+}
+
+/*=(Generated Code)=================================================*/
+/*=(WARNING: DO NOT EDIT OR DELETE THIS SECTION!)===================*/
+/*begin!kadov{{=====================================================*/ 
+table.ActionList tr.Header LI.kadov-p {
+	font-family: Verdana;
+	font-size: 8.0pt;
+	font-style: normal;
+	font-weight: bold;
+	color: #3176EA;
+	white-space: nowrap;
+}
+/*}}end!kadov=======================================================*/ 
+
+
+
+table.Parameters {
+	margin-top: 6pt;
+	margin-bottom: 9pt;
+}
+
+table.Parameters h4.OptionHeading {
+	margin-left: 12pt;
+}
+
+/*=(Generated Code)=================================================*/
+/*=(WARNING: DO NOT EDIT OR DELETE THIS SECTION!)===================*/
+/*begin!kadov{{=====================================================*/ 
+table.Parameters LI.kadov-h4-COptionHeading {
+}
+/*}}end!kadov=======================================================*/ 
+
+
+
+table.Parameters p {
+	font-weight: normal;
+	color: #000000;
+	margin-left: 3pt;
+	margin-right: 3pt;
+	margin-top: 2pt;
+	margin-bottom: 2pt;
+}
+
+/*=(Generated Code)=================================================*/
+/*=(WARNING: DO NOT EDIT OR DELETE THIS SECTION!)===================*/
+/*begin!kadov{{=====================================================*/ 
+table.Parameters LI.kadov-p {
+	font-weight: normal;
+	color: #000000;
+}
+/*}}end!kadov=======================================================*/ 
+
+
+
+table.Parameters p.OptionBody {
+	margin-left: 12pt;
+	margin-right: 0pt;
+	margin-bottom: 9pt;
+}
+
+/*=(Generated Code)=================================================*/
+/*=(WARNING: DO NOT EDIT OR DELETE THIS SECTION!)===================*/
+/*begin!kadov{{=====================================================*/ 
+table.Parameters LI.kadov-p-COptionBody {
+}
+/*}}end!kadov=======================================================*/ 
+
+
+
+tr.TableHeader td {
+	background-color: #c0c0c0;
+}
+
+tr.TableHeader td p {
+	color: #ffffff;
+	font-weight: bold;
+	white-space: nowrap;
+}
+
+/*=(Generated Code)=================================================*/
+/*=(WARNING: DO NOT EDIT OR DELETE THIS SECTION!)===================*/
+/*begin!kadov{{=====================================================*/ 
+tr.TableHeader td LI.kadov-p {
+	color: #ffffff;
+	font-weight: bold;
+	white-space: nowrap;
+}
+/*}}end!kadov=======================================================*/ 
+
+
+
+</style>
+</head>
+
+<body>
+
+<h1>Scin Help File</h1><p class="NavLocal"><span class=wab>&nbsp;</span><span class="here">Welcome</span></p><div class="Properties"><h2>Scin Help File</h2><h3>Plugin Name:</h3><p><blockquote>Scin</blockquote></p><h3>Current Version:</h3><p><blockquote>0.1.0.0</blockquote></p><h3>Description:</h3><p><blockquote>This is a helper plugin for the Scintilla plugin by Reteset. <br>The XML action file for this plugin, and the help file, were created with AMS Action File Editor v1.0.0.6 by Dean Hall (AKA) RizlaUK, www.dnet-software.com<br><br>This plugin was compiled with the Action Plugin Compiler Version 1.1.0.0 developed by Reteset and Dermot  and  MicroByte: www.amsplugins.com  and www.fitzsolutions.com<br></blockquote></p><h3>Licence:</h3><p><blockquote>free</blockquote></p><h3>Author:</h3><p><blockquote>JimS</blockquote></p><h3>Requirements:</h3><p><blockquote>You must have Reteset’s Scintilla plugin installed and added to your project, before this will work.</blockquote></p><h3>Copyright:</h3><p><blockquote>2011</blockquote></p><h3>Install Notes:</h3><p><blockquote>Place the "Scin" folder in your "AutoPlay Media Studio\Plugins\Action" folder.<br></blockquote></p></div><!-- /Properties --><hr><div class="Properties"><h2>Table of Contents</h2><p><blockquote><A href="#Scin.Allocate"><b>Scin.Allocate</b></A><br><A href="#Scin.BraceBadLight"><b>Scin.BraceBadLight</b></A><br><A href="#Scin.BraceHighLight"><b>Scin.BraceHighLight</b></A><br><A href="#Scin.BraceMatch"><b>Scin.BraceMatch</b></A><br><A href="#Scin.CanRedo"><b>Scin.CanRedo</b></A><br><A href="#Scin.CanUndo"><b>Scin.CanUndo</b></A><br><A href="#Scin.Clear"><b>Scin.Clear</b></A><br><A href="#Scin.ClearAll"><b>Scin.ClearAll</b></A><br><A href="#Scin.ClearDocumentStyle"><b>Scin.ClearDocumentStyle</b></A><br><A href="#Scin.ClearUndoBuffer"><b>Scin.ClearUndoBuffer</b></A><br><A href="#Scin.Copy"><b>Scin.Copy</b></A><br><A href="#Scin.Cut"><b>Scin.Cut</b></A><br><A href="#Scin.GetAnchor"><b>Scin.GetAnchor</b></A><br><A href="#Scin.GetCharAt"><b>Scin.GetCharAt</b></A><br><A href="#Scin.GetCurrentLine"><b>Scin.GetCurrentLine</b></A><br><A href="#Scin.GetCurrentLinePos"><b>Scin.GetCurrentLinePos</b></A><br><A href="#Scin.GetCurrentPos"><b>Scin.GetCurrentPos</b></A><br><A href="#Scin.GetLength"><b>Scin.GetLength</b></A><br><A href="#Scin.GetLine"><b>Scin.GetLine</b></A><br><A href="#Scin.GetLineCount"><b>Scin.GetLineCount</b></A><br><A href="#GetLineEndPos"><b>GetLineEndPos</b></A><br><A href="#Scin.GetLineFromPos"><b>Scin.GetLineFromPos</b></A><br><A href="#Scin.GetLineLength"><b>Scin.GetLineLength</b></A><br><A href="#Scin.GetModify"><b>Scin.GetModify</b></A><br><A href="#Scin.GetOvertype"><b>Scin.GetOvertype</b></A><br><A href="#Scin.GetPosFromLine"><b>Scin.GetPosFromLine</b></A><br><A href="#Scin.GetReadOnly"><b>Scin.GetReadOnly</b></A><br><A href="#Scin.GetSelectedEnd"><b>Scin.GetSelectedEnd</b></A><br><A href="#Scin.GetSelectedLength"><b>Scin.GetSelectedLength</b></A><br><A href="#Scin.GetSelectedStart"><b>Scin.GetSelectedStart</b></A><br><A href="#Scin.GetText"><b>Scin.GetText</b></A><br><A href="#Scin.GetStatus"><b>Scin.GetStatus</b></A><br><A href="#Scin.GetZoom"><b>Scin.GetZoom</b></A><br><A href="#Scin.GoToLine"><b>Scin.GoToLine</b></A><br><A href="#Scin.GoToPos"><b>Scin.GoToPos</b></A><br><A href="#Scin.InsertText"><b>Scin.InsertText</b></A><br><A href="#Scin.LinesOnScreen"><b>Scin.LinesOnScreen</b></A><br><A href="#Scin.MoveCaretInsideView"><b>Scin.MoveCaretInsideView</b></A><br><A href="#Scin.Paste"><b>Scin.Paste</b></A><br><A href="#Scin.Redo"><b>Scin.Redo</b></A><br><A href="#Scin.ResetStatus"><b>Scin.ResetStatus</b></A><br><A href="#Scin.ReplaceSelected"><b>Scin.ReplaceSelected</b></A><br><A href="#Scin.SelectAll"><b>Scin.SelectAll</b></A><br><A href="#Scin.SetAnchor"><b>Scin.SetAnchor</b></A><br><A href="#Scin.SetCurrentPos"><b>Scin.SetCurrentPos</b></A><br><A href="#Scin.SetOvertype"><b>Scin.SetOvertype</b></A><br><A href="#Scin.SetReadOnly"><b>Scin.SetReadOnly</b></A><br><A href="#Scin.SetSavePoint"><b>Scin.SetSavePoint</b></A><br><A href="#Scin.SetSelected"><b>Scin.SetSelected</b></A><br><A href="#Scin.SetText"><b>Scin.SetText</b></A><br><A href="#Scin.SetZoom"><b>Scin.SetZoom</b></A><br><A href="#Scin.Undo"><b>Scin.Undo</b></A><br><A href="#Scin.ZoomIn"><b>Scin.ZoomIn</b></A><br><A href="#Scin.ZoomOut"><b>Scin.ZoomOut</b></A><br></blockquote></p></div><!-- /Properties --><h1><A name="Scin.Allocate">Scin.Allocate</A></h1><br><div class=Declaration><!--(Table)=========================================================--><!--begin!kadov{{--><div align=left><!--}}end!kadov--><table x-use-null-cells		style="float: alignleft;		x-cell-content-align: Top;		border-spacing: 0px;		border-spacing: 0px;"		cellspacing=0><col><col><tr style="x-cell-content-align: top;" valign=top><td style="padding-right: 0px;			padding-left: 0px;			border-top-style: none;			border-bottom-style: none;			border-right-style: none;			border-left-style: none;"><p>Scin.Allocate (&nbsp;</td><td style="padding-right: 0px;			padding-left: 0px;			border-top-style: none;			border-right-style: none;			border-bottom-style: none;"><p><span class=VarType>(string)&nbsp;</span>ObjectName <span class=DefaultValue> = "Plugin1"</span>, </p><p><span class=VarType>(number)&nbsp;</span>TabID <span class=DefaultValue> = 100</span>, </p><p><span class=VarType>(number)&nbsp;</span>iBytes <span class=DefaultValue> = 0</span> )</p></td></tr></table><!--begin!kadov{{--></div><!--}}end!kadov--></div><h2 style="margin-bottom: 3pt;">Description</h2><p><blockquote>Allocate a document buffer large enough to store a given number of bytes</blockquote></p><blockquote><p class="Note"> <span style="font-weight: bold;">Note: </span>The document will not be made smaller than its current contents.</p></blockquote><h2 class="H2Tight">Parameters</h2><h3 class="ParameterHeading">ObjectName</h3><p class="ParameterBody"><span class="type">(string)&nbsp;</span>The name of the Scintilla object</p><h3 class="ParameterHeading">TabID</h3><p class="ParameterBody"><span class="type">(number)&nbsp;</span>The ID of the Scintilla tab you want to affect.</p><h3 class="ParameterHeading">iBytes</h3><p class="ParameterBody"><span class="type">(number)&nbsp;</span>The number of bytes to allocate.</p><h2>Returns</h2><blockquote><p>This action dose not return any value.</p></blockquote><br><h1><A name="Scin.BraceBadLight">Scin.BraceBadLight</A></h1><br><div class=Declaration><!--(Table)=========================================================--><!--begin!kadov{{--><div align=left><!--}}end!kadov--><table x-use-null-cells		style="float: alignleft;		x-cell-content-align: Top;		border-spacing: 0px;		border-spacing: 0px;"		cellspacing=0><col><col><tr style="x-cell-content-align: top;" valign=top><td style="padding-right: 0px;			padding-left: 0px;			border-top-style: none;			border-bottom-style: none;			border-right-style: none;			border-left-style: none;"><p>Scin.BraceBadLight (&nbsp;</td><td style="padding-right: 0px;			padding-left: 0px;			border-top-style: none;			border-right-style: none;			border-bottom-style: none;"><p><span class=VarType>(string)&nbsp;</span>ObjectName <span class=DefaultValue> = "Plugin1"</span>, </p><p><span class=VarType>(number)&nbsp;</span>TabID <span class=DefaultValue> = 100</span>, </p><p><span class=VarType>(number)&nbsp;</span>iPos <span class=DefaultValue> = 1</span> )</p></td></tr></table><!--begin!kadov{{--></div><!--}}end!kadov--></div><h2 style="margin-bottom: 3pt;">Description</h2><p><blockquote>Allows you to set a brace to the bad brace style.</blockquote></p><blockquote><p class="Note"> <span style="font-weight: bold;">Note: </span>If there is no matching brace then the brace badlighting style, style STYLE_BRACEBAD (35), can be used to show the brace that is unmatched. Using a position of INVALID_POSITION (-1) removes the highlight.</p></blockquote><h2 class="H2Tight">Parameters</h2><h3 class="ParameterHeading">ObjectName</h3><p class="ParameterBody"><span class="type">(string)&nbsp;</span>The name of the Scintilla object</p><h3 class="ParameterHeading">TabID</h3><p class="ParameterBody"><span class="type">(number)&nbsp;</span>The ID of the Scintilla tab you want to affect.</p><h3 class="ParameterHeading">iPos</h3><p class="ParameterBody"><span class="type">(number)&nbsp;</span>The position of the brace</p><h2>Returns</h2><blockquote><p>This action dose not return any value.</p></blockquote><br><h1><A name="Scin.BraceHighLight">Scin.BraceHighLight</A></h1><br><div class=Declaration><!--(Table)=========================================================--><!--begin!kadov{{--><div align=left><!--}}end!kadov--><table x-use-null-cells		style="float: alignleft;		x-cell-content-align: Top;		border-spacing: 0px;		border-spacing: 0px;"		cellspacing=0><col><col><tr style="x-cell-content-align: top;" valign=top><td style="padding-right: 0px;			padding-left: 0px;			border-top-style: none;			border-bottom-style: none;			border-right-style: none;			border-left-style: none;"><p>Scin.BraceHighLight (&nbsp;</td><td style="padding-right: 0px;			padding-left: 0px;			border-top-style: none;			border-right-style: none;			border-bottom-style: none;"><p><span class=VarType>(string)&nbsp;</span>ObjectName <span class=DefaultValue> = "Plugin1"</span>, </p><p><span class=VarType>(number)&nbsp;</span>TabID <span class=DefaultValue> = 100</span>, </p><p><span class=VarType>(number)&nbsp;</span>iPos <span class=DefaultValue> = 1</span>, </p><p><span class=VarType>(number)&nbsp;</span>iPos2 )</p></td></tr></table><!--begin!kadov{{--></div><!--}}end!kadov--></div><h2 style="margin-bottom: 3pt;">Description</h2><p><blockquote>Up to two characters can be highlighted in a 'brace highlighting style', which is defined as style number STYLE_BRACELIGHT (34). If you have enabled indent guides, you may also wish to highlight the indent that corresponds with the brace. You can locate the column with SCI_GETCOLUMN and highlight the indent with SCI_SETHIGHLIGHTGUIDE</blockquote></p><h2 class="H2Tight">Parameters</h2><h3 class="ParameterHeading">ObjectName</h3><p class="ParameterBody"><span class="type">(string)&nbsp;</span>The name of the Scintilla object</p><h3 class="ParameterHeading">TabID</h3><p class="ParameterBody"><span class="type">(number)&nbsp;</span>The ID of the Scintilla tab you want to affect.</p><h3 class="ParameterHeading">iPos</h3><p class="ParameterBody"><span class="type">(number)&nbsp;</span>The position of the brace</p><h3 class="ParameterHeading">iPos2</h3><p class="ParameterBody"><span class="type">(number)&nbsp;</span>Position of second brace.</p><h2>Returns</h2><blockquote><p>This action dose not return any value.</p></blockquote><br><h1><A name="Scin.BraceMatch">Scin.BraceMatch</A></h1><br><div class=Declaration><!--(Table)=========================================================--><!--begin!kadov{{--><div align=left><!--}}end!kadov--><table x-use-null-cells		style="float: alignleft;		x-cell-content-align: Top;		border-spacing: 0px;		border-spacing: 0px;"		cellspacing=0><col><col><tr style="x-cell-content-align: top;" valign=top><td style="padding-right: 0px;			padding-left: 0px;			border-top-style: none;			border-bottom-style: none;			border-right-style: none;			border-left-style: none;"><p><span class=VarType>(number)&nbsp;</span>Scin.BraceMatch (&nbsp;</td><td style="padding-right: 0px;			padding-left: 0px;			border-top-style: none;			border-right-style: none;			border-bottom-style: none;"><p><span class=VarType>(string)&nbsp;</span>ObjectName <span class=DefaultValue> = "Plugin1"</span>, </p><p><span class=VarType>(number)&nbsp;</span>TabID <span class=DefaultValue> = 100</span>, </p><p><span class=VarType>(number)&nbsp;</span>iPos <span class=DefaultValue> = 1</span> )</p></td></tr></table><!--begin!kadov{{--></div><!--}}end!kadov--></div><h2 style="margin-bottom: 3pt;">Description</h2><p><blockquote>This action finds a corresponding matching brace given pos, the position of one brace.</blockquote></p><blockquote><p class="Note"> <span style="font-weight: bold;">Note: </span> The brace characters handled are '(', ')', '[', ']', '{', '}', '<', and '>'. The search is forwards from an opening brace and backwards from a closing brace. If the character at position is not a brace character, or a matching brace cannot be found, the return value is -1. Otherwise, the return value is the position of the matching brace.</p></blockquote><h2 class="H2Tight">Parameters</h2><h3 class="ParameterHeading">ObjectName</h3><p class="ParameterBody"><span class="type">(string)&nbsp;</span>The name of the Scintilla object</p><h3 class="ParameterHeading">TabID</h3><p class="ParameterBody"><span class="type">(number)&nbsp;</span>The ID of the Scintilla tab you want to affect.</p><h3 class="ParameterHeading">iPos</h3><p class="ParameterBody"><span class="type">(number)&nbsp;</span>The position of the brace.</p><h2>Returns</h2><blockquote><p><span class=type>(number) </span>The position of the corresponding matching brace.</p></blockquote><br><h1><A name="Scin.CanRedo">Scin.CanRedo</A></h1><br><div class=Declaration><!--(Table)=========================================================--><!--begin!kadov{{--><div align=left><!--}}end!kadov--><table x-use-null-cells		style="float: alignleft;		x-cell-content-align: Top;		border-spacing: 0px;		border-spacing: 0px;"		cellspacing=0><col><col><tr style="x-cell-content-align: top;" valign=top><td style="padding-right: 0px;			padding-left: 0px;			border-top-style: none;			border-bottom-style: none;			border-right-style: none;			border-left-style: none;"><p><span class=VarType>(boolean)&nbsp;</span>Scin.CanRedo (&nbsp;</td><td style="padding-right: 0px;			padding-left: 0px;			border-top-style: none;			border-right-style: none;			border-bottom-style: none;"><p><span class=VarType>(string)&nbsp;</span>ObjectName <span class=DefaultValue> = "Plugin1"</span>, </p><p><span class=VarType>(number)&nbsp;</span>TabID <span class=DefaultValue> = 100</span> )</p></td></tr></table><!--begin!kadov{{--></div><!--}}end!kadov--></div><h2 style="margin-bottom: 3pt;">Description</h2><p><blockquote>Returns a boolean. Returns false if there is no action to redo and true if there are undo actions to redo. You could typically use the result of this message to enable/disable the Edit menu Redo command.</blockquote></p><blockquote><p class="Note"> <span style="font-weight: bold;">Note: </span>You could typically use the result of this message to enable/disable the Edit menu Redo command.</p></blockquote><h2 class="H2Tight">Parameters</h2><h3 class="ParameterHeading">ObjectName</h3><p class="ParameterBody"><span class="type">(string)&nbsp;</span>The name of the Scintilla object</p><h3 class="ParameterHeading">TabID</h3><p class="ParameterBody"><span class="type">(number)&nbsp;</span>The ID of the Scintilla tab you want to affect.</p><h2>Returns</h2><blockquote><p><span class=type>(boolean) </span>Returns false if there is no action to redo and true if there are undo actions to redo.</p></blockquote><br><h1><A name="Scin.CanUndo">Scin.CanUndo</A></h1><br><div class=Declaration><!--(Table)=========================================================--><!--begin!kadov{{--><div align=left><!--}}end!kadov--><table x-use-null-cells		style="float: alignleft;		x-cell-content-align: Top;		border-spacing: 0px;		border-spacing: 0px;"		cellspacing=0><col><col><tr style="x-cell-content-align: top;" valign=top><td style="padding-right: 0px;			padding-left: 0px;			border-top-style: none;			border-bottom-style: none;			border-right-style: none;			border-left-style: none;"><p><span class=VarType>(boolean)&nbsp;</span>Scin.CanUndo (&nbsp;</td><td style="padding-right: 0px;			padding-left: 0px;			border-top-style: none;			border-right-style: none;			border-bottom-style: none;"><p><span class=VarType>(string)&nbsp;</span>ObjectName <span class=DefaultValue> = "Plugin1"</span>, </p><p><span class=VarType>(number)&nbsp;</span>TabID <span class=DefaultValue> = 100</span> )</p></td></tr></table><!--begin!kadov{{--></div><!--}}end!kadov--></div><h2 style="margin-bottom: 3pt;">Description</h2><p><blockquote>Returns a boolean. Returns false if there is no action to undo and true if there is. You would typically use the result of this message to enable/disable the Edit menu Undo command.</blockquote></p><blockquote><p class="Note"> <span style="font-weight: bold;">Note: </span>You would typically use the result of this message to enable/disable the Edit menu Undo command.</p></blockquote><h2 class="H2Tight">Parameters</h2><h3 class="ParameterHeading">ObjectName</h3><p class="ParameterBody"><span class="type">(string)&nbsp;</span>The name of the Scintilla object</p><h3 class="ParameterHeading">TabID</h3><p class="ParameterBody"><span class="type">(number)&nbsp;</span>The ID of the Scintilla tab you want to affect.</p><h2>Returns</h2><blockquote><p><span class=type>(boolean) </span>Returns false if there is no action to undo and true if there is.<br></p></blockquote><br><h1><A name="Scin.Clear">Scin.Clear</A></h1><br><div class=Declaration><!--(Table)=========================================================--><!--begin!kadov{{--><div align=left><!--}}end!kadov--><table x-use-null-cells		style="float: alignleft;		x-cell-content-align: Top;		border-spacing: 0px;		border-spacing: 0px;"		cellspacing=0><col><col><tr style="x-cell-content-align: top;" valign=top><td style="padding-right: 0px;			padding-left: 0px;			border-top-style: none;			border-bottom-style: none;			border-right-style: none;			border-left-style: none;"><p>Scin.Clear (&nbsp;</td><td style="padding-right: 0px;			padding-left: 0px;			border-top-style: none;			border-right-style: none;			border-bottom-style: none;"><p><span class=VarType>(string)&nbsp;</span>ObjectName <span class=DefaultValue> = "Plugin1"</span>, </p><p><span class=VarType>(number)&nbsp;</span>TabID <span class=DefaultValue> = 100</span> )</p></td></tr></table><!--begin!kadov{{--></div><!--}}end!kadov--></div><h2 style="margin-bottom: 3pt;">Description</h2><p><blockquote>Clear selected text from document.</blockquote></p><h2 class="H2Tight">Parameters</h2><h3 class="ParameterHeading">ObjectName</h3><p class="ParameterBody"><span class="type">(string)&nbsp;</span>The name of the Scintilla object</p><h3 class="ParameterHeading">TabID</h3><p class="ParameterBody"><span class="type">(number)&nbsp;</span>The ID of the Scintilla tab you want to affect.</p><h2>Returns</h2><blockquote><p>This action dose not return any value.</p></blockquote><br><h1><A name="Scin.ClearAll">Scin.ClearAll</A></h1><br><div class=Declaration><!--(Table)=========================================================--><!--begin!kadov{{--><div align=left><!--}}end!kadov--><table x-use-null-cells		style="float: alignleft;		x-cell-content-align: Top;		border-spacing: 0px;		border-spacing: 0px;"		cellspacing=0><col><col><tr style="x-cell-content-align: top;" valign=top><td style="padding-right: 0px;			padding-left: 0px;			border-top-style: none;			border-bottom-style: none;			border-right-style: none;			border-left-style: none;"><p>Scin.ClearAll (&nbsp;</td><td style="padding-right: 0px;			padding-left: 0px;			border-top-style: none;			border-right-style: none;			border-bottom-style: none;"><p><span class=VarType>(string)&nbsp;</span>ObjectName <span class=DefaultValue> = "Plugin1"</span>, </p><p><span class=VarType>(number)&nbsp;</span>TabID <span class=DefaultValue> = 100</span> )</p></td></tr></table><!--begin!kadov{{--></div><!--}}end!kadov--></div><h2 style="margin-bottom: 3pt;">Description</h2><p><blockquote>Unless the document is read-only, this deletes all the text.</blockquote></p><h2 class="H2Tight">Parameters</h2><h3 class="ParameterHeading">ObjectName</h3><p class="ParameterBody"><span class="type">(string)&nbsp;</span>The name of the Scintilla object</p><h3 class="ParameterHeading">TabID</h3><p class="ParameterBody"><span class="type">(number)&nbsp;</span>The ID of the Scintilla tab you want to affect.</p><h2>Returns</h2><blockquote><p>This action dose not return any value.</p></blockquote><br><h1><A name="Scin.ClearDocumentStyle">Scin.ClearDocumentStyle</A></h1><br><div class=Declaration><!--(Table)=========================================================--><!--begin!kadov{{--><div align=left><!--}}end!kadov--><table x-use-null-cells		style="float: alignleft;		x-cell-content-align: Top;		border-spacing: 0px;		border-spacing: 0px;"		cellspacing=0><col><col><tr style="x-cell-content-align: top;" valign=top><td style="padding-right: 0px;			padding-left: 0px;			border-top-style: none;			border-bottom-style: none;			border-right-style: none;			border-left-style: none;"><p>Scin.ClearDocumentStyle (&nbsp;</td><td style="padding-right: 0px;			padding-left: 0px;			border-top-style: none;			border-right-style: none;			border-bottom-style: none;"><p><span class=VarType>(string)&nbsp;</span>ObjectName <span class=DefaultValue> = "Plugin1"</span>, </p><p><span class=VarType>(number)&nbsp;</span>TabID <span class=DefaultValue> = 100</span> )</p></td></tr></table><!--begin!kadov{{--></div><!--}}end!kadov--></div><h2 style="margin-bottom: 3pt;">Description</h2><p><blockquote>When wanting to completely restyle the document, for example after choosing a lexer, this action can be used to clear all styling information and reset the folding state.</blockquote></p><h2 class="H2Tight">Parameters</h2><h3 class="ParameterHeading">ObjectName</h3><p class="ParameterBody"><span class="type">(string)&nbsp;</span>The name of the Scintilla object</p><h3 class="ParameterHeading">TabID</h3><p class="ParameterBody"><span class="type">(number)&nbsp;</span>The ID of the Scintilla tab you want to affect.</p><h2>Returns</h2><blockquote><p>This action dose not return any value.</p></blockquote><br><h1><A name="Scin.ClearUndoBuffer">Scin.ClearUndoBuffer</A></h1><br><div class=Declaration><!--(Table)=========================================================--><!--begin!kadov{{--><div align=left><!--}}end!kadov--><table x-use-null-cells		style="float: alignleft;		x-cell-content-align: Top;		border-spacing: 0px;		border-spacing: 0px;"		cellspacing=0><col><col><tr style="x-cell-content-align: top;" valign=top><td style="padding-right: 0px;			padding-left: 0px;			border-top-style: none;			border-bottom-style: none;			border-right-style: none;			border-left-style: none;"><p>Scin.ClearUndoBuffer (&nbsp;</td><td style="padding-right: 0px;			padding-left: 0px;			border-top-style: none;			border-right-style: none;			border-bottom-style: none;"><p><span class=VarType>(string)&nbsp;</span>ObjectName <span class=DefaultValue> = "Plugin1"</span>, </p><p><span class=VarType>(number)&nbsp;</span>TabID <span class=DefaultValue> = 100</span> )</p></td></tr></table><!--begin!kadov{{--></div><!--}}end!kadov--></div><h2 style="margin-bottom: 3pt;">Description</h2><p><blockquote>This command tells Scintilla to forget any saved undo or redo history. It also sets the save point to the start of the undo buffer, so the document will appear to be unmodified.</blockquote></p><h2 class="H2Tight">Parameters</h2><h3 class="ParameterHeading">ObjectName</h3><p class="ParameterBody"><span class="type">(string)&nbsp;</span>The name of the Scintilla object</p><h3 class="ParameterHeading">TabID</h3><p class="ParameterBody"><span class="type">(number)&nbsp;</span>The ID of the Scintilla tab you want to affect.</p><h2>Returns</h2><blockquote><p>This action dose not return any value.</p></blockquote><br><h1><A name="Scin.Copy">Scin.Copy</A></h1><br><div class=Declaration><!--(Table)=========================================================--><!--begin!kadov{{--><div align=left><!--}}end!kadov--><table x-use-null-cells		style="float: alignleft;		x-cell-content-align: Top;		border-spacing: 0px;		border-spacing: 0px;"		cellspacing=0><col><col><tr style="x-cell-content-align: top;" valign=top><td style="padding-right: 0px;			padding-left: 0px;			border-top-style: none;			border-bottom-style: none;			border-right-style: none;			border-left-style: none;"><p>Scin.Copy (&nbsp;</td><td style="padding-right: 0px;			padding-left: 0px;			border-top-style: none;			border-right-style: none;			border-bottom-style: none;"><p><span class=VarType>(string)&nbsp;</span>ObjectName <span class=DefaultValue> = "Plugin1"</span>, </p><p><span class=VarType>(number)&nbsp;</span>TabID <span class=DefaultValue> = 100</span> )</p></td></tr></table><!--begin!kadov{{--></div><!--}}end!kadov--></div><h2 style="margin-bottom: 3pt;">Description</h2><p><blockquote>Copy selected text from document to clipboard.</blockquote></p><h2 class="H2Tight">Parameters</h2><h3 class="ParameterHeading">ObjectName</h3><p class="ParameterBody"><span class="type">(string)&nbsp;</span>The name of the Scintilla object</p><h3 class="ParameterHeading">TabID</h3><p class="ParameterBody"><span class="type">(number)&nbsp;</span>The ID of the Scintilla tab you want to affect.</p><h2>Returns</h2><blockquote><p>This action dose not return any value.</p></blockquote><br><h1><A name="Scin.Cut">Scin.Cut</A></h1><br><div class=Declaration><!--(Table)=========================================================--><!--begin!kadov{{--><div align=left><!--}}end!kadov--><table x-use-null-cells		style="float: alignleft;		x-cell-content-align: Top;		border-spacing: 0px;		border-spacing: 0px;"		cellspacing=0><col><col><tr style="x-cell-content-align: top;" valign=top><td style="padding-right: 0px;			padding-left: 0px;			border-top-style: none;			border-bottom-style: none;			border-right-style: none;			border-left-style: none;"><p>Scin.Cut (&nbsp;</td><td style="padding-right: 0px;			padding-left: 0px;			border-top-style: none;			border-right-style: none;			border-bottom-style: none;"><p><span class=VarType>(string)&nbsp;</span>ObjectName <span class=DefaultValue> = "Plugin1"</span>, </p><p><span class=VarType>(number)&nbsp;</span>TabID <span class=DefaultValue> = 100</span> )</p></td></tr></table><!--begin!kadov{{--></div><!--}}end!kadov--></div><h2 style="margin-bottom: 3pt;">Description</h2><p><blockquote>Cut selected text from document.</blockquote></p><h2 class="H2Tight">Parameters</h2><h3 class="ParameterHeading">ObjectName</h3><p class="ParameterBody"><span class="type">(string)&nbsp;</span>The name of the Scintilla object</p><h3 class="ParameterHeading">TabID</h3><p class="ParameterBody"><span class="type">(number)&nbsp;</span>The ID of the Scintilla tab you want to affect.</p><h2>Returns</h2><blockquote><p>This action dose not return any value.</p></blockquote><br><h1><A name="Scin.GetAnchor">Scin.GetAnchor</A></h1><br><div class=Declaration><!--(Table)=========================================================--><!--begin!kadov{{--><div align=left><!--}}end!kadov--><table x-use-null-cells		style="float: alignleft;		x-cell-content-align: Top;		border-spacing: 0px;		border-spacing: 0px;"		cellspacing=0><col><col><tr style="x-cell-content-align: top;" valign=top><td style="padding-right: 0px;			padding-left: 0px;			border-top-style: none;			border-bottom-style: none;			border-right-style: none;			border-left-style: none;"><p><span class=VarType>(number)&nbsp;</span>Scin.GetAnchor (&nbsp;</td><td style="padding-right: 0px;			padding-left: 0px;			border-top-style: none;			border-right-style: none;			border-bottom-style: none;"><p><span class=VarType>(string)&nbsp;</span>ObjectName <span class=DefaultValue> = "Plugin1"</span>, </p><p><span class=VarType>(number)&nbsp;</span>TabID <span class=DefaultValue> = 100</span> )</p></td></tr></table><!--begin!kadov{{--></div><!--}}end!kadov--></div><h2 style="margin-bottom: 3pt;">Description</h2><p><blockquote>Returns the current anchor position as a number.</blockquote></p><h2 class="H2Tight">Parameters</h2><h3 class="ParameterHeading">ObjectName</h3><p class="ParameterBody"><span class="type">(string)&nbsp;</span>The name of the Scintilla object</p><h3 class="ParameterHeading">TabID</h3><p class="ParameterBody"><span class="type">(number)&nbsp;</span>The ID of the Scintilla tab you want to affect.</p><h2>Returns</h2><blockquote><p><span class=type>(number) </span>The current anchor position as a number.<br></p></blockquote><br><h1><A name="Scin.GetCharAt">Scin.GetCharAt</A></h1><br><div class=Declaration><!--(Table)=========================================================--><!--begin!kadov{{--><div align=left><!--}}end!kadov--><table x-use-null-cells		style="float: alignleft;		x-cell-content-align: Top;		border-spacing: 0px;		border-spacing: 0px;"		cellspacing=0><col><col><tr style="x-cell-content-align: top;" valign=top><td style="padding-right: 0px;			padding-left: 0px;			border-top-style: none;			border-bottom-style: none;			border-right-style: none;			border-left-style: none;"><p><span class=VarType>(string)&nbsp;</span>Scin.GetCharAt (&nbsp;</td><td style="padding-right: 0px;			padding-left: 0px;			border-top-style: none;			border-right-style: none;			border-bottom-style: none;"><p><span class=VarType>(string)&nbsp;</span>ObjectName <span class=DefaultValue> = "Plugin1"</span>, </p><p><span class=VarType>(number)&nbsp;</span>TabID <span class=DefaultValue> = 100</span>, </p><p><span class=VarType>(number)&nbsp;</span>iPos )</p></td></tr></table><!--begin!kadov{{--></div><!--}}end!kadov--></div><h2 style="margin-bottom: 3pt;">Description</h2><p><blockquote>Returns the character at pos in the document as a string. If pos is negative or past the end of the document 0 will be returned. Remember that Position starts at 0</blockquote></p><blockquote><p class="Note"> <span style="font-weight: bold;">Note: </span>Remember that Position starts at 0</p></blockquote><h2 class="H2Tight">Parameters</h2><h3 class="ParameterHeading">ObjectName</h3><p class="ParameterBody"><span class="type">(string)&nbsp;</span>The name of the Scintilla object</p><h3 class="ParameterHeading">TabID</h3><p class="ParameterBody"><span class="type">(number)&nbsp;</span>The ID of the Scintilla tab you want to affect.</p><h3 class="ParameterHeading">iPos</h3><p class="ParameterBody"><span class="type">(number)&nbsp;</span>The position of the character to return</p><h2>Returns</h2><blockquote><p><span class=type>(string) </span>Returns the character at pos in the document as a string. If pos is negative or past the end of the document 0 will be returned.<br></p></blockquote><br><h1><A name="Scin.GetCurrentLine">Scin.GetCurrentLine</A></h1><br><div class=Declaration><!--(Table)=========================================================--><!--begin!kadov{{--><div align=left><!--}}end!kadov--><table x-use-null-cells		style="float: alignleft;		x-cell-content-align: Top;		border-spacing: 0px;		border-spacing: 0px;"		cellspacing=0><col><col><tr style="x-cell-content-align: top;" valign=top><td style="padding-right: 0px;			padding-left: 0px;			border-top-style: none;			border-bottom-style: none;			border-right-style: none;			border-left-style: none;"><p><span class=VarType>(string)&nbsp;</span>Scin.GetCurrentLine (&nbsp;</td><td style="padding-right: 0px;			padding-left: 0px;			border-top-style: none;			border-right-style: none;			border-bottom-style: none;"><p><span class=VarType>(string)&nbsp;</span>ObjectName <span class=DefaultValue> = "Plugin1"</span>, </p><p><span class=VarType>(number)&nbsp;</span>TabID <span class=DefaultValue> = 100</span> )</p></td></tr></table><!--begin!kadov{{--></div><!--}}end!kadov--></div><h2 style="margin-bottom: 3pt;">Description</h2><p><blockquote>Returns the text of the current line.</blockquote></p><h2 class="H2Tight">Parameters</h2><h3 class="ParameterHeading">ObjectName</h3><p class="ParameterBody"><span class="type">(string)&nbsp;</span>The name of the Scintilla object</p><h3 class="ParameterHeading">TabID</h3><p class="ParameterBody"><span class="type">(number)&nbsp;</span>The ID of the Scintilla tab you want to affect.</p><h2>Returns</h2><blockquote><p><span class=type>(string) </span>Returns the text of the current line.<br></p></blockquote><br><h1><A name="Scin.GetCurrentLinePos">Scin.GetCurrentLinePos</A></h1><br><div class=Declaration><!--(Table)=========================================================--><!--begin!kadov{{--><div align=left><!--}}end!kadov--><table x-use-null-cells		style="float: alignleft;		x-cell-content-align: Top;		border-spacing: 0px;		border-spacing: 0px;"		cellspacing=0><col><col><tr style="x-cell-content-align: top;" valign=top><td style="padding-right: 0px;			padding-left: 0px;			border-top-style: none;			border-bottom-style: none;			border-right-style: none;			border-left-style: none;"><p><span class=VarType>(number)&nbsp;</span>Scin.GetCurrentLinePos (&nbsp;</td><td style="padding-right: 0px;			padding-left: 0px;			border-top-style: none;			border-right-style: none;			border-bottom-style: none;"><p><span class=VarType>(string)&nbsp;</span>ObjectName <span class=DefaultValue> = "Plugin1"</span>, </p><p><span class=VarType>(number)&nbsp;</span>TabID <span class=DefaultValue> = 100</span> )</p></td></tr></table><!--begin!kadov{{--></div><!--}}end!kadov--></div><h2 style="margin-bottom: 3pt;">Description</h2><p><blockquote>Returns the current caret position in the current line, as a number.</blockquote></p><h2 class="H2Tight">Parameters</h2><h3 class="ParameterHeading">ObjectName</h3><p class="ParameterBody"><span class="type">(string)&nbsp;</span>The name of the Scintilla object</p><h3 class="ParameterHeading">TabID</h3><p class="ParameterBody"><span class="type">(number)&nbsp;</span>The ID of the Scintilla tab you want to affect.</p><h2>Returns</h2><blockquote><p><span class=type>(number) </span>Returns the current caret position in the current line, as a number.<br></p></blockquote><br><h1><A name="Scin.GetCurrentPos">Scin.GetCurrentPos</A></h1><br><div class=Declaration><!--(Table)=========================================================--><!--begin!kadov{{--><div align=left><!--}}end!kadov--><table x-use-null-cells		style="float: alignleft;		x-cell-content-align: Top;		border-spacing: 0px;		border-spacing: 0px;"		cellspacing=0><col><col><tr style="x-cell-content-align: top;" valign=top><td style="padding-right: 0px;			padding-left: 0px;			border-top-style: none;			border-bottom-style: none;			border-right-style: none;			border-left-style: none;"><p><span class=VarType>(number)&nbsp;</span>Scin.GetCurrentPos (&nbsp;</td><td style="padding-right: 0px;			padding-left: 0px;			border-top-style: none;			border-right-style: none;			border-bottom-style: none;"><p><span class=VarType>(string)&nbsp;</span>ObjectName <span class=DefaultValue> = "Plugin1"</span>, </p><p><span class=VarType>(number)&nbsp;</span>TabID <span class=DefaultValue> = 100</span> )</p></td></tr></table><!--begin!kadov{{--></div><!--}}end!kadov--></div><h2 style="margin-bottom: 3pt;">Description</h2><p><blockquote>Returns the current caret position of a specific tab, as a number.</blockquote></p><h2 class="H2Tight">Parameters</h2><h3 class="ParameterHeading">ObjectName</h3><p class="ParameterBody"><span class="type">(string)&nbsp;</span>The name of the Scintilla object</p><h3 class="ParameterHeading">TabID</h3><p class="ParameterBody"><span class="type">(number)&nbsp;</span>The ID of the Scintilla tab you want to affect.</p><h2>Returns</h2><blockquote><p><span class=type>(number) </span>Returns the current caret position in a specific tab, as a number.<br></p></blockquote><br><h1><A name="Scin.GetLength">Scin.GetLength</A></h1><br><div class=Declaration><!--(Table)=========================================================--><!--begin!kadov{{--><div align=left><!--}}end!kadov--><table x-use-null-cells		style="float: alignleft;		x-cell-content-align: Top;		border-spacing: 0px;		border-spacing: 0px;"		cellspacing=0><col><col><tr style="x-cell-content-align: top;" valign=top><td style="padding-right: 0px;			padding-left: 0px;			border-top-style: none;			border-bottom-style: none;			border-right-style: none;			border-left-style: none;"><p><span class=VarType>(number)&nbsp;</span>Scin.GetLength (&nbsp;</td><td style="padding-right: 0px;			padding-left: 0px;			border-top-style: none;			border-right-style: none;			border-bottom-style: none;"><p><span class=VarType>(string)&nbsp;</span>ObjectName <span class=DefaultValue> = "Plugin1"</span>, </p><p><span class=VarType>(number)&nbsp;</span>TabID <span class=DefaultValue> = 100</span> )</p></td></tr></table><!--begin!kadov{{--></div><!--}}end!kadov--></div><h2 style="margin-bottom: 3pt;">Description</h2><p><blockquote>Returns the length of text in a specified tab as a number.</blockquote></p><h2 class="H2Tight">Parameters</h2><h3 class="ParameterHeading">ObjectName</h3><p class="ParameterBody"><span class="type">(string)&nbsp;</span>The name of the Scintilla object</p><h3 class="ParameterHeading">TabID</h3><p class="ParameterBody"><span class="type">(number)&nbsp;</span>The ID of the Scintilla tab you want to affect.</p><h2>Returns</h2><blockquote><p><span class=type>(number) </span>Returns the length of text in a specified tab as a number. This number includes any non visible line endings. In this way, an empty line will generally return a length of 2.<br></p></blockquote><br><h1><A name="Scin.GetLine">Scin.GetLine</A></h1><br><div class=Declaration><!--(Table)=========================================================--><!--begin!kadov{{--><div align=left><!--}}end!kadov--><table x-use-null-cells		style="float: alignleft;		x-cell-content-align: Top;		border-spacing: 0px;		border-spacing: 0px;"		cellspacing=0><col><col><tr style="x-cell-content-align: top;" valign=top><td style="padding-right: 0px;			padding-left: 0px;			border-top-style: none;			border-bottom-style: none;			border-right-style: none;			border-left-style: none;"><p><span class=VarType>(string)&nbsp;</span>Scin.GetLine (&nbsp;</td><td style="padding-right: 0px;			padding-left: 0px;			border-top-style: none;			border-right-style: none;			border-bottom-style: none;"><p><span class=VarType>(string)&nbsp;</span>ObjectName <span class=DefaultValue> = "Plugin1"</span>, </p><p><span class=VarType>(number)&nbsp;</span>TabID <span class=DefaultValue> = 100</span>, </p><p><span class=VarType>(number)&nbsp;</span>iLineNumber )</p></td></tr></table><!--begin!kadov{{--></div><!--}}end!kadov--></div><h2 style="margin-bottom: 3pt;">Description</h2><p><blockquote>Returns the text of the specified line as a string (lines start at 0).</blockquote></p><h2 class="H2Tight">Parameters</h2><h3 class="ParameterHeading">ObjectName</h3><p class="ParameterBody"><span class="type">(string)&nbsp;</span>The name of the Scintilla object</p><h3 class="ParameterHeading">TabID</h3><p class="ParameterBody"><span class="type">(number)&nbsp;</span>The ID of the Scintilla tab you want to affect.</p><h3 class="ParameterHeading">iLineNumber</h3><p class="ParameterBody"><span class="type">(number)&nbsp;</span>The line number to get. Remember line count starts at 0.</p><h2>Returns</h2><blockquote><p><span class=type>(string) </span>Returns the text of the specified line as a string (lines start at 0). This string includes the line ending characters. In most cases you will want to trim the right most two characters before you use this string. If you ask for a line number outside the range of lines in the document, 0 characters are copied.</p></blockquote><br><h1><A name="Scin.GetLineCount">Scin.GetLineCount</A></h1><br><div class=Declaration><!--(Table)=========================================================--><!--begin!kadov{{--><div align=left><!--}}end!kadov--><table x-use-null-cells		style="float: alignleft;		x-cell-content-align: Top;		border-spacing: 0px;		border-spacing: 0px;"		cellspacing=0><col><col><tr style="x-cell-content-align: top;" valign=top><td style="padding-right: 0px;			padding-left: 0px;			border-top-style: none;			border-bottom-style: none;			border-right-style: none;			border-left-style: none;"><p><span class=VarType>(number)&nbsp;</span>Scin.GetLineCount (&nbsp;</td><td style="padding-right: 0px;			padding-left: 0px;			border-top-style: none;			border-right-style: none;			border-bottom-style: none;"><p><span class=VarType>(string)&nbsp;</span>ObjectName <span class=DefaultValue> = "Plugin1"</span>, </p><p><span class=VarType>(number)&nbsp;</span>TabID <span class=DefaultValue> = 100</span> )</p></td></tr></table><!--begin!kadov{{--></div><!--}}end!kadov--></div><h2 style="margin-bottom: 3pt;">Description</h2><p><blockquote>Returns the number of lines in the document.</blockquote></p><blockquote><p class="Note"> <span style="font-weight: bold;">Note: </span>An empty document contains 1 line. A document holding only an end of line sequence has 2 lines.</p></blockquote><h2 class="H2Tight">Parameters</h2><h3 class="ParameterHeading">ObjectName</h3><p class="ParameterBody"><span class="type">(string)&nbsp;</span>The name of the Scintilla object</p><h3 class="ParameterHeading">TabID</h3><p class="ParameterBody"><span class="type">(number)&nbsp;</span>The ID of the Scintilla tab you want to affect.</p><h2>Returns</h2><blockquote><p><span class=type>(number) </span>Returns the number of lines in the document.</p></blockquote><br><h1><A name="GetLineEndPos">GetLineEndPos</A></h1><br><div class=Declaration><!--(Table)=========================================================--><!--begin!kadov{{--><div align=left><!--}}end!kadov--><table x-use-null-cells		style="float: alignleft;		x-cell-content-align: Top;		border-spacing: 0px;		border-spacing: 0px;"		cellspacing=0><col><col><tr style="x-cell-content-align: top;" valign=top><td style="padding-right: 0px;			padding-left: 0px;			border-top-style: none;			border-bottom-style: none;			border-right-style: none;			border-left-style: none;"><p><span class=VarType>(number)&nbsp;</span>GetLineEndPos (&nbsp;</td><td style="padding-right: 0px;			padding-left: 0px;			border-top-style: none;			border-right-style: none;			border-bottom-style: none;"><p><span class=VarType>(string)&nbsp;</span>ObjectName <span class=DefaultValue> = "Plugin1"</span>, </p><p><span class=VarType>(number)&nbsp;</span>TabID <span class=DefaultValue> = 100</span>, </p><p><span class=VarType>(number)&nbsp;</span>iLineNumber )</p></td></tr></table><!--begin!kadov{{--></div><!--}}end!kadov--></div><h2 style="margin-bottom: 3pt;">Description</h2><p><blockquote>This returns the position at the end of the line, before any line end characters.</blockquote></p><h2 class="H2Tight">Parameters</h2><h3 class="ParameterHeading">ObjectName</h3><p class="ParameterBody"><span class="type">(string)&nbsp;</span>The name of the Scintilla object</p><h3 class="ParameterHeading">TabID</h3><p class="ParameterBody"><span class="type">(number)&nbsp;</span>The ID of the Scintilla tab you want to affect.</p><h3 class="ParameterHeading">iLineNumber</h3><p class="ParameterBody"><span class="type">(number)&nbsp;</span>The line number to find the end position for.</p><h2>Returns</h2><blockquote><p><span class=type>(number) </span>This returns the position at the end of the line, before any line end characters. If line is the last line in the document (which does not have any end of line characters), the result is the size of the document. If line is negative or line >= Scin.GetLineCount(), the result is undefined.</p></blockquote><br><h1><A name="Scin.GetLineFromPos">Scin.GetLineFromPos</A></h1><br><div class=Declaration><!--(Table)=========================================================--><!--begin!kadov{{--><div align=left><!--}}end!kadov--><table x-use-null-cells		style="float: alignleft;		x-cell-content-align: Top;		border-spacing: 0px;		border-spacing: 0px;"		cellspacing=0><col><col><tr style="x-cell-content-align: top;" valign=top><td style="padding-right: 0px;			padding-left: 0px;			border-top-style: none;			border-bottom-style: none;			border-right-style: none;			border-left-style: none;"><p><span class=VarType>(number)&nbsp;</span>Scin.GetLineFromPos (&nbsp;</td><td style="padding-right: 0px;			padding-left: 0px;			border-top-style: none;			border-right-style: none;			border-bottom-style: none;"><p><span class=VarType>(string)&nbsp;</span>ObjectName <span class=DefaultValue> = "Plugin1"</span>, </p><p><span class=VarType>(number)&nbsp;</span>TabID <span class=DefaultValue> = 100</span>, </p><p><span class=VarType>(number)&nbsp;</span>iPos )</p></td></tr></table><!--begin!kadov{{--></div><!--}}end!kadov--></div><h2 style="margin-bottom: 3pt;">Description</h2><p><blockquote>This action returns the line (as a number) that contains the position iPos in the document.</blockquote></p><blockquote><p class="Note"> <span style="font-weight: bold;">Note: </span>Remember that line counts start at 0.</p></blockquote><h2 class="H2Tight">Parameters</h2><h3 class="ParameterHeading">ObjectName</h3><p class="ParameterBody"><span class="type">(string)&nbsp;</span>The name of the Scintilla object</p><h3 class="ParameterHeading">TabID</h3><p class="ParameterBody"><span class="type">(number)&nbsp;</span>The ID of the Scintilla tab you want to affect.</p><h3 class="ParameterHeading">iPos</h3><p class="ParameterBody"><span class="type">(number)&nbsp;</span>The position in the document to find the line number for.</p><h2>Returns</h2><blockquote><p><span class=type>(number) </span>This action returns the line (as a number) that contains the position iPos in the document. The return value is 0 if pos <= 0. The return value is the last line if pos is beyond the end of the document. </p></blockquote><br><h1><A name="Scin.GetLineLength">Scin.GetLineLength</A></h1><br><div class=Declaration><!--(Table)=========================================================--><!--begin!kadov{{--><div align=left><!--}}end!kadov--><table x-use-null-cells		style="float: alignleft;		x-cell-content-align: Top;		border-spacing: 0px;		border-spacing: 0px;"		cellspacing=0><col><col><tr style="x-cell-content-align: top;" valign=top><td style="padding-right: 0px;			padding-left: 0px;			border-top-style: none;			border-bottom-style: none;			border-right-style: none;			border-left-style: none;"><p><span class=VarType>(number)&nbsp;</span>Scin.GetLineLength (&nbsp;</td><td style="padding-right: 0px;			padding-left: 0px;			border-top-style: none;			border-right-style: none;			border-bottom-style: none;"><p><span class=VarType>(string)&nbsp;</span>ObjectName <span class=DefaultValue> = "Plugin1"</span>, </p><p><span class=VarType>(number)&nbsp;</span>TabID <span class=DefaultValue> = 100</span>, </p><p><span class=VarType>(number)&nbsp;</span>iLineNumber )</p></td></tr></table><!--begin!kadov{{--></div><!--}}end!kadov--></div><h2 style="margin-bottom: 3pt;">Description</h2><p><blockquote>Returns the number of characters in the specified line as a number.</blockquote></p><h2 class="H2Tight">Parameters</h2><h3 class="ParameterHeading">ObjectName</h3><p class="ParameterBody"><span class="type">(string)&nbsp;</span>The name of the Scintilla object</p><h3 class="ParameterHeading">TabID</h3><p class="ParameterBody"><span class="type">(number)&nbsp;</span>The ID of the Scintilla tab you want to affect.</p><h3 class="ParameterHeading">iLineNumber</h3><p class="ParameterBody"><span class="type">(number)&nbsp;</span>The line you want the lenght of.</p><h2>Returns</h2><blockquote><p><span class=type>(number) </span>Returns the number of characters in the specified line as a number. Remember, line numbers start at 0. This return number includes non visible line endings. Generally line endings are two characters in length.</p></blockquote><br><h1><A name="Scin.GetModify">Scin.GetModify</A></h1><br><div class=Declaration><!--(Table)=========================================================--><!--begin!kadov{{--><div align=left><!--}}end!kadov--><table x-use-null-cells		style="float: alignleft;		x-cell-content-align: Top;		border-spacing: 0px;		border-spacing: 0px;"		cellspacing=0><col><col><tr style="x-cell-content-align: top;" valign=top><td style="padding-right: 0px;			padding-left: 0px;			border-top-style: none;			border-bottom-style: none;			border-right-style: none;			border-left-style: none;"><p><span class=VarType>(boolean)&nbsp;</span>Scin.GetModify (&nbsp;</td><td style="padding-right: 0px;			padding-left: 0px;			border-top-style: none;			border-right-style: none;			border-bottom-style: none;"><p><span class=VarType>(string)&nbsp;</span>ObjectName <span class=DefaultValue> = "Plugin1"</span>, </p><p><span class=VarType>(number)&nbsp;</span>TabID <span class=DefaultValue> = 100</span> )</p></td></tr></table><!--begin!kadov{{--></div><!--}}end!kadov--></div><h2 style="margin-bottom: 3pt;">Description</h2><p><blockquote>Returns the modified status of a document as a boolean.</blockquote></p><h2 class="H2Tight">Parameters</h2><h3 class="ParameterHeading">ObjectName</h3><p class="ParameterBody"><span class="type">(string)&nbsp;</span>The name of the Scintilla object</p><h3 class="ParameterHeading">TabID</h3><p class="ParameterBody"><span class="type">(number)&nbsp;</span>The ID of the Scintilla tab you want to affect.</p><h2>Returns</h2><blockquote><p><span class=type>(boolean) </span>Returns a boolean. True if the document is modified and false if it is unmodified. The modified status of a document is determined by the undo position relative to the save point. The save point is set by Scin.SetSavePoint, usually when you have saved data to a file.</p></blockquote><br><h1><A name="Scin.GetOvertype">Scin.GetOvertype</A></h1><br><div class=Declaration><!--(Table)=========================================================--><!--begin!kadov{{--><div align=left><!--}}end!kadov--><table x-use-null-cells		style="float: alignleft;		x-cell-content-align: Top;		border-spacing: 0px;		border-spacing: 0px;"		cellspacing=0><col><col><tr style="x-cell-content-align: top;" valign=top><td style="padding-right: 0px;			padding-left: 0px;			border-top-style: none;			border-bottom-style: none;			border-right-style: none;			border-left-style: none;"><p><span class=VarType>(boolean)&nbsp;</span>Scin.GetOvertype (&nbsp;</td><td style="padding-right: 0px;			padding-left: 0px;			border-top-style: none;			border-right-style: none;			border-bottom-style: none;"><p><span class=VarType>(string)&nbsp;</span>ObjectName <span class=DefaultValue> = "Plugin1"</span>, </p><p><span class=VarType>(number)&nbsp;</span>TabID <span class=DefaultValue> = 100</span> )</p></td></tr></table><!--begin!kadov{{--></div><!--}}end!kadov--></div><h2 style="margin-bottom: 3pt;">Description</h2><p><blockquote>Returns true if overtyping is active, otherwise false will be returned.</blockquote></p><h2 class="H2Tight">Parameters</h2><h3 class="ParameterHeading">ObjectName</h3><p class="ParameterBody"><span class="type">(string)&nbsp;</span>The name of the Scintilla object</p><h3 class="ParameterHeading">TabID</h3><p class="ParameterBody"><span class="type">(number)&nbsp;</span>The ID of the Scintilla tab you want to affect.</p><h2>Returns</h2><blockquote><p><span class=type>(boolean) </span>Returns a boolean. Returns true if overtyping is active, otherwise false will be returned.</p></blockquote><br><h1><A name="Scin.GetPosFromLine">Scin.GetPosFromLine</A></h1><br><div class=Declaration><!--(Table)=========================================================--><!--begin!kadov{{--><div align=left><!--}}end!kadov--><table x-use-null-cells		style="float: alignleft;		x-cell-content-align: Top;		border-spacing: 0px;		border-spacing: 0px;"		cellspacing=0><col><col><tr style="x-cell-content-align: top;" valign=top><td style="padding-right: 0px;			padding-left: 0px;			border-top-style: none;			border-bottom-style: none;			border-right-style: none;			border-left-style: none;"><p><span class=VarType>(number)&nbsp;</span>Scin.GetPosFromLine (&nbsp;</td><td style="padding-right: 0px;			padding-left: 0px;			border-top-style: none;			border-right-style: none;			border-bottom-style: none;"><p><span class=VarType>(string)&nbsp;</span>ObjectName <span class=DefaultValue> = "Plugin1"</span>, </p><p><span class=VarType>(number)&nbsp;</span>TabID <span class=DefaultValue> = 100</span>, </p><p><span class=VarType>(number)&nbsp;</span>iLineNumber )</p></td></tr></table><!--begin!kadov{{--></div><!--}}end!kadov--></div><h2 style="margin-bottom: 3pt;">Description</h2><p><blockquote>This returns the document position that corresponds with the start of the line.</blockquote></p><blockquote><p class="Note"> <span style="font-weight: bold;">Note: </span>Remember that line counts start at 0.</p></blockquote><h2 class="H2Tight">Parameters</h2><h3 class="ParameterHeading">ObjectName</h3><p class="ParameterBody"><span class="type">(string)&nbsp;</span>The name of the Scintilla object</p><h3 class="ParameterHeading">TabID</h3><p class="ParameterBody"><span class="type">(number)&nbsp;</span>The ID of the Scintilla tab you want to affect.</p><h3 class="ParameterHeading">iLineNumber</h3><p class="ParameterBody"><span class="type">(number)&nbsp;</span>The line number to get the position from.</p><blockquote><p class="Note"> <span style="font-weight: bold;">Note: </span>Remember that lines start at 0.</p></blockquote><h2>Returns</h2><blockquote><p><span class=type>(number) </span>This returns the document position that corresponds with the start of the line. If line is negative, the position of the line holding the start of the selection is returned. If line is greater than the lines in the document, the return value is -1. If line is equal to the number of lines in the document (i.e. 1 line past the last line), the return value is the end of the document.</p></blockquote><br><h1><A name="Scin.GetReadOnly">Scin.GetReadOnly</A></h1><br><div class=Declaration><!--(Table)=========================================================--><!--begin!kadov{{--><div align=left><!--}}end!kadov--><table x-use-null-cells		style="float: alignleft;		x-cell-content-align: Top;		border-spacing: 0px;		border-spacing: 0px;"		cellspacing=0><col><col><tr style="x-cell-content-align: top;" valign=top><td style="padding-right: 0px;			padding-left: 0px;			border-top-style: none;			border-bottom-style: none;			border-right-style: none;			border-left-style: none;"><p><span class=VarType>(boolean)&nbsp;</span>Scin.GetReadOnly (&nbsp;</td><td style="padding-right: 0px;			padding-left: 0px;			border-top-style: none;			border-right-style: none;			border-bottom-style: none;"><p><span class=VarType>(string)&nbsp;</span>ObjectName <span class=DefaultValue> = "Plugin1"</span>, </p><p><span class=VarType>(number)&nbsp;</span>TabID <span class=DefaultValue> = 100</span> )</p></td></tr></table><!--begin!kadov{{--></div><!--}}end!kadov--></div><h2 style="margin-bottom: 3pt;">Description</h2><p><blockquote>Returns the read-only flag for the document as a boolean.</blockquote></p><h2 class="H2Tight">Parameters</h2><h3 class="ParameterHeading">ObjectName</h3><p class="ParameterBody"><span class="type">(string)&nbsp;</span>The name of the Scintilla object</p><h3 class="ParameterHeading">TabID</h3><p class="ParameterBody"><span class="type">(number)&nbsp;</span>The ID of the Scintilla tab you want to affect.</p><h2>Returns</h2><blockquote><p><span class=type>(boolean) </span>Returns the read-only flag for the document as a boolean.</p></blockquote><br><h1><A name="Scin.GetSelectedEnd">Scin.GetSelectedEnd</A></h1><br><div class=Declaration><!--(Table)=========================================================--><!--begin!kadov{{--><div align=left><!--}}end!kadov--><table x-use-null-cells		style="float: alignleft;		x-cell-content-align: Top;		border-spacing: 0px;		border-spacing: 0px;"		cellspacing=0><col><col><tr style="x-cell-content-align: top;" valign=top><td style="padding-right: 0px;			padding-left: 0px;			border-top-style: none;			border-bottom-style: none;			border-right-style: none;			border-left-style: none;"><p><span class=VarType>(number)&nbsp;</span>Scin.GetSelectedEnd (&nbsp;</td><td style="padding-right: 0px;			padding-left: 0px;			border-top-style: none;			border-right-style: none;			border-bottom-style: none;"><p><span class=VarType>(string)&nbsp;</span>ObjectName <span class=DefaultValue> = "Plugin1"</span>, </p><p><span class=VarType>(number)&nbsp;</span>TabID <span class=DefaultValue> = 100</span> )</p></td></tr></table><!--begin!kadov{{--></div><!--}}end!kadov--></div><h2 style="margin-bottom: 3pt;">Description</h2><p><blockquote>Returns the position of the end of the selection, as a number.</blockquote></p><h2 class="H2Tight">Parameters</h2><h3 class="ParameterHeading">ObjectName</h3><p class="ParameterBody"><span class="type">(string)&nbsp;</span>The name of the Scintilla object</p><h3 class="ParameterHeading">TabID</h3><p class="ParameterBody"><span class="type">(number)&nbsp;</span>The ID of the Scintilla tab you want to affect.</p><h2>Returns</h2><blockquote><p><span class=type>(number) </span>Returns the position of the end of the selection, as a number.</p></blockquote><br><h1><A name="Scin.GetSelectedLength">Scin.GetSelectedLength</A></h1><br><div class=Declaration><!--(Table)=========================================================--><!--begin!kadov{{--><div align=left><!--}}end!kadov--><table x-use-null-cells		style="float: alignleft;		x-cell-content-align: Top;		border-spacing: 0px;		border-spacing: 0px;"		cellspacing=0><col><col><tr style="x-cell-content-align: top;" valign=top><td style="padding-right: 0px;			padding-left: 0px;			border-top-style: none;			border-bottom-style: none;			border-right-style: none;			border-left-style: none;"><p><span class=VarType>(number)&nbsp;</span>Scin.GetSelectedLength (&nbsp;</td><td style="padding-right: 0px;			padding-left: 0px;			border-top-style: none;			border-right-style: none;			border-bottom-style: none;"><p><span class=VarType>(string)&nbsp;</span>ObjectName <span class=DefaultValue> = "Plugin1"</span>, </p><p><span class=VarType>(number)&nbsp;</span>TabID <span class=DefaultValue> = 100</span> )</p></td></tr></table><!--begin!kadov{{--></div><!--}}end!kadov--></div><h2 style="margin-bottom: 3pt;">Description</h2><p><blockquote>Returns the length currently selected text and a terminating 0 byte as number.</blockquote></p><h2 class="H2Tight">Parameters</h2><h3 class="ParameterHeading">ObjectName</h3><p class="ParameterBody"><span class="type">(string)&nbsp;</span>The name of the Scintilla object</p><h3 class="ParameterHeading">TabID</h3><p class="ParameterBody"><span class="type">(number)&nbsp;</span>The ID of the Scintilla tab you want to affect.</p><h2>Returns</h2><blockquote><p><span class=type>(number) </span>Returns the length currently selected text and a terminating 0 byte as number.</p></blockquote><br><h1><A name="Scin.GetSelectedStart">Scin.GetSelectedStart</A></h1><br><div class=Declaration><!--(Table)=========================================================--><!--begin!kadov{{--><div align=left><!--}}end!kadov--><table x-use-null-cells		style="float: alignleft;		x-cell-content-align: Top;		border-spacing: 0px;		border-spacing: 0px;"		cellspacing=0><col><col><tr style="x-cell-content-align: top;" valign=top><td style="padding-right: 0px;			padding-left: 0px;			border-top-style: none;			border-bottom-style: none;			border-right-style: none;			border-left-style: none;"><p><span class=VarType>(number)&nbsp;</span>Scin.GetSelectedStart (&nbsp;</td><td style="padding-right: 0px;			padding-left: 0px;			border-top-style: none;			border-right-style: none;			border-bottom-style: none;"><p><span class=VarType>(string)&nbsp;</span>ObjectName <span class=DefaultValue> = "Plugin1"</span>, </p><p><span class=VarType>(number)&nbsp;</span>TabID <span class=DefaultValue> = 100</span> )</p></td></tr></table><!--begin!kadov{{--></div><!--}}end!kadov--></div><h2 style="margin-bottom: 3pt;">Description</h2><p><blockquote>Returns the position of the start of the selection, as a number.</blockquote></p><h2 class="H2Tight">Parameters</h2><h3 class="ParameterHeading">ObjectName</h3><p class="ParameterBody"><span class="type">(string)&nbsp;</span>The name of the Scintilla object</p><h3 class="ParameterHeading">TabID</h3><p class="ParameterBody"><span class="type">(number)&nbsp;</span>The ID of the Scintilla tab you want to affect.</p><h2>Returns</h2><blockquote><p><span class=type>(number) </span>Returns the position of the start of the selection, as a number.</p></blockquote><br><h1><A name="Scin.GetText">Scin.GetText</A></h1><br><div class=Declaration><!--(Table)=========================================================--><!--begin!kadov{{--><div align=left><!--}}end!kadov--><table x-use-null-cells		style="float: alignleft;		x-cell-content-align: Top;		border-spacing: 0px;		border-spacing: 0px;"		cellspacing=0><col><col><tr style="x-cell-content-align: top;" valign=top><td style="padding-right: 0px;			padding-left: 0px;			border-top-style: none;			border-bottom-style: none;			border-right-style: none;			border-left-style: none;"><p><span class=VarType>(string)&nbsp;</span>Scin.GetText (&nbsp;</td><td style="padding-right: 0px;			padding-left: 0px;			border-top-style: none;			border-right-style: none;			border-bottom-style: none;"><p><span class=VarType>(string)&nbsp;</span>ObjectName <span class=DefaultValue> = "Plugin1"</span>, </p><p><span class=VarType>(number)&nbsp;</span>TabID <span class=DefaultValue> = 100</span> )</p></td></tr></table><!--begin!kadov{{--></div><!--}}end!kadov--></div><h2 style="margin-bottom: 3pt;">Description</h2><p><blockquote>Returns all of the text from a specified tab as a string.</blockquote></p><h2 class="H2Tight">Parameters</h2><h3 class="ParameterHeading">ObjectName</h3><p class="ParameterBody"><span class="type">(string)&nbsp;</span>The name of the Scintilla object</p><h3 class="ParameterHeading">TabID</h3><p class="ParameterBody"><span class="type">(number)&nbsp;</span>The ID of the Scintilla tab you want to affect.</p><h2>Returns</h2><blockquote><p><span class=type>(string) </span>Returns all of the text from a specified tab as a string.<br></p></blockquote><br><h1><A name="Scin.GetStatus">Scin.GetStatus</A></h1><br><div class=Declaration><!--(Table)=========================================================--><!--begin!kadov{{--><div align=left><!--}}end!kadov--><table x-use-null-cells		style="float: alignleft;		x-cell-content-align: Top;		border-spacing: 0px;		border-spacing: 0px;"		cellspacing=0><col><col><tr style="x-cell-content-align: top;" valign=top><td style="padding-right: 0px;			padding-left: 0px;			border-top-style: none;			border-bottom-style: none;			border-right-style: none;			border-left-style: none;"><p><span class=VarType>(number)&nbsp;</span>Scin.GetStatus (&nbsp;</td><td style="padding-right: 0px;			padding-left: 0px;			border-top-style: none;			border-right-style: none;			border-bottom-style: none;"><p><span class=VarType>(string)&nbsp;</span>ObjectName <span class=DefaultValue> = "Plugin1"</span>, </p><p><span class=VarType>(number)&nbsp;</span>TabID <span class=DefaultValue> = 100</span> )</p></td></tr></table><!--begin!kadov{{--></div><!--}}end!kadov--></div><h2 style="margin-bottom: 3pt;">Description</h2><p><blockquote>If an error occurs, Scintilla may set an internal error number that can be retrieved with this action.</blockquote></p><blockquote><p class="Note"> <span style="font-weight: bold;">Note: </span>The currently defined statuses are: 0 No failures, 1 Generic failure, 2 Memory is exhausted.</p></blockquote><h2 class="H2Tight">Parameters</h2><h3 class="ParameterHeading">ObjectName</h3><p class="ParameterBody"><span class="type">(string)&nbsp;</span>The name of the Scintilla object</p><h3 class="ParameterHeading">TabID</h3><p class="ParameterBody"><span class="type">(number)&nbsp;</span>The ID of the Scintilla tab you want to affect.</p><h2>Returns</h2><blockquote><p><span class=type>(number) </span>If an error occurs, Scintilla may set an internal error number that can be retrieved with this action. To clear the error status call Scin.ResetStatus.</p></blockquote><br><h1><A name="Scin.GetZoom">Scin.GetZoom</A></h1><br><div class=Declaration><!--(Table)=========================================================--><!--begin!kadov{{--><div align=left><!--}}end!kadov--><table x-use-null-cells		style="float: alignleft;		x-cell-content-align: Top;		border-spacing: 0px;		border-spacing: 0px;"		cellspacing=0><col><col><tr style="x-cell-content-align: top;" valign=top><td style="padding-right: 0px;			padding-left: 0px;			border-top-style: none;			border-bottom-style: none;			border-right-style: none;			border-left-style: none;"><p><span class=VarType>(number)&nbsp;</span>Scin.GetZoom (&nbsp;</td><td style="padding-right: 0px;			padding-left: 0px;			border-top-style: none;			border-right-style: none;			border-bottom-style: none;"><p><span class=VarType>(string)&nbsp;</span>ObjectName <span class=DefaultValue> = "Plugin1"</span>, </p><p><span class=VarType>(number)&nbsp;</span>TabID <span class=DefaultValue> = 100</span> )</p></td></tr></table><!--begin!kadov{{--></div><!--}}end!kadov--></div><h2 style="margin-bottom: 3pt;">Description</h2><p><blockquote>Returns the current zoom factor of a specified tab as a number.</blockquote></p><h2 class="H2Tight">Parameters</h2><h3 class="ParameterHeading">ObjectName</h3><p class="ParameterBody"><span class="type">(string)&nbsp;</span>The name of the Scintilla object</p><h3 class="ParameterHeading">TabID</h3><p class="ParameterBody"><span class="type">(number)&nbsp;</span>The ID of the Scintilla tab you want to affect.</p><h2>Returns</h2><blockquote><p><span class=type>(number) </span>Returns the current zoom factor of a specified tab as a number.</p></blockquote><br><h1><A name="Scin.GoToLine">Scin.GoToLine</A></h1><br><div class=Declaration><!--(Table)=========================================================--><!--begin!kadov{{--><div align=left><!--}}end!kadov--><table x-use-null-cells		style="float: alignleft;		x-cell-content-align: Top;		border-spacing: 0px;		border-spacing: 0px;"		cellspacing=0><col><col><tr style="x-cell-content-align: top;" valign=top><td style="padding-right: 0px;			padding-left: 0px;			border-top-style: none;			border-bottom-style: none;			border-right-style: none;			border-left-style: none;"><p>Scin.GoToLine (&nbsp;</td><td style="padding-right: 0px;			padding-left: 0px;			border-top-style: none;			border-right-style: none;			border-bottom-style: none;"><p><span class=VarType>(string)&nbsp;</span>ObjectName <span class=DefaultValue> = "Plugin1"</span>, </p><p><span class=VarType>(number)&nbsp;</span>TabID <span class=DefaultValue> = 100</span>, </p><p><span class=VarType>(number)&nbsp;</span>iLineNumber )</p></td></tr></table><!--begin!kadov{{--></div><!--}}end!kadov--></div><h2 style="margin-bottom: 3pt;">Description</h2><p><blockquote>Removes any selection and sets the caret at the start of line number line and scrolls the view (if needed) to make it visible. The anchor position is set the same as the current position. If line is outside the lines in the document (first line is 0), the line set is the first or last.</blockquote></p><h2 class="H2Tight">Parameters</h2><h3 class="ParameterHeading">ObjectName</h3><p class="ParameterBody"><span class="type">(string)&nbsp;</span>The name of the Scintilla object</p><h3 class="ParameterHeading">TabID</h3><p class="ParameterBody"><span class="type">(number)&nbsp;</span>The ID of the Scintilla tab you want to affect.</p><h3 class="ParameterHeading">iLineNumber</h3><p class="ParameterBody"><span class="type">(number)&nbsp;</span>The line you want to move the caret to.</p><h2>Returns</h2><blockquote><p>This action dose not return any value.</p></blockquote><br><h1><A name="Scin.GoToPos">Scin.GoToPos</A></h1><br><div class=Declaration><!--(Table)=========================================================--><!--begin!kadov{{--><div align=left><!--}}end!kadov--><table x-use-null-cells		style="float: alignleft;		x-cell-content-align: Top;		border-spacing: 0px;		border-spacing: 0px;"		cellspacing=0><col><col><tr style="x-cell-content-align: top;" valign=top><td style="padding-right: 0px;			padding-left: 0px;			border-top-style: none;			border-bottom-style: none;			border-right-style: none;			border-left-style: none;"><p>Scin.GoToPos (&nbsp;</td><td style="padding-right: 0px;			padding-left: 0px;			border-top-style: none;			border-right-style: none;			border-bottom-style: none;"><p><span class=VarType>(string)&nbsp;</span>ObjectName <span class=DefaultValue> = "Plugin1"</span>, </p><p><span class=VarType>(number)&nbsp;</span>TabID <span class=DefaultValue> = 100</span>, </p><p><span class=VarType>(number)&nbsp;</span>iPos )</p></td></tr></table><!--begin!kadov{{--></div><!--}}end!kadov--></div><h2 style="margin-bottom: 3pt;">Description</h2><p><blockquote>This removes any selection, sets the caret at pos and scrolls the view to make the caret visible, if necessary. It is equivalent to Scin.SetSelected(pos, pos). The anchor position is set the same as the current position.</blockquote></p><h2 class="H2Tight">Parameters</h2><h3 class="ParameterHeading">ObjectName</h3><p class="ParameterBody"><span class="type">(string)&nbsp;</span>The name of the Scintilla object</p><h3 class="ParameterHeading">TabID</h3><p class="ParameterBody"><span class="type">(number)&nbsp;</span>The ID of the Scintilla tab you want to affect.</p><h3 class="ParameterHeading">iPos</h3><p class="ParameterBody"><span class="type">(number)&nbsp;</span>The position you want to move the caret to.</p><h2>Returns</h2><blockquote><p>This action dose not return any value.</p></blockquote><br><h1><A name="Scin.InsertText">Scin.InsertText</A></h1><br><div class=Declaration><!--(Table)=========================================================--><!--begin!kadov{{--><div align=left><!--}}end!kadov--><table x-use-null-cells		style="float: alignleft;		x-cell-content-align: Top;		border-spacing: 0px;		border-spacing: 0px;"		cellspacing=0><col><col><tr style="x-cell-content-align: top;" valign=top><td style="padding-right: 0px;			padding-left: 0px;			border-top-style: none;			border-bottom-style: none;			border-right-style: none;			border-left-style: none;"><p>Scin.InsertText (&nbsp;</td><td style="padding-right: 0px;			padding-left: 0px;			border-top-style: none;			border-right-style: none;			border-bottom-style: none;"><p><span class=VarType>(string)&nbsp;</span>ObjectName <span class=DefaultValue> = "Plugin1"</span>, </p><p><span class=VarType>(number)&nbsp;</span>TabID <span class=DefaultValue> = 100</span>, </p><p><span class=VarType>(number)&nbsp;</span>iPos, </p><p><span class=VarType>(string)&nbsp;</span>sInsert <span class=DefaultValue> = "Hello World"</span> )</p></td></tr></table><!--begin!kadov{{--></div><!--}}end!kadov--></div><h2 style="margin-bottom: 3pt;">Description</h2><p><blockquote>This inserts a text string at position pos or at the current position if pos is -1. If the current position is after the insertion point then it is moved along with its surrounding text but no scrolling is performed.</blockquote></p><h2 class="H2Tight">Parameters</h2><h3 class="ParameterHeading">ObjectName</h3><p class="ParameterBody"><span class="type">(string)&nbsp;</span>The name of the Scintilla object</p><h3 class="ParameterHeading">TabID</h3><p class="ParameterBody"><span class="type">(number)&nbsp;</span>The ID of the Scintilla tab you want to affect.</p><h3 class="ParameterHeading">iPos</h3><p class="ParameterBody"><span class="type">(number)&nbsp;</span>The position you want to insert your string.</p><h3 class="ParameterHeading">sInsert</h3><p class="ParameterBody"><span class="type">(string)&nbsp;</span>The string you want to insert</p><h2>Returns</h2><blockquote><p>This action dose not return any value.</p></blockquote><br><h1><A name="Scin.LinesOnScreen">Scin.LinesOnScreen</A></h1><br><div class=Declaration><!--(Table)=========================================================--><!--begin!kadov{{--><div align=left><!--}}end!kadov--><table x-use-null-cells		style="float: alignleft;		x-cell-content-align: Top;		border-spacing: 0px;		border-spacing: 0px;"		cellspacing=0><col><col><tr style="x-cell-content-align: top;" valign=top><td style="padding-right: 0px;			padding-left: 0px;			border-top-style: none;			border-bottom-style: none;			border-right-style: none;			border-left-style: none;"><p><span class=VarType>(number)&nbsp;</span>Scin.LinesOnScreen (&nbsp;</td><td style="padding-right: 0px;			padding-left: 0px;			border-top-style: none;			border-right-style: none;			border-bottom-style: none;"><p><span class=VarType>(string)&nbsp;</span>ObjectName <span class=DefaultValue> = "Plugin1"</span>, </p><p><span class=VarType>(number)&nbsp;</span>TabID <span class=DefaultValue> = 100</span> )</p></td></tr></table><!--begin!kadov{{--></div><!--}}end!kadov--></div><h2 style="margin-bottom: 3pt;">Description</h2><p><blockquote>This returns the number of complete lines visible on the screen.</blockquote></p><h2 class="H2Tight">Parameters</h2><h3 class="ParameterHeading">ObjectName</h3><p class="ParameterBody"><span class="type">(string)&nbsp;</span>The name of the Scintilla object</p><h3 class="ParameterHeading">TabID</h3><p class="ParameterBody"><span class="type">(number)&nbsp;</span>The ID of the Scintilla tab you want to affect.</p><h2>Returns</h2><blockquote><p><span class=type>(number) </span>This returns the number of complete lines visible on the screen. With a constant line height, this is the vertical space available divided by the line separation. Unless you arrange to size your window to an integral number of lines, there may be a partial line visible at the bottom of the view.</p></blockquote><br><h1><A name="Scin.MoveCaretInsideView">Scin.MoveCaretInsideView</A></h1><br><div class=Declaration><!--(Table)=========================================================--><!--begin!kadov{{--><div align=left><!--}}end!kadov--><table x-use-null-cells		style="float: alignleft;		x-cell-content-align: Top;		border-spacing: 0px;		border-spacing: 0px;"		cellspacing=0><col><col><tr style="x-cell-content-align: top;" valign=top><td style="padding-right: 0px;			padding-left: 0px;			border-top-style: none;			border-bottom-style: none;			border-right-style: none;			border-left-style: none;"><p>Scin.MoveCaretInsideView (&nbsp;</td><td style="padding-right: 0px;			padding-left: 0px;			border-top-style: none;			border-right-style: none;			border-bottom-style: none;"><p><span class=VarType>(string)&nbsp;</span>ObjectName <span class=DefaultValue> = "Plugin1"</span>, </p><p><span class=VarType>(number)&nbsp;</span>TabID <span class=DefaultValue> = 100</span> )</p></td></tr></table><!--begin!kadov{{--></div><!--}}end!kadov--></div><h2 style="margin-bottom: 3pt;">Description</h2><p><blockquote>If the caret is off the top or bottom of the view, it is moved to the nearest line that is visible to its current position. Any selection is lost.</blockquote></p><h2 class="H2Tight">Parameters</h2><h3 class="ParameterHeading">ObjectName</h3><p class="ParameterBody"><span class="type">(string)&nbsp;</span>The name of the Scintilla object</p><h3 class="ParameterHeading">TabID</h3><p class="ParameterBody"><span class="type">(number)&nbsp;</span>The ID of the Scintilla tab you want to affect.</p><h2>Returns</h2><blockquote><p>This action dose not return any value.</p></blockquote><br><h1><A name="Scin.Paste">Scin.Paste</A></h1><br><div class=Declaration><!--(Table)=========================================================--><!--begin!kadov{{--><div align=left><!--}}end!kadov--><table x-use-null-cells		style="float: alignleft;		x-cell-content-align: Top;		border-spacing: 0px;		border-spacing: 0px;"		cellspacing=0><col><col><tr style="x-cell-content-align: top;" valign=top><td style="padding-right: 0px;			padding-left: 0px;			border-top-style: none;			border-bottom-style: none;			border-right-style: none;			border-left-style: none;"><p>Scin.Paste (&nbsp;</td><td style="padding-right: 0px;			padding-left: 0px;			border-top-style: none;			border-right-style: none;			border-bottom-style: none;"><p><span class=VarType>(string)&nbsp;</span>ObjectName <span class=DefaultValue> = "Plugin1"</span>, </p><p><span class=VarType>(number)&nbsp;</span>TabID <span class=DefaultValue> = 100</span> )</p></td></tr></table><!--begin!kadov{{--></div><!--}}end!kadov--></div><h2 style="margin-bottom: 3pt;">Description</h2><p><blockquote>Paste contents of clipboard to document at the position of the caret.</blockquote></p><h2 class="H2Tight">Parameters</h2><h3 class="ParameterHeading">ObjectName</h3><p class="ParameterBody"><span class="type">(string)&nbsp;</span>The name of the Scintilla object</p><h3 class="ParameterHeading">TabID</h3><p class="ParameterBody"><span class="type">(number)&nbsp;</span>The ID of the Scintilla tab you want to affect.</p><h2>Returns</h2><blockquote><p>This action dose not return any value.</p></blockquote><br><h1><A name="Scin.Redo">Scin.Redo</A></h1><br><div class=Declaration><!--(Table)=========================================================--><!--begin!kadov{{--><div align=left><!--}}end!kadov--><table x-use-null-cells		style="float: alignleft;		x-cell-content-align: Top;		border-spacing: 0px;		border-spacing: 0px;"		cellspacing=0><col><col><tr style="x-cell-content-align: top;" valign=top><td style="padding-right: 0px;			padding-left: 0px;			border-top-style: none;			border-bottom-style: none;			border-right-style: none;			border-left-style: none;"><p>Scin.Redo (&nbsp;</td><td style="padding-right: 0px;			padding-left: 0px;			border-top-style: none;			border-right-style: none;			border-bottom-style: none;"><p><span class=VarType>(string)&nbsp;</span>ObjectName <span class=DefaultValue> = "Plugin1"</span>, </p><p><span class=VarType>(number)&nbsp;</span>TabID <span class=DefaultValue> = 100</span> )</p></td></tr></table><!--begin!kadov{{--></div><!--}}end!kadov--></div><h2 style="margin-bottom: 3pt;">Description</h2><p><blockquote>Undoes the effect of the last Scin.Undo action.</blockquote></p><h2 class="H2Tight">Parameters</h2><h3 class="ParameterHeading">ObjectName</h3><p class="ParameterBody"><span class="type">(string)&nbsp;</span>The name of the Scintilla object</p><h3 class="ParameterHeading">TabID</h3><p class="ParameterBody"><span class="type">(number)&nbsp;</span>The ID of the Scintilla tab you want to affect.</p><h2>Returns</h2><blockquote><p>This action dose not return any value.</p></blockquote><br><h1><A name="Scin.ResetStatus">Scin.ResetStatus</A></h1><br><div class=Declaration><!--(Table)=========================================================--><!--begin!kadov{{--><div align=left><!--}}end!kadov--><table x-use-null-cells		style="float: alignleft;		x-cell-content-align: Top;		border-spacing: 0px;		border-spacing: 0px;"		cellspacing=0><col><col><tr style="x-cell-content-align: top;" valign=top><td style="padding-right: 0px;			padding-left: 0px;			border-top-style: none;			border-bottom-style: none;			border-right-style: none;			border-left-style: none;"><p>Scin.ResetStatus (&nbsp;</td><td style="padding-right: 0px;			padding-left: 0px;			border-top-style: none;			border-right-style: none;			border-bottom-style: none;"><p><span class=VarType>(string)&nbsp;</span>ObjectName <span class=DefaultValue> = "Plugin1"</span>, </p><p><span class=VarType>(number)&nbsp;</span>TabID <span class=DefaultValue> = 100</span> )</p></td></tr></table><!--begin!kadov{{--></div><!--}}end!kadov--></div><h2 style="margin-bottom: 3pt;">Description</h2><p><blockquote>Reset the Status back to 0 (OK). May be used after Scin.GetStatus</blockquote></p><h2 class="H2Tight">Parameters</h2><h3 class="ParameterHeading">ObjectName</h3><p class="ParameterBody"><span class="type">(string)&nbsp;</span>The name of the Scintilla object</p><h3 class="ParameterHeading">TabID</h3><p class="ParameterBody"><span class="type">(number)&nbsp;</span>The ID of the Scintilla tab you want to affect.</p><h2>Returns</h2><blockquote><p>This action dose not return any value.</p></blockquote><br><h1><A name="Scin.ReplaceSelected">Scin.ReplaceSelected</A></h1><br><div class=Declaration><!--(Table)=========================================================--><!--begin!kadov{{--><div align=left><!--}}end!kadov--><table x-use-null-cells		style="float: alignleft;		x-cell-content-align: Top;		border-spacing: 0px;		border-spacing: 0px;"		cellspacing=0><col><col><tr style="x-cell-content-align: top;" valign=top><td style="padding-right: 0px;			padding-left: 0px;			border-top-style: none;			border-bottom-style: none;			border-right-style: none;			border-left-style: none;"><p>Scin.ReplaceSelected (&nbsp;</td><td style="padding-right: 0px;			padding-left: 0px;			border-top-style: none;			border-right-style: none;			border-bottom-style: none;"><p><span class=VarType>(string)&nbsp;</span>ObjectName <span class=DefaultValue> = "Plugin1"</span>, </p><p><span class=VarType>(number)&nbsp;</span>TabID <span class=DefaultValue> = 100</span>, </p><p><span class=VarType>(string)&nbsp;</span>sReplaceString <span class=DefaultValue> = "Hello World"</span> )</p></td></tr></table><!--begin!kadov{{--></div><!--}}end!kadov--></div><h2 style="margin-bottom: 3pt;">Description</h2><p><blockquote>Replace the currently selected text.</blockquote></p><blockquote><p class="Note"> <span style="font-weight: bold;">Note: </span>If the anchor and current position are the same, the text is inserted at the caret position. The caret is positioned after the inserted text and the caret is scrolled into view.</p></blockquote><h2 class="H2Tight">Parameters</h2><h3 class="ParameterHeading">ObjectName</h3><p class="ParameterBody"><span class="type">(string)&nbsp;</span>The name of the Scintilla object</p><h3 class="ParameterHeading">TabID</h3><p class="ParameterBody"><span class="type">(number)&nbsp;</span>The ID of the Scintilla tab you want to affect.</p><h3 class="ParameterHeading">sReplaceString</h3><p class="ParameterBody"><span class="type">(string)&nbsp;</span>The string to replace what is selected</p><h2>Returns</h2><blockquote><p>This action dose not return any value.</p></blockquote><br><h1><A name="Scin.SelectAll">Scin.SelectAll</A></h1><br><div class=Declaration><!--(Table)=========================================================--><!--begin!kadov{{--><div align=left><!--}}end!kadov--><table x-use-null-cells		style="float: alignleft;		x-cell-content-align: Top;		border-spacing: 0px;		border-spacing: 0px;"		cellspacing=0><col><col><tr style="x-cell-content-align: top;" valign=top><td style="padding-right: 0px;			padding-left: 0px;			border-top-style: none;			border-bottom-style: none;			border-right-style: none;			border-left-style: none;"><p>Scin.SelectAll (&nbsp;</td><td style="padding-right: 0px;			padding-left: 0px;			border-top-style: none;			border-right-style: none;			border-bottom-style: none;"><p><span class=VarType>(string)&nbsp;</span>ObjectName <span class=DefaultValue> = "Plugin1"</span>, </p><p><span class=VarType>(number)&nbsp;</span>TabID <span class=DefaultValue> = 100</span> )</p></td></tr></table><!--begin!kadov{{--></div><!--}}end!kadov--></div><h2 style="margin-bottom: 3pt;">Description</h2><p><blockquote>This selects all the text in the document</blockquote></p><blockquote><p class="Note"> <span style="font-weight: bold;">Note: </span>The current position is not scrolled into view.</p></blockquote><h2 class="H2Tight">Parameters</h2><h3 class="ParameterHeading">ObjectName</h3><p class="ParameterBody"><span class="type">(string)&nbsp;</span>The name of the Scintilla object</p><h3 class="ParameterHeading">TabID</h3><p class="ParameterBody"><span class="type">(number)&nbsp;</span>The ID of the Scintilla tab you want to affect.</p><h2>Returns</h2><blockquote><p>This action dose not return any value.</p></blockquote><br><h1><A name="Scin.SetAnchor">Scin.SetAnchor</A></h1><br><div class=Declaration><!--(Table)=========================================================--><!--begin!kadov{{--><div align=left><!--}}end!kadov--><table x-use-null-cells		style="float: alignleft;		x-cell-content-align: Top;		border-spacing: 0px;		border-spacing: 0px;"		cellspacing=0><col><col><tr style="x-cell-content-align: top;" valign=top><td style="padding-right: 0px;			padding-left: 0px;			border-top-style: none;			border-bottom-style: none;			border-right-style: none;			border-left-style: none;"><p>Scin.SetAnchor (&nbsp;</td><td style="padding-right: 0px;			padding-left: 0px;			border-top-style: none;			border-right-style: none;			border-bottom-style: none;"><p><span class=VarType>(string)&nbsp;</span>ObjectName <span class=DefaultValue> = "Plugin1"</span>, </p><p><span class=VarType>(number)&nbsp;</span>TabID <span class=DefaultValue> = 100</span>, </p><p><span class=VarType>(number)&nbsp;</span>iPos )</p></td></tr></table><!--begin!kadov{{--></div><!--}}end!kadov--></div><h2 style="margin-bottom: 3pt;">Description</h2><p><blockquote>This sets the anchor position and creates a selection between the anchor position and the current position.</blockquote></p><blockquote><p class="Note"> <span style="font-weight: bold;">Note: </span>The caret is not scrolled into view.</p></blockquote><h2 class="H2Tight">Parameters</h2><h3 class="ParameterHeading">ObjectName</h3><p class="ParameterBody"><span class="type">(string)&nbsp;</span>The name of the Scintilla object</p><h3 class="ParameterHeading">TabID</h3><p class="ParameterBody"><span class="type">(number)&nbsp;</span>The ID of the Scintilla tab you want to affect.</p><h3 class="ParameterHeading">iPos</h3><p class="ParameterBody"><span class="type">(number)&nbsp;</span>The position to set the anchor.</p><h2>Returns</h2><blockquote><p>This action dose not return any value.</p></blockquote><br><h1><A name="Scin.SetCurrentPos">Scin.SetCurrentPos</A></h1><br><div class=Declaration><!--(Table)=========================================================--><!--begin!kadov{{--><div align=left><!--}}end!kadov--><table x-use-null-cells		style="float: alignleft;		x-cell-content-align: Top;		border-spacing: 0px;		border-spacing: 0px;"		cellspacing=0><col><col><tr style="x-cell-content-align: top;" valign=top><td style="padding-right: 0px;			padding-left: 0px;			border-top-style: none;			border-bottom-style: none;			border-right-style: none;			border-left-style: none;"><p>Scin.SetCurrentPos (&nbsp;</td><td style="padding-right: 0px;			padding-left: 0px;			border-top-style: none;			border-right-style: none;			border-bottom-style: none;"><p><span class=VarType>(string)&nbsp;</span>ObjectName <span class=DefaultValue> = "Plugin1"</span>, </p><p><span class=VarType>(number)&nbsp;</span>TabID <span class=DefaultValue> = 100</span>, </p><p><span class=VarType>(number)&nbsp;</span>iPos )</p></td></tr></table><!--begin!kadov{{--></div><!--}}end!kadov--></div><h2 style="margin-bottom: 3pt;">Description</h2><p><blockquote>This sets the current position and creates a selection between the anchor and the current position</blockquote></p><blockquote><p class="Note"> <span style="font-weight: bold;">Note: </span>The caret is not scrolled into view.</p></blockquote><h2 class="H2Tight">Parameters</h2><h3 class="ParameterHeading">ObjectName</h3><p class="ParameterBody"><span class="type">(string)&nbsp;</span>The name of the Scintilla object</p><h3 class="ParameterHeading">TabID</h3><p class="ParameterBody"><span class="type">(number)&nbsp;</span>The ID of the Scintilla tab you want to affect.</p><h3 class="ParameterHeading">iPos</h3><p class="ParameterBody"><span class="type">(number)&nbsp;</span>The position to set the current position.</p><h2>Returns</h2><blockquote><p>This action dose not return any value.</p></blockquote><br><h1><A name="Scin.SetOvertype">Scin.SetOvertype</A></h1><br><div class=Declaration><!--(Table)=========================================================--><!--begin!kadov{{--><div align=left><!--}}end!kadov--><table x-use-null-cells		style="float: alignleft;		x-cell-content-align: Top;		border-spacing: 0px;		border-spacing: 0px;"		cellspacing=0><col><col><tr style="x-cell-content-align: top;" valign=top><td style="padding-right: 0px;			padding-left: 0px;			border-top-style: none;			border-bottom-style: none;			border-right-style: none;			border-left-style: none;"><p>Scin.SetOvertype (&nbsp;</td><td style="padding-right: 0px;			padding-left: 0px;			border-top-style: none;			border-right-style: none;			border-bottom-style: none;"><p><span class=VarType>(string)&nbsp;</span>ObjectName <span class=DefaultValue> = "Plugin1"</span>, </p><p><span class=VarType>(number)&nbsp;</span>TabID <span class=DefaultValue> = 100</span>, </p><p><span class=VarType>(boolean)&nbsp;</span>bOverType <span class=DefaultValue> = true</span> )</p></td></tr></table><!--begin!kadov{{--></div><!--}}end!kadov--></div><h2 style="margin-bottom: 3pt;">Description</h2><p><blockquote>This sets whether Overtype is set or not.</blockquote></p><blockquote><p class="Note"> <span style="font-weight: bold;">Note: </span>When overtype is enabled, each typed character replaces the character to the right of the text caret. When overtype is disabled, characters are inserted at the caret.</p></blockquote><h2 class="H2Tight">Parameters</h2><h3 class="ParameterHeading">ObjectName</h3><p class="ParameterBody"><span class="type">(string)&nbsp;</span>The name of the Scintilla object</p><h3 class="ParameterHeading">TabID</h3><p class="ParameterBody"><span class="type">(number)&nbsp;</span>The ID of the Scintilla tab you want to affect.</p><h3 class="ParameterHeading">bOverType</h3><p class="ParameterBody"><span class="type">(boolean)&nbsp;</span>Whether OverType is set or not.</p><h2>Returns</h2><blockquote><p>This action dose not return any value.</p></blockquote><br><h1><A name="Scin.SetReadOnly">Scin.SetReadOnly</A></h1><br><div class=Declaration><!--(Table)=========================================================--><!--begin!kadov{{--><div align=left><!--}}end!kadov--><table x-use-null-cells		style="float: alignleft;		x-cell-content-align: Top;		border-spacing: 0px;		border-spacing: 0px;"		cellspacing=0><col><col><tr style="x-cell-content-align: top;" valign=top><td style="padding-right: 0px;			padding-left: 0px;			border-top-style: none;			border-bottom-style: none;			border-right-style: none;			border-left-style: none;"><p>Scin.SetReadOnly (&nbsp;</td><td style="padding-right: 0px;			padding-left: 0px;			border-top-style: none;			border-right-style: none;			border-bottom-style: none;"><p><span class=VarType>(string)&nbsp;</span>ObjectName <span class=DefaultValue> = "Plugin1"</span>, </p><p><span class=VarType>(number)&nbsp;</span>TabID <span class=DefaultValue> = 100</span>, </p><p><span class=VarType>(boolean)&nbsp;</span>bReadOnly <span class=DefaultValue> = true</span> )</p></td></tr></table><!--begin!kadov{{--></div><!--}}end!kadov--></div><h2 style="margin-bottom: 3pt;">Description</h2><p><blockquote>Set the read-only flag for the document</blockquote></p><blockquote><p class="Note"> <span style="font-weight: bold;">Note: </span>If you mark a document as read only, attempts to modify the text cause the SCN_MODIFYATTEMPTRO notification.</p></blockquote><h2 class="H2Tight">Parameters</h2><h3 class="ParameterHeading">ObjectName</h3><p class="ParameterBody"><span class="type">(string)&nbsp;</span>The name of the Scintilla object</p><h3 class="ParameterHeading">TabID</h3><p class="ParameterBody"><span class="type">(number)&nbsp;</span>The ID of the Scintilla tab you want to affect.</p><h3 class="ParameterHeading">bReadOnly</h3><p class="ParameterBody"><span class="type">(boolean)&nbsp;</span>Whether to set the read-only flag</p><h2>Returns</h2><blockquote><p>This action dose not return any value.</p></blockquote><br><h1><A name="Scin.SetSavePoint">Scin.SetSavePoint</A></h1><br><div class=Declaration><!--(Table)=========================================================--><!--begin!kadov{{--><div align=left><!--}}end!kadov--><table x-use-null-cells		style="float: alignleft;		x-cell-content-align: Top;		border-spacing: 0px;		border-spacing: 0px;"		cellspacing=0><col><col><tr style="x-cell-content-align: top;" valign=top><td style="padding-right: 0px;			padding-left: 0px;			border-top-style: none;			border-bottom-style: none;			border-right-style: none;			border-left-style: none;"><p>Scin.SetSavePoint (&nbsp;</td><td style="padding-right: 0px;			padding-left: 0px;			border-top-style: none;			border-right-style: none;			border-bottom-style: none;"><p><span class=VarType>(string)&nbsp;</span>ObjectName <span class=DefaultValue> = "Plugin1"</span>, </p><p><span class=VarType>(number)&nbsp;</span>TabID <span class=DefaultValue> = 100</span> )</p></td></tr></table><!--begin!kadov{{--></div><!--}}end!kadov--></div><h2 style="margin-bottom: 3pt;">Description</h2><p><blockquote>This message tells Scintilla that the current state of the document is unmodified.</blockquote></p><blockquote><p class="Note"> <span style="font-weight: bold;">Note: </span>This is usually done when the file is saved or loaded, hence the name "save point". As Scintilla performs undo and redo operations, it notifies the container that it has entered or left the save point with SCN_SAVEPOINTREACHED and SCN_SAVEPOINTLEFT notification messages, allowing the container to know if the file should be considered dirty or not.</p></blockquote><h2 class="H2Tight">Parameters</h2><h3 class="ParameterHeading">ObjectName</h3><p class="ParameterBody"><span class="type">(string)&nbsp;</span>The name of the Scintilla object</p><h3 class="ParameterHeading">TabID</h3><p class="ParameterBody"><span class="type">(number)&nbsp;</span>The ID of the Scintilla tab you want to affect.</p><h2>Returns</h2><blockquote><p>This action dose not return any value.</p></blockquote><br><h1><A name="Scin.SetSelected">Scin.SetSelected</A></h1><br><div class=Declaration><!--(Table)=========================================================--><!--begin!kadov{{--><div align=left><!--}}end!kadov--><table x-use-null-cells		style="float: alignleft;		x-cell-content-align: Top;		border-spacing: 0px;		border-spacing: 0px;"		cellspacing=0><col><col><tr style="x-cell-content-align: top;" valign=top><td style="padding-right: 0px;			padding-left: 0px;			border-top-style: none;			border-bottom-style: none;			border-right-style: none;			border-left-style: none;"><p>Scin.SetSelected (&nbsp;</td><td style="padding-right: 0px;			padding-left: 0px;			border-top-style: none;			border-right-style: none;			border-bottom-style: none;"><p><span class=VarType>(string)&nbsp;</span>ObjectName <span class=DefaultValue> = "Plugin1"</span>, </p><p><span class=VarType>(number)&nbsp;</span>TabID <span class=DefaultValue> = 100</span>, </p><p><span class=VarType>(number)&nbsp;</span>iAnchor, </p><p><span class=VarType>(number)&nbsp;</span>iPos )</p></td></tr></table><!--begin!kadov{{--></div><!--}}end!kadov--></div><h2 style="margin-bottom: 3pt;">Description</h2><p><blockquote>This action sets both the anchor and the current position.</blockquote></p><blockquote><p class="Note"> <span style="font-weight: bold;">Note: </span>If currentPos is negative, it means the end of the document. If anchorPos is negative, it means remove any selection (i.e. set the anchor to the same position as currentPos). The caret is scrolled into view after this operation.</p></blockquote><h2 class="H2Tight">Parameters</h2><h3 class="ParameterHeading">ObjectName</h3><p class="ParameterBody"><span class="type">(string)&nbsp;</span>The name of the Scintilla object</p><h3 class="ParameterHeading">TabID</h3><p class="ParameterBody"><span class="type">(number)&nbsp;</span>The ID of the Scintilla tab you want to affect.</p><h3 class="ParameterHeading">iAnchor</h3><p class="ParameterBody"><span class="type">(number)&nbsp;</span>The position of the anchor</p><h3 class="ParameterHeading">iPos</h3><p class="ParameterBody"><span class="type">(number)&nbsp;</span>The position of the caret.</p><h2>Returns</h2><blockquote><p>This action dose not return any value.</p></blockquote><br><h1><A name="Scin.SetText">Scin.SetText</A></h1><br><div class=Declaration><!--(Table)=========================================================--><!--begin!kadov{{--><div align=left><!--}}end!kadov--><table x-use-null-cells		style="float: alignleft;		x-cell-content-align: Top;		border-spacing: 0px;		border-spacing: 0px;"		cellspacing=0><col><col><tr style="x-cell-content-align: top;" valign=top><td style="padding-right: 0px;			padding-left: 0px;			border-top-style: none;			border-bottom-style: none;			border-right-style: none;			border-left-style: none;"><p>Scin.SetText (&nbsp;</td><td style="padding-right: 0px;			padding-left: 0px;			border-top-style: none;			border-right-style: none;			border-bottom-style: none;"><p><span class=VarType>(string)&nbsp;</span>ObjectName <span class=DefaultValue> = "Plugin1"</span>, </p><p><span class=VarType>(number)&nbsp;</span>TabID <span class=DefaultValue> = 100</span>, </p><p><span class=VarType>(string)&nbsp;</span>sReplaceString <span class=DefaultValue> = "Hello World"</span> )</p></td></tr></table><!--begin!kadov{{--></div><!--}}end!kadov--></div><h2 style="margin-bottom: 3pt;">Description</h2><p><blockquote>Replaces the text of the specified tab.</blockquote></p><h2 class="H2Tight">Parameters</h2><h3 class="ParameterHeading">ObjectName</h3><p class="ParameterBody"><span class="type">(string)&nbsp;</span>The name of the Scintilla object</p><h3 class="ParameterHeading">TabID</h3><p class="ParameterBody"><span class="type">(number)&nbsp;</span>The ID of the Scintilla tab you want to affect.</p><h3 class="ParameterHeading">sReplaceString</h3><p class="ParameterBody"><span class="type">(string)&nbsp;</span>The string to replace the text of the specified tab.</p><h2>Returns</h2><blockquote><p>This action dose not return any value.</p></blockquote><br><h1><A name="Scin.SetZoom">Scin.SetZoom</A></h1><br><div class=Declaration><!--(Table)=========================================================--><!--begin!kadov{{--><div align=left><!--}}end!kadov--><table x-use-null-cells		style="float: alignleft;		x-cell-content-align: Top;		border-spacing: 0px;		border-spacing: 0px;"		cellspacing=0><col><col><tr style="x-cell-content-align: top;" valign=top><td style="padding-right: 0px;			padding-left: 0px;			border-top-style: none;			border-bottom-style: none;			border-right-style: none;			border-left-style: none;"><p>Scin.SetZoom (&nbsp;</td><td style="padding-right: 0px;			padding-left: 0px;			border-top-style: none;			border-right-style: none;			border-bottom-style: none;"><p><span class=VarType>(string)&nbsp;</span>ObjectName <span class=DefaultValue> = "Plugin1"</span>, </p><p><span class=VarType>(number)&nbsp;</span>TabID <span class=DefaultValue> = 100</span>, </p><p><span class=VarType>(number)&nbsp;</span>iZoom <span class=DefaultValue> = 10</span> )</p></td></tr></table><!--begin!kadov{{--></div><!--}}end!kadov--></div><h2 style="margin-bottom: 3pt;">Description</h2><p><blockquote>Set the zoom factor directly.</blockquote></p><blockquote><p class="Note"> <span style="font-weight: bold;">Note: </span>The proper range is between -10 and 20</p></blockquote><h2 class="H2Tight">Parameters</h2><h3 class="ParameterHeading">ObjectName</h3><p class="ParameterBody"><span class="type">(string)&nbsp;</span>The name of the Scintilla object</p><h3 class="ParameterHeading">TabID</h3><p class="ParameterBody"><span class="type">(number)&nbsp;</span>The ID of the Scintilla tab you want to affect.</p><h3 class="ParameterHeading">iZoom</h3><p class="ParameterBody"><span class="type">(number)&nbsp;</span>Zoom factor.</p><blockquote><p class="Note"> <span style="font-weight: bold;">Note: </span>The proper range is between -10 and 20</p></blockquote><h2>Returns</h2><blockquote><p>This action dose not return any value.</p></blockquote><br><h1><A name="Scin.Undo">Scin.Undo</A></h1><br><div class=Declaration><!--(Table)=========================================================--><!--begin!kadov{{--><div align=left><!--}}end!kadov--><table x-use-null-cells		style="float: alignleft;		x-cell-content-align: Top;		border-spacing: 0px;		border-spacing: 0px;"		cellspacing=0><col><col><tr style="x-cell-content-align: top;" valign=top><td style="padding-right: 0px;			padding-left: 0px;			border-top-style: none;			border-bottom-style: none;			border-right-style: none;			border-left-style: none;"><p>Scin.Undo (&nbsp;</td><td style="padding-right: 0px;			padding-left: 0px;			border-top-style: none;			border-right-style: none;			border-bottom-style: none;"><p><span class=VarType>(string)&nbsp;</span>ObjectName <span class=DefaultValue> = "Plugin1"</span>, </p><p><span class=VarType>(number)&nbsp;</span>TabID <span class=DefaultValue> = 100</span> )</p></td></tr></table><!--begin!kadov{{--></div><!--}}end!kadov--></div><h2 style="margin-bottom: 3pt;">Description</h2><p><blockquote>Undoes one action in the document.</blockquote></p><h2 class="H2Tight">Parameters</h2><h3 class="ParameterHeading">ObjectName</h3><p class="ParameterBody"><span class="type">(string)&nbsp;</span>The name of the Scintilla object</p><h3 class="ParameterHeading">TabID</h3><p class="ParameterBody"><span class="type">(number)&nbsp;</span>The ID of the Scintilla tab you want to affect.</p><h2>Returns</h2><blockquote><p>This action dose not return any value.</p></blockquote><br><h1><A name="Scin.ZoomIn">Scin.ZoomIn</A></h1><br><div class=Declaration><!--(Table)=========================================================--><!--begin!kadov{{--><div align=left><!--}}end!kadov--><table x-use-null-cells		style="float: alignleft;		x-cell-content-align: Top;		border-spacing: 0px;		border-spacing: 0px;"		cellspacing=0><col><col><tr style="x-cell-content-align: top;" valign=top><td style="padding-right: 0px;			padding-left: 0px;			border-top-style: none;			border-bottom-style: none;			border-right-style: none;			border-left-style: none;"><p>Scin.ZoomIn (&nbsp;</td><td style="padding-right: 0px;			padding-left: 0px;			border-top-style: none;			border-right-style: none;			border-bottom-style: none;"><p><span class=VarType>(string)&nbsp;</span>ObjectName <span class=DefaultValue> = "Plugin1"</span>, </p><p><span class=VarType>(number)&nbsp;</span>TabID <span class=DefaultValue> = 100</span> )</p></td></tr></table><!--begin!kadov{{--></div><!--}}end!kadov--></div><h2 style="margin-bottom: 3pt;">Description</h2><p><blockquote>Increases the zoom factor by one point </blockquote></p><blockquote><p class="Note"> <span style="font-weight: bold;">Note: </span>Increases the zoom factor by one point if the current zoom factor is less than 20 points. Scintilla incorporates a "zoom factor" that lets you make all the text in the document larger or smaller in steps of one point. The displayed point size never goes below 2, whatever zoom factor you set. You can set zoom factors in the range -10 to +20 points.</p></blockquote><h2 class="H2Tight">Parameters</h2><h3 class="ParameterHeading">ObjectName</h3><p class="ParameterBody"><span class="type">(string)&nbsp;</span>The name of the Scintilla object</p><h3 class="ParameterHeading">TabID</h3><p class="ParameterBody"><span class="type">(number)&nbsp;</span>The ID of the Scintilla tab you want to affect.</p><h2>Returns</h2><blockquote><p>This action dose not return any value.</p></blockquote><br><h1><A name="Scin.ZoomOut">Scin.ZoomOut</A></h1><br><div class=Declaration><!--(Table)=========================================================--><!--begin!kadov{{--><div align=left><!--}}end!kadov--><table x-use-null-cells		style="float: alignleft;		x-cell-content-align: Top;		border-spacing: 0px;		border-spacing: 0px;"		cellspacing=0><col><col><tr style="x-cell-content-align: top;" valign=top><td style="padding-right: 0px;			padding-left: 0px;			border-top-style: none;			border-bottom-style: none;			border-right-style: none;			border-left-style: none;"><p>Scin.ZoomOut (&nbsp;</td><td style="padding-right: 0px;			padding-left: 0px;			border-top-style: none;			border-right-style: none;			border-bottom-style: none;"><p><span class=VarType>(string)&nbsp;</span>ObjectName <span class=DefaultValue> = "Plugin1"</span>, </p><p><span class=VarType>(number)&nbsp;</span>TabID <span class=DefaultValue> = 100</span> )</p></td></tr></table><!--begin!kadov{{--></div><!--}}end!kadov--></div><h2 style="margin-bottom: 3pt;">Description</h2><p><blockquote>Decreases the zoom factor by one point </blockquote></p><blockquote><p class="Note"> <span style="font-weight: bold;">Note: </span>Decreases the zoom factor by one point if the current zoom factor is greater than -10 points. Scintilla incorporates a "zoom factor" that lets you make all the text in the document larger or smaller in steps of one point. The displayed point size never goes below 2, whatever zoom factor you set. You can set zoom factors in the range -10 to +20 points.</p></blockquote><h2 class="H2Tight">Parameters</h2><h3 class="ParameterHeading">ObjectName</h3><p class="ParameterBody"><span class="type">(string)&nbsp;</span>The name of the Scintilla object</p><h3 class="ParameterHeading">TabID</h3><p class="ParameterBody"><span class="type">(number)&nbsp;</span>The ID of the Scintilla tab you want to affect.</p><h2>Returns</h2><blockquote><p>This action dose not return any value.</p></blockquote><br><hr>
+
+<p align="center">2011 <BR>This File Was Generated With AMS ActionFile Editor</p>
+
+</body>
+</html>

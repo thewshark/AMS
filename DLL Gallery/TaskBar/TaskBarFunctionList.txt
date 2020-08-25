@@ -1,0 +1,44 @@
+----------------------------------------------------
+--- This File Was Created By DLL Function Viewer ---
+----------------------------------------------------
+---                D-Net Software                ---
+---                                              ---
+---         http://www.dnet-software.com         ---
+----------------------------------------------------
+----------------------------------------------------
+
+----------------------------------------------------
+-- File Name: TaskBarDLL.dll
+----------------------------------------------------
+-- Total Functions: 27
+----------------------------------------------------
+Function Name:				Address:
+----------------------------------------------------
+HideTaskbar				268439656
+ShowTaskbar				268439709
+IsTaskbarAutoHideOn			268439762
+GetTaskBarPos				268439881
+GetTaskBarRealHeight			268440060
+GetTaskBarRealWidth			268440243
+GetTaskBarVisableWidth			268440426
+GetTaskBarVisableHeight			268440634
+GetTaskbarRealLeftX			268440841
+GetTaskbarRealLeftY			268440943
+GetTaskbarRealRightX			268441045
+GetTaskbarRealRightY			268441147
+GetTaskbarVisableLeftX			268441249
+GetTaskbarVisableLeftY			268441433
+GetTaskbarVisableRightX			268441617
+GetTaskbarVisableRightY			268441800
+ScreenWidthWithoutTaskbar		268441984
+ScreenHeightWithoutTaskbar		268442120
+ShowTaskbarPropsDialog			268442256
+LockTaskbar				268442352
+UnLockTaskbar				268442420
+ShowClockPropsDialog			268442488
+TileWindows				268442584
+TileWindowsHorizontally			268442652
+CascadeWindows				268442748
+MinimizeAllWindows			268442844
+UndoMinimizeAllWindows			268442912
+----------------------------------------------------

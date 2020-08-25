@@ -1,0 +1,598 @@
+<!doctype HTML public "-//W3C//DTD HTML 4.0 Frameset//EN">
+
+<html>
+<head>
+<title>ID3Tag Help</title>
+
+<meta http-equiv=content-type content="text/html; charset=windows-1252">
+
+<style>
+
+/* ELEMENTS */
+
+body {
+  font-family: Verdana, sans-serif;
+  font-size: 8pt;
+  background-color: #ffffff;
+}
+
+hr {
+  text-align: center;
+  color: #f0f0f0;
+  width: 100%;
+  height: 6pt;
+
+  margin-top: 0pt;
+  margin-bottom: -3pt;
+
+  border: none;
+}
+
+A:link, A:active, A:visited {
+  color: #0000ff;
+  text-decoration: none;
+}
+
+A:hover {
+  color: #0000ff;
+  text-decoration: underline;
+}
+
+h1 {
+  font-family: Verdana;
+  font-weight: bold;
+  font-size: 18.0pt;
+  white-space: nowrap;
+  color: #fff;
+  background-color: #699BEF;
+
+  padding: 4pt 3pt;
+  padding: 5px 4px;
+
+  margin-top: 0pt;
+  margin-bottom: 0pt;
+
+  border-right: 1px solid #333;
+  border-left: 1px solid #699BEF;
+  border-bottom: solid black 1px;
+}
+
+h2 {
+  font-family: Arial, sans-serif;
+  font-size: 12.0pt;
+  letter-spacing: .2ex;
+  color: #000;
+  
+  margin-left: 0pt;
+  margin-right: 0pt;
+  margin-top: 18pt;
+  margin-bottom: 9pt;
+}
+
+h3 {
+  font-family: Arial, sans-serif;
+  font-size: 10pt;
+  font-weight: bold;
+  font-style: normal;
+  color: black;
+  letter-spacing: 0px;
+
+  margin-left: 0pt;
+  margin-right: 0pt;
+  margin-top: 18pt;
+  margin-bottom: 3pt;
+}
+
+p {
+  font-family: Verdana;
+  font-size: 8.0pt;
+  line-height: 12.0pt;
+  
+  margin-left: 0pt;
+  margin-right: 0pt;
+  margin-top: 0pt;
+  margin-bottom: 9pt;
+}
+
+/* CLASSES */
+
+div.Actions h3, div.Events h3 {
+  font-family: Arial, sans-serif;
+  font-size: 10pt;
+  font-weight: bold;
+  font-style: italic;
+  color: #3C77B3;
+  letter-spacing: 0px;
+  
+  margin-left: 12pt;
+  margin-right: 0pt;
+  margin-top: 18pt;
+  margin-bottom: 3pt;
+}
+
+div.Actions h4, div.info h3 {
+  font-family: Verdana;
+  font-size: 8.0pt;
+  line-height: 12.0pt;
+  font-style: bold;
+  
+  margin-top: 9pt;
+  margin-bottom: 0pt;
+  margin-left: 28pt;
+  margin-right: 0pt;
+}
+
+div.Actions p, div.Events p, div.ErrorCodes p {
+  font-family: Verdana;
+  font-size: 8.0pt;
+  line-height: 12.0pt;
+  
+  margin-top: 0pt;
+  margin-bottom: 9pt;
+  margin-left: 12pt;
+  margin-right: 0pt;
+}
+
+p.NavLocal {
+  white-space: nowrap;
+  text-indent: -4px;
+  font-family: Verdana, Arial, sans-serif;
+  font-weight: bold;
+  font-style: normal;
+  font-size: 13px;
+  background-color: #e4e4e4;
+
+  margin-top: 0px;
+  margin-bottom: 12pt;
+
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 0px;
+  padding-right: 0px;
+
+  border-bottom: 1px solid #e4e4e4;
+}
+
+p.Note {
+	font-family: Verdana;
+	font-size: 8.0pt;
+	line-height: 12.0pt;
+	color: #000000;
+	background-color: #ffffe8;
+
+	margin-top: 0pt;
+	margin-bottom: 9pt;
+	margin-left: 0pt;
+	margin-right: 5%;
+
+	padding-left: 2pt;
+	padding-right: 2pt;
+	padding-top: 1pt;
+	padding-bottom: 2pt;
+}
+
+p.Tip {
+	font-family: Verdana;
+	font-size: 8.0pt;
+	line-height: 12.0pt;
+	color: #000000;
+	background-color: #EAF4E8;
+
+	margin-top: 0pt;
+	margin-bottom: 9pt;
+	margin-left: 0pt;
+	margin-right: 5%;
+
+	padding-left: 2pt;
+	padding-right: 2pt;
+	padding-top: 1pt;
+	padding-bottom: 2pt;
+}
+
+div.Actions p.Note, div.Events p.Note,
+div.Actions p.Tip, div.Events p.Tip {
+	margin-left: 28pt;
+}
+
+pre.code {
+  white-space: pre;
+  font-family: Courier New, Courier, Arial, sans-serif;
+  font-size: 10pt;
+  font-weight: normal;
+  font-style: normal;
+  letter-spacing: normal;
+  color: #000;
+  background-color: #f9f9f9;
+  
+  margin-top: 3pt;
+  margin-bottom: 9pt;
+  margin-left: 0pt;
+  margin-left: 0pt;
+  
+  padding: 10px;
+  
+  border: 1px dotted #ccc;
+}
+
+div.Actions pre.code, div.Events pre.code {
+  margin-left: 28pt;
+}
+
+div.Actions h2 {
+  margin-bottom: -6pt;
+}
+
+div.actions p, div.info p, div.ErrorCodes p {
+  margin-left: 28pt;
+}
+
+div.actions p.indent {
+  margin-left: 38pt;
+}
+
+span.here { /* blue tab effect in navbar (NavLocal) */
+  font-weight: bold;
+  color: #fff;
+  background-color: #699BEF;
+
+  margin: 0px;
+
+  padding: 4px 8px;
+
+  border-top: 1px solid #699BEF;
+  border-bottom: 1px solid #333;
+  border-left: none;
+  border-right: 1px solid #333;
+}
+
+span.type {
+	color: #aaa;
+}
+</style>
+</head>
+<body>
+
+<h1>ID3Tag Plugin</h1>
+
+<h2>Description</h2>
+
+<p>
+AMSWID3Tag is an action plugin that have some funcs for read and write id3tag of a mp3 file.
+</p>
+
+<div class="Actions">
+<h2>Actions</h2>
+
+<p style="margin-top: 18pt; margin-left: 12pt;">
+<a href="#ID3Tag.GetTag">ID3Tag.GetTag</a><br/>
+<a href="#ID3Tag.SetTag">ID3Tag.SetTag</a><br/>
+<a href="#ID3Tag.GetSecretValue">ID3Tag.GetSecretValue</a><br/>
+<a href="#ID3Tag.SetSecretValue">ID3Tag.SetSecretValue</a><br/>
+<a href="#ID3Tag.GetInfo">ID3Tag.GetInfo</a><br/>
+<a href="#ID3Tag.Close">ID3Tag.Close</a><br/>
+</p>
+
+<h3><a name="ID3Tag.GetTag">ID3Tag.GetTag(string FileName, string PicFileName);</a></h3>
+
+<h4>Description:</h4>
+<p>Get tag of a music file.</p>
+ 
+<h4>FileName:</h4>
+<p><span class="type">(string)</span> Addres of your music file.</p>
+  
+<h4>PicFileName:</h4>
+<p><span class="type">(string)</span> Addres of Save picture(If picture atached in music file. if you use :temp: a temp file generated.)</p>
+
+<h4>Returns:</h4>
+<p><span class="type">(table)</span> A table containing some field that stored some information of your music file.
+fields are ('Album', 'Artist', 'Genre', 'Comment', 'Title', 'Track', 'Year', 'Lyrics', 'Picture').all of these info
+are string value.</p>
+
+
+<h4>Example:</h4>
+<pre class="code">
+result = Dialog.FileBrowse(true, "Load File", _DesktopFolder, "MP3 Document (*.mp3)|*.mp3|All Files (*.*)|*.*|", "", "", false, true);
+if result[1] ~= "CANCEL" then
+	tblTag = ID3Tag.GetTag(result[1], ":temp:");
+
+	sText  = "Album: \t" .. tblTag.Album .. "\r\n"
+	sText  = sText .. "Artist: \t" .. tblTag.Artist.. "\r\n"
+	sText  = sText .. "Genre: \t" .. tblTag.Genre .. "\r\n"
+	sText  = sText .. "Comment: \t" .. tblTag.Comment .. "\r\n"
+	sText  = sText .. "Title: \t" .. tblTag.Title .. "\r\n"
+	sText  = sText .. "Track: \t" .. tblTag.Track .. "\r\n"
+	sText  = sText .. "Year: \t" .. tblTag.Year .. "\r\n"
+	sText  = sText .. "Lyrics: \t" .. tblTag.Lyrics .. "\r\n"
+	sText  = sText .. "Picture: \t" .. tblTag.Picture .. "\r\n"
+	Dialog.Message("", sText)
+	
+	if tblTag.Picture ~= "" then
+	 File.Delete(tblTag.Picture, false, false, false, nil)
+	end
+	
+end
+</pre>
+
+
+<h3><a name="ID3Tag.SetTag">ID3Tag.SetTag(string FileName, combo Tag, string Value)</a></h3>
+
+
+<h4>Description:</h4>
+<p> Set tag of a music file.</p>
+
+<h4>FileName:</h4>
+<p><span class="type">(string)</span> Addres of your music file.</p>
+
+<h4>Tag:</h4>
+<p><span class="type">(combo)</span> Name of your tag.</p>
+
+<h4>Value:</h4>
+<p><span class="type">(string)</span> value that you want filled on tag.</p>
+ 
+<h4>Returns:</h4>
+<p><span class="type"></span> Nothing</p>
+
+<h4>Example1:</h4>
+<pre class="code">
+result = Dialog.FileBrowse(true, "Load File", _DesktopFolder, "MP3 Document (*.mp3)|*.mp3|All Files (*.*)|*.*|", "", "", false, true);
+if result[1] ~= "CANCEL" then
+	ID3Tag.SetTag(result[1], ID3TAG_TITLE, "AMSWaves");
+end
+</pre>
+
+
+<h3><a name="ID3Tag.GetSecretValue">ID3Tag.GetSecretValue(string FileName, string Key)</a></h3>
+
+<h4>Description:</h4>
+<p> Load secrect value in your music file.</p>
+
+
+<h4>FileName:</h4>
+<p><span class="type">(string)</span> Addres of your music file.</p>
+
+<h4>Key:</h4>
+<p><span class="type">(string)</span> the Secrect Key the data was encrypted with.</p>
+
+<h4>Returns:</h4>
+<p><span class="type">(string)</span> Return decrypted string.</p>
+
+<h4>Example:</h4>
+<pre class="code">
+result = Dialog.FileBrowse(true, "Load File", _DesktopFolder, "MP3 Document (*.mp3)|*.mp3|All Files (*.*)|*.*|", "", "", false, true);
+if result[1] ~= "CANCEL" then
+	-- Set Secret Value.
+	ID3Tag.SetSecretValue(result[1], "I'm Seret Value.", "AMSWaves");
+	
+	-- Get Secret Value.
+	Secret_Value = ID3Tag.GetSecretValue(result[1], "AMSWaves");
+	
+	Dialog.Message("", Secret_Value);
+end
+</pre>
+
+
+<h3><a name="ID3Tag.SetSecretValue">ID3Tag.SetSecretValue(string FileName, string Value, string Key)</a></h3>
+
+<h4>Description:</h4>
+<p> Load secrect value in your music file.</p>
+
+
+<h4>FileName:</h4>
+<p><span class="type">(string)</span> Addres of your music file.</p>
+
+<h4>Value:</h4>
+<p><span class="type">(string)</span> value that you want filled on tag.</p>
+
+<h4>Key:</h4>
+<p><span class="type">(string)</span> the Secrect Key to encrypt the data with.</p>
+
+<h4>Returns:</h4>
+<p><span class="type"></span> Nothings.</p>
+
+<h4>Example:</h4>
+<pre class="code">
+result = Dialog.FileBrowse(true, "Load File", _DesktopFolder, "MP3 Document (*.mp3)|*.mp3|All Files (*.*)|*.*|", "", "", false, true);
+if result[1] ~= "CANCEL" then
+	-- Set Secret Value.
+	ID3Tag.SetSecretValue(result[1], "I'm Seret Value.", "AMSWaves");
+	
+	-- Get Secret Value.
+	Secret_Value = ID3Tag.GetSecretValue(result[1], "AMSWaves");
+	
+	Dialog.Message("", Secret_Value);
+end
+</pre>
+
+
+
+<h3><a name="ID3Tag.GetInfo">ID3Tag.GetInfo(string FileName);</a></h3>
+
+<h4>Description:</h4>
+<p>Get info of a mp3 file.</p>
+ 
+<h4>FileName:</h4>
+<p><span class="type">(string)</span> Addres of your mp3 file.</p>
+  
+<h4>Returns:</h4>
+<p><span class="type">(table)</span> A table containing some field that stored some information of your mp3 file.
+fields are ('Layer', 'Version', 'Channel', 'Emphasis', 'Frequency', 'Bitrate', 'FrameSize', 'Frames', 'Time').all of these info
+are number value.<br>if Layer = 1 then mp3 have MPEGLAYER I</p>
+
+<h4>Layer Field:</h4>
+<p><span class="type"></span> if Layer == 1 then mp3 have MPEG LAYER 1<br>
+if Layer == 2 then mp3 have MPEG LAYER 2<br>if Layer == 3 then mp3 have MPEG LAYER 3<br>
+if Layer == 4 then mp3 have MPEG LAYER UNDEFINED<br>if Layer == -1 then occur an error on get MPEG LAYER</p>
+
+<h4>Version Field:</h4>
+<p><span class="type"></span> if Version == 1 then mp3 have MPEG Version 1<br>
+if Version == 2 then mp3 have MPEG Version 2<br>if Version == 3 then mp3 MPEG Version Reserved<br>
+if Version == 4 then mp3 have MPEG Version 2.5<br>if Version == -1 then occur an error on get MPEG Version</p>
+
+<h4>Channel Field:</h4>
+<p><span class="type"></span> if Channel == 1 then mp3 have SINGLE CHANNEL<br>
+if Channel == 2 then mp3 have DUAL CHANNEL<br>if Channel == 3 then mp3 have JOINT STEREO<br>
+if Channel == 4 then mp3 have STEREO<br>if Channel == -1 then occur an error on get Channel Mode</p>
+
+<h4>Emphasis Field:</h4>
+<p><span class="type"></span> if Emphasis == 1 then mp3 have Emphasis CCIT J17<br>
+if Emphasis == 2 then EMPHASIS Reserved<br>if Emphasis == 3 then mp3 have EMPHASIS 50 15MS<br>
+if Emphasis == 4 then mp3 have EMPHASIS NONE<br>if Emphasis == -1 then occur an error on get EMPHASIS</p>
+
+
+<h4>Example:</h4>
+<pre class="code">
+function secTo_Time(numsec)
+
+  local numsec = Math.Round(numsec, 0)
+  local min = Math.Floor(numsec/60);
+  local hour = Math.Floor(numsec/3600);
+  local sec = numsec - min*60
+
+  if (String.Length(min) == 1) then
+   min = "0"..min
+  end
+
+  if (String.Length(sec) == 1) then
+   sec = "0"..sec
+  end
+
+  if (hour == 0) then
+    return min..":"..sec
+  else
+    min = min - hour*60
+    if (String.Length(min) == 1) then
+      min = "0"..min
+    end
+
+    return hour..":"..min..":"..sec
+
+  end
+
+end
+
+file = Dialog.FileBrowse(true, "Locate File", _DesktopFolder, "All Files (*.*)|*.*|", "", "dat", false, false);
+
+if file[1] ~= "CANCEL" then
+ infotbl = ID3Tag.GetInfo(file[1]);
+ Debug.ShowWindow(true)
+ Debug.Clear()
+ path = String.SplitPath(file[1])
+ Debug.Print(path.Filename .. path.Extension .. " :\r\n")
+ 
+ if infotbl.Layer == 1 then
+  Debug.Print("  Layer : layer I\r\n")
+ elseif infotbl.Layer == 2 then
+  Debug.Print("  Layer : layer II\r\n")
+ elseif infotbl.Layer == 3 then
+  Debug.Print("  Layer : layer III\r\n")
+ elseif infotbl.Layer == 4 then
+  Debug.Print("  Layer : layer UNDEFINED\r\n")
+ end
+ 
+ if infotbl.Version == 1 then
+  Debug.Print("  Version : MPEG1\r\n")
+ elseif infotbl.Version == 2 then
+  Debug.Print("  Version : MPEG2\r\n")
+ elseif infotbl.Version == 3 then
+  Debug.Print("  Version : Reserved\r\n")
+ elseif infotbl.Version == 4 then
+  Debug.Print("  Version : MPEG2.5\r\n")
+ end
+
+ if infotbl.Channel == 1 then
+  Debug.Print("  Channel : SINGLE CHANNEL\r\n")
+ elseif infotbl.Channel == 2 then
+  Debug.Print("  Channel : DUAL CHANNEL\r\n")
+ elseif infotbl.Channel == 3 then
+  Debug.Print("  Channel : JOINT STEREO\r\n")
+ elseif infotbl.Channel == 4 then
+  Debug.Print("  Channel : STEREO\r\n")
+ end
+
+ if infotbl.Emphasis == 1 then
+  Debug.Print("  Emphasis : Emphasis type CCITT J.17\r\n")
+ elseif infotbl.Emphasis == 2 then
+  Debug.Print("  Emphasis : Emphasis type reserved\r\n")
+ elseif infotbl.Emphasis == 3 then
+  Debug.Print("  Emphasis : Emphasis type 50/15 ms\r\n")
+ elseif infotbl.Emphasis == 4 then
+  Debug.Print("  Emphasis : No emphasis used in the MP3 file\r\n")
+ end
+  
+ Debug.Print("  Frequency : " .. (infotbl.Frequency/1000) .. " KHz\r\n")
+ Debug.Print("  Bitrate : " .. (infotbl.Bitrate/1000) .. " KBps\r\n")
+ Debug.Print("  Frame Size : " .. infotbl.FrameSize .. "\r\n")
+ Debug.Print("  Frames : " .. infotbl.Frames .. "\r\n")
+ Debug.Print("  Time : " .. secTo_Time(infotbl.Time) .. "\r\n")
+   
+end
+
+</pre>
+
+
+
+<h3><a name="ID3Tag.Close">ID3Tag.Close();</a></h3>
+
+
+<h4>Description:</h4>
+<p>Close Application (On Windows Vista Required, use it on XP is optional but we recomonded it on all os).</p>
+
+<h4>Returns:</h4>
+<p><span class="type"></span> Nothing.</p>
+
+<h4>Note:</h4>
+<p> use this function important on windows vista, Use this function in the end of your codes in 'On Close' of Page,
+use this function in the end of your codes this is important because codes after this function never executed.
+</p>
+
+<h4>Example:</h4>
+<pre class="code">
+-- On Close
+-- Some code
+-- Some code
+-- Some code
+
+ID3Tag.Close()
+</pre>
+
+
+</div> <!-- /Actions -->
+
+
+<div class="History">
+<h2>Change Log</h2>
+
+<h3>1.0.1.0</h3>
+<ul>
+    <li>Add ID3Tag.GetInfo for get info of a file.</li>
+</ul>
+
+
+<h3>1.0.0.0</h3>
+<ul>
+    <li>Initial release</li>
+</ul>
+
+</div> <!-- /History -->
+
+
+<div class="Info">
+<h2>Additional Information</h2>
+
+<h3>Author:</h3><p>AMSWaves Corporation<br>
+<a href="mailto:support@AMSWaves.com">support@AMSWaves.com</a></p>
+
+<h3>Copyright:</h3>
+<p>Plugin is copyright © 2008-2009 AMSWaves Design Corporation.</p>
+
+<h3>Website:</h3>
+<p><a href="http://www.AMSWaves.com">http://www.AMSWaves.com</a></p>
+
+</div> <!-- /info -->
+<hr>
+
+<p align="center">Copyright © 2009 AMSWaves Design Corporation.<br>
+All Rights Reserved.</p>
+
+</body>
+</html>

@@ -1,0 +1,781 @@
+<!doctype HTML public "-//W3C//DTD HTML 4.0 Frameset//EN">
+
+<html>
+<head>
+<title>ThumbList Object Plugin Help</title>
+
+<meta http-equiv=content-type content="text/html; charset=windows-1252">
+
+<style>
+
+/* ELEMENTS */
+
+body {
+  font-family: Verdana, sans-serif;
+  font-size: 8pt;
+  background-color: #ffffff;
+}
+
+hr {
+  text-align: center;
+  color: #f0f0f0;
+  width: 100%;
+  height: 6pt;
+
+  margin-top: 0pt;
+  margin-bottom: -3pt;
+
+  border: none;
+}
+
+A:link, A:active, A:visited {
+  color: #0000ff;
+  text-decoration: none;
+}
+
+A:hover {
+  color: #0000ff;
+  text-decoration: underline;
+}
+
+h1 {
+  font-family: Verdana;
+  font-weight: bold;
+  font-size: 18.0pt;
+  white-space: nowrap;
+  color: #fff;
+  background-color: #699BEF;
+
+  padding: 4pt 3pt;
+  padding: 5px 4px;
+
+  margin-top: 0pt;
+  margin-bottom: 0pt;
+
+  border-right: 1px solid #333;
+  border-left: 1px solid #699BEF;
+  border-bottom: solid black 1px;
+}
+
+h2 {
+  font-family: Arial, sans-serif;
+  font-size: 12.0pt;
+  letter-spacing: .2ex;
+  color: #000;
+
+  margin-left: 0pt;
+  margin-right: 0pt;
+  margin-top: 18pt;
+  margin-bottom: 9pt;
+}
+
+h3 {
+  font-family: Arial, sans-serif;
+  font-size: 10pt;
+  font-weight: bold;
+  font-style: normal;
+  color: black;
+  letter-spacing: 0px;
+
+  margin-left: 0pt;
+  margin-right: 0pt;
+  margin-top: 18pt;
+  margin-bottom: 3pt;
+}
+
+p {
+  font-family: Verdana;
+  font-size: 8.0pt;
+  line-height: 12.0pt;
+  
+  margin-left: 0pt;
+  margin-right: 0pt;
+  margin-top: 0pt;
+  margin-bottom: 9pt;
+}
+
+/* CLASSES */
+
+div.Actions h3, div.Properties h3, div.Events h3 {
+  font-family: Arial, sans-serif;
+  font-size: 10pt;
+  font-weight: bold;
+  font-style: italic;
+  color: #3C77B3;
+  letter-spacing: 0px;
+  
+  margin-left: 12pt;
+  margin-right: 0pt;
+  margin-top: 18pt;
+  margin-bottom: 3pt;
+}
+
+div.Events h4, div.Actions h4, div.info h3 {
+  font-family: Verdana;
+  font-size: 8.0pt;
+  line-height: 12.0pt;
+  font-weight: bold;
+  
+  margin-top: 9pt;
+  margin-bottom: 0pt;
+  margin-left: 28pt;
+  margin-right: 0pt;
+}
+
+div.Actions p, div.Properties p, div.Events p, div.ErrorCodes p {
+  font-family: Verdana;
+  font-size: 8.0pt;
+  line-height: 12.0pt;
+  
+  margin-top: 0pt;
+  margin-bottom: 9pt;
+  margin-left: 12pt;
+  margin-right: 0pt;
+}
+
+div.ErrorCodes table {
+  font-family: Verdana, sans-serif;
+  font-size: 8.0pt;
+  line-height: 12.0pt;
+  margin: 0px 0px 9pt 28pt;
+  border-collapse: collapse; 
+  border: none;
+}
+
+div.ErrorCodes table th,
+div.ErrorCodes table td {
+  border-bottom: 1px solid #ddd;
+  padding: 1ex;
+}
+
+div.ErrorCodes table th {
+  text-align: left;
+  padding-left: 0px;
+  padding-right: 2ex;
+}
+
+p.NavLocal {
+  white-space: nowrap;
+  text-indent: -4px;
+  font-family: Verdana, Arial, sans-serif;
+  font-weight: bold;
+  font-style: normal;
+  font-size: 13px;
+  background-color: #e4e4e4;
+
+  margin-top: 0px;
+  margin-bottom: 12pt;
+
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 0px;
+  padding-right: 0px;
+
+  border-bottom: 1px solid #e4e4e4;
+}
+
+p.Note {
+	font-family: Verdana;
+	font-size: 8.0pt;
+	line-height: 12.0pt;
+	color: #000000;
+	background-color: #ffffe8;
+
+	margin-top: 0pt;
+	margin-bottom: 9pt;
+	margin-left: 0pt;
+	margin-right: 5%;
+
+	padding-left: 2pt;
+	padding-right: 2pt;
+	padding-top: 1pt;
+	padding-bottom: 2pt;
+}
+
+p.Tip {
+	font-family: Verdana;
+	font-size: 8.0pt;
+	line-height: 12.0pt;
+	color: #000000;
+	background-color: #EAF4E8;
+
+	margin-top: 0pt;
+	margin-bottom: 9pt;
+	margin-left: 0pt;
+	margin-right: 5%;
+
+	padding-left: 2pt;
+	padding-right: 2pt;
+	padding-top: 1pt;
+	padding-bottom: 2pt;
+}
+
+div.Actions p.Note, div.Events p.Note,
+div.Actions p.Tip, div.Events p.Tip {
+	margin-left: 28pt;
+}
+
+div.Properties p.Note,
+div.Properties p.Tip {
+	margin-left: 18pt;
+}
+
+pre.code {
+  white-space: pre;
+  font-family: Courier New, Courier, Arial, sans-serif;
+  font-size: 10pt;
+  font-weight: normal;
+  font-style: normal;
+  letter-spacing: normal;
+  color: #000;
+  background-color: #f9f9f9;
+  
+  margin-top: 3pt;
+  margin-bottom: 9pt;
+  margin-left: 0pt;
+  margin-left: 0pt;
+  
+  padding: 10px;
+  
+  border: 1px dotted #ccc;
+}
+
+div.Actions pre.code, div.Events pre.code {
+  margin-left: 28pt;
+}
+
+div.Actions h2, div.Properties h2, div.Events h2 {
+  margin-bottom: -6pt;
+}
+
+div.actions p, div.ErrorCodes p, div.info p {
+  margin-left: 28pt;
+}
+
+div.actions p.indent {
+  margin-left: 38pt;
+}
+
+div.e_vars p {
+  margin-left: 28pt;
+}
+
+span.here { /* blue tab effect in navbar (NavLocal) */
+  font-weight: bold;
+  color: #fff;
+  background-color: #699BEF;
+
+  margin: 0px;
+
+  padding: 4px 8px;
+
+  border-top: 1px solid #699BEF;
+  border-bottom: 1px solid #333;
+  border-left: none;
+  border-right: 1px solid #333;
+}
+
+span.type {
+	color: #aaa;
+}
+
+div.history h2 + h3 {
+	margin-top: 3pt;
+}
+</style>
+</head>
+<body>
+
+<h1>ThumbList Object Plugin</h1>
+
+<p class="NavLocal"><span class=wab>&nbsp;</span><span class="here">Online Help</span></p>
+
+<h2>Description</h2>
+
+<p>The ThumbList object plugin is a powerful and full-featured image thumbnail browser than can be easily added to your projects. Simply drop it onto a page in your project, point it a folder full of image files and the object does the rest! It's a real snap to add such a powerful imaging tool to your projects.</p>
+
+<p>Features support for most common image formats (bmp, jpg, pcx, png, tga, tif, wmf, apm, emf, psd, pcd or gif) and color depths from 2 bpp to 32 bpp. It is also quite customizable with extensive control over thumbnail size, spacing, text labels, background color, padding and borders. Events such as "On Select", "On Double Click", "On Focus" and "On Key" are also included.</p>
+
+<div class="Properties">
+<h2>Properties</h2>
+
+<h3>Thumbnail Width</h3>
+
+<p>The width of the thumbnail that should be displayed in pixels. This width will be applied to all images that are displayed regardless of their original width.</p>
+
+<h3>Thumbnail Height</h3>
+
+<p>The height of the thumbnail that should be displayed in pixels. This height will be applied to all images that are displayed regardless of their original height.</p>
+
+<h3>Vertical Spacing</h3>
+
+<p>The vertical spacing between thumbnail items in the list in pixels. Note that this spacing should include enough space for the label that appears beneath each thumbnail image.</p>
+
+<h3>Horizontal Spacing</h3>
+
+<p>The horizontal spacing between thumbnail items in the list in pixels.</p>
+
+<h3>Show Frame Around Thumbnail</h3>
+
+<p>Whether the thumbnail image will have a "frame" around it. The frame is a rectangle with a border and fill color. You can also adjust the minimum padding between the image and the frame.</p>
+
+<h3>Border Color</h3>
+
+<p>The color of the frame border if the "Show Frame Around Thumbnail" option is on.</p>
+
+<h3>Fill Color</h3>
+
+<p>The color of the frame's background if the "Show Frame Around Thumbnail" option is on.</p>
+
+<h3>Minimum Padding</h3>
+
+<p>The minimum number of pixels that should be around the thumbnail image on all four sides if the "Show Frame Around Thumbnail" option is on.</p>
+
+<h3>Window Border</h3>
+
+<p>The style of window border that the list control will have. Choose from "None", "Thin" or "3D".</p>
+
+<h3>Label</h3>
+
+<p>The type of label contents that will appear by default with each thumbnail item when it is added to the list. Choose from:
+<ul>
+  <li><b>None</b>: The label will be empty.</li>
+  <li><b>Filename</b>: The label will contain the name of the file (i.e. "my_image.png").</li>
+  <li><b>Full path</b>: The label will contain the full path and filename of the file (i.e. "C:\Images\my_image.png").</li>
+  <li><b>File title</b>: The label will contain the file's title. That is, the filename without the extension (i.e. "my_image").</li>
+</ul>
+<p>Note that you can change an item's label after it has been added to the list using the ThumbList.SetItemLabel action.</p>
+
+<h3>Resize Mode</h3>
+
+<p>The method that will be used to resize images to fit into the thumbnail item area. Choose from:
+<ul>
+  <li><b>Stretch</b>: The image will be stretched to fill the thumbnail area.</li>
+  <li><b>Maintain Aspect</b>: The image will be resized to fit the thumbnail area but maintain the image's aspect ratio.</li>
+</ul>
+
+<h3>Back Color</h3>
+
+<p>The color of the list's background.</p>
+
+<h3>Sort Items</h3>
+
+<p>If on, the list's items will be automatically sorted in ascending alphabetical order by their label. If off, the items will appear in the order that they were added to the list.</p>
+
+<h3>Allow Multiple Selection</h3>
+
+<p>If on, the user will be able to select more than one thumbnail item in the list at a time. If off, the list will be single selection only.</p>
+
+<h3>Vertical Layout</h3>
+
+<p>If on, the thumbnails will be arranged vertically. That is, if there are more than will fit on one line of the list, they will wrap into the next vertical row. If off, the thumbnails will be arranged horizontally. That is, they will appear in one row and a horizontal scrollbar will appear to allow scrolling.</p>
+
+<h3>Never Increase Image Size</h3>
+
+<p>If on, images that are smaller in dimensions than the thumbnail diaplay area will not be made larger to fill the available area. If off, images that are smaller in dimensions than the thumbnail diaplay area be made larger to fill the available area.</p>
+
+</div> <!-- /Properties -->
+
+
+<div class="Events">
+<h2>Events</h2>
+
+<h3>On Select</h3>
+
+<p>Fires when the list selection changes. You can determine which items are currently selected using the ThumbList.GetSelectedItems action.</p>
+
+<h3>On Double-Click</h3>
+
+<p>Fires when the left mouse button is double-clicked on a thumbnail item. The e_Item event variable tells you the one-based index of the item that was double-clicked.</p>
+
+<h3>On Focus</h3>
+
+<p>Fires when the list window recieves input focus.</p>
+
+<h3>On Key</h3>
+
+<p>Fires whenever the application window has focus and the user presses a key. The following event variables are automatically set whenever this event is triggered:</p>
+
+<div class="e_vars">
+
+<h4>e_Key:</h4>
+<p><span class="type">(number)</span> The ASCII code of the key that was pressed.</p>
+
+<h4>e_Modifiers:</h4>
+<p><span class="type">(table)</span> A table containing three boolean values that describe which modifier keys were held down while the key was pressed. A modifier key is a key that can be held down while another key is pressed, to "modify" it. There are three true/false values in the table, one for each type of modifier key on the keyboard: shift, ctrl, and alt. You can access these values as e_Modifiers.shift, e_Modifiers.ctrl, and e_Modifiers.alt.</p>
+
+</div> <!-- /e_vars -->
+
+</div> <!-- /Events -->
+
+
+<div class="Actions">
+<h2>Actions</h2>
+
+<p style="margin-top:18pt;margin-left:12pt;">In addition to the generic "Plugin" actions supported by all plugin objects, the ThumbList plugin also supports the following actions:</p>
+
+<h3><a name="ThumbList.AddFiles">number ThumbList.AddFiles (string ObjectName, table FileList)</a></h3>
+
+<h4>Description:</h4>
+<p>Adds image files to the list. Note that the control does not prevent you from adding the same file to the list twice.</p>
+
+<h4>ObjectName:</h4>
+<p><span class="type">(string)</span> The name of the ThumbList object that you want to apply this action to.</p>
+ 
+<h4>FileList:</h4>
+<p><span class="type">(table)</span> A numerically indexed table of files to add to the list. The file names can be full names such as "C:\\Images\\My_image.png" or a relative path to a file in the project's resources such as "AutoPlay\\Images\\my_image.png".</p>
+
+<h4>CallbackFunction:</h4>
+<p><span class="type">(string)</span> The name of a function that will be called whenever a file is added to the list. When called this function will be passed the fully qualified filename of the current file as argument 1 and the index of which file is being added as argument 2. The function should return true to allow the action to continue processing or false to have it stop.</p>
+
+<h4>Returns:</h4>
+<p><span class="type">(number)</span> The number of files added to the list.</p>
+ 
+<h4>Example:</h4>
+<pre class="code">
+-- This script prompts the user for a folder on their system and
+-- then adds all png, bmp and jpg files from that folder to the
+-- ThumbList
+
+strFolder = Dialog.FolderBrowse("Locate Image Folder",Shell.GetFolder(SHF_MYDOCUMENTS));
+
+if(strFolder ~= "CANCEL")then
+    
+    tblImagesPng = File.Find(strFolder,"*.png");
+    tblImagesBmp = File.Find(strFolder,"*.bmp");
+    tblImagesJpg = File.Find(strFolder,"*.jpg");
+
+    nCounter = 1;
+    tblImages = {};
+
+    if(tblImagesPng)then
+        for i,fn in pairs(tblImagesPng) do
+            tblImages[nCounter] = fn;
+            nCounter = nCounter + 1;
+        end
+    end
+    if(tblImagesBmp)then
+        for i,fn in pairs(tblImagesBmp) do
+            tblImages[nCounter] = fn;
+            nCounter = nCounter + 1;
+        end
+    end
+    if(tblImagesJpg)then
+        for i,fn in pairs(tblImagesJpg) do
+            tblImages[nCounter] = fn;
+            nCounter = nCounter + 1;
+        end
+    end
+
+    if(tblImages)then
+        <b>ThumbList.AddFiles("img_list",tblImages);</b>
+        if(Application.GetLastError() ~= 0)then
+            Dialog.Message("Error",Application.GetLastError());
+        end
+    end
+end
+</pre>
+
+
+<h3><a name="ThumbList.Clear">ThumbList.Clear (string ObjectName)</a></h3>
+
+<h4>Description:</h4>
+<p>Clears all items from the list.</p>
+
+<h4>ObjectName:</h4>
+<p><span class="type">(string)</span> The name of the ThumbList object that you want to apply this action to.</p> 
+
+<h4>Returns:</h4>
+<p>Nothing.</p>
+
+<h4>Example:</h4>
+<pre class="code">
+-- Clear the contents of the ThumbList
+ThumbList.Clear("img_list");
+</pre>
+
+
+<h3><a name="ThumbList.DeleteItem">ThumbList.DeleteItem (string ObjectName, number Index)</a></h3>
+
+<h4>Description:</h4>
+<p>Deletes an item from the list.</p>
+
+<h4>ObjectName:</h4>
+<p><span class="type">(string)</span> The name of the ThumbList object that you want to apply this action to.</p>
+ 
+<h4>Index:</h4>
+<p><span class="type">(number)</span> The one-based index of the item to delete from the list.</p>
+
+<h4>Returns:</h4>
+<p>Nothing.</p>
+ 
+<h4>Example:</h4>
+<pre class="code">
+-- Delete item 3
+ThumbList.DeleteItem("img_list", 3);
+</pre>
+
+
+<h3><a name="ThumbList.GetItemCount">number ThumbList.GetItemCount (string ObjectName)</a></h3>
+
+<h4>Description:</h4>
+<p>Returns the number of items in the list.</p>
+
+<h4>ObjectName:</h4>
+<p><span class="type">(string)</span> The name of the ThumbList object that you want to apply this action to.</p> 
+
+<h4>Returns:</h4>
+<p><span class="type">(number)</span> The number of items in the list.</p>
+ 
+<h4>Example:</h4>
+<pre class="code">
+-- Show a message box with the number of items in the list
+nNumItems = ThumbList.GetItemCount("img_list");
+Dialog.Message("Number of Items",nNumItems);
+</pre>
+
+
+<h3><a name="ThumbList.GetItemInfo">table ThumbList.GetItemInfo (string ObjectName, number Index)</a></h3>
+
+<h4>Description:</h4>
+<p>Returns a table that contains information about the specified item.</p>
+
+<h4>ObjectName:</h4>
+<p><span class="type">(string)</span> The name of the ThumbList object that you want to apply this action to.</p> 
+
+<h4>Index:</h4>
+<p><span class="type">(number)</span> The one-based index of the item to retrieve information about.</p>
+ 
+<h4>Returns:</h4>
+<p><span class="type">(table)</span> A table of information about the item. The table has the following indexes:</p>
+
+<ul>
+  <li><b>index</b>: <span class="type">(number)</span> The one-based index of the item when the action was called.</li>
+  <li><b>filename</b>: <span class="type">(string)</span> The filename of the image (i.e. "my_image.png").</li>
+  <li><b>filepath</b>: <span class="type">(string)</span> The full path and filename of the image (i.e. "C:\Images\my_image.png").</li>
+  <li><b>filetitle</b>: <span class="type">(string)</span> The file title of the image (i.e. "my_image").</li>
+  <li><b>label</b>: <span class="type">(string)</span> The current label text of the item.</li>
+  <li><b>image_width</b>: <span class="type">(number)</span> The width of the source image in pixels..</li>
+  <li><b>image_height</b>: <span class="type">(number)</span> The height of the source image in pixels..</li>
+  <li><b>image_bpp</b>: <span class="type">(number)</span> The bits-per-pixel of the source image.</li>
+  <li><b>selected</b>: <span class="type">(boolean)</span> True if the item is selected when the action is called, otherwise false.</li>
+</ul>
+
+<p>The action returns nil if there was an error or the index is out of range.</p>
+ 
+<h4>Example:</h4>
+<pre class="code">
+-- Show a message box that contains the
+-- full path and filename of the image at
+-- index 5
+<b>tblInfo = ThumbList.GetItemInfo("img_list",5);</b>
+if(tblInfo)then
+    Dialog.Message("hi",tblInfo.filepath);
+end
+</pre>
+
+
+<h3><a name="ThumbList.GetSelectedItems">table ThumbList.GetSelectedItems (string ObjectName)</a></h3>
+
+<h4>Description:</h4>
+<p>Returns the a numerically indexed table that contains the indexes of items that are selected in the list.</p>
+
+<h4>ObjectName:</h4>
+<p><span class="type">(string)</span> The name of the ThumbList object that you want to apply this action to.</p> 
+
+<h4>Returns:</h4>
+<p><span class="type">(table)</span> A numerically indexed table that contains the indexes of items that are selected in the list or nil if there is an error or there are no selected items.</p>
+ 
+<h4>Example:</h4>
+<pre class="code">
+-- Show a message box with all of the currently selected indexes
+<b>tblSelected = ThumbList.GetSelectedItems("img_list");</b>
+if(tblSelected)then
+    strOutput = "";
+    nNumItems = Table.Count(tblSelected);
+    for j=1,nNumItems do
+        strOutput = strOutput..tblSelected[j]..",";
+    end
+    strOutput = String.TrimRight(strOutput,",");
+    Dialog.Message("Selected",strOutput);
+end
+</pre>
+
+
+<h3><a name="ThumbList.SelectItem">ThumbList.SelectItem (string ObjectName, number Index)</a></h3>
+
+<h4>Description:</h4>
+<p>Selects an item in the list. If the list has multiple selection turned on, the specified item will be selected as well as any other items that were already selected. If the list is single-select, the specifed item will be selected and all other items will be deselected.</p>
+
+<h4>ObjectName:</h4>
+<p><span class="type">(string)</span> The name of the ThumbList object that you want to apply this action to.</p> 
+
+<h4>Index:</h4>
+<p><span class="type">(number)</span> The one-based index of the item to select. You can pass -1 as the Index to select, all items will be unselected.</p>
+ 
+<h4>Example:</h4>
+<pre class="code">
+-- Select item 3
+ThumbList.SelectItem("img_list", 3);
+</pre>
+
+
+<h3><a name="ThumbList.SetItemLabel">ThumbList.SetItemLabel (string ObjectName, number Index, string Label)</a></h3>
+
+<h4>Description:</h4>
+<p>Sets the label text of an item in the list.</p>
+
+<h4>ObjectName:</h4>
+<p><span class="type">(string)</span> The name of the ThumbList object that you want to apply this action to.</p> 
+
+<h4>Index:</h4>
+<p><span class="type">(number)</span> The one-based index of the item to change the label of.</p>
+
+<h4>Label:</h4>
+<p><span class="type">(string)</span> The new label text.</p>
+ 
+<h4>Example:</h4>
+<pre class="code">
+-- Set item 1's label
+ThumbList.SetItemLabel("img_list", 1, "I'm number one!");
+</pre>
+
+
+<h3><a name="ThumbList.SetThumbHeight">ThumbList.SetThumbHeight (string ObjectName, number Height)</a></h3>
+
+<h4>Description:</h4>
+<p>Sets the height (in pixels) of all items in the list.</p>
+
+<h4>ObjectName:</h4>
+<p><span class="type">(string)</span> The name of the ThumbList object that you want to apply this action to.</p> 
+
+<h4>Height:</h4>
+<p><span class="type">(number)</span> The new height of the thumbnail items in pixels.</p>
+ 
+<h4>Example:</h4>
+<pre class="code">
+-- Set the thumbnail height to 50
+ThumbList.SetThumbHeight("img_list", 50);
+</pre>
+
+
+<h3><a name="ThumbList.SetThumbWidth">ThumbList.SetThumbWidth (string ObjectName, number Width)</a></h3>
+
+<h4>Description:</h4>
+<p>Sets the width (in pixels) of all items in the list.</p>
+
+<h4>ObjectName:</h4>
+<p><span class="type">(string)</span> The name of the ThumbList object that you want to apply this action to.</p> 
+
+<h4>Width:</h4>
+<p><span class="type">(number)</span> The new width of the thumbnail items in pixels.</p>
+ 
+<h4>Example:</h4>
+<pre class="code">
+-- Set the thumbnail width to 100
+ThumbList.SetThumbWidth("img_list", 100);
+</pre>
+
+
+<h3><a name="ThumbList.SetHSpacing">ThumbList.SetHSpacing (string ObjectName, number Spacing)</a></h3>
+
+<h4>Description:</h4>
+<p>Sets the horizontal spacing (in pixels) of all items in the list.</p>
+
+<h4>ObjectName:</h4>
+<p><span class="type">(string)</span> The name of the ThumbList object that you want to apply this action to.</p> 
+
+<h4>Spacing:</h4>
+<p><span class="type">(number)</span> The new horizontal spacing of all list items in pixels.</p>
+ 
+<h4>Example:</h4>
+<pre class="code">
+-- Set the thumbnail horizontal spacing to 200
+ThumbList.SetHSpacing("img_list", 200);
+</pre>
+
+
+<h3><a name="ThumbList.SetVSpacing">ThumbList.SetVSpacing (string ObjectName, number Spacing)</a></h3>
+
+<h4>Description:</h4>
+<p>Sets the vertical spacing (in pixels) of all items in the list.</p>
+
+<h4>ObjectName:</h4>
+<p><span class="type">(string)</span> The name of the ThumbList object that you want to apply this action to.</p> 
+
+<h4>Spacing:</h4>
+<p><span class="type">(number)</span> The new vertical spacing of all list items in pixels.</p>
+ 
+<h4>Example:</h4>
+<pre class="code">
+-- Set the thumbnail vertical spacing to 200
+ThumbList.SetVSpacing("img_list", 200);
+</pre>
+
+</div> <!-- /Actions -->
+
+
+<div class="ErrorCodes">
+<h2>Error Codes</h2>
+<p>
+<b>1100</b> - Could not find the specified plugin object or the plugin object is of the wrong type.<br>
+</p>
+
+</div> <!-- /ErrorCodes -->
+
+
+<div class="History">
+<h2>Change Log</h2>
+
+<h3>2.0.0.0</h3>
+<ul>
+	<li>Updated to version 2.0 of the plugin SDK.</li>
+</ul>
+
+<h3>1.0.2.0</h3>
+<ul>
+	<li>Added support for .GIF files.</li>
+	<li>Updated version resource information.</li>
+</ul>
+
+<h3>1.0.1.0</h3>
+<ul>
+	<li>Fixed a bug where image files loaded into the thumblist would occasionally not appear</li>
+	<li>Updated version resource information.</li>
+</ul>
+
+<h3>1.0.0.4</h3>
+<ul>
+	<li>Fixed a bug where image files loaded into the thumblist would occasionally not appear</li>
+	<li>Fixed a spelling mistake in the ThumbList.AddFiles example</li>
+	<li>Fixed a bug that would report -1 as an incorrect entry for Thumblist.SelectItem (-1 clears the selection)</li>
+	<li>F1 help now works if you have Mozilla Firefox installed</li>
+</ul>
+
+<h3>1.0.0.3</h3>
+<ul>
+	<li>Initial release</li>
+</ul>
+</div> <!-- /History -->
+
+
+<div class="Info">
+<h2>Additional Information</h2>
+
+<h3>Author:</h3><p>Indigo Rose Corporation<br>
+<a href="http://support.indigorose.com">support.indigorose.com</a></p>
+
+<h3>Copyright:</h3>
+<p>The ThumbList Object Plugin is copyright © 2003-2010 Indigo Rose Software Design Corporation.</p>
+
+<h3>Website:</h3>
+<p><a href="http://www.indigorose.com">http://www.indigorose.com</a></p>
+
+</div> <!-- /info -->
+<hr>
+
+<p align="center">Copyright © 2003-2010 Indigo Rose Software Design Corporation.<br>
+All Rights Reserved.</p>
+
+</body>
+</html>

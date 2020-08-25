@@ -1,0 +1,323 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head><title>CurrencyGeran.GetPorcentCurrency</title>
+<meta http-equiv="Content-Style-Type" content="text/css">
+<style type="text/css"><!--
+body {
+  margin: 5px 5px 5px 5px;
+  background-color: #ffffff;
+}
+/* ========== Text Styles ========== */
+hr { color: #000000}
+body, table, span.rvts0 /* Normal text */
+{
+ font-size: 10pt;
+ font-family: 'Arial', 'Helvetica', sans-serif;
+ font-style: normal;
+ font-weight: normal;
+ color: #000000;
+ text-decoration: none;
+}
+span.rvts1 /* Heading */
+{
+ font-weight: bold;
+ color: #0000ff;
+}
+span.rvts2 /* Subheading */
+{
+ font-weight: bold;
+ color: #000080;
+}
+span.rvts3 /* Keywords */
+{
+ font-style: italic;
+ color: #800000;
+}
+a.rvts4, span.rvts4 /* Jump 1 */
+{
+ color: #000080;
+ text-decoration: underline;
+}
+a.rvts5, span.rvts5 /* Jump 2 */
+{
+ color: #000080;
+ text-decoration: underline;
+}
+span.rvts6 /* Font Hint */
+{
+ color: #b4b4b4;
+}
+span.rvts7 /* Font Hint Title */
+{
+ font-size: 15pt;
+ font-family: 'Tahoma', 'Geneva', sans-serif;
+ font-weight: bold;
+ color: #878787;
+}
+span.rvts8 /* Font Hint Bold */
+{
+ font-weight: bold;
+ color: #b4b4b4;
+}
+span.rvts9 /* Font Hint Italic */
+{
+ font-style: italic;
+ color: #b4b4b4;
+}
+span.rvts10
+{
+ font-size: 12pt;
+ font-family: 'Times New Roman', 'Times', serif;
+ color: #000000;
+}
+span.rvts11
+{
+ font-size: 18pt;
+ font-family: 'Verdana', 'Geneva', sans-serif;
+ font-weight: bold;
+ color: #ffffff;
+}
+span.rvts12
+{
+ font-family: 'Courier New', 'Courier', monospace;
+ color: #000000;
+}
+span.rvts13
+{
+ font-size: 12pt;
+ font-weight: bold;
+ color: #000000;
+}
+span.rvts14
+{
+ font-size: 9pt;
+ font-style: italic;
+ font-weight: bold;
+ color: #3c77b3;
+}
+span.rvts15
+{
+ font-size: 8pt;
+ font-family: 'Verdana', 'Geneva', sans-serif;
+ color: #aaaaaa;
+}
+span.rvts16
+{
+ font-size: 8pt;
+ font-family: 'Verdana', 'Geneva', sans-serif;
+ color: #000000;
+}
+span.rvts17
+{
+ font-size: 8pt;
+ font-family: 'Verdana', 'Geneva', sans-serif;
+}
+span.rvts18
+{
+ font-size: 11pt;
+ font-family: 'Times New Roman', 'Times', serif;
+ color: #808080;
+}
+span.rvts19 /* Font Style */
+{
+ font-size: 16pt;
+ font-family: 'Tahoma', 'Geneva', sans-serif;
+ color: #ffffff;
+}
+span.rvts20 /* Font Style */
+{
+ font-family: 'MS Sans Serif', 'Geneva', sans-serif;
+ color: #808080;
+}
+span.rvts21 /* Font Style */
+{
+ font-family: 'Verdana', 'Geneva', sans-serif;
+ font-style: italic;
+ color: #c0c0c0;
+}
+a.rvts22, span.rvts22 /* Font Style */
+{
+ font-family: 'Verdana', 'Geneva', sans-serif;
+ font-style: italic;
+ color: #6666ff;
+ text-decoration: underline;
+}
+/* ========== Para Styles ========== */
+p,ul,ol /* Paragraph Style */
+{
+ text-align: left;
+ text-indent: 0px;
+ padding: 0px 0px 0px 0px;
+ margin: 0px 0px 0px 0px;
+}
+.rvps1 /* Centered */
+{
+ text-align: center;
+}
+.rvps2
+{
+ text-align: left;
+ text-indent: 0px;
+ border-color: #699bef;
+ border-style: solid;
+ border-width: 1px;
+ border-top: none;
+ background: #699bef;
+ padding: 5px 4px 5px 4px;
+ margin: 0px 0px 0px 0px;
+}
+.rvps3
+{
+ border-color: #c0c0c0;
+ border-style: solid;
+ border-width: 1px;
+ background: #eeeeee;
+ padding: 3px 3px 3px 3px;
+ margin: -3px -3px -3px -3px;
+}
+.rvps4
+{
+ background: #eeeeee;
+}
+.rvps5
+{
+ text-align: left;
+ text-indent: 0px;
+ padding: 0px 0px 0px 0px;
+ margin: 24px 0px 4px 0px;
+}
+.rvps6
+{
+ margin: 7px 0px 14px 35px;
+}
+.rvps7
+{
+ text-align: left;
+ text-indent: 0px;
+ padding: 0px 0px 0px 0px;
+ margin: 24px 0px -8px 0px;
+}
+.rvps8
+{
+ line-height: 1.23;
+ margin: 0px 0px 12px 0px;
+}
+.rvps9
+{
+ margin: 0px 0px -4px 0px;
+}
+.rvps10 /* Paragraph Style */
+{
+ background: #9fbed0;
+ padding: 5px 5px 2px 5px;
+ margin: -5px -5px 18px -5px;
+}
+.rvps11 /* Paragraph Style */
+{
+ text-align: center;
+ background: #e4e4e4;
+ margin: 20px 0px 0px 0px;
+}
+.rvps12 /* Paragraph Style */
+{
+ border-color: #c0c0c0;
+ border-style: solid;
+ border-width: 1px;
+ border-right: none;
+ border-bottom: none;
+ border-left: none;
+ background: #ffffff;
+ padding: 3px 0px 0px 0px;
+ margin: 27px 0px 0px 0px;
+}
+--></style>
+<link rel="StyleSheet" href="hnd.css" type="text/css"/>
+<script type="text/javascript">if(top.frames.length == 0) { top.location.href="../CurrencyGeran.htm?1004.html"; }</script>
+<script type="text/javascript" src="jquery.min.js"></script>
+<script type="text/javascript" src="jquery.cookie.js"></script>
+<script type="text/javascript" src="hnd.js"></script>
+<meta name="generator" content="HelpNDoc Freeware Edition"></head>
+<body>
+<p class=rvps10><span class=rvts19>CurrencyGeran.GetPorcentCurrency</span></p>
+<h1 class=rvps2><span class=rvts0><span class=rvts11>CurrencyGeran.GetPorcentCurrency</span></span></h1>
+<p><span class=rvts10><br></span></p>
+<div class=rvps3><table border=0 cellpadding=1 cellspacing=0 style="border-width: 0px;">
+<tr valign=top>
+<td width=410 valign=top><p class=rvps4><span class=rvts12>(string) CurrencyGeran.GetPorcentCurrency ( </span></p>
+</td>
+<td width=722 valign=top><p class=rvps4><span class=rvts12>(string) sCurrency = " $ 1.000,--",</span></p>
+<p class=rvps4><span class=rvts12>(string) sCountry = "$",</span></p>
+<p class=rvps4><span class=rvts12>(boolean) bDecimal = false,</span></p>
+<p class=rvps4><span class=rvts12>(number) nPorcent = 20,</span></p>
+<p class=rvps4><span class=rvts12>(boolean) bValue = true )</span></p>
+</td>
+</tr>
+</table>
+</div>
+<h2 class=rvps5><span class=rvts0><span class=rvts13>Descripcion</span></span></h2>
+<p class=rvps6><span class=rvts10>Dado un valor Monetario cualquiera y un Porcentaje, nos puede devolver el Valor Monetario incrementado en el porcentaje o disminuido. Asi como tambien el porcentaje obtenido.</span></p>
+<h2 class=rvps7><span class=rvts0><span class=rvts13>Parametros</span></span></h2>
+<h2 class=rvps7><span class=rvts0><span class=rvts14>sCurrency</span></span></h2>
+<h2 class=rvps7><span class=rvts0><span class=rvts14><br></span></span></h2>
+<p class=rvps8><span class=rvts15>(string) </span><span class=rvts16>sCurrency = string, que representa una moneda, $ 1.000,00</span></p>
+<p class=rvps8><span class=rvts14>sCountry</span></p>
+<p class=rvps8><span class=rvts15>(string) </span><span class=rvts16>sCountry = string, que reprsenta el simbolo de la moneda, $</span></p>
+<p class=rvps8><span class=rvts14>bDecimal</span></p>
+<p class=rvps8><span class=rvts15>(boolean) </span><span class=rvts16>bDecimal = boolean, que representa un valor boolean indica si suprimen la parte decimal o no.</span></p>
+<p class=rvps8><span class=rvts14>nPorcent</span></p>
+<p class=rvps8><span class=rvts15>(number) </span><span class=rvts16>nPorcent = number, que representa el porcentaje, sobre el sCurrency</span></p>
+<p class=rvps8><span class=rvts14>bValue</span></p>
+<p class=rvps8><span class=rvts15>(boolean) </span><span class=rvts16>bValue = boolean, que indicara si se devolver incrementado o disminuido el sCurrency</span></p>
+<h2 class=rvps5><span class=rvts0><span class=rvts13>Retorno</span></span></h2>
+<p class=rvps8><span class=rvts17>Esta accion devuelve dos</span><span class=rvts15> (string) </span><span class=rvts17>como valor</span></p>
+<p><span class=rvts10><br></span></p>
+<hr noshade size=8 style="color : #f0f0f0">
+<p class=rvps9><span class=rvts17><br></span></p>
+<p class=rvps9><span class=rvts17><br></span></p>
+<p class=rvps9><span class=rvts17><br></span></p>
+<h1 class=rvps2><span class=rvts0><span class=rvts11>Ejemplos</span></span></h1>
+<p class=rvps9><span class=rvts17><br></span></p>
+<p class=rvps9><span class=rvts17><br></span></p>
+<p><span class=rvts10>Ejemplo 1</span></p>
+<p><span class=rvts10><br></span></p>
+<div class=rvps9><table width="100%" border=1 cellpadding=1 cellspacing=2 style="border-color: #000000; border-style: solid;">
+<tr valign=top>
+<td width="108%" style="border-color: #000000; border-style: solid;"><p class=rvps9><span class=rvts18> </span></p>
+<p class=rvps9><span class=rvts18> local sCurrency = "$ 1500.15";</span></p>
+<p class=rvps9><span class=rvts18> local sCountry = "$";</span></p>
+<p class=rvps9><span class=rvts18> local bDecimal = true;</span></p>
+<p class=rvps9><span class=rvts18> local nPorcent = 20;</span></p>
+<p class=rvps9><span class=rvts18> local bValue = true</span></p>
+<p class=rvps9><span class=rvts18><br></span></p>
+<p class=rvps9><span class=rvts18> local nCurrency, nPorcent&nbsp; = CurrencyGeran.GetPorcentCurrency(sCurrency, sCountry, bDecimal, nPorcent, bValue);</span></p>
+<p class=rvps9><span class=rvts18><br></span></p>
+<p class=rvps9><span class=rvts18><br></span></p>
+<p class=rvps9><span class=rvts18> Dialog.Message("GetPorcentCurrency", "Valor Monetario a evaluar: "..sCurrency.."\r\n".."Valor Monetario incremtado en Porcentaje "..nPorcent.." : "..nCurrency);</span></p>
+<p class=rvps9><span class=rvts18><br></span></p>
+</td>
+</tr>
+</table>
+</div>
+<p class=rvps9><span class=rvts10><br></span></p>
+<p class=rvps9><span class=rvts10>Ejemplo 2</span></p>
+<p class=rvps9><span class=rvts10><br></span></p>
+<div class=rvps9><table width="100%" border=1 cellpadding=1 cellspacing=2 style="border-color: #000000; border-style: solid;">
+<tr valign=top>
+<td width="108%" style="border-color: #000000; border-style: solid;"><p class=rvps9><span class=rvts18> </span></p>
+<p class=rvps9><span class=rvts18> local sCurrency = "$ 1500.--";</span></p>
+<p class=rvps9><span class=rvts18> local sCountry = "$";</span></p>
+<p class=rvps9><span class=rvts18> local bDecimal = false;</span></p>
+<p class=rvps9><span class=rvts18> local nPorcent = 20;</span></p>
+<p class=rvps9><span class=rvts18> local bValue = false</span></p>
+<p class=rvps9><span class=rvts18><br></span></p>
+<p class=rvps9><span class=rvts18> local nCurrency, nPorcent&nbsp; = CurrencyGeran.GetPorcentCurrency(sCurrency, sCountry, bDecimal, nPorcent, bValue);</span></p>
+<p class=rvps9><span class=rvts18><br></span></p>
+<p class=rvps9><span class=rvts18><br></span></p>
+<p class=rvps9><span class=rvts18> Dialog.Message("GetPorcentCurrency", "Valor Monetario a evaluar: "..sCurrency.."\r\n".."Valor Monetario disminuido en Porcentaje "..nPorcent.." : "..nCurrency);</span></p>
+<p class=rvps9><span class=rvts18><br></span></p>
+</td>
+</tr>
+</table>
+</div>
+<p class=rvps11><span class=rvts20><br></span></p>
+<p class=rvps12><span class=rvts21>Created with the Freeware Edition of HelpNDoc: </span><a class=rvts22 href="http://www.helpndoc.com" target="_blank">Free help authoring environment</a></p>
+</body></html>

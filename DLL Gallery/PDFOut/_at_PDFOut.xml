@@ -1,0 +1,948 @@
+<ActionTemplates>
+   <Action>
+     <Name>PDFOut.AddPage</Name>
+     <Description>Add a new page</Description>
+       <Arguments/>
+   </Action>	
+   <Action>
+     <Name>PDFOut.DisplayPreferences</Name>
+     <Description>Set display preferences</Description>
+       <Arguments>
+	<Arg>
+            <Name>Full Screen</Name>
+            <Description>displays the document full-screen (escape key to restore the normal view)</Description>
+            <Type>boolean</Type>
+            <Default>false</Default>
+            <Required>1</Required>
+            <EasyMode>
+               <Default>false</Default>
+               <DataType>boolean</DataType>
+               <Constraints>none</Constraints>
+            </EasyMode>
+         </Arg>
+	<Arg>
+            <Name>Hide Menu Bar</Name>
+            <Description>hides the menu</Description>
+            <Type>boolean</Type>
+            <Default>false</Default>
+            <Required>1</Required>
+            <EasyMode>
+               <Default>false</Default>
+               <DataType>boolean</DataType>
+               <Constraints>none</Constraints>
+            </EasyMode>
+         </Arg>
+	<Arg>
+            <Name>Hide Toolbar</Name>
+            <Description>hides all toolbars</Description>
+            <Type>boolean</Type>
+            <Default>false</Default>
+            <Required>1</Required>
+            <EasyMode>
+               <Default>false</Default>
+               <DataType>boolean</DataType>
+               <Constraints>none</Constraints>
+            </EasyMode>
+         </Arg>
+	<Arg>
+            <Name>Hide Window UI</Name>
+            <Description>hides all window elements (scrollbars, navigation controls, bookmarks...)</Description>
+            <Type>boolean</Type>
+            <Default>false</Default>
+            <Required>1</Required>
+            <EasyMode>
+               <Default>false</Default>
+               <DataType>boolean</DataType>
+               <Constraints>none</Constraints>
+            </EasyMode>
+         </Arg>
+	<Arg>
+            <Name>Display Doc Title</Name>
+            <Description>displays the document document title instead of the filename</Description>
+            <Type>boolean</Type>
+            <Default>false</Default>
+            <Required>1</Required>
+            <EasyMode>
+               <Default>false</Default>
+               <DataType>boolean</DataType>
+               <Constraints>none</Constraints>
+            </EasyMode>
+         </Arg>
+	<Arg>
+            <Name>Center Window</Name>
+            <Description>Centers the window, no effect on web plugin</Description>
+            <Type>boolean</Type>
+            <Default>false</Default>
+            <Required>1</Required>
+            <EasyMode>
+               <Default>false</Default>
+               <DataType>boolean</DataType>
+               <Constraints>none</Constraints>
+            </EasyMode>
+         </Arg>
+	<Arg>
+            <Name>Fit Window</Name>
+            <Description>sizes the window to fit the page</Description>
+            <Type>boolean</Type>
+            <Default>false</Default>
+            <Required>1</Required>
+            <EasyMode>
+               <Default>false</Default>
+               <DataType>boolean</DataType>
+               <Constraints>none</Constraints>
+            </EasyMode>
+         </Arg>
+      </Arguments>
+   </Action>	
+   <Action>
+     <Name>PDFOut.DrawCircle</Name>
+     <Description>Draw a circle</Description>
+       <Arguments>
+	<Arg>
+            <Name>X position</Name>
+            <Description>The X position of the center of the circle in the unit of measure</Description>
+            <Type>number</Type>
+            <Default/>
+            <Required>1</Required>
+            <EasyMode>
+               <Default>0</Default>
+               <DataType>number</DataType>
+               <Constraints>none</Constraints>
+            </EasyMode>
+         </Arg>
+	 <Arg>
+            <Name>Y position</Name>
+            <Description>The Y position of the center of the circle in unit of measure</Description>
+            <Type>number</Type>
+            <Default>0</Default>
+            <Required>1</Required>
+            <EasyMode>
+               <Default>0</Default>
+               <DataType>number</DataType>
+               <Constraints>none</Constraints>
+            </EasyMode>
+         </Arg>
+	 <Arg>
+            <Name>Radius</Name>
+            <Description>The radius in the unit of measure.</Description>
+            <Type>number</Type>
+            <Default>0</Default>
+            <Required>1</Required>
+            <EasyMode>
+               <Default>0</Default>
+               <DataType>number</DataType>
+               <Constraints>none</Constraints>
+            </EasyMode>
+         </Arg>
+	 <Arg>
+            <Name>Draw Width</Name>
+            <Description>The width of the drawing line in unit of measure</Description>
+            <Type>number</Type>
+            <Default>0</Default>
+            <Required>1</Required>
+            <EasyMode>
+               <Default>0</Default>
+               <DataType>number</DataType>
+               <Constraints>none</Constraints>
+            </EasyMode>
+         </Arg>
+	 <Arg>
+            <Name>Draw Color</Name>
+            <Description>The color used to draw the rectangle.</Description>
+            <Type>number</Type>
+            <Default>0</Default>
+            <Required>1</Required>
+            <EasyMode>
+               <Default>0</Default>
+               <DataType>color</DataType>
+               <Constraints>none</Constraints>
+            </EasyMode>
+         </Arg>
+	 <Arg>
+            <Name>Fill Color</Name>
+            <Description>The color used to fill the rectangle.</Description>
+            <Type>number</Type>
+            <Default>0</Default>
+            <Required>1</Required>
+            <EasyMode>
+               <Default>0</Default>
+               <DataType>color</DataType>
+               <Constraints>none</Constraints>
+            </EasyMode>
+         </Arg>
+	 <Arg>
+            <Name>Draw Style</Name>
+            <Description>The style used to draw the rectangle.</Description>
+            <Type>string</Type>
+            <Default>"DRAW"</Default>
+            <Required>1</Required>
+            <EasyMode>
+               <Default>"DRAW"</Default>
+               <DataType>combo</DataType>
+               <Constraints>"DRAW","FILL","DRAW_AND_FILL"</Constraints>
+            </EasyMode>
+         </Arg>
+      </Arguments>
+   </Action>	
+   <Action>
+     <Name>PDFOut.DrawEllipse</Name>
+     <Description>Draw an ellipse</Description>
+       <Arguments>
+	<Arg>
+            <Name>X position</Name>
+            <Description>The X position that is the center of the ellipse in the unit of measure</Description>
+            <Type>number</Type>
+            <Default/>
+            <Required>1</Required>
+            <EasyMode>
+               <Default>0</Default>
+               <DataType>number</DataType>
+               <Constraints>none</Constraints>
+            </EasyMode>
+         </Arg>
+	 <Arg>
+            <Name>Y position</Name>
+            <Description>The Y position that is the center of the ellipse in the unit of measure</Description>
+            <Type>number</Type>
+            <Default>0</Default>
+            <Required>1</Required>
+            <EasyMode>
+               <Default>0</Default>
+               <DataType>number</DataType>
+               <Constraints>none</Constraints>
+            </EasyMode>
+         </Arg>
+	 <Arg>
+            <Name>Radius X</Name>
+            <Description>The radius on the X axis in the unit of measure.</Description>
+            <Type>number</Type>
+            <Default>0</Default>
+            <Required>1</Required>
+            <EasyMode>
+               <Default>0</Default>
+               <DataType>number</DataType>
+               <Constraints>none</Constraints>
+            </EasyMode>
+         </Arg>
+	 <Arg>
+            <Name>Radius Y</Name>
+            <Description>The radius on the Y axis in unit of measure</Description>
+            <Type>number</Type>
+            <Default>0</Default>
+            <Required>1</Required>
+            <EasyMode>
+               <Default>0</Default>
+               <DataType>number</DataType>
+               <Constraints>none</Constraints>
+            </EasyMode>
+         </Arg>
+	 <Arg>
+            <Name>Draw Width</Name>
+            <Description>The width of the drawing line in unit of measure</Description>
+            <Type>number</Type>
+            <Default>0</Default>
+            <Required>1</Required>
+            <EasyMode>
+               <Default>0</Default>
+               <DataType>number</DataType>
+               <Constraints>none</Constraints>
+            </EasyMode>
+         </Arg>
+	 <Arg>
+            <Name>Draw Color</Name>
+            <Description>The color used to draw the rectangle.</Description>
+            <Type>number</Type>
+            <Default>0</Default>
+            <Required>1</Required>
+            <EasyMode>
+               <Default>0</Default>
+               <DataType>color</DataType>
+               <Constraints>none</Constraints>
+            </EasyMode>
+         </Arg>
+	 <Arg>
+            <Name>Fill Color</Name>
+            <Description>The color used to fill the rectangle.</Description>
+            <Type>number</Type>
+            <Default>0</Default>
+            <Required>1</Required>
+            <EasyMode>
+               <Default>0</Default>
+               <DataType>color</DataType>
+               <Constraints>none</Constraints>
+            </EasyMode>
+         </Arg>
+	 <Arg>
+            <Name>Draw Style</Name>
+            <Description>The style used to draw the rectangle.</Description>
+            <Type>string</Type>
+            <Default>"DRAW"</Default>
+            <Required>1</Required>
+            <EasyMode>
+               <Default>"DRAW"</Default>
+               <DataType>combo</DataType>
+               <Constraints>"DRAW","FILL","DRAW_AND_FILL"</Constraints>
+            </EasyMode>
+         </Arg>
+      </Arguments>
+   </Action>	
+   <Action>
+     <Name>PDFOut.DrawLine</Name>
+     <Description>Draw a line</Description>
+       <Arguments>
+	<Arg>
+            <Name>X position</Name>
+            <Description>The X position in the unit of measure</Description>
+            <Type>number</Type>
+            <Default/>
+            <Required>1</Required>
+            <EasyMode>
+               <Default>0</Default>
+               <DataType>number</DataType>
+               <Constraints>none</Constraints>
+            </EasyMode>
+         </Arg>
+	 <Arg>
+            <Name>Y position</Name>
+            <Description>The Y position in unit of measure</Description>
+            <Type>number</Type>
+            <Default>0</Default>
+            <Required>1</Required>
+            <EasyMode>
+               <Default>0</Default>
+               <DataType>number</DataType>
+               <Constraints>none</Constraints>
+            </EasyMode>
+         </Arg>
+	 <Arg>
+            <Name>X2 Position</Name>
+            <Description>The second X position in unit of measure</Description>
+            <Type>number</Type>
+            <Default>0</Default>
+            <Required>1</Required>
+            <EasyMode>
+               <Default>0</Default>
+               <DataType>number</DataType>
+               <Constraints>none</Constraints>
+            </EasyMode>
+         </Arg>
+	 <Arg>
+            <Name>Y2</Name>
+            <Description>The second Y position in unit of measure</Description>
+            <Type>number</Type>
+            <Default>0</Default>
+            <Required>1</Required>
+            <EasyMode>
+               <Default>0</Default>
+               <DataType>number</DataType>
+               <Constraints>none</Constraints>
+            </EasyMode>
+         </Arg>
+	 <Arg>
+            <Name>Draw Width</Name>
+            <Description>The width of the drawing line in unit of measure</Description>
+            <Type>number</Type>
+            <Default>0</Default>
+            <Required>1</Required>
+            <EasyMode>
+               <Default>0</Default>
+               <DataType>number</DataType>
+               <Constraints>none</Constraints>
+            </EasyMode>
+         </Arg>
+	 <Arg>
+            <Name>Draw Color</Name>
+            <Description>The color used to draw the rectangle.</Description>
+            <Type>number</Type>
+            <Default>0</Default>
+            <Required>1</Required>
+            <EasyMode>
+               <Default>0</Default>
+               <DataType>color</DataType>
+               <Constraints>none</Constraints>
+            </EasyMode>
+         </Arg>
+      </Arguments>
+   </Action>	
+   <Action>
+     <Name>PDFOut.DrawRectangle</Name>
+     <Description>Draw a rectangle</Description>
+       <Arguments>
+	<Arg>
+            <Name>X position</Name>
+            <Description>The X position in the unit of measure</Description>
+            <Type>number</Type>
+            <Default/>
+            <Required>1</Required>
+            <EasyMode>
+               <Default>0</Default>
+               <DataType>number</DataType>
+               <Constraints>none</Constraints>
+            </EasyMode>
+         </Arg>
+	 <Arg>
+            <Name>Y position</Name>
+            <Description>The Y position in unit of measure</Description>
+            <Type>number</Type>
+            <Default>0</Default>
+            <Required>1</Required>
+            <EasyMode>
+               <Default>0</Default>
+               <DataType>number</DataType>
+               <Constraints>none</Constraints>
+            </EasyMode>
+         </Arg>
+	 <Arg>
+            <Name>Width</Name>
+            <Description>The width in the unit of measure.  Set to 0 to have the image scaled to width.</Description>
+            <Type>number</Type>
+            <Default>0</Default>
+            <Required>1</Required>
+            <EasyMode>
+               <Default>0</Default>
+               <DataType>number</DataType>
+               <Constraints>none</Constraints>
+            </EasyMode>
+         </Arg>
+	 <Arg>
+            <Name>Height</Name>
+            <Description>The height in unit of measure.  Set to 0 to have the image scaled to height.</Description>
+            <Type>number</Type>
+            <Default>0</Default>
+            <Required>1</Required>
+            <EasyMode>
+               <Default>0</Default>
+               <DataType>number</DataType>
+               <Constraints>none</Constraints>
+            </EasyMode>
+         </Arg>
+	 <Arg>
+            <Name>Draw Width</Name>
+            <Description>The width of the drawing line in unit of measure</Description>
+            <Type>number</Type>
+            <Default>0</Default>
+            <Required>1</Required>
+            <EasyMode>
+               <Default>0</Default>
+               <DataType>number</DataType>
+               <Constraints>none</Constraints>
+            </EasyMode>
+         </Arg>
+	 <Arg>
+            <Name>Draw Color</Name>
+            <Description>The color used to draw the rectangle.</Description>
+            <Type>number</Type>
+            <Default>0</Default>
+            <Required>1</Required>
+            <EasyMode>
+               <Default>0</Default>
+               <DataType>color</DataType>
+               <Constraints>none</Constraints>
+            </EasyMode>
+         </Arg>
+	 <Arg>
+            <Name>Fill Color</Name>
+            <Description>The color used to fill the rectangle.</Description>
+            <Type>number</Type>
+            <Default>0</Default>
+            <Required>1</Required>
+            <EasyMode>
+               <Default>0</Default>
+               <DataType>color</DataType>
+               <Constraints>none</Constraints>
+            </EasyMode>
+         </Arg>
+	 <Arg>
+            <Name>Draw Style</Name>
+            <Description>The style used to draw the rectangle.</Description>
+            <Type>string</Type>
+            <Default>"DRAW"</Default>
+            <Required>1</Required>
+            <EasyMode>
+               <Default>"DRAW"</Default>
+               <DataType>combo</DataType>
+               <Constraints>"DRAW","FILL","DRAW_AND_FILL"</Constraints>
+            </EasyMode>
+         </Arg>
+      </Arguments>
+   </Action>	
+   <Action>
+     <Name>PDFOut.PrintImage</Name>
+     <Description>Print an image</Description>
+       <Arguments>
+	<Arg>
+            <Name>Filename</Name>
+            <Description>The path to a JPG or PNG to print at the given X, Y coordinate. Click the browse button to select a file.</Description>
+            <Type>string</Type>
+            <Default/>
+            <Required>1</Required>
+            <EasyMode>
+               <Default>"AutoPlay\\Images\\Image.jpg"</Default>
+               <DataType>fileedit</DataType>
+               <Constraints>Images</Constraints>
+            </EasyMode>
+         </Arg>
+	 <Arg>
+            <Name>X position</Name>
+            <Description>The X position in the unit of measure</Description>
+            <Type>number</Type>
+            <Default>0</Default>
+            <Required>1</Required>
+            <EasyMode>
+               <Default>0</Default>
+               <DataType>number</DataType>
+               <Constraints>none</Constraints>
+            </EasyMode>
+         </Arg>
+	 <Arg>
+            <Name>Y position</Name>
+            <Description>The Y position in unit of measure</Description>
+            <Type>number</Type>
+            <Default>0</Default>
+            <Required>1</Required>
+            <EasyMode>
+               <Default>0</Default>
+               <DataType>number</DataType>
+               <Constraints>none</Constraints>
+            </EasyMode>
+         </Arg>
+	 <Arg>
+            <Name>Width</Name>
+            <Description>The width in the unit of measure.  Set to 0 to have the image scaled to width.</Description>
+            <Type>number</Type>
+            <Default>0</Default>
+            <Required>1</Required>
+            <EasyMode>
+               <Default>0</Default>
+               <DataType>number</DataType>
+               <Constraints>none</Constraints>
+            </EasyMode>
+         </Arg>
+	 <Arg>
+            <Name>Height</Name>
+            <Description>The height in unit of measure.  Set to 0 to have the image scaled to height.</Description>
+            <Type>number</Type>
+            <Default>0</Default>
+            <Required>1</Required>
+            <EasyMode>
+               <Default>0</Default>
+               <DataType>number</DataType>
+               <Constraints>none</Constraints>
+            </EasyMode>
+         </Arg>
+      </Arguments>
+   </Action>	
+   <Action>
+      <Name>PDFOut.PrintText</Name>
+      <Description>Print text at the given X, Y position</Description>
+      <ReturnValueType></ReturnValueType>
+      <Arguments>	
+	 <Arg>
+            <Name>String to Print</Name>
+            <Description>The String to print at the X, Y position</Description>
+            <Type>string</Type>
+            <Default></Default>
+            <Required>1</Required>
+            <EasyMode>
+               <Default></Default>
+               <DataType>string</DataType>
+               <Constraints>none</Constraints>
+            </EasyMode>
+         </Arg>
+	 <Arg>
+            <Name>X position</Name>
+            <Description>The X position in the unit of measure</Description>
+            <Type>number</Type>
+            <Default>0</Default>
+            <Required>1</Required>
+            <EasyMode>
+               <Default>0</Default>
+               <DataType>number</DataType>
+               <Constraints>none</Constraints>
+            </EasyMode>
+         </Arg>
+	 <Arg>
+            <Name>Y position</Name>
+            <Description>The Y position in unit of measure</Description>
+            <Type>number</Type>
+            <Default>0</Default>
+            <Required>1</Required>
+            <EasyMode>
+               <Default>0</Default>
+               <DataType>number</DataType>
+               <Constraints>none</Constraints>
+            </EasyMode>
+         </Arg>
+      </Arguments>
+   </Action>
+   <Action>
+      <Name>PDFOut.PrintAligned</Name>
+      <Description>Print text in a defined rectangular cell</Description>
+      <ReturnValueType></ReturnValueType>
+      <Arguments>	
+	 <Arg>
+            <Name>String to Print</Name>
+            <Description>The String to print</Description>
+            <Type>string</Type>
+            <Default></Default>
+            <Required>1</Required>
+            <EasyMode>
+               <Default></Default>
+               <DataType>string</DataType>
+               <Constraints>none</Constraints>
+            </EasyMode>
+         </Arg>
+	 <Arg>
+            <Name>X position</Name>
+            <Description>The X position in the unit of measure</Description>
+            <Type>number</Type>
+            <Default>0</Default>
+            <Required>1</Required>
+            <EasyMode>
+               <Default>0</Default>
+               <DataType>number</DataType>
+               <Constraints>none</Constraints>
+            </EasyMode>
+         </Arg>
+	 <Arg>
+            <Name>Y position</Name>
+            <Description>The Y position in unit of measure</Description>
+            <Type>number</Type>
+            <Default>0</Default>
+            <Required>1</Required>
+            <EasyMode>
+               <Default>0</Default>
+               <DataType>number</DataType>
+               <Constraints>none</Constraints>
+            </EasyMode>
+         </Arg>
+	 <Arg>
+            <Name>Width</Name>
+            <Description>The width in the unit of measure</Description>
+            <Type>number</Type>
+            <Default>0</Default>
+            <Required>1</Required>
+            <EasyMode>
+               <Default>0</Default>
+               <DataType>number</DataType>
+               <Constraints>none</Constraints>
+            </EasyMode>
+         </Arg>
+	 <Arg>
+            <Name>Height</Name>
+            <Description>The height in unit of measure</Description>
+            <Type>number</Type>
+            <Default>0</Default>
+            <Required>1</Required>
+            <EasyMode>
+               <Default>0</Default>
+               <DataType>number</DataType>
+               <Constraints>none</Constraints>
+            </EasyMode>
+         </Arg>
+	 <Arg>
+            <Name>Alignment</Name>
+            <Description>The alignment of the text</Description>
+            <Type>string</Type>
+            <Default>"LEFT"</Default>
+            <Required>1</Required>
+            <EasyMode>
+               <Default>"LEFT"</Default>
+               <DataType>combo</DataType>
+               <Constraints>"LEFT","RIGHT","CENTER","JUSTIFIED","FORCEDJUSTIFIED"</Constraints>
+            </EasyMode>
+         </Arg>
+      </Arguments>
+   </Action>
+   <Action>
+      <Name>PDFOut.PrintTextRotated</Name>
+      <Description>Print text at the given X, Y position</Description>
+      <ReturnValueType></ReturnValueType>
+      <Arguments>	
+	 <Arg>
+            <Name>String to Print</Name>
+            <Description>The String to print at the X, Y position</Description>
+            <Type>string</Type>
+            <Default></Default>
+            <Required>1</Required>
+            <EasyMode>
+               <Default></Default>
+               <DataType>string</DataType>
+               <Constraints>none</Constraints>
+            </EasyMode>
+         </Arg>
+	 <Arg>
+            <Name>X position</Name>
+            <Description>The X position in the unit of measure</Description>
+            <Type>number</Type>
+            <Default>0</Default>
+            <Required>1</Required>
+            <EasyMode>
+               <Default>0</Default>
+               <DataType>number</DataType>
+               <Constraints>none</Constraints>
+            </EasyMode>
+         </Arg>
+	 <Arg>
+            <Name>Y position</Name>
+            <Description>The Y position in unit of measure</Description>
+            <Type>number</Type>
+            <Default>0</Default>
+            <Required>1</Required>
+            <EasyMode>
+               <Default>0</Default>
+               <DataType>number</DataType>
+               <Constraints>none</Constraints>
+            </EasyMode>
+         </Arg>
+	 <Arg>
+            <Name>Angle</Name>
+            <Description>The angle to rotate the text</Description>
+            <Type>number</Type>
+            <Default>0</Default>
+            <Required>1</Required>
+            <EasyMode>
+               <Default>0</Default>
+               <DataType>number</DataType>
+               <Constraints>none</Constraints>
+            </EasyMode>
+         </Arg>
+      </Arguments>
+   </Action>
+   <Action>
+       <Name>PDFOut.SetDisplayMode</Name>
+       <Description>Defines the way the document is to be displayed to the viewer</Description>
+       <ReturnValueType/>
+       <Arguments>
+         <Arg>
+            <Name>Zoom</Name>
+            <Description>the zoom to use</Description>
+            <Type>String</Type>
+            <Default>"PDF_ZOOM_FULLPAGE"</Default>
+            <Required>1</Required>
+            <EasyMode>
+               <Default>"PDF_ZOOM_FULLPAGE"</Default>
+               <DataType>combo</DataType>
+               <Constraints>"PDF_ZOOM_FULLPAGE","PDF_ZOOM_FULLWIDTH","PDF_ZOOM_REAL"</Constraints>
+            </EasyMode>
+         </Arg>
+         <Arg>
+            <Name>Layout</Name>
+            <Description>Page Layout</Description>
+            <Type>String</Type>
+            <Default>"PDF_LAYOUT_CONTINUOUS"</Default>
+            <Required>1</Required>
+            <EasyMode>
+               <Default>"PDF_LAYOUT_CONTINUOUS"</Default>
+               <DataType>combo</DataType>
+               <Constraints>"PDF_LAYOUT_SINGLE","PDF_LAYOUT_CONTINUOUS","PDF_LAYUOUT_TWO"</Constraints>
+            </EasyMode>
+         </Arg>
+       </Arguments>
+   </Action>
+   <Action>
+      <Name>PDFOut.SetFont</Name>
+      <Description>Changes the font face, style, and size.</Description>
+      <ReturnValueType></ReturnValueType>
+      <Arguments>	
+	 <Arg>
+            <Name>Font Face</Name>
+            <Description>The name of the font.</Description>
+            <Type>String</Type>
+            <Default>"Arial"</Default>
+            <Required>1</Required>
+            <EasyMode>
+               <Default>"Arial"</Default>
+               <DataType>combo</DataType>
+               <Constraints>"Arial","Courier","Times","Symbol","ZapfDingBats"</Constraints>
+            </EasyMode>
+         </Arg>
+	 <Arg>
+            <Name>Font Style</Name>
+            <Description>The style of the font Bold, Italics, Underlined or any comnination of (i.e. "BI" would be Bold Italics).</Description>
+            <Type>String</Type>
+            <Default>"BIU"</Default>
+            <Required>1</Required>
+            <EasyMode>
+               <Default>"BIU"</Default>
+               <DataType>string</DataType>
+               <Constraints>none</Constraints>
+            </EasyMode>
+         </Arg>
+	 <Arg>
+            <Name>Font Size</Name>
+            <Description>The size of the font.</Description>
+            <Type>number</Type>
+            <Default>12</Default>
+            <Required>1</Required>
+            <EasyMode>
+               <Default>12</Default>
+               <DataType>number</DataType>
+               <Constraints>none</Constraints>
+            </EasyMode>
+         </Arg>
+      </Arguments>
+   </Action>
+   <Action>
+      <Name>PDFOut.SetFontColor</Name>
+      <Description>Changes the font color.</Description>
+      <ReturnValueType></ReturnValueType>
+      <Arguments>	
+	 <Arg>
+            <Name>Color</Name>
+            <Description>The new font color.</Description>
+            <Type>number</Type>
+            <Default>0</Default>
+            <Required>1</Required>
+            <EasyMode>
+               <Default>0</Default>
+               <DataType>color</DataType>
+               <Constraints>none</Constraints>
+            </EasyMode>
+         </Arg>
+      </Arguments>
+   </Action>
+   <Action>
+      <Name>PDFOut.SetMargins</Name>
+      <Description>Set the Left, Right and Top Margins.</Description>
+      <ReturnValueType></ReturnValueType>
+      <Arguments>	
+	 <Arg>
+            <Name>Left Margin</Name>
+            <Description>The unit of measure for the Left Margin</Description>
+            <Type>number</Type>
+            <Default>0</Default>
+            <Required>1</Required>
+            <EasyMode>
+               <Default>0</Default>
+               <DataType>number</DataType>
+               <Constraints>none</Constraints>
+            </EasyMode>
+         </Arg>
+	 <Arg>
+            <Name>Top Margin</Name>
+            <Description>The unit of measure for the Top Margin</Description>
+            <Type>number</Type>
+            <Default>0</Default>
+            <Required>1</Required>
+            <EasyMode>
+               <Default>0</Default>
+               <DataType>number</DataType>
+               <Constraints>none</Constraints>
+            </EasyMode>
+         </Arg>
+	 <Arg>
+            <Name>Right Margin</Name>
+            <Description>The unit of measure for the Right Margin</Description>
+            <Type>number</Type>
+            <Default>0</Default>
+            <Required>1</Required>
+            <EasyMode>
+               <Default>0</Default>
+               <DataType>number</DataType>
+               <Constraints>none</Constraints>
+            </EasyMode>
+         </Arg>
+      </Arguments>
+   </Action>
+   <Action>
+      <Name>PDFOut.SetUnits</Name>
+      <Description>Set the units to use for setting X and Y coordinates.</Description>
+      <ReturnValueType></ReturnValueType>
+      <Arguments>	
+	 <Arg>
+            <Name>Unit of Measure</Name>
+            <Description>The unit of measure</Description>
+            <Type>string</Type>
+            <Default>"mm"</Default>
+            <Required>1</Required>
+            <EasyMode>
+               <Default>"mm"</Default>
+               <DataType>combo</DataType>
+               <Constraints>"mm","cm","pt","in"</Constraints>
+            </EasyMode>
+         </Arg>
+      </Arguments>
+   </Action>
+   <Action>
+      <Name>PDFOut.SetXY</Name>
+      <Description>Set the X and Y coordinates.</Description>
+      <ReturnValueType></ReturnValueType>
+      <Arguments>	
+	 <Arg>
+            <Name>X</Name>
+            <Description>X position in unit of measure</Description>
+            <Type>number</Type>
+            <Default>0</Default>
+            <Required>1</Required>
+            <EasyMode>
+               <Default>0</Default>
+               <DataType>number</DataType>
+               <Constraints>none</Constraints>
+            </EasyMode>
+         </Arg>
+	 <Arg>
+            <Name>Y</Name>
+            <Description>Y position in unit of measure</Description>
+            <Type>number</Type>
+            <Default>0</Default>
+            <Required>1</Required>
+            <EasyMode>
+               <Default>0</Default>
+               <DataType>number</DataType>
+               <Constraints>none</Constraints>
+            </EasyMode>
+         </Arg>
+      </Arguments>
+   </Action>
+   <Action>
+      <Name>PDFOut.WritePDF</Name>
+      <Description>Save the PDF file to disk.</Description>
+      <ReturnValueType></ReturnValueType>
+      <Arguments>	
+	 <Arg>
+            <Name>Filename</Name>
+            <Description>The name of the PDF file to save to disk.</Description>
+            <Type>string</Type>
+            <Default></Default>
+            <Required>1</Required>
+            <EasyMode>
+               <Default></Default>
+               <DataType>string</DataType>
+               <Constraints>none</Constraints>
+            </EasyMode>
+         </Arg>
+      </Arguments>
+   </Action>
+   <Action>
+      <Name>PDFOut.WriteText</Name>
+      <Description>Print text at the current X, Y position wrapping at the margins at the given height</Description>
+      <ReturnValueType></ReturnValueType>
+      <Arguments>	
+	 <Arg>
+            <Name>Text to Print</Name>
+            <Description>The text to print at the current X, Y position</Description>
+            <Type>string</Type>
+            <Default></Default>
+            <Required>1</Required>
+            <EasyMode>
+               <Default></Default>
+               <DataType>string</DataType>
+               <Constraints>none</Constraints>
+            </EasyMode>
+         </Arg>
+	 <Arg>
+            <Name>Height</Name>
+            <Description>The height in the unit of measure to use for line spacing</Description>
+            <Type>number</Type>
+            <Default>0</Default>
+            <Required>1</Required>
+            <EasyMode>
+               <Default>0</Default>
+               <DataType>number</DataType>
+               <Constraints>none</Constraints>
+            </EasyMode>
+         </Arg>
+      </Arguments>
+   </Action>
+</ActionTemplates>

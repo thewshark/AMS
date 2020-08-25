@@ -1,0 +1,699 @@
+<html>
+<head>
+<title>Playlist</title>
+<style>
+
+
+	body {
+	  font-family: Verdana, sans-serif;
+	  font-size: 8pt;
+	  background-color: #ffffff;
+	}
+	  
+	body {
+	  font-family: Verdana, sans-serif;
+	  font-size: 8pt;
+	  background-color: #ffffff;
+	}
+	
+	hr {
+	  text-align: center;
+	  color: #f0f0f0;
+	  width: 100%;
+	  height: 6pt;
+	  margin-top: 0pt;
+	  margin-bottom: -3pt;
+	  border: none;
+	}
+	
+	A:link, A:active, A:visited {
+	  color: #0000ff;
+	  text-decoration: none;
+	}
+	
+	A:hover {
+	  color: #0000ff;
+	  text-decoration: underline;
+	}
+	
+	h1 {
+	  font-family: Verdana;
+	  font-weight: bold;
+	  font-size: 18.0pt;
+	  white-space: nowrap;
+	  color: #fff;
+	  background-color: #699BEF;
+	  padding: 4pt 3pt;
+	  padding: 5px 4px;
+	  margin-top: 0pt;
+	  margin-bottom: 0pt;
+	  border-right: 1px solid #333;
+	  border-left: 1px solid #699BEF;
+	  border-bottom: solid black 1px;
+	}
+	
+	h2 {
+	  font-family: Arial, sans-serif;
+	  font-size: 12.0pt;
+	  letter-spacing: .2ex;
+	  color: #000;
+	  margin-left: 0pt;
+	  margin-right: 0pt;
+	  margin-top: 18pt;
+	  margin-bottom: 9pt;
+	}
+	
+	h2.H2Tight {
+		margin-bottom: -6pt;
+	}
+	
+	h3 {
+	  font-family: Arial, sans-serif;
+	  font-size: 10pt;
+	  font-weight: bold;
+	  font-style: normal;
+	  color: black;
+	  letter-spacing: 0px;
+	  margin-left: 0pt;
+	  margin-right: 0pt;
+	  margin-top: 18pt;
+	  margin-bottom: 3pt;
+	}
+	
+	h3.ParameterHeading {
+		font-family: Arial, sans-serif;
+		margin-left: 12pt;
+		margin-right: 0pt;
+		margin-top: 18pt;
+		margin-bottom: 3pt;
+		font-size: 9pt;
+		font-weight: bold;
+		font-style: italic;
+		letter-spacing: .2ex;
+		color: #3C77B3;
+		x-next-class: ParameterBody;
+		x-next-type: p;
+	}
+	
+	p {
+	  font-family: Verdana;
+	  font-size: 8.0pt;
+	  line-height: 12.0pt;
+	  margin-left: 0pt;
+	  margin-right: 0pt;
+	  margin-top: 0pt;
+	  margin-bottom: 9pt;
+	}
+	  
+	p.NavLocal {
+	  white-space: nowrap;
+	  text-indent: -4px;
+	  font-family: Verdana, Arial, sans-serif;
+	  font-weight: bold;
+	  font-style: normal;
+	  font-size: 13px;
+	  background-color: #e4e4e4;
+	  margin-top: 0px;
+	  margin-bottom: 12pt;
+	  padding-top: 4px;
+	  padding-bottom: 4px;
+	  padding-left: 0px;
+	  padding-right: 0px;
+	
+	  border-bottom: 1px solid #e4e4e4;
+	}
+	  
+	p.ParameterBody {
+		margin-left: 12pt;
+		x-next-class: ParameterHeading;
+		x-next-type: h3;
+	}
+	  
+	div.Actions p, div.Properties p, div.Events p, div.ErrorCodes p {
+	  font-family: Verdana;
+	  font-size: 8.0pt;
+	  line-height: 12.0pt;
+	  margin-top: 0pt;
+	  margin-bottom: 9pt;
+	  margin-left: 12pt;
+	  margin-right: 0pt;
+	}
+	
+	div.Declaration table p {
+		white-space: nowrap;
+		line-height: normal;
+		x-text-tab-stops: repeat 1in;
+		font-family: "Courier New", Courier, monospace;
+		font-size: 10.0pt;
+		background-color: #eee;
+		color: #000000;
+		margin-left: 0px;
+		margin-right: 0px;
+		margin-top: 0px;
+		margin-bottom: 0px;
+		padding: 0pt;
+		border-style: none;
+	}
+	
+	div.Declaration {
+		white-space: nowrap;
+		line-height: normal;
+		x-text-tab-stops: repeat 1in;
+		font-family: "Courier New", Courier, monospace;
+		font-size: 9.0pt;
+		background-color: #eee;
+		color: #000000;
+		width: 100%;
+		margin-left: 0px;
+		margin-right: 0px;
+		margin-top: 0pt;
+		margin-bottom: 9pt;
+		padding: 2pt;
+		border-top: #c0c0c0 1px solid;
+		border-right: #c0c0c0 1px solid;
+		border-left: #c0c0c0 1px solid;
+		border-bottom: #c0c0c0 1px solid;
+	}
+	
+	span.VarType {
+		font-family: "Courier New", monospace;
+		font-size: 9pt;
+		font-style: italic;
+		color: #abd;
+	}
+	
+	span.type {
+		color: #aaa;
+	}
+	
+	span.wab {
+		font-family: Verdana;
+		font-size: 13px;
+		padding: 0px 0px;
+		margin: 0px;
+		border: none;
+		visibility: hidden;
+	}
+
+	span.DefaultValue {
+		white-space: nowrap;
+		font-family: "Courier New", monospace;
+		font-size: 9pt;
+		color: #aaa;
+	}
+	
+	</style>
+</head>
+<body>
+<h1>Playlist Help File</h1>
+<p class="NavLocal"><span class=wab>&nbsp;</span><span class="here">Welcome</span></p>
+<hr><div class="Properties">
+<h2>Table of Contents</h2>
+<p><blockquote>
+<A href="#Playlist.AddFile"><b>Playlist.AddFile</b></A>
+<br>
+<A href="#Playlist.AddFolder"><b>Playlist.AddFolder</b></A>
+<br>
+<A href="#Playlist.AddM3U"><b>Playlist.AddM3U</b></A>
+<br>
+<A href="#Playlist.SaveM3U"><b>Playlist.SaveM3U</b></A>
+<br>
+<A href="#Playlist.Clear"><b>Playlist.Clear</b></A>
+<br>
+<A href="#Playlist.Count"><b>Playlist.Count</b></A>
+<br>
+<A href="#Playlist.Load"><b>Playlist.Load</b></A>
+<br>
+<A href="#Playlist.Next"><b>Playlist.Next</b></A>
+<br>
+<A href="#Playlist.Prev"><b>Playlist.Prev</b></A>
+<br>
+<A href="#Playlist.CurrentIndex"><b>Playlist.CurrentIndex</b></A>
+<br>
+<A href="#Playlist.CurrentPath"><b>Playlist.CurrentPath</b></A>
+<br>
+<A href="#Playlist.CurrentLength"><b>Playlist.CurrentLength</b></A>
+<br>
+<A href="#Playlist.CurrentLengthString"><b>Playlist.CurrentLengthString</b></A>
+<br>
+<A href="#Playlist.CurrentSize"><b>Playlist.CurrentSize</b></A>
+<br>
+<A href="#Playlist.CurrentSizeString"><b>Playlist.CurrentSizeString</b></A>
+<br>
+</blockquote></p></div>
+<h1><A name="Playlist.AddFile">Playlist.AddFile</A></h1><br>
+<div class=Declaration>
+<div align=left>
+<table x-use-null-cells
+	style="float: alignleft;
+	x-cell-content-align: Top;
+	border-spacing: 0px;
+	border-spacing: 0px;"
+	cellspacing=0>
+<col>
+<col>
+<tr style="x-cell-content-align: top;" valign=top>
+<td style="padding-right: 0px;
+	padding-left: 0px;
+	border-top-style: none;
+	border-bottom-style: none;
+	border-right-style: none;
+	border-left-style: none;">
+<p><span class=VarType>(number)&nbsp;</span>Playlist.AddFile (&nbsp;</td>
+<td style="padding-right: 0px;
+	padding-left: 0px;
+	border-top-style: none;
+	border-right-style: none;
+	border-bottom-style: none;">
+<p><span class=VarType>(string)&nbsp;</span>Filepath )</p>
+</td></tr></table></div></div>
+<h2 style="margin-bottom: 3pt;">Description</h2>
+<p><blockquote>Adds an audio file to the playlist and returns the index of the new playlist item,  -1 if any error.</blockquote></p>
+<h2 class="H2Tight">Parameters</h2>
+<h3 class="ParameterHeading">Filepath</h3>
+<p class="ParameterBody"><span class="type">(string)&nbsp;</span>The path to the audio file. Click the browse to select a file.</p>
+<br>
+<h2>Return</h2><blockquote><p>This action returns a <span class="type">(number)</span> value.<br><br></p></blockquote><br><hr><h1><A name="Playlist.AddFolder">Playlist.AddFolder</A></h1><br>
+<div class=Declaration>
+<div align=left>
+<table x-use-null-cells
+	style="float: alignleft;
+	x-cell-content-align: Top;
+	border-spacing: 0px;
+	border-spacing: 0px;"
+	cellspacing=0>
+<col>
+<col>
+<tr style="x-cell-content-align: top;" valign=top>
+<td style="padding-right: 0px;
+	padding-left: 0px;
+	border-top-style: none;
+	border-bottom-style: none;
+	border-right-style: none;
+	border-left-style: none;">
+<p><span class=VarType>(number)&nbsp;</span>Playlist.AddFolder (&nbsp;</td>
+<td style="padding-right: 0px;
+	padding-left: 0px;
+	border-top-style: none;
+	border-right-style: none;
+	border-bottom-style: none;">
+<p><span class=VarType>(string)&nbsp;</span>Folderpath, </p>
+<p><span class=VarType>(boolean)&nbsp;</span>Recurse, </p>
+<p><span class=VarType>(function)&nbsp;</span>CallbackFunction, </p>
+<p><span class=VarType>(function)&nbsp;</span>FileFoundCallbackFunction )</p>
+</td></tr></table></div></div>
+<h2 style="margin-bottom: 3pt;">Description</h2>
+<p><blockquote>Searches for audio files in a folder and adds them to the playlist, returns the number of tracks added to the playlist, 0 if any error</blockquote></p>
+<h2 class="H2Tight">Parameters</h2>
+<h3 class="ParameterHeading">Folderpath</h3>
+<p class="ParameterBody"><span class="type">(string)&nbsp;</span>The path to the audio folder.</p>
+<h3 class="ParameterHeading">Recurse</h3>
+<p class="ParameterBody"><span class="type">(boolean)&nbsp;</span>Whether to recurse though subfolders when a wildcard is used in the Filename parameter.</p>
+<h3 class="ParameterHeading">CallbackFunction</h3>
+<p class="ParameterBody"><span class="type">(function)&nbsp;</span>The name of a function that will be called whenever progress is made in the find operation. (You can use this callback function to display the progress of the find operation in your own custom way.)</p>
+<h3 class="ParameterHeading">FileFoundCallbackFunction</h3>
+<p class="ParameterBody"><span class="type">(function)&nbsp;</span>The name of a function that will be called whenever a match is found.</p>
+<br>
+<h2>Return</h2><blockquote><p>This action returns a <span class="type">(number)</span> value.<br><br></p></blockquote><br><hr><h1><A name="Playlist.AddM3U">Playlist.AddM3U</A></h1><br>
+<div class=Declaration>
+<div align=left>
+<table x-use-null-cells
+	style="float: alignleft;
+	x-cell-content-align: Top;
+	border-spacing: 0px;
+	border-spacing: 0px;"
+	cellspacing=0>
+<col>
+<col>
+<tr style="x-cell-content-align: top;" valign=top>
+<td style="padding-right: 0px;
+	padding-left: 0px;
+	border-top-style: none;
+	border-bottom-style: none;
+	border-right-style: none;
+	border-left-style: none;">
+<p><span class=VarType>(number)&nbsp;</span>Playlist.AddM3U (&nbsp;</td>
+<td style="padding-right: 0px;
+	padding-left: 0px;
+	border-top-style: none;
+	border-right-style: none;
+	border-bottom-style: none;">
+<p><span class=VarType>(string)&nbsp;</span>Filepath )</p>
+</td></tr></table></div></div>
+<h2 style="margin-bottom: 3pt;">Description</h2>
+<p><blockquote>Adds a m3u file to the playlist and returns the number of tracks added, -1 if any error.</blockquote></p>
+<h2 class="H2Tight">Parameters</h2>
+<h3 class="ParameterHeading">Filepath</h3>
+<p class="ParameterBody"><span class="type">(string)&nbsp;</span>The path to the m3u file. Click the browse to select a file.</p>
+<br>
+<h2>Return</h2><blockquote><p>This action returns a <span class="type">(number)</span> value.<br><br></p></blockquote><br><hr><h1><A name="Playlist.SaveM3U">Playlist.SaveM3U</A></h1><br>
+<div class=Declaration>
+<div align=left>
+<table x-use-null-cells
+	style="float: alignleft;
+	x-cell-content-align: Top;
+	border-spacing: 0px;
+	border-spacing: 0px;"
+	cellspacing=0>
+<col>
+<col>
+<tr style="x-cell-content-align: top;" valign=top>
+<td style="padding-right: 0px;
+	padding-left: 0px;
+	border-top-style: none;
+	border-bottom-style: none;
+	border-right-style: none;
+	border-left-style: none;">
+<p><span class=VarType>(boolean)&nbsp;</span>Playlist.SaveM3U (&nbsp;</td>
+<td style="padding-right: 0px;
+	padding-left: 0px;
+	border-top-style: none;
+	border-right-style: none;
+	border-bottom-style: none;">
+<p><span class=VarType>(string)&nbsp;</span>Filepath )</p>
+</td></tr></table></div></div>
+<h2 style="margin-bottom: 3pt;">Description</h2>
+<p><blockquote>Saves the playlist to m3u file, returns true is save ok, false if not.</blockquote></p>
+<h2 class="H2Tight">Parameters</h2>
+<h3 class="ParameterHeading">Filepath</h3>
+<p class="ParameterBody"><span class="type">(string)&nbsp;</span>The path to file. Click the browse to select a file.</p>
+<br>
+<h2>Return</h2><blockquote><p>This action returns a <span class="type">(boolean)</span> value.<br><br></p></blockquote><br><hr><h1><A name="Playlist.Clear">Playlist.Clear</A></h1><br>
+<div class=Declaration>
+<div align=left>
+<table x-use-null-cells
+	style="float: alignleft;
+	x-cell-content-align: Top;
+	border-spacing: 0px;
+	border-spacing: 0px;"
+	cellspacing=0>
+<col>
+<col>
+<tr style="x-cell-content-align: top;" valign=top>
+<td style="padding-right: 0px;
+	padding-left: 0px;
+	border-top-style: none;
+	border-bottom-style: none;
+	border-right-style: none;
+	border-left-style: none;">
+<p>Playlist.Clear ()</td>
+<td style="padding-right: 0px;
+	padding-left: 0px;
+	border-top-style: none;
+	border-right-style: none;
+	border-bottom-style: none;">
+</td></tr></table></div></div>
+<h2 style="margin-bottom: 3pt;">Description</h2>
+<p><blockquote>Clears the playlist, returns nothing.</blockquote></p>
+<h2 class="H2Tight">Parameters</h2><h3 class="ParameterHeading">None</h3><br>
+<h2>Return</h2><blockquote><p>This action dose not return any value.<br><br></p></blockquote><br><hr><h1><A name="Playlist.Count">Playlist.Count</A></h1><br>
+<div class=Declaration>
+<div align=left>
+<table x-use-null-cells
+	style="float: alignleft;
+	x-cell-content-align: Top;
+	border-spacing: 0px;
+	border-spacing: 0px;"
+	cellspacing=0>
+<col>
+<col>
+<tr style="x-cell-content-align: top;" valign=top>
+<td style="padding-right: 0px;
+	padding-left: 0px;
+	border-top-style: none;
+	border-bottom-style: none;
+	border-right-style: none;
+	border-left-style: none;">
+<p><span class=VarType>(number)&nbsp;</span>Playlist.Count ()</td>
+<td style="padding-right: 0px;
+	padding-left: 0px;
+	border-top-style: none;
+	border-right-style: none;
+	border-bottom-style: none;">
+</td></tr></table></div></div>
+<h2 style="margin-bottom: 3pt;">Description</h2>
+<p><blockquote>Returns the number of items in the playlist.</blockquote></p>
+<h2 class="H2Tight">Parameters</h2><h3 class="ParameterHeading">None</h3><br>
+<h2>Return</h2><blockquote><p>This action returns a <span class="type">(number)</span> value.<br><br></p></blockquote><br><hr><h1><A name="Playlist.Load">Playlist.Load</A></h1><br>
+<div class=Declaration>
+<div align=left>
+<table x-use-null-cells
+	style="float: alignleft;
+	x-cell-content-align: Top;
+	border-spacing: 0px;
+	border-spacing: 0px;"
+	cellspacing=0>
+<col>
+<col>
+<tr style="x-cell-content-align: top;" valign=top>
+<td style="padding-right: 0px;
+	padding-left: 0px;
+	border-top-style: none;
+	border-bottom-style: none;
+	border-right-style: none;
+	border-left-style: none;">
+<p><span class=VarType>(boolean)&nbsp;</span>Playlist.Load (&nbsp;</td>
+<td style="padding-right: 0px;
+	padding-left: 0px;
+	border-top-style: none;
+	border-right-style: none;
+	border-bottom-style: none;">
+<p><span class=VarType>(number)&nbsp;</span>Index, </p>
+<p><span class=VarType>(boolean)&nbsp;</span>PlayAutomatic, </p>
+<p><span class=VarType>(boolean)&nbsp;</span>Loop )</p>
+</td></tr></table></div></div>
+<h2 style="margin-bottom: 3pt;">Description</h2>
+<p><blockquote>Loads a playlist item into the audio channel, returns true if the item could be loaded, false if any error.</blockquote></p>
+<h2 class="H2Tight">Parameters</h2>
+<h3 class="ParameterHeading">Index</h3>
+<p class="ParameterBody"><span class="type">(number)&nbsp;</span>Number index list.</p>
+<h3 class="ParameterHeading">PlayAutomatic</h3>
+<p class="ParameterBody"><span class="type">(boolean)&nbsp;</span>Whether to automatically start playing the audio file after it loads.</p>
+<h3 class="ParameterHeading">Loop</h3>
+<p class="ParameterBody"><span class="type">(boolean)&nbsp;</span>Whether to make the audio file loop when it reaches the end.</p>
+<br>
+<h2>Return</h2><blockquote><p>This action returns a <span class="type">(boolean)</span> value.<br><br></p></blockquote><br><hr><h1><A name="Playlist.Next">Playlist.Next</A></h1><br>
+<div class=Declaration>
+<div align=left>
+<table x-use-null-cells
+	style="float: alignleft;
+	x-cell-content-align: Top;
+	border-spacing: 0px;
+	border-spacing: 0px;"
+	cellspacing=0>
+<col>
+<col>
+<tr style="x-cell-content-align: top;" valign=top>
+<td style="padding-right: 0px;
+	padding-left: 0px;
+	border-top-style: none;
+	border-bottom-style: none;
+	border-right-style: none;
+	border-left-style: none;">
+<p><span class=VarType>(boolean)&nbsp;</span>Playlist.Next ()</td>
+<td style="padding-right: 0px;
+	padding-left: 0px;
+	border-top-style: none;
+	border-right-style: none;
+	border-bottom-style: none;">
+</td></tr></table></div></div>
+<h2 style="margin-bottom: 3pt;">Description</h2>
+<p><blockquote>Plays the next item in the playlist, returns true if the item could be loaded, false if any error.</blockquote></p>
+<h2 class="H2Tight">Parameters</h2><h3 class="ParameterHeading">None</h3><br>
+<h2>Return</h2><blockquote><p>This action returns a <span class="type">(boolean)</span> value.<br><br></p></blockquote><br><hr><h1><A name="Playlist.Prev">Playlist.Prev</A></h1><br>
+<div class=Declaration>
+<div align=left>
+<table x-use-null-cells
+	style="float: alignleft;
+	x-cell-content-align: Top;
+	border-spacing: 0px;
+	border-spacing: 0px;"
+	cellspacing=0>
+<col>
+<col>
+<tr style="x-cell-content-align: top;" valign=top>
+<td style="padding-right: 0px;
+	padding-left: 0px;
+	border-top-style: none;
+	border-bottom-style: none;
+	border-right-style: none;
+	border-left-style: none;">
+<p><span class=VarType>(boolean)&nbsp;</span>Playlist.Prev ()</td>
+<td style="padding-right: 0px;
+	padding-left: 0px;
+	border-top-style: none;
+	border-right-style: none;
+	border-bottom-style: none;">
+</td></tr></table></div></div>
+<h2 style="margin-bottom: 3pt;">Description</h2>
+<p><blockquote>Plays the previous item in the playlist, returns true if the item could be loaded, false if any error.</blockquote></p>
+<h2 class="H2Tight">Parameters</h2><h3 class="ParameterHeading">None</h3><br>
+<h2>Return</h2><blockquote><p>This action returns a <span class="type">(boolean)</span> value.<br><br></p></blockquote><br><hr><h1><A name="Playlist.CurrentIndex">Playlist.CurrentIndex</A></h1><br>
+<div class=Declaration>
+<div align=left>
+<table x-use-null-cells
+	style="float: alignleft;
+	x-cell-content-align: Top;
+	border-spacing: 0px;
+	border-spacing: 0px;"
+	cellspacing=0>
+<col>
+<col>
+<tr style="x-cell-content-align: top;" valign=top>
+<td style="padding-right: 0px;
+	padding-left: 0px;
+	border-top-style: none;
+	border-bottom-style: none;
+	border-right-style: none;
+	border-left-style: none;">
+<p><span class=VarType>(number)&nbsp;</span>Playlist.CurrentIndex ()</td>
+<td style="padding-right: 0px;
+	padding-left: 0px;
+	border-top-style: none;
+	border-right-style: none;
+	border-bottom-style: none;">
+</td></tr></table></div></div>
+<h2 style="margin-bottom: 3pt;">Description</h2>
+<p><blockquote>Returns the index of the current playlist item, else -1 if any error.</blockquote></p>
+<h2 class="H2Tight">Parameters</h2><h3 class="ParameterHeading">None</h3><br>
+<h2>Return</h2><blockquote><p>This action returns a <span class="type">(number)</span> value.<br><br></p></blockquote><br><hr><h1><A name="Playlist.CurrentPath">Playlist.CurrentPath</A></h1><br>
+<div class=Declaration>
+<div align=left>
+<table x-use-null-cells
+	style="float: alignleft;
+	x-cell-content-align: Top;
+	border-spacing: 0px;
+	border-spacing: 0px;"
+	cellspacing=0>
+<col>
+<col>
+<tr style="x-cell-content-align: top;" valign=top>
+<td style="padding-right: 0px;
+	padding-left: 0px;
+	border-top-style: none;
+	border-bottom-style: none;
+	border-right-style: none;
+	border-left-style: none;">
+<p><span class=VarType>(string)&nbsp;</span>Playlist.CurrentPath ()</td>
+<td style="padding-right: 0px;
+	padding-left: 0px;
+	border-top-style: none;
+	border-right-style: none;
+	border-bottom-style: none;">
+</td></tr></table></div></div>
+<h2 style="margin-bottom: 3pt;">Description</h2>
+<p><blockquote>Returns the filepath of the current playlist item, else a blank string ("") if any error.</blockquote></p>
+<h2 class="H2Tight">Parameters</h2><h3 class="ParameterHeading">None</h3><br>
+<h2>Return</h2><blockquote><p>This action returns a <span class="type">(string)</span> value.<br><br></p></blockquote><br><hr><h1><A name="Playlist.CurrentLength">Playlist.CurrentLength</A></h1><br>
+<div class=Declaration>
+<div align=left>
+<table x-use-null-cells
+	style="float: alignleft;
+	x-cell-content-align: Top;
+	border-spacing: 0px;
+	border-spacing: 0px;"
+	cellspacing=0>
+<col>
+<col>
+<tr style="x-cell-content-align: top;" valign=top>
+<td style="padding-right: 0px;
+	padding-left: 0px;
+	border-top-style: none;
+	border-bottom-style: none;
+	border-right-style: none;
+	border-left-style: none;">
+<p><span class=VarType>(number)&nbsp;</span>Playlist.CurrentLength ()</td>
+<td style="padding-right: 0px;
+	padding-left: 0px;
+	border-top-style: none;
+	border-right-style: none;
+	border-bottom-style: none;">
+</td></tr></table></div></div>
+<h2 style="margin-bottom: 3pt;">Description</h2>
+<p><blockquote>Returns the length in seconds of the current playlist item, else -1 if any error.</blockquote></p>
+<h2 class="H2Tight">Parameters</h2><h3 class="ParameterHeading">None</h3><br>
+<h2>Return</h2><blockquote><p>This action returns a <span class="type">(number)</span> value.<br><br></p></blockquote><br><hr><h1><A name="Playlist.CurrentLengthString">Playlist.CurrentLengthString</A></h1><br>
+<div class=Declaration>
+<div align=left>
+<table x-use-null-cells
+	style="float: alignleft;
+	x-cell-content-align: Top;
+	border-spacing: 0px;
+	border-spacing: 0px;"
+	cellspacing=0>
+<col>
+<col>
+<tr style="x-cell-content-align: top;" valign=top>
+<td style="padding-right: 0px;
+	padding-left: 0px;
+	border-top-style: none;
+	border-bottom-style: none;
+	border-right-style: none;
+	border-left-style: none;">
+<p><span class=VarType>(string)&nbsp;</span>Playlist.CurrentLengthString ()</td>
+<td style="padding-right: 0px;
+	padding-left: 0px;
+	border-top-style: none;
+	border-right-style: none;
+	border-bottom-style: none;">
+</td></tr></table></div></div>
+<h2 style="margin-bottom: 3pt;">Description</h2>
+<p><blockquote>Returns the length in string format eg: "00:01:34" of the current playlist item, else a blank string ("") if any error.</blockquote></p>
+<h2 class="H2Tight">Parameters</h2><h3 class="ParameterHeading">None</h3><br>
+<h2>Return</h2><blockquote><p>This action returns a <span class="type">(string)</span> value.<br><br></p></blockquote><br><hr><h1><A name="Playlist.CurrentSize">Playlist.CurrentSize</A></h1><br>
+<div class=Declaration>
+<div align=left>
+<table x-use-null-cells
+	style="float: alignleft;
+	x-cell-content-align: Top;
+	border-spacing: 0px;
+	border-spacing: 0px;"
+	cellspacing=0>
+<col>
+<col>
+<tr style="x-cell-content-align: top;" valign=top>
+<td style="padding-right: 0px;
+	padding-left: 0px;
+	border-top-style: none;
+	border-bottom-style: none;
+	border-right-style: none;
+	border-left-style: none;">
+<p><span class=VarType>(number)&nbsp;</span>Playlist.CurrentSize ()</td>
+<td style="padding-right: 0px;
+	padding-left: 0px;
+	border-top-style: none;
+	border-right-style: none;
+	border-bottom-style: none;">
+</td></tr></table></div></div>
+<h2 style="margin-bottom: 3pt;">Description</h2>
+<p><blockquote>Returns the size in bytes of the current playlist item, else -1 if any error.</blockquote></p>
+<h2 class="H2Tight">Parameters</h2><h3 class="ParameterHeading">None</h3><br>
+<h2>Return</h2><blockquote><p>This action returns a <span class="type">(number)</span> value.<br><br></p></blockquote><br><hr><h1><A name="Playlist.CurrentSizeString">Playlist.CurrentSizeString</A></h1><br>
+<div class=Declaration>
+<div align=left>
+<table x-use-null-cells
+	style="float: alignleft;
+	x-cell-content-align: Top;
+	border-spacing: 0px;
+	border-spacing: 0px;"
+	cellspacing=0>
+<col>
+<col>
+<tr style="x-cell-content-align: top;" valign=top>
+<td style="padding-right: 0px;
+	padding-left: 0px;
+	border-top-style: none;
+	border-bottom-style: none;
+	border-right-style: none;
+	border-left-style: none;">
+<p><span class=VarType>(string)&nbsp;</span>Playlist.CurrentSizeString ()</td>
+<td style="padding-right: 0px;
+	padding-left: 0px;
+	border-top-style: none;
+	border-right-style: none;
+	border-bottom-style: none;">
+</td></tr></table></div></div>
+<h2 style="margin-bottom: 3pt;">Description</h2>
+<p><blockquote>Returns the size in string format eg: "1.32 MB" of the current playlist item, else a blank string ("") if any error.</blockquote></p>
+<h2 class="H2Tight">Parameters</h2><h3 class="ParameterHeading">None</h3><br>
+<h2>Return</h2><blockquote><p>This action returns a <span class="type">(string)</span> value.<br><br></p></blockquote><br><hr><h2><p align="center">Made with Action Plugin Compiler</p></h2></body></html>

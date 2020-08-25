@@ -1,0 +1,671 @@
+<!doctype HTML public "-//W3C//DTD HTML 4.0 Frameset//EN">
+
+<html>
+<head>
+<title>Crypto Actions Plugin Help</title>
+
+<meta http-equiv=content-type content="text/html; charset=windows-1252">
+
+<style>
+/* ELEMENTS */
+body {
+  font-family: Verdana, sans-serif;
+  font-size: 8pt;
+  background-color: #ffffff;
+}
+
+hr {
+  text-align: center;
+  color: #f0f0f0;
+  width: 100%;
+  height: 6pt;
+  margin-top: 0pt;
+  margin-bottom: -3pt;
+  border: none;
+}
+
+A:link, A:active, A:visited {
+  color: #0000ff;
+  text-decoration: none;
+}
+
+A:hover {
+  color: #0000ff;
+  text-decoration: underline;
+}
+
+h1 {
+  font-family: Verdana;
+  font-weight: bold;
+  font-size: 18.0pt;
+  white-space: nowrap;
+  color: #fff;
+  background-color: #699BEF;
+  padding: 4pt 3pt;
+  padding: 5px 4px;
+  margin-top: 0pt;
+  margin-bottom: 0pt;
+  border-right: 1px solid #333;
+  border-left: 1px solid #699BEF;
+  border-bottom: solid black 1px;
+}
+
+h2 {
+  font-family: Arial, sans-serif;
+  font-size: 12.0pt;
+  letter-spacing: .2ex;
+  color: #000;
+  margin-left: 0pt;
+  margin-right: 0pt;
+  margin-top: 18pt;
+  margin-bottom: 9pt;
+}
+
+h3 {
+  font-family: Arial, sans-serif;
+  font-size: 10pt;
+  font-weight: bold;
+  font-style: normal;
+  color: black;
+  letter-spacing: 0px;
+  margin-left: 0pt;
+  margin-right: 0pt;
+  margin-top: 18pt;
+  margin-bottom: 3pt;
+}
+
+p {
+  font-family: Verdana;
+  font-size: 8.0pt;
+  line-height: 12.0pt;
+  margin-left: 0pt;
+  margin-right: 0pt;
+  margin-top: 0pt;
+  margin-bottom: 9pt;
+}
+
+/* CLASSES */
+div.Actions h3, div.Events h3 {
+  font-family: Arial, sans-serif;
+  font-size: 10pt;
+  font-weight: bold;
+  font-style: italic;
+  color: #3C77B3;
+  letter-spacing: 0px;
+  margin-left: 12pt;
+  margin-right: 0pt;
+  margin-top: 18pt;
+  margin-bottom: 3pt;
+}
+
+div.Actions h4, div.info h3 {
+  font-family: Verdana;
+  font-size: 8.0pt;
+  line-height: 12.0pt;
+  font-style: bold;
+  margin-top: 9pt;
+  margin-bottom: 0pt;
+  margin-left: 28pt;
+  margin-right: 0pt;
+}
+
+div.Actions p, div.Events p, div.ErrorCodes p {
+  font-family: Verdana;
+  font-size: 8.0pt;
+  line-height: 12.0pt;
+  margin-top: 0pt;
+  margin-bottom: 9pt;
+  margin-left: 12pt;
+  margin-right: 0pt;
+}
+
+p.NavLocal {
+  white-space: nowrap;
+  text-indent: -4px;
+  font-family: Verdana, Arial, sans-serif;
+  font-weight: bold;
+  font-style: normal;
+  font-size: 13px;
+  background-color: #e4e4e4;
+  margin-top: 0px;
+  margin-bottom: 12pt;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 0px;
+  padding-right: 0px;
+  border-bottom: 1px solid #e4e4e4;
+}
+
+p.Note {
+    font-family: Verdana;
+    font-size: 8.0pt;
+    line-height: 12.0pt;
+    color: #000000;
+    background-color: #ffffe8;
+    margin-top: 0pt;
+    margin-bottom: 9pt;
+    margin-left: 0pt;
+    margin-right: 5%;
+    padding-left: 2pt;
+    padding-right: 2pt;
+    padding-top: 1pt;
+    padding-bottom: 2pt;
+}
+
+p.Tip {
+    font-family: Verdana;
+    font-size: 8.0pt;
+    line-height: 12.0pt;
+    color: #000000;
+    background-color: #EAF4E8;
+    margin-top: 0pt;
+    margin-bottom: 9pt;
+    margin-left: 0pt;
+    margin-right: 5%;
+    padding-left: 2pt;
+    padding-right: 2pt;
+    padding-top: 1pt;
+    padding-bottom: 2pt;
+}
+
+div.Actions p.Note, div.Events p.Note,
+div.Actions p.Tip, div.Events p.Tip {
+    margin-left: 28pt;
+}
+
+pre.code {
+  white-space: pre;
+  font-family: Courier New, Courier, Arial, sans-serif;
+  font-size: 10pt;
+  font-weight: normal;
+  font-style: normal;
+  letter-spacing: normal;
+  color: #000;
+  background-color: #f9f9f9;
+  margin-top: 3pt;
+  margin-bottom: 9pt;
+  margin-left: 0pt;
+  margin-left: 0pt;
+  padding: 10px;
+  border: 1px dotted #ccc;
+}
+
+div.Actions pre.code, div.Events pre.code {
+  margin-left: 28pt;
+}
+
+div.Actions h2 {
+  margin-bottom: -6pt;
+}
+
+div.actions p, div.info p, div.ErrorCodes p {
+  margin-left: 28pt;
+}
+
+div.actions p.indent {
+  margin-left: 38pt;
+}
+
+span.here { /* blue tab effect in navbar (NavLocal) */
+  font-weight: bold;
+  color: #fff;
+  background-color: #699BEF;
+  margin: 0px;
+  padding: 4px 8px;
+  border-top: 1px solid #699BEF;
+  border-bottom: 1px solid #333;
+  border-left: none;
+  border-right: 1px solid #333;
+}
+
+span.type {
+    color: #aaa;
+}
+
+.remark {
+    color:#FF0000;
+    font-weight: bold;
+    font-style:normal;
+}
+
+.History {
+    font-family: "Trebuchet MS", Arial, sans-serif;
+    font-size: 12px;
+    color: black;
+    background-color: #eee8aa;
+    padding: 1px 0px 5px 15px;
+     width: 50%;
+}
+</style>
+</head>
+<body>
+
+<h1>Crypto Plugin</h1>
+
+<p class="NavLocal"><span class=wab>&nbsp;</span><span class="here">Online Help</span></p>
+
+<h2>Description</h2>
+
+<p>
+Crypto is an action plugin that expands the available cryptographic actions in AutoPlay Media Studio, Setup Factory, TrueUpdate and Visual Patch. It offers AES (Advanced Encryption Standard), 3DES  (Triple Data Encryption Standard) and Twofish encryption algorithms. </p>
+<div class="Actions">
+<h2>Actions</h2>
+
+<!-- AES -->
+<h3>Crypto.AESDecrypt( string Source, string Destination, string Key )</h3>
+<h4>Description:</h4>
+<p>Creates a decrypted copy of a AES-encrypted file.</p>
+
+<h4>Source</h4>
+<p><span class="type">(string)</span> The full path to the file that you want to decrypt.</p>
+
+<h4>Destination</h4>
+<p><span class="type">(string)</span> The full path and filename for the decrypted file.</p>
+
+<h4>Key</h4>
+<p><span class="type">(string)</span> The secret key to decrypt the data with.</p>
+
+<h4>Returns:</h4>
+<p>Nothing. You can use Application.GetLastError to determine whether this action failed, and why.</p>
+<h4>Example:</h4>
+<pre class="code">-- Create a AES-encrypted copy of a text file in the user's temp folder
+Crypto.AESEncrypt(_TempFolder.."\\myfile.txt", _TempFolder.."\\myfile_aes.txt", "trustno1withthispassword");
+
+-- Check if any errors occurred from calling the Crypto.AESEncrypt action.
+-- If an error occurred, display it's error message in a dialog message.
+error = Application.GetLastError();
+if (error ~=0)then
+    Dialog.Message("Error", _tblErrorMessages[error], MB_OK, MB_ICONEXCLAMATION, MB_DEFBUTTON1);
+end
+
+-- Decrypts the AES-encrypted file.
+Crypto.AESDecrypt(_TempFolder.."\\myfile_aes.txt", _TempFolder.."\\myfile_aes_decrypted.txt", "trustno1withthispassword");
+
+-- Check if any errors occurred from calling the Crypto.AESDecrypt action.
+-- If an error occurred, display it's  error message in a dialog message.
+error = Application.GetLastError();
+if (error ~=0) then
+    Dialog.Message("Error", _tblErrorMessages[error], MB_OK, MB_ICONEXCLAMATION, MB_DEFBUTTON1);
+end
+
+-- Open the decrypted file to see its contents.
+File.Open(_TempFolder.."\\myfile_aes_decrypted.txt");
+</pre>
+
+<h3>Crypto.AESDecryptString( string Text, string Key )</h3>
+<h4>Description:</h4>
+<p>Decrypts a string that was encrypted using the Crypto.AESEncryptString action. (Decodes a base64-encoded string and decrypts the AES-encrypted data.)</p>
+
+<h4>Text</h4>
+<p><span class="type">(string)</span> The string that you want to decrypt.</p>
+
+<h4>Key</h4>
+<p><span class="type">(string)</span> The secret key that the data was encrypted with.</p>
+
+<h4>Returns:</h4>
+<p><span class="type">(string)</span> The decrypted version of a string that was encrypted with a Crypto.AESEncryptString action. If the key does not match, corrupted data is returned. You can use Application.GetLastError to determine whether this action failed, and why.</p>
+<h4>Example:</h4>
+<pre class="code">sDecryptedString = Crypto.AESDecryptString(sEncryptedString, sKey);</pre>
+
+<h3>Crypto.AESEncrypt( string Source, string Destination, string Key )</h3>
+<h4>Description:</h4>
+<p>Creates a AES-encrypted copy of a file.</p>
+
+<h4>Source</h4>
+<p><span class="type">(string)</span> The full path to the file that you want to encrypt.</p>
+
+<h4>Destination</h4>
+<p><span class="type">(string)</span> The full path and filename for the AES-encrypted file.</p>
+
+<h4>Key</h4>
+<p><span class="type">(string)</span> The secret key to encrypt the data with.</p>
+
+<h4>Returns:</h4>
+<p>Nothing. You can use Application.GetLastError to determine whether this action failed, and why.</p>
+<h4>Example:</h4>
+<p>Creates a AES-encrypted copy of a text file in the user's temp folder and then opens that file in the user's default text editor.</p>
+<pre class="code">
+-- Create a AES-encrypted copy of a text file in the user's temp folder
+Crypto.AESEncrypt(_TempFolder.."\\myfile.txt", _TempFolder.."\\myfile_aes.txt", "trustno1withthispassword");
+
+-- Check if any errors occurred from calling the Crypto.AESEncrypt action.
+-- If an error occurred, display it's error message in a dialog message.
+error = Application.GetLastError();
+if (error ~=0) then
+    Dialog.Message("Error", _tblErrorMessages[error] , MB_OK, MB_ICONEXCLAMATION, MB_DEFBUTTON1);
+end
+
+-- Open the encrypted file to see its contents.
+File.Open(_TempFolder.."\\myfile_aes.txt");
+</pre>
+
+
+<h3>Crypto.AESEncryptString( string Text, string Key )</h3>
+<h4>Description:</h4>
+<p>Encrypts a string using AES and returns a base64-encoded string containing the   encrypted data.</p>
+
+<h4>Text</h4>
+<p><span class="type">(string)</span> The string that you want to encrypt.</p>
+
+<h4>Key</h4>
+<p><span class="type">(string)</span> The secret key to encrypt the data with.</p>
+
+<h4>Returns:</h4>
+<p><span class="type">(string)</span> A base64-encoded string containing the encrypted data. If the data cannot be   encrypted or some other error occurs, an empty string ("") is returned. You can   use Application.GetLastError to   determine whether this action failed, and why.</p>
+<h4>Example:</h4>
+<pre class="code">sEncryptedString = Crypto.AESEncryptString(sTextToEncrypt, sSecretKey);</pre>
+
+<a name="Rijndael"><!-- Rijndael --></a>
+<h3>Crypto.RijndaelDecryptString( string Text, table Key, table IV)</h3>
+<h4>Description:</h4>
+<p>Decrypts a string using the AES algorithm compatible with the .NET Framework implementation.</p>
+
+<h4>Text</h4>
+<p><span class="type">(string)</span> The string that you want to decrypt.</p>
+
+<h4>Key</h4>
+<p><span class="type">(table)</span> The secret key to encrypt the data with. This is a table containing 32 bytes (numbers ranging from 0 to 255).</p>
+
+<h4>IV</h4>
+<p><span class="type">(table)</span> The initialization vector to encrypt the data with. This is a table containing 16 bytes (numbers ranging from 0 to 255).</p>
+
+<h4>Returns:</h4>
+<p><span class="type">(string)</span> The decoded string. If the data cannot be   encrypted or some other error occurs, an empty string ("") is returned. You can   use Application.GetLastError to   determine whether this action failed, and why.</p>
+<h4>Example:</h4>
+<pre class="code">-- create a secret key with 32 bytes
+key = {};
+for i = 1, 32 do
+    key[i] = i - 1;
+end
+-- create an initialization vector with 16 bytes
+iv = {};
+for i = 1, 16 do
+    iv[i] = i - 1;
+end
+source = "This is a test";
+encoded = Crypto.RijndaelEncryptString(source, key, iv);
+Debug.Print(encoded .. "\r\n");
+
+decoded = Crypto.RijndaelDecryptString(encoded, key, iv);
+Debug.Print(decoded .. "\r\n");
+</pre>
+
+<h3>Crypto.RijndaelEncryptString( string Text, table Key, table IV)</h3>
+<h4>Description:</h4>
+<p>Encrypts a string using the AES algorithm compatible with the .NET Framework implementation. The implementation in this plugin produces the same result as the following .NET code:</p>
+<pre class="code">RijndaelManaged rman = new RijndaelManaged();
+rman.Mode = CipherMode.CBC;
+rman.Padding = PaddingMode.PKCS7;
+rman.KeySize = 256;
+
+//  Use a 32-byte key (for 256-bit encryption)
+byte [] keyBytes = { 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31 };
+
+//  The IV for AES is 16 bytes, because the AES block size is 16.
+byte [] ivBytes = { 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15 };
+
+ICryptoTransform encryptor = rman.CreateEncryptor(keyBytes, ivBytes);
+byte [] plainText = System.Text.Encoding.UTF8.GetBytes("This is a test");
+byte [] encrypted = encryptor.TransformFinalBlock(plainText, 0, plainText.Length);
+
+//  Expected output is 31k+86baFy9GJKQ9Y1ebCw==
+//  textBox1.Text = Convert.ToBase64String(encrypted);</pre>
+<h4>Text</h4>
+<p><span class="type">(string)</span> The string that you want to decrypt.</p>
+
+<h4>Key</h4>
+<p><span class="type">(table)</span> The secret key to encrypt the data with. This is a table containing 32 bytes (numbers ranging from 0 to 255).</p>
+
+<h4>IV</h4>
+<p><span class="type">(table)</span> The initialization vector to encrypt the data with. This is a table containing 16 bytes (numbers ranging from 0 to 255).</p>
+
+<h4>Returns:</h4>
+<p><span class="type">(string)</span> The decoded string. If the data cannot be   encrypted or some other error occurs, an empty string ("") is returned. You can   use Application.GetLastError to   determine whether this action failed, and why.</p>
+<h4>Example:</h4>
+<pre class="code">-- create the secret key with 32 bytes
+key = {};
+for i = 1, 32 do
+    key[i] = i - 1;
+end
+-- create the initialization vector with 16 bytes
+iv = {};
+for i = 1, 16 do
+    iv[i] = i - 1;
+end
+source = "This is a test";
+encoded = Crypto.RijndaelEncryptString(source, key, iv);
+Debug.Print(encoded .. "\r\n");
+
+decoded = Crypto.RijndaelDecryptString(encoded, key, iv);
+Debug.Print(decoded .. "\r\n");
+</pre>
+
+<!-- Triple DES -->
+<h3>Crypto.TripleDESDecrypt( string Source, string Destination, string Key )</h3>
+<h4>Description:</h4>
+<p>Creates a decrypted copy of a 3DES-encrypted file.</p>
+<h4>Source</h4>
+<p><span class="type">(string)</span> The full path to the file that you want to decrypt.</p>
+<h4>Destination</h4>
+<p><span class="type">(string)</span> The full path and filename for the decrypted file.</p>
+<h4>Key</h4>
+<p><span class="type">(string)</span> The secret key to decrypt the data with.</p>
+<h4>Returns:</h4>
+<p>Nothing. You can use Application.GetLastError to determine whether this action failed, and why.</p>
+<h4>Example:</h4>
+<pre class="code">-- Create a 3DES-encrypted copy of a text file in the user's temp folder
+Crypto.TripleDESEncrypt(_TempFolder.."\\myfile.txt", _TempFolder.."\\myfile_3des.txt", "trustno1withthispassword");
+
+-- Check if any errors occurred from calling the Crypto.TripleDESEncrypt action.
+-- If an error occurred, display it's error message in a dialog message.
+error = Application.GetLastError();
+if (error ~=0)then
+    Dialog.Message("Error", _tblErrorMessages[error], MB_OK, MB_ICONEXCLAMATION, MB_DEFBUTTON1);
+end
+
+-- Decrypts the 3DES-encrypted file.
+Crypto.AESDecrypt(_TempFolder.."\\myfile_3des.txt", _TempFolder.."\\myfile_3des_decrypted.txt", "trustno1withthispassword");
+
+-- Check if any errors occurred from calling the Crypto.TripleDESDecrypt action.
+-- If an error occurred, display it's  error message in a dialog message.
+error = Application.GetLastError();
+if (error ~=0) then
+    Dialog.Message("Error", _tblErrorMessages[error], MB_OK, MB_ICONEXCLAMATION, MB_DEFBUTTON1);
+end
+
+-- Open the decrypted file to see its contents.
+File.Open(_TempFolder.."\\myfile_3des_decrypted.txt");
+</pre>
+
+<h3>Crypto.TripleDESDecryptString( string Text, string Key )</h3>
+<h4>Description:</h4>
+<p>Decrypts a string that was encrypted using the Crypto.TripleDESEncryptString action. (Decodes a base64-encoded string and decrypts the 3DES-encrypted data.)</p>
+<h4>Text</h4>
+<p><span class="type">(string)</span> The string that you want to decrypt.</p>
+<h4>Key</h4>
+<p><span class="type">(string)</span> The secret key that the data was encrypted with.</p>
+<h4>Returns:</h4>
+<p><span class="type">(string)</span> The decrypted version of a string that was encrypted with a Crypto.TripleDESEncryptString action. If the key does not match, corrupted data is returned. You can use Application.GetLastError to determine whether this action failed, and why.</p>
+<h4>Example:</h4>
+<pre class="code">sDecryptedString = Crypto.TripleDESDecryptString(sEncryptedString, sKey);</pre>
+
+<h3>Crypto.TripleDESEncrypt( string Source, string Destination, string Key )</h3>
+<h4>Description:</h4>
+<p>Creates a 3DES-encrypted copy of a file.</p>
+<h4>Source</h4>
+<p><span class="type">(string)</span> The full path to the file that you want to encrypt.</p>
+<h4>Destination</h4>
+<p><span class="type">(string)</span> The full path and filename for the 3DES-encrypted file.</p>
+<h4>Key</h4>
+<p><span class="type">(string)</span> The secret key to encrypt the data with.</p>
+<h4>Returns:</h4>
+<p>Nothing. You can use Application.GetLastError to determine whether this action failed, and why.</p>
+<h4>Example:</h4>
+<p>Creates a 3DES-encrypted copy of a text file in the user's temp folder and then opens that file in the user's default text editor.</p>
+<pre class="code">
+-- Create a 3DES-encrypted copy of a text file in the user's temp folder
+Crypto.TripleDESEncrypt(_TempFolder.."\\myfile.txt", _TempFolder.."\\myfile_3des.txt", "trustno1withthispassword");
+
+-- Check if any errors occurred from calling the Crypto.TripleDESEncrypt action.
+-- If an error occurred, display it's error message in a dialog message.
+error = Application.GetLastError();
+if (error ~=0) then
+    Dialog.Message("Error", _tblErrorMessages[error] , MB_OK, MB_ICONEXCLAMATION, MB_DEFBUTTON1);
+end
+
+-- Open the encrypted file to see its contents.
+File.Open(_TempFolder.."\\myfile_3des.txt");
+</pre>
+
+<h3>Crypto.TripleDESEncryptString( string Text, string Key )</h3>
+<h4>Description:</h4>
+<p>Encrypts a string using 3DES and returns a base64-encoded string containing the encrypted data.</p>
+<h4>Text</h4>
+<p><span class="type">(string)</span> The string that you want to encrypt.</p>
+<h4>Key</h4>
+<p><span class="type">(string)</span> The secret key to encrypt the data with.</p>
+<h4>Returns:</h4>
+<p><span class="type">(string)</span> A base64-encoded string containing the encrypted data. If the data cannot be   encrypted or some other error occurs, an empty string ("") is returned. You can use Application.GetLastError to determine whether this action failed, and why.</p>
+<h4>Example:</h4>
+<pre class="code">sEncryptedString = Crypto.TripleDESEncryptString(sTextToEncrypt, sSecretKey);</pre>
+
+<!-- Twofish -->
+<h3>Crypto.TwofishDecrypt( string Source, string Destination, string Key )</h3>
+<h4>Description:</h4>
+<p>Creates a decrypted copy of a twofish-encrypted file.</p>
+<h4>Source</h4>
+<p><span class="type">(string)</span> The full path to the file that you want to decrypt.</p>
+<h4>Destination</h4>
+<p><span class="type">(string)</span> The full path and filename for the decrypted file.</p>
+<h4>Key</h4>
+<p><span class="type">(string)</span> The secret key to decrypt the data with.</p>
+<h4>Returns:</h4>
+<p>Nothing. You can use Application.GetLastError to determine whether this action failed, and why.</p>
+<h4>Example:</h4>
+<pre class="code">-- Create a twofish-encrypted copy of a text file in the user's temp folder
+Crypto.TwofishEncrypt(_TempFolder.."\\myfile.txt", _TempFolder.."\\myfile_twofish.txt", "trustno1withthispassword");
+
+-- Check if any errors occurred from calling the Crypto.TwofishEncrypt action.
+-- If an error occurred, display it's error message in a dialog message.
+error = Application.GetLastError();
+if (error ~=0)then
+    Dialog.Message("Error", _tblErrorMessages[error], MB_OK, MB_ICONEXCLAMATION, MB_DEFBUTTON1);
+end
+
+-- Decrypts the twofish-encrypted file.
+Crypto.AESDecrypt(_TempFolder.."\\myfile_twofish.txt", _TempFolder.."\\myfile_twofish_decrypted.txt", "trustno1withthispassword");
+
+-- Check if any errors occurred from calling the Crypto.TwofishDecrypt action.
+-- If an error occurred, display it's  error message in a dialog message.
+error = Application.GetLastError();
+if (error ~=0) then
+    Dialog.Message("Error", _tblErrorMessages[error], MB_OK, MB_ICONEXCLAMATION, MB_DEFBUTTON1);
+end
+
+-- Open the decrypted file to see its contents.
+File.Open(_TempFolder.."\\myfile_twofish_decrypted.txt");
+</pre>
+
+<h3>Crypto.TwofishDecryptString( string Text, string Key )</h3>
+<h4>Description:</h4>
+<p>Decrypts a string that was encrypted using the Crypto.TwofishEncryptString action. (Decodes a base64-encoded string and decrypts the twofish-encrypted data.)</p>
+<h4>Text</h4>
+<p><span class="type">(string)</span> The string that you want to decrypt.</p>
+<h4>Key</h4>
+<p><span class="type">(string)</span> The secret key that the data was encrypted with.</p>
+<h4>Returns:</h4>
+<p><span class="type">(string)</span> The decrypted version of a string that was encrypted with a Crypto.TwofishEncryptString action. If the key does not match, corrupted data is returned. You can use Application.GetLastError to determine whether this action failed, and why.</p>
+<h4>Example:</h4>
+<pre class="code">sDecryptedString = Crypto.TwofishDecryptString(sEncryptedString, sKey);</pre>
+
+<h3>Crypto.TwofishEncrypt( string Source, string Destination, string Key )</h3>
+<h4>Description:</h4>
+<p>Creates a twofish-encrypted copy of a file.</p>
+<h4>Source</h4>
+<p><span class="type">(string)</span> The full path to the file that you want to encrypt.</p>
+<h4>Destination</h4>
+<p><span class="type">(string)</span> The full path and filename for the 3DES-encrypted file.</p>
+<h4>Key</h4>
+<p><span class="type">(string)</span> The secret key to encrypt the data with.</p>
+<h4>Returns:</h4>
+<p>Nothing. You can use Application.GetLastError to determine whether this action failed, and why.</p>
+<h4>Example:</h4>
+<p>Creates a twofish-encrypted copy of a text file in the user's temp folder and then opens that file in the user's default text editor.</p>
+<pre class="code">
+-- Create a twofish-encrypted copy of a text file in the user's temp folder
+Crypto.TwofishEncrypt(_TempFolder.."\\myfile.txt", _TempFolder.."\\myfile_twofish.txt", "trustno1withthispassword");
+
+-- Check if any errors occurred from calling the Crypto.TwofishDESEncrypt action.
+-- If an error occurred, display it's error message in a dialog message.
+error = Application.GetLastError();
+if (error ~=0) then
+    Dialog.Message("Error", _tblErrorMessages[error] , MB_OK, MB_ICONEXCLAMATION, MB_DEFBUTTON1);
+end
+
+-- Open the encrypted file to see its contents.
+File.Open(_TempFolder.."\\myfile_twofish.txt");
+</pre>
+
+<h3>Crypto.TwofishEncryptString( string Text, string Key )</h3>
+<h4>Description:</h4>
+<p>Encrypts a string using twofish and returns a base64-encoded string containing the encrypted data.</p>
+<h4>Text</h4>
+<p><span class="type">(string)</span> The string that you want to encrypt.</p>
+<h4>Key</h4>
+<p><span class="type">(string)</span> The secret key to encrypt the data with.</p>
+<h4>Returns:</h4>
+<p><span class="type">(string)</span> A base64-encoded string containing the encrypted data. If the data cannot be   encrypted or some other error occurs, an empty string ("") is returned. You can use Application.GetLastError to determine whether this action failed, and why.</p>
+<h4>Example:</h4>
+<pre class="code">sEncryptedString = Crypto.TwofishEncryptString(sTextToEncrypt, sSecretKey);</pre>
+
+<h3>&nbsp;</h3>
+</div>
+<!-- /Actions -->
+
+
+<div class="ErrorCodes">
+<h2>Error Codes</h2>
+<p>
+<b>12040</b> - Failed to start Crypto Actions plugin.<br>
+<b>12041</b> - Input file not found.<br>
+<b>12042</b> - Could not process input file.<br>
+<b>12043</b> - Could not create output file.<br>
+</p>
+
+</div> <!-- /ErrorCodes -->
+
+<div class="History">
+<h2>Change Log</h2>
+
+<h3>2.0.2.0</h3>
+<ul>
+    <li>New actions: <strong>Crypto.RijndaelEncryptString()</strong> and <strong>Crypto.RijndaelDecryptString()</strong>. Available in full version only.</li>
+</ul>
+<h3>2.0.1.0</h3>
+<ul>
+    <li>Initial release for Lua 5.1 </li>
+</ul>
+</div> <!-- /History -->
+
+
+<div class="Info">
+<h2>Additional Information</h2>
+<p>The evaluation build of this plugin uses weak encryption, while the registered version uses strong 256-bit encryption. Strings or files encrypted with the evaluation version cannot be decrypted with the registered version and vice-versa. </p>
+<h3>Author:</h3>
+<p>Ulrich Peters <br>
+<a href="mailto:upeters@mindquake.com.br">upeters@mindquake.com.br</a></p>
+
+<h3>Copyright:</h3>
+<p>Plugin is copyright &copy; 2009 MindQuake Servi&ccedil;os de Inform&aacute;tica Ltda.</p>
+
+<h3>Website:</h3>
+<p><a href="http://www.mindquake.com.br">http://www.mindquake.com.br</a></p>
+
+</div> <!-- /info -->
+<hr>
+
+<p align="center">Copyright &copy; 2009-2010 MindQuake Servi&ccedil;os de Inform&aacute;tica Ltda.<br>
+All Rights Reserved.</p>
+
+</body>
+</html>

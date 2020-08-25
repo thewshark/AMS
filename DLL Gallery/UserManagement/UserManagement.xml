@@ -1,0 +1,261 @@
+<ActionTemplates>
+   <Action>
+      <Name>UserManagement.AddUser</Name>
+      <Description>Creates a new user account on the local machine</Description>
+      <ReturnValueType/>
+      <Arguments>
+         <Arg>
+            <Name>DLLPath</Name>
+            <Description>The complete path to the 'UserManagement.dll' DLL file.</Description>
+            <Type>string</Type>
+            <Default>"UserManagement.dll"</Default>
+            <Required>1</Required>
+            <EasyMode>
+               <Default>"UserManagement.dll"</Default>
+               <DataType>string</DataType>
+               <Constraints>none</Constraints>
+            </EasyMode>
+         </Arg>
+         <Arg>
+            <Name>Username</Name>
+            <Description>The name for the new user account.</Description>
+            <Type>string</Type>
+            <Default>"Guest"</Default>
+            <Required>1</Required>
+            <EasyMode>
+               <Default>"Guest"</Default>
+               <DataType>string</DataType>
+               <Constraints>none</Constraints>
+            </EasyMode>
+         </Arg>
+         <Arg>
+            <Name>Password</Name>
+            <Description>The password for the new user account.</Description>
+            <Type>string</Type>
+            <Default>"Password"</Default>
+            <Required>1</Required>
+            <EasyMode>
+               <Default>"Password"</Default>
+               <DataType>string</DataType>
+               <Constraints>none</Constraints>
+            </EasyMode>
+         </Arg>
+      </Arguments>
+   </Action>
+   <Action>
+      <Name>UserManagement.DelUser</Name>
+      <Description>Deletes a user account on the local machine.</Description>
+      <ReturnValueType/>
+      <Arguments>
+         <Arg>
+            <Name>DLLPath</Name>
+            <Description>The complete path to the 'UserManagement.dll' DLL file.</Description>
+            <Type>string</Type>
+            <Default>"UserManagement.dll"</Default>
+            <Required>1</Required>
+            <EasyMode>
+               <Default>"UserManagement.dll"</Default>
+               <DataType>string</DataType>
+               <Constraints>none</Constraints>
+            </EasyMode>
+         </Arg>
+         <Arg>
+            <Name>Username</Name>
+            <Description>The name of the user account to delete.</Description>
+            <Type>string</Type>
+            <Default>"Guest"</Default>
+            <Required>1</Required>
+            <EasyMode>
+               <Default>"Guest"</Default>
+               <DataType>string</DataType>
+               <Constraints>none</Constraints>
+            </EasyMode>
+         </Arg>
+      </Arguments>
+   </Action>
+   <Action>
+      <Name>UserManagement.ChangePassword</Name>
+      <Description>Changes the user's password for their account.</Description>
+      <ReturnValueType>
+      <Arguments>
+         <Arg>
+            <Name>DLLPath</Name>
+            <Description>The complete path to the 'UserManagement.dll' DLL file.</Description>
+            <Type>string</Type>
+            <Default>"UserManagement.dll"</Default>
+            <Required>1</Required>
+            <EasyMode>
+               <Default>"UserManagement.dll"</Default>
+               <DataType>string</DataType>
+               <Constraints>none</Constraints>
+            </EasyMode>
+         </Arg>
+         <Arg>
+            <Name>Username</Name>
+            <Description>The name of the user account.</Description>
+            <Type>string</Type>
+            <Default>"Guest"</Default>
+            <Required>1</Required>
+            <EasyMode>
+               <Default>"Guest"</Default>
+               <DataType>string</DataType>
+               <Constraints>none</Constraints>
+            </EasyMode>
+         </Arg>
+         <Arg>
+            <Name>Old Password</Name>
+            <Description>The old password for the user account.</Description>
+            <Type>string</Type>
+            <Default>"OldPassword"</Default>
+            <Required>1</Required>
+            <EasyMode>
+               <Default>"OldPassword"</Default>
+               <DataType>string</DataType>
+               <Constraints>none</Constraints>
+            </EasyMode>
+         </Arg>
+         <Arg>
+            <Name>New Password</Name>
+            <Description>The new password for the user account.</Description>
+            <Type>string</Type>
+            <Default>"NewPassword"</Default>
+            <Required>1</Required>
+            <EasyMode>
+               <Default>"NewPassword"</Default>
+               <DataType>string</DataType>
+               <Constraints>none</Constraints>
+            </EasyMode>
+         </Arg>
+      </Arguments>
+   </Action>
+   <Action>
+      <Name>UserManagement.AddGroupMembers</Name>
+      <Description>Adds users to the specified group.</Description>
+      <ReturnValueType/>
+      <Arguments>
+         <Arg>
+            <Name>DLLPath</Name>
+            <Description>The complete path to the 'UserManagement.dll' DLL file.</Description>
+            <Type>string</Type>
+            <Default>"UserManagement.dll"</Default>
+            <Required>1</Required>
+            <EasyMode>
+               <Default>"UserManagement.dll"</Default>
+               <DataType>string</DataType>
+               <Constraints>none</Constraints>
+            </EasyMode>
+         </Arg>
+         <Arg>
+            <Name>Username</Name>
+            <Description>The name of the user account in which to add to the group.</Description>
+            <Type>string</Type>
+            <Default>"Guest"</Default>
+            <Required>1</Required>
+            <EasyMode>
+               <Default>"Guest"</Default>
+               <DataType>string</DataType>
+               <Constraints>none</Constraints>
+            </EasyMode>
+         </Arg>
+         <Arg>
+            <Name>Group</Name>
+            <Description>The name of the group in which to add members.</Description>
+            <Type>string</Type>
+            <Default>"Administrators"</Default>
+            <Required>1</Required>
+            <EasyMode>
+               <Default>"Administrators"</Default>
+               <DataType>string</DataType>
+               <Constraints>none</Constraints>
+            </EasyMode>
+         </Arg>
+      </Arguments>
+   </Action>
+   <Action>
+      <Name>UserManagement.DelGroupMembers</Name>
+      <Description>Delete's users from the specified group.</Description>
+      <ReturnValueType/>
+      <Arguments>
+         <Arg>
+            <Name>DLLPath</Name>
+            <Description>The complete path to the 'UserManagement.dll' DLL file.</Description>
+            <Type>string</Type>
+            <Default>"UserManagement.dll"</Default>
+            <Required>1</Required>
+            <EasyMode>
+               <Default>"UserManagement.dll"</Default>
+               <DataType>string</DataType>
+               <Constraints>none</Constraints>
+            </EasyMode>
+         </Arg>
+         <Arg>
+            <Name>Username</Name>
+            <Description>The name of the user account in which to add to the group.</Description>
+            <Type>string</Type>
+            <Default>"Guest"</Default>
+            <Required>1</Required>
+            <EasyMode>
+               <Default>"Guest"</Default>
+               <DataType>string</DataType>
+               <Constraints>none</Constraints>
+            </EasyMode>
+         </Arg>
+         <Arg>
+            <Name>Group</Name>
+            <Description>The name of the group in which to add members.</Description>
+            <Type>string</Type>
+            <Default>"Administrators"</Default>
+            <Required>1</Required>
+            <EasyMode>
+               <Default>"Administrators"</Default>
+               <DataType>string</DataType>
+               <Constraints>none</Constraints>
+            </EasyMode>
+         </Arg>
+      </Arguments>
+   </Action>
+   <Action>
+      <Name>UserManagement.UserExists</Name>
+      <Description>Check's to see if the specified user account exists.</Description>
+      <ReturnValueType/>
+      <Arguments>
+         <Arg>
+            <Name>DLLPath</Name>
+            <Description>The complete path to the 'UserManagement.dll' DLL file.</Description>
+            <Type>string</Type>
+            <Default>"UserManagement.dll"</Default>
+            <Required>1</Required>
+            <EasyMode>
+               <Default>"UserManagement.dll"</Default>
+               <DataType>string</DataType>
+               <Constraints>none</Constraints>
+            </EasyMode>
+         </Arg>
+         <Arg>
+            <Name>Username</Name>
+            <Description>The name for the new user account.</Description>
+            <Type>string</Type>
+            <Default>"Guest"</Default>
+            <Required>1</Required>
+            <EasyMode>
+               <Default>"Guest"</Default>
+               <DataType>string</DataType>
+               <Constraints>none</Constraints>
+            </EasyMode>
+         </Arg>
+         <Arg>
+            <Name>Password</Name>
+            <Description>The password for the new user account.</Description>
+            <Type>string</Type>
+            <Default>"Password"</Default>
+            <Required>1</Required>
+            <EasyMode>
+               <Default>"Password"</Default>
+               <DataType>string</DataType>
+               <Constraints>none</Constraints>
+            </EasyMode>
+         </Arg>
+      </Arguments>
+   </Action>
+</ActionTemplates>
+

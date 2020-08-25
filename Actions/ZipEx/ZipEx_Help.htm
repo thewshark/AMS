@@ -1,0 +1,564 @@
+<html>
+<head>
+<title>ZipEx Actions Plugin Help</title>
+<meta http-equiv=content-type content="text/html; charset=windows-1252">
+<style>
+/* ELEMENTS */
+body {
+  font-family: Verdana, sans-serif;
+  font-size: 8pt;
+  background-color: #ffffff;
+}
+
+hr {
+  text-align: center;
+  color: #f0f0f0;
+  width: 100%;
+  height: 6pt;
+  margin-top: 0pt;
+  margin-bottom: -3pt;
+  border: none;
+}
+
+A:link, A:active, A:visited {
+  color: #0000ff;
+  text-decoration: none;
+}
+
+A:hover {
+  color: #0000ff;
+  text-decoration: underline;
+}
+
+h1 {
+  font-family: Verdana;
+  font-weight: bold;
+  font-size: 18.0pt;
+  white-space: nowrap;
+  color: #fff;
+  background-color: #699BEF;
+  padding: 4pt 3pt;
+  padding: 5px 4px;
+  margin-top: 0pt;
+  margin-bottom: 0pt;
+  border-right: 1px solid #333;
+  border-left: 1px solid #699BEF;
+  border-bottom: solid black 1px;
+}
+
+h2 {
+  font-family: Arial, sans-serif;
+  font-size: 12.0pt;
+  letter-spacing: .2ex;
+  color: #000;
+  margin-left: 0pt;
+  margin-right: 0pt;
+  margin-top: 18pt;
+  margin-bottom: 9pt;
+}
+
+h3 {
+  font-family: Arial, sans-serif;
+  font-size: 10pt;
+  font-weight: bold;
+  font-style: normal;
+  color: black;
+  letter-spacing: 0px;
+  margin-left: 0pt;
+  margin-right: 0pt;
+  margin-top: 18pt;
+  margin-bottom: 3pt;
+}
+
+p,td {
+  font-family: Verdana;
+  font-size: 8.0pt;
+  line-height: 12.0pt;
+  margin-left: 0pt;
+  margin-right: 0pt;
+  margin-top: 0pt;
+  margin-bottom: 9pt;
+}
+
+/* CLASSES */
+div.Actions h3, div.Events h3 {
+  font-family: Arial, sans-serif;
+  font-size: 10pt;
+  font-weight: bold;
+  font-style: italic;
+  color: #3C77B3;
+  letter-spacing: 0px;
+  margin-left: 12pt;
+  margin-right: 0pt;
+  margin-top: 18pt;
+  margin-bottom: 3pt;
+}
+
+div.Actions h4, div.info h3 {
+  font-family: Verdana;
+  font-size: 8.0pt;
+  line-height: 12.0pt;
+  font-style: bold;
+  margin-top: 9pt;
+  margin-bottom: 0pt;
+  margin-left: 28pt;
+  margin-right: 0pt;
+}
+
+div.Actions p, div.Events p, div.ErrorCodes p {
+  font-family: Verdana;
+  font-size: 8.0pt;
+  line-height: 12.0pt;
+  margin-top: 0pt;
+  margin-bottom: 9pt;
+  margin-left: 12pt;
+  margin-right: 0pt;
+}
+
+p.NavLocal {
+  white-space: nowrap;
+  text-indent: -4px;
+  font-family: Verdana, Arial, sans-serif;
+  font-weight: bold;
+  font-style: normal;
+  font-size: 13px;
+  background-color: #e4e4e4;
+  margin-top: 0px;
+  margin-bottom: 12pt;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 0px;
+  padding-right: 0px;
+  border-bottom: 1px solid #e4e4e4;
+}
+
+p.Note {
+    font-family: Verdana;
+    font-size: 8.0pt;
+    line-height: 12.0pt;
+    color: #000000;
+    background-color: #ffffe8;
+    margin-top: 0pt;
+    margin-bottom: 9pt;
+    margin-left: 0pt;
+    margin-right: 5%;
+    padding-left: 2pt;
+    padding-right: 2pt;
+    padding-top: 1pt;
+    padding-bottom: 2pt;
+}
+
+p.Tip {
+    font-family: Verdana;
+    font-size: 8.0pt;
+    line-height: 12.0pt;
+    color: #000000;
+    background-color: #EAF4E8;
+    margin-top: 0pt;
+    margin-bottom: 9pt;
+    margin-left: 0pt;
+    margin-right: 5%;
+    padding-left: 2pt;
+    padding-right: 2pt;
+    padding-top: 1pt;
+    padding-bottom: 2pt;
+}
+
+div.Actions p.Note, div.Events p.Note,
+div.Actions p.Tip, div.Events p.Tip {
+    margin-left: 28pt;
+}
+
+pre.code {
+  white-space: pre;
+  font-family: Courier New, Courier, Arial, sans-serif;
+  font-size: 10pt;
+  font-weight: normal;
+  font-style: normal;
+  letter-spacing: normal;
+  color: #000;
+  background-color: #f9f9f9;
+  margin-top: 3pt;
+  margin-bottom: 9pt;
+  margin-left: 0pt;
+  margin-left: 0pt;
+  padding: 10px;
+  border: 1px dotted #ccc;
+}
+
+div.Actions pre.code, div.Events pre.code {
+  margin-left: 28pt;
+}
+
+div.Actions h2 {
+  margin-bottom: -6pt;
+}
+
+div.actions p, div.info p, div.ErrorCodes p {
+  margin-left: 28pt;
+}
+
+div.actions p.indent {
+  margin-left: 38pt;
+}
+
+span.here { /* blue tab effect in navbar (NavLocal) */
+  font-weight: bold;
+  color: #fff;
+  background-color: #699BEF;
+  margin: 0px;
+  padding: 4px 8px;
+  border-top: 1px solid #699BEF;
+  border-bottom: 1px solid #333;
+  border-left: none;
+  border-right: 1px solid #333;
+}
+
+span.type {
+    color: #aaa;
+}
+
+table {
+	margin-left: 28pt;
+}
+</style>
+</head>
+<body>
+
+<h1>ZipEx Plugin</h1>
+
+<p class="NavLocal"><span class=wab>&nbsp;</span><span class="here">Online Help</span></p>
+
+<h2>Description</h2>
+<p>ZipEx is an action plugin that allows to create and extract Zip 2.0 compatible, as well as WinZip compatible AES 128 bit and AES 256 bit encryted Zip archives. It also allows to process password protected RAR archives.</p>
+
+<div class="Actions"><h2>Actions</h2>
+
+<h3>ZipEx.Add(string ZipFile, table Files, boolean IncludeFolderNames, number Encryption, string Password, number CompFactor, string CallbackFunction, boolean Recurse);</h3>
+<h4>Description:</h4>
+<p>Adds files to a Zip archive.</p>
+<h4>ZipFile:</h4>
+<p><span class="type">(string)</span> The full path and file name of the Zip archive file.</p>
+<h4>Files:</h4>
+<p><span class="type">(table)</span> A table containing the full paths to all of the files you want to add. The default is &quot;{ *.* }&quot;. </p>
+<h4>IncludeFolderNames:</h4>
+<p><span class="type">(boolean)</span> Optional. Whether to preserve folder names in the archive when adding files. The default is true. </p>
+<h4>Encryption:</h4>
+<p><span class="type">(number) </span>Optional. Sets the encryption method. Possible values are Zip 2.0 compatible encryption, AES 128 bit or AES 256 bit. The default is ZipEx.ZIP20. <br>
+<table border="0">
+  <tr>
+    <td>ZipEx.ZIP20</td>
+  </tr>
+  <tr>
+    <td>ZipEx.AES128</td>
+  </tr>
+  <tr>
+    <td>ZipEx.AES256</td>
+  </tr>
+</table>
+</p>
+<h4>Password:</h4>
+<p><span class="type">(string)</span> Optional. The password to use to protect the Zip file. This password will be needed to extract the files.</p>
+<h4>CompFactor:</h4>
+<p><span class="type">(number)</span> Optional. The compression factor to use for the Zip archive (0-9). 0 is the fastest and compresses the least, 9 is the slowest and compresses the most. The default is 5.</p>
+<h4>CallbackFunction:</h4>
+<p><span class="type">(string)</span> Optional. The name of a function that will be called whenever progress is made in adding a file to the Zip archive. (You can use this callback function to display the progress of each file's archiving in your own custom way.)</p>
+<h4>Recurse:</h4>
+<p><span class="type">(boolean)</span> Optional. Whether to recurse subfolders when wildcards are used. The default is false. </p>
+<h4>Returns:</h4>
+<p>Nothing. You can use Application.GetLastError to
+determine whether this action failed, and why.</p>
+<h4>Example:</h4>
+<pre class="code">
+-- create a WinZip compatible AES 256 bit encrypted zip file
+ZipEx.Add(_TempFolder .. &quot;\\MyZipTest.zip&quot;, { _WindowsFolder ..  "\\Media\\*.wav" }, true, ZipEx.AES256, "trustno1", 9, "", true);
+error = Application.GetLastError();
+if (error ~= 0) then
+    Dialog.Message("Error", _tblErrorMessages[error], MB_OK, MB_ICONEXCLAMATION);
+else
+    Dialog.Message("ZipEx Demo", "ZipEx.Add() successful.");
+end
+</pre>
+
+<h3>ZipEx.Append(string ZipFile, table Files, boolean IncludeFolderNames, number Encryption, string Password, number CompFactor, string CallbackFunction, boolean Recurse);</h3>
+<h4>Description:</h4>
+<p>Adds files to an existing Zip archive. You should use the same password and compression settings of the original file. </p>
+<h4>ZipFile:</h4>
+<p><span class="type">(string)</span> The full path and file name of the Zip archive file.</p>
+<h4>Files:</h4>
+<p><span class="type">(table)</span> A table containing the full paths to all of the files you want to add. The default is &quot;{ *.* }&quot;. </p>
+<h4>IncludeFolderNames:</h4>
+<p><span class="type">(boolean)</span> Optional. Whether to preserve folder names in the archive when adding files. The default is true. </p>
+<h4>Encryption:</h4>
+<p><span class="type">(number) </span>Optional. Sets the encryption method. Possible values are Zip 2.0 compatible encryption, AES 128 bit or AES 256 bit. The default is ZipEx.ZIP20. <br>
+<table border="0">
+  <tr>
+    <td>ZipEx.ZIP20</td>
+  </tr>
+  <tr>
+    <td>ZipEx.AES128</td>
+  </tr>
+  <tr>
+    <td>ZipEx.AES256</td>
+  </tr>
+</table>
+</p>
+<h4>Password:</h4>
+<p><span class="type">(string)</span> Optional. The password to use to protect the Zip file. This password will be needed to extract the files.</p>
+<h4>CompFactor:</h4>
+<p><span class="type">(number)</span> Optional. The compression factor to use for the Zip archive (0-9). 0 is the fastest and compresses the least, 9 is the slowest and compresses the most. The default is 5.</p>
+<h4>CallbackFunction:</h4>
+<p><span class="type">(string)</span> Optional. The name of a function that will be called whenever progress is made in adding a file to the Zip archive. (You can use this callback function to display the progress of each file's archiving in your own custom way.)</p>
+<h4>Recurse:</h4>
+<p><span class="type">(boolean)</span> Optional. Whether to recurse subfolders when wildcards are used. The default is false. </p>
+<h4>Returns:</h4>
+<p>Nothing. You can use Application.GetLastError to
+determine whether this action failed, and why.</p>
+<h4>Example:</h4>
+<pre class="code">
+-- append files to existing Zip archive
+ZipEx.Append(_TempFolder .. "\\MyZipFile.zip", { _WindowsFolder ..  "\\*.ini" }, true, ZipEx.AES256, "trustno1", 9, "", false);
+error = Application.GetLastError();
+if (error ~= 0) then
+    Dialog.Message("Error", _tblErrorMessages[error], MB_OK, MB_ICONEXCLAMATION);
+else
+    Dialog.Message("ZipEx Demo", "ZipEx.Append() successful.");
+end
+</pre>
+
+<h3>ZipEx.CreateSfx(string ExeFile, table Files, boolean IncludeFolderNames, string Password, number CompFactor, string CallbackFunction, boolean Recurse);</h3>
+<h4>Description:</h4>
+<p>Adds files to a Zip archive and creates a self-extracting executable, which can be password protected. If a password is provided, AES 256 bit encryption will be used to protect the file. </p>
+<h4>ExeFile:</h4>
+<p><span class="type">(string)</span> The full path and file name of the self-extracting Zip.</p>
+<h4>Files:</h4>
+<p><span class="type">(table)</span> A table containing the full paths to all of the files you want to add. The default is &quot;{ *.* }&quot;. </p>
+<h4>IncludeFolderNames:</h4>
+<p><span class="type">(boolean)</span> Optional. Whether to preserve folder names in the archive when adding files. The default is true. </p>
+<h4>Password:</h4>
+<p><span class="type">(string)</span> Optional. The password to use to protect the Zip file. This password will be needed to extract the files.</p>
+<h4>CompFactor:</h4>
+<p><span class="type">(number)</span> Optional. The compression factor to use for the Zip archive (0-9). 0 is the fastest and compresses the least, 9 is the slowest and compresses the most. The default is 5.</p>
+<h4>CallbackFunction:</h4>
+<p><span class="type">(string)</span> Optional. The name of a function that will be called whenever progress is made in adding a file to the Zip archive. (You can use this callback function to display the progress of each file's archiving in your own custom way.)</p>
+<h4>Recurse:</h4>
+<p><span class="type">(boolean)</span> Optional. Whether to recurse subfolders when wildcards are used. The default is false. </p>
+<h4>Returns:</h4>
+<p>Nothing. You can use Application.GetLastError to
+determine whether this action failed, and why.</p>
+<h4>Example:</h4>
+<pre class="code">
+-- create a self-extracting, password protected archive
+ZipEx.CreateSfx(_TempFolder .. "\\MyZipSfx.exe", { _WindowsFolder ..  "\\*.ini" }, true, "trustno1", 9, "", false);
+error = Application.GetLastError();
+if (error ~= 0) then
+    Dialog.Message("Error", _tblErrorMessages[error], MB_OK, MB_ICONEXCLAMATION);
+else
+    Dialog.Message("ZipEx Demo", "ZipEx.Sfx() successful.");
+end
+</pre>
+
+<h3>ZipEx.Extract(string ZipFile, table Files, string Destination, string Password, string CallbackFunction);</h3>
+<h4>Description:</h4>
+<p>Extracts files from a Zip archive.</p>
+<h4>ZipFile:</h4>
+<p><span class="type">(string)</span> The full path and file name of the Zip archive file.</p>
+<h4>Files:</h4>
+<p><span class="type">(table)</span>A table containing the list of files to extract. Use {&quot;*.*&quot;} to extract all files from the Zip archive.</p>
+<h4>Destination:</h4>
+<p><span class="type">(string)</span>The folder path to extract the files to.</p>
+<h4>Password:</h4>
+<p><span class="type">(string)</span> Optional. The password required to extract files from the Zip file. (This parameter is only needed if you password protected the Zip file. If no password is required, just leave this parameter blank.)</p>
+<h4>CallbackFunction:</h4>
+<p><span class="type">(string)</span> Optional. The name of a function that will be called whenever progress is made when extracting each file from the Zip archive. You can use this callback function to display the progress of each file's extraction in your own custom way.</p>
+<h4>Returns:</h4>
+<p>Nothing. You can use Application.GetLastError to
+determine whether this action failed, and why.</p>
+<h4>Example:</h4>
+<pre class="code">
+-- extract the contents of the password protected Zip archive
+ZipEx.Extract(_TempFolder .. "\\MyZip.zip", {"*.*"}, _TempFolder .. "\\output-zip", "trustno1", "");
+error = Application.GetLastError();
+if (error ~= 0) then
+    Dialog.Message("Error", _tblErrorMessages[error], MB_OK, MB_ICONEXCLAMATION);
+else
+    Dialog.Message("ZipEx Demo", "ZipEx.Extract() successful.");
+end
+</pre>
+
+<h3>ZipEx.ExtractRAR(string RARFile,  string Destination, string Password, string CallbackFunction);</h3>
+<h4>Description:</h4>
+<p>Extracts files from a RAR archive. RAR archives can only be created with a RAR utility, like WinRAR - ZipEx cannot create RAR archives, only decompress them. </p>
+<h4>RARFile:</h4>
+<p><span class="type">(string)</span> The full path and file name of the RAR archive file.</p>
+<h4>Destination:</h4>
+<p><span class="type">(string)</span>The folder path to extract the files to.</p>
+<h4>Password:</h4>
+<p><span class="type">(string)</span> Optional. The password required to extract files from the RAR file. (This parameter is only needed if you password protected the RAR file. If no password is required, just leave this parameter blank.)</p>
+<h4>CallbackFunction:</h4>
+<p><span class="type">(string)</span> Optional. The name of a function that will be called whenever progress is made when extracting each file from the RAR archive. You can use this callback function to display the progress of each file's extraction in your own custom way.</p>
+<h4>Returns:</h4>
+<p>Nothing. You can use Application.GetLastError to
+determine whether this action failed, and why.</p>
+<h4>Example:</h4>
+<pre class="code">
+-- extract the contents of the password protected RAR archive
+ZipEx.ExtractRAR(_TempFolder .. "\\MyRAR.rar", _TempFolder .. "\\output-rar", "trustno1", "");
+error = Application.GetLastError();
+if (error ~= 0) then
+    Dialog.Message("Error", _tblErrorMessages[error], MB_OK, MB_ICONEXCLAMATION);
+else
+    Dialog.Message("ZipEx Demo", "ZipEx.ExtractRAR() successful.");
+end
+</pre>
+
+<h3>ZipEx.GetRARContents(string RARFile, string Password);</h3>
+<h4>Description:</h4>
+<p>Returns a table with the content of a RAR archive.</p>
+<h4>RARFile:</h4>
+<p><span class="type">(string)</span> The full path and file name of the RAR archive file.</p>
+<h4>Password:</h4>
+<p><span class="type">(string)</span> Optional. The password required to extract files from the RAR file. (This parameter is only needed if you password protected the RAR file. If no password is required, just leave this parameter blank.)</p>
+<h4>Returns:</h4>
+<p>A table. Each line of the resulting table has three fields:<br>
+<b>Filename</b>: The name of the file in the archive, with relative path;<br>
+<b>Packed</b>: The size, in bytes, of the compressed file inside the archive;<br>
+<b>Unpacked</b>: The size, in bytes, occupied by the file once uncompressed to the target folder.
+</p>
+<p>You can use Application.GetLastError to
+  determine whether this action failed, and why.</p>
+<h4>Example:</h4>
+<pre class="code">
+-- list the contents of the RAR archive
+tRARContents = ZipEx.GetRARContents(_TempFolder .. "\\testfile.rar", "");
+error = Application.GetLastError();
+if (error ~= 0) then
+    Dialog.Message("Error", _tblErrorMessages[error], MB_OK, MB_ICONEXCLAMATION);
+else
+    Debug.ShowWindow();
+    for number, rar in pairs(tRARContents) do
+        Debug.Print("File "..number..": "..rar.Filename..", Packed: "..rar.Packed..", Unpacked: "..rar.Unpacked.."\r\n");
+    end
+end
+</pre>
+
+<h3>ZipEx.GetZipContents(string ZipFile, string Password);</h3>
+<h4>Description:</h4>
+<p>Returns a table with the content of a Zip archive.</p>
+<h4>ZipFile:</h4>
+<p><span class="type">(string)</span> The full path and file name of the Zip archive file.</p>
+<h4>Password:</h4>
+<p><span class="type">(string)</span> Optional. The password required to extract files from the Zip file. (This parameter is only needed if you password protected the names of the files contained in the Zip file. If no password is required, you may leave this parameter blank.)</p>
+<h4>Returns:</h4>
+<p>A table. Each line of the resulting table has three fields:<br>
+<b>Filename</b>: The name of the file in the archive, with relative path;<br>
+<b>Packed</b>: The size, in bytes, of the compressed file inside the archive;<br>
+<b>Unpacked</b>: The size, in bytes, occupied by the file once uncompressed to the target folder.
+</p>
+<p>You can use Application.GetLastError to
+  determine whether this action failed, and why.</p>
+<h4>Example:</h4>
+<pre class="code">
+-- list the contents of the password protected Zip archive
+tZipContents = ZipEx.GetZipContents(_TempFolder .. "\\testfile.zip", "trustno1");
+error = Application.GetLastError();
+if (error ~= 0) then
+    Dialog.Message("Error", _tblErrorMessages[error], MB_OK, MB_ICONEXCLAMATION);
+else
+    Debug.ShowWindow();
+    for number, zip in pairs(tRARContents) do
+        Debug.Print("File "..number..": "..zip.Filename..", Packed: "..zip.Packed..", Unpacked: "..zip.Unpacked.."\r\n");
+    end
+end
+</pre>
+
+<h3>ZipEx.TestRAR(string RARFile, string Password, string CallbackFunction);</h3>
+<h4>Description:</h4>
+<p>Tests if the content of a RAR archive can be decompressed.</p>
+<h4>RARFile:</h4>
+<p><span class="type">(string)</span> The full path and file name of the RAR archive file.</p>
+<h4>Password:</h4>
+<p><span class="type">(string)</span> Optional. The password required to extract files from the RAR file. (This parameter is only needed if you password protected the RAR file. If no password is required, just leave this parameter blank.)</p>
+<h4>CallbackFunction:</h4>
+<p><span class="type">(string)</span> Optional. The name of a function that will be called whenever progress is made when testing each file from the RAR archive. You can use this callback function to display the progress of each file's test in your own custom way.</p>
+<h4>Returns:</h4>
+<p>A number. If the RAR can be accessed successfully, zero is returned. If an error occurs, like when not all archives can be found or the password is incorrect, the return value is different to zero. You can use Application.GetLastError to
+  determine whether this action failed, and why.</p>
+<h4>Example:</h4>
+<pre class="code">
+-- test the contents of the RAR archive
+res = ZipEx.TestRAR(RARFile, RARPassword, ZipExCallback);
+if (res == 0) then
+    Dialog.Message("ZipEx Demo", "ZipEx.TestRAR() successful.");
+else
+    error = Application.GetLastError();
+    Dialog.Message("Error", _tblErrorMessages[error], MB_OK, MB_ICONEXCLAMATION);
+end
+</pre>
+
+<h3>ZipEx Callback</h3>
+<p>The callback function must be able to receive the following parameters:</p>
+
+<h4>Path:</h4>
+<p><span class="type">(string)</span> The full path and file name currently being added to the Zip archive.</p>
+
+<h4>Value:</h4>
+<p><span class="type">(number)</span> The progress percentage, corresponding to either the current file or the total action.</p>
+
+<h4>Status:</h4>
+<p><span class="type">(number)</span> The status of the current callback message. Either <b>ZipEx.GENERAL</b> (value of 0), <b>ZipEx.COMPRESSING</b> (value of 1) or <b>ZipEx.ADDING</b> (value of 2).</p>
+<p><b>ZipEx.GENERAL</b> means that the callback corresponds to the progress of the action as a whole. The Path will contain the name of the compressed file, and Value correspondents to the overall progress.</p>
+<p><b>ZipEx.COMPRESSING</b> means that the callback corresponds to the progress of a single file. The Path will contain the name of the file currently processed in the archive, and Value correspondents to the compression ratio (100*compressed size / original size).</p>
+<p><b>ZipEx.ADDING</b> means that the callback corresponds to the information of a single file being added to the archieve. The Path will contain the name of the file currently processed in the archive, and Value correspondents to the original size.</p>
+<h4>Example:</h4>
+<pre class="code">
+function MyZipExCallback(path, value, status)
+    if (status == ZipEx.GENERAL) then
+        -- general progress
+        Progress.SetText("ProgressBar", path);
+        Progress.SetCurrentPos("ProgressBar", value);
+    elseif (status == ZipEx.COMPRESSING) then
+        -- compressing/decompressing files
+        Label.SetText("CurrentFile", path..", ratio="..value.."% compressed");
+    elseif (status == ZipEx.ADDING) then
+        -- adding files
+        Label.SetText("CurrentFile", path..", size="..value.." bytes");
+    end
+end
+</pre>
+</div> <!-- /Actions -->
+
+
+<div class="ErrorCodes">
+<h2>Error Codes</h2>
+<p>
+<b>12100</b> - Internal error.<br>
+<b>12101</b> - Error opening compressed file.<br>
+<b>12102</b> - Error writing zip file.<br>
+<b>12103</b> - Error decompressing file.<br>
+<b>12004</b> - File not found, wrong password or incomplete multi-volume archive.<br>
+</p>
+
+</div> <!-- /ErrorCodes -->
+
+<div class="Info">
+<h2>Additional Information</h2>
+
+<h3>Author:</h3>
+<p>Ulrich Peters <br>
+<a href="mailto:upeters@mindquake.com.br">upeters@mindquake.com.br</a></p>
+
+<h3>Copyright:</h3>
+<p>Plugin is copyright &copy; 2011 MindQuake Servi&ccedil;os de Inform&aacute;tica Ltda.</p>
+
+<h3>Website:</h3>
+<p><a href="http://www.mindquake.com.br">http://www.mindquake.com.br</a></p>
+
+</div> <!-- /info -->
+<hr>
+
+<p align="center">Copyright &copy; 2011 MindQuake Servi&ccedil;os de Inform&aacute;tica Ltda.<br>
+All Rights Reserved.</p>
+
+</body>
+</html>

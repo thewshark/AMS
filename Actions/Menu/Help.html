@@ -1,0 +1,2742 @@
+<!doctype HTML public "-//W3C//DTD HTML 4.0 Frameset//EN">
+
+<html>
+<head>
+<title>Menu</title>
+
+<meta http-equiv=content-type content="text/html; charset=windows-1252">
+
+<style>
+
+
+
+body {
+  font-family: Verdana, sans-serif;
+  font-size: 8pt;
+  background-color: #ffffff;
+}
+
+hr {
+  text-align: center;
+  color: #f0f0f0;
+  width: 100%;
+  height: 6pt;
+
+  margin-top: 0pt;
+  margin-bottom: -3pt;
+
+  border: none;
+}
+
+A:link, A:active, A:visited {
+  color: #0000ff;
+  text-decoration: none;
+}
+
+A:hover {
+  color: #0000ff;
+  text-decoration: underline;
+}
+
+h1 {
+  font-family: Verdana;
+  font-weight: bold;
+  font-size: 18.0pt;
+  white-space: nowrap;
+  color: #fff;
+  background-color: #699BEF;
+
+  padding: 4pt 3pt;
+  padding: 5px 4px;
+
+  margin-top: 0pt;
+  margin-bottom: 0pt;
+
+  border-right: 1px solid #333;
+  border-left: 1px solid #699BEF;
+  border-bottom: solid black 1px;
+}
+
+h2 {
+  font-family: Arial, sans-serif;
+  font-size: 12.0pt;
+  letter-spacing: .2ex;
+  color: #000;
+  
+  margin-left: 0pt;
+  margin-right: 0pt;
+  margin-top: 18pt;
+  margin-bottom: 9pt;
+}
+
+h3 {
+  font-family: Arial, sans-serif;
+  font-size: 10pt;
+  font-weight: bold;
+  font-style: normal;
+  color: black;
+  letter-spacing: 0px;
+
+  margin-left: 0pt;
+  margin-right: 0pt;
+  margin-top: 18pt;
+  margin-bottom: 3pt;
+}
+
+p {
+  font-family: Verdana;
+  font-size: 8.0pt;
+  line-height: 12.0pt;
+  
+  margin-left: 0pt;
+  margin-right: 0pt;
+  margin-top: 0pt;
+  margin-bottom: 9pt;
+}
+
+/* CLASSES */
+
+div.Actions h3, div.Properties h3, div.Events h3 {
+  font-family: Arial, sans-serif;
+  font-size: 10pt;
+  font-weight: bold;
+  font-style: italic;
+  color: #3C77B3;
+  letter-spacing: 0px;
+  
+  margin-left: 12pt;
+  margin-right: 0pt;
+  margin-top: 18pt;
+  margin-bottom: 3pt;
+}
+
+div.Events h4, div.Actions h4, div.info h3 {
+  font-family: Verdana;
+  font-size: 8.0pt;
+  line-height: 12.0pt;
+  font-style: bold;
+  
+  margin-top: 9pt;
+  margin-bottom: 0pt;
+  margin-left: 28pt;
+  margin-right: 0pt;
+}
+
+div.Actions p, div.Properties p, div.Events p, div.ErrorCodes p {
+  font-family: Verdana;
+  font-size: 8.0pt;
+  line-height: 12.0pt;
+  
+  margin-top: 0pt;
+  margin-bottom: 9pt;
+  margin-left: 12pt;
+  margin-right: 0pt;
+}
+
+p.NavLocal {
+  white-space: nowrap;
+  text-indent: -4px;
+  font-family: Verdana, Arial, sans-serif;
+  font-weight: bold;
+  font-style: normal;
+  font-size: 13px;
+  background-color: #e4e4e4;
+
+  margin-top: 0px;
+  margin-bottom: 12pt;
+
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 0px;
+  padding-right: 0px;
+
+  border-bottom: 1px solid #e4e4e4;
+}
+
+p.Note {
+	font-family: Verdana;
+	font-size: 8.0pt;
+	line-height: 12.0pt;
+	color: #000000;
+	background-color: #ffffe8;
+
+	margin-top: 0pt;
+	margin-bottom: 9pt;
+	margin-left: 0pt;
+	margin-right: 5%;
+
+	padding-left: 2pt;
+	padding-right: 2pt;
+	padding-top: 1pt;
+	padding-bottom: 2pt;
+}
+
+p.Tip {
+	font-family: Verdana;
+	font-size: 8.0pt;
+	line-height: 12.0pt;
+	color: #000000;
+	background-color: #EAF4E8;
+
+	margin-top: 0pt;
+	margin-bottom: 9pt;
+	margin-left: 0pt;
+	margin-right: 5%;
+
+	padding-left: 2pt;
+	padding-right: 2pt;
+	padding-top: 1pt;
+	padding-bottom: 2pt;
+}
+
+div.Actions p.Note, div.Events p.Note,
+div.Actions p.Tip, div.Events p.Tip {
+	margin-left: 28pt;
+}
+
+div.Properties p.Note,
+div.Properties p.Tip {
+	margin-left: 18pt;
+}
+
+pre.code {
+  white-space: pre;
+  font-family: Courier New, Courier, Arial, sans-serif;
+  font-size: 10pt;
+  font-weight: normal;
+  font-style: normal;
+  letter-spacing: normal;
+  color: #000;
+  background-color: #f9f9f9;
+  
+  margin-top: 3pt;
+  margin-bottom: 9pt;
+  margin-left: 0pt;
+  margin-left: 0pt;
+  
+  padding: 10px;
+  
+  border: 1px dotted #ccc;
+}
+
+div.Actions pre.code, div.Events pre.code {
+  margin-left: 28pt;
+}
+
+div.Actions h2, div.Properties h2, div.Events h2 {
+  margin-bottom: -6pt;
+}
+
+div.actions p, div.ErrorCodes p, div.info p {
+  margin-left: 28pt;
+}
+
+div.actions p.indent {
+  margin-left: 38pt;
+}
+
+div.e_vars p {
+  margin-left: 28pt;
+}
+
+span.here { /* blue tab effect in navbar (NavLocal) */
+  font-weight: bold;
+  color: #fff;
+  background-color: #699BEF;
+
+  margin: 0px;
+
+  padding: 4px 8px;
+
+  border-top: 1px solid #699BEF;
+  border-bottom: 1px solid #333;
+  border-left: none;
+  border-right: 1px solid #333;
+}
+
+span.type {
+	color: #aaa;
+}
+A:link,
+A:active,
+A:visited {
+	color: #0000ff;
+	x-text-underline: off;
+	x-text-overline: off;
+	x-text-line-through: off;
+	/*begin!kadov{{*/ text-decoration: none none none; /*}}end!kadov*/ 
+}
+
+A:hover {
+	color: #0000ff;
+	x-text-underline: normal;
+	/*begin!kadov{{*/ text-decoration: underline; /*}}end!kadov*/ 
+}
+
+BODY {
+	font-family: Verdana, sans-serif;
+	font-size: 8pt;
+	background-color: #ffffff;
+}
+
+h1 {
+	font-family: Verdana;
+	font-weight: bold;
+	font-size: 18.0pt;
+	white-space: nowrap;
+	color: #ffffff;
+	background-color: #699BEF;
+	padding: 4pt 3pt;
+	padding: 5px 4px;
+	margin-top: 0pt;
+	margin-bottom: 0pt;
+	border-right: 1px solid #333;
+	border-left: 1px solid #699BEF;
+	border-bottom: solid #000000 1px;
+	x-next-class: NavLocal;
+	x-next-type: P;
+}
+
+/*=(Generated Code)=================================================*/
+/*=(WARNING: DO NOT EDIT OR DELETE THIS SECTION!)===================*/
+/*begin!kadov{{=====================================================*/ 
+LI.kadov-h1 {
+	font-family: Verdana;
+	font-weight: bold;
+	font-size: 18.0pt;
+	white-space: nowrap;
+	color: #ffffff;
+}
+/*}}end!kadov=======================================================*/ 
+
+
+
+/* NOTE: for a slightly more web-safe version, replace #699BEF with
+#6699FF throughout this style sheet */
+
+h1 img {
+	margin-left: 2em;
+	vertical-align: middle;
+}
+
+h2 {
+	font-family: Arial, sans-serif;
+	font-size: 12.0pt;
+	letter-spacing: .2ex;
+	color: #000000;
+	margin-left: 0pt;
+	margin-right: 0pt;
+	margin-top: 18pt;
+	margin-bottom: 3pt;
+}
+
+/*=(Generated Code)=================================================*/
+/*=(WARNING: DO NOT EDIT OR DELETE THIS SECTION!)===================*/
+/*begin!kadov{{=====================================================*/ 
+LI.kadov-h2 {
+	font-family: Arial, sans-serif;
+	font-size: 12.0pt;
+	letter-spacing: .2ex;
+	color: #000000;
+}
+/*}}end!kadov=======================================================*/ 
+
+
+
+h3 {
+	font-family: Arial, sans-serif;
+	font-size: 10pt;
+	font-weight: bold;
+	font-style: italic;
+	color: #3C77B3;
+	margin-left: 12pt;
+	margin-right: 0pt;
+	margin-top: 18pt;
+	margin-bottom: 3pt;
+	x-next-class: p;
+	x-next-type: p;
+	font-style: normal;
+	color: #000000;
+	letter-spacing: 0px;
+	margin-left: 0pt;
+}
+
+/*=(Generated Code)=================================================*/
+/*=(WARNING: DO NOT EDIT OR DELETE THIS SECTION!)===================*/
+/*begin!kadov{{=====================================================*/ 
+LI.kadov-h3 {
+	font-family: Arial, sans-serif;
+	font-size: 10pt;
+	font-weight: bold;
+	font-style: italic;
+	color: #3C77B3;
+	font-style: normal;
+	color: #000000;
+	letter-spacing: 0px;
+}
+/*}}end!kadov=======================================================*/ 
+
+
+
+h4 {
+	font-family: Arial, sans-serif;
+	font-size: 10pt;
+	font-weight: bold;
+	font-style: italic;
+	color: #000000;
+	letter-spacing: .2ex;
+	margin-left: 12pt;
+	margin-right: 0pt;
+	margin-top: 12pt;
+	margin-bottom: 3pt;
+	x-next-class: p;
+	x-next-type: p;
+}
+
+/*=(Generated Code)=================================================*/
+/*=(WARNING: DO NOT EDIT OR DELETE THIS SECTION!)===================*/
+/*begin!kadov{{=====================================================*/ 
+LI.kadov-h4 {
+	font-family: Arial, sans-serif;
+	font-size: 10pt;
+	font-weight: bold;
+	font-style: italic;
+	color: #000000;
+	letter-spacing: .2ex;
+}
+/*}}end!kadov=======================================================*/ 
+
+
+
+hr {
+	text-align: center;
+	color: #f0f0f0;
+	width: 100%;
+	height: 6pt;
+	margin-left: 0pt;
+	margin-right: 0pt;
+	margin-top: 0pt;
+	margin-bottom: -3pt;
+	border: none;
+}
+
+ol li {
+	list-style: decimal;
+	line-height: 12pt;
+	margin-bottom: 14pt;
+}
+
+p {
+	font-family: Verdana;
+	font-size: 8.0pt;
+	line-height: 12.0pt;
+	margin-left: 0pt;
+	margin-right: 0pt;
+	margin-top: 0pt;
+	margin-bottom: 9pt;
+}
+
+/*=(Generated Code)=================================================*/
+/*=(WARNING: DO NOT EDIT OR DELETE THIS SECTION!)===================*/
+/*begin!kadov{{=====================================================*/ 
+LI.kadov-p {
+	font-family: Verdana;
+	font-size: 8.0pt;
+	line-height: 12.0pt;
+}
+/*}}end!kadov=======================================================*/ 
+
+
+
+ul {
+	margin-top: 0pt;
+	margin-bottom: 12pt;
+	list-style-type: disc;
+	list-style-image: url(bullet.png);
+}
+
+ul p {
+	margin-bottom: 6pt;
+}
+
+/*=(Generated Code)=================================================*/
+/*=(WARNING: DO NOT EDIT OR DELETE THIS SECTION!)===================*/
+/*begin!kadov{{=====================================================*/ 
+ul LI.kadov-p {
+}
+/*}}end!kadov=======================================================*/ 
+
+
+
+/* CLASSES */
+/* CLASSES */
+/* CLASSES */
+/* CLASSES */
+/* CLASSES */
+
+div.Declaration {
+	white-space: nowrap;
+	line-height: normal;
+	x-text-tab-stops: repeat 1in;
+	font-family: "Courier New", Courier, monospace;
+	font-size: 9.0pt;
+	background-color: #eee;
+	color: #000000;
+	width: 100%;
+	margin-left: 0px;
+	margin-right: 0px;
+	margin-top: 0pt;
+	margin-bottom: 9pt;
+	padding: 2pt;
+	border-top: #c0c0c0 1px solid;
+	border-right: #c0c0c0 1px solid;
+	border-left: #c0c0c0 1px solid;
+	border-bottom: #c0c0c0 1px solid;
+}
+
+div.Declaration a:link,
+div.Declaration a:active,
+div.Declaration a:visited {
+	color: #000000;
+	x-text-underline: off;
+	x-text-overline: off;
+	x-text-line-through: off;
+	/*begin!kadov{{*/ text-decoration: none none none; /*}}end!kadov*/ 
+}
+
+div.Declaration a:hover {
+	color: #0000ff;
+	x-text-underline: off;
+	x-text-overline: off;
+	x-text-line-through: off;
+	/*begin!kadov{{*/ text-decoration: none none none; /*}}end!kadov*/ 
+}
+
+div.Declaration table p {
+	white-space: nowrap;
+	line-height: normal;
+	x-text-tab-stops: repeat 1in;
+	font-family: "Courier New", Courier, monospace;
+	font-size: 10.0pt;
+	background-color: #eee;
+	color: #000000;
+	margin-left: 0px;
+	margin-right: 0px;
+	margin-top: 0px;
+	margin-bottom: 0px;
+	padding: 0pt;
+	border-style: none;
+}
+
+/*=(Generated Code)=================================================*/
+/*=(WARNING: DO NOT EDIT OR DELETE THIS SECTION!)===================*/
+/*begin!kadov{{=====================================================*/ 
+div.Declaration table LI.kadov-p {
+	white-space: nowrap;
+	line-height: normal;
+	x-text-tab-stops: repeat 1in;
+	font-family: "Courier New", Courier, monospace;
+	font-size: 10.0pt;
+	color: #000000;
+}
+/*}}end!kadov=======================================================*/ 
+
+
+
+h2.ExampleHeading {
+	x-next-class: ExampleCode;
+	x-next-type: p;
+	white-space: nowrap;
+	margin-bottom: 3pt;
+}
+
+/*=(Generated Code)=================================================*/
+/*=(WARNING: DO NOT EDIT OR DELETE THIS SECTION!)===================*/
+/*begin!kadov{{=====================================================*/ 
+LI.kadov-h2-CExampleHeading {
+	white-space: nowrap;
+}
+/*}}end!kadov=======================================================*/ 
+
+
+
+h2.GroupHeading {
+	font-family: Arial, sans-serif;
+	font-size: 12pt;
+	font-weight: bold;
+	font-style: normal;
+	color: #999999;
+	margin-top: 18pt;
+	margin-bottom: -6pt;
+	margin-left: 0pt;
+	margin-right: 0pt;
+	x-next-class: FieldHeading;
+	x-next-type: h3;
+}
+
+/*=(Generated Code)=================================================*/
+/*=(WARNING: DO NOT EDIT OR DELETE THIS SECTION!)===================*/
+/*begin!kadov{{=====================================================*/ 
+LI.kadov-h2-CGroupHeading {
+	font-family: Arial, sans-serif;
+	font-size: 12pt;
+	font-weight: bold;
+	font-style: normal;
+	color: #999999;
+}
+/*}}end!kadov=======================================================*/ 
+
+
+
+h2.GroupHeadingLoose {
+	font-family: Arial, sans-serif;
+	font-size: 12pt;
+	font-weight: bold;
+	font-style: normal;
+	color: #999999;
+	margin-top: 18pt;
+	margin-bottom: 9pt;
+	margin-left: 0pt;
+	margin-right: 0pt;
+	x-next-class: GroupBody;
+	x-next-type: p;
+}
+
+/*=(Generated Code)=================================================*/
+/*=(WARNING: DO NOT EDIT OR DELETE THIS SECTION!)===================*/
+/*begin!kadov{{=====================================================*/ 
+LI.kadov-h2-CGroupHeadingLoose {
+	font-family: Arial, sans-serif;
+	font-size: 12pt;
+	font-weight: bold;
+	font-style: normal;
+	color: #999999;
+}
+/*}}end!kadov=======================================================*/ 
+
+
+
+h2.GroupSubHeading {
+	font-family: Arial, sans-serif;
+	font-size: 12pt;
+	font-weight: bold;
+	font-style: italic;
+	color: #aa9999;
+	margin-top: 18pt;
+	margin-bottom: -6pt;
+	margin-left: 6pt;
+	margin-right: 0pt;
+	x-next-class: FieldHeading;
+	x-next-type: h3;
+}
+
+/*=(Generated Code)=================================================*/
+/*=(WARNING: DO NOT EDIT OR DELETE THIS SECTION!)===================*/
+/*begin!kadov{{=====================================================*/ 
+LI.kadov-h2-CGroupSubHeading {
+	font-family: Arial, sans-serif;
+	font-size: 12pt;
+	font-weight: bold;
+	font-style: italic;
+	color: #aa9999;
+}
+/*}}end!kadov=======================================================*/ 
+
+
+
+h2.H2Tight {
+	margin-bottom: -6pt;
+}
+
+/*=(Generated Code)=================================================*/
+/*=(WARNING: DO NOT EDIT OR DELETE THIS SECTION!)===================*/
+/*begin!kadov{{=====================================================*/ 
+LI.kadov-h2-CH2Tight {
+}
+/*}}end!kadov=======================================================*/ 
+
+
+
+h2.HowDoIHeading {
+	font-family: Arial, sans-serif;
+	font-size: 16.0pt;
+	letter-spacing: .2ex;
+	color: #000000;
+	margin-left: 0pt;
+	margin-right: 0pt;
+	margin-top: 18pt;
+	margin-bottom: 3pt;
+	x-next-class: Normal;
+	x-next-type: p;
+}
+
+/*=(Generated Code)=================================================*/
+/*=(WARNING: DO NOT EDIT OR DELETE THIS SECTION!)===================*/
+/*begin!kadov{{=====================================================*/ 
+LI.kadov-h2-CHowDoIHeading {
+	font-family: Arial, sans-serif;
+	font-size: 16.0pt;
+	letter-spacing: .2ex;
+	color: #000000;
+}
+/*}}end!kadov=======================================================*/ 
+
+
+
+h2.ListHeading {
+	margin-bottom: 9pt;
+	x-next-class: ListBody;
+	x-next-type: p;
+	white-space: nowrap;
+}
+
+/*=(Generated Code)=================================================*/
+/*=(WARNING: DO NOT EDIT OR DELETE THIS SECTION!)===================*/
+/*begin!kadov{{=====================================================*/ 
+LI.kadov-h2-CListHeading {
+	white-space: nowrap;
+}
+/*}}end!kadov=======================================================*/ 
+
+
+
+h2.TabHeading {
+	font-family: Arial, sans-serif;
+	font-size: 15.0pt;
+	letter-spacing: normal;
+	background-color: #e4e4e4;
+	color: #999;
+	color: #9c9c9c;
+	margin-left: -8pt;
+	margin-right: -8pt;
+	margin-top: 18pt;
+	margin-bottom: 12pt;
+	padding-left: 8pt;
+	padding-top: 4px;
+	padding-bottom: 4px;
+	border-top: 1px solid #999;
+	border-bottom: 1px solid #999;
+	border-left: none;
+	border-right: none;
+}
+
+/*=(Generated Code)=================================================*/
+/*=(WARNING: DO NOT EDIT OR DELETE THIS SECTION!)===================*/
+/*begin!kadov{{=====================================================*/ 
+LI.kadov-h2-CTabHeading {
+	font-family: Arial, sans-serif;
+	font-size: 15.0pt;
+	letter-spacing: normal;
+	color: #999;
+	color: #9c9c9c;
+}
+/*}}end!kadov=======================================================*/ 
+
+
+
+h2.VarHeading {
+	font-family: Arial;
+	font-size: 10pt;
+	letter-spacing: 0px;
+	margin-left: 12pt;
+	margin-right: 0pt;
+	margin-top: 18pt;
+	margin-bottom: 3pt;
+	x-next-class: VarBody;
+	x-next-type: p;
+	white-space: nowrap;
+}
+
+/*=(Generated Code)=================================================*/
+/*=(WARNING: DO NOT EDIT OR DELETE THIS SECTION!)===================*/
+/*begin!kadov{{=====================================================*/ 
+LI.kadov-h2-CVarHeading {
+	font-family: Arial;
+	font-size: 10pt;
+	letter-spacing: 0px;
+	white-space: nowrap;
+}
+/*}}end!kadov=======================================================*/ 
+
+
+
+h3.ErrHeading {
+	font-family: Arial, sans-serif;
+	font-size: 10pt;
+	font-style: normal;
+	color: #000000;
+	letter-spacing: 0px;
+	margin-left: 12pt;
+	margin-right: 0pt;
+	margin-top: 18pt;
+	margin-bottom: 3pt;
+	x-next-class: ErrBody;
+	x-next-type: p;
+	white-space: nowrap;
+}
+
+/*=(Generated Code)=================================================*/
+/*=(WARNING: DO NOT EDIT OR DELETE THIS SECTION!)===================*/
+/*begin!kadov{{=====================================================*/ 
+LI.kadov-h3-CErrHeading {
+	font-family: Arial, sans-serif;
+	font-size: 10pt;
+	font-style: normal;
+	color: #000000;
+	letter-spacing: 0px;
+	white-space: nowrap;
+}
+/*}}end!kadov=======================================================*/ 
+
+
+
+h3.FieldHeading {
+	font-family: Arial, sans-serif;
+	font-size: 10pt;
+	font-weight: bold;
+	font-style: italic;
+	color: #3C77B3;
+	letter-spacing: 0px;
+	margin-left: 12pt;
+	margin-right: 0pt;
+	margin-top: 18pt;
+	margin-bottom: 3pt;
+	x-next-class: FieldBody;
+	x-next-type: p;
+}
+
+/*=(Generated Code)=================================================*/
+/*=(WARNING: DO NOT EDIT OR DELETE THIS SECTION!)===================*/
+/*begin!kadov{{=====================================================*/ 
+LI.kadov-h3-CFieldHeading {
+	font-family: Arial, sans-serif;
+	font-size: 10pt;
+	font-weight: bold;
+	font-style: italic;
+	color: #3C77B3;
+	letter-spacing: 0px;
+}
+/*}}end!kadov=======================================================*/ 
+
+
+
+h3.FieldSubHeading {
+	font-family: Arial, sans-serif;
+	font-size: 10pt;
+	font-weight: bold;
+	font-style: italic;
+	color: #3C77B3;
+	letter-spacing: 0px;
+	margin-left: 32pt;
+	margin-right: 0pt;
+	margin-top: 18pt;
+	margin-bottom: 3pt;
+	x-next-class: FieldSubBody;
+	x-next-type: p;
+}
+
+/*=(Generated Code)=================================================*/
+/*=(WARNING: DO NOT EDIT OR DELETE THIS SECTION!)===================*/
+/*begin!kadov{{=====================================================*/ 
+LI.kadov-h3-CFieldSubHeading {
+	font-family: Arial, sans-serif;
+	font-size: 10pt;
+	font-weight: bold;
+	font-style: italic;
+	color: #3C77B3;
+	letter-spacing: 0px;
+}
+/*}}end!kadov=======================================================*/ 
+
+
+
+h3.ParameterHeading {
+	font-family: Arial, sans-serif;
+	margin-left: 12pt;
+	margin-right: 0pt;
+	margin-top: 18pt;
+	margin-bottom: 3pt;
+	font-size: 9pt;
+	font-weight: bold;
+	font-style: italic;
+	letter-spacing: .2ex;
+	color: #3C77B3;
+	x-next-class: ParameterBody;
+	x-next-type: p;
+}
+
+/*=(Generated Code)=================================================*/
+/*=(WARNING: DO NOT EDIT OR DELETE THIS SECTION!)===================*/
+/*begin!kadov{{=====================================================*/ 
+LI.kadov-h3-CParameterHeading {
+	font-family: Arial, sans-serif;
+	font-size: 9pt;
+	font-weight: bold;
+	font-style: italic;
+	letter-spacing: .2ex;
+	color: #3C77B3;
+}
+/*}}end!kadov=======================================================*/ 
+
+
+
+h4.OptionHeading {
+	font-family: Verdana, sans-serif;
+	font-size: 8.0pt;
+	font-weight: bold;
+	font-style: normal;
+	line-height: 12.0pt;
+	color: #000000;
+	margin-left: 32.0pt;
+	margin-right: 0pt;
+	margin-top: 12pt;
+	margin-bottom: 0;
+	x-next-class: OptionBody;
+	x-next-type: p;
+}
+
+/*=(Generated Code)=================================================*/
+/*=(WARNING: DO NOT EDIT OR DELETE THIS SECTION!)===================*/
+/*begin!kadov{{=====================================================*/ 
+LI.kadov-h4-COptionHeading {
+	font-family: Verdana, sans-serif;
+	font-size: 8.0pt;
+	font-weight: bold;
+	font-style: normal;
+	line-height: 12.0pt;
+	color: #000000;
+}
+/*}}end!kadov=======================================================*/ 
+
+
+
+h4.OptionSubHeading {
+	font-family: Verdana, sans-serif;
+	font-size: 8.0pt;
+	font-weight: bold;
+	font-style: normal;
+	line-height: 12.0pt;
+	color: #000000;
+	margin-left: 52.0pt;
+	margin-right: 0pt;
+	margin-top: 12pt;
+	margin-bottom: 0;
+	x-next-class: OptionSubBody;
+	x-next-type: p;
+}
+
+/*=(Generated Code)=================================================*/
+/*=(WARNING: DO NOT EDIT OR DELETE THIS SECTION!)===================*/
+/*begin!kadov{{=====================================================*/ 
+LI.kadov-h4-COptionSubHeading {
+	font-family: Verdana, sans-serif;
+	font-size: 8.0pt;
+	font-weight: bold;
+	font-style: normal;
+	line-height: 12.0pt;
+	color: #000000;
+}
+/*}}end!kadov=======================================================*/ 
+
+
+
+P.BodyCode {
+	white-space: nowrap;
+	font-family: "Courier New", Courier, Arial, sans-serif;
+	font-size: 10pt;
+	font-weight: normal;
+	font-style: normal;
+	letter-spacing: normal;
+	color: #000000;
+	background-color: #eee;
+	background-color: #f9f9f9;
+	margin-top: -6pt;
+	margin-bottom: 9pt;
+	margin-left: 0pt;
+	margin-right: 0pt;
+	padding: 10px;
+	border: 1px dotted #ccc;
+	x-next-type: p;
+}
+
+/*=(Generated Code)=================================================*/
+/*=(WARNING: DO NOT EDIT OR DELETE THIS SECTION!)===================*/
+/*begin!kadov{{=====================================================*/ 
+LI.kadov-P-CBodyCode {
+	white-space: nowrap;
+	font-family: "Courier New", Courier, Arial, sans-serif;
+	font-size: 10pt;
+	font-weight: normal;
+	font-style: normal;
+	letter-spacing: normal;
+	color: #000000;
+}
+/*}}end!kadov=======================================================*/ 
+
+
+
+p.Caption {
+	font-size: 7pt;
+	letter-spacing: .5pt;
+	line-height: 14pt;
+	text-align: center;
+	margin-bottom: 0pt;
+	x-next-class: ;
+	x-next-type: P;
+}
+
+/*=(Generated Code)=================================================*/
+/*=(WARNING: DO NOT EDIT OR DELETE THIS SECTION!)===================*/
+/*begin!kadov{{=====================================================*/ 
+LI.kadov-p-CCaption {
+	font-size: 7pt;
+	letter-spacing: .5pt;
+	line-height: 14pt;
+	text-align: center;
+}
+/*}}end!kadov=======================================================*/ 
+
+
+
+P.Code {
+	white-space: nowrap;
+	font-family: "Courier New", Courier, Arial, sans-serif;
+	font-size: 10pt;
+	font-weight: normal;
+	font-style: normal;
+	letter-spacing: normal;
+	color: #000000;
+	background-color: #ffffff;
+	margin-bottom: 9pt;
+	margin-left: 0pt;
+	margin-right: 0pt;
+	padding: 00px;
+	x-next-type: p;
+}
+
+/*=(Generated Code)=================================================*/
+/*=(WARNING: DO NOT EDIT OR DELETE THIS SECTION!)===================*/
+/*begin!kadov{{=====================================================*/ 
+LI.kadov-P-CCode {
+	white-space: nowrap;
+	font-family: "Courier New", Courier, Arial, sans-serif;
+	font-size: 10pt;
+	font-weight: normal;
+	font-style: normal;
+	letter-spacing: normal;
+	color: #000000;
+}
+/*}}end!kadov=======================================================*/ 
+
+
+
+p.ErrBody {
+	margin-left: 12pt;
+	margin-right: 0pt;
+	margin-bottom: 3pt;
+	x-next-class: ErrBody;
+	x-next-type: p;
+	white-space: nowrap;
+}
+
+/*=(Generated Code)=================================================*/
+/*=(WARNING: DO NOT EDIT OR DELETE THIS SECTION!)===================*/
+/*begin!kadov{{=====================================================*/ 
+LI.kadov-p-CErrBody {
+	white-space: nowrap;
+}
+/*}}end!kadov=======================================================*/ 
+
+
+
+p.ErrCode {
+	white-space: nowrap;
+	font-family: "Courier New", Courier, Arial, sans-serif;
+	font-size: 10pt;
+	font-weight: normal;
+	font-style: normal;
+	letter-spacing: normal;
+	color: #052;
+	color: #000000;
+	background-color: #eee;
+	background-color: #f9f9f9;
+	margin-top: 9pt;
+	margin-bottom: 9pt;
+	margin-left: 12pt;
+	margin-right: 0pt;
+	padding: 10px;
+	border: 1px dotted #ccc;
+	x-next-class: ErrBody;
+	x-next-type: p;
+}
+
+/*=(Generated Code)=================================================*/
+/*=(WARNING: DO NOT EDIT OR DELETE THIS SECTION!)===================*/
+/*begin!kadov{{=====================================================*/ 
+LI.kadov-p-CErrCode {
+	white-space: nowrap;
+	font-family: "Courier New", Courier, Arial, sans-serif;
+	font-size: 10pt;
+	font-weight: normal;
+	font-style: normal;
+	letter-spacing: normal;
+	color: #052;
+	color: #000000;
+}
+/*}}end!kadov=======================================================*/ 
+
+
+
+p.ErrNote {
+	font-family: Verdana;
+	font-size: 8.0pt;
+	line-height: 12.0pt;
+	color: #000000;
+	background-color: #ffffe8;
+	margin-top: 9pt;
+	margin-bottom: 9pt;
+	margin-left: 12pt;
+	margin-right: 5%;
+	padding-left: 2pt;
+	padding-right: 2pt;
+	padding-top: 1pt;
+	padding-bottom: 2pt;
+	x-next-class: ErrBody;
+	x-next-type: p;
+}
+
+/*=(Generated Code)=================================================*/
+/*=(WARNING: DO NOT EDIT OR DELETE THIS SECTION!)===================*/
+/*begin!kadov{{=====================================================*/ 
+LI.kadov-p-CErrNote {
+	font-family: Verdana;
+	font-size: 8.0pt;
+	line-height: 12.0pt;
+	color: #000000;
+}
+/*}}end!kadov=======================================================*/ 
+
+
+
+p.ErrTip {
+	font-family: Verdana;
+	font-size: 8.0pt;
+	line-height: 12.0pt;
+	color: #000000;
+	background-color: #EAF4E8;
+	margin-top: 9pt;
+	margin-bottom: 9pt;
+	margin-left: 12pt;
+	margin-right: 5%;
+	padding-left: 2pt;
+	padding-right: 2pt;
+	padding-top: 1pt;
+	padding-bottom: 2pt;
+	x-next-class: ErrBody;
+	x-next-type: p;
+}
+
+/*=(Generated Code)=================================================*/
+/*=(WARNING: DO NOT EDIT OR DELETE THIS SECTION!)===================*/
+/*begin!kadov{{=====================================================*/ 
+LI.kadov-p-CErrTip {
+	font-family: Verdana;
+	font-size: 8.0pt;
+	line-height: 12.0pt;
+	color: #000000;
+}
+/*}}end!kadov=======================================================*/ 
+
+
+
+P.ExampleBody {
+	margin-right: 0pt;
+	margin-bottom: 9pt;
+	margin-left: 12px;
+}
+
+/*=(Generated Code)=================================================*/
+/*=(WARNING: DO NOT EDIT OR DELETE THIS SECTION!)===================*/
+/*begin!kadov{{=====================================================*/ 
+LI.kadov-P-CExampleBody {
+}
+/*}}end!kadov=======================================================*/ 
+
+
+
+p.ExampleCode {
+	white-space: nowrap;
+	font-family: "Courier New", Courier, Arial, sans-serif;
+	font-size: 10pt;
+	font-weight: normal;
+	font-style: normal;
+	letter-spacing: normal;
+	color: #052;
+	background-color: #f9f9f9;
+	margin-top: 6pt;
+	margin-bottom: 3pt;
+	margin-left: 0pt;
+	margin-right: 0pt;
+	padding: 10px;
+	border: 1px dotted #ccc;
+	x-next-class: ExampleBody;
+	x-next-type: p;
+}
+
+/*=(Generated Code)=================================================*/
+/*=(WARNING: DO NOT EDIT OR DELETE THIS SECTION!)===================*/
+/*begin!kadov{{=====================================================*/ 
+LI.kadov-p-CExampleCode {
+	white-space: nowrap;
+	font-family: "Courier New", Courier, Arial, sans-serif;
+	font-size: 10pt;
+	font-weight: normal;
+	font-style: normal;
+	letter-spacing: normal;
+	color: #052;
+}
+/*}}end!kadov=======================================================*/ 
+
+
+
+p.ExampleNote {
+	font-family: Verdana;
+	font-size: 8.0pt;
+	line-height: 12.0pt;
+	color: #000000;
+	background-color: #ffffe8;
+	margin-top: 0pt;
+	margin-bottom: 9pt;
+	margin-left: 10px;
+	margin-right: 5%;
+	padding-left: 2pt;
+	padding-right: 2pt;
+	padding-top: 1pt;
+	padding-bottom: 2pt;
+	x-next-class: ;
+	x-next-type: p;
+}
+
+/*=(Generated Code)=================================================*/
+/*=(WARNING: DO NOT EDIT OR DELETE THIS SECTION!)===================*/
+/*begin!kadov{{=====================================================*/ 
+LI.kadov-p-CExampleNote {
+	font-family: Verdana;
+	font-size: 8.0pt;
+	line-height: 12.0pt;
+	color: #000000;
+}
+/*}}end!kadov=======================================================*/ 
+
+
+
+p.ExampleTip {
+	font-family: Verdana;
+	font-size: 8.0pt;
+	line-height: 12.0pt;
+	color: #000000;
+	background-color: #EAF4E8;
+	margin-top: 0pt;
+	margin-bottom: 9pt;
+	margin-left: 10px;
+	margin-right: 5%;
+	padding-left: 2pt;
+	padding-right: 2pt;
+	padding-top: 1pt;
+	padding-bottom: 2pt;
+	x-next-class: FieldBody;
+	x-next-type: p;
+}
+
+/*=(Generated Code)=================================================*/
+/*=(WARNING: DO NOT EDIT OR DELETE THIS SECTION!)===================*/
+/*begin!kadov{{=====================================================*/ 
+LI.kadov-p-CExampleTip {
+	font-family: Verdana;
+	font-size: 8.0pt;
+	line-height: 12.0pt;
+	color: #000000;
+}
+/*}}end!kadov=======================================================*/ 
+
+
+
+p.FieldBody {
+	font-family: Verdana;
+	font-size: 8.0pt;
+	line-height: 12.0pt;
+	margin-top: 0pt;
+	margin-bottom: 9pt;
+	margin-left: 12pt;
+	margin-right: 0pt;
+	x-next-class: FieldBody;
+	x-next-type: p;
+}
+
+/*=(Generated Code)=================================================*/
+/*=(WARNING: DO NOT EDIT OR DELETE THIS SECTION!)===================*/
+/*begin!kadov{{=====================================================*/ 
+LI.kadov-p-CFieldBody {
+	font-family: Verdana;
+	font-size: 8.0pt;
+	line-height: 12.0pt;
+}
+/*}}end!kadov=======================================================*/ 
+
+
+
+p.FieldSubBody {
+	font-family: Verdana;
+	font-size: 8.0pt;
+	line-height: 12.0pt;
+	margin-top: 0pt;
+	margin-bottom: 9pt;
+	margin-left: 32pt;
+	margin-right: 0pt;
+	x-next-class: FieldSubBody;
+	x-next-type: p;
+}
+
+/*=(Generated Code)=================================================*/
+/*=(WARNING: DO NOT EDIT OR DELETE THIS SECTION!)===================*/
+/*begin!kadov{{=====================================================*/ 
+LI.kadov-p-CFieldSubBody {
+	font-family: Verdana;
+	font-size: 8.0pt;
+	line-height: 12.0pt;
+}
+/*}}end!kadov=======================================================*/ 
+
+
+
+p.FieldNote {
+	font-family: Verdana;
+	font-size: 8.0pt;
+	line-height: 12.0pt;
+	color: #000000;
+	background-color: #ffffe8;
+	margin-top: 0pt;
+	margin-bottom: 9pt;
+	margin-left: 12pt;
+	margin-right: 5%;
+	padding-left: 2pt;
+	padding-right: 2pt;
+	padding-top: 1pt;
+	padding-bottom: 2pt;
+	x-next-class: FieldBody;
+	x-next-type: p;
+}
+
+/*=(Generated Code)=================================================*/
+/*=(WARNING: DO NOT EDIT OR DELETE THIS SECTION!)===================*/
+/*begin!kadov{{=====================================================*/ 
+LI.kadov-p-CFieldNote {
+	font-family: Verdana;
+	font-size: 8.0pt;
+	line-height: 12.0pt;
+	color: #000000;
+}
+/*}}end!kadov=======================================================*/ 
+
+
+
+p.FieldSubNote {
+	font-family: Verdana;
+	font-size: 8.0pt;
+	line-height: 12.0pt;
+	color: #000000;
+	background-color: #ffffe8;
+	margin-top: 0pt;
+	margin-bottom: 9pt;
+	margin-left: 32pt;
+	margin-right: 5%;
+	padding-left: 2pt;
+	padding-right: 2pt;
+	padding-top: 1pt;
+	padding-bottom: 2pt;
+	x-next-class: FieldBody;
+	x-next-type: p;
+}
+
+/*=(Generated Code)=================================================*/
+/*=(WARNING: DO NOT EDIT OR DELETE THIS SECTION!)===================*/
+/*begin!kadov{{=====================================================*/ 
+LI.kadov-p-CFieldSubNote {
+	font-family: Verdana;
+	font-size: 8.0pt;
+	line-height: 12.0pt;
+	color: #000000;
+}
+/*}}end!kadov=======================================================*/ 
+
+
+
+p.FieldSubTip {
+	font-family: Verdana;
+	font-size: 8.0pt;
+	line-height: 12.0pt;
+	color: #000000;
+	background-color: #EAF4E8;
+	margin-top: 0pt;
+	margin-bottom: 9pt;
+	margin-left: 32pt;
+	margin-right: 5%;
+	padding-left: 2pt;
+	padding-right: 2pt;
+	padding-top: 1pt;
+	padding-bottom: 2pt;
+	x-next-class: FieldBody;
+	x-next-type: p;
+}
+
+/*=(Generated Code)=================================================*/
+/*=(WARNING: DO NOT EDIT OR DELETE THIS SECTION!)===================*/
+/*begin!kadov{{=====================================================*/ 
+LI.kadov-p-CFieldSubTip {
+	font-family: Verdana;
+	font-size: 8.0pt;
+	line-height: 12.0pt;
+	color: #000000;
+}
+/*}}end!kadov=======================================================*/ 
+
+
+
+p.FieldTip {
+	font-family: Verdana;
+	font-size: 8.0pt;
+	line-height: 12.0pt;
+	color: #000000;
+	background-color: #EAF4E8;
+	margin-top: 0pt;
+	margin-bottom: 9pt;
+	margin-left: 12pt;
+	margin-right: 5%;
+	padding-left: 2pt;
+	padding-right: 2pt;
+	padding-top: 1pt;
+	padding-bottom: 2pt;
+	x-next-class: FieldBody;
+	x-next-type: p;
+}
+
+/*=(Generated Code)=================================================*/
+/*=(WARNING: DO NOT EDIT OR DELETE THIS SECTION!)===================*/
+/*begin!kadov{{=====================================================*/ 
+LI.kadov-p-CFieldTip {
+	font-family: Verdana;
+	font-size: 8.0pt;
+	line-height: 12.0pt;
+	color: #000000;
+}
+/*}}end!kadov=======================================================*/ 
+
+
+
+p.FieldWarning {
+	font-family: Verdana;
+	font-size: 8.0pt;
+	line-height: 12.0pt;
+	color: #000000;
+	background-color: #FDF0E8;
+	margin-top: 0pt;
+	margin-bottom: 9pt;
+	margin-left: 12pt;
+	margin-right: 5%;
+	padding-left: 2pt;
+	padding-right: 2pt;
+	padding-top: 1pt;
+	padding-bottom: 2pt;
+	border: 1px dotted #ff0000;
+	border: none;
+	x-next-class: FieldBody;
+	x-next-type: p;
+}
+
+/*=(Generated Code)=================================================*/
+/*=(WARNING: DO NOT EDIT OR DELETE THIS SECTION!)===================*/
+/*begin!kadov{{=====================================================*/ 
+LI.kadov-p-CFieldWarning {
+	font-family: Verdana;
+	font-size: 8.0pt;
+	line-height: 12.0pt;
+	color: #000000;
+}
+/*}}end!kadov=======================================================*/ 
+
+
+
+p.GroupBody {
+	margin-left: 12pt;
+	margin-right: 0pt;
+	margin-top: 0pt;
+	margin-bottom: 9pt;
+	x-next-class: GroupBody;
+	x-next-type: p;
+}
+
+/*=(Generated Code)=================================================*/
+/*=(WARNING: DO NOT EDIT OR DELETE THIS SECTION!)===================*/
+/*begin!kadov{{=====================================================*/ 
+LI.kadov-p-CGroupBody {
+}
+/*}}end!kadov=======================================================*/ 
+
+
+
+p.ListBody {
+	margin-left: 12pt;
+	margin-right: 0pt;
+	margin-bottom: 3pt;
+	x-next-class: ListBody;
+	x-next-type: p;
+}
+
+/*=(Generated Code)=================================================*/
+/*=(WARNING: DO NOT EDIT OR DELETE THIS SECTION!)===================*/
+/*begin!kadov{{=====================================================*/ 
+LI.kadov-p-CListBody {
+}
+/*}}end!kadov=======================================================*/ 
+
+
+
+p.TOC1 {
+	margin-top: 12pt;
+	margin-bottom: 3pt;
+	margin-left: 12pt;
+	margin-right: 0pt;
+	x-next-class: TOC2;
+	x-next-type: p;
+	white-space: nowrap;
+}
+
+/*=(Generated Code)=================================================*/
+/*=(WARNING: DO NOT EDIT OR DELETE THIS SECTION!)===================*/
+/*begin!kadov{{=====================================================*/ 
+LI.kadov-p-CTOC1 {
+	white-space: nowrap;
+}
+/*}}end!kadov=======================================================*/ 
+
+
+
+p.TOC2 {
+	margin-bottom: 3pt;
+	margin-left: 28pt;
+	margin-right: 0pt;
+	x-next-class: TOC2;
+	x-next-type: p;
+	white-space: nowrap;
+}
+
+/*=(Generated Code)=================================================*/
+/*=(WARNING: DO NOT EDIT OR DELETE THIS SECTION!)===================*/
+/*begin!kadov{{=====================================================*/ 
+LI.kadov-p-CTOC2 {
+	white-space: nowrap;
+}
+/*}}end!kadov=======================================================*/ 
+
+
+
+p.TOC3 {
+	font-style: italic;
+	margin-bottom: 3pt;
+	margin-left: 46pt;
+	margin-right: 0pt;
+	x-next-class: TOC3;
+	x-next-type: p;
+	white-space: nowrap;
+}
+
+/*=(Generated Code)=================================================*/
+/*=(WARNING: DO NOT EDIT OR DELETE THIS SECTION!)===================*/
+/*begin!kadov{{=====================================================*/ 
+LI.kadov-p-CTOC3 {
+	font-style: italic;
+	white-space: nowrap;
+}
+/*}}end!kadov=======================================================*/ 
+
+
+
+p.NumBody {
+	margin-left: 30pt;
+	margin-right: 0pt;
+	margin-top: 0pt;
+	margin-bottom: 3pt;
+	x-next-class: ErrBody;
+	x-next-type: p;
+}
+
+/*=(Generated Code)=================================================*/
+/*=(WARNING: DO NOT EDIT OR DELETE THIS SECTION!)===================*/
+/*begin!kadov{{=====================================================*/ 
+LI.kadov-p-CNumBody {
+}
+/*}}end!kadov=======================================================*/ 
+
+
+
+p.VarBody {
+	margin-left: 12pt;
+	margin-right: 0pt;
+	margin-bottom: 3pt;
+	x-next-class: VarBody;
+	x-next-type: p;
+}
+
+/*=(Generated Code)=================================================*/
+/*=(WARNING: DO NOT EDIT OR DELETE THIS SECTION!)===================*/
+/*begin!kadov{{=====================================================*/ 
+LI.kadov-p-CVarBody {
+}
+/*}}end!kadov=======================================================*/ 
+
+
+
+p.VarCode {
+	white-space: nowrap;
+	font-family: "Courier New", Courier, Arial, sans-serif;
+	font-size: 10pt;
+	font-weight: normal;
+	font-style: normal;
+	letter-spacing: normal;
+	color: #052;
+	color: #000000;
+	background-color: #eee;
+	background-color: #f9f9f9;
+	margin-top: 9pt;
+	margin-bottom: 9pt;
+	margin-left: 12pt;
+	margin-right: 0pt;
+	padding: 10px;
+	border: 1px dotted #ccc;
+	x-next-class: VarBody;
+	x-next-type: p;
+}
+
+/*=(Generated Code)=================================================*/
+/*=(WARNING: DO NOT EDIT OR DELETE THIS SECTION!)===================*/
+/*begin!kadov{{=====================================================*/ 
+LI.kadov-p-CVarCode {
+	white-space: nowrap;
+	font-family: "Courier New", Courier, Arial, sans-serif;
+	font-size: 10pt;
+	font-weight: normal;
+	font-style: normal;
+	letter-spacing: normal;
+	color: #052;
+	color: #000000;
+}
+/*}}end!kadov=======================================================*/ 
+
+
+
+p.VarNote {
+	font-family: Verdana;
+	font-size: 8.0pt;
+	line-height: 12.0pt;
+	color: #000000;
+	background-color: #ffffe8;
+	margin-top: 9pt;
+	margin-bottom: 9pt;
+	margin-left: 12pt;
+	margin-right: 5%;
+	padding-left: 2pt;
+	padding-right: 2pt;
+	padding-top: 1pt;
+	padding-bottom: 2pt;
+	x-next-class: VarBody;
+	x-next-type: p;
+}
+
+/*=(Generated Code)=================================================*/
+/*=(WARNING: DO NOT EDIT OR DELETE THIS SECTION!)===================*/
+/*begin!kadov{{=====================================================*/ 
+LI.kadov-p-CVarNote {
+	font-family: Verdana;
+	font-size: 8.0pt;
+	line-height: 12.0pt;
+	color: #000000;
+}
+/*}}end!kadov=======================================================*/ 
+
+
+
+p.VarTip {
+	font-family: Verdana;
+	font-size: 8.0pt;
+	line-height: 12.0pt;
+	color: #000000;
+	background-color: #EAF4E8;
+	margin-top: 9pt;
+	margin-bottom: 9pt;
+	margin-left: 12pt;
+	margin-right: 5%;
+	padding-left: 2pt;
+	padding-right: 2pt;
+	padding-top: 1pt;
+	padding-bottom: 2pt;
+	x-next-class: VarBody;
+	x-next-type: p;
+}
+
+/*=(Generated Code)=================================================*/
+/*=(WARNING: DO NOT EDIT OR DELETE THIS SECTION!)===================*/
+/*begin!kadov{{=====================================================*/ 
+LI.kadov-p-CVarTip {
+	font-family: Verdana;
+	font-size: 8.0pt;
+	line-height: 12.0pt;
+	color: #000000;
+}
+/*}}end!kadov=======================================================*/ 
+
+
+
+p.NavLocal {
+	white-space: nowrap;
+	text-indent: -4px;
+	font-family: Verdana, Arial, sans-serif;
+	font-weight: bold;
+	font-style: normal;
+	font-size: 10pt;
+	font-size: 13px;
+	background-color: #e4e4e4;
+	margin-top: 0px;
+	margin-bottom: 12pt;
+	padding-top: 4px;
+	padding-bottom: 4px;
+	padding-left: 0px;
+	padding-right: 0px;
+	border-bottom: 1px solid #e4e4e4;
+	x-next-class: ;
+	x-next-type: p;
+}
+
+/*=(Generated Code)=================================================*/
+/*=(WARNING: DO NOT EDIT OR DELETE THIS SECTION!)===================*/
+/*begin!kadov{{=====================================================*/ 
+LI.kadov-p-CNavLocal {
+	white-space: nowrap;
+	text-indent: -4px;
+	font-family: Verdana, Arial, sans-serif;
+	font-weight: bold;
+	font-style: normal;
+	font-size: 10pt;
+	font-size: 13px;
+}
+/*}}end!kadov=======================================================*/ 
+
+
+
+/* note:
+
+	Internet Explorer is broken on inline elements with horizontal padding.
+	I had something like this:
+
+	<p class=NavLocal><span class=Here>Overview</span>
+
+	...with span.Here having 4px of padding-left. The problem is, when
+	you resize the IE window narrower than the width of the paragraph
+	(auto, nowrap), it collapses the padding on the left and inserts
+	about one line-height above the element. GRR.
+
+	Oddly enough, if the first element has no extra padding-left, it
+	renders fine. After a couple days of "workaround hell," I came up
+	with two ways that seem to work in all current browsers. One is to
+	remove the padding and put &nbsp;&nbsp; on either side of the
+	content in each element within p.NavLocal. RoboHELP makes it pretty
+	hard to maintain that, though, and it makes adding and removing
+	links a royal PITA. The other way is to just put a single &nbsp; at
+	the start of the paragraph, and then shift the paragraph's text left
+	by the width of one space. This opens up the potential for font
+	rendering issues, but using a pixel size for the font should fix
+	that well enough, and seems to work 100% in my testing. To be safe,
+	I'm enclosing the &nbsp; in a span tag so I can remove it later with
+	a single "display: none" if I have to. Here's the new version:
+
+	<p class=NavLocal><span class=wab>&nbsp;</span><span class=Here>Overview</span>
+
+*/
+
+p.NavLocal a {
+	font-weight: normal;
+	font-weight: bold;
+	font-style: normal;
+	color: #8f8f9f;
+	background-color: #eee;
+	margin-top: 0px;
+	margin-bottom: 0px;
+	padding-top: 4px;
+	padding-bottom: 4px;
+	padding-left: 8px;
+	padding-right: 8px;
+	border-top: none;
+	border-bottom: 1px solid #ddd;
+	border-left: none;
+	border-right: #ddd 1px solid;
+}
+
+/* note: would need to expand border styles for netscape 4...border-right etc. won't work */
+
+p.NavLocal a:link,
+p.NavLocal a:active,
+p.NavLocal a:visited {
+	color: #8f8f9f;
+	x-text-underline: off;
+	x-text-overline: off;
+	x-text-line-through: off;
+	/*begin!kadov{{*/ text-decoration: none none none; /*}}end!kadov*/ 
+}
+
+p.NavLocal a:hover {
+	color: #0000ff;
+	x-text-underline: off;
+	x-text-overline: off;
+	x-text-line-through: off;
+	/*begin!kadov{{*/ text-decoration: none none none; /*}}end!kadov*/ 
+}
+
+p.Note {
+	font-family: Verdana;
+	font-size: 8.0pt;
+	line-height: 12.0pt;
+	color: #000000;
+	background-color: #ffffe8;
+	margin-top: 0pt;
+	margin-bottom: 9pt;
+	margin-left: 0pt;
+	margin-right: 5%;
+	padding-left: 2pt;
+	padding-right: 2pt;
+	padding-top: 1pt;
+	padding-bottom: 2pt;
+	x-next-class: ;
+	x-next-type: p;
+}
+
+/*=(Generated Code)=================================================*/
+/*=(WARNING: DO NOT EDIT OR DELETE THIS SECTION!)===================*/
+/*begin!kadov{{=====================================================*/ 
+LI.kadov-p-CNote {
+	font-family: Verdana;
+	font-size: 8.0pt;
+	line-height: 12.0pt;
+	color: #000000;
+}
+/*}}end!kadov=======================================================*/ 
+
+
+
+p.NumberedList {
+	list-style: decimal;
+	line-height: 12pt;
+	margin-bottom: 14pt;
+}
+
+/*=(Generated Code)=================================================*/
+/*=(WARNING: DO NOT EDIT OR DELETE THIS SECTION!)===================*/
+/*begin!kadov{{=====================================================*/ 
+LI.kadov-p-CNumberedList {
+	list-style: decimal;
+	line-height: 12pt;
+}
+/*}}end!kadov=======================================================*/ 
+
+
+
+p.NumCode {
+	white-space: nowrap;
+	font-family: "Courier New", Courier, Arial, sans-serif;
+	font-size: 10pt;
+	font-weight: normal;
+	font-style: normal;
+	letter-spacing: normal;
+	color: #000000;
+	background-color: #f9f9f9;
+	margin-top: -6pt;
+	margin-bottom: 9pt;
+	margin-left: 28pt;
+	margin-right: 0pt;
+	padding: 10px;
+	border: 1px dotted #ccc;
+	x-next-type: p;
+}
+
+/*=(Generated Code)=================================================*/
+/*=(WARNING: DO NOT EDIT OR DELETE THIS SECTION!)===================*/
+/*begin!kadov{{=====================================================*/ 
+LI.kadov-p-CNumCode {
+	white-space: nowrap;
+	font-family: "Courier New", Courier, Arial, sans-serif;
+	font-size: 10pt;
+	font-weight: normal;
+	font-style: normal;
+	letter-spacing: normal;
+	color: #000000;
+}
+/*}}end!kadov=======================================================*/ 
+
+
+
+p.NumNote {
+	font-family: Verdana;
+	font-size: 8.0pt;
+	line-height: 12.0pt;
+	color: #000000;
+	background-color: #ffffe8;
+	margin-top: 9pt;
+	margin-bottom: 9pt;
+	margin-left: 28pt;
+	margin-right: 5%;
+	padding-left: 2pt;
+	padding-right: 2pt;
+	padding-top: 1pt;
+	padding-bottom: 2pt;
+	x-next-type: p;
+}
+
+/*=(Generated Code)=================================================*/
+/*=(WARNING: DO NOT EDIT OR DELETE THIS SECTION!)===================*/
+/*begin!kadov{{=====================================================*/ 
+LI.kadov-p-CNumNote {
+	font-family: Verdana;
+	font-size: 8.0pt;
+	line-height: 12.0pt;
+	color: #000000;
+}
+/*}}end!kadov=======================================================*/ 
+
+
+
+p.NumText {
+	margin-top: 9pt;
+	margin-bottom: 9pt;
+	margin-left: 28pt;
+	margin-right: 0pt;
+	x-next-type: p;
+}
+
+/*=(Generated Code)=================================================*/
+/*=(WARNING: DO NOT EDIT OR DELETE THIS SECTION!)===================*/
+/*begin!kadov{{=====================================================*/ 
+LI.kadov-p-CNumText {
+}
+/*}}end!kadov=======================================================*/ 
+
+
+
+p.NumTip {
+	font-family: Verdana;
+	font-size: 8.0pt;
+	line-height: 12.0pt;
+	color: #000000;
+	background-color: #EAF4E8;
+	margin-top: 9pt;
+	margin-bottom: 9pt;
+	margin-left: 28pt;
+	margin-right: 5%;
+	padding-left: 2pt;
+	padding-right: 2pt;
+	padding-top: 1pt;
+	padding-bottom: 2pt;
+	x-next-type: p;
+}
+
+/*=(Generated Code)=================================================*/
+/*=(WARNING: DO NOT EDIT OR DELETE THIS SECTION!)===================*/
+/*begin!kadov{{=====================================================*/ 
+LI.kadov-p-CNumTip {
+	font-family: Verdana;
+	font-size: 8.0pt;
+	line-height: 12.0pt;
+	color: #000000;
+}
+/*}}end!kadov=======================================================*/ 
+
+
+
+p.NumWarning {
+	font-family: Verdana;
+	font-size: 8.0pt;
+	line-height: 12.0pt;
+	color: #000000;
+	background-color: #F8F6F6;
+	background-color: #FDF0E8;
+	margin-top: 9pt;
+	margin-bottom: 9pt;
+	margin-left: 28pt;
+	margin-right: 5%;
+	padding-left: 2pt;
+	padding-right: 2pt;
+	padding-top: 1pt;
+	padding-bottom: 2pt;
+	border: 1px dotted #ff0000;
+	border: none;
+	x-next-type: p;
+}
+
+/*=(Generated Code)=================================================*/
+/*=(WARNING: DO NOT EDIT OR DELETE THIS SECTION!)===================*/
+/*begin!kadov{{=====================================================*/ 
+LI.kadov-p-CNumWarning {
+	font-family: Verdana;
+	font-size: 8.0pt;
+	line-height: 12.0pt;
+	color: #000000;
+}
+/*}}end!kadov=======================================================*/ 
+
+
+
+p.OptionBody {
+	margin-left: 32pt;
+	margin-right: 0pt;
+	margin-top: 0pt;
+	margin-bottom: 12pt;
+	x-next-class: OptionHeading;
+	x-next-type: h4;
+}
+
+/*=(Generated Code)=================================================*/
+/*=(WARNING: DO NOT EDIT OR DELETE THIS SECTION!)===================*/
+/*begin!kadov{{=====================================================*/ 
+LI.kadov-p-COptionBody {
+}
+/*}}end!kadov=======================================================*/ 
+
+
+
+p.OptionNote {
+	font-family: Verdana;
+	font-size: 8.0pt;
+	line-height: 12.0pt;
+	color: #000000;
+	background-color: #ffffe8;
+	margin-top: 0pt;
+	margin-bottom: 9pt;
+	margin-left: 32pt;
+	margin-right: 5%;
+	padding-left: 2pt;
+	padding-right: 2pt;
+	padding-top: 1pt;
+	padding-bottom: 2pt;
+	x-next-class: FieldBody;
+	x-next-type: p;
+}
+
+/*=(Generated Code)=================================================*/
+/*=(WARNING: DO NOT EDIT OR DELETE THIS SECTION!)===================*/
+/*begin!kadov{{=====================================================*/ 
+LI.kadov-p-COptionNote {
+	font-family: Verdana;
+	font-size: 8.0pt;
+	line-height: 12.0pt;
+	color: #000000;
+}
+/*}}end!kadov=======================================================*/ 
+
+
+
+p.OptionSubBody {
+	margin-left: 52pt;
+	margin-right: 0pt;
+	margin-top: 0pt;
+	margin-bottom: 12pt;
+	x-next-class: OptionSubHeading;
+	x-next-type: h4;
+}
+
+/*=(Generated Code)=================================================*/
+/*=(WARNING: DO NOT EDIT OR DELETE THIS SECTION!)===================*/
+/*begin!kadov{{=====================================================*/ 
+LI.kadov-p-COptionSubBody {
+}
+/*}}end!kadov=======================================================*/ 
+
+
+
+p.OptionTip {
+	font-family: Verdana;
+	font-size: 8.0pt;
+	line-height: 12.0pt;
+	color: #000000;
+	background-color: #EAF4E8;
+	margin-top: 0pt;
+	margin-bottom: 9pt;
+	margin-left: 32pt;
+	margin-right: 5%;
+	padding-left: 2pt;
+	padding-right: 2pt;
+	padding-top: 1pt;
+	padding-bottom: 2pt;
+	x-next-class: OptionBody;
+	x-next-type: p;
+}
+
+/*=(Generated Code)=================================================*/
+/*=(WARNING: DO NOT EDIT OR DELETE THIS SECTION!)===================*/
+/*begin!kadov{{=====================================================*/ 
+LI.kadov-p-COptionTip {
+	font-family: Verdana;
+	font-size: 8.0pt;
+	line-height: 12.0pt;
+	color: #000000;
+}
+/*}}end!kadov=======================================================*/ 
+
+
+
+p.OptionWarning {
+	font-family: Verdana;
+	font-size: 8.0pt;
+	line-height: 12.0pt;
+	color: #000000;
+	background-color: #FDF0E8;
+	margin-top: 0pt;
+	margin-bottom: 9pt;
+	margin-left: 32pt;
+	margin-right: 5%;
+	padding-left: 2pt;
+	padding-right: 2pt;
+	padding-top: 1pt;
+	padding-bottom: 2pt;
+	border: none;
+	x-next-class: OptionBody;
+	x-next-type: p;
+}
+
+/*=(Generated Code)=================================================*/
+/*=(WARNING: DO NOT EDIT OR DELETE THIS SECTION!)===================*/
+/*begin!kadov{{=====================================================*/ 
+LI.kadov-p-COptionWarning {
+	font-family: Verdana;
+	font-size: 8.0pt;
+	line-height: 12.0pt;
+	color: #000000;
+}
+/*}}end!kadov=======================================================*/ 
+
+
+
+p.ParameterBody {
+	margin-left: 12pt;
+	x-next-class: ParameterHeading;
+	x-next-type: h3;
+}
+
+/*=(Generated Code)=================================================*/
+/*=(WARNING: DO NOT EDIT OR DELETE THIS SECTION!)===================*/
+/*begin!kadov{{=====================================================*/ 
+LI.kadov-p-CParameterBody {
+}
+/*}}end!kadov=======================================================*/ 
+
+
+
+p.ParameterNote {
+	font-family: Verdana;
+	font-size: 8.0pt;
+	line-height: 12.0pt;
+	color: #000000;
+	background-color: #ffffe8;
+	margin-top: 0pt;
+	margin-bottom: 9pt;
+	margin-left: 12pt;
+	margin-right: 5%;
+	padding-left: 2pt;
+	padding-right: 2pt;
+	padding-top: 1pt;
+	padding-bottom: 2pt;
+	x-next-class: ParameterBody;
+	x-next-type: p;
+}
+
+/*=(Generated Code)=================================================*/
+/*=(WARNING: DO NOT EDIT OR DELETE THIS SECTION!)===================*/
+/*begin!kadov{{=====================================================*/ 
+LI.kadov-p-CParameterNote {
+	font-family: Verdana;
+	font-size: 8.0pt;
+	line-height: 12.0pt;
+	color: #000000;
+}
+/*}}end!kadov=======================================================*/ 
+
+
+
+p.ParameterTip {
+	font-family: Verdana;
+	font-size: 8.0pt;
+	line-height: 12.0pt;
+	color: #000000;
+	background-color: #EAF4E8;
+	margin-top: 0pt;
+	margin-bottom: 9pt;
+	margin-left: 12pt;
+	margin-right: 5%;
+	padding-left: 2pt;
+	padding-right: 2pt;
+	padding-top: 1pt;
+	padding-bottom: 2pt;
+	x-next-class: ParameterBody;
+	x-next-type: p;
+}
+
+/*=(Generated Code)=================================================*/
+/*=(WARNING: DO NOT EDIT OR DELETE THIS SECTION!)===================*/
+/*begin!kadov{{=====================================================*/ 
+LI.kadov-p-CParameterTip {
+	font-family: Verdana;
+	font-size: 8.0pt;
+	line-height: 12.0pt;
+	color: #000000;
+}
+/*}}end!kadov=======================================================*/ 
+
+
+
+p.ParameterWarning {
+	font-family: Verdana;
+	font-size: 8.0pt;
+	line-height: 12.0pt;
+	color: #000000;
+	background-color: #FDF0E8;
+	margin-top: 0pt;
+	margin-bottom: 9pt;
+	margin-left: 12pt;
+	margin-right: 5%;
+	padding-left: 2pt;
+	padding-right: 2pt;
+	padding-top: 1pt;
+	padding-bottom: 2pt;
+	x-next-class: ParameterBody;
+	x-next-type: p;
+}
+
+/*=(Generated Code)=================================================*/
+/*=(WARNING: DO NOT EDIT OR DELETE THIS SECTION!)===================*/
+/*begin!kadov{{=====================================================*/ 
+LI.kadov-p-CParameterWarning {
+	font-family: Verdana;
+	font-size: 8.0pt;
+	line-height: 12.0pt;
+	color: #000000;
+}
+/*}}end!kadov=======================================================*/ 
+
+
+
+p.Popup {
+	font-family: Arial;
+	font-size: 14pt;
+	font-weight: bold;
+	font-style: normal;
+	color: #ffffff;
+	padding: 6.0pt;
+}
+
+/*=(Generated Code)=================================================*/
+/*=(WARNING: DO NOT EDIT OR DELETE THIS SECTION!)===================*/
+/*begin!kadov{{=====================================================*/ 
+LI.kadov-p-CPopup {
+	font-family: Arial;
+	font-size: 14pt;
+	font-weight: bold;
+	font-style: normal;
+	color: #ffffff;
+}
+/*}}end!kadov=======================================================*/ 
+
+
+
+p.SeeAlso {
+	font-style: italic;
+	font-weight: normal;
+	font-size: 8pt;
+	padding: 1px 8px 2px;
+	background-color: #f0f3f9;
+	margin-top: 18pt;
+	margin-bottom: 12pt;
+	border: 1px solid #e6e9ef;
+}
+
+/*=(Generated Code)=================================================*/
+/*=(WARNING: DO NOT EDIT OR DELETE THIS SECTION!)===================*/
+/*begin!kadov{{=====================================================*/ 
+LI.kadov-p-CSeeAlso {
+	font-style: italic;
+	font-weight: normal;
+	font-size: 8pt;
+}
+/*}}end!kadov=======================================================*/ 
+
+
+
+p.SeeAlso a:link,
+p.SeeAlso a:active,
+p.SeeAlso a:visited {
+	color: #0000ff;
+	x-text-underline: off;
+	x-text-overline: off;
+	x-text-line-through: off;
+	/*begin!kadov{{*/ text-decoration: none none none; /*}}end!kadov*/ 
+}
+
+p.SeeAlso a:hover {
+	color: #0000ff;
+	x-text-underline: normal;
+	/*begin!kadov{{*/ text-decoration: underline; /*}}end!kadov*/ 
+}
+
+p.TableFormat {
+	margin-left: 0pt;
+	margin-right: 0pt;
+	padding-left: 3pt;
+	padding-right: 3pt;
+	padding-top: 3pt;
+	padding-bottom: 3pt;
+}
+
+/*=(Generated Code)=================================================*/
+/*=(WARNING: DO NOT EDIT OR DELETE THIS SECTION!)===================*/
+/*begin!kadov{{=====================================================*/ 
+LI.kadov-p-CTableFormat {
+}
+/*}}end!kadov=======================================================*/ 
+
+
+
+p.TableHeader {
+	font-weight: bold;
+	display: nowrap;
+}
+
+/*=(Generated Code)=================================================*/
+/*=(WARNING: DO NOT EDIT OR DELETE THIS SECTION!)===================*/
+/*begin!kadov{{=====================================================*/ 
+LI.kadov-p-CTableHeader {
+	font-weight: bold;
+}
+/*}}end!kadov=======================================================*/ 
+
+
+
+p.Tip {
+	font-family: Verdana;
+	font-size: 8.0pt;
+	line-height: 12.0pt;
+	color: #000000;
+	background-color: #EAF4E8;
+	margin-top: 0pt;
+	margin-bottom: 9pt;
+	margin-left: 0pt;
+	margin-right: 5%;
+	padding-left: 2pt;
+	padding-right: 2pt;
+	padding-top: 1pt;
+	padding-bottom: 2pt;
+	x-next-class: ;
+	x-next-type: p;
+}
+
+/*=(Generated Code)=================================================*/
+/*=(WARNING: DO NOT EDIT OR DELETE THIS SECTION!)===================*/
+/*begin!kadov{{=====================================================*/ 
+LI.kadov-p-CTip {
+	font-family: Verdana;
+	font-size: 8.0pt;
+	line-height: 12.0pt;
+	color: #000000;
+}
+/*}}end!kadov=======================================================*/ 
+
+
+
+p.Warning {
+	font-family: Verdana;
+	font-size: 8.0pt;
+	line-height: 12.0pt;
+	color: #000000;
+	background-color: #FDF0E8;
+	margin-top: 0pt;
+	margin-bottom: 9pt;
+	margin-left: 0pt;
+	margin-right: 5%;
+	padding-left: 2pt;
+	padding-right: 2pt;
+	padding-top: 1pt;
+	padding-bottom: 2pt;
+	border: 1px dotted #ff0000;
+	border: none;
+	x-next-class: ;
+	x-next-type: p;
+}
+
+/*=(Generated Code)=================================================*/
+/*=(WARNING: DO NOT EDIT OR DELETE THIS SECTION!)===================*/
+/*begin!kadov{{=====================================================*/ 
+LI.kadov-p-CWarning {
+	font-family: Verdana;
+	font-size: 8.0pt;
+	line-height: 12.0pt;
+	color: #000000;
+}
+/*}}end!kadov=======================================================*/ 
+
+
+
+span.Availability {
+	white-space: nowrap;
+	color: #f27129;
+	margin-left: 3ex;
+}
+
+span.Code {
+	font-family: "Courier New", monospace;
+	font-size: 10pt;
+}
+
+span.Default {
+	font-style: italic;
+	color: #aaa;
+}
+
+span.DefaultValue {
+	white-space: nowrap;
+	font-family: "Courier New", monospace;
+	font-size: 9pt;
+	color: #aaa;
+}
+
+span.DefaultValue a.PopupSpot:link,
+span.DefaultValue a.PopupSpot:active,
+span.DefaultValue a.PopupSpot:visited {
+	x-text-underline: off;
+	x-text-overline: off;
+	x-text-line-through: off;
+	color: #aaa;
+	/*begin!kadov{{*/ text-decoration: none none none; /*}}end!kadov*/ 
+}
+
+span.DefaultValue a.PopupSpot:hover {
+	x-text-underline: off;
+	x-text-overline: off;
+	x-text-line-through: off;
+	color: #0000ff;
+	/*begin!kadov{{*/ text-decoration: none none none; /*}}end!kadov*/ 
+}
+
+span.DialogName {
+	font-style: normal;
+	font-weight: normal;
+}
+
+span.Ellipsis {
+	color: #999;
+}
+
+span.Here {
+	font-weight: bold;
+	color: #ffffff;
+	background-color: #699BEF;
+	margin: 0px;
+	padding: 4px 8px;
+	border-top: 1px solid #699BEF;
+	border-bottom: 1px solid #333;
+	border-left: none;
+	border-right: 1px solid #333;
+}
+/* blue tab effect in navbar (NavLocal) */
+	/**/
+
+	
+
+span.nowrap {
+	white-space: nowrap;
+}
+
+span.nowrap img {
+	vertical-align: middle;
+}
+
+span.Path {
+	font-family: "Courier New", monospace;
+	font-size: 9pt;
+}
+
+span.StartMenuItem {
+	font-weight: bold;
+	font-style: italic;
+}
+
+span.VarType {
+	font-family: "Courier New", monospace;
+	font-size: 9pt;
+	font-style: italic;
+	color: #abd;
+}
+
+span.VarType a.PopupSpot:link,
+span.VarType a.PopupSpot:active,
+span.VarType a.PopupSpot:visited {
+	color: #abd;
+	x-text-underline: off;
+	x-text-overline: off;
+	x-text-line-through: off;
+	/*begin!kadov{{*/ text-decoration: none none none; /*}}end!kadov*/ 
+}
+
+span.VarType a.PopupSpot:hover {
+	color: #0000ff;
+	x-text-underline: off;
+	x-text-overline: off;
+	x-text-line-through: off;
+	/*begin!kadov{{*/ text-decoration: none none none; /*}}end!kadov*/ 
+}
+
+span.VarType a:link,
+span.VarType a:active,
+span.VarType a:visited {
+	color: #abd;
+	x-text-underline: off;
+	x-text-overline: off;
+	x-text-line-through: off;
+	/*begin!kadov{{*/ text-decoration: none none none; /*}}end!kadov*/ 
+}
+
+span.VarType a:hover {
+	color: #0000ff;
+	x-text-underline: off;
+	x-text-overline: off;
+	x-text-line-through: off;
+	/*begin!kadov{{*/ text-decoration: none none none; /*}}end!kadov*/ 
+}
+
+span.type {
+	color: #aaa;
+}
+
+span.wab {
+	font-family: Verdana;
+	font-size: 13px;
+	padding: 0px 0px;
+	margin: 0px;
+	border: none;
+	visibility: hidden;
+}
+/* workaround, baybee! */
+	
+
+table.ActionList {
+	margin-top: 18pt;
+	margin-bottom: 18pt;
+	border-top: #c0c0c0 1px solid;
+	border-right: #c0c0c0 1px solid;
+	border-left: #c0c0c0 1px solid;
+	border-bottom: #c0c0c0 1px solid;
+}
+
+table.ActionList img {
+	vertical-align: middle;
+	margin: 2px 0px;
+	margin: 0px;
+	padding: 0px;
+}
+
+table.ActionList p {
+	margin: 0px;
+	margin-bottom: 3pt;
+	padding: 2px;
+}
+
+/*=(Generated Code)=================================================*/
+/*=(WARNING: DO NOT EDIT OR DELETE THIS SECTION!)===================*/
+/*begin!kadov{{=====================================================*/ 
+table.ActionList LI.kadov-p {
+}
+/*}}end!kadov=======================================================*/ 
+
+
+
+table.ActionList p.ListBody {
+	margin-left: 0px;
+	margin-right: 0px;
+	margin-top: 0px;
+	margin-bottom: 3pt;
+	padding-left: 0px;
+	padding-top: 0px;
+	padding-bottom: 0px;
+	padding: 2px;
+}
+
+/*=(Generated Code)=================================================*/
+/*=(WARNING: DO NOT EDIT OR DELETE THIS SECTION!)===================*/
+/*begin!kadov{{=====================================================*/ 
+table.ActionList LI.kadov-p-CListBody {
+}
+/*}}end!kadov=======================================================*/ 
+
+
+
+table.ActionList tr.Category {
+	background-color: #aaa;
+	background-color: #a0a0a0;
+	color: #ffffff;
+}
+
+table.ActionList tr.Category h2.ListHeading {
+	text-transform: uppercase;
+	font-family: Arial;
+	font-size: 9.0pt;
+	font-style: italic;
+	font-weight: bold;
+	letter-spacing: 1ex;
+	color: #ffffff;
+	white-space: nowrap;
+	margin-top: 0px;
+	margin-bottom: 0px;
+	padding-top: 0px;
+	padding-bottom: 1px;
+	padding-top: 1px;
+	padding-bottom: 1px;
+}
+
+/*=(Generated Code)=================================================*/
+/*=(WARNING: DO NOT EDIT OR DELETE THIS SECTION!)===================*/
+/*begin!kadov{{=====================================================*/ 
+table.ActionList tr.Category LI.kadov-h2-CListHeading {
+	text-transform: uppercase;
+	font-family: Arial;
+	font-size: 9.0pt;
+	font-style: italic;
+	font-weight: bold;
+	letter-spacing: 1ex;
+	color: #ffffff;
+	white-space: nowrap;
+}
+/*}}end!kadov=======================================================*/ 
+
+
+
+table.ActionList tr.Header {
+	background-color: #eee;
+	color: #000000;
+}
+
+table.ActionList tr.Header p {
+	font-family: Verdana;
+	font-size: 8.0pt;
+	font-style: normal;
+	font-weight: bold;
+	color: #3176EA;
+	white-space: nowrap;
+	margin-bottom: 0px;
+	padding-top: 0px;
+	padding-bottom: 1px;
+}
+
+/*=(Generated Code)=================================================*/
+/*=(WARNING: DO NOT EDIT OR DELETE THIS SECTION!)===================*/
+/*begin!kadov{{=====================================================*/ 
+table.ActionList tr.Header LI.kadov-p {
+	font-family: Verdana;
+	font-size: 8.0pt;
+	font-style: normal;
+	font-weight: bold;
+	color: #3176EA;
+	white-space: nowrap;
+}
+/*}}end!kadov=======================================================*/ 
+
+
+
+table.Parameters {
+	margin-top: 6pt;
+	margin-bottom: 9pt;
+}
+
+table.Parameters h4.OptionHeading {
+	margin-left: 12pt;
+}
+
+/*=(Generated Code)=================================================*/
+/*=(WARNING: DO NOT EDIT OR DELETE THIS SECTION!)===================*/
+/*begin!kadov{{=====================================================*/ 
+table.Parameters LI.kadov-h4-COptionHeading {
+}
+/*}}end!kadov=======================================================*/ 
+
+
+
+table.Parameters p {
+	font-weight: normal;
+	color: #000000;
+	margin-left: 3pt;
+	margin-right: 3pt;
+	margin-top: 2pt;
+	margin-bottom: 2pt;
+}
+
+/*=(Generated Code)=================================================*/
+/*=(WARNING: DO NOT EDIT OR DELETE THIS SECTION!)===================*/
+/*begin!kadov{{=====================================================*/ 
+table.Parameters LI.kadov-p {
+	font-weight: normal;
+	color: #000000;
+}
+/*}}end!kadov=======================================================*/ 
+
+
+
+table.Parameters p.OptionBody {
+	margin-left: 12pt;
+	margin-right: 0pt;
+	margin-bottom: 9pt;
+}
+
+/*=(Generated Code)=================================================*/
+/*=(WARNING: DO NOT EDIT OR DELETE THIS SECTION!)===================*/
+/*begin!kadov{{=====================================================*/ 
+table.Parameters LI.kadov-p-COptionBody {
+}
+/*}}end!kadov=======================================================*/ 
+
+
+
+tr.TableHeader td {
+	background-color: #c0c0c0;
+}
+
+tr.TableHeader td p {
+	color: #ffffff;
+	font-weight: bold;
+	white-space: nowrap;
+}
+
+/*=(Generated Code)=================================================*/
+/*=(WARNING: DO NOT EDIT OR DELETE THIS SECTION!)===================*/
+/*begin!kadov{{=====================================================*/ 
+tr.TableHeader td LI.kadov-p {
+	color: #ffffff;
+	font-weight: bold;
+	white-space: nowrap;
+}
+/*}}end!kadov=======================================================*/ 
+
+
+
+</style>
+</head>
+
+<body>
+
+<h1>Menu Help File</h1><p class="NavLocal"><span class=wab>&nbsp;</span><span class="here">Welcome</span></p><div class="Properties"><h2>Menu Help File</h2><h3>Plugin Name:</h3><p><blockquote>Menu</blockquote></p><h3>Current Version:</h3><p><blockquote>3.3.0.0</blockquote></p><h3>Description:</h3><p><blockquote>The Menu Action Plugin makes creating and manipulating menus a cinch.<br>Forget those exhaustive tables of properties and subtables. With the Menu plugin you'll be on your way to simple menus in no time at all. no more referencing menu items by number. No more miles of code in your On Menu events. This plugin allows you to reference your menu items by name and to specify code based on those name so you never need to remember a menu id again.</blockquote></p><h3>Licence:</h3><p><blockquote>Free to use and distribute</blockquote></p><h3>Author:</h3><p><blockquote>Centauri Soldier</blockquote></p><h3>Web:</h3><p><blockquote><a href="http://www.AMSPublic.com" target="_blank">www.AMSPublic.com</a></blockquote></p><h3>E-mail:</h3><p><blockquote><a href="mailto:CentuariSoldier@AMSPublic.com">CentuariSoldier@AMSPublic.com</a></blockquote></p><h3>Copyright:</h3><p><blockquote>© 2008 - 2010 AMSPublic.com</blockquote></p><h3>Install Notes:</h3><p><blockquote>Place the Menu folder in your AutoPlay MEdia Studio\Plugins\Actions folder.</blockquote></p></div><!-- /Properties --><hr><div class="Properties"><h2>Table of Contents</h2><p><blockquote><A href="#Menu.Create"><b>Menu.Create</b></A><br><A href="#Menu.DoesExist"><b>Menu.DoesExist</b></A><br><A href="#Menu.Enable"><b>Menu.Enable</b></A><br><A href="#Menu.GetActive"><b>Menu.GetActive</b></A><br><A href="#Menu.GetChecked"><b>Menu.GetChecked</b></A><br><A href="#Menu.GetEnabled"><b>Menu.GetEnabled</b></A><br><A href="#Menu.GetItemProperties"><b>Menu.GetItemProperties</b></A><br><A href="#Menu.GetNames"><b>Menu.GetNames</b></A><br><A href="#Menu.GetTable"><b>Menu.GetTable</b></A><br><A href="#Menu.GetXML"><b>Menu.GetXML</b></A><br><A href="#Menu.LoadFromFile"><b>Menu.LoadFromFile</b></A><br><A href="#Menu.OnMenu"><b>Menu.OnMenu</b></A><br><A href="#Menu.RemoveItem"><b>Menu.RemoveItem</b></A><br><A href="#Menu.Rename"><b>Menu.Rename</b></A><br><A href="#Menu.RenameItem"><b>Menu.RenameItem</b></A><br><A href="#Menu.SaveToFile"><b>Menu.SaveToFile</b></A><br><A href="#Menu.SetActive"><b>Menu.SetActive</b></A><br><A href="#Menu.SetChecked"><b>Menu.SetChecked</b></A><br><A href="#Menu.SetDelmiter"><b>Menu.SetDelmiter</b></A><br><A href="#Menu.SetEnabled"><b>Menu.SetEnabled</b></A><br><A href="#Menu.SetItem"><b>Menu.SetItem</b></A><br><A href="#Menu.SetXML"><b>Menu.SetXML</b></A><br><A href="#Menu.ToggleChecked"><b>Menu.ToggleChecked</b></A><br><A href="#Menu.ToggleEnabled"><b>Menu.ToggleEnabled</b></A><br><A href="#Menu.Update"><b>Menu.Update</b></A><br></blockquote></p></div><!-- /Properties --><h1><A name="Menu.Create">Menu.Create</A></h1><br><div class=Declaration><!--(Table)=========================================================--><!--begin!kadov{{--><div align=left><!--}}end!kadov--><table x-use-null-cells		style="float: alignleft;		x-cell-content-align: Top;		border-spacing: 0px;		border-spacing: 0px;"		cellspacing=0><col><col><tr style="x-cell-content-align: top;" valign=top><td style="padding-right: 0px;			padding-left: 0px;			border-top-style: none;			border-bottom-style: none;			border-right-style: none;			border-left-style: none;"><p><span class=VarType>(number)&nbsp;</span>Menu.Create (&nbsp;</td><td style="padding-right: 0px;			padding-left: 0px;			border-top-style: none;			border-right-style: none;			border-bottom-style: none;"><p><span class=VarType>(string)&nbsp;</span>Menu <span class=DefaultValue> = "Main Menu"</span> )</p></td></tr></table><!--begin!kadov{{--></div><!--}}end!kadov--></div><h2 style="margin-bottom: 3pt;">Description</h2><p><blockquote>Creates a menu table for later use.</blockquote></p><blockquote><p class="Note"> <span style="font-weight: bold;">Note: </span>This action is automatically called when the Menu.SetActive() function is called and is, thus, not needed for standard menu operations.</p></blockquote><h2 class="H2Tight">Parameters</h2><h3 class="ParameterHeading">Menu</h3><p class="ParameterBody"><span class="type">(string)&nbsp;</span>The name of the menu to create.</p><h2>Returns</h2><blockquote><p><span class=type>(number) </span><br>Returns 0 if the action was successful.<br>Returns 1 if the menu already exists.</p></blockquote><br><h1><A name="Menu.DoesExist">Menu.DoesExist</A></h1><br><div class=Declaration><!--(Table)=========================================================--><!--begin!kadov{{--><div align=left><!--}}end!kadov--><table x-use-null-cells		style="float: alignleft;		x-cell-content-align: Top;		border-spacing: 0px;		border-spacing: 0px;"		cellspacing=0><col><col><tr style="x-cell-content-align: top;" valign=top><td style="padding-right: 0px;			padding-left: 0px;			border-top-style: none;			border-bottom-style: none;			border-right-style: none;			border-left-style: none;"><p><span class=VarType>(boolean)&nbsp;</span>Menu.DoesExist (&nbsp;</td><td style="padding-right: 0px;			padding-left: 0px;			border-top-style: none;			border-right-style: none;			border-bottom-style: none;"><p><span class=VarType>(string)&nbsp;</span>Menu <span class=DefaultValue> = "Main Menu"</span> )</p></td></tr></table><!--begin!kadov{{--></div><!--}}end!kadov--></div><h2 style="margin-bottom: 3pt;">Description</h2><p><blockquote>Determines whether or not a menu exists.</blockquote></p><h2 class="H2Tight">Parameters</h2><h3 class="ParameterHeading">Menu</h3><p class="ParameterBody"><span class="type">(string)&nbsp;</span>The name of the menu for which to search.</p><h2>Returns</h2><blockquote><p><span class=type>(boolean) </span><br>Returns true if the menu exists and false if it does not.</p></blockquote><br><h1><A name="Menu.Enable">Menu.Enable</A></h1><br><div class=Declaration><!--(Table)=========================================================--><!--begin!kadov{{--><div align=left><!--}}end!kadov--><table x-use-null-cells		style="float: alignleft;		x-cell-content-align: Top;		border-spacing: 0px;		border-spacing: 0px;"		cellspacing=0><col><col><tr style="x-cell-content-align: top;" valign=top><td style="padding-right: 0px;			padding-left: 0px;			border-top-style: none;			border-bottom-style: none;			border-right-style: none;			border-left-style: none;"><p>Menu.Enable (&nbsp;</td><td style="padding-right: 0px;			padding-left: 0px;			border-top-style: none;			border-right-style: none;			border-bottom-style: none;"><p><span class=VarType>(boolean)&nbsp;</span>Enable <span class=DefaultValue> = true</span> )</p></td></tr></table><!--begin!kadov{{--></div><!--}}end!kadov--></div><h2 style="margin-bottom: 3pt;">Description</h2><p><blockquote>Enables or disbales the menu bar.</blockquote></p><h2 class="H2Tight">Parameters</h2><h3 class="ParameterHeading">Enable</h3><p class="ParameterBody"><span class="type">(boolean)&nbsp;</span>Whether or not to enable the menu bar.</p><h2>Returns</h2><blockquote><p>This action dose not return any value.</p></blockquote><br><h1><A name="Menu.GetActive">Menu.GetActive</A></h1><br><div class=Declaration><!--(Table)=========================================================--><!--begin!kadov{{--><div align=left><!--}}end!kadov--><table x-use-null-cells		style="float: alignleft;		x-cell-content-align: Top;		border-spacing: 0px;		border-spacing: 0px;"		cellspacing=0><col><col><tr style="x-cell-content-align: top;" valign=top><td style="padding-right: 0px;			padding-left: 0px;			border-top-style: none;			border-bottom-style: none;			border-right-style: none;			border-left-style: none;"><p><span class=VarType>(string)&nbsp;</span>Menu.GetActive ()</td><td style="padding-right: 0px;			padding-left: 0px;			border-top-style: none;			border-right-style: none;			border-bottom-style: none;"></td></tr></table><!--begin!kadov{{--></div><!--}}end!kadov--></div><h2 style="margin-bottom: 3pt;">Description</h2><p><blockquote>Gets the name of the currently active menu table.</blockquote></p><h2>Returns</h2><blockquote><p><span class=type>(string) </span><br>Returns the name of the active menu.<br>If there is no active menu then a blank strin gis returned.</p></blockquote><br><h1><A name="Menu.GetChecked">Menu.GetChecked</A></h1><br><div class=Declaration><!--(Table)=========================================================--><!--begin!kadov{{--><div align=left><!--}}end!kadov--><table x-use-null-cells		style="float: alignleft;		x-cell-content-align: Top;		border-spacing: 0px;		border-spacing: 0px;"		cellspacing=0><col><col><tr style="x-cell-content-align: top;" valign=top><td style="padding-right: 0px;			padding-left: 0px;			border-top-style: none;			border-bottom-style: none;			border-right-style: none;			border-left-style: none;"><p><span class=VarType>(boolean)&nbsp;</span>Menu.GetChecked (&nbsp;</td><td style="padding-right: 0px;			padding-left: 0px;			border-top-style: none;			border-right-style: none;			border-bottom-style: none;"><p><span class=VarType>(string)&nbsp;</span>Menu Item <span class=DefaultValue> = "File|Open"</span> )</p></td></tr></table><!--begin!kadov{{--></div><!--}}end!kadov--></div><h2 style="margin-bottom: 3pt;">Description</h2><p><blockquote>Determines whether or not a specifc menu item is checked.</blockquote></p><h2 class="H2Tight">Parameters</h2><h3 class="ParameterHeading">Menu Item</h3><p class="ParameterBody"><span class="type">(string)&nbsp;</span>The path to the menu item.</p><h2>Returns</h2><blockquote><p><span class=type>(boolean) </span><br>Returns true if the item is checked and false if it is not.<br>If there is no active menu, -3 is returned.</p></blockquote><br><h1><A name="Menu.GetEnabled">Menu.GetEnabled</A></h1><br><div class=Declaration><!--(Table)=========================================================--><!--begin!kadov{{--><div align=left><!--}}end!kadov--><table x-use-null-cells		style="float: alignleft;		x-cell-content-align: Top;		border-spacing: 0px;		border-spacing: 0px;"		cellspacing=0><col><col><tr style="x-cell-content-align: top;" valign=top><td style="padding-right: 0px;			padding-left: 0px;			border-top-style: none;			border-bottom-style: none;			border-right-style: none;			border-left-style: none;"><p><span class=VarType>(boolean)&nbsp;</span>Menu.GetEnabled (&nbsp;</td><td style="padding-right: 0px;			padding-left: 0px;			border-top-style: none;			border-right-style: none;			border-bottom-style: none;"><p><span class=VarType>(string)&nbsp;</span>Menu Item <span class=DefaultValue> = "File|Open"</span> )</p></td></tr></table><!--begin!kadov{{--></div><!--}}end!kadov--></div><h2 style="margin-bottom: 3pt;">Description</h2><p><blockquote>Determines whether or not a specifc menu item is checked.</blockquote></p><h2 class="H2Tight">Parameters</h2><h3 class="ParameterHeading">Menu Item</h3><p class="ParameterBody"><span class="type">(string)&nbsp;</span>The path to the menu item.</p><h2>Returns</h2><blockquote><p><span class=type>(boolean) </span><br>Returns true if the item is enabled and false if it is not.<br>If there is no active menu, -3 is returned.</p></blockquote><br><h1><A name="Menu.GetItemProperties">Menu.GetItemProperties</A></h1><br><div class=Declaration><!--(Table)=========================================================--><!--begin!kadov{{--><div align=left><!--}}end!kadov--><table x-use-null-cells		style="float: alignleft;		x-cell-content-align: Top;		border-spacing: 0px;		border-spacing: 0px;"		cellspacing=0><col><col><tr style="x-cell-content-align: top;" valign=top><td style="padding-right: 0px;			padding-left: 0px;			border-top-style: none;			border-bottom-style: none;			border-right-style: none;			border-left-style: none;"><p><span class=VarType>(table)&nbsp;</span>Menu.GetItemProperties (&nbsp;</td><td style="padding-right: 0px;			padding-left: 0px;			border-top-style: none;			border-right-style: none;			border-bottom-style: none;"><p><span class=VarType>(string)&nbsp;</span>Menu Item <span class=DefaultValue> = "File|Open"</span> )</p></td></tr></table><!--begin!kadov{{--></div><!--}}end!kadov--></div><h2 style="margin-bottom: 3pt;">Description</h2><p><blockquote>Gets the properties of a specific menu item.</blockquote></p><h2 class="H2Tight">Parameters</h2><h3 class="ParameterHeading">Menu Item</h3><p class="ParameterBody"><span class="type">(string)&nbsp;</span>The path to the menu item.</p><h2>Returns</h2><blockquote><p><span class=type>(table) </span>Returns the properties of the item in a table indexed by ID, Text, IconID, Checked, and Enabled.<br>If the menu item does not exist then nil is returned.<br>If there is no active menu then -3 is returned.</p></blockquote><br><h1><A name="Menu.GetNames">Menu.GetNames</A></h1><br><div class=Declaration><!--(Table)=========================================================--><!--begin!kadov{{--><div align=left><!--}}end!kadov--><table x-use-null-cells		style="float: alignleft;		x-cell-content-align: Top;		border-spacing: 0px;		border-spacing: 0px;"		cellspacing=0><col><col><tr style="x-cell-content-align: top;" valign=top><td style="padding-right: 0px;			padding-left: 0px;			border-top-style: none;			border-bottom-style: none;			border-right-style: none;			border-left-style: none;"><p><span class=VarType>(table)&nbsp;</span>Menu.GetNames ()</td><td style="padding-right: 0px;			padding-left: 0px;			border-top-style: none;			border-right-style: none;			border-bottom-style: none;"></td></tr></table><!--begin!kadov{{--></div><!--}}end!kadov--></div><h2 style="margin-bottom: 3pt;">Description</h2><p><blockquote>Get the names of all menus.</blockquote></p><blockquote><p class="Note"> <span style="font-weight: bold;">Note: </span>For most applications one menu will suffice but this is available in case you need to create more than one menu layout.</p></blockquote><h2>Returns</h2><blockquote><p><span class=type>(table) </span><br>Returns the names of all menus in a numerically indexed table.<br>If there are no menus then nil is returned.</p></blockquote><br><h1><A name="Menu.GetTable">Menu.GetTable</A></h1><br><div class=Declaration><!--(Table)=========================================================--><!--begin!kadov{{--><div align=left><!--}}end!kadov--><table x-use-null-cells		style="float: alignleft;		x-cell-content-align: Top;		border-spacing: 0px;		border-spacing: 0px;"		cellspacing=0><col><col><tr style="x-cell-content-align: top;" valign=top><td style="padding-right: 0px;			padding-left: 0px;			border-top-style: none;			border-bottom-style: none;			border-right-style: none;			border-left-style: none;"><p><span class=VarType>(table)&nbsp;</span>Menu.GetTable (&nbsp;</td><td style="padding-right: 0px;			padding-left: 0px;			border-top-style: none;			border-right-style: none;			border-bottom-style: none;"><p><span class=VarType>(string)&nbsp;</span>Menu <span class=DefaultValue> = "Main Menu"</span> )</p></td></tr></table><!--begin!kadov{{--></div><!--}}end!kadov--></div><h2 style="margin-bottom: 3pt;">Description</h2><p><blockquote>Gets the specified menu in the format created by Application.GetMenu().</blockquote></p><h2 class="H2Tight">Parameters</h2><h3 class="ParameterHeading">Menu</h3><p class="ParameterBody"><span class="type">(string)&nbsp;</span>The name of the menu.</p><h2>Returns</h2><blockquote><p><span class=type>(table) </span><br>Returns the menu table.<br>If the menu does not exist then -1 is returned.</p></blockquote><br><h1><A name="Menu.GetXML">Menu.GetXML</A></h1><br><div class=Declaration><!--(Table)=========================================================--><!--begin!kadov{{--><div align=left><!--}}end!kadov--><table x-use-null-cells		style="float: alignleft;		x-cell-content-align: Top;		border-spacing: 0px;		border-spacing: 0px;"		cellspacing=0><col><col><tr style="x-cell-content-align: top;" valign=top><td style="padding-right: 0px;			padding-left: 0px;			border-top-style: none;			border-bottom-style: none;			border-right-style: none;			border-left-style: none;"><p><span class=VarType>(string)&nbsp;</span>Menu.GetXML (&nbsp;</td><td style="padding-right: 0px;			padding-left: 0px;			border-top-style: none;			border-right-style: none;			border-bottom-style: none;"><p><span class=VarType>(string)&nbsp;</span>Menu Item <span class=DefaultValue> = "File|Open"</span> )</p></td></tr></table><!--begin!kadov{{--></div><!--}}end!kadov--></div><h2 style="margin-bottom: 3pt;">Description</h2><p><blockquote>Gets the specified menu as an xml table.</blockquote></p><blockquote><p class="Note"> <span style="font-weight: bold;">Note: </span>No Menu function will affect any loaded xml documents you may have in memory.</p></blockquote><h2 class="H2Tight">Parameters</h2><h3 class="ParameterHeading">Menu Item</h3><p class="ParameterBody"><span class="type">(string)&nbsp;</span>The path to the menu item.</p><h2>Returns</h2><blockquote><p><span class=type>(string) </span><br>Returns a string containing the menu xml.<br>If the menu does not exist then -1 is returned.</p></blockquote><br><h1><A name="Menu.LoadFromFile">Menu.LoadFromFile</A></h1><br><div class=Declaration><!--(Table)=========================================================--><!--begin!kadov{{--><div align=left><!--}}end!kadov--><table x-use-null-cells		style="float: alignleft;		x-cell-content-align: Top;		border-spacing: 0px;		border-spacing: 0px;"		cellspacing=0><col><col><tr style="x-cell-content-align: top;" valign=top><td style="padding-right: 0px;			padding-left: 0px;			border-top-style: none;			border-bottom-style: none;			border-right-style: none;			border-left-style: none;"><p><span class=VarType>(number)&nbsp;</span>Menu.LoadFromFile (&nbsp;</td><td style="padding-right: 0px;			padding-left: 0px;			border-top-style: none;			border-right-style: none;			border-bottom-style: none;"><p><span class=VarType>(string)&nbsp;</span>Menu <span class=DefaultValue> = "Main Menu"</span>, </p><p><span class=VarType>(string)&nbsp;</span>File <span class=DefaultValue> = "C:\\Main Menu.xml"</span> )</p></td></tr></table><!--begin!kadov{{--></div><!--}}end!kadov--></div><h2 style="margin-bottom: 3pt;">Description</h2><p><blockquote>Loads the xml menu table from a file. If the specified menu does not exist, it will be created, otherwise it will be overwrtitten.</blockquote></p><h2 class="H2Tight">Parameters</h2><h3 class="ParameterHeading">Menu</h3><p class="ParameterBody"><span class="type">(string)&nbsp;</span>The name of the menu.</p><h3 class="ParameterHeading">File</h3><p class="ParameterBody"><span class="type">(string)&nbsp;</span>The full path to the menu xml file.</p><h2>Returns</h2><blockquote><p><span class=type>(number) </span><br>Returns 0 if the action was successful.<br>Returns -4 if a file error occured (Use Application.GetlastError() to determine the exact problem).</p></blockquote><br><h1><A name="Menu.OnMenu">Menu.OnMenu</A></h1><br><div class=Declaration><!--(Table)=========================================================--><!--begin!kadov{{--><div align=left><!--}}end!kadov--><table x-use-null-cells		style="float: alignleft;		x-cell-content-align: Top;		border-spacing: 0px;		border-spacing: 0px;"		cellspacing=0><col><col><tr style="x-cell-content-align: top;" valign=top><td style="padding-right: 0px;			padding-left: 0px;			border-top-style: none;			border-bottom-style: none;			border-right-style: none;			border-left-style: none;"><p>Menu.OnMenu (&nbsp;</td><td style="padding-right: 0px;			padding-left: 0px;			border-top-style: none;			border-right-style: none;			border-bottom-style: none;"><p><span class=VarType>(number)&nbsp;</span>e_ID <span class=DefaultValue> = e_ID</span> )</p></td></tr></table><!--begin!kadov{{--></div><!--}}end!kadov--></div><h2 style="margin-bottom: 3pt;">Description</h2><p><blockquote>This must be placed in the On Menu sections of your project in order for this plugin to work.</blockquote></p><h2 class="H2Tight">Parameters</h2><h3 class="ParameterHeading">e_ID</h3><p class="ParameterBody"><span class="type">(number)&nbsp;</span>This must be left as e_ID.</p><h2>Returns</h2><blockquote><p>This action dose not return any value.</p></blockquote><br><h1><A name="Menu.RemoveItem">Menu.RemoveItem</A></h1><br><div class=Declaration><!--(Table)=========================================================--><!--begin!kadov{{--><div align=left><!--}}end!kadov--><table x-use-null-cells		style="float: alignleft;		x-cell-content-align: Top;		border-spacing: 0px;		border-spacing: 0px;"		cellspacing=0><col><col><tr style="x-cell-content-align: top;" valign=top><td style="padding-right: 0px;			padding-left: 0px;			border-top-style: none;			border-bottom-style: none;			border-right-style: none;			border-left-style: none;"><p><span class=VarType>(number)&nbsp;</span>Menu.RemoveItem (&nbsp;</td><td style="padding-right: 0px;			padding-left: 0px;			border-top-style: none;			border-right-style: none;			border-bottom-style: none;"><p><span class=VarType>(string)&nbsp;</span>Menu Item <span class=DefaultValue> = "File|Open"</span>, </p><p><span class=VarType>(boolean)&nbsp;</span>AutoUpdate <span class=DefaultValue> = true</span> )</p></td></tr></table><!--begin!kadov{{--></div><!--}}end!kadov--></div><h2 style="margin-bottom: 3pt;">Description</h2><p><blockquote>Deletes and item from the specified menu.</blockquote></p><h2 class="H2Tight">Parameters</h2><h3 class="ParameterHeading">Menu Item</h3><p class="ParameterBody"><span class="type">(string)&nbsp;</span>The path to the menu item.</p><h3 class="ParameterHeading">AutoUpdate</h3><p class="ParameterBody"><span class="type">(boolean)&nbsp;</span>Whether or not to auto-update after the action is complete.</p><blockquote><p class="Note"> <span style="font-weight: bold;">Note: </span>This can be left nil.</p></blockquote><h2>Returns</h2><blockquote><p><span class=type>(number) </span><br>Returns 0 if the action was successful.<br>Returns -3 if there is no active menu.</p></blockquote><br><h1><A name="Menu.Rename">Menu.Rename</A></h1><br><div class=Declaration><!--(Table)=========================================================--><!--begin!kadov{{--><div align=left><!--}}end!kadov--><table x-use-null-cells		style="float: alignleft;		x-cell-content-align: Top;		border-spacing: 0px;		border-spacing: 0px;"		cellspacing=0><col><col><tr style="x-cell-content-align: top;" valign=top><td style="padding-right: 0px;			padding-left: 0px;			border-top-style: none;			border-bottom-style: none;			border-right-style: none;			border-left-style: none;"><p><span class=VarType>(number)&nbsp;</span>Menu.Rename (&nbsp;</td><td style="padding-right: 0px;			padding-left: 0px;			border-top-style: none;			border-right-style: none;			border-bottom-style: none;"><p><span class=VarType>(string)&nbsp;</span>Old Name <span class=DefaultValue> = "Main Menu"</span>, </p><p><span class=VarType>(string)&nbsp;</span>New Name <span class=DefaultValue> = "Better Menu"</span> )</p></td></tr></table><!--begin!kadov{{--></div><!--}}end!kadov--></div><h2 style="margin-bottom: 3pt;">Description</h2><p><blockquote>Renames a menu table.</blockquote></p><h2 class="H2Tight">Parameters</h2><h3 class="ParameterHeading">Old Name</h3><p class="ParameterBody"><span class="type">(string)&nbsp;</span>The original name of the menu.</p><h3 class="ParameterHeading">New Name</h3><p class="ParameterBody"><span class="type">(string)&nbsp;</span>The new name ot use.</p><h2>Returns</h2><blockquote><p><span class=type>(number) </span><br>Returns 0 if the action was successful.<br>Returns 1 if the new menu name references a menu that already exists.<br>Returns -1 if the original menu name references a menu that does not exist.</p></blockquote><br><h1><A name="Menu.RenameItem">Menu.RenameItem</A></h1><br><div class=Declaration><!--(Table)=========================================================--><!--begin!kadov{{--><div align=left><!--}}end!kadov--><table x-use-null-cells		style="float: alignleft;		x-cell-content-align: Top;		border-spacing: 0px;		border-spacing: 0px;"		cellspacing=0><col><col><tr style="x-cell-content-align: top;" valign=top><td style="padding-right: 0px;			padding-left: 0px;			border-top-style: none;			border-bottom-style: none;			border-right-style: none;			border-left-style: none;"><p><span class=VarType>(number)&nbsp;</span>Menu.RenameItem (&nbsp;</td><td style="padding-right: 0px;			padding-left: 0px;			border-top-style: none;			border-right-style: none;			border-bottom-style: none;"><p><span class=VarType>(string)&nbsp;</span>Menu Item <span class=DefaultValue> = "File|Open"</span>, </p><p><span class=VarType>(string)&nbsp;</span>New Name <span class=DefaultValue> = "New Item"</span>, </p><p><span class=VarType>(boolean)&nbsp;</span>AutoUpdate <span class=DefaultValue> = true</span> )</p></td></tr></table><!--begin!kadov{{--></div><!--}}end!kadov--></div><h2 style="margin-bottom: 3pt;">Description</h2><p><blockquote>Renames a menu item</blockquote></p><h2 class="H2Tight">Parameters</h2><h3 class="ParameterHeading">Menu Item</h3><p class="ParameterBody"><span class="type">(string)&nbsp;</span>The path to the menu item.</p><h3 class="ParameterHeading">New Name</h3><p class="ParameterBody"><span class="type">(string)&nbsp;</span>The name to which the item will be renamed.</p><h3 class="ParameterHeading">AutoUpdate</h3><p class="ParameterBody"><span class="type">(boolean)&nbsp;</span>Whether or not to auto-update after the action is complete.</p><blockquote><p class="Note"> <span style="font-weight: bold;">Note: </span>This can be left nil.</p></blockquote><h2>Returns</h2><blockquote><p><span class=type>(number) </span><br>Returns 0 if the action was successful.<br>Returns -3 if there is no active menu.</p></blockquote><br><h1><A name="Menu.SaveToFile">Menu.SaveToFile</A></h1><br><div class=Declaration><!--(Table)=========================================================--><!--begin!kadov{{--><div align=left><!--}}end!kadov--><table x-use-null-cells		style="float: alignleft;		x-cell-content-align: Top;		border-spacing: 0px;		border-spacing: 0px;"		cellspacing=0><col><col><tr style="x-cell-content-align: top;" valign=top><td style="padding-right: 0px;			padding-left: 0px;			border-top-style: none;			border-bottom-style: none;			border-right-style: none;			border-left-style: none;"><p><span class=VarType>(number)&nbsp;</span>Menu.SaveToFile (&nbsp;</td><td style="padding-right: 0px;			padding-left: 0px;			border-top-style: none;			border-right-style: none;			border-bottom-style: none;"><p><span class=VarType>(string)&nbsp;</span>Menu <span class=DefaultValue> = "Main Menu"</span>, </p><p><span class=VarType>(string)&nbsp;</span>File <span class=DefaultValue> = "C:\\Main Menu.xml"</span> )</p></td></tr></table><!--begin!kadov{{--></div><!--}}end!kadov--></div><h2 style="margin-bottom: 3pt;">Description</h2><p><blockquote>Save the specified menu xml data to file.</blockquote></p><h2 class="H2Tight">Parameters</h2><h3 class="ParameterHeading">Menu</h3><p class="ParameterBody"><span class="type">(string)&nbsp;</span>The name of the menu.</p><h3 class="ParameterHeading">File</h3><p class="ParameterBody"><span class="type">(string)&nbsp;</span>The full path where the xml file will be saved.</p><h2>Returns</h2><blockquote><p><span class=type>(number) </span><br>Returns 0 if the action was successful.<br>Returns -1 if the menu does not exist.<br>Returns -4 if a file error occured (Use Application.GetlastError() to determine the exact problem).</p></blockquote><br><h1><A name="Menu.SetActive">Menu.SetActive</A></h1><br><div class=Declaration><!--(Table)=========================================================--><!--begin!kadov{{--><div align=left><!--}}end!kadov--><table x-use-null-cells		style="float: alignleft;		x-cell-content-align: Top;		border-spacing: 0px;		border-spacing: 0px;"		cellspacing=0><col><col><tr style="x-cell-content-align: top;" valign=top><td style="padding-right: 0px;			padding-left: 0px;			border-top-style: none;			border-bottom-style: none;			border-right-style: none;			border-left-style: none;"><p>Menu.SetActive (&nbsp;</td><td style="padding-right: 0px;			padding-left: 0px;			border-top-style: none;			border-right-style: none;			border-bottom-style: none;"><p><span class=VarType>(string)&nbsp;</span>Menu <span class=DefaultValue> = "Main Menu"</span> )</p></td></tr></table><!--begin!kadov{{--></div><!--}}end!kadov--></div><h2 style="margin-bottom: 3pt;">Description</h2><p><blockquote>Sets the specified menu table to active. If it does not exist, it will be created.</blockquote></p><blockquote><p class="Note"> <span style="font-weight: bold;">Note: </span>This function must be called before performing any other menu actions.</p></blockquote><h2 class="H2Tight">Parameters</h2><h3 class="ParameterHeading">Menu</h3><p class="ParameterBody"><span class="type">(string)&nbsp;</span>The name of the menu to set active.</p><h2>Returns</h2><blockquote><p>This action dose not return any value.</p></blockquote><br><h1><A name="Menu.SetChecked">Menu.SetChecked</A></h1><br><div class=Declaration><!--(Table)=========================================================--><!--begin!kadov{{--><div align=left><!--}}end!kadov--><table x-use-null-cells		style="float: alignleft;		x-cell-content-align: Top;		border-spacing: 0px;		border-spacing: 0px;"		cellspacing=0><col><col><tr style="x-cell-content-align: top;" valign=top><td style="padding-right: 0px;			padding-left: 0px;			border-top-style: none;			border-bottom-style: none;			border-right-style: none;			border-left-style: none;"><p><span class=VarType>(number)&nbsp;</span>Menu.SetChecked (&nbsp;</td><td style="padding-right: 0px;			padding-left: 0px;			border-top-style: none;			border-right-style: none;			border-bottom-style: none;"><p><span class=VarType>(string)&nbsp;</span>Menu Item <span class=DefaultValue> = "File|Open"</span>, </p><p><span class=VarType>(boolean)&nbsp;</span>Checked <span class=DefaultValue> = true</span>, </p><p><span class=VarType>(boolean)&nbsp;</span>AutoUpdate <span class=DefaultValue> = true</span> )</p></td></tr></table><!--begin!kadov{{--></div><!--}}end!kadov--></div><h2 style="margin-bottom: 3pt;">Description</h2><p><blockquote>Sets a menu item checked or not.</blockquote></p><h2 class="H2Tight">Parameters</h2><h3 class="ParameterHeading">Menu Item</h3><p class="ParameterBody"><span class="type">(string)&nbsp;</span>The path to the menu item.</p><h3 class="ParameterHeading">Checked</h3><p class="ParameterBody"><span class="type">(boolean)&nbsp;</span>Whether or not the item will be checked.</p><h3 class="ParameterHeading">AutoUpdate</h3><p class="ParameterBody"><span class="type">(boolean)&nbsp;</span>Whether or not to auto-update after the action is complete.</p><blockquote><p class="Note"> <span style="font-weight: bold;">Note: </span>This can be left nil.</p></blockquote><h2>Returns</h2><blockquote><p><span class=type>(number) </span><br>Returns 0 if the action was successful.<br>Returns -3 if there is no active menu.</p></blockquote><br><h1><A name="Menu.SetDelmiter">Menu.SetDelmiter</A></h1><br><div class=Declaration><!--(Table)=========================================================--><!--begin!kadov{{--><div align=left><!--}}end!kadov--><table x-use-null-cells		style="float: alignleft;		x-cell-content-align: Top;		border-spacing: 0px;		border-spacing: 0px;"		cellspacing=0><col><col><tr style="x-cell-content-align: top;" valign=top><td style="padding-right: 0px;			padding-left: 0px;			border-top-style: none;			border-bottom-style: none;			border-right-style: none;			border-left-style: none;"><p><span class=VarType>(string)&nbsp;</span>Menu.SetDelmiter (&nbsp;</td><td style="padding-right: 0px;			padding-left: 0px;			border-top-style: none;			border-right-style: none;			border-bottom-style: none;"><p><span class=VarType>(string)&nbsp;</span>Delimiter <span class=DefaultValue> = ","</span> )</p></td></tr></table><!--begin!kadov{{--></div><!--}}end!kadov--></div><h2 style="margin-bottom: 3pt;">Description</h2><p><blockquote>Sets the character used to separate menu items in the actions arguments.</blockquote></p><blockquote><p class="Note"> <span style="font-weight: bold;">Note: </span>This cannot be any of the following characters: {"\r\n","\\","\'","\"","<",">","="} .</p></blockquote><h2 class="H2Tight">Parameters</h2><h3 class="ParameterHeading">Delimiter</h3><p class="ParameterBody"><span class="type">(string)&nbsp;</span>The character that will become the new delimiter.</p><h2>Returns</h2><blockquote><p><span class=type>(string) </span>Returns the menu item delimter.<br>If an invalid character was specified then it is, simply, ignored.</p></blockquote><br><h1><A name="Menu.SetEnabled">Menu.SetEnabled</A></h1><br><div class=Declaration><!--(Table)=========================================================--><!--begin!kadov{{--><div align=left><!--}}end!kadov--><table x-use-null-cells		style="float: alignleft;		x-cell-content-align: Top;		border-spacing: 0px;		border-spacing: 0px;"		cellspacing=0><col><col><tr style="x-cell-content-align: top;" valign=top><td style="padding-right: 0px;			padding-left: 0px;			border-top-style: none;			border-bottom-style: none;			border-right-style: none;			border-left-style: none;"><p><span class=VarType>(number)&nbsp;</span>Menu.SetEnabled (&nbsp;</td><td style="padding-right: 0px;			padding-left: 0px;			border-top-style: none;			border-right-style: none;			border-bottom-style: none;"><p><span class=VarType>(string)&nbsp;</span>Menu Item <span class=DefaultValue> = "File|Open"</span>, </p><p><span class=VarType>(boolean)&nbsp;</span>Enabled <span class=DefaultValue> = false</span>, </p><p><span class=VarType>(boolean)&nbsp;</span>AutoUpdate <span class=DefaultValue> = true</span> )</p></td></tr></table><!--begin!kadov{{--></div><!--}}end!kadov--></div><h2 style="margin-bottom: 3pt;">Description</h2><p><blockquote>Sets a menu item enabled or not.</blockquote></p><h2 class="H2Tight">Parameters</h2><h3 class="ParameterHeading">Menu Item</h3><p class="ParameterBody"><span class="type">(string)&nbsp;</span>The path to the menu item.</p><h3 class="ParameterHeading">Enabled</h3><p class="ParameterBody"><span class="type">(boolean)&nbsp;</span>Whether or not the item will be enabled.</p><h3 class="ParameterHeading">AutoUpdate</h3><p class="ParameterBody"><span class="type">(boolean)&nbsp;</span>Whether or not to auto-update after the action is complete.</p><blockquote><p class="Note"> <span style="font-weight: bold;">Note: </span>This can be left nil.</p></blockquote><h2>Returns</h2><blockquote><p><span class=type>(number) </span><br>Returns 0 if the action was successful.<br>Returns -3 if there is no active menu.</p></blockquote><br><h1><A name="Menu.SetItem">Menu.SetItem</A></h1><br><div class=Declaration><!--(Table)=========================================================--><!--begin!kadov{{--><div align=left><!--}}end!kadov--><table x-use-null-cells		style="float: alignleft;		x-cell-content-align: Top;		border-spacing: 0px;		border-spacing: 0px;"		cellspacing=0><col><col><tr style="x-cell-content-align: top;" valign=top><td style="padding-right: 0px;			padding-left: 0px;			border-top-style: none;			border-bottom-style: none;			border-right-style: none;			border-left-style: none;"><p><span class=VarType>(number)&nbsp;</span>Menu.SetItem (&nbsp;</td><td style="padding-right: 0px;			padding-left: 0px;			border-top-style: none;			border-right-style: none;			border-bottom-style: none;"><p><span class=VarType>(string)&nbsp;</span>Menu Item <span class=DefaultValue> = "File|Open"</span>, </p><p><span class=VarType>(number)&nbsp;</span>Icon ID <span class=DefaultValue> = 0</span>, </p><p><span class=VarType>(boolean)&nbsp;</span>Enabled <span class=DefaultValue> = true</span>, </p><p><span class=VarType>(boolean)&nbsp;</span>Checked <span class=DefaultValue> = false</span>, </p><p><span class=VarType>(string)&nbsp;</span>Code <span class=DefaultValue> = "Dialog.Message(\"Test\", \"Well, it seems to be working.\r\nAre you impressed?\", MB_YESNO, MB_ICONQUESTION, MB_DEFBUTTON2);"</span>, </p><p><span class=VarType>(boolean)&nbsp;</span>AutoUpdate <span class=DefaultValue> = true</span> )</p></td></tr></table><!--begin!kadov{{--></div><!--}}end!kadov--></div><h2 style="margin-bottom: 3pt;">Description</h2><p><blockquote>This action is used to create and edit menu items.</blockquote></p><blockquote><p class="Note"> <span style="font-weight: bold;">Note: </span>You can use this to create new menu items or change any of the properties of an existing item. To specify a separator, use "---" as the item (e.g. "File|---").</p></blockquote><h2 class="H2Tight">Parameters</h2><h3 class="ParameterHeading">Menu Item</h3><p class="ParameterBody"><span class="type">(string)&nbsp;</span>The path to the menu item.</p><h3 class="ParameterHeading">Icon ID</h3><p class="ParameterBody"><span class="type">(number)&nbsp;</span>The icon id used for this menu item</p><h3 class="ParameterHeading">Enabled</h3><p class="ParameterBody"><span class="type">(boolean)&nbsp;</span>Whether or not the item will be enabled.</p><h3 class="ParameterHeading">Checked</h3><p class="ParameterBody"><span class="type">(boolean)&nbsp;</span>Whether or not the item will be checked.</p><h3 class="ParameterHeading">Code</h3><p class="ParameterBody"><span class="type">(string)&nbsp;</span>The code that will be executed when the menu item is selected.</p><h3 class="ParameterHeading">AutoUpdate</h3><p class="ParameterBody"><span class="type">(boolean)&nbsp;</span>Whether or not to auto-update after the action is complete.</p><blockquote><p class="Note"> <span style="font-weight: bold;">Note: </span>This can be left nil.</p></blockquote><h2>Returns</h2><blockquote><p><span class=type>(number) </span><br>Returns 0 if the action was successful.<br>Returns -2 if the item was constructed incorectly.<br>Returns -3 if there is no active menu.</p></blockquote><br><h1><A name="Menu.SetXML">Menu.SetXML</A></h1><br><div class=Declaration><!--(Table)=========================================================--><!--begin!kadov{{--><div align=left><!--}}end!kadov--><table x-use-null-cells		style="float: alignleft;		x-cell-content-align: Top;		border-spacing: 0px;		border-spacing: 0px;"		cellspacing=0><col><col><tr style="x-cell-content-align: top;" valign=top><td style="padding-right: 0px;			padding-left: 0px;			border-top-style: none;			border-bottom-style: none;			border-right-style: none;			border-left-style: none;"><p>Menu.SetXML ()</td><td style="padding-right: 0px;			padding-left: 0px;			border-top-style: none;			border-right-style: none;			border-bottom-style: none;"></td></tr></table><!--begin!kadov{{--></div><!--}}end!kadov--></div><h2 style="margin-bottom: 3pt;">Description</h2><p><blockquote>Sets the specified menu from an xml string. If the specified menu does not exist, it will be created, otherwise it will be overwrtitten.</blockquote></p><h2>Returns</h2><blockquote><p>This action dose not return any value.</p></blockquote><br><h1><A name="Menu.ToggleChecked">Menu.ToggleChecked</A></h1><br><div class=Declaration><!--(Table)=========================================================--><!--begin!kadov{{--><div align=left><!--}}end!kadov--><table x-use-null-cells		style="float: alignleft;		x-cell-content-align: Top;		border-spacing: 0px;		border-spacing: 0px;"		cellspacing=0><col><col><tr style="x-cell-content-align: top;" valign=top><td style="padding-right: 0px;			padding-left: 0px;			border-top-style: none;			border-bottom-style: none;			border-right-style: none;			border-left-style: none;"><p><span class=VarType>(number)&nbsp;</span>Menu.ToggleChecked (&nbsp;</td><td style="padding-right: 0px;			padding-left: 0px;			border-top-style: none;			border-right-style: none;			border-bottom-style: none;"><p><span class=VarType>(string)&nbsp;</span>Menu Item <span class=DefaultValue> = "File|Open"</span>, </p><p><span class=VarType>(boolean)&nbsp;</span>AutoUpdate <span class=DefaultValue> = true</span> )</p></td></tr></table><!--begin!kadov{{--></div><!--}}end!kadov--></div><h2 style="margin-bottom: 3pt;">Description</h2><p><blockquote>Toggles the checked status of a menu item.</blockquote></p><h2 class="H2Tight">Parameters</h2><h3 class="ParameterHeading">Menu Item</h3><p class="ParameterBody"><span class="type">(string)&nbsp;</span>The path to the menu item.</p><h3 class="ParameterHeading">AutoUpdate</h3><p class="ParameterBody"><span class="type">(boolean)&nbsp;</span>Whether or not to auto-update after the action is complete.</p><h2>Returns</h2><blockquote><p><span class=type>(number) </span><br>Returns 0 if the action was successful.<br>Returns -3 if there is no active menu.</p></blockquote><br><h1><A name="Menu.ToggleEnabled">Menu.ToggleEnabled</A></h1><br><div class=Declaration><!--(Table)=========================================================--><!--begin!kadov{{--><div align=left><!--}}end!kadov--><table x-use-null-cells		style="float: alignleft;		x-cell-content-align: Top;		border-spacing: 0px;		border-spacing: 0px;"		cellspacing=0><col><col><tr style="x-cell-content-align: top;" valign=top><td style="padding-right: 0px;			padding-left: 0px;			border-top-style: none;			border-bottom-style: none;			border-right-style: none;			border-left-style: none;"><p><span class=VarType>(number)&nbsp;</span>Menu.ToggleEnabled (&nbsp;</td><td style="padding-right: 0px;			padding-left: 0px;			border-top-style: none;			border-right-style: none;			border-bottom-style: none;"><p><span class=VarType>(string)&nbsp;</span>Menu Item <span class=DefaultValue> = "File|Open"</span>, </p><p><span class=VarType>(boolean)&nbsp;</span>AutoUpdate <span class=DefaultValue> = true</span> )</p></td></tr></table><!--begin!kadov{{--></div><!--}}end!kadov--></div><h2 style="margin-bottom: 3pt;">Description</h2><p><blockquote>Toggles the enabled status of a menu item.</blockquote></p><h2 class="H2Tight">Parameters</h2><h3 class="ParameterHeading">Menu Item</h3><p class="ParameterBody"><span class="type">(string)&nbsp;</span>The path to the menu item.</p><h3 class="ParameterHeading">AutoUpdate</h3><p class="ParameterBody"><span class="type">(boolean)&nbsp;</span>Whether or not to auto-update after the action is complete.</p><h2>Returns</h2><blockquote><p><span class=type>(number) </span><br>Returns 0 if the action was successful.<br>Returns -3 if there is no active menu.</p></blockquote><br><h1><A name="Menu.Update">Menu.Update</A></h1><br><div class=Declaration><!--(Table)=========================================================--><!--begin!kadov{{--><div align=left><!--}}end!kadov--><table x-use-null-cells		style="float: alignleft;		x-cell-content-align: Top;		border-spacing: 0px;		border-spacing: 0px;"		cellspacing=0><col><col><tr style="x-cell-content-align: top;" valign=top><td style="padding-right: 0px;			padding-left: 0px;			border-top-style: none;			border-bottom-style: none;			border-right-style: none;			border-left-style: none;"><p>Menu.Update ()</td><td style="padding-right: 0px;			padding-left: 0px;			border-top-style: none;			border-right-style: none;			border-bottom-style: none;"></td></tr></table><!--begin!kadov{{--></div><!--}}end!kadov--></div><h2 style="margin-bottom: 3pt;">Description</h2><p><blockquote>This action is used to refresh the menu bar after changes are made to the active menu.</blockquote></p><blockquote><p class="Note"> <span style="font-weight: bold;">Note: </span>When using many of the menu altering functions, you can use AutoUpdate and avoid having to use Menu.Update().</p></blockquote><h2>Returns</h2><blockquote><p>This action dose not return any value.</p></blockquote><br><hr>
+
+<p align="center">© 2008 - 2010 AMSPublic.com <BR>This File Was Generated With AMS ActionFile Editor</p>
+
+</body>
+</html>

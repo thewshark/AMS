@@ -1,0 +1,1686 @@
+<ActionTemplates>
+
+   <Action>
+      <Name>DialogEX.FileBrowse</Name>
+      <Description>Presents a file browse dialog to the user to collect the path To a file.</Description>
+      <ReturnValueType>string</ReturnValueType>
+      <Arguments>
+
+         <Arg>
+            <Name>Title</Name>
+            <Description>The text To be displayed on the dialog title bar.</Description>
+            <Type>string</Type>
+            <Default/>
+            <Required>1</Required>
+            <EasyMode>
+               <Default>"Locate File"</Default>
+               <DataType>string</DataType>
+               <Constraints>1,*</Constraints>
+            </EasyMode>
+         </Arg>
+
+         <Arg>
+            <Name>FileOpen</Name>
+            <Description>Whether To make the dialog a "file open" dialog.</Description>
+            <Type>boolean</Type>
+            <Default/>
+            <Required>1</Required>
+            <EasyMode>
+               <Default>true</Default>
+               <DataType>boolean</DataType>
+               <Constraints>none</Constraints>
+            </EasyMode>
+         </Arg>
+
+         <Arg>
+            <Name>Default</Name>
+            <Description>The Default folder or file To browse.</Description>
+            <Type>string</Type>
+            <Default/>
+            <Required>1</Required>
+            <EasyMode>
+               <Default>_DesktopFolder</Default>
+               <DataType>proj_folder</DataType>
+               <Constraints/>
+            </EasyMode>
+         </Arg>
+
+         <Arg>
+            <Name>File Filters</Name>
+            <Description>The file type filters that will be used in the dialog. EG: "Text Files(*.txt);*.txt|All Files(*.*);*.*".</Description>
+            <Type>string</Type>
+            <Default>"Text Files(*.txt);*.txt|All Files(*.*);*.*"</Default>
+            <Required>0</Required>
+            <EasyMode>
+               <Default>"Text Files(*.txt);*.txt|All Files(*.*);*.*"</Default>
+               <DataType>string</DataType>
+               <Constraints>none</Constraints>
+            </EasyMode>
+         </Arg>
+
+         <Arg>
+            <Name>Default Filter</Name>
+            <Description>This allows you To set the file filter that should be selected by Default.</Description>
+            <Type>number</Type>
+            <Default>0</Default>
+            <Required>1</Required>
+            <EasyMode>
+               <Default>0</Default>
+               <DataType>number</DataType>
+               <Constraints>none</Constraints>
+            </EasyMode>
+         </Arg>
+
+         <Arg>
+            <Name>Display</Name>
+            <Description>Where To display the dialog on the screen.</Description>
+            <Type>number</Type>
+            <Default>DEX_SHOW_APP</Default>
+            <Required>1</Required>
+            <EasyMode>
+               <Default>DEX_SHOW_APP</Default>
+               <DataType>combo</DataType>
+               <Constraints>DEX_SHOW_APP,DEX_SHOW_SCREEN,DEX_SHOW_CUSTOM</Constraints>
+            </EasyMode>
+         </Arg>
+
+         <Arg>
+            <Name>X</Name>
+            <Description>The X position of the dialog, (Ignored unless Display is set To DEX_SHOW_CUSTOM).</Description>
+            <Type>number</Type>
+            <Default/>
+            <Required>1</Required>
+            <EasyMode>
+               <Default>0</Default>
+               <DataType>number</DataType>
+               <Constraints>none</Constraints>
+            </EasyMode>
+         </Arg>
+
+         <Arg>
+            <Name>Y</Name>
+            <Description>The Y position of the dialog, (Ignored unless Display is set To DEX_SHOW_CUSTOM).</Description>
+            <Type>number</Type>
+            <Default/>
+            <Required>1</Required>
+            <EasyMode>
+               <Default>0</Default>
+               <DataType>number</DataType>
+               <Constraints>none</Constraints>
+            </EasyMode>
+         </Arg>
+        <Arg>
+            <Name>Back Color</Name>
+            <Description>The background color of the dialog.</Description>
+            <Type>number</Type>
+            <Default>0</Default>
+            <Required>1</Required>
+            <EasyMode>
+               <Default>14215660</Default>
+               <DataType>color</DataType>
+               <Constraints>none</Constraints>
+            </EasyMode>
+         </Arg>
+
+        <Arg>
+            <Name>Front Color</Name>
+            <Description>The text color of the dialog.</Description>
+            <Type>number</Type>
+            <Default>0</Default>
+            <Required>1</Required>
+            <EasyMode>
+               <Default>0</Default>
+               <DataType>color</DataType>
+               <Constraints>none</Constraints>
+            </EasyMode>
+         </Arg>
+
+         <Arg>
+            <Name>Window Type</Name>
+            <Description>What style To apply To the window.</Description>
+            <Type>number</Type>
+            <Default>DEX_NORM</Default>
+            <Required>1</Required>
+            <EasyMode>
+               <Default>DEX_NORM</Default>
+               <DataType>combo</DataType>
+               <Constraints>DEX_NORM,DEX_TOOL,DEX_NOBORDER</Constraints>
+            </EasyMode>
+         </Arg>
+         <Arg>
+            <Name>In Transition</Name>
+            <Description>How To show the dialog.</Description>
+            <Type>number</Type>
+            <Default>DEX_NO</Default>
+            <Required>1</Required>
+            <EasyMode>
+               <Default>DEX_NO</Default>
+               <DataType>combo</DataType>
+               <Constraints>DEX_NO,DEX_FADE,DEX_ROLL_LEFT,DEX_SLIDE_LEFT,DEX_ROLL_RIGHT,DEX_SLIDE_RIGHT,DEX_ROLL_TOP,DEX_SLIDE_TOP,DEX_ROLL_BOTTOM,DEX_SLIDE_BOTTOM,DEX_ROLL_TOPLEFT,DEX_SLIDE_TOPLEFT,DEX_ROLL_BOTTOMLEFT,DEX_SLIDE_BOTTOMLEFT,DEX_ROLL_TOPRIGHT,DEX_SLIDE_TOPRIGHT,DEX_ROLL_BOTTOMRIGHT,DEX_SLIDE_BOTTOMRIGHT,DEX_CENTER</Constraints>
+            </EasyMode>
+         </Arg>
+
+        <Arg>
+            <Name>Delay</Name>
+            <Description>The time of the transition.</Description>
+            <Type>number</Type>
+            <Default>1000</Default>
+            <Required>1</Required>
+            <EasyMode>
+               <Default>1000</Default>
+               <DataType>number</DataType>
+               <Constraints>none</Constraints>
+            </EasyMode>
+         </Arg>
+
+         <Arg>
+            <Name>Out Transition</Name>
+            <Description>How To exit the dialog.</Description>
+            <Type>number</Type>
+            <Default>DEX_NO</Default>
+            <Required>1</Required>
+            <EasyMode>
+               <Default>DEX_NO</Default>
+               <DataType>combo</DataType>
+               <Constraints>DEX_NO,DEX_FADE,DEX_ROLL_LEFT,DEX_SLIDE_LEFT,DEX_ROLL_RIGHT,DEX_SLIDE_RIGHT,DEX_ROLL_TOP,DEX_SLIDE_TOP,DEX_ROLL_BOTTOM,DEX_SLIDE_BOTTOM,DEX_ROLL_TOPLEFT,DEX_SLIDE_TOPLEFT,DEX_ROLL_BOTTOMLEFT,DEX_SLIDE_BOTTOMLEFT,DEX_ROLL_TOPRIGHT,DEX_SLIDE_TOPRIGHT,DEX_ROLL_BOTTOMRIGHT,DEX_SLIDE_BOTTOMRIGHT,DEX_CENTER</Constraints>
+            </EasyMode>
+         </Arg>
+
+         <Arg>
+            <Name>Timeout</Name>
+            <Description>How long To display the dialog For (MS) (set To 0 To disable).</Description>
+            <Type>number</Type>
+            <Default>0</Default>
+            <Required>1</Required>
+            <EasyMode>
+               <Default>0</Default>
+               <DataType>number</DataType>
+               <Constraints>none</Constraints>
+            </EasyMode>
+         </Arg>
+
+
+
+      </Arguments>
+   </Action>
+
+   <Action>
+      <Name>DialogEX.Input</Name>
+      <Description>Presents an input dialog To collect information from the user.</Description>
+      <ReturnValueType>string</ReturnValueType>
+      <Arguments>
+
+         <Arg>
+            <Name>Title</Name>
+            <Description>The text that will appear in the dialog title bar.</Description>
+            <Type>string</Type>
+            <Default>"Notice"</Default>
+            <Required>1</Required>
+            <EasyMode>
+               <Default>"Notice"</Default>
+               <DataType>string</DataType>
+               <Constraints>0,*</Constraints>
+            </EasyMode>
+         </Arg>
+
+         <Arg>
+            <Name>Message Text</Name>
+            <Description>The text that will appear on the dialog.</Description>
+            <Type>string</Type>
+            <Default>"Your message here."</Default>
+            <Required>1</Required>
+            <EasyMode>
+               <Default>"Your message here."</Default>
+               <DataType>multiline</DataType>
+               <Constraints>0,*</Constraints>
+            </EasyMode>
+         </Arg>
+
+         <Arg>
+            <Name>Input Type</Name>
+            <Description>Sets the input type For the dialog .</Description>
+            <Type>number</Type>
+            <Default>DEX_INPUT_NORM</Default>
+            <Required>1</Required>
+            <EasyMode>
+               <Default>DEX_INPUT_NORM</Default>
+               <DataType>combo</DataType>
+               <Constraints>DEX_INPUT_NORM,DEX_INPUT_NUMERIC,DEX_INPUT_PASSWORD,DEX_INPUT_LOWERCASE,DEX_INPUT_UPPERCASE</Constraints>
+            </EasyMode>
+         </Arg>
+
+         <Arg>
+            <Name>Align Text</Name>
+            <Description>Where To align the message text.</Description>
+            <Type>number</Type>
+            <Default>DEX_ALIGN_LEFT</Default>
+            <Required>1</Required>
+            <EasyMode>
+               <Default>DEX_ALIGN_LEFT</Default>
+               <DataType>combo</DataType>
+               <Constraints>DEX_ALIGN_LEFT,DEX_ALIGN_CENTER,DEX_ALIGN_RIGHT</Constraints>
+            </EasyMode>
+         </Arg>
+
+         <Arg>
+            <Name>Default Text</Name>
+            <Description>The Default text To show in the input.</Description>
+            <Type>string</Type>
+            <Default>""</Default>
+            <Required>1</Required>
+            <EasyMode>
+               <Default>""</Default>
+               <DataType>string</DataType>
+               <Constraints>none</Constraints>
+            </EasyMode>
+         </Arg>
+
+         <Arg>
+            <Name>Display</Name>
+            <Description>Where To display the dialog on the screen.</Description>
+            <Type>number</Type>
+            <Default>DEX_SHOW_APP</Default>
+            <Required>1</Required>
+            <EasyMode>
+               <Default>DEX_SHOW_APP</Default>
+               <DataType>combo</DataType>
+               <Constraints>DEX_SHOW_APP,DEX_SHOW_SCREEN,DEX_SHOW_CUSTOM</Constraints>
+            </EasyMode>
+         </Arg>
+         
+         <Arg>
+            <Name>X</Name>
+            <Description>The X position of the dialog, (Ignored unless Display is set To DEX_SHOW_CUSTOM).</Description>
+            <Type>number</Type>
+            <Default/>
+            <Required>1</Required>
+            <EasyMode>
+               <Default>0</Default>
+               <DataType>number</DataType>
+               <Constraints>none</Constraints>
+            </EasyMode>
+         </Arg>
+
+         <Arg>
+            <Name>Y</Name>
+            <Description>The Y position of the dialog, (Ignored unless Display is set To DEX_SHOW_CUSTOM).</Description>
+            <Type>number</Type>
+            <Default/>
+            <Required>1</Required>
+            <EasyMode>
+               <Default>0</Default>
+               <DataType>number</DataType>
+               <Constraints>none</Constraints>
+            </EasyMode>
+         </Arg>
+
+        <Arg>
+            <Name>Back Color</Name>
+            <Description>The background color of the dialog.</Description>
+            <Type>number</Type>
+            <Default>0</Default>
+            <Required>1</Required>
+            <EasyMode>
+               <Default>14215660</Default>
+               <DataType>color</DataType>
+               <Constraints>none</Constraints>
+            </EasyMode>
+         </Arg>
+
+        <Arg>
+            <Name>Front Color</Name>
+            <Description>The text color of the dialog.</Description>
+            <Type>number</Type>
+            <Default>0</Default>
+            <Required>1</Required>
+            <EasyMode>
+               <Default>0</Default>
+               <DataType>color</DataType>
+               <Constraints>none</Constraints>
+            </EasyMode>
+         </Arg>
+
+         <Arg>
+            <Name>Window Type</Name>
+            <Description>What style To apply To the window.</Description>
+            <Type>number</Type>
+            <Default>DEX_NORM</Default>
+            <Required>1</Required>
+            <EasyMode>
+               <Default>DEX_NORM</Default>
+               <DataType>combo</DataType>
+               <Constraints>DEX_NORM,DEX_TOOL,DEX_NOBORDER</Constraints>
+            </EasyMode>
+         </Arg>
+
+         <Arg>
+            <Name>In Transition</Name>
+            <Description>How To show the dialog.</Description>
+            <Type>number</Type>
+            <Default>DEX_NO</Default>
+            <Required>1</Required>
+            <EasyMode>
+               <Default>DEX_NO</Default>
+               <DataType>combo</DataType>
+               <Constraints>DEX_NO,DEX_FADE,DEX_ROLL_LEFT,DEX_SLIDE_LEFT,DEX_ROLL_RIGHT,DEX_SLIDE_RIGHT,DEX_ROLL_TOP,DEX_SLIDE_TOP,DEX_ROLL_BOTTOM,DEX_SLIDE_BOTTOM,DEX_ROLL_TOPLEFT,DEX_SLIDE_TOPLEFT,DEX_ROLL_BOTTOMLEFT,DEX_SLIDE_BOTTOMLEFT,DEX_ROLL_TOPRIGHT,DEX_SLIDE_TOPRIGHT,DEX_ROLL_BOTTOMRIGHT,DEX_SLIDE_BOTTOMRIGHT,DEX_CENTER</Constraints>
+            </EasyMode>
+         </Arg>
+
+        <Arg>
+            <Name>Delay</Name>
+            <Description>The time of the transition.</Description>
+            <Type>number</Type>
+            <Default>1000</Default>
+            <Required>1</Required>
+            <EasyMode>
+               <Default>1000</Default>
+               <DataType>number</DataType>
+               <Constraints>none</Constraints>
+            </EasyMode>
+         </Arg>
+
+         <Arg>
+            <Name>Out Transition</Name>
+            <Description>How To exit the dialog.</Description>
+            <Type>number</Type>
+            <Default>DEX_NO</Default>
+            <Required>1</Required>
+            <EasyMode>
+               <Default>DEX_NO</Default>
+               <DataType>combo</DataType>
+               <Constraints>DEX_NO,DEX_FADE,DEX_ROLL_LEFT,DEX_SLIDE_LEFT,DEX_ROLL_RIGHT,DEX_SLIDE_RIGHT,DEX_ROLL_TOP,DEX_SLIDE_TOP,DEX_ROLL_BOTTOM,DEX_SLIDE_BOTTOM,DEX_ROLL_TOPLEFT,DEX_SLIDE_TOPLEFT,DEX_ROLL_BOTTOMLEFT,DEX_SLIDE_BOTTOMLEFT,DEX_ROLL_TOPRIGHT,DEX_SLIDE_TOPRIGHT,DEX_ROLL_BOTTOMRIGHT,DEX_SLIDE_BOTTOMRIGHT,DEX_CENTER</Constraints>
+            </EasyMode>
+         </Arg>
+
+         <Arg>
+            <Name>Timeout</Name>
+            <Description>How long To display the dialog for in miliseconds, this can be used to end the dialog if the user takes to long to respond, for a more detailed timer dialog see DialogEX.TimedCustomDialog() (set To 0 To disable).</Description>
+            <Type>number</Type>
+            <Default>0</Default>
+            <Required>1</Required>
+            <EasyMode>
+               <Default>0</Default>
+               <DataType>number</DataType>
+               <Constraints>none</Constraints>
+            </EasyMode>
+         </Arg>
+
+      </Arguments>
+   </Action>
+
+   <Action>
+      <Name>DialogEX.TimedInput</Name>
+      <Description>Presents an timed input dialog To collect information from the user, the count down will be displayed in the "OK" button.</Description>
+      <ReturnValueType>string</ReturnValueType>
+      <Arguments>
+
+         <Arg>
+            <Name>Title</Name>
+            <Description>The text that will appear in the dialog title bar.</Description>
+            <Type>string</Type>
+            <Default>"Notice"</Default>
+            <Required>1</Required>
+            <EasyMode>
+               <Default>"Notice"</Default>
+               <DataType>string</DataType>
+               <Constraints>0,*</Constraints>
+            </EasyMode>
+         </Arg>
+
+         <Arg>
+            <Name>Message Text</Name>
+            <Description>The text that will appear on the dialog.</Description>
+            <Type>string</Type>
+            <Default>"Your message here."</Default>
+            <Required>1</Required>
+            <EasyMode>
+               <Default>"Your message here."</Default>
+               <DataType>multiline</DataType>
+               <Constraints>0,*</Constraints>
+            </EasyMode>
+         </Arg>
+
+         <Arg>
+            <Name>Input Type</Name>
+            <Description>Sets the input type For the dialog .</Description>
+            <Type>number</Type>
+            <Default>DEX_INPUT_NORM</Default>
+            <Required>1</Required>
+            <EasyMode>
+               <Default>DEX_INPUT_NORM</Default>
+               <DataType>combo</DataType>
+               <Constraints>DEX_INPUT_NORM,DEX_INPUT_NUMERIC,DEX_INPUT_PASSWORD,DEX_INPUT_LOWERCASE,DEX_INPUT_UPPERCASE</Constraints>
+            </EasyMode>
+         </Arg>
+
+         <Arg>
+            <Name>Align Text</Name>
+            <Description>Where To align the message text.</Description>
+            <Type>number</Type>
+            <Default>DEX_ALIGN_LEFT</Default>
+            <Required>1</Required>
+            <EasyMode>
+               <Default>DEX_ALIGN_LEFT</Default>
+               <DataType>combo</DataType>
+               <Constraints>DEX_ALIGN_ALEFT,DEX_ALIGN_CENTER,DEX_ALIGN_RIGHT</Constraints>
+            </EasyMode>
+         </Arg>
+
+         <Arg>
+            <Name>Time</Name>
+            <Description>The time in miliseconds To show the dialog.</Description>
+            <Type>number</Type>
+            <Default>10000</Default>
+            <Required>1</Required>
+            <EasyMode>
+               <Default>10000</Default>
+               <DataType>number</DataType>
+               <Constraints>none</Constraints>
+            </EasyMode>
+         </Arg>
+
+         <Arg>
+            <Name>Timeout Return</Name>
+            <Description>The timeout override Return, set this string To override the timeout Return.</Description>
+            <Type>string</Type>
+            <Default>""</Default>
+            <Required>1</Required>
+            <EasyMode>
+               <Default>""</Default>
+               <DataType>string</DataType>
+               <Constraints>none</Constraints>
+            </EasyMode>
+         </Arg>
+
+         <Arg>
+            <Name>Default Text</Name>
+            <Description>The Default text To show in the input.</Description>
+            <Type>string</Type>
+            <Default>""</Default>
+            <Required>1</Required>
+            <EasyMode>
+               <Default>""</Default>
+               <DataType>string</DataType>
+               <Constraints>none</Constraints>
+            </EasyMode>
+         </Arg>
+
+         <Arg>
+            <Name>Display</Name>
+            <Description>Where To display the dialog on the screen.</Description>
+            <Type>number</Type>
+            <Default>DEX_SHOW_APP</Default>
+            <Required>1</Required>
+            <EasyMode>
+               <Default>DEX_SHOW_APP</Default>
+               <DataType>combo</DataType>
+               <Constraints>DEX_SHOW_APP,DEX_SHOW_SCREEN,DEX_SHOW_CUSTOM</Constraints>
+            </EasyMode>
+         </Arg>
+         
+         <Arg>
+            <Name>X</Name>
+            <Description>The X position of the dialog, (Ignored unless Display is set To DEX_SHOW_CUSTOM).</Description>
+            <Type>number</Type>
+            <Default/>
+            <Required>1</Required>
+            <EasyMode>
+               <Default>0</Default>
+               <DataType>number</DataType>
+               <Constraints>none</Constraints>
+            </EasyMode>
+         </Arg>
+
+         <Arg>
+            <Name>Y</Name>
+            <Description>The Y position of the dialog, (Ignored unless Display is set To DEX_SHOW_CUSTOM).</Description>
+            <Type>number</Type>
+            <Default/>
+            <Required>1</Required>
+            <EasyMode>
+               <Default>0</Default>
+               <DataType>number</DataType>
+               <Constraints>none</Constraints>
+            </EasyMode>
+         </Arg>
+
+        <Arg>
+            <Name>Back Color</Name>
+            <Description>The background color of the dialog.</Description>
+            <Type>number</Type>
+            <Default>0</Default>
+            <Required>1</Required>
+            <EasyMode>
+               <Default>14215660</Default>
+               <DataType>color</DataType>
+               <Constraints>none</Constraints>
+            </EasyMode>
+         </Arg>
+
+        <Arg>
+            <Name>Front Color</Name>
+            <Description>The text color of the dialog.</Description>
+            <Type>number</Type>
+            <Default>0</Default>
+            <Required>1</Required>
+            <EasyMode>
+               <Default>0</Default>
+               <DataType>color</DataType>
+               <Constraints>none</Constraints>
+            </EasyMode>
+         </Arg>
+
+         <Arg>
+            <Name>Window Type</Name>
+            <Description>What style To apply To the window.</Description>
+            <Type>number</Type>
+            <Default>DEX_NORM</Default>
+            <Required>1</Required>
+            <EasyMode>
+               <Default>DEX_NORM</Default>
+               <DataType>combo</DataType>
+               <Constraints>DEX_NORM,DEX_TOOL,DEX_NOBORDER</Constraints>
+            </EasyMode>
+         </Arg>
+
+         <Arg>
+            <Name>In Transition</Name>
+            <Description>How To show the dialog.</Description>
+            <Type>number</Type>
+            <Default>DEX_NO</Default>
+            <Required>1</Required>
+            <EasyMode>
+               <Default>DEX_NO</Default>
+               <DataType>combo</DataType>
+               <Constraints>DEX_NO,DEX_FADE,DEX_ROLL_LEFT,DEX_SLIDE_LEFT,DEX_ROLL_RIGHT,DEX_SLIDE_RIGHT,DEX_ROLL_TOP,DEX_SLIDE_TOP,DEX_ROLL_BOTTOM,DEX_SLIDE_BOTTOM,DEX_ROLL_TOPLEFT,DEX_SLIDE_TOPLEFT,DEX_ROLL_BOTTOMLEFT,DEX_SLIDE_BOTTOMLEFT,DEX_ROLL_TOPRIGHT,DEX_SLIDE_TOPRIGHT,DEX_ROLL_BOTTOMRIGHT,DEX_SLIDE_BOTTOMRIGHT,DEX_CENTER</Constraints>
+            </EasyMode>
+         </Arg>
+
+        <Arg>
+            <Name>Delay</Name>
+            <Description>The time of the transition.</Description>
+            <Type>number</Type>
+            <Default>1000</Default>
+            <Required>1</Required>
+            <EasyMode>
+               <Default>1000</Default>
+               <DataType>number</DataType>
+               <Constraints>none</Constraints>
+            </EasyMode>
+         </Arg>
+
+         <Arg>
+            <Name>Out Transition</Name>
+            <Description>How To exit the dialog.</Description>
+            <Type>number</Type>
+            <Default>DEX_NO</Default>
+            <Required>1</Required>
+            <EasyMode>
+               <Default>DEX_NO</Default>
+               <DataType>combo</DataType>
+               <Constraints>DEX_NO,DEX_FADE,DEX_ROLL_LEFT,DEX_SLIDE_LEFT,DEX_ROLL_RIGHT,DEX_SLIDE_RIGHT,DEX_ROLL_TOP,DEX_SLIDE_TOP,DEX_ROLL_BOTTOM,DEX_SLIDE_BOTTOM,DEX_ROLL_TOPLEFT,DEX_SLIDE_TOPLEFT,DEX_ROLL_BOTTOMLEFT,DEX_SLIDE_BOTTOMLEFT,DEX_ROLL_TOPRIGHT,DEX_SLIDE_TOPRIGHT,DEX_ROLL_BOTTOMRIGHT,DEX_SLIDE_BOTTOMRIGHT,DEX_CENTER</Constraints>
+            </EasyMode>
+         </Arg>
+      </Arguments>
+   </Action>
+
+   <Action>
+      <Name>DialogEX.TimedCustomMessage</Name>
+      <Description>Presents a dialog To the user With an timed informative message on it, the user has xx amount of seconds To click a button.</Description>
+      <ReturnValueType>string</ReturnValueType>
+      <Arguments>
+
+         <Arg>
+            <Name>Title</Name>
+            <Description>The text that will appear in the dialog title bar.</Description>
+            <Type>string</Type>
+            <Default>"Notice"</Default>
+            <Required>1</Required>
+            <EasyMode>
+               <Default>"Notice"</Default>
+               <DataType>string</DataType>
+               <Constraints>1,*</Constraints>
+            </EasyMode>
+         </Arg>
+
+         <Arg>
+            <Name>Message Text</Name>
+            <Description>The text that will appear on the dialog.</Description>
+            <Type>string</Type>
+            <Default>"Your message here."</Default>
+            <Required>1</Required>
+            <EasyMode>
+               <Default>"Your message here."</Default>
+               <DataType>multiline</DataType>
+               <Constraints>1,*</Constraints>
+            </EasyMode>
+         </Arg>
+
+         <Arg>
+            <Name>Align Text</Name>
+            <Description>Where To align the message text.</Description>
+            <Type>number</Type>
+            <Default>DEX_ALIGN_LEFT</Default>
+            <Required>1</Required>
+            <EasyMode>
+               <Default>DEX_ALIGN_LEFT</Default>
+               <DataType>combo</DataType>
+               <Constraints>DEX_ALIGN_LEFT,DEX_ALIGN_CENTER,DEX_ALIGN_RIGHT</Constraints>
+            </EasyMode>
+         </Arg>
+
+         <Arg>
+            <Name>Button Text</Name>
+            <Description>A delimited string of the button titles, from 0 To 3 buttons (blank string ("") = 0 buttons, "Button1|Button 2|Button 3" = 3 buttons etc).</Description>
+            <Type>string</Type>
+            <Default>"OK"</Default>
+            <Required>1</Required>
+            <EasyMode>
+               <Default>"OK"</Default>
+               <DataType>string</DataType>
+               <Constraints>none</Constraints>
+            </EasyMode>
+         </Arg>
+
+        <Arg>
+            <Name>Timed Button</Name>
+            <Description>The index of the button that will dispaly the countdown timer, (1 = 1st button, 2 = 2nd etc, set to 0 to not display the countdown).</Description>
+            <Type>number</Type>
+            <Default>1</Default>
+            <Required>1</Required>
+            <EasyMode>
+               <Default>1</Default>
+               <DataType>number</DataType>
+               <Constraints>none</Constraints>
+            </EasyMode>
+         </Arg>
+
+        <Arg>
+            <Name>Forced Return</Name>
+            <Description>Forced Return For when the dialog timesout (counter reached zero), this is to force the return of the selecded button if the dialog timesout.</Description>
+            <Type>number</Type>
+            <Default>0</Default>
+            <Required>1</Required>
+            <EasyMode>
+               <Default>0</Default>
+               <DataType>number</DataType>
+               <Constraints>none</Constraints>
+            </EasyMode>
+         </Arg>
+
+        <Arg>
+            <Name>Time</Name>
+            <Description>The time in miliseconds to show the dialog, the count down will be displayed in the button set in "TimedButton".</Description>
+            <Type>number</Type>
+            <Default>10000</Default>
+            <Required>1</Required>
+            <EasyMode>
+               <Default>10000</Default>
+               <DataType>number</DataType>
+               <Constraints>none</Constraints>
+            </EasyMode>
+         </Arg>
+
+         <Arg>
+            <Name>Width</Name>
+            <Description>The width of the dialog.</Description>
+            <Type>number</Type>
+            <Default/>
+            <Required>1</Required>
+            <EasyMode>
+               <Default>300</Default>
+               <DataType>number</DataType>
+               <Constraints>none</Constraints>
+            </EasyMode>
+         </Arg>
+
+         <Arg>
+            <Name>Height</Name>
+            <Description>The Height of the dialog.</Description>
+            <Type>number</Type>
+            <Default/>
+            <Required>1</Required>
+            <EasyMode>
+               <Default>80</Default>
+               <DataType>number</DataType>
+               <Constraints>none</Constraints>
+            </EasyMode>
+         </Arg>
+
+         <Arg>
+            <Name>Display</Name>
+            <Description>Where To display the dialog on the screen.</Description>
+            <Type>number</Type>
+            <Default>DEX_SHOW_APP</Default>
+            <Required>1</Required>
+            <EasyMode>
+               <Default>DEX_SHOW_APP</Default>
+               <DataType>combo</DataType>
+               <Constraints>DEX_SHOW_APP,DEX_SHOW_SCREEN,DEX_SHOW_CUSTOM</Constraints>
+            </EasyMode>
+         </Arg>
+         
+         <Arg>
+            <Name>X</Name>
+            <Description>The X position of the dialog, (Ignored unless Display is set To DEX_SHOW_CUSTOM).</Description>
+            <Type>number</Type>
+            <Default/>
+            <Required>1</Required>
+            <EasyMode>
+               <Default>0</Default>
+               <DataType>number</DataType>
+               <Constraints>none</Constraints>
+            </EasyMode>
+         </Arg>
+
+         <Arg>
+            <Name>Y</Name>
+            <Description>The Y position of the dialog, (Ignored unless Display is set To DEX_SHOW_CUSTOM).</Description>
+            <Type>number</Type>
+            <Default/>
+            <Required>1</Required>
+            <EasyMode>
+               <Default>0</Default>
+               <DataType>number</DataType>
+               <Constraints>none</Constraints>
+            </EasyMode>
+         </Arg>
+
+        <Arg>
+            <Name>Back Color</Name>
+            <Description>The background color of the dialog.</Description>
+            <Type>number</Type>
+            <Default>0</Default>
+            <Required>1</Required>
+            <EasyMode>
+               <Default>14215660</Default>
+               <DataType>color</DataType>
+               <Constraints>none</Constraints>
+            </EasyMode>
+         </Arg>
+
+        <Arg>
+            <Name>Front Color</Name>
+            <Description>The text color of the dialog.</Description>
+            <Type>number</Type>
+            <Default>0</Default>
+            <Required>1</Required>
+            <EasyMode>
+               <Default>0</Default>
+               <DataType>color</DataType>
+               <Constraints>none</Constraints>
+            </EasyMode>
+         </Arg>
+
+         <Arg>
+            <Name>Window Type</Name>
+            <Description>What style To apply To the window.</Description>
+            <Type>number</Type>
+            <Default>DEX_NORM</Default>
+            <Required>1</Required>
+            <EasyMode>
+               <Default>DEX_NORM</Default>
+               <DataType>combo</DataType>
+               <Constraints>DEX_NORM,DEX_TOOL,DEX_NOBORDER</Constraints>
+            </EasyMode>
+         </Arg>
+
+         <Arg>
+            <Name>In Transition</Name>
+            <Description>How To show the dialog.</Description>
+            <Type>number</Type>
+            <Default>DEX_NO</Default>
+            <Required>1</Required>
+            <EasyMode>
+               <Default>DEX_NO</Default>
+               <DataType>combo</DataType>
+               <Constraints>DEX_NO,DEX_FADE,DEX_ROLL_LEFT,DEX_SLIDE_LEFT,DEX_ROLL_RIGHT,DEX_SLIDE_RIGHT,DEX_ROLL_TOP,DEX_SLIDE_TOP,DEX_ROLL_BOTTOM,DEX_SLIDE_BOTTOM,DEX_ROLL_TOPLEFT,DEX_SLIDE_TOPLEFT,DEX_ROLL_BOTTOMLEFT,DEX_SLIDE_BOTTOMLEFT,DEX_ROLL_TOPRIGHT,DEX_SLIDE_TOPRIGHT,DEX_ROLL_BOTTOMRIGHT,DEX_SLIDE_BOTTOMRIGHT,DEX_CENTER</Constraints>
+            </EasyMode>
+         </Arg>
+
+        <Arg>
+            <Name>Delay</Name>
+            <Description>The time of the transition.</Description>
+            <Type>number</Type>
+            <Default>1000</Default>
+            <Required>1</Required>
+            <EasyMode>
+               <Default>1000</Default>
+               <DataType>number</DataType>
+               <Constraints>none</Constraints>
+            </EasyMode>
+         </Arg>
+
+         <Arg>
+            <Name>Out Transition</Name>
+            <Description>How To exit the dialog.</Description>
+            <Type>number</Type>
+            <Default>DEX_NO</Default>
+            <Required>1</Required>
+            <EasyMode>
+               <Default>DEX_NO</Default>
+               <DataType>combo</DataType>
+               <Constraints>DEX_NO,DEX_FADE,DEX_ROLL_LEFT,DEX_SLIDE_LEFT,DEX_ROLL_RIGHT,DEX_SLIDE_RIGHT,DEX_ROLL_TOP,DEX_SLIDE_TOP,DEX_ROLL_BOTTOM,DEX_SLIDE_BOTTOM,DEX_ROLL_TOPLEFT,DEX_SLIDE_TOPLEFT,DEX_ROLL_BOTTOMLEFT,DEX_SLIDE_BOTTOMLEFT,DEX_ROLL_TOPRIGHT,DEX_SLIDE_TOPRIGHT,DEX_ROLL_BOTTOMRIGHT,DEX_SLIDE_BOTTOMRIGHT,DEX_CENTER</Constraints>
+            </EasyMode>
+         </Arg>
+      </Arguments>
+   </Action>
+
+   <Action>
+      <Name>DialogEX.CustomMessage</Name>
+      <Description>Presents a Custom dialog To the user With an informative message on it.</Description>
+      <ReturnValueType>string</ReturnValueType>
+      <Arguments>
+
+         <Arg>
+            <Name>Title</Name>
+            <Description>The text that will appear in the dialog title bar.</Description>
+            <Type>string</Type>
+            <Default>"Notice"</Default>
+            <Required>1</Required>
+            <EasyMode>
+               <Default>"Notice"</Default>
+               <DataType>string</DataType>
+               <Constraints>1,*</Constraints>
+            </EasyMode>
+         </Arg>
+
+         <Arg>
+            <Name>Message Text</Name>
+            <Description>The text that will appear on the dialog.</Description>
+            <Type>string</Type>
+            <Default>"Your message here."</Default>
+            <Required>1</Required>
+            <EasyMode>
+               <Default>"Your message here."</Default>
+               <DataType>multiline</DataType>
+               <Constraints>1,*</Constraints>
+            </EasyMode>
+         </Arg>
+
+         <Arg>
+            <Name>Align Text</Name>
+            <Description>Where To align the message text.</Description>
+            <Type>number</Type>
+            <Default>DEX_ALIGN_LEFT</Default>
+            <Required>1</Required>
+            <EasyMode>
+               <Default>DEX_ALIGN_LEFT</Default>
+               <DataType>combo</DataType>
+               <Constraints>DEX_ALIGN_LEFT,DEX_ALIGN_CENTER,DEX_ALIGN_RIGHT</Constraints>
+            </EasyMode>
+         </Arg>
+
+         <Arg>
+            <Name>Button Text</Name>
+            <Description>A delimited string of the button titles, from 0 To 3 buttons ("Button1" = 1 button, "Button1|Button 2|Button 3" = 3 buttons etc).</Description>
+            <Type>string</Type>
+            <Default>"OK"</Default>
+            <Required>1</Required>
+            <EasyMode>
+               <Default>"OK"</Default>
+               <DataType>string</DataType>
+               <Constraints>none</Constraints>
+            </EasyMode>
+         </Arg>
+
+         <Arg>
+            <Name>Width</Name>
+            <Description>The width of the dialog.</Description>
+            <Type>number</Type>
+            <Default/>
+            <Required>1</Required>
+            <EasyMode>
+               <Default>300</Default>
+               <DataType>number</DataType>
+               <Constraints>none</Constraints>
+            </EasyMode>
+         </Arg>
+
+         <Arg>
+            <Name>Height</Name>
+            <Description>The Height of the dialog.</Description>
+            <Type>number</Type>
+            <Default/>
+            <Required>1</Required>
+            <EasyMode>
+               <Default>80</Default>
+               <DataType>number</DataType>
+               <Constraints>none</Constraints>
+            </EasyMode>
+         </Arg>
+
+         <Arg>
+            <Name>Display</Name>
+            <Description>Where To display the dialog on the screen.</Description>
+            <Type>number</Type>
+            <Default>DEX_SHOW_APP</Default>
+            <Required>1</Required>
+            <EasyMode>
+               <Default>DEX_SHOW_APP</Default>
+               <DataType>combo</DataType>
+               <Constraints>DEX_SHOW_APP,DEX_SHOW_SCREEN,DEX_SHOW_CUSTOM</Constraints>
+            </EasyMode>
+         </Arg>
+
+         <Arg>
+            <Name>X</Name>
+            <Description>The X position of the dialog, (Ignored unless Display is set To DEX_SHOW_CUSTOM).</Description>
+            <Type>number</Type>
+            <Default/>
+            <Required>1</Required>
+            <EasyMode>
+               <Default>0</Default>
+               <DataType>number</DataType>
+               <Constraints>none</Constraints>
+            </EasyMode>
+         </Arg>
+
+         <Arg>
+            <Name>Y</Name>
+            <Description>The Y position of the dialog, (Ignored unless Display is set To DEX_SHOW_CUSTOM).</Description>
+            <Type>number</Type>
+            <Default/>
+            <Required>1</Required>
+            <EasyMode>
+               <Default>0</Default>
+               <DataType>number</DataType>
+               <Constraints>none</Constraints>
+            </EasyMode>
+         </Arg>
+
+        <Arg>
+            <Name>Back Color</Name>
+            <Description>The background color of the dialog.</Description>
+            <Type>number</Type>
+            <Default>0</Default>
+            <Required>1</Required>
+            <EasyMode>
+               <Default>14215660</Default>
+               <DataType>color</DataType>
+               <Constraints>none</Constraints>
+            </EasyMode>
+         </Arg>
+
+        <Arg>
+            <Name>Front Color</Name>
+            <Description>The text color of the dialog.</Description>
+            <Type>number</Type>
+            <Default>0</Default>
+            <Required>1</Required>
+            <EasyMode>
+               <Default>0</Default>
+               <DataType>color</DataType>
+               <Constraints>none</Constraints>
+            </EasyMode>
+         </Arg>
+
+         <Arg>
+            <Name>Window Type</Name>
+            <Description>What style To apply To the window.</Description>
+            <Type>number</Type>
+            <Default>DEX_NORM</Default>
+            <Required>1</Required>
+            <EasyMode>
+               <Default>DEX_NORM</Default>
+               <DataType>combo</DataType>
+               <Constraints>DEX_NORM,DEX_TOOL,DEX_NOBORDER</Constraints>
+            </EasyMode>
+         </Arg>
+
+         <Arg>
+            <Name>In Transition</Name>
+            <Description>How To show the dialog.</Description>
+            <Type>number</Type>
+            <Default>DEX_NO</Default>
+            <Required>1</Required>
+            <EasyMode>
+               <Default>DEX_NO</Default>
+               <DataType>combo</DataType>
+               <Constraints>DEX_NO,DEX_FADE,DEX_ROLL_LEFT,DEX_SLIDE_LEFT,DEX_ROLL_RIGHT,DEX_SLIDE_RIGHT,DEX_ROLL_TOP,DEX_SLIDE_TOP,DEX_ROLL_BOTTOM,DEX_SLIDE_BOTTOM,DEX_ROLL_TOPLEFT,DEX_SLIDE_TOPLEFT,DEX_ROLL_BOTTOMLEFT,DEX_SLIDE_BOTTOMLEFT,DEX_ROLL_TOPRIGHT,DEX_SLIDE_TOPRIGHT,DEX_ROLL_BOTTOMRIGHT,DEX_SLIDE_BOTTOMRIGHT,DEX_CENTER</Constraints>
+            </EasyMode>
+         </Arg>
+
+        <Arg>
+            <Name>Delay</Name>
+            <Description>The time of the transition.</Description>
+            <Type>number</Type>
+            <Default>1000</Default>
+            <Required>1</Required>
+            <EasyMode>
+               <Default>1000</Default>
+               <DataType>number</DataType>
+               <Constraints>none</Constraints>
+            </EasyMode>
+         </Arg>
+
+         <Arg>
+            <Name>Out Transition</Name>
+            <Description>How To exit the dialog.</Description>
+            <Type>number</Type>
+            <Default>DEX_NO</Default>
+            <Required>1</Required>
+            <EasyMode>
+               <Default>DEX_NO</Default>
+               <DataType>combo</DataType>
+               <Constraints>DEX_NO,DEX_FADE,DEX_ROLL_LEFT,DEX_SLIDE_LEFT,DEX_ROLL_RIGHT,DEX_SLIDE_RIGHT,DEX_ROLL_TOP,DEX_SLIDE_TOP,DEX_ROLL_BOTTOM,DEX_SLIDE_BOTTOM,DEX_ROLL_TOPLEFT,DEX_SLIDE_TOPLEFT,DEX_ROLL_BOTTOMLEFT,DEX_SLIDE_BOTTOMLEFT,DEX_ROLL_TOPRIGHT,DEX_SLIDE_TOPRIGHT,DEX_ROLL_BOTTOMRIGHT,DEX_SLIDE_BOTTOMRIGHT,DEX_CENTER</Constraints>
+            </EasyMode>
+         </Arg>
+
+         <Arg>
+            <Name>Timeout</Name>
+            <Description>How long To display the dialog For (MS) (set To 0 To disable).</Description>
+            <Type>number</Type>
+            <Default>0</Default>
+            <Required>1</Required>
+            <EasyMode>
+               <Default>0</Default>
+               <DataType>number</DataType>
+               <Constraints>none</Constraints>
+            </EasyMode>
+         </Arg>
+
+      </Arguments>
+   </Action>
+
+   <Action>
+      <Name>DialogEX.IPInput</Name>
+      <Description>Presents a input dialog To collect an IP address from the user.</Description>
+      <ReturnValueType>string</ReturnValueType>
+      <Arguments>
+
+         <Arg>
+            <Name>Title</Name>
+            <Description>The text that will appear in the dialog title bar.</Description>
+            <Type>string</Type>
+            <Default>"Notice"</Default>
+            <Required>1</Required>
+            <EasyMode>
+               <Default>"Notice"</Default>
+               <DataType>string</DataType>
+               <Constraints>0,*</Constraints>
+            </EasyMode>
+         </Arg>
+
+         <Arg>
+            <Name>Message Text</Name>
+            <Description>The text that will appear on the dialog.</Description>
+            <Type>string</Type>
+            <Default>"Enter New IP Address."</Default>
+            <Required>1</Required>
+            <EasyMode>
+               <Default>"Enter New IP Address."</Default>
+               <DataType>multiline</DataType>
+               <Constraints>0,*</Constraints>
+            </EasyMode>
+         </Arg>
+
+         <Arg>
+            <Name>Align Text</Name>
+            <Description>Where To align the message text.</Description>
+            <Type>number</Type>
+            <Default>DEX_ALIGN_LEFT</Default>
+            <Required>1</Required>
+            <EasyMode>
+               <Default>DEX_ALIGN_LEFT</Default>
+               <DataType>combo</DataType>
+               <Constraints>DEX_ALIGN_LEFT,DEX_ALIGN_CENTER,DEX_ALIGN_RIGHT</Constraints>
+            </EasyMode>
+         </Arg>
+
+         <Arg>
+            <Name>Default IP</Name>
+            <Description>The Default IP address To show in the input.</Description>
+            <Type>string</Type>
+            <Default>"127.0.0.1"</Default>
+            <Required>1</Required>
+            <EasyMode>
+               <Default>"127.0.0.1"</Default>
+               <DataType>string</DataType>
+               <Constraints>none</Constraints>
+            </EasyMode>
+         </Arg>
+
+         <Arg>
+            <Name>Display</Name>
+            <Description>Where To display the dialog on the screen.</Description>
+            <Type>number</Type>
+            <Default>DEX_SHOW_APP</Default>
+            <Required>1</Required>
+            <EasyMode>
+               <Default>DEX_SHOW_APP</Default>
+               <DataType>combo</DataType>
+               <Constraints>DEX_SHOW_APP,DEX_SHOW_SCREEN,DEX_SHOW_CUSTOM</Constraints>
+            </EasyMode>
+         </Arg>
+
+         <Arg>
+            <Name>X</Name>
+            <Description>The X position of the dialog, (Ignored unless Display is set To DEX_SHOW_CUSTOM).</Description>
+            <Type>number</Type>
+            <Default/>
+            <Required>1</Required>
+            <EasyMode>
+               <Default>0</Default>
+               <DataType>number</DataType>
+               <Constraints>none</Constraints>
+            </EasyMode>
+         </Arg>
+
+         <Arg>
+            <Name>Y</Name>
+            <Description>The Y position of the dialog, (Ignored unless Display is set To DEX_SHOW_CUSTOM).</Description>
+            <Type>number</Type>
+            <Default/>
+            <Required>1</Required>
+            <EasyMode>
+               <Default>0</Default>
+               <DataType>number</DataType>
+               <Constraints>none</Constraints>
+            </EasyMode>
+         </Arg>
+
+        <Arg>
+            <Name>Back Color</Name>
+            <Description>The background color of the dialog.</Description>
+            <Type>number</Type>
+            <Default>0</Default>
+            <Required>1</Required>
+            <EasyMode>
+               <Default>14215660</Default>
+               <DataType>color</DataType>
+               <Constraints>none</Constraints>
+            </EasyMode>
+         </Arg>
+
+        <Arg>
+            <Name>Front Color</Name>
+            <Description>The text color of the dialog.</Description>
+            <Type>number</Type>
+            <Default>0</Default>
+            <Required>1</Required>
+            <EasyMode>
+               <Default>0</Default>
+               <DataType>color</DataType>
+               <Constraints>none</Constraints>
+            </EasyMode>
+         </Arg>
+
+         <Arg>
+            <Name>Window Type</Name>
+            <Description>What style To apply To the window.</Description>
+            <Type>number</Type>
+            <Default>DEX_NORM</Default>
+            <Required>1</Required>
+            <EasyMode>
+               <Default>DEX_NORM</Default>
+               <DataType>combo</DataType>
+               <Constraints>DEX_NORM,DEX_TOOL,DEX_NOBORDER</Constraints>
+            </EasyMode>
+         </Arg>
+
+         <Arg>
+            <Name>In Transition</Name>
+            <Description>How To show the dialog.</Description>
+            <Type>number</Type>
+            <Default>DEX_NO</Default>
+            <Required>1</Required>
+            <EasyMode>
+               <Default>DEX_NO</Default>
+               <DataType>combo</DataType>
+               <Constraints>DEX_NO,DEX_FADE,DEX_ROLL_LEFT,DEX_SLIDE_LEFT,DEX_ROLL_RIGHT,DEX_SLIDE_RIGHT,DEX_ROLL_TOP,DEX_SLIDE_TOP,DEX_ROLL_BOTTOM,DEX_SLIDE_BOTTOM,DEX_ROLL_TOPLEFT,DEX_SLIDE_TOPLEFT,DEX_ROLL_BOTTOMLEFT,DEX_SLIDE_BOTTOMLEFT,DEX_ROLL_TOPRIGHT,DEX_SLIDE_TOPRIGHT,DEX_ROLL_BOTTOMRIGHT,DEX_SLIDE_BOTTOMRIGHT,DEX_CENTER</Constraints>
+            </EasyMode>
+         </Arg>
+
+        <Arg>
+            <Name>Delay</Name>
+            <Description>The time of the transition.</Description>
+            <Type>number</Type>
+            <Default>1000</Default>
+            <Required>1</Required>
+            <EasyMode>
+               <Default>1000</Default>
+               <DataType>number</DataType>
+               <Constraints>none</Constraints>
+            </EasyMode>
+         </Arg>
+
+         <Arg>
+            <Name>Out Transition</Name>
+            <Description>How To exit the dialog.</Description>
+            <Type>number</Type>
+            <Default>DEX_NO</Default>
+            <Required>1</Required>
+            <EasyMode>
+               <Default>DEX_NO</Default>
+               <DataType>combo</DataType>
+               <Constraints>DEX_NO,DEX_FADE,DEX_ROLL_LEFT,DEX_SLIDE_LEFT,DEX_ROLL_RIGHT,DEX_SLIDE_RIGHT,DEX_ROLL_TOP,DEX_SLIDE_TOP,DEX_ROLL_BOTTOM,DEX_SLIDE_BOTTOM,DEX_ROLL_TOPLEFT,DEX_SLIDE_TOPLEFT,DEX_ROLL_BOTTOMLEFT,DEX_SLIDE_BOTTOMLEFT,DEX_ROLL_TOPRIGHT,DEX_SLIDE_TOPRIGHT,DEX_ROLL_BOTTOMRIGHT,DEX_SLIDE_BOTTOMRIGHT,DEX_CENTER</Constraints>
+            </EasyMode>
+         </Arg>
+
+         <Arg>
+            <Name>Timeout</Name>
+            <Description>How long To display the dialog For (MS) (set To 0 To disable).</Description>
+            <Type>number</Type>
+            <Default>0</Default>
+            <Required>1</Required>
+            <EasyMode>
+               <Default>0</Default>
+               <DataType>number</DataType>
+               <Constraints>none</Constraints>
+            </EasyMode>
+         </Arg>
+
+      </Arguments>
+   </Action>
+
+   <Action>
+      <Name>DialogEX.FolderBrowse</Name>
+      <Description>Presents a folder browse dialog To the user To collect the path To a folder.</Description>
+      <ReturnValueType>string</ReturnValueType>
+      <Arguments>
+
+         <Arg>
+            <Name>Title</Name>
+            <Description>The text that will appear in the dialog title bar.</Description>
+            <Type>string</Type>
+            <Default>"Notice"</Default>
+            <Required>1</Required>
+            <EasyMode>
+               <Default>"Notice"</Default>
+               <DataType>string</DataType>
+               <Constraints>1,*</Constraints>
+            </EasyMode>
+         </Arg>
+
+         <Arg>
+            <Name>Message Text</Name>
+            <Description>The text that will appear on the dialog.</Description>
+            <Type>string</Type>
+            <Default>"Your message here."</Default>
+            <Required>1</Required>
+            <EasyMode>
+               <Default>"Your message here."</Default>
+               <DataType>multiline</DataType>
+               <Constraints>1,*</Constraints>
+            </EasyMode>
+         </Arg>
+
+         <Arg>
+            <Name>Align Text</Name>
+            <Description>Where To align the message text.</Description>
+            <Type>number</Type>
+            <Default>DEX_ALIGN_LEFT</Default>
+            <Required>1</Required>
+            <EasyMode>
+               <Default>DEX_ALIGN_LEFT</Default>
+               <DataType>combo</DataType>
+               <Constraints>DEX_ALIGN_LEFT,DEX_ALIGN_CENTER,DEX_ALIGN_RIGHT</Constraints>
+            </EasyMode>
+         </Arg>
+
+         <Arg>
+            <Name>DefaultFolder</Name>
+            <Description>The Default folder To browse.</Description>
+            <Type>string</Type>
+            <Default/>
+            <Required>1</Required>
+            <EasyMode>
+               <Default>_DesktopFolder</Default>
+               <DataType>proj_folder</DataType>
+               <Constraints/>
+            </EasyMode>
+         </Arg>
+
+         <Arg>
+            <Name>Display</Name>
+            <Description>Where To display the dialog on the screen.</Description>
+            <Type>number</Type>
+            <Default>DEX_SHOW_APP</Default>
+            <Required>1</Required>
+            <EasyMode>
+               <Default>DEX_SHOW_APP</Default>
+               <DataType>combo</DataType>
+               <Constraints>DEX_SHOW_APP,DEX_SHOW_SCREEN,DEX_SHOW_CUSTOM</Constraints>
+            </EasyMode>
+         </Arg>
+
+         <Arg>
+            <Name>X</Name>
+            <Description>The X position of the dialog, (Ignored unless Display is set To DEX_SHOW_CUSTOM).</Description>
+            <Type>number</Type>
+            <Default/>
+            <Required>1</Required>
+            <EasyMode>
+               <Default>0</Default>
+               <DataType>number</DataType>
+               <Constraints>none</Constraints>
+            </EasyMode>
+         </Arg>
+
+         <Arg>
+            <Name>Y</Name>
+            <Description>The Y position of the dialog, (Ignored unless Display is set To DEX_SHOW_CUSTOM).</Description>
+            <Type>number</Type>
+            <Default/>
+            <Required>1</Required>
+            <EasyMode>
+               <Default>0</Default>
+               <DataType>number</DataType>
+               <Constraints>none</Constraints>
+            </EasyMode>
+         </Arg>
+
+        <Arg>
+            <Name>Back Color</Name>
+            <Description>The background color of the dialog.</Description>
+            <Type>number</Type>
+            <Default>0</Default>
+            <Required>1</Required>
+            <EasyMode>
+               <Default>14215660</Default>
+               <DataType>color</DataType>
+               <Constraints>none</Constraints>
+            </EasyMode>
+         </Arg>
+
+        <Arg>
+            <Name>Front Color</Name>
+            <Description>The text color of the dialog.</Description>
+            <Type>number</Type>
+            <Default>0</Default>
+            <Required>1</Required>
+            <EasyMode>
+               <Default>0</Default>
+               <DataType>color</DataType>
+               <Constraints>none</Constraints>
+            </EasyMode>
+         </Arg>
+
+         <Arg>
+            <Name>Window Type</Name>
+            <Description>What style To apply To the window.</Description>
+            <Type>number</Type>
+            <Default>DEX_NORM</Default>
+            <Required>1</Required>
+            <EasyMode>
+               <Default>DEX_NORM</Default>
+               <DataType>combo</DataType>
+               <Constraints>DEX_NORM,DEX_TOOL,DEX_NOBORDER</Constraints>
+            </EasyMode>
+         </Arg>
+
+         <Arg>
+            <Name>In Transition</Name>
+            <Description>How To show the dialog.</Description>
+            <Type>number</Type>
+            <Default>DEX_NO</Default>
+            <Required>1</Required>
+            <EasyMode>
+               <Default>DEX_NO</Default>
+               <DataType>combo</DataType>
+               <Constraints>DEX_NO,DEX_FADE,DEX_ROLL_LEFT,DEX_SLIDE_LEFT,DEX_ROLL_RIGHT,DEX_SLIDE_RIGHT,DEX_ROLL_TOP,DEX_SLIDE_TOP,DEX_ROLL_BOTTOM,DEX_SLIDE_BOTTOM,DEX_ROLL_TOPLEFT,DEX_SLIDE_TOPLEFT,DEX_ROLL_BOTTOMLEFT,DEX_SLIDE_BOTTOMLEFT,DEX_ROLL_TOPRIGHT,DEX_SLIDE_TOPRIGHT,DEX_ROLL_BOTTOMRIGHT,DEX_SLIDE_BOTTOMRIGHT,DEX_CENTER</Constraints>
+            </EasyMode>
+         </Arg>
+
+        <Arg>
+            <Name>Delay</Name>
+            <Description>The time of the transition.</Description>
+            <Type>number</Type>
+            <Default>1000</Default>
+            <Required>1</Required>
+            <EasyMode>
+               <Default>1000</Default>
+               <DataType>number</DataType>
+               <Constraints>none</Constraints>
+            </EasyMode>
+         </Arg>
+
+         <Arg>
+            <Name>Out Transition</Name>
+            <Description>How To exit the dialog.</Description>
+            <Type>number</Type>
+            <Default>DEX_NO</Default>
+            <Required>1</Required>
+            <EasyMode>
+               <Default>DEX_NO</Default>
+               <DataType>combo</DataType>
+               <Constraints>DEX_NO,DEX_FADE,DEX_ROLL_LEFT,DEX_SLIDE_LEFT,DEX_ROLL_RIGHT,DEX_SLIDE_RIGHT,DEX_ROLL_TOP,DEX_SLIDE_TOP,DEX_ROLL_BOTTOM,DEX_SLIDE_BOTTOM,DEX_ROLL_TOPLEFT,DEX_SLIDE_TOPLEFT,DEX_ROLL_BOTTOMLEFT,DEX_SLIDE_BOTTOMLEFT,DEX_ROLL_TOPRIGHT,DEX_SLIDE_TOPRIGHT,DEX_ROLL_BOTTOMRIGHT,DEX_SLIDE_BOTTOMRIGHT,DEX_CENTER</Constraints>
+            </EasyMode>
+         </Arg>
+
+         <Arg>
+            <Name>Timeout</Name>
+            <Description>How long To display the dialog For (MS) (set To 0 To disable).</Description>
+            <Type>number</Type>
+            <Default>0</Default>
+            <Required>1</Required>
+            <EasyMode>
+               <Default>0</Default>
+               <DataType>number</DataType>
+               <Constraints>none</Constraints>
+            </EasyMode>
+         </Arg>
+
+      </Arguments>
+   </Action>
+
+   <Action>
+      <Name>DialogEX.Message</Name>
+      <Description>Presents a dialog To the user With an informative message on it.</Description>
+      <ReturnValueType>string</ReturnValueType>
+      <Arguments>
+
+         <Arg>
+            <Name>Title</Name>
+            <Description>The text that will appear in the dialog title bar.</Description>
+            <Type>string</Type>
+            <Default>"Notice"</Default>
+            <Required>1</Required>
+            <EasyMode>
+               <Default>"Notice"</Default>
+               <DataType>string</DataType>
+               <Constraints>1,*</Constraints>
+            </EasyMode>
+         </Arg>
+
+         <Arg>
+            <Name>Message Text</Name>
+            <Description>The text that will appear on the dialog.</Description>
+            <Type>string</Type>
+            <Default>"Your message here."</Default>
+            <Required>1</Required>
+            <EasyMode>
+               <Default>"Your message here."</Default>
+               <DataType>multiline</DataType>
+               <Constraints>1,*</Constraints>
+            </EasyMode>
+         </Arg>
+
+         <Arg>
+            <Name>Align Text</Name>
+            <Description>Where To align the message text.</Description>
+            <Type>number</Type>
+            <Default>DEX_ALIGN_LEFT</Default>
+            <Required>1</Required>
+            <EasyMode>
+               <Default>DEX_ALIGN_LEFT</Default>
+               <DataType>combo</DataType>
+               <Constraints>DEX_ALIGN_LEFT,DEX_ALIGN_CENTER,DEX_ALIGN_RIGHT</Constraints>
+            </EasyMode>
+         </Arg>
+
+         <Arg>
+            <Name>Message Type</Name>
+            <Description>The type of dialog To display.</Description>
+            <Type>number</Type>
+            <Default>DEX_OK</Default>
+            <Required>1</Required>
+            <EasyMode>
+               <Default>DEX_OK</Default>
+               <DataType>combo</DataType>
+               <Constraints>DEX_OK,DEX_OKCANCEL,DEX_ABORTRETRYIGNORE,DEX_YESNOCANCEL,DEX_YESNO,DEX_RETRYCANCEL</Constraints>
+            </EasyMode>
+         </Arg>
+
+         <Arg>
+            <Name>Width</Name>
+            <Description>The width of the dialog.</Description>
+            <Type>number</Type>
+            <Default/>
+            <Required>1</Required>
+            <EasyMode>
+               <Default>300</Default>
+               <DataType>number</DataType>
+               <Constraints>none</Constraints>
+            </EasyMode>
+         </Arg>
+
+         <Arg>
+            <Name>Height</Name>
+            <Description>The Height of the dialog.</Description>
+            <Type>number</Type>
+            <Default/>
+            <Required>1</Required>
+            <EasyMode>
+               <Default>80</Default>
+               <DataType>number</DataType>
+               <Constraints>none</Constraints>
+            </EasyMode>
+         </Arg>
+
+         <Arg>
+            <Name>Display</Name>
+            <Description>Where To display the dialog on the screen.</Description>
+            <Type>number</Type>
+            <Default>DEX_SHOW_APP</Default>
+            <Required>1</Required>
+            <EasyMode>
+               <Default>DEX_SHOW_APP</Default>
+               <DataType>combo</DataType>
+               <Constraints>DEX_SHOW_APP,DEX_SHOW_SCREEN,DEX_SHOW_CUSTOM</Constraints>
+            </EasyMode>
+         </Arg>
+
+         <Arg>
+            <Name>X</Name>
+            <Description>The X position of the dialog, (Ignored unless Display is set To DEX_SHOW_CUSTOM).</Description>
+            <Type>number</Type>
+            <Default/>
+            <Required>1</Required>
+            <EasyMode>
+               <Default>0</Default>
+               <DataType>number</DataType>
+               <Constraints>none</Constraints>
+            </EasyMode>
+         </Arg>
+
+         <Arg>
+            <Name>Y</Name>
+            <Description>The Y position of the dialog, (Ignored unless Display is set To DEX_SHOW_CUSTOM).</Description>
+            <Type>number</Type>
+            <Default/>
+            <Required>1</Required>
+            <EasyMode>
+               <Default>0</Default>
+               <DataType>number</DataType>
+               <Constraints>none</Constraints>
+            </EasyMode>
+         </Arg>
+
+        <Arg>
+            <Name>Back Color</Name>
+            <Description>The background color of the dialog. (Use -1 to disable else any decimal color)</Description>
+            <Type>number</Type>
+            <Default>0</Default>
+            <Required>1</Required>
+            <EasyMode>
+               <Default>14215660</Default>
+               <DataType>color</DataType>
+               <Constraints>none</Constraints>
+            </EasyMode>
+         </Arg>
+
+        <Arg>
+            <Name>Text Color</Name>
+            <Description>The text color of the dialog. (Use -1 to disable else any decimal color)</Description>
+            <Type>number</Type>
+            <Default>0</Default>
+            <Required>1</Required>
+            <EasyMode>
+               <Default>0</Default>
+               <DataType>color</DataType>
+               <Constraints>none</Constraints>
+            </EasyMode>
+         </Arg>
+
+         <Arg>
+            <Name>Window Type</Name>
+            <Description>What style To apply To the window.</Description>
+            <Type>number</Type>
+            <Default>DEX_NORM</Default>
+            <Required>1</Required>
+            <EasyMode>
+               <Default>DEX_NORM</Default>
+               <DataType>combo</DataType>
+               <Constraints>DEX_NORM,DEX_TOOL,DEX_NOBORDER</Constraints>
+            </EasyMode>
+         </Arg>
+
+         <Arg>
+            <Name>In Transition</Name>
+            <Description>How To show the dialog.</Description>
+            <Type>number</Type>
+            <Default>DEX_NO</Default>
+            <Required>1</Required>
+            <EasyMode>
+               <Default>DEX_NO</Default>
+               <DataType>combo</DataType>
+               <Constraints>DEX_NO,DEX_FADE,DEX_ROLL_LEFT,DEX_SLIDE_LEFT,DEX_ROLL_RIGHT,DEX_SLIDE_RIGHT,DEX_ROLL_TOP,DEX_SLIDE_TOP,DEX_ROLL_BOTTOM,DEX_SLIDE_BOTTOM,DEX_ROLL_TOPLEFT,DEX_SLIDE_TOPLEFT,DEX_ROLL_BOTTOMLEFT,DEX_SLIDE_BOTTOMLEFT,DEX_ROLL_TOPRIGHT,DEX_SLIDE_TOPRIGHT,DEX_ROLL_BOTTOMRIGHT,DEX_SLIDE_BOTTOMRIGHT,DEX_CENTER</Constraints>
+            </EasyMode>
+         </Arg>
+
+        <Arg>
+            <Name>Delay</Name>
+            <Description>The time of the transition in miliseconds.</Description>
+            <Type>number</Type>
+            <Default>1000</Default>
+            <Required>1</Required>
+            <EasyMode>
+               <Default>1000</Default>
+               <DataType>number</DataType>
+               <Constraints>none</Constraints>
+            </EasyMode>
+         </Arg>
+
+         <Arg>
+            <Name>Out Transition</Name>
+            <Description>How To exit the dialog.</Description>
+            <Type>number</Type>
+            <Default>DEX_NO</Default>
+            <Required>1</Required>
+            <EasyMode>
+               <Default>DEX_NO</Default>
+               <DataType>combo</DataType>
+               <Constraints>DEX_NO,DEX_FADE,DEX_ROLL_LEFT,DEX_SLIDE_LEFT,DEX_ROLL_RIGHT,DEX_SLIDE_RIGHT,DEX_ROLL_TOP,DEX_SLIDE_TOP,DEX_ROLL_BOTTOM,DEX_SLIDE_BOTTOM,DEX_ROLL_TOPLEFT,DEX_SLIDE_TOPLEFT,DEX_ROLL_BOTTOMLEFT,DEX_SLIDE_BOTTOMLEFT,DEX_ROLL_TOPRIGHT,DEX_SLIDE_TOPRIGHT,DEX_ROLL_BOTTOMRIGHT,DEX_SLIDE_BOTTOMRIGHT,DEX_CENTER</Constraints>
+            </EasyMode>
+         </Arg>
+
+         <Arg>
+            <Name>Timeout</Name>
+            <Description>How long To display the dialog for in miliseconds, this can be used to end the dialog if the user takes to long to respond, for a more detailed timer dialog see DialogEX.TimedCustomDialog() (set To 0 To disable).</Description>
+            <Type>number</Type>
+            <Default>0</Default>
+            <Required>1</Required>
+            <EasyMode>
+               <Default>0</Default>
+               <DataType>number</DataType>
+               <Constraints>none</Constraints>
+            </EasyMode>
+         </Arg>
+
+      </Arguments>
+   </Action>
+   
+</ActionTemplates>
+                           

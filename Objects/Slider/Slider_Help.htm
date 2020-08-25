@@ -1,0 +1,484 @@
+<!doctype HTML public "-//W3C//DTD HTML 4.0 Frameset//EN">
+
+<html>
+<head>
+<title>Slider Plugin Help</title>
+
+<meta http-equiv=content-type content="text/html; charset=windows-1252">
+
+<style>
+
+/* ELEMENTS */
+
+body {
+  font-family: Verdana, sans-serif;
+  font-size: 8pt;
+  background-color: #ffffff;
+}
+
+hr {
+  text-align: center;
+  color: #f0f0f0;
+  width: 100%;
+  height: 6pt;
+
+  margin-top: 0pt;
+  margin-bottom: -3pt;
+
+  border: none;
+}
+
+A:link, A:active, A:visited {
+  color: #0000ff;
+  text-decoration: none;
+}
+
+A:hover {
+  color: #0000ff;
+  text-decoration: underline;
+}
+
+h1 {
+  font-family: Verdana;
+  font-weight: bold;
+  font-size: 18.0pt;
+  white-space: nowrap;
+  color: #fff;
+  background-color: #699BEF;
+
+  padding: 4pt 3pt;
+  padding: 5px 4px;
+
+  margin-top: 0pt;
+  margin-bottom: 0pt;
+
+  border-right: 1px solid #333;
+  border-left: 1px solid #699BEF;
+  border-bottom: solid black 1px;
+}
+
+h2 {
+  font-family: Arial, sans-serif;
+  font-size: 12.0pt;
+  letter-spacing: .2ex;
+  color: #000;
+  
+  margin-left: 0pt;
+  margin-right: 0pt;
+  margin-top: 18pt;
+  margin-bottom: 9pt;
+}
+
+h3 {
+  font-family: Arial, sans-serif;
+  font-size: 10pt;
+  font-weight: bold;
+  font-style: normal;
+  color: black;
+  letter-spacing: 0px;
+
+  margin-left: 0pt;
+  margin-right: 0pt;
+  margin-top: 18pt;
+  margin-bottom: 3pt;
+}
+
+p {
+  font-family: Verdana;
+  font-size: 8.0pt;
+  line-height: 12.0pt;
+  
+  margin-left: 0pt;
+  margin-right: 0pt;
+  margin-top: 0pt;
+  margin-bottom: 9pt;
+}
+
+/* CLASSES */
+
+div.Actions h3, div.Properties h3, div.Events h3 {
+  font-family: Arial, sans-serif;
+  font-size: 10pt;
+  font-weight: bold;
+  font-style: italic;
+  color: #3C77B3;
+  letter-spacing: 0px;
+  
+  margin-left: 12pt;
+  margin-right: 0pt;
+  margin-top: 18pt;
+  margin-bottom: 3pt;
+}
+
+div.Events h4, div.Actions h4, div.info h3 {
+  font-family: Verdana;
+  font-size: 8.0pt;
+  line-height: 12.0pt;
+  font-style: bold;
+  
+  margin-top: 9pt;
+  margin-bottom: 0pt;
+  margin-left: 28pt;
+  margin-right: 0pt;
+}
+
+div.Actions p, div.Properties p, div.Events p, div.ErrorCodes p {
+  font-family: Verdana;
+  font-size: 8.0pt;
+  line-height: 12.0pt;
+  
+  margin-top: 0pt;
+  margin-bottom: 9pt;
+  margin-left: 12pt;
+  margin-right: 0pt;
+}
+
+p.NavLocal {
+  white-space: nowrap;
+  text-indent: -4px;
+  font-family: Verdana, Arial, sans-serif;
+  font-weight: bold;
+  font-style: normal;
+  font-size: 13px;
+  background-color: #e4e4e4;
+
+  margin-top: 0px;
+  margin-bottom: 12pt;
+
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 0px;
+  padding-right: 0px;
+
+  border-bottom: 1px solid #e4e4e4;
+}
+
+p.Note {
+	font-family: Verdana;
+	font-size: 8.0pt;
+	line-height: 12.0pt;
+	color: #000000;
+	background-color: #ffffe8;
+
+	margin-top: 0pt;
+	margin-bottom: 9pt;
+	margin-left: 0pt;
+	margin-right: 5%;
+
+	padding-left: 2pt;
+	padding-right: 2pt;
+	padding-top: 1pt;
+	padding-bottom: 2pt;
+}
+
+p.Tip {
+	font-family: Verdana;
+	font-size: 8.0pt;
+	line-height: 12.0pt;
+	color: #000000;
+	background-color: #EAF4E8;
+
+	margin-top: 0pt;
+	margin-bottom: 9pt;
+	margin-left: 0pt;
+	margin-right: 5%;
+
+	padding-left: 2pt;
+	padding-right: 2pt;
+	padding-top: 1pt;
+	padding-bottom: 2pt;
+}
+
+div.Actions p.Note, div.Events p.Note,
+div.Actions p.Tip, div.Events p.Tip {
+	margin-left: 28pt;
+}
+
+div.Properties p.Note,
+div.Properties p.Tip {
+	margin-left: 18pt;
+}
+
+pre.code {
+  white-space: pre;
+  font-family: Courier New, Courier, Arial, sans-serif;
+  font-size: 10pt;
+  font-weight: normal;
+  font-style: normal;
+  letter-spacing: normal;
+  color: #000;
+  background-color: #f9f9f9;
+  
+  margin-top: 3pt;
+  margin-bottom: 9pt;
+  margin-left: 0pt;
+  margin-left: 0pt;
+  
+  padding: 10px;
+  
+  border: 1px dotted #ccc;
+}
+
+div.Actions pre.code, div.Events pre.code {
+  margin-left: 28pt;
+}
+
+div.Actions h2, div.Properties h2, div.Events h2 {
+  margin-bottom: -6pt;
+}
+
+div.actions p, div.ErrorCodes p, div.info p {
+  margin-left: 28pt;
+}
+
+div.actions p.indent {
+  margin-left: 38pt;
+}
+
+div.e_vars p {
+  margin-left: 28pt;
+}
+
+span.here { /* blue tab effect in navbar (NavLocal) */
+  font-weight: bold;
+  color: #fff;
+  background-color: #699BEF;
+
+  margin: 0px;
+
+  padding: 4px 8px;
+
+  border-top: 1px solid #699BEF;
+  border-bottom: 1px solid #333;
+  border-left: none;
+  border-right: 1px solid #333;
+}
+
+span.type {
+	color: #aaa;
+}
+</style>
+</head>
+<body>
+
+<h1>Slider Plugin</h1>
+
+<p class="NavLocal"><span class=wab>&nbsp;</span><span class="here">Online Help</span></p>
+
+<h2>Description</h2>
+
+<p>This Slider plugin object is used to create a common Windows slider control. 
+ Several properties of the slider can be set using design-time properties 
+ and runtime actions. The slider also fires several events. </p>
+
+<div class="Properties">
+<h2>Properties</h2>
+
+<h3>Range Minimum</h3>
+
+<p>The minimum range of the slider.</p>
+
+<h3>Range Maximum</h3>
+
+<p>The maximum range of the slider.</p>
+
+</div> <!-- /Properties -->
+
+<div class="Events">
+<h2>Events</h2>
+
+<h3>On PosChange</h3>
+
+<p>Fires when the position of the slider changes.</p>
+
+<div class="e_vars">
+
+<h4>e_Pos:</h4>
+<p><span class="type">(number)</span> The current position of the slider.</p>
+
+</div> <!-- /e_vars -->
+
+<h3>On Key</h3>
+
+<p>Fires when a key is pressed while the slider has focus.</p>
+
+<div class="e_vars">
+
+<h4>e_Key:</h4>
+<p><span class="type">(number)</span> The ASCII code of the key that was pressed.</p>
+
+<h4>e_Modifiers:</h4>
+
+<p><span class="type">(table)</span> A table containing three boolean 
+values that describe which modifier keys were held down while the key 
+was pressed. A modifier key is a key that can be held down while 
+another key is pressed, to "modify" it. There are three true/false 
+values in the table, one for each type of modifier key on the 
+keyboard: shift, ctrl, and alt. You can access these values as 
+e_Modifiers.shift, e_Modifiers.ctrl, and e_Modifiers.alt.<br>
+
+</div> <!-- /e_vars -->
+
+<h3>On Focus</h3>
+
+<p>Fires when the slider gets input focus. </p>
+
+</div> <!-- /Events -->
+
+
+<div class="Actions">
+<h2>Actions</h2>
+
+<h3><a name="Slider.GetRange">table Slider.GetRange (string ObjectName);</a></h3>
+
+<h4>Description:</h4>
+<p>Gets the minimum and maximum values of a slider object.</p>
+ 
+<h4>ObjectName:</h4>
+<p><span class="type">(string)</span> The name of the slider object that you want to apply this action to.</p>
+
+<h4>Returns:</h4>
+<p><span class="type">(table)</span> A table containing the numerical 
+values of the minimum and maximum ranges. The table indexes are 
+"Minimum" and "Maximum". If an error occurs, <b>nil</b> is 
+returned.</p>
+
+<h4>Example:</h4>
+<pre class="code">
+-- Get the range of a slider object and show
+-- the result in a message box
+Range = Slider.GetRange ("MySlider");
+if (Range) then
+    RangeString = "Minimum = " .. Range.Minimum .. ", Maximum = " .. Range.Maximum;
+    Dialog.Message("Range", RangeString);
+end
+</pre>
+
+
+<h3><a name="Slider.SetRange">Slider.SetRange (string ObjectName, number Minimum, number Maximum);</a></h3>
+
+<h4>Description:</h4>
+<p>Sets the minimum and maximum values of a slider object.</p>
+ 
+<h4>ObjectName:</h4>
+<p><span class="type">(string)</span> The name of the slider object that you want to apply this action to.</p>
+
+<h4>Minimum:</h4> 
+<p><span class="type">(number)</span> The minimum range of the slider (defaults to 0).</p>
+
+<h4>Maximum:</h4> 
+<p><span class="type">(number)</span> The maximum range of the slider (defaults to 100).</p>
+
+<h4>Returns:</h4>
+<p>Nothing. You can use Application.GetLastError to determine 
+whether this action failed, and why.</p>
+ 
+<h4>Example:</h4>
+<pre class="code">
+-- Set the slider range from 1 to 10
+Slider.SetRange ("MySlider", 1, 10);
+</pre>
+
+
+<h3><a name="Slider.GetSliderPos">number Slider.GetSliderPos (string ObjectName);</a></h3>
+
+<h4>Description:</h4>
+<p>Gets the current position a slider object.</p>
+ 
+<h4>ObjectName:</h4>
+<p><span class="type">(string)</span> The name of the slider object that you want to apply this action to.</p>
+
+<h4>Returns:</h4>
+<p><span class="type">(number)</span> The current position (or "value") of the slider.</p>
+
+<h4>Example:</h4>
+<pre class="code">
+-- Get the current position of a slider
+-- and show the result in a message box
+Pos = Slider.GetRange ("MySlider");
+PosString = "Position = "..Pos;
+Dialog.Message("Range",PosString);
+</pre>
+
+<h3><a name="Slider.SetSliderPos">Slider.SetSliderPos (string ObjectName, number Position);</a></h3>
+
+<h4>Description:</h4>
+<p>Sets the current position of a slider object.</p>
+
+<h4>ObjectName:</h4>
+<p><span class="type">(string)</span> The name of the slider object that you want to apply this action to.</p>
+
+<h4>Position:</h4>
+<p><span class="type">(number)</span> The position to set the slider 
+to. If this number is greater than the Maximum value of the slider, 
+the slider will be set to the maximum value. If this number is less 
+than the minimum value of the slider, the slider will be set to the 
+minimum value.</p>
+
+<h4>Returns:</h4>
+<p>Nothing. You can use Application.GetLastError to determine 
+whether this action failed, and why.</p>
+
+<h4>Example:</h4>
+<pre class="code">
+-- Set the slider position to 80
+Slider.SetSliderPos ("MySlider", 80);
+</pre>
+
+</div> <!-- /Actions -->
+
+
+<div class="ErrorCodes">
+<h2>Error Codes</h2>
+<p>
+<b>1100</b> - Could not find the specified plugin object or the plugin object is of the wrong type.<br>
+</p>
+
+</div> <!-- /ErrorCodes -->
+
+<div class="History">
+<h2>Change Log</h2>
+
+<h3>2.0.0.0</h3>
+<ul>
+	<li>Updated to version 2.0 of the plugin SDK.</li>
+</ul>
+
+<h3>1.0.2.0</h3>
+<ul>
+	<li>Fixed a bug that would cause problems in AMS70 when using the auto-resize options.</li>
+	<li>Updated version information.</li>
+</ul>
+
+<h3>1.0.1.0</h3>
+<ul>
+	<li>Update the version resources for the plugin.</li>
+</ul>
+
+<h3>1.0.0.0</h3>
+<ul>
+	<li>Initial release</li>
+</ul>
+</div> <!-- /History -->
+
+
+<div class="Info">
+<h2>Additional Information</h2>
+
+<h3>Author:</h3><p>Indigo Rose Corporation<br>
+<a href="mailto:support@indigorose.com">support@indigorose.com</a></p>
+
+<h3>Copyright:</h3>
+<p>The Slider plugin is copyright © 2003-2010 Indigo Rose Software Design Corporation.</p>
+
+<h3>Website:</h3>
+<p><a href="http://www.indigorose.com">http://www.indigorose.com</a></p>
+
+</div> <!-- /info -->
+<hr>
+
+<p align="center">Copyright © 2010 Indigo Rose Software Design Corporation.<br>
+All Rights Reserved.</p>
+
+</body>
+</html>

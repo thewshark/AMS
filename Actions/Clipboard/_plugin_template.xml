@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<PluginTemplates>
+   <Plugin>
+      <Name>Clipboard (64-bit)</Name>
+      <File>Clipboardx64.lmd</File>
+      <InterfaceFile>Clipboard.lmd</InterfaceFile>
+      <Version>2.0.1.0</Version>
+      <AuthorInfo>Clipboard Actions Plugin (64-bit)
+Created by Indigo Rose Corporation
+Copyright © 2003-2015 Indigo Rose Corporation
+http://www.indigorose.com</AuthorInfo>
+      <ActionXML>
+         <![CDATA[<ActionTemplates>
+            <Action>
+               <Name>Clipboard.CopyText</Name>
+               <Description>Copies text to the Windows clipboard.</Description>
+               <ReturnValueType></ReturnValueType>
+               <Arguments>
+                  <Arg>
+                     <Name>Text</Name>
+                     <Description>The text to copy to the clipboard.</Description>
+                     <Type>string</Type>
+                     <Default/>
+                     <Required>1</Required>
+                     <EasyMode>
+                        <Default>"My Text"</Default>
+                        <DataType>string</DataType>
+                        <Constraints>none</Constraints>
+                     </EasyMode>
+                  </Arg>
+               </Arguments>
+            </Action>
+            <Action>
+               <Name>Clipboard.GetText</Name>
+               <Description>Retrieves text from the Windows clipboard.</Description>
+               <ReturnValueType>string</ReturnValueType>
+               <Arguments>
+               </Arguments>
+            </Action>
+            <Action>
+               <Name>Clipboard.IsTextAvailable</Name>
+               <Description>Determines whether text is available on the Windows clipboard.</Description>
+               <ReturnValueType>boolean</ReturnValueType>
+               <Arguments>
+               </Arguments>
+            </Action>
+         </ActionTemplates>]]>
+      </ActionXML>
+      <LuaVersion>Lua 5.1</LuaVersion>
+      <SDKVersion>2</SDKVersion>
+      <LicenseFile>Clipboard.lic</LicenseFile>
+      <Platform>x64</Platform>
+   </Plugin>
+</PluginTemplates>

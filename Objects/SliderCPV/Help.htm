@@ -1,0 +1,2742 @@
+<!doctype HTML public "-//W3C//DTD HTML 4.0 Frameset//EN">
+
+<html>
+<head>
+<title>SliderCPV</title>
+
+<meta http-equiv=content-type content="text/html; charset=windows-1252">
+
+<style>
+
+
+
+body {
+  font-family: Verdana, sans-serif;
+  font-size: 8pt;
+  background-color: #ffffff;
+}
+
+hr {
+  text-align: center;
+  color: #f0f0f0;
+  width: 100%;
+  height: 6pt;
+
+  margin-top: 0pt;
+  margin-bottom: -3pt;
+
+  border: none;
+}
+
+A:link, A:active, A:visited {
+  color: #0000ff;
+  text-decoration: none;
+}
+
+A:hover {
+  color: #0000ff;
+  text-decoration: underline;
+}
+
+h1 {
+  font-family: Verdana;
+  font-weight: bold;
+  font-size: 18.0pt;
+  white-space: nowrap;
+  color: #fff;
+  background-color: #699BEF;
+
+  padding: 4pt 3pt;
+  padding: 5px 4px;
+
+  margin-top: 0pt;
+  margin-bottom: 0pt;
+
+  border-right: 1px solid #333;
+  border-left: 1px solid #699BEF;
+  border-bottom: solid black 1px;
+}
+
+h2 {
+  font-family: Arial, sans-serif;
+  font-size: 12.0pt;
+  letter-spacing: .2ex;
+  color: #000;
+  
+  margin-left: 0pt;
+  margin-right: 0pt;
+  margin-top: 18pt;
+  margin-bottom: 9pt;
+}
+
+h3 {
+  font-family: Arial, sans-serif;
+  font-size: 10pt;
+  font-weight: bold;
+  font-style: normal;
+  color: black;
+  letter-spacing: 0px;
+
+  margin-left: 0pt;
+  margin-right: 0pt;
+  margin-top: 18pt;
+  margin-bottom: 3pt;
+}
+
+p {
+  font-family: Verdana;
+  font-size: 8.0pt;
+  line-height: 12.0pt;
+  
+  margin-left: 0pt;
+  margin-right: 0pt;
+  margin-top: 0pt;
+  margin-bottom: 9pt;
+}
+
+/* CLASSES */
+
+div.Actions h3, div.Properties h3, div.Events h3 {
+  font-family: Arial, sans-serif;
+  font-size: 10pt;
+  font-weight: bold;
+  font-style: italic;
+  color: #3C77B3;
+  letter-spacing: 0px;
+  
+  margin-left: 12pt;
+  margin-right: 0pt;
+  margin-top: 18pt;
+  margin-bottom: 3pt;
+}
+
+div.Events h4, div.Actions h4, div.info h3 {
+  font-family: Verdana;
+  font-size: 8.0pt;
+  line-height: 12.0pt;
+  font-style: bold;
+  
+  margin-top: 9pt;
+  margin-bottom: 0pt;
+  margin-left: 28pt;
+  margin-right: 0pt;
+}
+
+div.Actions p, div.Properties p, div.Events p, div.ErrorCodes p {
+  font-family: Verdana;
+  font-size: 8.0pt;
+  line-height: 12.0pt;
+  
+  margin-top: 0pt;
+  margin-bottom: 9pt;
+  margin-left: 12pt;
+  margin-right: 0pt;
+}
+
+p.NavLocal {
+  white-space: nowrap;
+  text-indent: -4px;
+  font-family: Verdana, Arial, sans-serif;
+  font-weight: bold;
+  font-style: normal;
+  font-size: 13px;
+  background-color: #e4e4e4;
+
+  margin-top: 0px;
+  margin-bottom: 12pt;
+
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 0px;
+  padding-right: 0px;
+
+  border-bottom: 1px solid #e4e4e4;
+}
+
+p.Note {
+	font-family: Verdana;
+	font-size: 8.0pt;
+	line-height: 12.0pt;
+	color: #000000;
+	background-color: #ffffe8;
+
+	margin-top: 0pt;
+	margin-bottom: 9pt;
+	margin-left: 0pt;
+	margin-right: 5%;
+
+	padding-left: 2pt;
+	padding-right: 2pt;
+	padding-top: 1pt;
+	padding-bottom: 2pt;
+}
+
+p.Tip {
+	font-family: Verdana;
+	font-size: 8.0pt;
+	line-height: 12.0pt;
+	color: #000000;
+	background-color: #EAF4E8;
+
+	margin-top: 0pt;
+	margin-bottom: 9pt;
+	margin-left: 0pt;
+	margin-right: 5%;
+
+	padding-left: 2pt;
+	padding-right: 2pt;
+	padding-top: 1pt;
+	padding-bottom: 2pt;
+}
+
+div.Actions p.Note, div.Events p.Note,
+div.Actions p.Tip, div.Events p.Tip {
+	margin-left: 28pt;
+}
+
+div.Properties p.Note,
+div.Properties p.Tip {
+	margin-left: 18pt;
+}
+
+pre.code {
+  white-space: pre;
+  font-family: Courier New, Courier, Arial, sans-serif;
+  font-size: 10pt;
+  font-weight: normal;
+  font-style: normal;
+  letter-spacing: normal;
+  color: #000;
+  background-color: #f9f9f9;
+  
+  margin-top: 3pt;
+  margin-bottom: 9pt;
+  margin-left: 0pt;
+  margin-left: 0pt;
+  
+  padding: 10px;
+  
+  border: 1px dotted #ccc;
+}
+
+div.Actions pre.code, div.Events pre.code {
+  margin-left: 28pt;
+}
+
+div.Actions h2, div.Properties h2, div.Events h2 {
+  margin-bottom: -6pt;
+}
+
+div.actions p, div.ErrorCodes p, div.info p {
+  margin-left: 28pt;
+}
+
+div.actions p.indent {
+  margin-left: 38pt;
+}
+
+div.e_vars p {
+  margin-left: 28pt;
+}
+
+span.here { /* blue tab effect in navbar (NavLocal) */
+  font-weight: bold;
+  color: #fff;
+  background-color: #699BEF;
+
+  margin: 0px;
+
+  padding: 4px 8px;
+
+  border-top: 1px solid #699BEF;
+  border-bottom: 1px solid #333;
+  border-left: none;
+  border-right: 1px solid #333;
+}
+
+span.type {
+	color: #aaa;
+}
+A:link,
+A:active,
+A:visited {
+	color: #0000ff;
+	x-text-underline: off;
+	x-text-overline: off;
+	x-text-line-through: off;
+	/*begin!kadov{{*/ text-decoration: none none none; /*}}end!kadov*/ 
+}
+
+A:hover {
+	color: #0000ff;
+	x-text-underline: normal;
+	/*begin!kadov{{*/ text-decoration: underline; /*}}end!kadov*/ 
+}
+
+BODY {
+	font-family: Verdana, sans-serif;
+	font-size: 8pt;
+	background-color: #ffffff;
+}
+
+h1 {
+	font-family: Verdana;
+	font-weight: bold;
+	font-size: 18.0pt;
+	white-space: nowrap;
+	color: #ffffff;
+	background-color: #699BEF;
+	padding: 4pt 3pt;
+	padding: 5px 4px;
+	margin-top: 0pt;
+	margin-bottom: 0pt;
+	border-right: 1px solid #333;
+	border-left: 1px solid #699BEF;
+	border-bottom: solid #000000 1px;
+	x-next-class: NavLocal;
+	x-next-type: P;
+}
+
+/*=(Generated Code)=================================================*/
+/*=(WARNING: DO NOT EDIT OR DELETE THIS SECTION!)===================*/
+/*begin!kadov{{=====================================================*/ 
+LI.kadov-h1 {
+	font-family: Verdana;
+	font-weight: bold;
+	font-size: 18.0pt;
+	white-space: nowrap;
+	color: #ffffff;
+}
+/*}}end!kadov=======================================================*/ 
+
+
+
+/* NOTE: for a slightly more web-safe version, replace #699BEF with
+#6699FF throughout this style sheet */
+
+h1 img {
+	margin-left: 2em;
+	vertical-align: middle;
+}
+
+h2 {
+	font-family: Arial, sans-serif;
+	font-size: 12.0pt;
+	letter-spacing: .2ex;
+	color: #000000;
+	margin-left: 0pt;
+	margin-right: 0pt;
+	margin-top: 18pt;
+	margin-bottom: 3pt;
+}
+
+/*=(Generated Code)=================================================*/
+/*=(WARNING: DO NOT EDIT OR DELETE THIS SECTION!)===================*/
+/*begin!kadov{{=====================================================*/ 
+LI.kadov-h2 {
+	font-family: Arial, sans-serif;
+	font-size: 12.0pt;
+	letter-spacing: .2ex;
+	color: #000000;
+}
+/*}}end!kadov=======================================================*/ 
+
+
+
+h3 {
+	font-family: Arial, sans-serif;
+	font-size: 10pt;
+	font-weight: bold;
+	font-style: italic;
+	color: #3C77B3;
+	margin-left: 12pt;
+	margin-right: 0pt;
+	margin-top: 18pt;
+	margin-bottom: 3pt;
+	x-next-class: p;
+	x-next-type: p;
+	font-style: normal;
+	color: #000000;
+	letter-spacing: 0px;
+	margin-left: 0pt;
+}
+
+/*=(Generated Code)=================================================*/
+/*=(WARNING: DO NOT EDIT OR DELETE THIS SECTION!)===================*/
+/*begin!kadov{{=====================================================*/ 
+LI.kadov-h3 {
+	font-family: Arial, sans-serif;
+	font-size: 10pt;
+	font-weight: bold;
+	font-style: italic;
+	color: #3C77B3;
+	font-style: normal;
+	color: #000000;
+	letter-spacing: 0px;
+}
+/*}}end!kadov=======================================================*/ 
+
+
+
+h4 {
+	font-family: Arial, sans-serif;
+	font-size: 10pt;
+	font-weight: bold;
+	font-style: italic;
+	color: #000000;
+	letter-spacing: .2ex;
+	margin-left: 12pt;
+	margin-right: 0pt;
+	margin-top: 12pt;
+	margin-bottom: 3pt;
+	x-next-class: p;
+	x-next-type: p;
+}
+
+/*=(Generated Code)=================================================*/
+/*=(WARNING: DO NOT EDIT OR DELETE THIS SECTION!)===================*/
+/*begin!kadov{{=====================================================*/ 
+LI.kadov-h4 {
+	font-family: Arial, sans-serif;
+	font-size: 10pt;
+	font-weight: bold;
+	font-style: italic;
+	color: #000000;
+	letter-spacing: .2ex;
+}
+/*}}end!kadov=======================================================*/ 
+
+
+
+hr {
+	text-align: center;
+	color: #f0f0f0;
+	width: 100%;
+	height: 6pt;
+	margin-left: 0pt;
+	margin-right: 0pt;
+	margin-top: 0pt;
+	margin-bottom: -3pt;
+	border: none;
+}
+
+ol li {
+	list-style: decimal;
+	line-height: 12pt;
+	margin-bottom: 14pt;
+}
+
+p {
+	font-family: Verdana;
+	font-size: 8.0pt;
+	line-height: 12.0pt;
+	margin-left: 0pt;
+	margin-right: 0pt;
+	margin-top: 0pt;
+	margin-bottom: 9pt;
+}
+
+/*=(Generated Code)=================================================*/
+/*=(WARNING: DO NOT EDIT OR DELETE THIS SECTION!)===================*/
+/*begin!kadov{{=====================================================*/ 
+LI.kadov-p {
+	font-family: Verdana;
+	font-size: 8.0pt;
+	line-height: 12.0pt;
+}
+/*}}end!kadov=======================================================*/ 
+
+
+
+ul {
+	margin-top: 0pt;
+	margin-bottom: 12pt;
+	list-style-type: disc;
+	list-style-image: url(bullet.png);
+}
+
+ul p {
+	margin-bottom: 6pt;
+}
+
+/*=(Generated Code)=================================================*/
+/*=(WARNING: DO NOT EDIT OR DELETE THIS SECTION!)===================*/
+/*begin!kadov{{=====================================================*/ 
+ul LI.kadov-p {
+}
+/*}}end!kadov=======================================================*/ 
+
+
+
+/* CLASSES */
+/* CLASSES */
+/* CLASSES */
+/* CLASSES */
+/* CLASSES */
+
+div.Declaration {
+	white-space: nowrap;
+	line-height: normal;
+	x-text-tab-stops: repeat 1in;
+	font-family: "Courier New", Courier, monospace;
+	font-size: 9.0pt;
+	background-color: #eee;
+	color: #000000;
+	width: 100%;
+	margin-left: 0px;
+	margin-right: 0px;
+	margin-top: 0pt;
+	margin-bottom: 9pt;
+	padding: 2pt;
+	border-top: #c0c0c0 1px solid;
+	border-right: #c0c0c0 1px solid;
+	border-left: #c0c0c0 1px solid;
+	border-bottom: #c0c0c0 1px solid;
+}
+
+div.Declaration a:link,
+div.Declaration a:active,
+div.Declaration a:visited {
+	color: #000000;
+	x-text-underline: off;
+	x-text-overline: off;
+	x-text-line-through: off;
+	/*begin!kadov{{*/ text-decoration: none none none; /*}}end!kadov*/ 
+}
+
+div.Declaration a:hover {
+	color: #0000ff;
+	x-text-underline: off;
+	x-text-overline: off;
+	x-text-line-through: off;
+	/*begin!kadov{{*/ text-decoration: none none none; /*}}end!kadov*/ 
+}
+
+div.Declaration table p {
+	white-space: nowrap;
+	line-height: normal;
+	x-text-tab-stops: repeat 1in;
+	font-family: "Courier New", Courier, monospace;
+	font-size: 10.0pt;
+	background-color: #eee;
+	color: #000000;
+	margin-left: 0px;
+	margin-right: 0px;
+	margin-top: 0px;
+	margin-bottom: 0px;
+	padding: 0pt;
+	border-style: none;
+}
+
+/*=(Generated Code)=================================================*/
+/*=(WARNING: DO NOT EDIT OR DELETE THIS SECTION!)===================*/
+/*begin!kadov{{=====================================================*/ 
+div.Declaration table LI.kadov-p {
+	white-space: nowrap;
+	line-height: normal;
+	x-text-tab-stops: repeat 1in;
+	font-family: "Courier New", Courier, monospace;
+	font-size: 10.0pt;
+	color: #000000;
+}
+/*}}end!kadov=======================================================*/ 
+
+
+
+h2.ExampleHeading {
+	x-next-class: ExampleCode;
+	x-next-type: p;
+	white-space: nowrap;
+	margin-bottom: 3pt;
+}
+
+/*=(Generated Code)=================================================*/
+/*=(WARNING: DO NOT EDIT OR DELETE THIS SECTION!)===================*/
+/*begin!kadov{{=====================================================*/ 
+LI.kadov-h2-CExampleHeading {
+	white-space: nowrap;
+}
+/*}}end!kadov=======================================================*/ 
+
+
+
+h2.GroupHeading {
+	font-family: Arial, sans-serif;
+	font-size: 12pt;
+	font-weight: bold;
+	font-style: normal;
+	color: #999999;
+	margin-top: 18pt;
+	margin-bottom: -6pt;
+	margin-left: 0pt;
+	margin-right: 0pt;
+	x-next-class: FieldHeading;
+	x-next-type: h3;
+}
+
+/*=(Generated Code)=================================================*/
+/*=(WARNING: DO NOT EDIT OR DELETE THIS SECTION!)===================*/
+/*begin!kadov{{=====================================================*/ 
+LI.kadov-h2-CGroupHeading {
+	font-family: Arial, sans-serif;
+	font-size: 12pt;
+	font-weight: bold;
+	font-style: normal;
+	color: #999999;
+}
+/*}}end!kadov=======================================================*/ 
+
+
+
+h2.GroupHeadingLoose {
+	font-family: Arial, sans-serif;
+	font-size: 12pt;
+	font-weight: bold;
+	font-style: normal;
+	color: #999999;
+	margin-top: 18pt;
+	margin-bottom: 9pt;
+	margin-left: 0pt;
+	margin-right: 0pt;
+	x-next-class: GroupBody;
+	x-next-type: p;
+}
+
+/*=(Generated Code)=================================================*/
+/*=(WARNING: DO NOT EDIT OR DELETE THIS SECTION!)===================*/
+/*begin!kadov{{=====================================================*/ 
+LI.kadov-h2-CGroupHeadingLoose {
+	font-family: Arial, sans-serif;
+	font-size: 12pt;
+	font-weight: bold;
+	font-style: normal;
+	color: #999999;
+}
+/*}}end!kadov=======================================================*/ 
+
+
+
+h2.GroupSubHeading {
+	font-family: Arial, sans-serif;
+	font-size: 12pt;
+	font-weight: bold;
+	font-style: italic;
+	color: #aa9999;
+	margin-top: 18pt;
+	margin-bottom: -6pt;
+	margin-left: 6pt;
+	margin-right: 0pt;
+	x-next-class: FieldHeading;
+	x-next-type: h3;
+}
+
+/*=(Generated Code)=================================================*/
+/*=(WARNING: DO NOT EDIT OR DELETE THIS SECTION!)===================*/
+/*begin!kadov{{=====================================================*/ 
+LI.kadov-h2-CGroupSubHeading {
+	font-family: Arial, sans-serif;
+	font-size: 12pt;
+	font-weight: bold;
+	font-style: italic;
+	color: #aa9999;
+}
+/*}}end!kadov=======================================================*/ 
+
+
+
+h2.H2Tight {
+	margin-bottom: -6pt;
+}
+
+/*=(Generated Code)=================================================*/
+/*=(WARNING: DO NOT EDIT OR DELETE THIS SECTION!)===================*/
+/*begin!kadov{{=====================================================*/ 
+LI.kadov-h2-CH2Tight {
+}
+/*}}end!kadov=======================================================*/ 
+
+
+
+h2.HowDoIHeading {
+	font-family: Arial, sans-serif;
+	font-size: 16.0pt;
+	letter-spacing: .2ex;
+	color: #000000;
+	margin-left: 0pt;
+	margin-right: 0pt;
+	margin-top: 18pt;
+	margin-bottom: 3pt;
+	x-next-class: Normal;
+	x-next-type: p;
+}
+
+/*=(Generated Code)=================================================*/
+/*=(WARNING: DO NOT EDIT OR DELETE THIS SECTION!)===================*/
+/*begin!kadov{{=====================================================*/ 
+LI.kadov-h2-CHowDoIHeading {
+	font-family: Arial, sans-serif;
+	font-size: 16.0pt;
+	letter-spacing: .2ex;
+	color: #000000;
+}
+/*}}end!kadov=======================================================*/ 
+
+
+
+h2.ListHeading {
+	margin-bottom: 9pt;
+	x-next-class: ListBody;
+	x-next-type: p;
+	white-space: nowrap;
+}
+
+/*=(Generated Code)=================================================*/
+/*=(WARNING: DO NOT EDIT OR DELETE THIS SECTION!)===================*/
+/*begin!kadov{{=====================================================*/ 
+LI.kadov-h2-CListHeading {
+	white-space: nowrap;
+}
+/*}}end!kadov=======================================================*/ 
+
+
+
+h2.TabHeading {
+	font-family: Arial, sans-serif;
+	font-size: 15.0pt;
+	letter-spacing: normal;
+	background-color: #e4e4e4;
+	color: #999;
+	color: #9c9c9c;
+	margin-left: -8pt;
+	margin-right: -8pt;
+	margin-top: 18pt;
+	margin-bottom: 12pt;
+	padding-left: 8pt;
+	padding-top: 4px;
+	padding-bottom: 4px;
+	border-top: 1px solid #999;
+	border-bottom: 1px solid #999;
+	border-left: none;
+	border-right: none;
+}
+
+/*=(Generated Code)=================================================*/
+/*=(WARNING: DO NOT EDIT OR DELETE THIS SECTION!)===================*/
+/*begin!kadov{{=====================================================*/ 
+LI.kadov-h2-CTabHeading {
+	font-family: Arial, sans-serif;
+	font-size: 15.0pt;
+	letter-spacing: normal;
+	color: #999;
+	color: #9c9c9c;
+}
+/*}}end!kadov=======================================================*/ 
+
+
+
+h2.VarHeading {
+	font-family: Arial;
+	font-size: 10pt;
+	letter-spacing: 0px;
+	margin-left: 12pt;
+	margin-right: 0pt;
+	margin-top: 18pt;
+	margin-bottom: 3pt;
+	x-next-class: VarBody;
+	x-next-type: p;
+	white-space: nowrap;
+}
+
+/*=(Generated Code)=================================================*/
+/*=(WARNING: DO NOT EDIT OR DELETE THIS SECTION!)===================*/
+/*begin!kadov{{=====================================================*/ 
+LI.kadov-h2-CVarHeading {
+	font-family: Arial;
+	font-size: 10pt;
+	letter-spacing: 0px;
+	white-space: nowrap;
+}
+/*}}end!kadov=======================================================*/ 
+
+
+
+h3.ErrHeading {
+	font-family: Arial, sans-serif;
+	font-size: 10pt;
+	font-style: normal;
+	color: #000000;
+	letter-spacing: 0px;
+	margin-left: 12pt;
+	margin-right: 0pt;
+	margin-top: 18pt;
+	margin-bottom: 3pt;
+	x-next-class: ErrBody;
+	x-next-type: p;
+	white-space: nowrap;
+}
+
+/*=(Generated Code)=================================================*/
+/*=(WARNING: DO NOT EDIT OR DELETE THIS SECTION!)===================*/
+/*begin!kadov{{=====================================================*/ 
+LI.kadov-h3-CErrHeading {
+	font-family: Arial, sans-serif;
+	font-size: 10pt;
+	font-style: normal;
+	color: #000000;
+	letter-spacing: 0px;
+	white-space: nowrap;
+}
+/*}}end!kadov=======================================================*/ 
+
+
+
+h3.FieldHeading {
+	font-family: Arial, sans-serif;
+	font-size: 10pt;
+	font-weight: bold;
+	font-style: italic;
+	color: #3C77B3;
+	letter-spacing: 0px;
+	margin-left: 12pt;
+	margin-right: 0pt;
+	margin-top: 18pt;
+	margin-bottom: 3pt;
+	x-next-class: FieldBody;
+	x-next-type: p;
+}
+
+/*=(Generated Code)=================================================*/
+/*=(WARNING: DO NOT EDIT OR DELETE THIS SECTION!)===================*/
+/*begin!kadov{{=====================================================*/ 
+LI.kadov-h3-CFieldHeading {
+	font-family: Arial, sans-serif;
+	font-size: 10pt;
+	font-weight: bold;
+	font-style: italic;
+	color: #3C77B3;
+	letter-spacing: 0px;
+}
+/*}}end!kadov=======================================================*/ 
+
+
+
+h3.FieldSubHeading {
+	font-family: Arial, sans-serif;
+	font-size: 10pt;
+	font-weight: bold;
+	font-style: italic;
+	color: #3C77B3;
+	letter-spacing: 0px;
+	margin-left: 32pt;
+	margin-right: 0pt;
+	margin-top: 18pt;
+	margin-bottom: 3pt;
+	x-next-class: FieldSubBody;
+	x-next-type: p;
+}
+
+/*=(Generated Code)=================================================*/
+/*=(WARNING: DO NOT EDIT OR DELETE THIS SECTION!)===================*/
+/*begin!kadov{{=====================================================*/ 
+LI.kadov-h3-CFieldSubHeading {
+	font-family: Arial, sans-serif;
+	font-size: 10pt;
+	font-weight: bold;
+	font-style: italic;
+	color: #3C77B3;
+	letter-spacing: 0px;
+}
+/*}}end!kadov=======================================================*/ 
+
+
+
+h3.ParameterHeading {
+	font-family: Arial, sans-serif;
+	margin-left: 12pt;
+	margin-right: 0pt;
+	margin-top: 18pt;
+	margin-bottom: 3pt;
+	font-size: 9pt;
+	font-weight: bold;
+	font-style: italic;
+	letter-spacing: .2ex;
+	color: #3C77B3;
+	x-next-class: ParameterBody;
+	x-next-type: p;
+}
+
+/*=(Generated Code)=================================================*/
+/*=(WARNING: DO NOT EDIT OR DELETE THIS SECTION!)===================*/
+/*begin!kadov{{=====================================================*/ 
+LI.kadov-h3-CParameterHeading {
+	font-family: Arial, sans-serif;
+	font-size: 9pt;
+	font-weight: bold;
+	font-style: italic;
+	letter-spacing: .2ex;
+	color: #3C77B3;
+}
+/*}}end!kadov=======================================================*/ 
+
+
+
+h4.OptionHeading {
+	font-family: Verdana, sans-serif;
+	font-size: 8.0pt;
+	font-weight: bold;
+	font-style: normal;
+	line-height: 12.0pt;
+	color: #000000;
+	margin-left: 32.0pt;
+	margin-right: 0pt;
+	margin-top: 12pt;
+	margin-bottom: 0;
+	x-next-class: OptionBody;
+	x-next-type: p;
+}
+
+/*=(Generated Code)=================================================*/
+/*=(WARNING: DO NOT EDIT OR DELETE THIS SECTION!)===================*/
+/*begin!kadov{{=====================================================*/ 
+LI.kadov-h4-COptionHeading {
+	font-family: Verdana, sans-serif;
+	font-size: 8.0pt;
+	font-weight: bold;
+	font-style: normal;
+	line-height: 12.0pt;
+	color: #000000;
+}
+/*}}end!kadov=======================================================*/ 
+
+
+
+h4.OptionSubHeading {
+	font-family: Verdana, sans-serif;
+	font-size: 8.0pt;
+	font-weight: bold;
+	font-style: normal;
+	line-height: 12.0pt;
+	color: #000000;
+	margin-left: 52.0pt;
+	margin-right: 0pt;
+	margin-top: 12pt;
+	margin-bottom: 0;
+	x-next-class: OptionSubBody;
+	x-next-type: p;
+}
+
+/*=(Generated Code)=================================================*/
+/*=(WARNING: DO NOT EDIT OR DELETE THIS SECTION!)===================*/
+/*begin!kadov{{=====================================================*/ 
+LI.kadov-h4-COptionSubHeading {
+	font-family: Verdana, sans-serif;
+	font-size: 8.0pt;
+	font-weight: bold;
+	font-style: normal;
+	line-height: 12.0pt;
+	color: #000000;
+}
+/*}}end!kadov=======================================================*/ 
+
+
+
+P.BodyCode {
+	white-space: nowrap;
+	font-family: "Courier New", Courier, Arial, sans-serif;
+	font-size: 10pt;
+	font-weight: normal;
+	font-style: normal;
+	letter-spacing: normal;
+	color: #000000;
+	background-color: #eee;
+	background-color: #f9f9f9;
+	margin-top: -6pt;
+	margin-bottom: 9pt;
+	margin-left: 0pt;
+	margin-right: 0pt;
+	padding: 10px;
+	border: 1px dotted #ccc;
+	x-next-type: p;
+}
+
+/*=(Generated Code)=================================================*/
+/*=(WARNING: DO NOT EDIT OR DELETE THIS SECTION!)===================*/
+/*begin!kadov{{=====================================================*/ 
+LI.kadov-P-CBodyCode {
+	white-space: nowrap;
+	font-family: "Courier New", Courier, Arial, sans-serif;
+	font-size: 10pt;
+	font-weight: normal;
+	font-style: normal;
+	letter-spacing: normal;
+	color: #000000;
+}
+/*}}end!kadov=======================================================*/ 
+
+
+
+p.Caption {
+	font-size: 7pt;
+	letter-spacing: .5pt;
+	line-height: 14pt;
+	text-align: center;
+	margin-bottom: 0pt;
+	x-next-class: ;
+	x-next-type: P;
+}
+
+/*=(Generated Code)=================================================*/
+/*=(WARNING: DO NOT EDIT OR DELETE THIS SECTION!)===================*/
+/*begin!kadov{{=====================================================*/ 
+LI.kadov-p-CCaption {
+	font-size: 7pt;
+	letter-spacing: .5pt;
+	line-height: 14pt;
+	text-align: center;
+}
+/*}}end!kadov=======================================================*/ 
+
+
+
+P.Code {
+	white-space: nowrap;
+	font-family: "Courier New", Courier, Arial, sans-serif;
+	font-size: 10pt;
+	font-weight: normal;
+	font-style: normal;
+	letter-spacing: normal;
+	color: #000000;
+	background-color: #ffffff;
+	margin-bottom: 9pt;
+	margin-left: 0pt;
+	margin-right: 0pt;
+	padding: 00px;
+	x-next-type: p;
+}
+
+/*=(Generated Code)=================================================*/
+/*=(WARNING: DO NOT EDIT OR DELETE THIS SECTION!)===================*/
+/*begin!kadov{{=====================================================*/ 
+LI.kadov-P-CCode {
+	white-space: nowrap;
+	font-family: "Courier New", Courier, Arial, sans-serif;
+	font-size: 10pt;
+	font-weight: normal;
+	font-style: normal;
+	letter-spacing: normal;
+	color: #000000;
+}
+/*}}end!kadov=======================================================*/ 
+
+
+
+p.ErrBody {
+	margin-left: 12pt;
+	margin-right: 0pt;
+	margin-bottom: 3pt;
+	x-next-class: ErrBody;
+	x-next-type: p;
+	white-space: nowrap;
+}
+
+/*=(Generated Code)=================================================*/
+/*=(WARNING: DO NOT EDIT OR DELETE THIS SECTION!)===================*/
+/*begin!kadov{{=====================================================*/ 
+LI.kadov-p-CErrBody {
+	white-space: nowrap;
+}
+/*}}end!kadov=======================================================*/ 
+
+
+
+p.ErrCode {
+	white-space: nowrap;
+	font-family: "Courier New", Courier, Arial, sans-serif;
+	font-size: 10pt;
+	font-weight: normal;
+	font-style: normal;
+	letter-spacing: normal;
+	color: #052;
+	color: #000000;
+	background-color: #eee;
+	background-color: #f9f9f9;
+	margin-top: 9pt;
+	margin-bottom: 9pt;
+	margin-left: 12pt;
+	margin-right: 0pt;
+	padding: 10px;
+	border: 1px dotted #ccc;
+	x-next-class: ErrBody;
+	x-next-type: p;
+}
+
+/*=(Generated Code)=================================================*/
+/*=(WARNING: DO NOT EDIT OR DELETE THIS SECTION!)===================*/
+/*begin!kadov{{=====================================================*/ 
+LI.kadov-p-CErrCode {
+	white-space: nowrap;
+	font-family: "Courier New", Courier, Arial, sans-serif;
+	font-size: 10pt;
+	font-weight: normal;
+	font-style: normal;
+	letter-spacing: normal;
+	color: #052;
+	color: #000000;
+}
+/*}}end!kadov=======================================================*/ 
+
+
+
+p.ErrNote {
+	font-family: Verdana;
+	font-size: 8.0pt;
+	line-height: 12.0pt;
+	color: #000000;
+	background-color: #ffffe8;
+	margin-top: 9pt;
+	margin-bottom: 9pt;
+	margin-left: 12pt;
+	margin-right: 5%;
+	padding-left: 2pt;
+	padding-right: 2pt;
+	padding-top: 1pt;
+	padding-bottom: 2pt;
+	x-next-class: ErrBody;
+	x-next-type: p;
+}
+
+/*=(Generated Code)=================================================*/
+/*=(WARNING: DO NOT EDIT OR DELETE THIS SECTION!)===================*/
+/*begin!kadov{{=====================================================*/ 
+LI.kadov-p-CErrNote {
+	font-family: Verdana;
+	font-size: 8.0pt;
+	line-height: 12.0pt;
+	color: #000000;
+}
+/*}}end!kadov=======================================================*/ 
+
+
+
+p.ErrTip {
+	font-family: Verdana;
+	font-size: 8.0pt;
+	line-height: 12.0pt;
+	color: #000000;
+	background-color: #EAF4E8;
+	margin-top: 9pt;
+	margin-bottom: 9pt;
+	margin-left: 12pt;
+	margin-right: 5%;
+	padding-left: 2pt;
+	padding-right: 2pt;
+	padding-top: 1pt;
+	padding-bottom: 2pt;
+	x-next-class: ErrBody;
+	x-next-type: p;
+}
+
+/*=(Generated Code)=================================================*/
+/*=(WARNING: DO NOT EDIT OR DELETE THIS SECTION!)===================*/
+/*begin!kadov{{=====================================================*/ 
+LI.kadov-p-CErrTip {
+	font-family: Verdana;
+	font-size: 8.0pt;
+	line-height: 12.0pt;
+	color: #000000;
+}
+/*}}end!kadov=======================================================*/ 
+
+
+
+P.ExampleBody {
+	margin-right: 0pt;
+	margin-bottom: 9pt;
+	margin-left: 12px;
+}
+
+/*=(Generated Code)=================================================*/
+/*=(WARNING: DO NOT EDIT OR DELETE THIS SECTION!)===================*/
+/*begin!kadov{{=====================================================*/ 
+LI.kadov-P-CExampleBody {
+}
+/*}}end!kadov=======================================================*/ 
+
+
+
+p.ExampleCode {
+	white-space: nowrap;
+	font-family: "Courier New", Courier, Arial, sans-serif;
+	font-size: 10pt;
+	font-weight: normal;
+	font-style: normal;
+	letter-spacing: normal;
+	color: #052;
+	background-color: #f9f9f9;
+	margin-top: 6pt;
+	margin-bottom: 3pt;
+	margin-left: 0pt;
+	margin-right: 0pt;
+	padding: 10px;
+	border: 1px dotted #ccc;
+	x-next-class: ExampleBody;
+	x-next-type: p;
+}
+
+/*=(Generated Code)=================================================*/
+/*=(WARNING: DO NOT EDIT OR DELETE THIS SECTION!)===================*/
+/*begin!kadov{{=====================================================*/ 
+LI.kadov-p-CExampleCode {
+	white-space: nowrap;
+	font-family: "Courier New", Courier, Arial, sans-serif;
+	font-size: 10pt;
+	font-weight: normal;
+	font-style: normal;
+	letter-spacing: normal;
+	color: #052;
+}
+/*}}end!kadov=======================================================*/ 
+
+
+
+p.ExampleNote {
+	font-family: Verdana;
+	font-size: 8.0pt;
+	line-height: 12.0pt;
+	color: #000000;
+	background-color: #ffffe8;
+	margin-top: 0pt;
+	margin-bottom: 9pt;
+	margin-left: 10px;
+	margin-right: 5%;
+	padding-left: 2pt;
+	padding-right: 2pt;
+	padding-top: 1pt;
+	padding-bottom: 2pt;
+	x-next-class: ;
+	x-next-type: p;
+}
+
+/*=(Generated Code)=================================================*/
+/*=(WARNING: DO NOT EDIT OR DELETE THIS SECTION!)===================*/
+/*begin!kadov{{=====================================================*/ 
+LI.kadov-p-CExampleNote {
+	font-family: Verdana;
+	font-size: 8.0pt;
+	line-height: 12.0pt;
+	color: #000000;
+}
+/*}}end!kadov=======================================================*/ 
+
+
+
+p.ExampleTip {
+	font-family: Verdana;
+	font-size: 8.0pt;
+	line-height: 12.0pt;
+	color: #000000;
+	background-color: #EAF4E8;
+	margin-top: 0pt;
+	margin-bottom: 9pt;
+	margin-left: 10px;
+	margin-right: 5%;
+	padding-left: 2pt;
+	padding-right: 2pt;
+	padding-top: 1pt;
+	padding-bottom: 2pt;
+	x-next-class: FieldBody;
+	x-next-type: p;
+}
+
+/*=(Generated Code)=================================================*/
+/*=(WARNING: DO NOT EDIT OR DELETE THIS SECTION!)===================*/
+/*begin!kadov{{=====================================================*/ 
+LI.kadov-p-CExampleTip {
+	font-family: Verdana;
+	font-size: 8.0pt;
+	line-height: 12.0pt;
+	color: #000000;
+}
+/*}}end!kadov=======================================================*/ 
+
+
+
+p.FieldBody {
+	font-family: Verdana;
+	font-size: 8.0pt;
+	line-height: 12.0pt;
+	margin-top: 0pt;
+	margin-bottom: 9pt;
+	margin-left: 12pt;
+	margin-right: 0pt;
+	x-next-class: FieldBody;
+	x-next-type: p;
+}
+
+/*=(Generated Code)=================================================*/
+/*=(WARNING: DO NOT EDIT OR DELETE THIS SECTION!)===================*/
+/*begin!kadov{{=====================================================*/ 
+LI.kadov-p-CFieldBody {
+	font-family: Verdana;
+	font-size: 8.0pt;
+	line-height: 12.0pt;
+}
+/*}}end!kadov=======================================================*/ 
+
+
+
+p.FieldSubBody {
+	font-family: Verdana;
+	font-size: 8.0pt;
+	line-height: 12.0pt;
+	margin-top: 0pt;
+	margin-bottom: 9pt;
+	margin-left: 32pt;
+	margin-right: 0pt;
+	x-next-class: FieldSubBody;
+	x-next-type: p;
+}
+
+/*=(Generated Code)=================================================*/
+/*=(WARNING: DO NOT EDIT OR DELETE THIS SECTION!)===================*/
+/*begin!kadov{{=====================================================*/ 
+LI.kadov-p-CFieldSubBody {
+	font-family: Verdana;
+	font-size: 8.0pt;
+	line-height: 12.0pt;
+}
+/*}}end!kadov=======================================================*/ 
+
+
+
+p.FieldNote {
+	font-family: Verdana;
+	font-size: 8.0pt;
+	line-height: 12.0pt;
+	color: #000000;
+	background-color: #ffffe8;
+	margin-top: 0pt;
+	margin-bottom: 9pt;
+	margin-left: 12pt;
+	margin-right: 5%;
+	padding-left: 2pt;
+	padding-right: 2pt;
+	padding-top: 1pt;
+	padding-bottom: 2pt;
+	x-next-class: FieldBody;
+	x-next-type: p;
+}
+
+/*=(Generated Code)=================================================*/
+/*=(WARNING: DO NOT EDIT OR DELETE THIS SECTION!)===================*/
+/*begin!kadov{{=====================================================*/ 
+LI.kadov-p-CFieldNote {
+	font-family: Verdana;
+	font-size: 8.0pt;
+	line-height: 12.0pt;
+	color: #000000;
+}
+/*}}end!kadov=======================================================*/ 
+
+
+
+p.FieldSubNote {
+	font-family: Verdana;
+	font-size: 8.0pt;
+	line-height: 12.0pt;
+	color: #000000;
+	background-color: #ffffe8;
+	margin-top: 0pt;
+	margin-bottom: 9pt;
+	margin-left: 32pt;
+	margin-right: 5%;
+	padding-left: 2pt;
+	padding-right: 2pt;
+	padding-top: 1pt;
+	padding-bottom: 2pt;
+	x-next-class: FieldBody;
+	x-next-type: p;
+}
+
+/*=(Generated Code)=================================================*/
+/*=(WARNING: DO NOT EDIT OR DELETE THIS SECTION!)===================*/
+/*begin!kadov{{=====================================================*/ 
+LI.kadov-p-CFieldSubNote {
+	font-family: Verdana;
+	font-size: 8.0pt;
+	line-height: 12.0pt;
+	color: #000000;
+}
+/*}}end!kadov=======================================================*/ 
+
+
+
+p.FieldSubTip {
+	font-family: Verdana;
+	font-size: 8.0pt;
+	line-height: 12.0pt;
+	color: #000000;
+	background-color: #EAF4E8;
+	margin-top: 0pt;
+	margin-bottom: 9pt;
+	margin-left: 32pt;
+	margin-right: 5%;
+	padding-left: 2pt;
+	padding-right: 2pt;
+	padding-top: 1pt;
+	padding-bottom: 2pt;
+	x-next-class: FieldBody;
+	x-next-type: p;
+}
+
+/*=(Generated Code)=================================================*/
+/*=(WARNING: DO NOT EDIT OR DELETE THIS SECTION!)===================*/
+/*begin!kadov{{=====================================================*/ 
+LI.kadov-p-CFieldSubTip {
+	font-family: Verdana;
+	font-size: 8.0pt;
+	line-height: 12.0pt;
+	color: #000000;
+}
+/*}}end!kadov=======================================================*/ 
+
+
+
+p.FieldTip {
+	font-family: Verdana;
+	font-size: 8.0pt;
+	line-height: 12.0pt;
+	color: #000000;
+	background-color: #EAF4E8;
+	margin-top: 0pt;
+	margin-bottom: 9pt;
+	margin-left: 12pt;
+	margin-right: 5%;
+	padding-left: 2pt;
+	padding-right: 2pt;
+	padding-top: 1pt;
+	padding-bottom: 2pt;
+	x-next-class: FieldBody;
+	x-next-type: p;
+}
+
+/*=(Generated Code)=================================================*/
+/*=(WARNING: DO NOT EDIT OR DELETE THIS SECTION!)===================*/
+/*begin!kadov{{=====================================================*/ 
+LI.kadov-p-CFieldTip {
+	font-family: Verdana;
+	font-size: 8.0pt;
+	line-height: 12.0pt;
+	color: #000000;
+}
+/*}}end!kadov=======================================================*/ 
+
+
+
+p.FieldWarning {
+	font-family: Verdana;
+	font-size: 8.0pt;
+	line-height: 12.0pt;
+	color: #000000;
+	background-color: #FDF0E8;
+	margin-top: 0pt;
+	margin-bottom: 9pt;
+	margin-left: 12pt;
+	margin-right: 5%;
+	padding-left: 2pt;
+	padding-right: 2pt;
+	padding-top: 1pt;
+	padding-bottom: 2pt;
+	border: 1px dotted #ff0000;
+	border: none;
+	x-next-class: FieldBody;
+	x-next-type: p;
+}
+
+/*=(Generated Code)=================================================*/
+/*=(WARNING: DO NOT EDIT OR DELETE THIS SECTION!)===================*/
+/*begin!kadov{{=====================================================*/ 
+LI.kadov-p-CFieldWarning {
+	font-family: Verdana;
+	font-size: 8.0pt;
+	line-height: 12.0pt;
+	color: #000000;
+}
+/*}}end!kadov=======================================================*/ 
+
+
+
+p.GroupBody {
+	margin-left: 12pt;
+	margin-right: 0pt;
+	margin-top: 0pt;
+	margin-bottom: 9pt;
+	x-next-class: GroupBody;
+	x-next-type: p;
+}
+
+/*=(Generated Code)=================================================*/
+/*=(WARNING: DO NOT EDIT OR DELETE THIS SECTION!)===================*/
+/*begin!kadov{{=====================================================*/ 
+LI.kadov-p-CGroupBody {
+}
+/*}}end!kadov=======================================================*/ 
+
+
+
+p.ListBody {
+	margin-left: 12pt;
+	margin-right: 0pt;
+	margin-bottom: 3pt;
+	x-next-class: ListBody;
+	x-next-type: p;
+}
+
+/*=(Generated Code)=================================================*/
+/*=(WARNING: DO NOT EDIT OR DELETE THIS SECTION!)===================*/
+/*begin!kadov{{=====================================================*/ 
+LI.kadov-p-CListBody {
+}
+/*}}end!kadov=======================================================*/ 
+
+
+
+p.TOC1 {
+	margin-top: 12pt;
+	margin-bottom: 3pt;
+	margin-left: 12pt;
+	margin-right: 0pt;
+	x-next-class: TOC2;
+	x-next-type: p;
+	white-space: nowrap;
+}
+
+/*=(Generated Code)=================================================*/
+/*=(WARNING: DO NOT EDIT OR DELETE THIS SECTION!)===================*/
+/*begin!kadov{{=====================================================*/ 
+LI.kadov-p-CTOC1 {
+	white-space: nowrap;
+}
+/*}}end!kadov=======================================================*/ 
+
+
+
+p.TOC2 {
+	margin-bottom: 3pt;
+	margin-left: 28pt;
+	margin-right: 0pt;
+	x-next-class: TOC2;
+	x-next-type: p;
+	white-space: nowrap;
+}
+
+/*=(Generated Code)=================================================*/
+/*=(WARNING: DO NOT EDIT OR DELETE THIS SECTION!)===================*/
+/*begin!kadov{{=====================================================*/ 
+LI.kadov-p-CTOC2 {
+	white-space: nowrap;
+}
+/*}}end!kadov=======================================================*/ 
+
+
+
+p.TOC3 {
+	font-style: italic;
+	margin-bottom: 3pt;
+	margin-left: 46pt;
+	margin-right: 0pt;
+	x-next-class: TOC3;
+	x-next-type: p;
+	white-space: nowrap;
+}
+
+/*=(Generated Code)=================================================*/
+/*=(WARNING: DO NOT EDIT OR DELETE THIS SECTION!)===================*/
+/*begin!kadov{{=====================================================*/ 
+LI.kadov-p-CTOC3 {
+	font-style: italic;
+	white-space: nowrap;
+}
+/*}}end!kadov=======================================================*/ 
+
+
+
+p.NumBody {
+	margin-left: 30pt;
+	margin-right: 0pt;
+	margin-top: 0pt;
+	margin-bottom: 3pt;
+	x-next-class: ErrBody;
+	x-next-type: p;
+}
+
+/*=(Generated Code)=================================================*/
+/*=(WARNING: DO NOT EDIT OR DELETE THIS SECTION!)===================*/
+/*begin!kadov{{=====================================================*/ 
+LI.kadov-p-CNumBody {
+}
+/*}}end!kadov=======================================================*/ 
+
+
+
+p.VarBody {
+	margin-left: 12pt;
+	margin-right: 0pt;
+	margin-bottom: 3pt;
+	x-next-class: VarBody;
+	x-next-type: p;
+}
+
+/*=(Generated Code)=================================================*/
+/*=(WARNING: DO NOT EDIT OR DELETE THIS SECTION!)===================*/
+/*begin!kadov{{=====================================================*/ 
+LI.kadov-p-CVarBody {
+}
+/*}}end!kadov=======================================================*/ 
+
+
+
+p.VarCode {
+	white-space: nowrap;
+	font-family: "Courier New", Courier, Arial, sans-serif;
+	font-size: 10pt;
+	font-weight: normal;
+	font-style: normal;
+	letter-spacing: normal;
+	color: #052;
+	color: #000000;
+	background-color: #eee;
+	background-color: #f9f9f9;
+	margin-top: 9pt;
+	margin-bottom: 9pt;
+	margin-left: 12pt;
+	margin-right: 0pt;
+	padding: 10px;
+	border: 1px dotted #ccc;
+	x-next-class: VarBody;
+	x-next-type: p;
+}
+
+/*=(Generated Code)=================================================*/
+/*=(WARNING: DO NOT EDIT OR DELETE THIS SECTION!)===================*/
+/*begin!kadov{{=====================================================*/ 
+LI.kadov-p-CVarCode {
+	white-space: nowrap;
+	font-family: "Courier New", Courier, Arial, sans-serif;
+	font-size: 10pt;
+	font-weight: normal;
+	font-style: normal;
+	letter-spacing: normal;
+	color: #052;
+	color: #000000;
+}
+/*}}end!kadov=======================================================*/ 
+
+
+
+p.VarNote {
+	font-family: Verdana;
+	font-size: 8.0pt;
+	line-height: 12.0pt;
+	color: #000000;
+	background-color: #ffffe8;
+	margin-top: 9pt;
+	margin-bottom: 9pt;
+	margin-left: 12pt;
+	margin-right: 5%;
+	padding-left: 2pt;
+	padding-right: 2pt;
+	padding-top: 1pt;
+	padding-bottom: 2pt;
+	x-next-class: VarBody;
+	x-next-type: p;
+}
+
+/*=(Generated Code)=================================================*/
+/*=(WARNING: DO NOT EDIT OR DELETE THIS SECTION!)===================*/
+/*begin!kadov{{=====================================================*/ 
+LI.kadov-p-CVarNote {
+	font-family: Verdana;
+	font-size: 8.0pt;
+	line-height: 12.0pt;
+	color: #000000;
+}
+/*}}end!kadov=======================================================*/ 
+
+
+
+p.VarTip {
+	font-family: Verdana;
+	font-size: 8.0pt;
+	line-height: 12.0pt;
+	color: #000000;
+	background-color: #EAF4E8;
+	margin-top: 9pt;
+	margin-bottom: 9pt;
+	margin-left: 12pt;
+	margin-right: 5%;
+	padding-left: 2pt;
+	padding-right: 2pt;
+	padding-top: 1pt;
+	padding-bottom: 2pt;
+	x-next-class: VarBody;
+	x-next-type: p;
+}
+
+/*=(Generated Code)=================================================*/
+/*=(WARNING: DO NOT EDIT OR DELETE THIS SECTION!)===================*/
+/*begin!kadov{{=====================================================*/ 
+LI.kadov-p-CVarTip {
+	font-family: Verdana;
+	font-size: 8.0pt;
+	line-height: 12.0pt;
+	color: #000000;
+}
+/*}}end!kadov=======================================================*/ 
+
+
+
+p.NavLocal {
+	white-space: nowrap;
+	text-indent: -4px;
+	font-family: Verdana, Arial, sans-serif;
+	font-weight: bold;
+	font-style: normal;
+	font-size: 10pt;
+	font-size: 13px;
+	background-color: #e4e4e4;
+	margin-top: 0px;
+	margin-bottom: 12pt;
+	padding-top: 4px;
+	padding-bottom: 4px;
+	padding-left: 0px;
+	padding-right: 0px;
+	border-bottom: 1px solid #e4e4e4;
+	x-next-class: ;
+	x-next-type: p;
+}
+
+/*=(Generated Code)=================================================*/
+/*=(WARNING: DO NOT EDIT OR DELETE THIS SECTION!)===================*/
+/*begin!kadov{{=====================================================*/ 
+LI.kadov-p-CNavLocal {
+	white-space: nowrap;
+	text-indent: -4px;
+	font-family: Verdana, Arial, sans-serif;
+	font-weight: bold;
+	font-style: normal;
+	font-size: 10pt;
+	font-size: 13px;
+}
+/*}}end!kadov=======================================================*/ 
+
+
+
+/* note:
+
+	Internet Explorer is broken on inline elements with horizontal padding.
+	I had something like this:
+
+	<p class=NavLocal><span class=Here>Overview</span>
+
+	...with span.Here having 4px of padding-left. The problem is, when
+	you resize the IE window narrower than the width of the paragraph
+	(auto, nowrap), it collapses the padding on the left and inserts
+	about one line-height above the element. GRR.
+
+	Oddly enough, if the first element has no extra padding-left, it
+	renders fine. After a couple days of "workaround hell," I came up
+	with two ways that seem to work in all current browsers. One is to
+	remove the padding and put &nbsp;&nbsp; on either side of the
+	content in each element within p.NavLocal. RoboHELP makes it pretty
+	hard to maintain that, though, and it makes adding and removing
+	links a royal PITA. The other way is to just put a single &nbsp; at
+	the start of the paragraph, and then shift the paragraph's text left
+	by the width of one space. This opens up the potential for font
+	rendering issues, but using a pixel size for the font should fix
+	that well enough, and seems to work 100% in my testing. To be safe,
+	I'm enclosing the &nbsp; in a span tag so I can remove it later with
+	a single "display: none" if I have to. Here's the new version:
+
+	<p class=NavLocal><span class=wab>&nbsp;</span><span class=Here>Overview</span>
+
+*/
+
+p.NavLocal a {
+	font-weight: normal;
+	font-weight: bold;
+	font-style: normal;
+	color: #8f8f9f;
+	background-color: #eee;
+	margin-top: 0px;
+	margin-bottom: 0px;
+	padding-top: 4px;
+	padding-bottom: 4px;
+	padding-left: 8px;
+	padding-right: 8px;
+	border-top: none;
+	border-bottom: 1px solid #ddd;
+	border-left: none;
+	border-right: #ddd 1px solid;
+}
+
+/* note: would need to expand border styles for netscape 4...border-right etc. won't work */
+
+p.NavLocal a:link,
+p.NavLocal a:active,
+p.NavLocal a:visited {
+	color: #8f8f9f;
+	x-text-underline: off;
+	x-text-overline: off;
+	x-text-line-through: off;
+	/*begin!kadov{{*/ text-decoration: none none none; /*}}end!kadov*/ 
+}
+
+p.NavLocal a:hover {
+	color: #0000ff;
+	x-text-underline: off;
+	x-text-overline: off;
+	x-text-line-through: off;
+	/*begin!kadov{{*/ text-decoration: none none none; /*}}end!kadov*/ 
+}
+
+p.Note {
+	font-family: Verdana;
+	font-size: 8.0pt;
+	line-height: 12.0pt;
+	color: #000000;
+	background-color: #ffffe8;
+	margin-top: 0pt;
+	margin-bottom: 9pt;
+	margin-left: 0pt;
+	margin-right: 5%;
+	padding-left: 2pt;
+	padding-right: 2pt;
+	padding-top: 1pt;
+	padding-bottom: 2pt;
+	x-next-class: ;
+	x-next-type: p;
+}
+
+/*=(Generated Code)=================================================*/
+/*=(WARNING: DO NOT EDIT OR DELETE THIS SECTION!)===================*/
+/*begin!kadov{{=====================================================*/ 
+LI.kadov-p-CNote {
+	font-family: Verdana;
+	font-size: 8.0pt;
+	line-height: 12.0pt;
+	color: #000000;
+}
+/*}}end!kadov=======================================================*/ 
+
+
+
+p.NumberedList {
+	list-style: decimal;
+	line-height: 12pt;
+	margin-bottom: 14pt;
+}
+
+/*=(Generated Code)=================================================*/
+/*=(WARNING: DO NOT EDIT OR DELETE THIS SECTION!)===================*/
+/*begin!kadov{{=====================================================*/ 
+LI.kadov-p-CNumberedList {
+	list-style: decimal;
+	line-height: 12pt;
+}
+/*}}end!kadov=======================================================*/ 
+
+
+
+p.NumCode {
+	white-space: nowrap;
+	font-family: "Courier New", Courier, Arial, sans-serif;
+	font-size: 10pt;
+	font-weight: normal;
+	font-style: normal;
+	letter-spacing: normal;
+	color: #000000;
+	background-color: #f9f9f9;
+	margin-top: -6pt;
+	margin-bottom: 9pt;
+	margin-left: 28pt;
+	margin-right: 0pt;
+	padding: 10px;
+	border: 1px dotted #ccc;
+	x-next-type: p;
+}
+
+/*=(Generated Code)=================================================*/
+/*=(WARNING: DO NOT EDIT OR DELETE THIS SECTION!)===================*/
+/*begin!kadov{{=====================================================*/ 
+LI.kadov-p-CNumCode {
+	white-space: nowrap;
+	font-family: "Courier New", Courier, Arial, sans-serif;
+	font-size: 10pt;
+	font-weight: normal;
+	font-style: normal;
+	letter-spacing: normal;
+	color: #000000;
+}
+/*}}end!kadov=======================================================*/ 
+
+
+
+p.NumNote {
+	font-family: Verdana;
+	font-size: 8.0pt;
+	line-height: 12.0pt;
+	color: #000000;
+	background-color: #ffffe8;
+	margin-top: 9pt;
+	margin-bottom: 9pt;
+	margin-left: 28pt;
+	margin-right: 5%;
+	padding-left: 2pt;
+	padding-right: 2pt;
+	padding-top: 1pt;
+	padding-bottom: 2pt;
+	x-next-type: p;
+}
+
+/*=(Generated Code)=================================================*/
+/*=(WARNING: DO NOT EDIT OR DELETE THIS SECTION!)===================*/
+/*begin!kadov{{=====================================================*/ 
+LI.kadov-p-CNumNote {
+	font-family: Verdana;
+	font-size: 8.0pt;
+	line-height: 12.0pt;
+	color: #000000;
+}
+/*}}end!kadov=======================================================*/ 
+
+
+
+p.NumText {
+	margin-top: 9pt;
+	margin-bottom: 9pt;
+	margin-left: 28pt;
+	margin-right: 0pt;
+	x-next-type: p;
+}
+
+/*=(Generated Code)=================================================*/
+/*=(WARNING: DO NOT EDIT OR DELETE THIS SECTION!)===================*/
+/*begin!kadov{{=====================================================*/ 
+LI.kadov-p-CNumText {
+}
+/*}}end!kadov=======================================================*/ 
+
+
+
+p.NumTip {
+	font-family: Verdana;
+	font-size: 8.0pt;
+	line-height: 12.0pt;
+	color: #000000;
+	background-color: #EAF4E8;
+	margin-top: 9pt;
+	margin-bottom: 9pt;
+	margin-left: 28pt;
+	margin-right: 5%;
+	padding-left: 2pt;
+	padding-right: 2pt;
+	padding-top: 1pt;
+	padding-bottom: 2pt;
+	x-next-type: p;
+}
+
+/*=(Generated Code)=================================================*/
+/*=(WARNING: DO NOT EDIT OR DELETE THIS SECTION!)===================*/
+/*begin!kadov{{=====================================================*/ 
+LI.kadov-p-CNumTip {
+	font-family: Verdana;
+	font-size: 8.0pt;
+	line-height: 12.0pt;
+	color: #000000;
+}
+/*}}end!kadov=======================================================*/ 
+
+
+
+p.NumWarning {
+	font-family: Verdana;
+	font-size: 8.0pt;
+	line-height: 12.0pt;
+	color: #000000;
+	background-color: #F8F6F6;
+	background-color: #FDF0E8;
+	margin-top: 9pt;
+	margin-bottom: 9pt;
+	margin-left: 28pt;
+	margin-right: 5%;
+	padding-left: 2pt;
+	padding-right: 2pt;
+	padding-top: 1pt;
+	padding-bottom: 2pt;
+	border: 1px dotted #ff0000;
+	border: none;
+	x-next-type: p;
+}
+
+/*=(Generated Code)=================================================*/
+/*=(WARNING: DO NOT EDIT OR DELETE THIS SECTION!)===================*/
+/*begin!kadov{{=====================================================*/ 
+LI.kadov-p-CNumWarning {
+	font-family: Verdana;
+	font-size: 8.0pt;
+	line-height: 12.0pt;
+	color: #000000;
+}
+/*}}end!kadov=======================================================*/ 
+
+
+
+p.OptionBody {
+	margin-left: 32pt;
+	margin-right: 0pt;
+	margin-top: 0pt;
+	margin-bottom: 12pt;
+	x-next-class: OptionHeading;
+	x-next-type: h4;
+}
+
+/*=(Generated Code)=================================================*/
+/*=(WARNING: DO NOT EDIT OR DELETE THIS SECTION!)===================*/
+/*begin!kadov{{=====================================================*/ 
+LI.kadov-p-COptionBody {
+}
+/*}}end!kadov=======================================================*/ 
+
+
+
+p.OptionNote {
+	font-family: Verdana;
+	font-size: 8.0pt;
+	line-height: 12.0pt;
+	color: #000000;
+	background-color: #ffffe8;
+	margin-top: 0pt;
+	margin-bottom: 9pt;
+	margin-left: 32pt;
+	margin-right: 5%;
+	padding-left: 2pt;
+	padding-right: 2pt;
+	padding-top: 1pt;
+	padding-bottom: 2pt;
+	x-next-class: FieldBody;
+	x-next-type: p;
+}
+
+/*=(Generated Code)=================================================*/
+/*=(WARNING: DO NOT EDIT OR DELETE THIS SECTION!)===================*/
+/*begin!kadov{{=====================================================*/ 
+LI.kadov-p-COptionNote {
+	font-family: Verdana;
+	font-size: 8.0pt;
+	line-height: 12.0pt;
+	color: #000000;
+}
+/*}}end!kadov=======================================================*/ 
+
+
+
+p.OptionSubBody {
+	margin-left: 52pt;
+	margin-right: 0pt;
+	margin-top: 0pt;
+	margin-bottom: 12pt;
+	x-next-class: OptionSubHeading;
+	x-next-type: h4;
+}
+
+/*=(Generated Code)=================================================*/
+/*=(WARNING: DO NOT EDIT OR DELETE THIS SECTION!)===================*/
+/*begin!kadov{{=====================================================*/ 
+LI.kadov-p-COptionSubBody {
+}
+/*}}end!kadov=======================================================*/ 
+
+
+
+p.OptionTip {
+	font-family: Verdana;
+	font-size: 8.0pt;
+	line-height: 12.0pt;
+	color: #000000;
+	background-color: #EAF4E8;
+	margin-top: 0pt;
+	margin-bottom: 9pt;
+	margin-left: 32pt;
+	margin-right: 5%;
+	padding-left: 2pt;
+	padding-right: 2pt;
+	padding-top: 1pt;
+	padding-bottom: 2pt;
+	x-next-class: OptionBody;
+	x-next-type: p;
+}
+
+/*=(Generated Code)=================================================*/
+/*=(WARNING: DO NOT EDIT OR DELETE THIS SECTION!)===================*/
+/*begin!kadov{{=====================================================*/ 
+LI.kadov-p-COptionTip {
+	font-family: Verdana;
+	font-size: 8.0pt;
+	line-height: 12.0pt;
+	color: #000000;
+}
+/*}}end!kadov=======================================================*/ 
+
+
+
+p.OptionWarning {
+	font-family: Verdana;
+	font-size: 8.0pt;
+	line-height: 12.0pt;
+	color: #000000;
+	background-color: #FDF0E8;
+	margin-top: 0pt;
+	margin-bottom: 9pt;
+	margin-left: 32pt;
+	margin-right: 5%;
+	padding-left: 2pt;
+	padding-right: 2pt;
+	padding-top: 1pt;
+	padding-bottom: 2pt;
+	border: none;
+	x-next-class: OptionBody;
+	x-next-type: p;
+}
+
+/*=(Generated Code)=================================================*/
+/*=(WARNING: DO NOT EDIT OR DELETE THIS SECTION!)===================*/
+/*begin!kadov{{=====================================================*/ 
+LI.kadov-p-COptionWarning {
+	font-family: Verdana;
+	font-size: 8.0pt;
+	line-height: 12.0pt;
+	color: #000000;
+}
+/*}}end!kadov=======================================================*/ 
+
+
+
+p.ParameterBody {
+	margin-left: 12pt;
+	x-next-class: ParameterHeading;
+	x-next-type: h3;
+}
+
+/*=(Generated Code)=================================================*/
+/*=(WARNING: DO NOT EDIT OR DELETE THIS SECTION!)===================*/
+/*begin!kadov{{=====================================================*/ 
+LI.kadov-p-CParameterBody {
+}
+/*}}end!kadov=======================================================*/ 
+
+
+
+p.ParameterNote {
+	font-family: Verdana;
+	font-size: 8.0pt;
+	line-height: 12.0pt;
+	color: #000000;
+	background-color: #ffffe8;
+	margin-top: 0pt;
+	margin-bottom: 9pt;
+	margin-left: 12pt;
+	margin-right: 5%;
+	padding-left: 2pt;
+	padding-right: 2pt;
+	padding-top: 1pt;
+	padding-bottom: 2pt;
+	x-next-class: ParameterBody;
+	x-next-type: p;
+}
+
+/*=(Generated Code)=================================================*/
+/*=(WARNING: DO NOT EDIT OR DELETE THIS SECTION!)===================*/
+/*begin!kadov{{=====================================================*/ 
+LI.kadov-p-CParameterNote {
+	font-family: Verdana;
+	font-size: 8.0pt;
+	line-height: 12.0pt;
+	color: #000000;
+}
+/*}}end!kadov=======================================================*/ 
+
+
+
+p.ParameterTip {
+	font-family: Verdana;
+	font-size: 8.0pt;
+	line-height: 12.0pt;
+	color: #000000;
+	background-color: #EAF4E8;
+	margin-top: 0pt;
+	margin-bottom: 9pt;
+	margin-left: 12pt;
+	margin-right: 5%;
+	padding-left: 2pt;
+	padding-right: 2pt;
+	padding-top: 1pt;
+	padding-bottom: 2pt;
+	x-next-class: ParameterBody;
+	x-next-type: p;
+}
+
+/*=(Generated Code)=================================================*/
+/*=(WARNING: DO NOT EDIT OR DELETE THIS SECTION!)===================*/
+/*begin!kadov{{=====================================================*/ 
+LI.kadov-p-CParameterTip {
+	font-family: Verdana;
+	font-size: 8.0pt;
+	line-height: 12.0pt;
+	color: #000000;
+}
+/*}}end!kadov=======================================================*/ 
+
+
+
+p.ParameterWarning {
+	font-family: Verdana;
+	font-size: 8.0pt;
+	line-height: 12.0pt;
+	color: #000000;
+	background-color: #FDF0E8;
+	margin-top: 0pt;
+	margin-bottom: 9pt;
+	margin-left: 12pt;
+	margin-right: 5%;
+	padding-left: 2pt;
+	padding-right: 2pt;
+	padding-top: 1pt;
+	padding-bottom: 2pt;
+	x-next-class: ParameterBody;
+	x-next-type: p;
+}
+
+/*=(Generated Code)=================================================*/
+/*=(WARNING: DO NOT EDIT OR DELETE THIS SECTION!)===================*/
+/*begin!kadov{{=====================================================*/ 
+LI.kadov-p-CParameterWarning {
+	font-family: Verdana;
+	font-size: 8.0pt;
+	line-height: 12.0pt;
+	color: #000000;
+}
+/*}}end!kadov=======================================================*/ 
+
+
+
+p.Popup {
+	font-family: Arial;
+	font-size: 14pt;
+	font-weight: bold;
+	font-style: normal;
+	color: #ffffff;
+	padding: 6.0pt;
+}
+
+/*=(Generated Code)=================================================*/
+/*=(WARNING: DO NOT EDIT OR DELETE THIS SECTION!)===================*/
+/*begin!kadov{{=====================================================*/ 
+LI.kadov-p-CPopup {
+	font-family: Arial;
+	font-size: 14pt;
+	font-weight: bold;
+	font-style: normal;
+	color: #ffffff;
+}
+/*}}end!kadov=======================================================*/ 
+
+
+
+p.SeeAlso {
+	font-style: italic;
+	font-weight: normal;
+	font-size: 8pt;
+	padding: 1px 8px 2px;
+	background-color: #f0f3f9;
+	margin-top: 18pt;
+	margin-bottom: 12pt;
+	border: 1px solid #e6e9ef;
+}
+
+/*=(Generated Code)=================================================*/
+/*=(WARNING: DO NOT EDIT OR DELETE THIS SECTION!)===================*/
+/*begin!kadov{{=====================================================*/ 
+LI.kadov-p-CSeeAlso {
+	font-style: italic;
+	font-weight: normal;
+	font-size: 8pt;
+}
+/*}}end!kadov=======================================================*/ 
+
+
+
+p.SeeAlso a:link,
+p.SeeAlso a:active,
+p.SeeAlso a:visited {
+	color: #0000ff;
+	x-text-underline: off;
+	x-text-overline: off;
+	x-text-line-through: off;
+	/*begin!kadov{{*/ text-decoration: none none none; /*}}end!kadov*/ 
+}
+
+p.SeeAlso a:hover {
+	color: #0000ff;
+	x-text-underline: normal;
+	/*begin!kadov{{*/ text-decoration: underline; /*}}end!kadov*/ 
+}
+
+p.TableFormat {
+	margin-left: 0pt;
+	margin-right: 0pt;
+	padding-left: 3pt;
+	padding-right: 3pt;
+	padding-top: 3pt;
+	padding-bottom: 3pt;
+}
+
+/*=(Generated Code)=================================================*/
+/*=(WARNING: DO NOT EDIT OR DELETE THIS SECTION!)===================*/
+/*begin!kadov{{=====================================================*/ 
+LI.kadov-p-CTableFormat {
+}
+/*}}end!kadov=======================================================*/ 
+
+
+
+p.TableHeader {
+	font-weight: bold;
+	display: nowrap;
+}
+
+/*=(Generated Code)=================================================*/
+/*=(WARNING: DO NOT EDIT OR DELETE THIS SECTION!)===================*/
+/*begin!kadov{{=====================================================*/ 
+LI.kadov-p-CTableHeader {
+	font-weight: bold;
+}
+/*}}end!kadov=======================================================*/ 
+
+
+
+p.Tip {
+	font-family: Verdana;
+	font-size: 8.0pt;
+	line-height: 12.0pt;
+	color: #000000;
+	background-color: #EAF4E8;
+	margin-top: 0pt;
+	margin-bottom: 9pt;
+	margin-left: 0pt;
+	margin-right: 5%;
+	padding-left: 2pt;
+	padding-right: 2pt;
+	padding-top: 1pt;
+	padding-bottom: 2pt;
+	x-next-class: ;
+	x-next-type: p;
+}
+
+/*=(Generated Code)=================================================*/
+/*=(WARNING: DO NOT EDIT OR DELETE THIS SECTION!)===================*/
+/*begin!kadov{{=====================================================*/ 
+LI.kadov-p-CTip {
+	font-family: Verdana;
+	font-size: 8.0pt;
+	line-height: 12.0pt;
+	color: #000000;
+}
+/*}}end!kadov=======================================================*/ 
+
+
+
+p.Warning {
+	font-family: Verdana;
+	font-size: 8.0pt;
+	line-height: 12.0pt;
+	color: #000000;
+	background-color: #FDF0E8;
+	margin-top: 0pt;
+	margin-bottom: 9pt;
+	margin-left: 0pt;
+	margin-right: 5%;
+	padding-left: 2pt;
+	padding-right: 2pt;
+	padding-top: 1pt;
+	padding-bottom: 2pt;
+	border: 1px dotted #ff0000;
+	border: none;
+	x-next-class: ;
+	x-next-type: p;
+}
+
+/*=(Generated Code)=================================================*/
+/*=(WARNING: DO NOT EDIT OR DELETE THIS SECTION!)===================*/
+/*begin!kadov{{=====================================================*/ 
+LI.kadov-p-CWarning {
+	font-family: Verdana;
+	font-size: 8.0pt;
+	line-height: 12.0pt;
+	color: #000000;
+}
+/*}}end!kadov=======================================================*/ 
+
+
+
+span.Availability {
+	white-space: nowrap;
+	color: #f27129;
+	margin-left: 3ex;
+}
+
+span.Code {
+	font-family: "Courier New", monospace;
+	font-size: 10pt;
+}
+
+span.Default {
+	font-style: italic;
+	color: #aaa;
+}
+
+span.DefaultValue {
+	white-space: nowrap;
+	font-family: "Courier New", monospace;
+	font-size: 9pt;
+	color: #aaa;
+}
+
+span.DefaultValue a.PopupSpot:link,
+span.DefaultValue a.PopupSpot:active,
+span.DefaultValue a.PopupSpot:visited {
+	x-text-underline: off;
+	x-text-overline: off;
+	x-text-line-through: off;
+	color: #aaa;
+	/*begin!kadov{{*/ text-decoration: none none none; /*}}end!kadov*/ 
+}
+
+span.DefaultValue a.PopupSpot:hover {
+	x-text-underline: off;
+	x-text-overline: off;
+	x-text-line-through: off;
+	color: #0000ff;
+	/*begin!kadov{{*/ text-decoration: none none none; /*}}end!kadov*/ 
+}
+
+span.DialogName {
+	font-style: normal;
+	font-weight: normal;
+}
+
+span.Ellipsis {
+	color: #999;
+}
+
+span.Here {
+	font-weight: bold;
+	color: #ffffff;
+	background-color: #699BEF;
+	margin: 0px;
+	padding: 4px 8px;
+	border-top: 1px solid #699BEF;
+	border-bottom: 1px solid #333;
+	border-left: none;
+	border-right: 1px solid #333;
+}
+/* blue tab effect in navbar (NavLocal) */
+	/**/
+
+	
+
+span.nowrap {
+	white-space: nowrap;
+}
+
+span.nowrap img {
+	vertical-align: middle;
+}
+
+span.Path {
+	font-family: "Courier New", monospace;
+	font-size: 9pt;
+}
+
+span.StartMenuItem {
+	font-weight: bold;
+	font-style: italic;
+}
+
+span.VarType {
+	font-family: "Courier New", monospace;
+	font-size: 9pt;
+	font-style: italic;
+	color: #abd;
+}
+
+span.VarType a.PopupSpot:link,
+span.VarType a.PopupSpot:active,
+span.VarType a.PopupSpot:visited {
+	color: #abd;
+	x-text-underline: off;
+	x-text-overline: off;
+	x-text-line-through: off;
+	/*begin!kadov{{*/ text-decoration: none none none; /*}}end!kadov*/ 
+}
+
+span.VarType a.PopupSpot:hover {
+	color: #0000ff;
+	x-text-underline: off;
+	x-text-overline: off;
+	x-text-line-through: off;
+	/*begin!kadov{{*/ text-decoration: none none none; /*}}end!kadov*/ 
+}
+
+span.VarType a:link,
+span.VarType a:active,
+span.VarType a:visited {
+	color: #abd;
+	x-text-underline: off;
+	x-text-overline: off;
+	x-text-line-through: off;
+	/*begin!kadov{{*/ text-decoration: none none none; /*}}end!kadov*/ 
+}
+
+span.VarType a:hover {
+	color: #0000ff;
+	x-text-underline: off;
+	x-text-overline: off;
+	x-text-line-through: off;
+	/*begin!kadov{{*/ text-decoration: none none none; /*}}end!kadov*/ 
+}
+
+span.type {
+	color: #aaa;
+}
+
+span.wab {
+	font-family: Verdana;
+	font-size: 13px;
+	padding: 0px 0px;
+	margin: 0px;
+	border: none;
+	visibility: hidden;
+}
+/* workaround, baybee! */
+	
+
+table.ActionList {
+	margin-top: 18pt;
+	margin-bottom: 18pt;
+	border-top: #c0c0c0 1px solid;
+	border-right: #c0c0c0 1px solid;
+	border-left: #c0c0c0 1px solid;
+	border-bottom: #c0c0c0 1px solid;
+}
+
+table.ActionList img {
+	vertical-align: middle;
+	margin: 2px 0px;
+	margin: 0px;
+	padding: 0px;
+}
+
+table.ActionList p {
+	margin: 0px;
+	margin-bottom: 3pt;
+	padding: 2px;
+}
+
+/*=(Generated Code)=================================================*/
+/*=(WARNING: DO NOT EDIT OR DELETE THIS SECTION!)===================*/
+/*begin!kadov{{=====================================================*/ 
+table.ActionList LI.kadov-p {
+}
+/*}}end!kadov=======================================================*/ 
+
+
+
+table.ActionList p.ListBody {
+	margin-left: 0px;
+	margin-right: 0px;
+	margin-top: 0px;
+	margin-bottom: 3pt;
+	padding-left: 0px;
+	padding-top: 0px;
+	padding-bottom: 0px;
+	padding: 2px;
+}
+
+/*=(Generated Code)=================================================*/
+/*=(WARNING: DO NOT EDIT OR DELETE THIS SECTION!)===================*/
+/*begin!kadov{{=====================================================*/ 
+table.ActionList LI.kadov-p-CListBody {
+}
+/*}}end!kadov=======================================================*/ 
+
+
+
+table.ActionList tr.Category {
+	background-color: #aaa;
+	background-color: #a0a0a0;
+	color: #ffffff;
+}
+
+table.ActionList tr.Category h2.ListHeading {
+	text-transform: uppercase;
+	font-family: Arial;
+	font-size: 9.0pt;
+	font-style: italic;
+	font-weight: bold;
+	letter-spacing: 1ex;
+	color: #ffffff;
+	white-space: nowrap;
+	margin-top: 0px;
+	margin-bottom: 0px;
+	padding-top: 0px;
+	padding-bottom: 1px;
+	padding-top: 1px;
+	padding-bottom: 1px;
+}
+
+/*=(Generated Code)=================================================*/
+/*=(WARNING: DO NOT EDIT OR DELETE THIS SECTION!)===================*/
+/*begin!kadov{{=====================================================*/ 
+table.ActionList tr.Category LI.kadov-h2-CListHeading {
+	text-transform: uppercase;
+	font-family: Arial;
+	font-size: 9.0pt;
+	font-style: italic;
+	font-weight: bold;
+	letter-spacing: 1ex;
+	color: #ffffff;
+	white-space: nowrap;
+}
+/*}}end!kadov=======================================================*/ 
+
+
+
+table.ActionList tr.Header {
+	background-color: #eee;
+	color: #000000;
+}
+
+table.ActionList tr.Header p {
+	font-family: Verdana;
+	font-size: 8.0pt;
+	font-style: normal;
+	font-weight: bold;
+	color: #3176EA;
+	white-space: nowrap;
+	margin-bottom: 0px;
+	padding-top: 0px;
+	padding-bottom: 1px;
+}
+
+/*=(Generated Code)=================================================*/
+/*=(WARNING: DO NOT EDIT OR DELETE THIS SECTION!)===================*/
+/*begin!kadov{{=====================================================*/ 
+table.ActionList tr.Header LI.kadov-p {
+	font-family: Verdana;
+	font-size: 8.0pt;
+	font-style: normal;
+	font-weight: bold;
+	color: #3176EA;
+	white-space: nowrap;
+}
+/*}}end!kadov=======================================================*/ 
+
+
+
+table.Parameters {
+	margin-top: 6pt;
+	margin-bottom: 9pt;
+}
+
+table.Parameters h4.OptionHeading {
+	margin-left: 12pt;
+}
+
+/*=(Generated Code)=================================================*/
+/*=(WARNING: DO NOT EDIT OR DELETE THIS SECTION!)===================*/
+/*begin!kadov{{=====================================================*/ 
+table.Parameters LI.kadov-h4-COptionHeading {
+}
+/*}}end!kadov=======================================================*/ 
+
+
+
+table.Parameters p {
+	font-weight: normal;
+	color: #000000;
+	margin-left: 3pt;
+	margin-right: 3pt;
+	margin-top: 2pt;
+	margin-bottom: 2pt;
+}
+
+/*=(Generated Code)=================================================*/
+/*=(WARNING: DO NOT EDIT OR DELETE THIS SECTION!)===================*/
+/*begin!kadov{{=====================================================*/ 
+table.Parameters LI.kadov-p {
+	font-weight: normal;
+	color: #000000;
+}
+/*}}end!kadov=======================================================*/ 
+
+
+
+table.Parameters p.OptionBody {
+	margin-left: 12pt;
+	margin-right: 0pt;
+	margin-bottom: 9pt;
+}
+
+/*=(Generated Code)=================================================*/
+/*=(WARNING: DO NOT EDIT OR DELETE THIS SECTION!)===================*/
+/*begin!kadov{{=====================================================*/ 
+table.Parameters LI.kadov-p-COptionBody {
+}
+/*}}end!kadov=======================================================*/ 
+
+
+
+tr.TableHeader td {
+	background-color: #c0c0c0;
+}
+
+tr.TableHeader td p {
+	color: #ffffff;
+	font-weight: bold;
+	white-space: nowrap;
+}
+
+/*=(Generated Code)=================================================*/
+/*=(WARNING: DO NOT EDIT OR DELETE THIS SECTION!)===================*/
+/*begin!kadov{{=====================================================*/ 
+tr.TableHeader td LI.kadov-p {
+	color: #ffffff;
+	font-weight: bold;
+	white-space: nowrap;
+}
+/*}}end!kadov=======================================================*/ 
+
+
+
+</style>
+</head>
+
+<body>
+
+<h1>SliderCPV Help File</h1><p class="NavLocal"><span class=wab>&nbsp;</span><span class="here">Welcome</span></p><div class="Properties"><h2>SliderCPV Help File</h2><h3>Plugin Name:</h3><p><blockquote>SliderCPV</blockquote></p><h3>Current Version:</h3><p><blockquote>1.0.0.0</blockquote></p><h3>Author:</h3><p><blockquote>Ceone</blockquote></p><h3>E-mail:</h3><p><blockquote><a href="mailto:produceone@gmail.com">produceone@gmail.com</a></blockquote></p></div><!-- /Properties --><hr><div class="Properties"><h2>Table of Contents</h2><p><blockquote><A href="#SliderCPV.CreateObject"><b>SliderCPV.CreateObject</b></A><br><A href="#SliderCPV.SetCurrentPos"><b>SliderCPV.SetCurrentPos</b></A><br><A href="#SliderCPV.GetCurrentPos"><b>SliderCPV.GetCurrentPos</b></A><br><A href="#SliderCPV.SetRange"><b>SliderCPV.SetRange</b></A><br><A href="#SliderCPV.GetRange"><b>SliderCPV.GetRange</b></A><br><A href="#SliderCPV.SetOrientation"><b>SliderCPV.SetOrientation</b></A><br><A href="#SliderCPV.GetOrientation"><b>SliderCPV.GetOrientation</b></A><br><A href="#SliderCPV.SetRailStyle"><b>SliderCPV.SetRailStyle</b></A><br><A href="#SliderCPV.GetRailStyle"><b>SliderCPV.GetRailStyle</b></A><br><A href="#SliderCPV.SetBackColor"><b>SliderCPV.SetBackColor</b></A><br><A href="#SliderCPV.GetBackColor"><b>SliderCPV.GetBackColor</b></A><br><A href="#SliderCPV.ShowValueTip"><b>SliderCPV.ShowValueTip</b></A><br><A href="#SliderCPV.IsShowValueTip"><b>SliderCPV.IsShowValueTip</b></A><br><A href="#SliderCPV.StartEvents"><b>SliderCPV.StartEvents</b></A><br></blockquote></p></div><!-- /Properties --><h1><A name="SliderCPV.CreateObject">SliderCPV.CreateObject</A></h1><br><div class=Declaration><!--(Table)=========================================================--><!--begin!kadov{{--><div align=left><!--}}end!kadov--><table x-use-null-cells		style="float: alignleft;		x-cell-content-align: Top;		border-spacing: 0px;		border-spacing: 0px;"		cellspacing=0><col><col><tr style="x-cell-content-align: top;" valign=top><td style="padding-right: 0px;			padding-left: 0px;			border-top-style: none;			border-bottom-style: none;			border-right-style: none;			border-left-style: none;"><p>SliderCPV.CreateObject (&nbsp;</td><td style="padding-right: 0px;			padding-left: 0px;			border-top-style: none;			border-right-style: none;			border-bottom-style: none;"><p><span class=VarType>(string)&nbsp;</span>ObjectName <span class=DefaultValue> = "Plugin1"</span>, </p><p><span class=VarType>(number)&nbsp;</span>Orientation <span class=DefaultValue> = Horizontal</span>, </p><p><span class=VarType>(number)&nbsp;</span>RailStyle <span class=DefaultValue> = Sunken</span>, </p><p><span class=VarType>(number)&nbsp;</span>RangeMin <span class=DefaultValue> = 0</span>, </p><p><span class=VarType>(number)&nbsp;</span>RangeMax <span class=DefaultValue> = 100</span>, </p><p><span class=VarType>(number)&nbsp;</span>CurrentPos <span class=DefaultValue> = 0</span>, </p><p><span class=VarType>(number)&nbsp;</span>BackColor <span class=DefaultValue> = 0</span>, </p><p><span class=VarType>(boolean)&nbsp;</span>ShowValueTip <span class=DefaultValue> = true</span>, </p><p><span class=VarType>(boolean)&nbsp;</span>ActiveEvents <span class=DefaultValue> = true</span> )</p></td></tr></table><!--begin!kadov{{--></div><!--}}end!kadov--></div><h2 style="margin-bottom: 3pt;">Description</h2><p><blockquote>To create SliderCPV object.</blockquote></p><h2 class="H2Tight">Parameters</h2><h3 class="ParameterHeading">ObjectName</h3><p class="ParameterBody"><span class="type">(string)&nbsp;</span>ObjectName</p><h3 class="ParameterHeading">Orientation</h3><p class="ParameterBody"><span class="type">(number)&nbsp;</span>Orientation</p><!--(Table)=========================================================--><table class=Parameters x-use-null-cells style="x-cell-content-align: Center; margin-left: 32pt; border-spacing: 0px; border spacing: 0px;" cellspacing=0><col><col><col><tr class=TableHeader style="x-cell-content-align: center;" valign=middle><td style="padding-left: 5px; padding-right: 5px; padding-top: 5px; padding-bottom: 5px; border-right-width: 1px; border-right style: Solid; border-bottom-width: 1px; border-bottom-style: Solid; border-left-width: 1px; border-left-style: Solid;"><p>CONSTANT</td><td colspan=1 rowspan=1 style="border-bottom-style: Solid; border-bottom-width: 1px; padding-left: 5px; padding-right: 5px; padding-top: 5px; padding-bottom: 5px;"><p>VALUE</td><td style="border-bottom-style: Solid; border-bottom-width: 1px; padding-left: 5px; padding-right: 5px; padding-top: 5px; paddin -bottom: 5px;"><p>DESCRIPTION</td></tr><tr style="x-cell-content-align: center;" valign=middle><td style="padding-left: 5px; padding-right: 5px; padding-top: 5px; padding-bottom: 5px; border-right-width: 1px; border-right-style: Solid; border-bottom-width: 1px; border-bottom-style: Solid; x-cell-content-align: top; border-left-width: 1px; border-left-style: Solid;" valign=top><p>Horizontal</td><td colspan=1 rowspan=1 style="border-right-style: Solid; border-right-width: 1px; border-bottom-style: Solid; border-bottom-width: 1px; padding-left: 5px; padding-right: 5px; padding-top: 5px; padding-bottom: 5px; x-cell-content-align: top;" valign=top><p>0</td><td style="border-right-style: Solid; border-right-width: 1px; border-bottom-style: Solid; border-bottom-width: 1px; padding-left: 5px; padding-right: 5px; padding-top: 5px; padding-bottom: 5px; x-cell-content-align: top;" valign=top><p>Horizontal Value</td></tr><tr style="x-cell-content-align: center;" valign=middle><td style="padding-left: 5px; padding-right: 5px; padding-top: 5px; padding-bottom: 5px; border-right-width: 1px; border-right-style: Solid; border-bottom-width: 1px; border-bottom-style: Solid; x-cell-content-align: top; border-left-width: 1px; border-left-style: Solid;" valign=top><p>Vertical</td><td colspan=1 rowspan=1 style="border-right-style: Solid; border-right-width: 1px; border-bottom-style: Solid; border-bottom-width: 1px; padding-left: 5px; padding-right: 5px; padding-top: 5px; padding-bottom: 5px; x-cell-content-align: top;" valign=top><p>1</td><td style="border-right-style: Solid; border-right-width: 1px; border-bottom-style: Solid; border-bottom-width: 1px; padding-left: 5px; padding-right: 5px; padding-top: 5px; padding-bottom: 5px; x-cell-content-align: top;" valign=top><p>Vertical Value</td></tr></table><h3 class="ParameterHeading">RailStyle</h3><p class="ParameterBody"><span class="type">(number)&nbsp;</span>RailStyle</p><!--(Table)=========================================================--><table class=Parameters x-use-null-cells style="x-cell-content-align: Center; margin-left: 32pt; border-spacing: 0px; border spacing: 0px;" cellspacing=0><col><col><col><tr class=TableHeader style="x-cell-content-align: center;" valign=middle><td style="padding-left: 5px; padding-right: 5px; padding-top: 5px; padding-bottom: 5px; border-right-width: 1px; border-right style: Solid; border-bottom-width: 1px; border-bottom-style: Solid; border-left-width: 1px; border-left-style: Solid;"><p>CONSTANT</td><td colspan=1 rowspan=1 style="border-bottom-style: Solid; border-bottom-width: 1px; padding-left: 5px; padding-right: 5px; padding-top: 5px; padding-bottom: 5px;"><p>VALUE</td><td style="border-bottom-style: Solid; border-bottom-width: 1px; padding-left: 5px; padding-right: 5px; padding-top: 5px; paddin -bottom: 5px;"><p>DESCRIPTION</td></tr><tr style="x-cell-content-align: center;" valign=middle><td style="padding-left: 5px; padding-right: 5px; padding-top: 5px; padding-bottom: 5px; border-right-width: 1px; border-right-style: Solid; border-bottom-width: 1px; border-bottom-style: Solid; x-cell-content-align: top; border-left-width: 1px; border-left-style: Solid;" valign=top><p>Sunken</td><td colspan=1 rowspan=1 style="border-right-style: Solid; border-right-width: 1px; border-bottom-style: Solid; border-bottom-width: 1px; padding-left: 5px; padding-right: 5px; padding-top: 5px; padding-bottom: 5px; x-cell-content-align: top;" valign=top><p>0</td><td style="border-right-style: Solid; border-right-width: 1px; border-bottom-style: Solid; border-bottom-width: 1px; padding-left: 5px; padding-right: 5px; padding-top: 5px; padding-bottom: 5px; x-cell-content-align: top;" valign=top><p>Sunken value</td></tr><tr style="x-cell-content-align: center;" valign=middle><td style="padding-left: 5px; padding-right: 5px; padding-top: 5px; padding-bottom: 5px; border-right-width: 1px; border-right-style: Solid; border-bottom-width: 1px; border-bottom-style: Solid; x-cell-content-align: top; border-left-width: 1px; border-left-style: Solid;" valign=top><p>Raised</td><td colspan=1 rowspan=1 style="border-right-style: Solid; border-right-width: 1px; border-bottom-style: Solid; border-bottom-width: 1px; padding-left: 5px; padding-right: 5px; padding-top: 5px; padding-bottom: 5px; x-cell-content-align: top;" valign=top><p>1</td><td style="border-right-style: Solid; border-right-width: 1px; border-bottom-style: Solid; border-bottom-width: 1px; padding-left: 5px; padding-right: 5px; padding-top: 5px; padding-bottom: 5px; x-cell-content-align: top;" valign=top><p>Raised value</td></tr><tr style="x-cell-content-align: center;" valign=middle><td style="padding-left: 5px; padding-right: 5px; padding-top: 5px; padding-bottom: 5px; border-right-width: 1px; border-right-style: Solid; border-bottom-width: 1px; border-bottom-style: Solid; x-cell-content-align: top; border-left-width: 1px; border-left-style: Solid;" valign=top><p>SunkenSoft</td><td colspan=1 rowspan=1 style="border-right-style: Solid; border-right-width: 1px; border-bottom-style: Solid; border-bottom-width: 1px; padding-left: 5px; padding-right: 5px; padding-top: 5px; padding-bottom: 5px; x-cell-content-align: top;" valign=top><p>2</td><td style="border-right-style: Solid; border-right-width: 1px; border-bottom-style: Solid; border-bottom-width: 1px; padding-left: 5px; padding-right: 5px; padding-top: 5px; padding-bottom: 5px; x-cell-content-align: top;" valign=top><p>SunkenSoft value</td></tr><tr style="x-cell-content-align: center;" valign=middle><td style="padding-left: 5px; padding-right: 5px; padding-top: 5px; padding-bottom: 5px; border-right-width: 1px; border-right-style: Solid; border-bottom-width: 1px; border-bottom-style: Solid; x-cell-content-align: top; border-left-width: 1px; border-left-style: Solid;" valign=top><p>RaisedSoft</td><td colspan=1 rowspan=1 style="border-right-style: Solid; border-right-width: 1px; border-bottom-style: Solid; border-bottom-width: 1px; padding-left: 5px; padding-right: 5px; padding-top: 5px; padding-bottom: 5px; x-cell-content-align: top;" valign=top><p>3</td><td style="border-right-style: Solid; border-right-width: 1px; border-bottom-style: Solid; border-bottom-width: 1px; padding-left: 5px; padding-right: 5px; padding-top: 5px; padding-bottom: 5px; x-cell-content-align: top;" valign=top><p>RaisedSoft value</td></tr></table><h3 class="ParameterHeading">RangeMin</h3><p class="ParameterBody"><span class="type">(number)&nbsp;</span>RangeMin</p><h3 class="ParameterHeading">RangeMax</h3><p class="ParameterBody"><span class="type">(number)&nbsp;</span>RangeMax</p><h3 class="ParameterHeading">CurrentPos</h3><p class="ParameterBody"><span class="type">(number)&nbsp;</span>CurrentPos</p><h3 class="ParameterHeading">BackColor</h3><p class="ParameterBody"><span class="type">(number)&nbsp;</span>BackColor</p><h3 class="ParameterHeading">ShowValueTip</h3><p class="ParameterBody"><span class="type">(boolean)&nbsp;</span>ShowValueTip</p><h3 class="ParameterHeading">ActiveEvents</h3><p class="ParameterBody"><span class="type">(boolean)&nbsp;</span>ActiveEvents(if active events need active first SliderCPV.StartEvents function)</p><h2>Returns</h2><blockquote><p>This action dose not return any value.</p></blockquote><br><h2 class=ExampleHeading>Example</h2><p class=ExampleCode>SliderCPV.StartEvents("Plugin1","Plugin2","Plugin3","Plugin4","Plugin5","Plugin6","Plugin7","Plugin8","Plugin9","Plugin10","Plugin11","Plugin12");<br><br>SliderCPV.CreateObject("Plugin1", Horizontal, Sunken, 0, 100, 0, Math.Random(1, 2999999), true, true);<br>SliderCPV.CreateObject("Plugin2", Horizontal, Raised, 0, 100, 20, Math.Random(1, 4999999), false, true);<br>SliderCPV.CreateObject("Plugin3", Horizontal, SunkenSoft, 0, 100, 40, Math.Random(1, 1999999), true, true);<br>SliderCPV.CreateObject("Plugin4", Horizontal, RaisedSoft, 0, 100, 60, Math.Random(1, 5999999), false, true);<br>SliderCPV.CreateObject("Plugin5", Horizontal, Sunken, 0, 100, 80, Math.Random(1, 7999999), true, true);<br>SliderCPV.CreateObject("Plugin6", Horizontal, Raised, 0, 100, 100, Math.Random(1, 1999999), false, true);<br><br>SliderCPV.CreateObject("Plugin7", Vertical, SunkenSoft, 0, 100, 0, Math.Random(1, 2999999), true, true);<br>SliderCPV.CreateObject("Plugin8", Vertical, RaisedSoft, 0, 100, 20, Math.Random(1, 4999999), false, true);<br>SliderCPV.CreateObject("Plugin9", Vertical, Sunken, 0, 100, 40, Math.Random(1, 1999999), true, true);<br>SliderCPV.CreateObject("Plugin10", Vertical, Raised, 0, 100, 60, Math.Random(1, 5999999), false, true);<br>SliderCPV.CreateObject("Plugin11", Vertical, SunkenSoft, 0, 100, 80, Math.Random(1, 7999999), true, true);<br>SliderCPV.CreateObject("Plugin12", Vertical, RaisedSoft, 0, 100, 100, Math.Random(1, 1999999), false, true);</p><br><br><h1><A name="SliderCPV.SetCurrentPos">SliderCPV.SetCurrentPos</A></h1><br><div class=Declaration><!--(Table)=========================================================--><!--begin!kadov{{--><div align=left><!--}}end!kadov--><table x-use-null-cells		style="float: alignleft;		x-cell-content-align: Top;		border-spacing: 0px;		border-spacing: 0px;"		cellspacing=0><col><col><tr style="x-cell-content-align: top;" valign=top><td style="padding-right: 0px;			padding-left: 0px;			border-top-style: none;			border-bottom-style: none;			border-right-style: none;			border-left-style: none;"><p>SliderCPV.SetCurrentPos (&nbsp;</td><td style="padding-right: 0px;			padding-left: 0px;			border-top-style: none;			border-right-style: none;			border-bottom-style: none;"><p><span class=VarType>(string)&nbsp;</span>ObjectName <span class=DefaultValue> = "Plugin1"</span>, </p><p><span class=VarType>(number)&nbsp;</span>CurrentPos <span class=DefaultValue> = 0</span> )</p></td></tr></table><!--begin!kadov{{--></div><!--}}end!kadov--></div><h2 style="margin-bottom: 3pt;">Description</h2><p><blockquote>To set CurrentPos</blockquote></p><h2 class="H2Tight">Parameters</h2><h3 class="ParameterHeading">ObjectName</h3><p class="ParameterBody"><span class="type">(string)&nbsp;</span>ObjectName</p><h3 class="ParameterHeading">CurrentPos</h3><p class="ParameterBody"><span class="type">(number)&nbsp;</span>CurrentPos</p><h2>Returns</h2><blockquote><p>This action dose not return any value.</p></blockquote><br><h2 class=ExampleHeading>Example</h2><p class=ExampleCode>for z=1,12 do<br>&nbsp;&nbsp;&nbsp;&nbsp;SliderCPV.SetCurrentPos("Plugin"..z, Math.Random(0, 100));<br>end</p><br><br><h1><A name="SliderCPV.GetCurrentPos">SliderCPV.GetCurrentPos</A></h1><br><div class=Declaration><!--(Table)=========================================================--><!--begin!kadov{{--><div align=left><!--}}end!kadov--><table x-use-null-cells		style="float: alignleft;		x-cell-content-align: Top;		border-spacing: 0px;		border-spacing: 0px;"		cellspacing=0><col><col><tr style="x-cell-content-align: top;" valign=top><td style="padding-right: 0px;			padding-left: 0px;			border-top-style: none;			border-bottom-style: none;			border-right-style: none;			border-left-style: none;"><p><span class=VarType>(number)&nbsp;</span>SliderCPV.GetCurrentPos (&nbsp;</td><td style="padding-right: 0px;			padding-left: 0px;			border-top-style: none;			border-right-style: none;			border-bottom-style: none;"><p><span class=VarType>(string)&nbsp;</span>ObjectName <span class=DefaultValue> = "Plugin1"</span> )</p></td></tr></table><!--begin!kadov{{--></div><!--}}end!kadov--></div><h2 style="margin-bottom: 3pt;">Description</h2><p><blockquote>To get CurrentPos</blockquote></p><h2 class="H2Tight">Parameters</h2><h3 class="ParameterHeading">ObjectName</h3><p class="ParameterBody"><span class="type">(string)&nbsp;</span>ObjectName</p><h2>Returns</h2><blockquote><p><span class=type>(number) </span></p></blockquote><br><h2 class=ExampleHeading>Example</h2><p class=ExampleCode>tblCurPos ={}<br>for z=1,12 do<br>&nbsp;&nbsp;&nbsp;&nbsp;tblCurPos[z] = SliderCPV.GetCurrentPos("Plugin"..z);<br>end<br><br>text = "Plugin1 CurrentPos: "..tblCurPos[1].."\r\n"<br>text = text.."Plugin2 CurrentPos: "..tblCurPos[2].."\r\n"<br>text = text.."Plugin3 CurrentPos: "..tblCurPos[3].."\r\n"<br>text = text.."Plugin4 CurrentPos: "..tblCurPos[4].."\r\n"<br>text = text.."Plugin5 CurrentPos: "..tblCurPos[5].."\r\n"<br>text = text.."Plugin6 CurrentPos: "..tblCurPos[6].."\r\n"<br>text = text.."Plugin7 CurrentPos: "..tblCurPos[7].."\r\n"<br>text = text.."Plugin8 CurrentPos: "..tblCurPos[8].."\r\n"<br>text = text.."Plugin9 CurrentPos: "..tblCurPos[9].."\r\n"<br>text = text.."Plugin10 CurrentPos: "..tblCurPos[10].."\r\n"<br>text = text.."Plugin11 CurrentPos: "..tblCurPos[11].."\r\n"<br>text = text.."Plugin12 CurrentPos: "..tblCurPos[12].."\r\n"<br><br><br>Dialog.Message("", text);</p><br><br><h1><A name="SliderCPV.SetRange">SliderCPV.SetRange</A></h1><br><div class=Declaration><!--(Table)=========================================================--><!--begin!kadov{{--><div align=left><!--}}end!kadov--><table x-use-null-cells		style="float: alignleft;		x-cell-content-align: Top;		border-spacing: 0px;		border-spacing: 0px;"		cellspacing=0><col><col><tr style="x-cell-content-align: top;" valign=top><td style="padding-right: 0px;			padding-left: 0px;			border-top-style: none;			border-bottom-style: none;			border-right-style: none;			border-left-style: none;"><p>SliderCPV.SetRange (&nbsp;</td><td style="padding-right: 0px;			padding-left: 0px;			border-top-style: none;			border-right-style: none;			border-bottom-style: none;"><p><span class=VarType>(string)&nbsp;</span>ObjectName <span class=DefaultValue> = "Plugin1"</span>, </p><p><span class=VarType>(number)&nbsp;</span>Min <span class=DefaultValue> = 0</span>, </p><p><span class=VarType>(number)&nbsp;</span>Max <span class=DefaultValue> = 100</span> )</p></td></tr></table><!--begin!kadov{{--></div><!--}}end!kadov--></div><h2 style="margin-bottom: 3pt;">Description</h2><p><blockquote>To set current position</blockquote></p><h2 class="H2Tight">Parameters</h2><h3 class="ParameterHeading">ObjectName</h3><p class="ParameterBody"><span class="type">(string)&nbsp;</span>ObjectName</p><h3 class="ParameterHeading">Min</h3><p class="ParameterBody"><span class="type">(number)&nbsp;</span>Min</p><h3 class="ParameterHeading">Max</h3><p class="ParameterBody"><span class="type">(number)&nbsp;</span>Max</p><h2>Returns</h2><blockquote><p>This action dose not return any value.</p></blockquote><br><h2 class=ExampleHeading>Example</h2><p class=ExampleCode>InA = Input.GetText("Input1")<br>InB = Input.GetText("Input2")<br>if (InA == "Min") or (InB == "Max") or (InA == "") or (InB == "") then<br>&nbsp;&nbsp;&nbsp;&nbsp;Dialog.Message("", "Set Range numbers in Input1(Min) and Input2(Max)");<br>else<br>&nbsp;&nbsp;&nbsp;&nbsp;for z=1,12 do<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;SliderCPV.SetRange("Plugin"..z, InA, InB);<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;SliderCPV.SetCurrentPos("Plugin"..z, Math.Random(InA, InB));<br>&nbsp;&nbsp;&nbsp;&nbsp;end<br>end<br></p><br><br><h1><A name="SliderCPV.GetRange">SliderCPV.GetRange</A></h1><br><div class=Declaration><!--(Table)=========================================================--><!--begin!kadov{{--><div align=left><!--}}end!kadov--><table x-use-null-cells		style="float: alignleft;		x-cell-content-align: Top;		border-spacing: 0px;		border-spacing: 0px;"		cellspacing=0><col><col><tr style="x-cell-content-align: top;" valign=top><td style="padding-right: 0px;			padding-left: 0px;			border-top-style: none;			border-bottom-style: none;			border-right-style: none;			border-left-style: none;"><p><span class=VarType>(table)&nbsp;</span>SliderCPV.GetRange (&nbsp;</td><td style="padding-right: 0px;			padding-left: 0px;			border-top-style: none;			border-right-style: none;			border-bottom-style: none;"><p><span class=VarType>(string)&nbsp;</span>ObjectName <span class=DefaultValue> = "Plugin1"</span> )</p></td></tr></table><!--begin!kadov{{--></div><!--}}end!kadov--></div><h2 style="margin-bottom: 3pt;">Description</h2><p><blockquote>To get Range</blockquote></p><h2 class="H2Tight">Parameters</h2><h3 class="ParameterHeading">ObjectName</h3><p class="ParameterBody"><span class="type">(string)&nbsp;</span>ObjectName</p><h2>Returns</h2><blockquote><p><span class=type>(table) </span></p></blockquote><br><h2 class=ExampleHeading>Example</h2><p class=ExampleCode>tblRange = SliderCPV.GetRange("Plugin1")<br><br>Dialog.Message("", "All Plugins Range Is: "..tblRange.Min.." Min, "..tblRange.Max.." Max.");</p><br><br><h1><A name="SliderCPV.SetOrientation">SliderCPV.SetOrientation</A></h1><br><div class=Declaration><!--(Table)=========================================================--><!--begin!kadov{{--><div align=left><!--}}end!kadov--><table x-use-null-cells		style="float: alignleft;		x-cell-content-align: Top;		border-spacing: 0px;		border-spacing: 0px;"		cellspacing=0><col><col><tr style="x-cell-content-align: top;" valign=top><td style="padding-right: 0px;			padding-left: 0px;			border-top-style: none;			border-bottom-style: none;			border-right-style: none;			border-left-style: none;"><p>SliderCPV.SetOrientation (&nbsp;</td><td style="padding-right: 0px;			padding-left: 0px;			border-top-style: none;			border-right-style: none;			border-bottom-style: none;"><p><span class=VarType>(string)&nbsp;</span>ObjectName <span class=DefaultValue> = "Plugin1"</span>, </p><p><span class=VarType>(number)&nbsp;</span>Orientation <span class=DefaultValue> = Horizontal</span> )</p></td></tr></table><!--begin!kadov{{--></div><!--}}end!kadov--></div><h2 style="margin-bottom: 3pt;">Description</h2><p><blockquote>To set current position</blockquote></p><h2 class="H2Tight">Parameters</h2><h3 class="ParameterHeading">ObjectName</h3><p class="ParameterBody"><span class="type">(string)&nbsp;</span>ObjectName</p><h3 class="ParameterHeading">Orientation</h3><p class="ParameterBody"><span class="type">(number)&nbsp;</span>Orientation</p><!--(Table)=========================================================--><table class=Parameters x-use-null-cells style="x-cell-content-align: Center; margin-left: 32pt; border-spacing: 0px; border spacing: 0px;" cellspacing=0><col><col><col><tr class=TableHeader style="x-cell-content-align: center;" valign=middle><td style="padding-left: 5px; padding-right: 5px; padding-top: 5px; padding-bottom: 5px; border-right-width: 1px; border-right style: Solid; border-bottom-width: 1px; border-bottom-style: Solid; border-left-width: 1px; border-left-style: Solid;"><p>CONSTANT</td><td colspan=1 rowspan=1 style="border-bottom-style: Solid; border-bottom-width: 1px; padding-left: 5px; padding-right: 5px; padding-top: 5px; padding-bottom: 5px;"><p>VALUE</td><td style="border-bottom-style: Solid; border-bottom-width: 1px; padding-left: 5px; padding-right: 5px; padding-top: 5px; paddin -bottom: 5px;"><p>DESCRIPTION</td></tr><tr style="x-cell-content-align: center;" valign=middle><td style="padding-left: 5px; padding-right: 5px; padding-top: 5px; padding-bottom: 5px; border-right-width: 1px; border-right-style: Solid; border-bottom-width: 1px; border-bottom-style: Solid; x-cell-content-align: top; border-left-width: 1px; border-left-style: Solid;" valign=top><p>Horizontal</td><td colspan=1 rowspan=1 style="border-right-style: Solid; border-right-width: 1px; border-bottom-style: Solid; border-bottom-width: 1px; padding-left: 5px; padding-right: 5px; padding-top: 5px; padding-bottom: 5px; x-cell-content-align: top;" valign=top><p>0</td><td style="border-right-style: Solid; border-right-width: 1px; border-bottom-style: Solid; border-bottom-width: 1px; padding-left: 5px; padding-right: 5px; padding-top: 5px; padding-bottom: 5px; x-cell-content-align: top;" valign=top><p>Horizontal value</td></tr><tr style="x-cell-content-align: center;" valign=middle><td style="padding-left: 5px; padding-right: 5px; padding-top: 5px; padding-bottom: 5px; border-right-width: 1px; border-right-style: Solid; border-bottom-width: 1px; border-bottom-style: Solid; x-cell-content-align: top; border-left-width: 1px; border-left-style: Solid;" valign=top><p>Vertical</td><td colspan=1 rowspan=1 style="border-right-style: Solid; border-right-width: 1px; border-bottom-style: Solid; border-bottom-width: 1px; padding-left: 5px; padding-right: 5px; padding-top: 5px; padding-bottom: 5px; x-cell-content-align: top;" valign=top><p>1</td><td style="border-right-style: Solid; border-right-width: 1px; border-bottom-style: Solid; border-bottom-width: 1px; padding-left: 5px; padding-right: 5px; padding-top: 5px; padding-bottom: 5px; x-cell-content-align: top;" valign=top><p>Vertical value</td></tr></table><h2>Returns</h2><blockquote><p>This action dose not return any value.</p></blockquote><br><h2 class=ExampleHeading>Example</h2><p class=ExampleCode>result = ComboBox.GetItemData("ComboBox1", e_Selection)<br>for z=1,12 do<br>&nbsp;&nbsp;&nbsp;&nbsp;SliderCPV.SetOrientation("Plugin"..z, result);<br>end</p><br><br><h1><A name="SliderCPV.GetOrientation">SliderCPV.GetOrientation</A></h1><br><div class=Declaration><!--(Table)=========================================================--><!--begin!kadov{{--><div align=left><!--}}end!kadov--><table x-use-null-cells		style="float: alignleft;		x-cell-content-align: Top;		border-spacing: 0px;		border-spacing: 0px;"		cellspacing=0><col><col><tr style="x-cell-content-align: top;" valign=top><td style="padding-right: 0px;			padding-left: 0px;			border-top-style: none;			border-bottom-style: none;			border-right-style: none;			border-left-style: none;"><p><span class=VarType>(number)&nbsp;</span>SliderCPV.GetOrientation (&nbsp;</td><td style="padding-right: 0px;			padding-left: 0px;			border-top-style: none;			border-right-style: none;			border-bottom-style: none;"><p><span class=VarType>(string)&nbsp;</span>ObjectName <span class=DefaultValue> = "Plugin1"</span> )</p></td></tr></table><!--begin!kadov{{--></div><!--}}end!kadov--></div><h2 style="margin-bottom: 3pt;">Description</h2><p><blockquote>To get Orientation</blockquote></p><h2 class="H2Tight">Parameters</h2><h3 class="ParameterHeading">ObjectName</h3><p class="ParameterBody"><span class="type">(string)&nbsp;</span>ObjectName</p><h2>Returns</h2><blockquote><p><span class=type>(number) </span></p></blockquote><br><h2 class=ExampleHeading>Example</h2><p class=ExampleCode>result = SliderCPV.GetOrientation("Plugin1")</p><br><br><h1><A name="SliderCPV.SetRailStyle">SliderCPV.SetRailStyle</A></h1><br><div class=Declaration><!--(Table)=========================================================--><!--begin!kadov{{--><div align=left><!--}}end!kadov--><table x-use-null-cells		style="float: alignleft;		x-cell-content-align: Top;		border-spacing: 0px;		border-spacing: 0px;"		cellspacing=0><col><col><tr style="x-cell-content-align: top;" valign=top><td style="padding-right: 0px;			padding-left: 0px;			border-top-style: none;			border-bottom-style: none;			border-right-style: none;			border-left-style: none;"><p>SliderCPV.SetRailStyle (&nbsp;</td><td style="padding-right: 0px;			padding-left: 0px;			border-top-style: none;			border-right-style: none;			border-bottom-style: none;"><p><span class=VarType>(string)&nbsp;</span>ObjectName <span class=DefaultValue> = "Plugin1"</span>, </p><p><span class=VarType>(number)&nbsp;</span>RailStyle <span class=DefaultValue> = Sunken</span> )</p></td></tr></table><!--begin!kadov{{--></div><!--}}end!kadov--></div><h2 style="margin-bottom: 3pt;">Description</h2><p><blockquote>To set current position</blockquote></p><h2 class="H2Tight">Parameters</h2><h3 class="ParameterHeading">ObjectName</h3><p class="ParameterBody"><span class="type">(string)&nbsp;</span>ObjectName</p><h3 class="ParameterHeading">RailStyle</h3><p class="ParameterBody"><span class="type">(number)&nbsp;</span>RailStyle</p><!--(Table)=========================================================--><table class=Parameters x-use-null-cells style="x-cell-content-align: Center; margin-left: 32pt; border-spacing: 0px; border spacing: 0px;" cellspacing=0><col><col><col><tr class=TableHeader style="x-cell-content-align: center;" valign=middle><td style="padding-left: 5px; padding-right: 5px; padding-top: 5px; padding-bottom: 5px; border-right-width: 1px; border-right style: Solid; border-bottom-width: 1px; border-bottom-style: Solid; border-left-width: 1px; border-left-style: Solid;"><p>CONSTANT</td><td colspan=1 rowspan=1 style="border-bottom-style: Solid; border-bottom-width: 1px; padding-left: 5px; padding-right: 5px; padding-top: 5px; padding-bottom: 5px;"><p>VALUE</td><td style="border-bottom-style: Solid; border-bottom-width: 1px; padding-left: 5px; padding-right: 5px; padding-top: 5px; paddin -bottom: 5px;"><p>DESCRIPTION</td></tr><tr style="x-cell-content-align: center;" valign=middle><td style="padding-left: 5px; padding-right: 5px; padding-top: 5px; padding-bottom: 5px; border-right-width: 1px; border-right-style: Solid; border-bottom-width: 1px; border-bottom-style: Solid; x-cell-content-align: top; border-left-width: 1px; border-left-style: Solid;" valign=top><p>Sunken</td><td colspan=1 rowspan=1 style="border-right-style: Solid; border-right-width: 1px; border-bottom-style: Solid; border-bottom-width: 1px; padding-left: 5px; padding-right: 5px; padding-top: 5px; padding-bottom: 5px; x-cell-content-align: top;" valign=top><p>0</td><td style="border-right-style: Solid; border-right-width: 1px; border-bottom-style: Solid; border-bottom-width: 1px; padding-left: 5px; padding-right: 5px; padding-top: 5px; padding-bottom: 5px; x-cell-content-align: top;" valign=top><p>Sunken value</td></tr><tr style="x-cell-content-align: center;" valign=middle><td style="padding-left: 5px; padding-right: 5px; padding-top: 5px; padding-bottom: 5px; border-right-width: 1px; border-right-style: Solid; border-bottom-width: 1px; border-bottom-style: Solid; x-cell-content-align: top; border-left-width: 1px; border-left-style: Solid;" valign=top><p>Raised</td><td colspan=1 rowspan=1 style="border-right-style: Solid; border-right-width: 1px; border-bottom-style: Solid; border-bottom-width: 1px; padding-left: 5px; padding-right: 5px; padding-top: 5px; padding-bottom: 5px; x-cell-content-align: top;" valign=top><p>1</td><td style="border-right-style: Solid; border-right-width: 1px; border-bottom-style: Solid; border-bottom-width: 1px; padding-left: 5px; padding-right: 5px; padding-top: 5px; padding-bottom: 5px; x-cell-content-align: top;" valign=top><p>Raised value</td></tr><tr style="x-cell-content-align: center;" valign=middle><td style="padding-left: 5px; padding-right: 5px; padding-top: 5px; padding-bottom: 5px; border-right-width: 1px; border-right-style: Solid; border-bottom-width: 1px; border-bottom-style: Solid; x-cell-content-align: top; border-left-width: 1px; border-left-style: Solid;" valign=top><p>SunkenSoft</td><td colspan=1 rowspan=1 style="border-right-style: Solid; border-right-width: 1px; border-bottom-style: Solid; border-bottom-width: 1px; padding-left: 5px; padding-right: 5px; padding-top: 5px; padding-bottom: 5px; x-cell-content-align: top;" valign=top><p>2</td><td style="border-right-style: Solid; border-right-width: 1px; border-bottom-style: Solid; border-bottom-width: 1px; padding-left: 5px; padding-right: 5px; padding-top: 5px; padding-bottom: 5px; x-cell-content-align: top;" valign=top><p>SunkenSoft value</td></tr><tr style="x-cell-content-align: center;" valign=middle><td style="padding-left: 5px; padding-right: 5px; padding-top: 5px; padding-bottom: 5px; border-right-width: 1px; border-right-style: Solid; border-bottom-width: 1px; border-bottom-style: Solid; x-cell-content-align: top; border-left-width: 1px; border-left-style: Solid;" valign=top><p>RaisedSoft</td><td colspan=1 rowspan=1 style="border-right-style: Solid; border-right-width: 1px; border-bottom-style: Solid; border-bottom-width: 1px; padding-left: 5px; padding-right: 5px; padding-top: 5px; padding-bottom: 5px; x-cell-content-align: top;" valign=top><p>3</td><td style="border-right-style: Solid; border-right-width: 1px; border-bottom-style: Solid; border-bottom-width: 1px; padding-left: 5px; padding-right: 5px; padding-top: 5px; padding-bottom: 5px; x-cell-content-align: top;" valign=top><p>RaisedSoft value</td></tr></table><h2>Returns</h2><blockquote><p>This action dose not return any value.</p></blockquote><br><h2 class=ExampleHeading>Example</h2><p class=ExampleCode>result = ComboBox.GetItemData("ComboBox1", e_Selection)<br>for z=1,12 do<br>&nbsp;&nbsp;&nbsp;&nbsp;SliderCPV.SetRailStyle("Plugin"..z, result);<br>end</p><br><br><h1><A name="SliderCPV.GetRailStyle">SliderCPV.GetRailStyle</A></h1><br><div class=Declaration><!--(Table)=========================================================--><!--begin!kadov{{--><div align=left><!--}}end!kadov--><table x-use-null-cells		style="float: alignleft;		x-cell-content-align: Top;		border-spacing: 0px;		border-spacing: 0px;"		cellspacing=0><col><col><tr style="x-cell-content-align: top;" valign=top><td style="padding-right: 0px;			padding-left: 0px;			border-top-style: none;			border-bottom-style: none;			border-right-style: none;			border-left-style: none;"><p><span class=VarType>(number)&nbsp;</span>SliderCPV.GetRailStyle (&nbsp;</td><td style="padding-right: 0px;			padding-left: 0px;			border-top-style: none;			border-right-style: none;			border-bottom-style: none;"><p><span class=VarType>(string)&nbsp;</span>ObjectName <span class=DefaultValue> = "Plugin1"</span> )</p></td></tr></table><!--begin!kadov{{--></div><!--}}end!kadov--></div><h2 style="margin-bottom: 3pt;">Description</h2><p><blockquote>To get RailStyle</blockquote></p><h2 class="H2Tight">Parameters</h2><h3 class="ParameterHeading">ObjectName</h3><p class="ParameterBody"><span class="type">(string)&nbsp;</span>ObjectName</p><h2>Returns</h2><blockquote><p><span class=type>(number) </span></p></blockquote><br><h2 class=ExampleHeading>Example</h2><p class=ExampleCode>tblRailStyle ={}<br>for z=1,12 do<br>&nbsp;&nbsp;&nbsp;&nbsp;tblRailStyle[z] = SliderCPV.GetRailStyle("Plugin"..z);<br>&nbsp;&nbsp;&nbsp;&nbsp;if tblRailStyle[z] == 0 then<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;tblRailStyle[z] = "Sunken"<br>&nbsp;&nbsp;&nbsp;&nbsp;elseif tblRailStyle[z] == 1 then<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;tblRailStyle[z] = "Raised"<br>&nbsp;&nbsp;&nbsp;&nbsp;elseif tblRailStyle[z] == 2 then<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;tblRailStyle[z] = "SunkenSoft"<br>&nbsp;&nbsp;&nbsp;&nbsp;elseif tblRailStyle[z] == 3 then<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;tblRailStyle[z] = "RaisedSoft"<br>&nbsp;&nbsp;&nbsp;&nbsp;end<br>end<br>if (tblRailStyle[2] == tblRailStyle[4]) and (tblRailStyle[7] == tblRailStyle[12]) then<br>&nbsp;&nbsp;&nbsp;&nbsp;text = "All Plugins RailStyle Is: "..tblRailStyle[1]<br>else<br>&nbsp;&nbsp;&nbsp;&nbsp;text = "Plugin1 RailStyle: "..tblRailStyle[1].."\r\n"<br>&nbsp;&nbsp;&nbsp;&nbsp;text = text.."Plugin2 RailStyle: "..tblRailStyle[2].."\r\n"<br>&nbsp;&nbsp;&nbsp;&nbsp;text = text.."Plugin3 RailStyle: "..tblRailStyle[3].."\r\n"<br>&nbsp;&nbsp;&nbsp;&nbsp;text = text.."Plugin4 RailStyle: "..tblRailStyle[4].."\r\n"<br>&nbsp;&nbsp;&nbsp;&nbsp;text = text.."Plugin5 RailStyle: "..tblRailStyle[5].."\r\n"<br>&nbsp;&nbsp;&nbsp;&nbsp;text = text.."Plugin6 RailStyle: "..tblRailStyle[6].."\r\n"<br>&nbsp;&nbsp;&nbsp;&nbsp;text = text.."Plugin7 RailStyle: "..tblRailStyle[7].."\r\n"<br>&nbsp;&nbsp;&nbsp;&nbsp;text = text.."Plugin8 RailStyle: "..tblRailStyle[8].."\r\n"<br>&nbsp;&nbsp;&nbsp;&nbsp;text = text.."Plugin9 RailStyle: "..tblRailStyle[9].."\r\n"<br>&nbsp;&nbsp;&nbsp;&nbsp;text = text.."Plugin10 RailStyle: "..tblRailStyle[10].."\r\n"<br>&nbsp;&nbsp;&nbsp;&nbsp;text = text.."Plugin11 RailStyle: "..tblRailStyle[11].."\r\n"<br>&nbsp;&nbsp;&nbsp;&nbsp;text = text.."Plugin12 RailStyle: "..tblRailStyle[12].."\r\n"<br>end<br><br>Dialog.Message("", text);</p><br><br><h1><A name="SliderCPV.SetBackColor">SliderCPV.SetBackColor</A></h1><br><div class=Declaration><!--(Table)=========================================================--><!--begin!kadov{{--><div align=left><!--}}end!kadov--><table x-use-null-cells		style="float: alignleft;		x-cell-content-align: Top;		border-spacing: 0px;		border-spacing: 0px;"		cellspacing=0><col><col><tr style="x-cell-content-align: top;" valign=top><td style="padding-right: 0px;			padding-left: 0px;			border-top-style: none;			border-bottom-style: none;			border-right-style: none;			border-left-style: none;"><p>SliderCPV.SetBackColor (&nbsp;</td><td style="padding-right: 0px;			padding-left: 0px;			border-top-style: none;			border-right-style: none;			border-bottom-style: none;"><p><span class=VarType>(string)&nbsp;</span>ObjectName <span class=DefaultValue> = "Plugin1"</span>, </p><p><span class=VarType>(number)&nbsp;</span>BackColor <span class=DefaultValue> = 0</span> )</p></td></tr></table><!--begin!kadov{{--></div><!--}}end!kadov--></div><h2 style="margin-bottom: 3pt;">Description</h2><p><blockquote>To set current position</blockquote></p><h2 class="H2Tight">Parameters</h2><h3 class="ParameterHeading">ObjectName</h3><p class="ParameterBody"><span class="type">(string)&nbsp;</span>ObjectName</p><h3 class="ParameterHeading">BackColor</h3><p class="ParameterBody"><span class="type">(number)&nbsp;</span>BackColor</p><h2>Returns</h2><blockquote><p>This action dose not return any value.</p></blockquote><br><h2 class=ExampleHeading>Example</h2><p class=ExampleCode>result = DLL.CallFunction("AutoPlay\\Docs\\ColorDlg.dll", "ShowColorDlg", "", DLL_RETURN_TYPE_STRING, DLL_CALL_STDCALL);<br>if result ~= "-1" then<br>&nbsp;&nbsp;&nbsp;&nbsp;tbResults = DelimitedStringToTable(result,"|");<br>&nbsp;&nbsp;&nbsp;&nbsp;Dec = String.ToNumber(tbResults[1]);<br>&nbsp;&nbsp;&nbsp;&nbsp;for z=1,12 do<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;SliderCPV.SetBackColor("Plugin"..z, Dec);<br>&nbsp;&nbsp;&nbsp;&nbsp;end<br>end&nbsp;&nbsp;&nbsp;&nbsp;</p><br><br><h1><A name="SliderCPV.GetBackColor">SliderCPV.GetBackColor</A></h1><br><div class=Declaration><!--(Table)=========================================================--><!--begin!kadov{{--><div align=left><!--}}end!kadov--><table x-use-null-cells		style="float: alignleft;		x-cell-content-align: Top;		border-spacing: 0px;		border-spacing: 0px;"		cellspacing=0><col><col><tr style="x-cell-content-align: top;" valign=top><td style="padding-right: 0px;			padding-left: 0px;			border-top-style: none;			border-bottom-style: none;			border-right-style: none;			border-left-style: none;"><p><span class=VarType>(number)&nbsp;</span>SliderCPV.GetBackColor (&nbsp;</td><td style="padding-right: 0px;			padding-left: 0px;			border-top-style: none;			border-right-style: none;			border-bottom-style: none;"><p><span class=VarType>(string)&nbsp;</span>ObjectName <span class=DefaultValue> = "Plugin1"</span> )</p></td></tr></table><!--begin!kadov{{--></div><!--}}end!kadov--></div><h2 style="margin-bottom: 3pt;">Description</h2><p><blockquote>To get BackColor</blockquote></p><h2 class="H2Tight">Parameters</h2><h3 class="ParameterHeading">ObjectName</h3><p class="ParameterBody"><span class="type">(string)&nbsp;</span>ObjectName</p><h2>Returns</h2><blockquote><p><span class=type>(number) </span></p></blockquote><br><h2 class=ExampleHeading>Example</h2><p class=ExampleCode>tblColor ={}<br>for z=1,12 do<br>&nbsp;&nbsp;&nbsp;&nbsp;tblColor[z] = SliderCPV.GetBackColor("Plugin"..z);<br>end<br>if (tblColor[2] == tblColor[4]) and (tblColor[7] == tblColor[12]) then<br>&nbsp;&nbsp;&nbsp;&nbsp;text = "All Plugins Color Is: "..tblColor[1]<br>else<br>&nbsp;&nbsp;&nbsp;&nbsp;text = "Plugin1 Color: "..tblColor[1].."\r\n"<br>&nbsp;&nbsp;&nbsp;&nbsp;text = text.."Plugin2 Color: "..tblColor[2].."\r\n"<br>&nbsp;&nbsp;&nbsp;&nbsp;text = text.."Plugin3 Color: "..tblColor[3].."\r\n"<br>&nbsp;&nbsp;&nbsp;&nbsp;text = text.."Plugin4 Color: "..tblColor[4].."\r\n"<br>&nbsp;&nbsp;&nbsp;&nbsp;text = text.."Plugin5 Color: "..tblColor[5].."\r\n"<br>&nbsp;&nbsp;&nbsp;&nbsp;text = text.."Plugin6 Color: "..tblColor[6].."\r\n"<br>&nbsp;&nbsp;&nbsp;&nbsp;text = text.."Plugin7 Color: "..tblColor[7].."\r\n"<br>&nbsp;&nbsp;&nbsp;&nbsp;text = text.."Plugin8 Color: "..tblColor[8].."\r\n"<br>&nbsp;&nbsp;&nbsp;&nbsp;text = text.."Plugin9 Color: "..tblColor[9].."\r\n"<br>&nbsp;&nbsp;&nbsp;&nbsp;text = text.."Plugin10 Color: "..tblColor[10].."\r\n"<br>&nbsp;&nbsp;&nbsp;&nbsp;text = text.."Plugin11 Color: "..tblColor[11].."\r\n"<br>&nbsp;&nbsp;&nbsp;&nbsp;text = text.."Plugin12 Color: "..tblColor[12].."\r\n"<br>end<br><br>Dialog.Message("", text);</p><br><br><h1><A name="SliderCPV.ShowValueTip">SliderCPV.ShowValueTip</A></h1><br><div class=Declaration><!--(Table)=========================================================--><!--begin!kadov{{--><div align=left><!--}}end!kadov--><table x-use-null-cells		style="float: alignleft;		x-cell-content-align: Top;		border-spacing: 0px;		border-spacing: 0px;"		cellspacing=0><col><col><tr style="x-cell-content-align: top;" valign=top><td style="padding-right: 0px;			padding-left: 0px;			border-top-style: none;			border-bottom-style: none;			border-right-style: none;			border-left-style: none;"><p>SliderCPV.ShowValueTip (&nbsp;</td><td style="padding-right: 0px;			padding-left: 0px;			border-top-style: none;			border-right-style: none;			border-bottom-style: none;"><p><span class=VarType>(string)&nbsp;</span>ObjectName <span class=DefaultValue> = "Plugin1"</span>, </p><p><span class=VarType>(boolean)&nbsp;</span>ShowValueTip <span class=DefaultValue> = true</span> )</p></td></tr></table><!--begin!kadov{{--></div><!--}}end!kadov--></div><h2 style="margin-bottom: 3pt;">Description</h2><p><blockquote>To set current position</blockquote></p><h2 class="H2Tight">Parameters</h2><h3 class="ParameterHeading">ObjectName</h3><p class="ParameterBody"><span class="type">(string)&nbsp;</span>ObjectName</p><h3 class="ParameterHeading">ShowValueTip</h3><p class="ParameterBody"><span class="type">(boolean)&nbsp;</span>ShowValueTip</p><h2>Returns</h2><blockquote><p>This action dose not return any value.</p></blockquote><br><h2 class=ExampleHeading>Example</h2><p class=ExampleCode>for z=1,12 do<br>&nbsp;&nbsp;&nbsp;&nbsp;SliderCPV.ShowValueTip("Plugin"..z, true);<br>end<br></p><br><br><h1><A name="SliderCPV.IsShowValueTip">SliderCPV.IsShowValueTip</A></h1><br><div class=Declaration><!--(Table)=========================================================--><!--begin!kadov{{--><div align=left><!--}}end!kadov--><table x-use-null-cells		style="float: alignleft;		x-cell-content-align: Top;		border-spacing: 0px;		border-spacing: 0px;"		cellspacing=0><col><col><tr style="x-cell-content-align: top;" valign=top><td style="padding-right: 0px;			padding-left: 0px;			border-top-style: none;			border-bottom-style: none;			border-right-style: none;			border-left-style: none;"><p><span class=VarType>(boolean)&nbsp;</span>SliderCPV.IsShowValueTip (&nbsp;</td><td style="padding-right: 0px;			padding-left: 0px;			border-top-style: none;			border-right-style: none;			border-bottom-style: none;"><p><span class=VarType>(string)&nbsp;</span>ObjectName <span class=DefaultValue> = "Plugin1"</span> )</p></td></tr></table><!--begin!kadov{{--></div><!--}}end!kadov--></div><h2 style="margin-bottom: 3pt;">Description</h2><p><blockquote>To get is IsShowValueTip</blockquote></p><h2 class="H2Tight">Parameters</h2><h3 class="ParameterHeading">ObjectName</h3><p class="ParameterBody"><span class="type">(string)&nbsp;</span>ObjectName</p><h2>Returns</h2><blockquote><p><span class=type>(boolean) </span></p></blockquote><br><h2 class=ExampleHeading>Example</h2><p class=ExampleCode>tblShowValueTip ={}<br>for z=1,12 do<br>&nbsp;&nbsp;&nbsp;&nbsp;tblShowValueTip[z] = SliderCPV.IsShowValueTip("Plugin"..z);<br>end<br>if (tblShowValueTip[2] == tblShowValueTip[4]) and (tblShowValueTip[7] == tblShowValueTip[12]) then<br>&nbsp;&nbsp;&nbsp;&nbsp;text = "All Plugins ShowValueTip Is: "..tostring(tblShowValueTip[1])<br>else<br>&nbsp;&nbsp;&nbsp;&nbsp;text = "Plugin1 ShowValueTip Is: "..tostring(tblShowValueTip[1]).."\r\n"<br>&nbsp;&nbsp;&nbsp;&nbsp;text = text.."Plugin2 ShowValueTip Is: "..tostring(tblShowValueTip[2]).."\r\n"<br>&nbsp;&nbsp;&nbsp;&nbsp;text = text.."Plugin3 ShowValueTip Is: "..tostring(tblShowValueTip[3]).."\r\n"<br>&nbsp;&nbsp;&nbsp;&nbsp;text = text.."Plugin4 ShowValueTip Is: "..tostring(tblShowValueTip[4]).."\r\n"<br>&nbsp;&nbsp;&nbsp;&nbsp;text = text.."Plugin5 ShowValueTip Is: "..tostring(tblShowValueTip[5]).."\r\n"<br>&nbsp;&nbsp;&nbsp;&nbsp;text = text.."Plugin6 ShowValueTip Is: "..tostring(tblShowValueTip[6]).."\r\n"<br>&nbsp;&nbsp;&nbsp;&nbsp;text = text.."Plugin7 ShowValueTip Is: "..tostring(tblShowValueTip[7]).."\r\n"<br>&nbsp;&nbsp;&nbsp;&nbsp;text = text.."Plugin8 ShowValueTip Is: "..tostring(tblShowValueTip[8]).."\r\n"<br>&nbsp;&nbsp;&nbsp;&nbsp;text = text.."Plugin9 ShowValueTip Is: "..tostring(tblShowValueTip[9]).."\r\n"<br>&nbsp;&nbsp;&nbsp;&nbsp;text = text.."Plugin10 ShowValueTip Is: "..tostring(tblShowValueTip[10]).."\r\n"<br>&nbsp;&nbsp;&nbsp;&nbsp;text = text.."Plugin11 ShowValueTip Is: "..tostring(tblShowValueTip[11]).."\r\n"<br>&nbsp;&nbsp;&nbsp;&nbsp;text = text.."Plugin12 ShowValueTip Is: "..tostring(tblShowValueTip[12]).."\r\n"<br>end<br><br>Dialog.Message("", text);</p><br><br><h1><A name="SliderCPV.StartEvents">SliderCPV.StartEvents</A></h1><br><div class=Declaration><!--(Table)=========================================================--><!--begin!kadov{{--><div align=left><!--}}end!kadov--><table x-use-null-cells		style="float: alignleft;		x-cell-content-align: Top;		border-spacing: 0px;		border-spacing: 0px;"		cellspacing=0><col><col><tr style="x-cell-content-align: top;" valign=top><td style="padding-right: 0px;			padding-left: 0px;			border-top-style: none;			border-bottom-style: none;			border-right-style: none;			border-left-style: none;"><p>SliderCPV.StartEvents (&nbsp;</td><td style="padding-right: 0px;			padding-left: 0px;			border-top-style: none;			border-right-style: none;			border-bottom-style: none;"><p><span class=VarType>(string)&nbsp;</span>ObjectName1 <span class=DefaultValue> = "Plugin1"</span>, </p><p><span class=VarType>(string)&nbsp;</span>ObjectName2 <span class=DefaultValue> = nil</span>, </p><p><span class=VarType>(string)&nbsp;</span>ObjectName3 <span class=DefaultValue> = nil</span>, </p><p><span class=VarType>(string)&nbsp;</span>ObjectName4 <span class=DefaultValue> = nil</span>, </p><p><span class=VarType>(string)&nbsp;</span>ObjectName5 <span class=DefaultValue> = nil</span>, </p><p><span class=VarType>(string)&nbsp;</span>ObjectName6 <span class=DefaultValue> = nil</span>, </p><p><span class=VarType>(string)&nbsp;</span>ObjectName7 <span class=DefaultValue> = nil</span>, </p><p><span class=VarType>(string)&nbsp;</span>ObjectName8 <span class=DefaultValue> = nil</span>, </p><p><span class=VarType>(string)&nbsp;</span>ObjectName9 <span class=DefaultValue> = nil</span>, </p><p><span class=VarType>(string)&nbsp;</span>ObjectName10 <span class=DefaultValue> = nil</span>, </p><p><span class=VarType>(string)&nbsp;</span>ObjectName11 <span class=DefaultValue> = nil</span>, </p><p><span class=VarType>(string)&nbsp;</span>ObjectName12 <span class=DefaultValue> = nil</span>, </p><p><span class=VarType>(string)&nbsp;</span>ObjectName13 <span class=DefaultValue> = nil</span>, </p><p><span class=VarType>(string)&nbsp;</span>ObjectName14 <span class=DefaultValue> = nil</span>, </p><p><span class=VarType>(string)&nbsp;</span>ObjectName15 <span class=DefaultValue> = nil</span> )</p></td></tr></table><!--begin!kadov{{--></div><!--}}end!kadov--></div><h2 style="margin-bottom: 3pt;">Description</h2><p><blockquote>To start events of SliderCPV object. (Max. 15)</blockquote></p><h2 class="H2Tight">Parameters</h2><h3 class="ParameterHeading">ObjectName1</h3><p class="ParameterBody"><span class="type">(string)&nbsp;</span>The name 1 of the SliderCPV object.</p><h3 class="ParameterHeading">ObjectName2</h3><p class="ParameterBody"><span class="type">(string)&nbsp;</span>The name 2 of the SliderCPV object.</p><h3 class="ParameterHeading">ObjectName3</h3><p class="ParameterBody"><span class="type">(string)&nbsp;</span>The name 3 of the SliderCPV object.</p><h3 class="ParameterHeading">ObjectName4</h3><p class="ParameterBody"><span class="type">(string)&nbsp;</span>The name 4 of the SliderCPV object.</p><h3 class="ParameterHeading">ObjectName5</h3><p class="ParameterBody"><span class="type">(string)&nbsp;</span>The name 5 of the SliderCPV object.</p><h3 class="ParameterHeading">ObjectName6</h3><p class="ParameterBody"><span class="type">(string)&nbsp;</span>The name 6 of the SliderCPV object.</p><h3 class="ParameterHeading">ObjectName7</h3><p class="ParameterBody"><span class="type">(string)&nbsp;</span>The name 7 of the SliderCPV object.</p><h3 class="ParameterHeading">ObjectName8</h3><p class="ParameterBody"><span class="type">(string)&nbsp;</span>The name 8 of the SliderCPV object.</p><h3 class="ParameterHeading">ObjectName9</h3><p class="ParameterBody"><span class="type">(string)&nbsp;</span>The name 9 of the SliderCPV object.</p><h3 class="ParameterHeading">ObjectName10</h3><p class="ParameterBody"><span class="type">(string)&nbsp;</span>The name 10 of the SliderCPV object.</p><h3 class="ParameterHeading">ObjectName11</h3><p class="ParameterBody"><span class="type">(string)&nbsp;</span>The name 11 of the SliderCPV object.</p><h3 class="ParameterHeading">ObjectName12</h3><p class="ParameterBody"><span class="type">(string)&nbsp;</span>The name 12 of the SliderCPV object.</p><h3 class="ParameterHeading">ObjectName13</h3><p class="ParameterBody"><span class="type">(string)&nbsp;</span>The name 13 of the SliderCPV object.</p><h3 class="ParameterHeading">ObjectName14</h3><p class="ParameterBody"><span class="type">(string)&nbsp;</span>The name 14 of the SliderCPV object.</p><h3 class="ParameterHeading">ObjectName15</h3><p class="ParameterBody"><span class="type">(string)&nbsp;</span>The name 15 of the SliderCPV object.</p><h2>Returns</h2><blockquote><p>This action dose not return any value.</p></blockquote><br><h2 class=ExampleHeading>Example</h2><p class=ExampleCode>SliderCPV.StartEvents("Plugin1","Plugin2","Plugin3","Plugin4","Plugin5","Plugin6","Plugin7","Plugin8","Plugin9","Plugin10","Plugin11","Plugin12");<br><br>SliderCPV.CreateObject("Plugin1", Horizontal, Sunken, 0, 100, 0, Math.Random(1, 2999999), true, true);<br>SliderCPV.CreateObject("Plugin2", Horizontal, Raised, 0, 100, 20, Math.Random(1, 4999999), false, true);<br>SliderCPV.CreateObject("Plugin3", Horizontal, SunkenSoft, 0, 100, 40, Math.Random(1, 1999999), true, true);<br>SliderCPV.CreateObject("Plugin4", Horizontal, RaisedSoft, 0, 100, 60, Math.Random(1, 5999999), false, true);<br>SliderCPV.CreateObject("Plugin5", Horizontal, Sunken, 0, 100, 80, Math.Random(1, 7999999), true, true);<br>SliderCPV.CreateObject("Plugin6", Horizontal, Raised, 0, 100, 100, Math.Random(1, 1999999), false, true);<br><br>SliderCPV.CreateObject("Plugin7", Vertical, SunkenSoft, 0, 100, 0, Math.Random(1, 2999999), true, true);<br>SliderCPV.CreateObject("Plugin8", Vertical, RaisedSoft, 0, 100, 20, Math.Random(1, 4999999), false, true);<br>SliderCPV.CreateObject("Plugin9", Vertical, Sunken, 0, 100, 40, Math.Random(1, 1999999), true, true);<br>SliderCPV.CreateObject("Plugin10", Vertical, Raised, 0, 100, 60, Math.Random(1, 5999999), false, true);<br>SliderCPV.CreateObject("Plugin11", Vertical, SunkenSoft, 0, 100, 80, Math.Random(1, 7999999), true, true);<br>SliderCPV.CreateObject("Plugin12", Vertical, RaisedSoft, 0, 100, 100, Math.Random(1, 1999999), false, true);</p><br><br><hr>
+
+<p align="center"> <BR>This File Was Generated With AMS ActionFile Editor</p>
+
+</body>
+</html>

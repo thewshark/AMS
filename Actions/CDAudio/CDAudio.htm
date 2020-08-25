@@ -1,0 +1,847 @@
+<!doctype HTML public "-//W3C//DTD HTML 4.0 Frameset//EN">
+
+<html>
+<head>
+<title>CD Audio Actions Plugin Help</title>
+
+<meta http-equiv=content-type content="text/html; charset=windows-1252">
+
+<style>
+
+/* ELEMENTS */
+
+body {
+  font-family: Verdana, sans-serif;
+  font-size: 8pt;
+  background-color: #ffffff;
+}
+
+hr {
+  text-align: center;
+  color: #f0f0f0;
+  width: 100%;
+  height: 6pt;
+
+  margin-top: 0pt;
+  margin-bottom: -3pt;
+
+  border: none;
+}
+
+A:link, A:active, A:visited {
+  color: #0000ff;
+  text-decoration: none;
+}
+
+A:hover {
+  color: #0000ff;
+  text-decoration: underline;
+}
+
+h1 {
+  font-family: Verdana;
+  font-weight: bold;
+  font-size: 18.0pt;
+  white-space: nowrap;
+  color: #fff;
+  background-color: #699BEF;
+
+  padding: 4pt 3pt;
+  padding: 5px 4px;
+
+  margin-top: 0pt;
+  margin-bottom: 0pt;
+
+  border-right: 1px solid #333;
+  border-left: 1px solid #699BEF;
+  border-bottom: solid black 1px;
+}
+
+h2 {
+  font-family: Arial, sans-serif;
+  font-size: 12.0pt;
+  letter-spacing: .2ex;
+  color: #000;
+  
+  margin-left: 0pt;
+  margin-right: 0pt;
+  margin-top: 18pt;
+  margin-bottom: 9pt;
+}
+
+h3 {
+  font-family: Arial, sans-serif;
+  font-size: 10pt;
+  font-weight: bold;
+  font-style: normal;
+  color: black;
+  letter-spacing: 0px;
+
+  margin-left: 0pt;
+  margin-right: 0pt;
+  margin-top: 18pt;
+  margin-bottom: 3pt;
+}
+
+p {
+  font-family: Verdana;
+  font-size: 8.0pt;
+  line-height: 12.0pt;
+  
+  margin-left: 0pt;
+  margin-right: 0pt;
+  margin-top: 0pt;
+  margin-bottom: 9pt;
+}
+
+/* CLASSES */
+
+div.Actions h3, div.Events h3, div.MixedMode h3 {
+  font-family: Arial, sans-serif;
+  font-size: 10pt;
+  font-weight: bold;
+  font-style: italic;
+  color: #3C77B3;
+  letter-spacing: 0px;
+  
+  margin-left: 12pt;
+  margin-right: 0pt;
+  margin-top: 18pt;
+  margin-bottom: 3pt;
+}
+
+div.Actions h4, div.info h3, div.MixedMode h4 {
+  font-family: Verdana;
+  font-size: 8.0pt;
+  line-height: 12.0pt;
+  font-weight: bold;
+  
+  margin-top: 9pt;
+  margin-bottom: 0pt;
+  margin-left: 28pt;
+  margin-right: 0pt;
+}
+
+
+
+div.Actions p, div.Events p, div.ErrorCodes p, div.MixedMode p, div.MixedMode li{
+  font-family: Verdana;
+  font-size: 8.0pt;
+  line-height: 12.0pt;
+  
+  margin-top: 0pt;
+  margin-bottom: 9pt;
+  margin-left: 12pt;
+  margin-right: 0pt;
+}
+
+div.MixedMode li ul {
+  margin-top: 9pt;
+  margin-left: 16pt;
+  list-style-type: disc;
+}
+
+div.MixedMode li ul li {
+  margin-left: 0px;
+  list-style-type: disc;
+}
+
+div.ErrorCodes table {
+  font-family: Verdana, sans-serif;
+  font-size: 8.0pt;
+  line-height: 12.0pt;
+  margin: 0px 0px 9pt 28pt;
+  border-collapse: collapse; 
+  border: none;
+}
+
+div.ErrorCodes table th,
+div.ErrorCodes table td {
+  border-bottom: 1px solid #ddd;
+  padding: 1ex;
+}
+
+div.ErrorCodes table th {
+  text-align: left;
+  padding-left: 0px;
+  padding-right: 2ex;
+}
+
+p.NavLocal {
+  white-space: nowrap;
+  text-indent: -4px;
+  font-family: Verdana, Arial, sans-serif;
+  font-weight: bold;
+  font-style: normal;
+  font-size: 13px;
+  background-color: #e4e4e4;
+
+  margin-top: 0px;
+  margin-bottom: 12pt;
+
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 0px;
+  padding-right: 0px;
+
+  border-bottom: 1px solid #e4e4e4;
+}
+
+p.Note {
+	font-family: Verdana;
+	font-size: 8.0pt;
+	line-height: 12.0pt;
+	color: #000000;
+	background-color: #ffffe8;
+
+	margin-top: 0pt;
+	margin-bottom: 9pt;
+	margin-left: 0pt;
+	margin-right: 5%;
+
+	padding-left: 2pt;
+	padding-right: 2pt;
+	padding-top: 1pt;
+	padding-bottom: 2pt;
+}
+
+p.Tip {
+	font-family: Verdana;
+	font-size: 8.0pt;
+	line-height: 12.0pt;
+	color: #000000;
+	background-color: #EAF4E8;
+
+	margin-top: 0pt;
+	margin-bottom: 9pt;
+	margin-left: 0pt;
+	margin-right: 5%;
+
+	padding-left: 2pt;
+	padding-right: 2pt;
+	padding-top: 1pt;
+	padding-bottom: 2pt;
+}
+
+div.Actions p.Note, div.Events p.Note,
+div.Actions p.Tip, div.Events p.Tip {
+	margin-left: 28pt;
+}
+
+div.CallbackParams p.Note,
+div.CallbackParams p.Tip {
+	margin-left: 38pt;
+}
+
+pre.code {
+  white-space: pre;
+  font-family: Courier New, Courier, Arial, sans-serif;
+  font-size: 10pt;
+  font-weight: normal;
+  font-style: normal;
+  letter-spacing: normal;
+  color: #000;
+  background-color: #f9f9f9;
+  
+  margin-top: 3pt;
+  margin-bottom: 9pt;
+  margin-left: 0pt;
+  margin-left: 0pt;
+  
+  padding: 10px;
+  
+  border: 1px dotted #ccc;
+}
+
+div.Actions pre.code, div.Events pre.code {
+  margin-left: 28pt;
+}
+
+div.Actions h2 {
+  margin-bottom: -6pt;
+}
+
+div.actions p, div.MixedMode p, div.MixedMode li, div.info p, div.ErrorCodes p {
+  margin-left: 28pt;
+}
+
+div.actions p.indent {
+  margin-left: 38pt;
+}
+
+div.CallbackParams h5 {
+  font-family: Verdana;
+  font-size: 8.0pt;
+  line-height: 12.0pt;
+  font-weight: bold;
+  
+  margin-top: 9pt;
+  margin-bottom: 0pt;
+  margin-left: 38pt;
+  margin-right: 0pt;
+}
+
+div.CallbackParams p {
+  font-family: Verdana;
+  font-size: 8.0pt;
+  line-height: 12.0pt;
+  
+  margin-top: 0pt;
+  margin-bottom: 9pt;
+  margin-left: 38pt;
+  margin-right: 0pt;
+}
+
+div.history h2 + h3 {
+	margin-top: 3pt;
+}
+
+span.here { /* blue tab effect in navbar (NavLocal) */
+  font-weight: bold;
+  color: #fff;
+  background-color: #699BEF;
+
+  margin: 0px;
+
+  padding: 4px 8px;
+
+  border-top: 1px solid #699BEF;
+  border-bottom: 1px solid #333;
+  border-left: none;
+  border-right: 1px solid #333;
+}
+
+span.type {
+	color: #aaa;
+}
+</style>
+</head>
+<body>
+
+<h1>CD Audio Actions Plugin</h1>
+
+<p class="NavLocal"><span class=wab>&nbsp;</span><span class="here">Online Help</span></p>
+
+<h2>Description</h2>
+
+<p>Add full CD music control to your projects using the CD Audio actions plugin. The CDAudio plugin is perfect for working with "mixed-mode" CDs, where there are one or more audio tracks in addition to a data track. Mixed-mode CDs are often used to create an "enhanced" audio CD which plays normally in a regular CD player and presents additional multimedia content when placed in a computer's CD-ROM drive.</p>
+
+<p>This plugin comes with a full set of actions to give you extensive control over the CD, such as play, pause, stop and seek. There are also actions to query the CD contents, get track length information, set the playback volume and choose play modes such as single, loop and random.</p>
+
+<p>Add the CDAudio plugin to your toolbox, and you can create hybrid audio/data CD's faster and easier than ever before!</p>
+
+<h2>Mixed-Mode CD's</h2>
+
+<p>The CDAudio plugin is perfect for working with "mixed-mode" CDs, 
+where there are one or more audio tracks in addition to a data track. 
+Mixed-mode CDs are often used to create an "enhanced" audio CD 
+which plays normally in a regular CD player and presents additional 
+multimedia content when placed in a computer's CD-ROM drive.</p>
+
+<p>There are three basic types of mixed-mode CDs:</p>
+
+<div class="MixedMode">
+<h3>Data in Track 1</h3>
+<h4>Description:</h4>
+<p>This form of mixed mode CD places the data track as the first music track on the disk.</p>
+<h4>Pros:</h4>
+<p>The CD is recorded as a Mode 1 ROM, therefore it can be played on virtually every CD ROM drive produced.</p>
+<h4>Cons:</h4>
+
+<p>Some CD players will attempt to play the data track. Most new 
+players will skip over the track because it is listed as "data" in the 
+CD's table of contents, but some players will attempt to play the data 
+track as audio, resulting in a very loud noise (like the screech of a 
+fax machine).<br/>This method is typically only used in situations 
+where it is unlikely that the CD will be played in a CD audio 
+player.</p>
+
+<h3>Pre-Gap / Track-Zero</h3>
+<h4>Description:</h4>
+<p>This form of a mixed mode CD hides the data track in the pause before track 1 begins.</p>
+<h4>Pros:</h4>
+<p>Older CD players do not typically attempt to play the data track.</p>
+<h4>Cons:</h4>
+
+<p>If the user rewinds the CD into the data track, the data can be 
+played back as audio, resulting in a very loud disconcerting noise.<br/>
+This type of CD does not conform to the official standard and may not 
+be compatible with some players or operating system software.</p>
+
+<h3>CD Extra or Enhanced CD</h3>
+<h4>Description:</h4>
+
+<p>This form of a mixed mode CD contains two sessions (a multi-session 
+disk). The first session contains up to 98 audio tracks, and the second 
+session contains the data track. Audio CD players can only 'see' the 
+first session, and thus will not play the data track. Most CD-ROM drives 
+can see both sessions, and will load your AutoPlay application.</p>
+
+<h4>Pros:</h4>
+<p>Even older CD players won't play the data track, so the user's ears and speakers are safe from damage.<br/>
+This format is the most compatible with both stand-alone CD players and CD-ROM drives.
+</p>
+<h4>Cons:</h4>
+
+<p>Enhanced CDs are not playable on Photo CD players.<br/> Requires a 
+CD-ROM drive that is able to read multi-session discs.</p>
+
+<h3>Conclusion</h3>
+<h4>Our Suggestion:</h4>
+<p>We suggest that you use the 'Enhanced CD' type, due to its wider scope of compatibility.  Virtually any CD-ROM created for Windows 95 or greater supports this format.</p>
+<!--The following was taken from http://club.cdfreaks.com/archive/topic/60198.html-->
+<p>The data files will be recognized in Windows Explorer as though there are no audio tracks, because Windows Explorer typically can only see the last session in a multi-session disk.  Audio players, on the other hand, typically see only the first session in a multi-session disk.  Therefore, both CD-ROMS and stand-alone audio players are able to play the audio tracks.</p>
+<!--end source-->
+<h4>Burning an Enhanced CD (CD Extra) with Nero:</h4>
+<p>To burn an Enhanced CD with Nero Burning ROM (6.0 or greater):
+
+<ol><li>Select "CD Extra" and input desired settings.
+<li>Add your audio tracks by dragging your audio files to the track window.
+<li>Add your data files by dragging them to the folder structure window.
+
+
+
+</p>
+
+</div> <!-- /MixedMode -->
+
+
+<div class="Actions">
+<h2>Actions</h2>
+
+<p style="margin-top: 18pt; margin-left: 12pt;">
+<a href="#CDAudio.GetCurrentPos">CDAudio.GetCurrentPos</a><br/>
+<a href="#CDAudio.GetNumTracks">CDAudio.GetNumTracks</a><br/>
+<a href="#CDAudio.GetPlayMode">CDAudio.GetPlayMode</a><br/>
+<a href="#CDAudio.GetTrack">CDAudio.GetTrack</a><br/>
+<a href="#CDAudio.GetTrackLength">CDAudio.GetTrackLength</a><br/>
+<a href="#CDAudio.GetVolume">CDAudio.GetVolume</a><br/>
+<a href="#CDAudio.IsPaused">CDAudio.IsPaused</a><br/>
+<a href="#CDAudio.LoadCD">CDAudio.LoadCD</a><br/>
+<a href="#CDAudio.Pause">CDAudio.Pause</a><br/>
+<a href="#CDAudio.Play">CDAudio.Play</a><br/>
+<a href="#CDAudio.Seek">CDAudio.Seek</a><br/>
+<a href="#CDAudio.SetPlayMode">CDAudio.SetPlayMode</a><br/>
+<a href="#CDAudio.SetTrack">CDAudio.SetTrack</a><br/>
+<a href="#CDAudio.SetVolume">CDAudio.SetVolume</a><br/>
+<a href="#CDAudio.Stop">CDAudio.Stop</a><br/>
+<a href="#CDAudio.TogglePlay">CDAudio.TogglePlay</a><br/>
+</p>
+
+<h3><a name="CDAudio.GetCurrentPos">number CDAudio.GetCurrentPos ();</a></h3>
+
+<h4>Description:</h4><p>Retrieves the current time position (in 
+seconds) of the current audio CD track.</p>
+
+<h4>Returns:</h4><p><span class="type">(number)</span> The current position of the 
+audio CD track, in seconds. If an error occurs, -1 will be 
+returned. You can use Application.GetLastError to determine 
+whether this action failed, and why.</p>
+
+<h4>Example:</h4><pre class="code">
+-- Get the position of the current audio track in seconds
+nPos = CDAudio.GetCurrentPos();
+</pre>
+
+
+<h3><a name="CDAudio.GetNumTracks">number CDAudio.GetNumTracks (string Drive);</a></h3>
+
+<h4>Description:</h4><p>Determines how many tracks are on an audio CD.</p>
+
+<h4>Drive:</h4><p>The drive that the audio CD is loaded in (e.g. "D:\\", "D", "D:").</p>
+
+<h4>Returns:</h4><p><span class="type">(number)</span> The number of 
+tracks on the audio CD. If an error occurs, 0 will be returned. You 
+can use Application.GetLastError to determine whether this action 
+failed, and why.</p>
+
+<h4>Example:</h4><pre class="code">
+-- Get the number of tracks on drive D:
+nTracks = CDAudio.GetNumTracks("D");
+</pre>
+
+
+<h3><a name="CDAudio.GetPlayMode">number CDAudio.GetPlayMode ();</a></h3>
+
+<h4>Description:</h4><p>Retrieves the current play mode of the audio CD.</p>
+
+<h4>Returns:</h4><p><span class="type">(number)</span> The current play mode:</p>
+
+<p class="indent">
+<b>0</b>&nbsp; (CDAudio.PLAYCONTINUOUS) - Start from the current track and play to end of CD.<BR>
+<b>1</b>&nbsp; (CDAudio.PLAYONCE) - Play the current track, then stop.<BR>
+<b>2</b>&nbsp; (CDAudio.PLAYLOOPED) - Play the current track, looping forever until stopped manually.<BR>
+<b>3</b>&nbsp; (CDAudio.PLAYRANDOM) - Play tracks in random order.</p>
+
+<h4>Example:</h4><pre class="code">
+-- Get the current play mode on the source drive
+nPlayMode = CDAudio.GetNumTracks(_SourceDrive);
+</pre>
+
+
+<h3><a name="CDAudio.GetTrack">number CDAudio.GetTrack ();</a></h3>
+
+<h4>Description:</h4><p>Retrieves the current track on the currently loaded audio CD.</p>
+
+<h4>Returns:</h4><p><span class="type">(number)</span> The current 
+track. If an error occurs, 0 will be returned. You can use 
+Application.GetLastError to determine whether this action failed, and 
+why.</p>
+
+<h4>Example:</h4><pre class="code">
+-- Get the current track
+nCurrentTrack = CDAudio.GetTrack();
+</pre>
+
+
+<h3><a name="CDAudio.GetTrackLength">number CDAudio.GetTrackLength (number Track);</a></h3>
+
+<h4>Description:</h4><p>Retrieves the length of the specified track on the currently loaded audio CD.</p>
+
+<h4>Returns:</h4><p><span class="type">(number)</span> The length of 
+the track in seconds. If an error occurs, 0 will be returned. You can 
+use Application.GetLastError to determine whether this action failed, 
+and why.</p>
+
+<h4>Example:</h4><pre class="code">
+-- Get the length of track 4
+nTrackLength = CDAudio.GetTrackLength(4);
+</pre>
+
+
+<h3><a name="CDAudio.GetVolume">number CDAudio.GetVolume ();</a></h3>
+
+<h4>Description:</h4><p>Retrieves the current volume of the audio CD, as a number between 0 and 255.</p>
+
+<h4>Returns:</h4><p><span class="type">(number)</span> The volume of 
+the currently loaded audio CD. If an error occurs, -1 will be returned. 
+You can use Application.GetLastError to determine whether this action 
+failed, and why.</p>
+
+<h4>Example:</h4><pre class="code">
+-- Get the current volume
+nVolume = CDAudio.GetVolume();
+</pre>
+
+
+<h3><a name="CDAudio.IsPaused">number CDAudio.IsPaused ();</a></h3>
+
+<h4>Description:</h4><p>Determines whether the audio CD is currently paused.</p>
+
+<h4>Returns:</h4><p><span class="type">(boolean)</span> True if the 
+audio CD is paused, or false if it is playing or stopped. You can use 
+Application.GetLastError to determine whether this action failed, and 
+why.</p>
+
+<h4>Example:</h4><pre class="code">
+-- Display a message if the CD is paused
+if CDAudio.IsPaused() then
+    Dialog.Message("", "The CD is paused.");
+end
+</pre>
+
+
+<h3><a name="CDAudio.LoadCD">CDAudio.LoadCD (string Drive);</a></h3>
+
+<h4>Description:</h4><p>"Loads" an audio CD so that it can be played, 
+paused, etc. Use this action to select a CD-ROM drive for future 
+CDAudio operations.</p>
+
+<p class="tip"><b>Tip:</b> Set the playmode to CDAudio.PLAYRANDOM 
+before calling CDAudio.LoadCD() to have the "first track" chosen at 
+random. Otherwise, the current track will default to track 1.</p>
+
+<h4>Drive:</h4><p><span class="type">(string)</span> The drive that the audio CD is loaded in (e.g. 
+"D:\\", "D", "D:"). Leave blank ("") to specify the user's default CD-ROM drive.</p>
+
+<h4>Returns:</h4><p>Nothing. You can use Application.GetLastError to 
+determine whether this action failed, and why.</p>
+
+<h4>Example:</h4><pre class="code">
+-- Select the "D:" drive and play track 3
+CDAudio.LoadCD("D");
+CDAudio.SetTrack(3);
+CDAudio.Play();
+</pre>
+
+
+<h3><a name="CDAudio.Pause">CDAudio.Pause ();</a></h3>
+
+<h4>Description:</h4><p>Paused the audio CD.</p>
+
+<h4>Returns:</h4><p>Nothing. You can use Application.GetLastError to 
+determine whether this action failed, and why.</p>
+
+<h4>Example:</h4><pre class="code">
+-- Pause the CD
+CDAudio.Pause();
+</pre>
+
+
+<h3><a name="CDAudio.Play">CDAudio.Play ();</a></h3>
+
+<h4>Description:</h4><p>Plays the current track on the audio CD.</p>
+<p class="note"><b>Note:</b> This resumes playback if the audio CD is paused...otherwise, it begins playing the track from the beginning.</p>
+<p class="tip"><b>Tip:</b> Before calling CDAudio.Play() for the first time, you need to use CDAudio.LoadCD() to select a CD-ROM drive for playback.</p>
+
+<h4>Returns:</h4><p>Nothing. You can use Application.GetLastError to 
+determine whether this action failed, and why.</p>
+
+<h4>Example 1:</h4><pre class="code">
+-- Start playing (or resume playing) the current track on the currently loaded Audio CD
+CDAudio.Play();
+</pre>
+
+<h4>Example 2:</h4><pre class="code">
+-- Play track 5 on the "E:" drive
+CDAudio.LoadCD("E");
+CDAudio.SetTrack(5);
+CDAudio.Play();
+</pre>
+
+
+<h3><a name="CDAudio.Seek">CDAudio.Seek (number SeekType, number SeekTime);</a></h3>
+
+<h4>Description:</h4><p>Seeks to a different time in the current track of the audio CD.</p>
+
+<h4>SeekType:</h4><p><span class="type">(number)</span> The type of seek to perform:</p>
+
+<p class="indent">
+<b>SEEK_BEGINNING</b> (0) - Seek to the beginning of the current track.<BR>
+<b>SEEK_END</b> (1) - Seek to the end of the current track.<BR>
+<b>SEEK_FORWARD</b> (2) - Seek forward.<BR>
+<b>SEEK_BACKWARD</b> (3) - Seek backward.<BR>
+<b>SEEK_SPECIFIC</b> (4) - Seek to a specific time within the track.</p>
+
+<h4>SeekTime:</h4><p><span class="type">(number)</span> The time in seconds to seek to (or seek by).</p>
+
+<p class="note"><b>Note:</b> SeekTime is only used if SeekType is 2, 3 or 4.</p>
+
+<h4>Returns:</h4><p>Nothing. You can use Application.GetLastError to 
+determine whether this action failed, and why.</p>
+
+<h4>Example:</h4><pre class="code">
+-- Seek ahead 5 seconds
+CDAudio.Seek(SEEK_FORWARD, 5);
+</pre>
+
+
+<h3><a name="CDAudio.SetPlayMode">CDAudio.SetPlayMode (number PlayMode);</a></h3>
+
+<h4>Description:</h4><p>Sets the play mode for the audio CD.</p>
+
+<h4>PlayMode:</h4><p><span class="type">(number)</span> The play mode to set:</p>
+
+<p class="indent">
+<b>CDAudio.PLAYCONTINUOUS</b> (0) - Start from the current track and play to end of CD.<BR>
+<b>CDAudio.PLAYONCE</b> (1) - Play the current track, then stop.<BR>
+<b>CDAudio.PLAYLOOPED</b> (2) - Play the current track, looping forever until stopped manually.<BR>
+<b>CDAudio.PLAYRANDOM</b> (3) - Play tracks in random order.</p>
+
+<h4>Returns:</h4><p>Nothing. You can use Application.GetLastError to 
+determine whether this action failed, and why.</p>
+
+<h4>Example:</h4><pre class="code">
+-- Start playing the tracks on drive E: in random order
+CDAudio.LoadCD("E");
+CDAudio.SetPlayMode(CDAudio.PLAYRANDOM);
+CDAudio.Play();
+</pre>
+
+
+<h3><a name="CDAudio.SetTrack">CDAudio.SetTrack (number Track);</a></h3>
+
+<h4>Description:</h4><p>Sets the current track on the currently loaded audio CD.</p>
+
+<p class="note"><b>Note:</b> If the audio CD is currently playing, this starts 
+playing the new track automatically.</p>
+
+<h4>Track:</h4><p><span class="type">(number)</span> The CD track to switch to. The first track starts at 1.</p>
+
+<h4>Returns:</h4><p>Nothing. You can use Application.GetLastError to 
+determine whether this action failed, and why.</p>
+
+<h4>Example:</h4><pre class="code">
+-- Switch to track # 8
+CDAudio.SetTrack(8);
+</pre>
+
+
+<h3><a name="CDAudio.SetVolume">CDAudio.SetVolume (number Volume);</a></h3>
+
+<h4>Description:</h4><p>Sets the volume of the audio CD.</p>
+
+<h4>Volume:</h4><p><span class="type">(number)</span> The volume as a number between 0 and 255, where 0 is quietest and 255 is loudest.</p>
+
+<h4>Returns:</h4><p>Nothing. You can use Application.GetLastError to 
+determine whether this action failed, and why.</p>
+
+<h4>Example:</h4><pre class="code">
+-- Get the current volume
+nVolume = CDAudio.GetVolume();
+</pre>
+
+
+<h3><a name="CDAudio.Stop">CDAudio.Stop ();</a></h3>
+
+<h4>Description:</h4><p>Stops playing the current track on the audio CD.</p>
+
+<h4>Returns:</h4><p>Nothing. You can use Application.GetLastError to 
+determine whether this action failed, and why.</p>
+
+<h4>Example:</h4><pre class="code">
+-- Stop playing the current track
+CDAudio.Stop();
+</pre>
+
+
+<h3><a name="CDAudio.TogglePlay">CDAudio.TogglePlay ();</a></h3>
+
+<h4>Description:</h4><p>Toggles the audio CD between playing and pausing.</p>
+<p class="tip"><b>Tip:</b> Use this to create a button that toggles playback on and off, pausing when playing, and resuming when paused.</p>
+
+<h4>Returns:</h4><p>Nothing. You can use Application.GetLastError to 
+determine whether this action failed, and why.</p>
+
+<h4>Example:</h4><pre class="code">
+-- Play the current track if it's paused, or pause it if it's playing
+CDAudio.TogglePlay();
+</pre>
+
+</div> <!-- /Actions -->
+
+
+<div class="ErrorCodes">
+<h2>Error Codes</h2>
+
+<table>
+  <tr>
+    <th>0</th>
+    <td>(CDAudio.OK)</td><td>-</td><td>(no error)</td>
+  </tr>
+  <tr>
+    <th>32000</th>
+    <td>(CDAudio.ERR_UNABLE_TO_INIT)</td><td>-</td><td>Unable to initialize sound system.</td>
+  </tr>
+  <tr>
+    <th>32001</th>
+    <td>(CDAudio.ERR_NOT_INITIALIZED)</td><td>-</td><td>Sound system not initialized.</td>
+  </tr>
+  <tr>
+    <th>32002</th>
+    <td>(CDAudio.ERR_NOT_CD_DRIVE)</td><td>-</td><td>The specified drive is not an audio CD drive.</td>
+  </tr>
+  <tr>
+    <th>32003</th>
+    <td>(CDAudio.ERR_NO_CD_IN_DRIVE)</td><td>-</td><td>The specified drive does not contain an audio CD. The drive is empty.</td>
+  </tr>
+  <tr>
+    <th>32004</th>
+    <td>(CDAudio.ERR_TRACK_TOO_LOW)</td><td>-</td><td>The specified track is out of range. Track numbers begin at 1.</td>
+  </tr>
+  <tr>
+    <th>32005</th>
+    <td>(CDAudio.ERR_TRACK_TOO_HIGH)</td><td>-</td><td>The specified track is out of range for the current audio CD.</td>
+  </tr>
+  <tr>
+    <th>32006</th>
+    <td>(CDAudio.ERR_UNABLE_TO_PLAY)</td><td>-</td><td>An error occurred while trying to play the audio CD.</td>
+  </tr>
+  <tr>
+    <th>32007</th>
+    <td>(CDAudio.ERR_UNABLE_TO_PAUSE)</td><td>-</td><td>An error occurred while trying to pause the audio CD.</td>
+  </tr>
+  <tr>
+    <th>32008</th>
+    <td>(CDAudio.ERR_UNABLE_TO_STOP)</td><td>-</td><td>An error occurred while trying to stop the audio CD.</td>
+  </tr>
+  <tr>
+    <th>32009</th>
+    <td>(CDAudio.ERR_INVALID_PLAYMODE)</td><td>-</td><td>Invalid PlayMode value.</td>
+  </tr>
+  <tr>
+    <th>32010</th>
+    <td>(CDAudio.ERR_UNABLE_TO_GET_TRACK)</td><td>-</td><td>An error occurred while trying to determine the current track.</td>
+  </tr>
+  <tr>
+    <th>32011</th>
+    <td>(CDAudio.ERR_UNABLE_TO_SET_TRACK)</td><td>-</td><td>An error occurred while trying to change the track.</td>
+  </tr>
+  <tr>
+    <th>32012</th>
+    <td>(CDAudio.ERR_VOLUME_OUT_OF_RANGE)</td><td>-</td><td>The specified volume is out of range.</td>
+  </tr>
+  <tr>
+    <th>32013</th>
+    <td>(CDAudio.ERR_UNABLE_TO_GET_VOLUME)</td><td>-</td><td>An error occurred while trying to get the audio CD volume.</td>
+  </tr>
+  <tr>
+    <th>32014</th>
+    <td>(CDAudio.ERR_UNABLE_TO_SET_VOLUME)</td><td>-</td><td>An error occurred while trying to set the audio CD volume.</td>
+  </tr>
+  <tr>
+    <th>32015</th>
+    <td>(CDAudio.ERR_UNABLE_TO_GET_CURRENT_POSITION)</td><td>-</td><td>An error occurred while trying to get the current audio CD track position.</td>
+  </tr>
+  <tr>
+    <th>32016</th>
+    <td>(CDAudio.ERR_UNABLE_TO_SEEK)</td><td>-</td><td>An error occurred while trying to perform a seek on the current audio CD track.</td>
+  </tr>
+  <tr>
+    <th>32017</th>
+    <td>(CDAudio.ERR_SEEK_TIME_OUT_OF_RANGE)</td><td>-</td><td>The specified seek time is out of range for the current audio CD track.</td>
+  </tr>
+  <tr>
+    <th>32018</th>
+    <td>(CDAudio.ERR_UNABLE_TO_GET_TRACK_LENGTH)</td><td>-</td><td>An error occurred while trying to get the length of an audio CD track.</td>
+  </tr>
+</table>
+
+</div> <!-- /ErrorCodes -->
+
+<div class="History">
+<h2>Change Log</h2>
+
+<h3>2.0.0.0</h3>
+<ul>
+	<li>Updated to version 2.0 of the plugin SDK.</li>
+</ul>
+
+<h3>1.0.2.0</h3>
+<ul>
+	<li>Made it so that the CD-Audio library was not initialized at design-time. Instead the library will be initialized the first time you use it at run-time.</li>
+</ul>
+
+<h3>1.0.1.0</h3>
+<ul>
+	<li>Updated version resource information.</li>
+</ul>
+
+<h3>1.0.0.1</h3>
+<ul>
+	<li>F1 help now works if you have Mozilla Firefox installed.</li>
+</ul>
+
+<h3>1.0.0.0</h3>
+<ul>
+	<li>Initial release</li>
+</ul>
+</div> <!-- /History -->
+
+<div class="Info">
+<h2>Additional Information</h2>
+
+<h3>Author:</h3><p>Indigo Rose Corporation<br>
+<a href="http://support.indigorose.com">support.indigorose.com</a></p>
+<h3>Copyright:</h3><p>CD Audio Actions Plugin is copyright © 2003-2015 Indigo Rose Software Design Corporation.<br>
+FMOD sound and music system is copyright © Firelight Technologies, Pty Ltd. 2001-2015.</p>
+<h3>Website:</h3><p><a href="http://www.indigorose.com">http://www.indigorose.com</a></p>
+
+</div> <!-- /info -->
+<hr>
+
+<p align="center">Copyright © 2015 Indigo Rose Software Design Corporation.<br>
+All Rights Reserved.</p>
+
+</body>
+</html>

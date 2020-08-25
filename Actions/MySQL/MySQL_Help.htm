@@ -1,0 +1,551 @@
+<!doctype HTML public "-//W3C//DTD HTML 4.0 Frameset//EN">
+
+<html>
+<head>
+<title>MySQL Actions Plugin Help</title>
+
+<meta http-equiv=content-type content="text/html; charset=windows-1252">
+
+<style>
+/* ELEMENTS */
+body {
+  font-family: Verdana, sans-serif;
+  font-size: 8pt;
+  background-color: #ffffff;
+}
+
+hr {
+  text-align: center;
+  color: #f0f0f0;
+  width: 100%;
+  height: 6pt;
+  margin-top: 0pt;
+  margin-bottom: -3pt;
+  border: none;
+}
+
+A:link, A:active, A:visited {
+  color: #0000ff;
+  text-decoration: none;
+}
+
+A:hover {
+  color: #0000ff;
+  text-decoration: underline;
+}
+
+h1 {
+  font-family: Verdana;
+  font-weight: bold;
+  font-size: 18.0pt;
+  white-space: nowrap;
+  color: #fff;
+  background-color: #699BEF;
+  padding: 4pt 3pt;
+  padding: 5px 4px;
+  margin-top: 0pt;
+  margin-bottom: 0pt;
+  border-right: 1px solid #333;
+  border-left: 1px solid #699BEF;
+  border-bottom: solid black 1px;
+}
+
+h2 {
+  font-family: Arial, sans-serif;
+  font-size: 12.0pt;
+  letter-spacing: .2ex;
+  color: #000;
+  margin-left: 0pt;
+  margin-right: 0pt;
+  margin-top: 18pt;
+  margin-bottom: 9pt;
+}
+
+h3 {
+  font-family: Arial, sans-serif;
+  font-size: 10pt;
+  font-weight: bold;
+  font-style: normal;
+  color: black;
+  letter-spacing: 0px;
+  margin-left: 0pt;
+  margin-right: 0pt;
+  margin-top: 18pt;
+  margin-bottom: 3pt;
+}
+
+p {
+  font-family: Verdana;
+  font-size: 8.0pt;
+  line-height: 12.0pt;
+  margin-left: 0pt;
+  margin-right: 0pt;
+  margin-top: 0pt;
+  margin-bottom: 9pt;
+}
+
+/* CLASSES */
+div.Actions h3, div.Events h3 {
+  font-family: Arial, sans-serif;
+  font-size: 10pt;
+  font-weight: bold;
+  font-style: italic;
+  color: #3C77B3;
+  letter-spacing: 0px;
+  margin-left: 12pt;
+  margin-right: 0pt;
+  margin-top: 18pt;
+  margin-bottom: 3pt;
+}
+
+div.Actions h4, div.info h3 {
+  font-family: Verdana;
+  font-size: 8.0pt;
+  line-height: 12.0pt;
+  font-style: bold;
+  margin-top: 9pt;
+  margin-bottom: 0pt;
+  margin-left: 28pt;
+  margin-right: 0pt;
+}
+
+div.Actions p, div.Events p, div.ErrorCodes p {
+  font-family: Verdana;
+  font-size: 8.0pt;
+  line-height: 12.0pt;
+  margin-top: 0pt;
+  margin-bottom: 9pt;
+  margin-left: 28pt;
+  margin-right: 0pt;
+}
+
+p.NavLocal {
+  white-space: nowrap;
+  text-indent: -4px;
+  font-family: Verdana, Arial, sans-serif;
+  font-weight: bold;
+  font-style: normal;
+  font-size: 13px;
+  background-color: #e4e4e4;
+  margin-top: 0px;
+  margin-bottom: 12pt;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 0px;
+  padding-right: 0px;
+  border-bottom: 1px solid #e4e4e4;
+}
+
+p.Note {
+    font-family: Verdana;
+    font-size: 8.0pt;
+    line-height: 12.0pt;
+    color: #000000;
+    background-color: #ffffe8;
+    margin-top: 0pt;
+    margin-bottom: 9pt;
+    margin-left: 0pt;
+    margin-right: 5%;
+    padding-left: 2pt;
+    padding-right: 2pt;
+    padding-top: 1pt;
+    padding-bottom: 2pt;
+}
+
+p.Tip {
+    font-family: Verdana;
+    font-size: 8.0pt;
+    line-height: 12.0pt;
+    color: #000000;
+    background-color: #EAF4E8;
+    margin-top: 0pt;
+    margin-bottom: 9pt;
+    margin-left: 0pt;
+    margin-right: 5%;
+    padding-left: 2pt;
+    padding-right: 2pt;
+    padding-top: 1pt;
+    padding-bottom: 2pt;
+}
+
+div.Actions p.Note, div.Events p.Note,
+div.Actions p.Tip, div.Events p.Tip {
+    margin-left: 28pt;
+}
+
+pre.code {
+  white-space: pre;
+  font-family: Courier New, Courier, Arial, sans-serif;
+  font-size: 10pt;
+  font-weight: normal;
+  font-style: normal;
+  letter-spacing: normal;
+  color: #000;
+  background-color: #f9f9f9;
+  margin-top: 3pt;
+  margin-bottom: 9pt;
+  margin-left: 0pt;
+  margin-left: 0pt;
+  padding: 10px;
+  border: 1px dotted #ccc;
+}
+
+div.Actions pre.code, div.Events pre.code {
+  margin-left: 28pt;
+}
+
+div.Actions h2 {
+  margin-bottom: -6pt;
+}
+
+div.actions p, div.info p, div.ErrorCodes p {
+  margin-left: 28pt;
+}
+
+div.actions p.indent {
+  margin-left: 38pt;
+}
+
+span.here { /* blue tab effect in navbar (NavLocal) */
+  font-weight: bold;
+  color: #fff;
+  background-color: #699BEF;
+  margin: 0px;
+  padding: 4px 8px;
+  border-top: 1px solid #699BEF;
+  border-bottom: 1px solid #333;
+  border-left: none;
+  border-right: 1px solid #333;
+}
+
+span.type {
+    color: #aaa;
+}
+
+.remark {
+    color:#FF0000;
+    font-weight: bold;
+    font-style:normal;
+}
+
+.History {
+    font-family: "Trebuchet MS", Arial, sans-serif;
+    font-size: 12px;
+    color: black;
+    background-color: #eee8aa;
+    padding: 1px 0px 5px 15px;
+     width: 50%;
+}
+</style>
+</head>
+<body>
+
+<h1>MySQL Actions Plugin</h1>
+
+<p class="NavLocal"><span class=wab>&nbsp;</span><span class="here">Online Help</span></p>
+
+<h2>Description</h2>
+
+<p>
+MySQL Actions Plugin enables the connection to remote or local MySQL databases. This plugin is self-contained and does not require the MySQL client library (libmySQL.dll), or any other COM/database resource like LuaCOM, ADO and/or MySQL ODBC driver present on the target computer.</p>
+
+<div class="Actions">
+<h2>Actions</h2>
+
+<h3>MySQL.AutoCommit();</h3>
+<h4>Description:</h4>
+<p>Sets autocommit mode on if Mode is true, off if Mode is false.</p>
+<h4>Mode:</h4>
+<p><span class="type">(boolean)</span> The commit mode to set.</p>
+<h4>Returns:</h4>
+<p><span class="type">(number)</span> Zero if successful, nonzero if an error ocurred.</p>
+
+<h3>MySQL.Close();</h3>
+<h4>Description:</h4>
+<p>Terminates the connection and frees up resources. You can't run any queries once the connection to the database is closed.</p>
+<h4>Returns:</h4>
+<p><span class="type">(value)</span> 0 if success, 1 otherwise. You can use Application.GetLastError to
+determine whether this action failed, and why. Additionally, the function MySQL.GetError() can be used to retrieve a verbose error message. </p>
+<!--
+<h4>Example:</h4>
+<pre class="code">&nbsp;</pre>
+-->
+<h3>MySQL.Commit();</h3>
+<h4>Description:</h4>
+<p>Commits the current transaction.</p>
+<h4>Returns:</h4>
+<p><span class="type">(nothing)</span></p>
+
+<h3>MySQL.Connect(string Host, string Username, string Password, string Database, number Port);</h3>
+<h4>Description:</h4>
+<p>Connects to a MySQL database server.</p>
+<h4>Host:</h4>
+<p><span class="type">(string)</span> The host to connect to. This can be &quot;localhost&quot; or an ip address.</p>
+<h4>Usernam:</h4>
+<p><span class="type">(string)</span> Username to be used in the connection.</p>
+<h4>Password:</h4>
+<p><span class="type">(string)</span> The password of the user account.</p>
+<h4>Database:</h4>
+<p><span class="type">(string)</span> The name of the database to use for queries.</p>
+<h4>Port:</h4>
+<p><span class="type">(number)</span> The optional port number to connect. Can be left blank, so the default port (3306) will be used. </p>
+<h4>Returns:</h4>
+<p><span class="type">(value)</span> 0 if success, 1 otherwise. You can use Application.GetLastError to
+determine whether this action failed, and why.</p>
+<h4>Example:</h4>
+<pre class="code">
+result = MySQL.Connect("localhost", "root", "password", "database");
+if (result ~= 0) then
+    error = Application.GetLastError();
+    Dialog.Message("MySQL Actions Plugin", "Connection failed: (" .. MySQL.GetError() .. ")", MB_OK, MB_ICONSTOP);
+end
+</pre>
+
+<h3>MySQL.GetError();</h3>
+<h4>Description:</h4>
+<p>Returns the last error message from the MySQL database server.</p>
+<h4>Returns:</h4>
+<p><span class="type">(string)</span> The error message given by the MySQL server.</p>
+<h4>Example:</h4>
+<pre class="code">Dialog.Message(&quot;MySQL Actions Plugin&quot;, &quot;Query failed: (&quot; .. MySQL.GetError() .. &quot;)&quot;, MB_OK, MB_ICONSTOP);</pre>
+
+<h3>MySQL.GetFieldNames();</h3>
+<h4>Description:</h4>
+<p>Retrieves the names of the columns in the last recordset that was returned.</p>
+<h4>Returns:</h4>
+<p><span class="type">(table)</span> A table containing the names of the column headers, or nil if no records where returned. You can use Application.GetLastError to determine whether this action failed, and why.</p>
+<h4>Example:</h4>
+<pre class="code">
+header = MySQL.GetFieldNames();
+for col, text in header do
+    Grid.SetCellText("Grid1", 0, col-1, text, false); -- fill cells of first row with headers
+end
+</pre>
+<h3>MySQL.GetFields();</h3>
+<h4>Description:</h4>
+<p>Retrieves the number of columns in the last recordset that was returned.</p>
+<h4>Returns:</h4>
+<p><span class="type">(value)</span> The number of columns in the recordset. If the value returned is zero unexpectedly, you can use Application.GetLastError to determine whether this action failed, and why.</p>
+<h4>Example:</h4>
+<pre class="code">
+-- adjust grid to resultset size
+Grid.SetColumnCount("Grid1", MySQL.GetFields());
+</pre>
+
+
+<h3>MySQL.GetRows();</h3>
+<h4>Description:</h4>
+<p>Retrieves the number of rows in the last recordset that was returned.</p>
+<h4>Returns:</h4>
+<p><span class="type">(number)</span> The number of rows in the recordset. If the value returned is zero unexpectedly, you can use Application.GetLastError to determine whether this action failed, and why.</p>
+<h4>Example:</h4>
+<pre class="code">
+-- adjust grid to resultset size
+Grid.SetRowCount("Grid1", MySQL.GetRows()+1); -- reserve first line for column headers
+</pre>
+
+<h3>MySQL.GetServerInfo();</h3>
+<h4>Description:</h4>
+<p>Retrieves the server version info.</p>
+<h4>Returns:</h4>
+<p><span class="type">(string)</span> A string that represents the server version number, or nil in case of an error. You can use Application.GetLastError to determine whether this action failed, and why.</p>
+<h4>Example:</h4>
+<pre class="code">
+-- display MySQL server version
+Dialog.Message("MySQL Actions Plugin", "This server is running " .. MySQL.GetServerInfo(), MB_OK, MB_ICONINFORMATION);
+</pre>
+
+
+<h3>MySQL.Ping();</h3>
+<h4>Description:</h4>
+<p>Checks if a connection to a MySQL server is alive, and that the server is able to execute commands. This command may cause a reconnection.</p>
+<h4>Returns:</h4>
+<p><span class="type">(number)</span> 0 if success, 1 otherwise. You can use Application.GetLastError to
+determine whether this action failed, and why.</p>
+<h4>Example:</h4>
+<pre class="code">
+if (MySQL.Ping() ~= 0) then
+    Dialog.Message("MySQL Actions Plugin", "MySQL server is not responding", MB_OK);
+end
+</pre>
+
+<h3>MySQL.Query(string Query);</h3>
+<h4>Description:</h4>
+<p>Sends a query to a connected database. Should be used when no resultset is returned (UPDATE, DELETE and INSERT statements).</p>
+<h4>Query:</h4>
+<p><span class="type">(string)</span> The query to be run on the database.</p>
+<h4>Returns:</h4>
+<p><span class="type">(number)</span> Number of rows affected by the command, or -1 in case of an error. You can use Application.GetLastError to determine whether this action failed, and why. Additionally, the function MySQL.GetError() can be used to retrieve a verbose error message if the query fails.</p>
+<h4>Example:</h4>
+<pre class="code">
+res = MySQL.Query("DELETE FROM client WHERE id = 666");
+</pre>
+
+<h3>MySQL.QueryToTable(string Query, boolean convertBinary=true);</h3>
+<h4>Description:</h4>
+<p>Sends a query to a connected database. The whole resultset will be returned completely, as a table. The first row will contain the column names, which may be used as headers for the grid. (Should be used with SELECT statements.)</p>
+<h4>Query:</h4>
+<p><span class="type">(string)</span> The query to be run on the database.</p>
+<h4>convertBinary:</h4>
+<p><span class="type">(boolean)</span> Optional argument, set to false if you don't wish to convert binary fields to base64 automatically.</p>
+
+<h4>Returns:</h4>
+<p><span class="type">(table)</span> A table containing the result, or nil if no records where returned. Each element of the table is a single record, and each element is a table by itself, containing the columns. A resultset containing two records with five columns each would create a table[2][5]. You can use Application.GetLastError to determine whether this action failed, and why. Additionally, the function MySQL.GetError() can be used to retrieve a verbose error message if the query fails.</p>
+<h4>Note:</h4>
+<p>Binary fields are returned as Base64-encoded strings, unless you set convertBinary to false. Both BLOB and TEXT fields hold binary data. From the <a href="http://dev.mysql.com/doc/refman/5.0/en/blob.html" target="www">MySQL manual</a>:</p>
+<blockquote>
+  <p><em>&quot;A BLOB is a binary large object that can hold a variable amount of data. The four BLOB types are TINYBLOB, BLOB, MEDIUMBLOB, and LONGBLOB. These differ only in the maximum length of the values they can hold. The four TEXT types are TINYTEXT, TEXT, MEDIUMTEXT, and LONGTEXT. These correspond to the four BLOB types and have the same maximum lengths and storage requirements.&quot;</em></p>
+</blockquote>
+<p>If you need to return binary data, you can recover the original data using Crypto.Base64DecodeFromString(field). A BLOB or a TEXT field will always be binary, it does not matter if you store an image in the field or a text file. Of course, if you just want to store text, a VARCHAR would probably make more sense, unless you need larger storage. </p>
+<h4>Example:</h4>
+<pre class="code">
+resultset = MySQL.QueryToTable("SELECT id, name, address FROM client");
+error = Application.GetLastError();
+if (error ~= 0) then
+    Dialog.Message("MySQL Actions Plugin", "Query failed: (" .. MySQL.GetError() .. ")", MB_OK, MB_ICONSTOP);
+else
+    -- adjust grid to resultset size
+    Grid.SetColumnCount("Grid1", MySQL.GetFields());
+    Grid.SetRowCount("Grid1", MySQL.GetRows()+1); -- reserve one extra line for the column header
+
+    -- show headers
+    header = MySQL.GetFieldNames();
+    for j,celltext in header do
+        Grid.SetCellText("Grid1", 0, j-1, celltext, false);
+    end
+
+    -- show resultset in grid
+    for i,row in resultset do
+        for j,celltext in row do
+            Grid.SetCellText("Grid1", i, j-1, celltext, false);
+        end
+    end
+
+    -- now display the data in the grid
+    Grid.Refresh("Grid1");
+end
+</pre>
+
+<h3>MySQL.RealEscapeString(string fromString);</h3>
+<h4>Description:</h4>
+<p>This function is used to create a legal SQL string that you can use in an SQL statement. The string in fromString is transformed into an escaped SQL string, taking into account the current character set of the connection (see MySQL.SetCharacterSet()).</p>
+<h4>fromString:</h4>
+<p><span class="type">(string)</span> The string to be escaped.</p>
+<h4>Returns:</h4>
+<p><span class="type">(string)</span> The encoded string, using the current character set. In caso of an error, an empty string is returned. You can use Application.GetLastError to determine whether this action failed, and why.</p>
+<h4>Example:</h4>
+<pre class="code">
+res = MySQL.RealEscapeString("Cote d'Ivoire");
+-- res will now contain "Cote d\'Ivoire"
+</pre>
+
+<h3>MySQL.Rollback();</h3>
+<h4>Description:</h4>
+<p>Rolls back the current transaction.</p>
+<h4>Returns:</h4>
+<p><span class="type">(number)</span> Zero if successful, nonzero if an error ocurred.</p>
+<!--
+<h4>Example:</h4>
+<pre class="code">
+-- display MySQL server version
+Dialog.Message("MySQL Actions Plugin", "This server is running " .. MySQL.GetServerInfo(), MB_OK, MB_ICONINFORMATION);
+</pre>
+-->
+<h3>MySQL.SetCharacterSet(string Charset);</h3>
+<h4>Description:</h4>
+<p>This function is used to set the default character set for the current connection.</p>
+<h4>Charset:</h4>
+<p><span class="type">(string)</span> The character set to be used.</p>
+<h4>Returns:</h4>
+<p><span class="type">(number)</span> Zero if successful, nonzero if an error ocurred. You can use Application.GetLastError to determine whether this action failed, and why.</p>
+<h4>Example:</h4>
+<pre class="code">
+res = MySQL.SetCharacterSet("utf8");
+</pre>
+
+<h3>MySQL.Status();</h3>
+<h4>Description:</h4>
+<p>Returns a character string containing information similar to that provided by the mysqladmin status command. This includes uptime in seconds and the number of running threads, questions, reloads, and open tables.</p>
+<h4>Returns:</h4>
+<p><span class="type">(string)</span> A string that represents the server status information.</p>
+<h4>Example:</h4>
+<pre class="code">
+-- display MySQL server status info
+Dialog.Message("MySQL Actions Plugin", "Server status: " .. MySQL.Status(), MB_OK, MB_ICONINFORMATION);
+</pre>
+
+</div>
+<!-- /Actions -->
+
+
+<div class="ErrorCodes">
+<h2>Error Codes</h2>
+<p>
+<b>12060</b> - MySQL initialization failed.<br>
+<b>12061</b> - Could not connect to MySQL server.<br>
+<b>12062</b> - Not connected to MySQL server.<br>
+<b>12063</b> - Failed to execute query successfully.<br>
+<b>12064</b> - No results available to be queried.<br>
+<b>12065</b> - Failed to determine base64 buffer size.<br>
+<b>12066</b> - Failed to convert binary data to base64 string.<br>
+<b>12067</b> - Could not set character set"<br>
+<b>12068</b> - Could not escape source string"<br>
+</p>
+
+</div> <!-- /ErrorCodes -->
+
+<div class="History">
+<h2>Change Log</h2>
+<h3>2.0.1.0</h3>
+<ul>
+    <li>Plugin ported to <strong>Lua 5.1</strong> for AutoPlay Media Studio 8.0</li>
+</ul>
+<h3>1.0.4.0</h3>
+<ul>
+    <li>New function: <strong>MySQL.SetCharacterSet()</strong></li>
+    <li>New function: <strong>MySQL.RealEscapeString()</strong></li>
+    <li>Enhancement: <strong>MySQL.QueryToTable()</strong> allows to return binary fields unencoded</li>
+</ul>
+
+<h3>1.0.3.0</h3>
+<ul>
+    <li><strong>MySQL.QueryToTable()</strong> now returns binary fields as Base64-encoded strings</li>
+</ul>
+
+<h3>1.0.2.0</h3>
+<ul>
+    <li>New functions: <strong>MySQL.Query()</strong>, <strong>MySQL.GetServerInfo()</strong>, <strong>MySQL.AutoCommit()</strong>, <strong>MySQL.Commit()</strong>, <strong>MySQL.Rollback()</strong> and <strong>MySQL.Status()</strong></li>
+</ul>
+
+<h3>1.0.1.0</h3>
+<ul>
+    <li>Bug fix: Correction for query without reply</li>
+</ul>
+<h3>1.0.0.0</h3>
+<ul>
+    <li>Initial release</li>
+</ul>
+</div> <!-- /History -->
+
+
+<div class="Info">
+<h2>Additional Information</h2>
+
+<h3>Author:</h3>
+<p>Ulrich Peters <br>
+<a href="mailto:upeters@mindquake.com.br">upeters@mindquake.com.br</a></p>
+
+<h3>Copyright:</h3>
+<p>Plugin is copyright &copy; 2009 MindQuake Servi&ccedil;os de Inform&aacute;tica Ltda.</p>
+
+<h3>Website:</h3>
+<p><a href="http://www.mindquake.com.br">http://www.mindquake.com.br</a></p>
+
+</div> <!-- /info -->
+<hr>
+
+<p align="center">Copyright &copy; 2009-2010 MindQuake Servi&ccedil;os de Inform&aacute;tica Ltda.<br>
+All Rights Reserved.</p>
+
+</body>
+</html>

@@ -1,0 +1,978 @@
+<html>
+<head>
+<title>PDFOut</title>
+<style>
+
+
+	body {
+	  font-family: Verdana, sans-serif;
+	  font-size: 8pt;
+	  background-color: #ffffff;
+	}
+	  
+	body {
+	  font-family: Verdana, sans-serif;
+	  font-size: 8pt;
+	  background-color: #ffffff;
+	}
+	
+	hr {
+	  text-align: center;
+	  color: #f0f0f0;
+	  width: 100%;
+	  height: 6pt;
+	  margin-top: 0pt;
+	  margin-bottom: -3pt;
+	  border: none;
+	}
+	
+	A:link, A:active, A:visited {
+	  color: #0000ff;
+	  text-decoration: none;
+	}
+	
+	A:hover {
+	  color: #0000ff;
+	  text-decoration: underline;
+	}
+	
+	h1 {
+	  font-family: Verdana;
+	  font-weight: bold;
+	  font-size: 18.0pt;
+	  white-space: nowrap;
+	  color: #fff;
+	  background-color: #699BEF;
+	  padding: 4pt 3pt;
+	  padding: 5px 4px;
+	  margin-top: 0pt;
+	  margin-bottom: 0pt;
+	  border-right: 1px solid #333;
+	  border-left: 1px solid #699BEF;
+	  border-bottom: solid black 1px;
+	}
+	
+	h2 {
+	  font-family: Arial, sans-serif;
+	  font-size: 12.0pt;
+	  letter-spacing: .2ex;
+	  color: #000;
+	  margin-left: 0pt;
+	  margin-right: 0pt;
+	  margin-top: 18pt;
+	  margin-bottom: 9pt;
+	}
+	
+	h2.H2Tight {
+		margin-bottom: -6pt;
+	}
+	
+	h3 {
+	  font-family: Arial, sans-serif;
+	  font-size: 10pt;
+	  font-weight: bold;
+	  font-style: normal;
+	  color: black;
+	  letter-spacing: 0px;
+	  margin-left: 0pt;
+	  margin-right: 0pt;
+	  margin-top: 18pt;
+	  margin-bottom: 3pt;
+	}
+	
+	h3.ParameterHeading {
+		font-family: Arial, sans-serif;
+		margin-left: 12pt;
+		margin-right: 0pt;
+		margin-top: 18pt;
+		margin-bottom: 3pt;
+		font-size: 9pt;
+		font-weight: bold;
+		font-style: italic;
+		letter-spacing: .2ex;
+		color: #3C77B3;
+		x-next-class: ParameterBody;
+		x-next-type: p;
+	}
+	
+	p {
+	  font-family: Verdana;
+	  font-size: 8.0pt;
+	  line-height: 12.0pt;
+	  margin-left: 0pt;
+	  margin-right: 0pt;
+	  margin-top: 0pt;
+	  margin-bottom: 9pt;
+	}
+	  
+	p.NavLocal {
+	  white-space: nowrap;
+	  text-indent: -4px;
+	  font-family: Verdana, Arial, sans-serif;
+	  font-weight: bold;
+	  font-style: normal;
+	  font-size: 13px;
+	  background-color: #e4e4e4;
+	  margin-top: 0px;
+	  margin-bottom: 12pt;
+	  padding-top: 4px;
+	  padding-bottom: 4px;
+	  padding-left: 0px;
+	  padding-right: 0px;
+	
+	  border-bottom: 1px solid #e4e4e4;
+	}
+	  
+	p.ParameterBody {
+		margin-left: 12pt;
+		x-next-class: ParameterHeading;
+		x-next-type: h3;
+	}
+	  
+	div.Actions p, div.Properties p, div.Events p, div.ErrorCodes p {
+	  font-family: Verdana;
+	  font-size: 8.0pt;
+	  line-height: 12.0pt;
+	  margin-top: 0pt;
+	  margin-bottom: 9pt;
+	  margin-left: 12pt;
+	  margin-right: 0pt;
+	}
+	
+	div.Declaration table p {
+		white-space: nowrap;
+		line-height: normal;
+		x-text-tab-stops: repeat 1in;
+		font-family: "Courier New", Courier, monospace;
+		font-size: 10.0pt;
+		background-color: #eee;
+		color: #000000;
+		margin-left: 0px;
+		margin-right: 0px;
+		margin-top: 0px;
+		margin-bottom: 0px;
+		padding: 0pt;
+		border-style: none;
+	}
+	
+	div.Declaration {
+		white-space: nowrap;
+		line-height: normal;
+		x-text-tab-stops: repeat 1in;
+		font-family: "Courier New", Courier, monospace;
+		font-size: 9.0pt;
+		background-color: #eee;
+		color: #000000;
+		width: 100%;
+		margin-left: 0px;
+		margin-right: 0px;
+		margin-top: 0pt;
+		margin-bottom: 9pt;
+		padding: 2pt;
+		border-top: #c0c0c0 1px solid;
+		border-right: #c0c0c0 1px solid;
+		border-left: #c0c0c0 1px solid;
+		border-bottom: #c0c0c0 1px solid;
+	}
+	
+	span.VarType {
+		font-family: "Courier New", monospace;
+		font-size: 9pt;
+		font-style: italic;
+		color: #abd;
+	}
+	
+	span.type {
+		color: #aaa;
+	}
+	
+	span.wab {
+		font-family: Verdana;
+		font-size: 13px;
+		padding: 0px 0px;
+		margin: 0px;
+		border: none;
+		visibility: hidden;
+	}
+
+	span.DefaultValue {
+		white-space: nowrap;
+		font-family: "Courier New", monospace;
+		font-size: 9pt;
+		color: #aaa;
+	}
+	
+	</style>
+</head>
+<body>
+<h1>PDFOut Help File</h1>
+<p class="NavLocal"><span class=wab>&nbsp;</span><span class="here">Welcome</span></p>
+<hr><div class="Properties">
+<h2>Table of Contents</h2>
+<p><blockquote>
+<A href="#PDFOut.AddPage"><b>PDFOut.AddPage</b></A>
+<br>
+<A href="#PDFOut.DisplayPreferences"><b>PDFOut.DisplayPreferences</b></A>
+<br>
+<A href="#PDFOut.DrawCircle"><b>PDFOut.DrawCircle</b></A>
+<br>
+<A href="#PDFOut.DrawEllipse"><b>PDFOut.DrawEllipse</b></A>
+<br>
+<A href="#PDFOut.DrawLine"><b>PDFOut.DrawLine</b></A>
+<br>
+<A href="#PDFOut.DrawRectangle"><b>PDFOut.DrawRectangle</b></A>
+<br>
+<A href="#PDFOut.PrintImage"><b>PDFOut.PrintImage</b></A>
+<br>
+<A href="#PDFOut.PrintText"><b>PDFOut.PrintText</b></A>
+<br>
+<A href="#PDFOut.PrintAligned"><b>PDFOut.PrintAligned</b></A>
+<br>
+<A href="#PDFOut.PrintTextRotated"><b>PDFOut.PrintTextRotated</b></A>
+<br>
+<A href="#PDFOut.SetDisplayMode"><b>PDFOut.SetDisplayMode</b></A>
+<br>
+<A href="#PDFOut.SetFont"><b>PDFOut.SetFont</b></A>
+<br>
+<A href="#PDFOut.SetFontColor"><b>PDFOut.SetFontColor</b></A>
+<br>
+<A href="#PDFOut.SetMargins"><b>PDFOut.SetMargins</b></A>
+<br>
+<A href="#PDFOut.SetUnits"><b>PDFOut.SetUnits</b></A>
+<br>
+<A href="#PDFOut.SetXY"><b>PDFOut.SetXY</b></A>
+<br>
+<A href="#PDFOut.WritePDF"><b>PDFOut.WritePDF</b></A>
+<br>
+<A href="#PDFOut.WriteText"><b>PDFOut.WriteText</b></A>
+<br>
+</blockquote></p></div>
+<h1><A name="PDFOut.AddPage">PDFOut.AddPage</A></h1><br>
+<div class=Declaration>
+<div align=left>
+<table x-use-null-cells
+	style="float: alignleft;
+	x-cell-content-align: Top;
+	border-spacing: 0px;
+	border-spacing: 0px;"
+	cellspacing=0>
+<col>
+<col>
+<tr style="x-cell-content-align: top;" valign=top>
+<td style="padding-right: 0px;
+	padding-left: 0px;
+	border-top-style: none;
+	border-bottom-style: none;
+	border-right-style: none;
+	border-left-style: none;">
+<p>PDFOut.AddPage ()</td>
+<td style="padding-right: 0px;
+	padding-left: 0px;
+	border-top-style: none;
+	border-right-style: none;
+	border-bottom-style: none;">
+</td></tr></table></div></div>
+<h2 style="margin-bottom: 3pt;">Description</h2>
+<p><blockquote>Add a new page</blockquote></p>
+<h2 class="H2Tight">Parameters</h2><h3 class="ParameterHeading">None</h3><br>
+<h2>Return</h2><blockquote><p>This action dose not return any value.<br><br></p></blockquote><br><hr><h1><A name="PDFOut.DisplayPreferences">PDFOut.DisplayPreferences</A></h1><br>
+<div class=Declaration>
+<div align=left>
+<table x-use-null-cells
+	style="float: alignleft;
+	x-cell-content-align: Top;
+	border-spacing: 0px;
+	border-spacing: 0px;"
+	cellspacing=0>
+<col>
+<col>
+<tr style="x-cell-content-align: top;" valign=top>
+<td style="padding-right: 0px;
+	padding-left: 0px;
+	border-top-style: none;
+	border-bottom-style: none;
+	border-right-style: none;
+	border-left-style: none;">
+<p>PDFOut.DisplayPreferences (&nbsp;</td>
+<td style="padding-right: 0px;
+	padding-left: 0px;
+	border-top-style: none;
+	border-right-style: none;
+	border-bottom-style: none;">
+<p><span class=VarType>(boolean)&nbsp;</span>Full Screen <span class=DefaultValue> = false</span>, </p>
+<p><span class=VarType>(boolean)&nbsp;</span>Hide Menu Bar <span class=DefaultValue> = false</span>, </p>
+<p><span class=VarType>(boolean)&nbsp;</span>Hide Toolbar <span class=DefaultValue> = false</span>, </p>
+<p><span class=VarType>(boolean)&nbsp;</span>Hide Window UI <span class=DefaultValue> = false</span>, </p>
+<p><span class=VarType>(boolean)&nbsp;</span>Display Doc Title <span class=DefaultValue> = false</span>, </p>
+<p><span class=VarType>(boolean)&nbsp;</span>Center Window <span class=DefaultValue> = false</span>, </p>
+<p><span class=VarType>(boolean)&nbsp;</span>Fit Window <span class=DefaultValue> = false</span> )</p>
+</td></tr></table></div></div>
+<h2 style="margin-bottom: 3pt;">Description</h2>
+<p><blockquote>Set display preferences</blockquote></p>
+<h2 class="H2Tight">Parameters</h2>
+<h3 class="ParameterHeading">Full Screen</h3>
+<p class="ParameterBody"><span class="type">(boolean)&nbsp;</span>displays the document full-screen (escape key to restore the normal view)</p>
+<h3 class="ParameterHeading">Hide Menu Bar</h3>
+<p class="ParameterBody"><span class="type">(boolean)&nbsp;</span>hides the menu</p>
+<h3 class="ParameterHeading">Hide Toolbar</h3>
+<p class="ParameterBody"><span class="type">(boolean)&nbsp;</span>hides all toolbars</p>
+<h3 class="ParameterHeading">Hide Window UI</h3>
+<p class="ParameterBody"><span class="type">(boolean)&nbsp;</span>hides all window elements (scrollbars, navigation controls, bookmarks...)</p>
+<h3 class="ParameterHeading">Display Doc Title</h3>
+<p class="ParameterBody"><span class="type">(boolean)&nbsp;</span>displays the document document title instead of the filename</p>
+<h3 class="ParameterHeading">Center Window</h3>
+<p class="ParameterBody"><span class="type">(boolean)&nbsp;</span>Centers the window, no effect on web plugin</p>
+<h3 class="ParameterHeading">Fit Window</h3>
+<p class="ParameterBody"><span class="type">(boolean)&nbsp;</span>sizes the window to fit the page</p>
+<br>
+<h2>Return</h2><blockquote><p>This action dose not return any value.<br><br></p></blockquote><br><hr><h1><A name="PDFOut.DrawCircle">PDFOut.DrawCircle</A></h1><br>
+<div class=Declaration>
+<div align=left>
+<table x-use-null-cells
+	style="float: alignleft;
+	x-cell-content-align: Top;
+	border-spacing: 0px;
+	border-spacing: 0px;"
+	cellspacing=0>
+<col>
+<col>
+<tr style="x-cell-content-align: top;" valign=top>
+<td style="padding-right: 0px;
+	padding-left: 0px;
+	border-top-style: none;
+	border-bottom-style: none;
+	border-right-style: none;
+	border-left-style: none;">
+<p>PDFOut.DrawCircle (&nbsp;</td>
+<td style="padding-right: 0px;
+	padding-left: 0px;
+	border-top-style: none;
+	border-right-style: none;
+	border-bottom-style: none;">
+<p><span class=VarType>(number)&nbsp;</span>X position, </p>
+<p><span class=VarType>(number)&nbsp;</span>Y position <span class=DefaultValue> = 0</span>, </p>
+<p><span class=VarType>(number)&nbsp;</span>Radius <span class=DefaultValue> = 0</span>, </p>
+<p><span class=VarType>(number)&nbsp;</span>Draw Width <span class=DefaultValue> = 0</span>, </p>
+<p><span class=VarType>(number)&nbsp;</span>Draw Color <span class=DefaultValue> = 0</span>, </p>
+<p><span class=VarType>(number)&nbsp;</span>Fill Color <span class=DefaultValue> = 0</span>, </p>
+<p><span class=VarType>(string)&nbsp;</span>Draw Style <span class=DefaultValue> = "DRAW"</span> )</p>
+</td></tr></table></div></div>
+<h2 style="margin-bottom: 3pt;">Description</h2>
+<p><blockquote>Draw a circle</blockquote></p>
+<h2 class="H2Tight">Parameters</h2>
+<h3 class="ParameterHeading">X position</h3>
+<p class="ParameterBody"><span class="type">(number)&nbsp;</span>The X position of the center of the circle in the unit of measure</p>
+<h3 class="ParameterHeading">Y position</h3>
+<p class="ParameterBody"><span class="type">(number)&nbsp;</span>The Y position of the center of the circle in unit of measure</p>
+<h3 class="ParameterHeading">Radius</h3>
+<p class="ParameterBody"><span class="type">(number)&nbsp;</span>The radius in the unit of measure.</p>
+<h3 class="ParameterHeading">Draw Width</h3>
+<p class="ParameterBody"><span class="type">(number)&nbsp;</span>The width of the drawing line in unit of measure</p>
+<h3 class="ParameterHeading">Draw Color</h3>
+<p class="ParameterBody"><span class="type">(number)&nbsp;</span>The color used to draw the rectangle.</p>
+<h3 class="ParameterHeading">Fill Color</h3>
+<p class="ParameterBody"><span class="type">(number)&nbsp;</span>The color used to fill the rectangle.</p>
+<h3 class="ParameterHeading">Draw Style</h3>
+<p class="ParameterBody"><span class="type">(string)&nbsp;</span>The style used to draw the rectangle.</p>
+<br>
+<h2>Return</h2><blockquote><p>This action dose not return any value.<br><br></p></blockquote><br><hr><h1><A name="PDFOut.DrawEllipse">PDFOut.DrawEllipse</A></h1><br>
+<div class=Declaration>
+<div align=left>
+<table x-use-null-cells
+	style="float: alignleft;
+	x-cell-content-align: Top;
+	border-spacing: 0px;
+	border-spacing: 0px;"
+	cellspacing=0>
+<col>
+<col>
+<tr style="x-cell-content-align: top;" valign=top>
+<td style="padding-right: 0px;
+	padding-left: 0px;
+	border-top-style: none;
+	border-bottom-style: none;
+	border-right-style: none;
+	border-left-style: none;">
+<p>PDFOut.DrawEllipse (&nbsp;</td>
+<td style="padding-right: 0px;
+	padding-left: 0px;
+	border-top-style: none;
+	border-right-style: none;
+	border-bottom-style: none;">
+<p><span class=VarType>(number)&nbsp;</span>X position, </p>
+<p><span class=VarType>(number)&nbsp;</span>Y position <span class=DefaultValue> = 0</span>, </p>
+<p><span class=VarType>(number)&nbsp;</span>Radius X <span class=DefaultValue> = 0</span>, </p>
+<p><span class=VarType>(number)&nbsp;</span>Radius Y <span class=DefaultValue> = 0</span>, </p>
+<p><span class=VarType>(number)&nbsp;</span>Draw Width <span class=DefaultValue> = 0</span>, </p>
+<p><span class=VarType>(number)&nbsp;</span>Draw Color <span class=DefaultValue> = 0</span>, </p>
+<p><span class=VarType>(number)&nbsp;</span>Fill Color <span class=DefaultValue> = 0</span>, </p>
+<p><span class=VarType>(string)&nbsp;</span>Draw Style <span class=DefaultValue> = "DRAW"</span> )</p>
+</td></tr></table></div></div>
+<h2 style="margin-bottom: 3pt;">Description</h2>
+<p><blockquote>Draw an ellipse</blockquote></p>
+<h2 class="H2Tight">Parameters</h2>
+<h3 class="ParameterHeading">X position</h3>
+<p class="ParameterBody"><span class="type">(number)&nbsp;</span>The X position that is the center of the ellipse in the unit of measure</p>
+<h3 class="ParameterHeading">Y position</h3>
+<p class="ParameterBody"><span class="type">(number)&nbsp;</span>The Y position that is the center of the ellipse in the unit of measure</p>
+<h3 class="ParameterHeading">Radius X</h3>
+<p class="ParameterBody"><span class="type">(number)&nbsp;</span>The radius on the X axis in the unit of measure.</p>
+<h3 class="ParameterHeading">Radius Y</h3>
+<p class="ParameterBody"><span class="type">(number)&nbsp;</span>The radius on the Y axis in unit of measure</p>
+<h3 class="ParameterHeading">Draw Width</h3>
+<p class="ParameterBody"><span class="type">(number)&nbsp;</span>The width of the drawing line in unit of measure</p>
+<h3 class="ParameterHeading">Draw Color</h3>
+<p class="ParameterBody"><span class="type">(number)&nbsp;</span>The color used to draw the rectangle.</p>
+<h3 class="ParameterHeading">Fill Color</h3>
+<p class="ParameterBody"><span class="type">(number)&nbsp;</span>The color used to fill the rectangle.</p>
+<h3 class="ParameterHeading">Draw Style</h3>
+<p class="ParameterBody"><span class="type">(string)&nbsp;</span>The style used to draw the rectangle.</p>
+<br>
+<h2>Return</h2><blockquote><p>This action dose not return any value.<br><br></p></blockquote><br><hr><h1><A name="PDFOut.DrawLine">PDFOut.DrawLine</A></h1><br>
+<div class=Declaration>
+<div align=left>
+<table x-use-null-cells
+	style="float: alignleft;
+	x-cell-content-align: Top;
+	border-spacing: 0px;
+	border-spacing: 0px;"
+	cellspacing=0>
+<col>
+<col>
+<tr style="x-cell-content-align: top;" valign=top>
+<td style="padding-right: 0px;
+	padding-left: 0px;
+	border-top-style: none;
+	border-bottom-style: none;
+	border-right-style: none;
+	border-left-style: none;">
+<p>PDFOut.DrawLine (&nbsp;</td>
+<td style="padding-right: 0px;
+	padding-left: 0px;
+	border-top-style: none;
+	border-right-style: none;
+	border-bottom-style: none;">
+<p><span class=VarType>(number)&nbsp;</span>X position, </p>
+<p><span class=VarType>(number)&nbsp;</span>Y position <span class=DefaultValue> = 0</span>, </p>
+<p><span class=VarType>(number)&nbsp;</span>X2 Position <span class=DefaultValue> = 0</span>, </p>
+<p><span class=VarType>(number)&nbsp;</span>Y2 <span class=DefaultValue> = 0</span>, </p>
+<p><span class=VarType>(number)&nbsp;</span>Draw Width <span class=DefaultValue> = 0</span>, </p>
+<p><span class=VarType>(number)&nbsp;</span>Draw Color <span class=DefaultValue> = 0</span> )</p>
+</td></tr></table></div></div>
+<h2 style="margin-bottom: 3pt;">Description</h2>
+<p><blockquote>Draw a line</blockquote></p>
+<h2 class="H2Tight">Parameters</h2>
+<h3 class="ParameterHeading">X position</h3>
+<p class="ParameterBody"><span class="type">(number)&nbsp;</span>The X position in the unit of measure</p>
+<h3 class="ParameterHeading">Y position</h3>
+<p class="ParameterBody"><span class="type">(number)&nbsp;</span>The Y position in unit of measure</p>
+<h3 class="ParameterHeading">X2 Position</h3>
+<p class="ParameterBody"><span class="type">(number)&nbsp;</span>The second X position in unit of measure</p>
+<h3 class="ParameterHeading">Y2</h3>
+<p class="ParameterBody"><span class="type">(number)&nbsp;</span>The second Y position in unit of measure</p>
+<h3 class="ParameterHeading">Draw Width</h3>
+<p class="ParameterBody"><span class="type">(number)&nbsp;</span>The width of the drawing line in unit of measure</p>
+<h3 class="ParameterHeading">Draw Color</h3>
+<p class="ParameterBody"><span class="type">(number)&nbsp;</span>The color used to draw the rectangle.</p>
+<br>
+<h2>Return</h2><blockquote><p>This action dose not return any value.<br><br></p></blockquote><br><hr><h1><A name="PDFOut.DrawRectangle">PDFOut.DrawRectangle</A></h1><br>
+<div class=Declaration>
+<div align=left>
+<table x-use-null-cells
+	style="float: alignleft;
+	x-cell-content-align: Top;
+	border-spacing: 0px;
+	border-spacing: 0px;"
+	cellspacing=0>
+<col>
+<col>
+<tr style="x-cell-content-align: top;" valign=top>
+<td style="padding-right: 0px;
+	padding-left: 0px;
+	border-top-style: none;
+	border-bottom-style: none;
+	border-right-style: none;
+	border-left-style: none;">
+<p>PDFOut.DrawRectangle (&nbsp;</td>
+<td style="padding-right: 0px;
+	padding-left: 0px;
+	border-top-style: none;
+	border-right-style: none;
+	border-bottom-style: none;">
+<p><span class=VarType>(number)&nbsp;</span>X position, </p>
+<p><span class=VarType>(number)&nbsp;</span>Y position <span class=DefaultValue> = 0</span>, </p>
+<p><span class=VarType>(number)&nbsp;</span>Width <span class=DefaultValue> = 0</span>, </p>
+<p><span class=VarType>(number)&nbsp;</span>Height <span class=DefaultValue> = 0</span>, </p>
+<p><span class=VarType>(number)&nbsp;</span>Draw Width <span class=DefaultValue> = 0</span>, </p>
+<p><span class=VarType>(number)&nbsp;</span>Draw Color <span class=DefaultValue> = 0</span>, </p>
+<p><span class=VarType>(number)&nbsp;</span>Fill Color <span class=DefaultValue> = 0</span>, </p>
+<p><span class=VarType>(string)&nbsp;</span>Draw Style <span class=DefaultValue> = "DRAW"</span> )</p>
+</td></tr></table></div></div>
+<h2 style="margin-bottom: 3pt;">Description</h2>
+<p><blockquote>Draw a rectangle</blockquote></p>
+<h2 class="H2Tight">Parameters</h2>
+<h3 class="ParameterHeading">X position</h3>
+<p class="ParameterBody"><span class="type">(number)&nbsp;</span>The X position in the unit of measure</p>
+<h3 class="ParameterHeading">Y position</h3>
+<p class="ParameterBody"><span class="type">(number)&nbsp;</span>The Y position in unit of measure</p>
+<h3 class="ParameterHeading">Width</h3>
+<p class="ParameterBody"><span class="type">(number)&nbsp;</span>The width in the unit of measure.  Set to 0 to have the image scaled to width.</p>
+<h3 class="ParameterHeading">Height</h3>
+<p class="ParameterBody"><span class="type">(number)&nbsp;</span>The height in unit of measure.  Set to 0 to have the image scaled to height.</p>
+<h3 class="ParameterHeading">Draw Width</h3>
+<p class="ParameterBody"><span class="type">(number)&nbsp;</span>The width of the drawing line in unit of measure</p>
+<h3 class="ParameterHeading">Draw Color</h3>
+<p class="ParameterBody"><span class="type">(number)&nbsp;</span>The color used to draw the rectangle.</p>
+<h3 class="ParameterHeading">Fill Color</h3>
+<p class="ParameterBody"><span class="type">(number)&nbsp;</span>The color used to fill the rectangle.</p>
+<h3 class="ParameterHeading">Draw Style</h3>
+<p class="ParameterBody"><span class="type">(string)&nbsp;</span>The style used to draw the rectangle.</p>
+<br>
+<h2>Return</h2><blockquote><p>This action dose not return any value.<br><br></p></blockquote><br><hr><h1><A name="PDFOut.PrintImage">PDFOut.PrintImage</A></h1><br>
+<div class=Declaration>
+<div align=left>
+<table x-use-null-cells
+	style="float: alignleft;
+	x-cell-content-align: Top;
+	border-spacing: 0px;
+	border-spacing: 0px;"
+	cellspacing=0>
+<col>
+<col>
+<tr style="x-cell-content-align: top;" valign=top>
+<td style="padding-right: 0px;
+	padding-left: 0px;
+	border-top-style: none;
+	border-bottom-style: none;
+	border-right-style: none;
+	border-left-style: none;">
+<p>PDFOut.PrintImage (&nbsp;</td>
+<td style="padding-right: 0px;
+	padding-left: 0px;
+	border-top-style: none;
+	border-right-style: none;
+	border-bottom-style: none;">
+<p><span class=VarType>(string)&nbsp;</span>Filename, </p>
+<p><span class=VarType>(number)&nbsp;</span>X position <span class=DefaultValue> = 0</span>, </p>
+<p><span class=VarType>(number)&nbsp;</span>Y position <span class=DefaultValue> = 0</span>, </p>
+<p><span class=VarType>(number)&nbsp;</span>Width <span class=DefaultValue> = 0</span>, </p>
+<p><span class=VarType>(number)&nbsp;</span>Height <span class=DefaultValue> = 0</span> )</p>
+</td></tr></table></div></div>
+<h2 style="margin-bottom: 3pt;">Description</h2>
+<p><blockquote>Print an image</blockquote></p>
+<h2 class="H2Tight">Parameters</h2>
+<h3 class="ParameterHeading">Filename</h3>
+<p class="ParameterBody"><span class="type">(string)&nbsp;</span>The path to a JPG or PNG to print at the given X, Y coordinate. Click the browse button to select a file.</p>
+<h3 class="ParameterHeading">X position</h3>
+<p class="ParameterBody"><span class="type">(number)&nbsp;</span>The X position in the unit of measure</p>
+<h3 class="ParameterHeading">Y position</h3>
+<p class="ParameterBody"><span class="type">(number)&nbsp;</span>The Y position in unit of measure</p>
+<h3 class="ParameterHeading">Width</h3>
+<p class="ParameterBody"><span class="type">(number)&nbsp;</span>The width in the unit of measure.  Set to 0 to have the image scaled to width.</p>
+<h3 class="ParameterHeading">Height</h3>
+<p class="ParameterBody"><span class="type">(number)&nbsp;</span>The height in unit of measure.  Set to 0 to have the image scaled to height.</p>
+<br>
+<h2>Return</h2><blockquote><p>This action dose not return any value.<br><br></p></blockquote><br><hr><h1><A name="PDFOut.PrintText">PDFOut.PrintText</A></h1><br>
+<div class=Declaration>
+<div align=left>
+<table x-use-null-cells
+	style="float: alignleft;
+	x-cell-content-align: Top;
+	border-spacing: 0px;
+	border-spacing: 0px;"
+	cellspacing=0>
+<col>
+<col>
+<tr style="x-cell-content-align: top;" valign=top>
+<td style="padding-right: 0px;
+	padding-left: 0px;
+	border-top-style: none;
+	border-bottom-style: none;
+	border-right-style: none;
+	border-left-style: none;">
+<p>PDFOut.PrintText (&nbsp;</td>
+<td style="padding-right: 0px;
+	padding-left: 0px;
+	border-top-style: none;
+	border-right-style: none;
+	border-bottom-style: none;">
+<p><span class=VarType>(string)&nbsp;</span>String to Print, </p>
+<p><span class=VarType>(number)&nbsp;</span>X position <span class=DefaultValue> = 0</span>, </p>
+<p><span class=VarType>(number)&nbsp;</span>Y position <span class=DefaultValue> = 0</span> )</p>
+</td></tr></table></div></div>
+<h2 style="margin-bottom: 3pt;">Description</h2>
+<p><blockquote>Print text at the given X, Y position</blockquote></p>
+<h2 class="H2Tight">Parameters</h2>
+<h3 class="ParameterHeading">String to Print</h3>
+<p class="ParameterBody"><span class="type">(string)&nbsp;</span>The String to print at the X, Y position</p>
+<h3 class="ParameterHeading">X position</h3>
+<p class="ParameterBody"><span class="type">(number)&nbsp;</span>The X position in the unit of measure</p>
+<h3 class="ParameterHeading">Y position</h3>
+<p class="ParameterBody"><span class="type">(number)&nbsp;</span>The Y position in unit of measure</p>
+<br>
+<h2>Return</h2><blockquote><p>This action dose not return any value.<br><br></p></blockquote><br><hr><h1><A name="PDFOut.PrintAligned">PDFOut.PrintAligned</A></h1><br>
+<div class=Declaration>
+<div align=left>
+<table x-use-null-cells
+	style="float: alignleft;
+	x-cell-content-align: Top;
+	border-spacing: 0px;
+	border-spacing: 0px;"
+	cellspacing=0>
+<col>
+<col>
+<tr style="x-cell-content-align: top;" valign=top>
+<td style="padding-right: 0px;
+	padding-left: 0px;
+	border-top-style: none;
+	border-bottom-style: none;
+	border-right-style: none;
+	border-left-style: none;">
+<p>PDFOut.PrintAligned (&nbsp;</td>
+<td style="padding-right: 0px;
+	padding-left: 0px;
+	border-top-style: none;
+	border-right-style: none;
+	border-bottom-style: none;">
+<p><span class=VarType>(string)&nbsp;</span>String to Print, </p>
+<p><span class=VarType>(number)&nbsp;</span>X position <span class=DefaultValue> = 0</span>, </p>
+<p><span class=VarType>(number)&nbsp;</span>Y position <span class=DefaultValue> = 0</span>, </p>
+<p><span class=VarType>(number)&nbsp;</span>Width <span class=DefaultValue> = 0</span>, </p>
+<p><span class=VarType>(number)&nbsp;</span>Height <span class=DefaultValue> = 0</span>, </p>
+<p><span class=VarType>(string)&nbsp;</span>Alignment <span class=DefaultValue> = "LEFT"</span> )</p>
+</td></tr></table></div></div>
+<h2 style="margin-bottom: 3pt;">Description</h2>
+<p><blockquote>Print text in a defined rectangular cell</blockquote></p>
+<h2 class="H2Tight">Parameters</h2>
+<h3 class="ParameterHeading">String to Print</h3>
+<p class="ParameterBody"><span class="type">(string)&nbsp;</span>The String to print</p>
+<h3 class="ParameterHeading">X position</h3>
+<p class="ParameterBody"><span class="type">(number)&nbsp;</span>The X position in the unit of measure</p>
+<h3 class="ParameterHeading">Y position</h3>
+<p class="ParameterBody"><span class="type">(number)&nbsp;</span>The Y position in unit of measure</p>
+<h3 class="ParameterHeading">Width</h3>
+<p class="ParameterBody"><span class="type">(number)&nbsp;</span>The width in the unit of measure</p>
+<h3 class="ParameterHeading">Height</h3>
+<p class="ParameterBody"><span class="type">(number)&nbsp;</span>The height in unit of measure</p>
+<h3 class="ParameterHeading">Alignment</h3>
+<p class="ParameterBody"><span class="type">(string)&nbsp;</span>The alignment of the text</p>
+<br>
+<h2>Return</h2><blockquote><p>This action dose not return any value.<br><br></p></blockquote><br><hr><h1><A name="PDFOut.PrintTextRotated">PDFOut.PrintTextRotated</A></h1><br>
+<div class=Declaration>
+<div align=left>
+<table x-use-null-cells
+	style="float: alignleft;
+	x-cell-content-align: Top;
+	border-spacing: 0px;
+	border-spacing: 0px;"
+	cellspacing=0>
+<col>
+<col>
+<tr style="x-cell-content-align: top;" valign=top>
+<td style="padding-right: 0px;
+	padding-left: 0px;
+	border-top-style: none;
+	border-bottom-style: none;
+	border-right-style: none;
+	border-left-style: none;">
+<p>PDFOut.PrintTextRotated (&nbsp;</td>
+<td style="padding-right: 0px;
+	padding-left: 0px;
+	border-top-style: none;
+	border-right-style: none;
+	border-bottom-style: none;">
+<p><span class=VarType>(string)&nbsp;</span>String to Print, </p>
+<p><span class=VarType>(number)&nbsp;</span>X position <span class=DefaultValue> = 0</span>, </p>
+<p><span class=VarType>(number)&nbsp;</span>Y position <span class=DefaultValue> = 0</span>, </p>
+<p><span class=VarType>(number)&nbsp;</span>Angle <span class=DefaultValue> = 0</span> )</p>
+</td></tr></table></div></div>
+<h2 style="margin-bottom: 3pt;">Description</h2>
+<p><blockquote>Print text at the given X, Y position</blockquote></p>
+<h2 class="H2Tight">Parameters</h2>
+<h3 class="ParameterHeading">String to Print</h3>
+<p class="ParameterBody"><span class="type">(string)&nbsp;</span>The String to print at the X, Y position</p>
+<h3 class="ParameterHeading">X position</h3>
+<p class="ParameterBody"><span class="type">(number)&nbsp;</span>The X position in the unit of measure</p>
+<h3 class="ParameterHeading">Y position</h3>
+<p class="ParameterBody"><span class="type">(number)&nbsp;</span>The Y position in unit of measure</p>
+<h3 class="ParameterHeading">Angle</h3>
+<p class="ParameterBody"><span class="type">(number)&nbsp;</span>The angle to rotate the text</p>
+<br>
+<h2>Return</h2><blockquote><p>This action dose not return any value.<br><br></p></blockquote><br><hr><h1><A name="PDFOut.SetDisplayMode">PDFOut.SetDisplayMode</A></h1><br>
+<div class=Declaration>
+<div align=left>
+<table x-use-null-cells
+	style="float: alignleft;
+	x-cell-content-align: Top;
+	border-spacing: 0px;
+	border-spacing: 0px;"
+	cellspacing=0>
+<col>
+<col>
+<tr style="x-cell-content-align: top;" valign=top>
+<td style="padding-right: 0px;
+	padding-left: 0px;
+	border-top-style: none;
+	border-bottom-style: none;
+	border-right-style: none;
+	border-left-style: none;">
+<p>PDFOut.SetDisplayMode (&nbsp;</td>
+<td style="padding-right: 0px;
+	padding-left: 0px;
+	border-top-style: none;
+	border-right-style: none;
+	border-bottom-style: none;">
+<p><span class=VarType>(String)&nbsp;</span>Zoom <span class=DefaultValue> = "PDF_ZOOM_FULLPAGE"</span>, </p>
+<p><span class=VarType>(String)&nbsp;</span>Layout <span class=DefaultValue> = "PDF_LAYOUT_CONTINUOUS"</span> )</p>
+</td></tr></table></div></div>
+<h2 style="margin-bottom: 3pt;">Description</h2>
+<p><blockquote>Defines the way the document is to be displayed to the viewer</blockquote></p>
+<h2 class="H2Tight">Parameters</h2>
+<h3 class="ParameterHeading">Zoom</h3>
+<p class="ParameterBody"><span class="type">(String)&nbsp;</span>the zoom to use</p>
+<h3 class="ParameterHeading">Layout</h3>
+<p class="ParameterBody"><span class="type">(String)&nbsp;</span>Page Layout</p>
+<br>
+<h2>Return</h2><blockquote><p>This action dose not return any value.<br><br></p></blockquote><br><hr><h1><A name="PDFOut.SetFont">PDFOut.SetFont</A></h1><br>
+<div class=Declaration>
+<div align=left>
+<table x-use-null-cells
+	style="float: alignleft;
+	x-cell-content-align: Top;
+	border-spacing: 0px;
+	border-spacing: 0px;"
+	cellspacing=0>
+<col>
+<col>
+<tr style="x-cell-content-align: top;" valign=top>
+<td style="padding-right: 0px;
+	padding-left: 0px;
+	border-top-style: none;
+	border-bottom-style: none;
+	border-right-style: none;
+	border-left-style: none;">
+<p>PDFOut.SetFont (&nbsp;</td>
+<td style="padding-right: 0px;
+	padding-left: 0px;
+	border-top-style: none;
+	border-right-style: none;
+	border-bottom-style: none;">
+<p><span class=VarType>(String)&nbsp;</span>Font Face <span class=DefaultValue> = "Arial"</span>, </p>
+<p><span class=VarType>(String)&nbsp;</span>Font Style <span class=DefaultValue> = "BIU"</span>, </p>
+<p><span class=VarType>(number)&nbsp;</span>Font Size <span class=DefaultValue> = 12</span> )</p>
+</td></tr></table></div></div>
+<h2 style="margin-bottom: 3pt;">Description</h2>
+<p><blockquote>Changes the font face, style, and size.</blockquote></p>
+<h2 class="H2Tight">Parameters</h2>
+<h3 class="ParameterHeading">Font Face</h3>
+<p class="ParameterBody"><span class="type">(String)&nbsp;</span>The name of the font.</p>
+<h3 class="ParameterHeading">Font Style</h3>
+<p class="ParameterBody"><span class="type">(String)&nbsp;</span>The style of the font Bold, Italics, Underlined or any comnination of (i.e. "BI" would be Bold Italics).</p>
+<h3 class="ParameterHeading">Font Size</h3>
+<p class="ParameterBody"><span class="type">(number)&nbsp;</span>The size of the font.</p>
+<br>
+<h2>Return</h2><blockquote><p>This action dose not return any value.<br><br></p></blockquote><br><hr><h1><A name="PDFOut.SetFontColor">PDFOut.SetFontColor</A></h1><br>
+<div class=Declaration>
+<div align=left>
+<table x-use-null-cells
+	style="float: alignleft;
+	x-cell-content-align: Top;
+	border-spacing: 0px;
+	border-spacing: 0px;"
+	cellspacing=0>
+<col>
+<col>
+<tr style="x-cell-content-align: top;" valign=top>
+<td style="padding-right: 0px;
+	padding-left: 0px;
+	border-top-style: none;
+	border-bottom-style: none;
+	border-right-style: none;
+	border-left-style: none;">
+<p>PDFOut.SetFontColor (&nbsp;</td>
+<td style="padding-right: 0px;
+	padding-left: 0px;
+	border-top-style: none;
+	border-right-style: none;
+	border-bottom-style: none;">
+<p><span class=VarType>(number)&nbsp;</span>Color <span class=DefaultValue> = 0</span> )</p>
+</td></tr></table></div></div>
+<h2 style="margin-bottom: 3pt;">Description</h2>
+<p><blockquote>Changes the font color.</blockquote></p>
+<h2 class="H2Tight">Parameters</h2>
+<h3 class="ParameterHeading">Color</h3>
+<p class="ParameterBody"><span class="type">(number)&nbsp;</span>The new font color.</p>
+<br>
+<h2>Return</h2><blockquote><p>This action dose not return any value.<br><br></p></blockquote><br><hr><h1><A name="PDFOut.SetMargins">PDFOut.SetMargins</A></h1><br>
+<div class=Declaration>
+<div align=left>
+<table x-use-null-cells
+	style="float: alignleft;
+	x-cell-content-align: Top;
+	border-spacing: 0px;
+	border-spacing: 0px;"
+	cellspacing=0>
+<col>
+<col>
+<tr style="x-cell-content-align: top;" valign=top>
+<td style="padding-right: 0px;
+	padding-left: 0px;
+	border-top-style: none;
+	border-bottom-style: none;
+	border-right-style: none;
+	border-left-style: none;">
+<p>PDFOut.SetMargins (&nbsp;</td>
+<td style="padding-right: 0px;
+	padding-left: 0px;
+	border-top-style: none;
+	border-right-style: none;
+	border-bottom-style: none;">
+<p><span class=VarType>(number)&nbsp;</span>Left Margin <span class=DefaultValue> = 0</span>, </p>
+<p><span class=VarType>(number)&nbsp;</span>Top Margin <span class=DefaultValue> = 0</span>, </p>
+<p><span class=VarType>(number)&nbsp;</span>Right Margin <span class=DefaultValue> = 0</span> )</p>
+</td></tr></table></div></div>
+<h2 style="margin-bottom: 3pt;">Description</h2>
+<p><blockquote>Set the Left, Right and Top Margins.</blockquote></p>
+<h2 class="H2Tight">Parameters</h2>
+<h3 class="ParameterHeading">Left Margin</h3>
+<p class="ParameterBody"><span class="type">(number)&nbsp;</span>The unit of measure for the Left Margin</p>
+<h3 class="ParameterHeading">Top Margin</h3>
+<p class="ParameterBody"><span class="type">(number)&nbsp;</span>The unit of measure for the Top Margin</p>
+<h3 class="ParameterHeading">Right Margin</h3>
+<p class="ParameterBody"><span class="type">(number)&nbsp;</span>The unit of measure for the Right Margin</p>
+<br>
+<h2>Return</h2><blockquote><p>This action dose not return any value.<br><br></p></blockquote><br><hr><h1><A name="PDFOut.SetUnits">PDFOut.SetUnits</A></h1><br>
+<div class=Declaration>
+<div align=left>
+<table x-use-null-cells
+	style="float: alignleft;
+	x-cell-content-align: Top;
+	border-spacing: 0px;
+	border-spacing: 0px;"
+	cellspacing=0>
+<col>
+<col>
+<tr style="x-cell-content-align: top;" valign=top>
+<td style="padding-right: 0px;
+	padding-left: 0px;
+	border-top-style: none;
+	border-bottom-style: none;
+	border-right-style: none;
+	border-left-style: none;">
+<p>PDFOut.SetUnits (&nbsp;</td>
+<td style="padding-right: 0px;
+	padding-left: 0px;
+	border-top-style: none;
+	border-right-style: none;
+	border-bottom-style: none;">
+<p><span class=VarType>(string)&nbsp;</span>Unit of Measure <span class=DefaultValue> = "mm"</span> )</p>
+</td></tr></table></div></div>
+<h2 style="margin-bottom: 3pt;">Description</h2>
+<p><blockquote>Set the units to use for setting X and Y coordinates.</blockquote></p>
+<h2 class="H2Tight">Parameters</h2>
+<h3 class="ParameterHeading">Unit of Measure</h3>
+<p class="ParameterBody"><span class="type">(string)&nbsp;</span>The unit of measure</p>
+<br>
+<h2>Return</h2><blockquote><p>This action dose not return any value.<br><br></p></blockquote><br><hr><h1><A name="PDFOut.SetXY">PDFOut.SetXY</A></h1><br>
+<div class=Declaration>
+<div align=left>
+<table x-use-null-cells
+	style="float: alignleft;
+	x-cell-content-align: Top;
+	border-spacing: 0px;
+	border-spacing: 0px;"
+	cellspacing=0>
+<col>
+<col>
+<tr style="x-cell-content-align: top;" valign=top>
+<td style="padding-right: 0px;
+	padding-left: 0px;
+	border-top-style: none;
+	border-bottom-style: none;
+	border-right-style: none;
+	border-left-style: none;">
+<p>PDFOut.SetXY (&nbsp;</td>
+<td style="padding-right: 0px;
+	padding-left: 0px;
+	border-top-style: none;
+	border-right-style: none;
+	border-bottom-style: none;">
+<p><span class=VarType>(number)&nbsp;</span>X <span class=DefaultValue> = 0</span>, </p>
+<p><span class=VarType>(number)&nbsp;</span>Y <span class=DefaultValue> = 0</span> )</p>
+</td></tr></table></div></div>
+<h2 style="margin-bottom: 3pt;">Description</h2>
+<p><blockquote>Set the X and Y coordinates.</blockquote></p>
+<h2 class="H2Tight">Parameters</h2>
+<h3 class="ParameterHeading">X</h3>
+<p class="ParameterBody"><span class="type">(number)&nbsp;</span>X position in unit of measure</p>
+<h3 class="ParameterHeading">Y</h3>
+<p class="ParameterBody"><span class="type">(number)&nbsp;</span>Y position in unit of measure</p>
+<br>
+<h2>Return</h2><blockquote><p>This action dose not return any value.<br><br></p></blockquote><br><hr><h1><A name="PDFOut.WritePDF">PDFOut.WritePDF</A></h1><br>
+<div class=Declaration>
+<div align=left>
+<table x-use-null-cells
+	style="float: alignleft;
+	x-cell-content-align: Top;
+	border-spacing: 0px;
+	border-spacing: 0px;"
+	cellspacing=0>
+<col>
+<col>
+<tr style="x-cell-content-align: top;" valign=top>
+<td style="padding-right: 0px;
+	padding-left: 0px;
+	border-top-style: none;
+	border-bottom-style: none;
+	border-right-style: none;
+	border-left-style: none;">
+<p>PDFOut.WritePDF (&nbsp;</td>
+<td style="padding-right: 0px;
+	padding-left: 0px;
+	border-top-style: none;
+	border-right-style: none;
+	border-bottom-style: none;">
+<p><span class=VarType>(string)&nbsp;</span>Filename )</p>
+</td></tr></table></div></div>
+<h2 style="margin-bottom: 3pt;">Description</h2>
+<p><blockquote>Save the PDF file to disk.</blockquote></p>
+<h2 class="H2Tight">Parameters</h2>
+<h3 class="ParameterHeading">Filename</h3>
+<p class="ParameterBody"><span class="type">(string)&nbsp;</span>The name of the PDF file to save to disk.</p>
+<br>
+<h2>Return</h2><blockquote><p>This action dose not return any value.<br><br></p></blockquote><br><hr><h1><A name="PDFOut.WriteText">PDFOut.WriteText</A></h1><br>
+<div class=Declaration>
+<div align=left>
+<table x-use-null-cells
+	style="float: alignleft;
+	x-cell-content-align: Top;
+	border-spacing: 0px;
+	border-spacing: 0px;"
+	cellspacing=0>
+<col>
+<col>
+<tr style="x-cell-content-align: top;" valign=top>
+<td style="padding-right: 0px;
+	padding-left: 0px;
+	border-top-style: none;
+	border-bottom-style: none;
+	border-right-style: none;
+	border-left-style: none;">
+<p>PDFOut.WriteText (&nbsp;</td>
+<td style="padding-right: 0px;
+	padding-left: 0px;
+	border-top-style: none;
+	border-right-style: none;
+	border-bottom-style: none;">
+<p><span class=VarType>(string)&nbsp;</span>Text to Print, </p>
+<p><span class=VarType>(number)&nbsp;</span>Height <span class=DefaultValue> = 0</span> )</p>
+</td></tr></table></div></div>
+<h2 style="margin-bottom: 3pt;">Description</h2>
+<p><blockquote>Print text at the current X, Y position wrapping at the margins at the given height</blockquote></p>
+<h2 class="H2Tight">Parameters</h2>
+<h3 class="ParameterHeading">Text to Print</h3>
+<p class="ParameterBody"><span class="type">(string)&nbsp;</span>The text to print at the current X, Y position</p>
+<h3 class="ParameterHeading">Height</h3>
+<p class="ParameterBody"><span class="type">(number)&nbsp;</span>The height in the unit of measure to use for line spacing</p>
+<br>
+<h2>Return</h2><blockquote><p>This action dose not return any value.<br><br></p></blockquote><br><hr><h2><p align="center">Made with Action Plugin Compiler</p></h2></body></html>

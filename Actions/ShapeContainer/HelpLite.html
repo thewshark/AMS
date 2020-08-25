@@ -1,0 +1,309 @@
+<html>
+<head>
+<title>ShapeContainer</title>
+<style>
+
+
+	body {
+	  font-family: Verdana, sans-serif;
+	  font-size: 8pt;
+	  background-color: #ffffff;
+	}
+	  
+	body {
+	  font-family: Verdana, sans-serif;
+	  font-size: 8pt;
+	  background-color: #ffffff;
+	}
+	
+	hr {
+	  text-align: center;
+	  color: #f0f0f0;
+	  width: 100%;
+	  height: 6pt;
+	  margin-top: 0pt;
+	  margin-bottom: -3pt;
+	  border: none;
+	}
+	
+	A:link, A:active, A:visited {
+	  color: #0000ff;
+	  text-decoration: none;
+	}
+	
+	A:hover {
+	  color: #0000ff;
+	  text-decoration: underline;
+	}
+	
+	h1 {
+	  font-family: Verdana;
+	  font-weight: bold;
+	  font-size: 18.0pt;
+	  white-space: nowrap;
+	  color: #fff;
+	  background-color: #699BEF;
+	  padding: 4pt 3pt;
+	  padding: 5px 4px;
+	  margin-top: 0pt;
+	  margin-bottom: 0pt;
+	  border-right: 1px solid #333;
+	  border-left: 1px solid #699BEF;
+	  border-bottom: solid black 1px;
+	}
+	
+	h2 {
+	  font-family: Arial, sans-serif;
+	  font-size: 12.0pt;
+	  letter-spacing: .2ex;
+	  color: #000;
+	  margin-left: 0pt;
+	  margin-right: 0pt;
+	  margin-top: 18pt;
+	  margin-bottom: 9pt;
+	}
+	
+	h2.H2Tight {
+		margin-bottom: -6pt;
+	}
+	
+	h3 {
+	  font-family: Arial, sans-serif;
+	  font-size: 10pt;
+	  font-weight: bold;
+	  font-style: normal;
+	  color: black;
+	  letter-spacing: 0px;
+	  margin-left: 0pt;
+	  margin-right: 0pt;
+	  margin-top: 18pt;
+	  margin-bottom: 3pt;
+	}
+	
+	h3.ParameterHeading {
+		font-family: Arial, sans-serif;
+		margin-left: 12pt;
+		margin-right: 0pt;
+		margin-top: 18pt;
+		margin-bottom: 3pt;
+		font-size: 9pt;
+		font-weight: bold;
+		font-style: italic;
+		letter-spacing: .2ex;
+		color: #3C77B3;
+		x-next-class: ParameterBody;
+		x-next-type: p;
+	}
+	
+	p {
+	  font-family: Verdana;
+	  font-size: 8.0pt;
+	  line-height: 12.0pt;
+	  margin-left: 0pt;
+	  margin-right: 0pt;
+	  margin-top: 0pt;
+	  margin-bottom: 9pt;
+	}
+	  
+	p.NavLocal {
+	  white-space: nowrap;
+	  text-indent: -4px;
+	  font-family: Verdana, Arial, sans-serif;
+	  font-weight: bold;
+	  font-style: normal;
+	  font-size: 13px;
+	  background-color: #e4e4e4;
+	  margin-top: 0px;
+	  margin-bottom: 12pt;
+	  padding-top: 4px;
+	  padding-bottom: 4px;
+	  padding-left: 0px;
+	  padding-right: 0px;
+	
+	  border-bottom: 1px solid #e4e4e4;
+	}
+	  
+	p.ParameterBody {
+		margin-left: 12pt;
+		x-next-class: ParameterHeading;
+		x-next-type: h3;
+	}
+	  
+	div.Actions p, div.Properties p, div.Events p, div.ErrorCodes p {
+	  font-family: Verdana;
+	  font-size: 8.0pt;
+	  line-height: 12.0pt;
+	  margin-top: 0pt;
+	  margin-bottom: 9pt;
+	  margin-left: 12pt;
+	  margin-right: 0pt;
+	}
+	
+	div.Declaration table p {
+		white-space: nowrap;
+		line-height: normal;
+		x-text-tab-stops: repeat 1in;
+		font-family: "Courier New", Courier, monospace;
+		font-size: 10.0pt;
+		background-color: #eee;
+		color: #000000;
+		margin-left: 0px;
+		margin-right: 0px;
+		margin-top: 0px;
+		margin-bottom: 0px;
+		padding: 0pt;
+		border-style: none;
+	}
+	
+	div.Declaration {
+		white-space: nowrap;
+		line-height: normal;
+		x-text-tab-stops: repeat 1in;
+		font-family: "Courier New", Courier, monospace;
+		font-size: 9.0pt;
+		background-color: #eee;
+		color: #000000;
+		width: 100%;
+		margin-left: 0px;
+		margin-right: 0px;
+		margin-top: 0pt;
+		margin-bottom: 9pt;
+		padding: 2pt;
+		border-top: #c0c0c0 1px solid;
+		border-right: #c0c0c0 1px solid;
+		border-left: #c0c0c0 1px solid;
+		border-bottom: #c0c0c0 1px solid;
+	}
+	
+	span.VarType {
+		font-family: "Courier New", monospace;
+		font-size: 9pt;
+		font-style: italic;
+		color: #abd;
+	}
+	
+	span.type {
+		color: #aaa;
+	}
+	
+	span.wab {
+		font-family: Verdana;
+		font-size: 13px;
+		padding: 0px 0px;
+		margin: 0px;
+		border: none;
+		visibility: hidden;
+	}
+
+	span.DefaultValue {
+		white-space: nowrap;
+		font-family: "Courier New", monospace;
+		font-size: 9pt;
+		color: #aaa;
+	}
+	
+	</style>
+</head>
+<body>
+<h1>ShapeContainer Help File</h1>
+<p class="NavLocal"><span class=wab>&nbsp;</span><span class="here">Welcome</span></p>
+<hr><div class="Properties">
+<h2>Table of Contents</h2>
+<p><blockquote>
+<A href="#ShapeContainer.Create"><b>ShapeContainer.Create</b></A>
+<br>
+<A href="#ShapeContainer.AddObjects"><b>ShapeContainer.AddObjects</b></A>
+<br>
+</blockquote></p></div>
+<h1><A name="ShapeContainer.Create">ShapeContainer.Create</A></h1><br>
+<div class=Declaration>
+<div align=left>
+<table x-use-null-cells
+	style="float: alignleft;
+	x-cell-content-align: Top;
+	border-spacing: 0px;
+	border-spacing: 0px;"
+	cellspacing=0>
+<col>
+<col>
+<tr style="x-cell-content-align: top;" valign=top>
+<td style="padding-right: 0px;
+	padding-left: 0px;
+	border-top-style: none;
+	border-bottom-style: none;
+	border-right-style: none;
+	border-left-style: none;">
+<p><span class=VarType>(boolean)&nbsp;</span>ShapeContainer.Create (&nbsp;</td>
+<td style="padding-right: 0px;
+	padding-left: 0px;
+	border-top-style: none;
+	border-right-style: none;
+	border-bottom-style: none;">
+<p><span class=VarType>(table)&nbsp;</span>tbl_object <span class=DefaultValue> = {"Shape1", "Shape2"}</span>, </p>
+<p><span class=VarType>(table)&nbsp;</span>tbl_arguments <span class=DefaultValue> = {20, 20, 200, 120, {16777215}, {0}, 0, 0, 1}</span>, </p>
+<p><span class=VarType>(table)&nbsp;</span>tbl_label <span class=DefaultValue> = {Text="ShapeContainer1", FontName="Time New Roman", FontSize=12, ColorNormal=0}</span>, </p>
+<p><span class=VarType>(boolean)&nbsp;</span>show_button <span class=DefaultValue> = true</span>, </p>
+<p><span class=VarType>(string)&nbsp;</span>iicon <span class=DefaultValue> = "AutoPlay\\Images\\icon.png"</span>, </p>
+<p><span class=VarType>(table)&nbsp;</span>tbl_body_image <span class=DefaultValue> = {}</span>, </p>
+<p><span class=VarType>(boolean)&nbsp;</span>extended_script <span class=DefaultValue> = false</span> )</p>
+</td></tr></table></div></div>
+<h2 style="margin-bottom: 3pt;">Description</h2>
+<p><blockquote>This action will create a shape container</blockquote></p>
+<h2 class="H2Tight">Parameters</h2>
+<h3 class="ParameterHeading">tbl_object</h3>
+<p class="ParameterBody"><span class="type">(table)&nbsp;</span>The two (2) object shape id (name, label)</p>
+<h3 class="ParameterHeading">tbl_arguments</h3>
+<p class="ParameterBody"><span class="type">(table)&nbsp;</span>Properties of ShapeContainer Top and Body (shapes object)</p>
+<h3 class="ParameterHeading">tbl_label</h3>
+<p class="ParameterBody"><span class="type">(table)&nbsp;</span>Properties ShapeContainer Label (Title)</p>
+<h3 class="ParameterHeading">show_button</h3>
+<p class="ParameterBody"><span class="type">(boolean)&nbsp;</span>Whether to Show or Hide the Action Button at top right of ShapeContainer (that will can collapse or expand the ShapeContainer Body)</p>
+<h3 class="ParameterHeading">iicon</h3>
+<p class="ParameterBody"><span class="type">(string)&nbsp;</span>The ShapeContainer Image "Icon" Full Path (Located at the ShapeContainer Top Left)</p>
+<h3 class="ParameterHeading">tbl_body_image</h3>
+<p class="ParameterBody"><span class="type">(table)&nbsp;</span>The ShapeContainer Body Picture (All Image Properties are available). PS: Default = {} -> Dont use body image.</p>
+<h3 class="ParameterHeading">extended_script</h3>
+<p class="ParameterBody"><span class="type">(boolean)&nbsp;</span>Enable or Disable Extended Lua Scripting with ShapeContainer</p>
+<br>
+<h2>Return</h2><blockquote><p>This action returns a <span class="type">(boolean)</span> value.<br><br></p></blockquote><br><hr><h1><A name="ShapeContainer.AddObjects">ShapeContainer.AddObjects</A></h1><br>
+<div class=Declaration>
+<div align=left>
+<table x-use-null-cells
+	style="float: alignleft;
+	x-cell-content-align: Top;
+	border-spacing: 0px;
+	border-spacing: 0px;"
+	cellspacing=0>
+<col>
+<col>
+<tr style="x-cell-content-align: top;" valign=top>
+<td style="padding-right: 0px;
+	padding-left: 0px;
+	border-top-style: none;
+	border-bottom-style: none;
+	border-right-style: none;
+	border-left-style: none;">
+<p><span class=VarType>(boolean)&nbsp;</span>ShapeContainer.AddObjects (&nbsp;</td>
+<td style="padding-right: 0px;
+	padding-left: 0px;
+	border-top-style: none;
+	border-right-style: none;
+	border-bottom-style: none;">
+<p><span class=VarType>(number)&nbsp;</span>n <span class=DefaultValue> = 1</span>, </p>
+<p><span class=VarType>(table)&nbsp;</span>tbl_objects <span class=DefaultValue> = {"Label1",{20,20},"Label2",{20,40}}</span>, </p>
+<p><span class=VarType>(string)&nbsp;</span>link <span class=DefaultValue> = "http://www.microsoft.com"</span>, </p>
+<p><span class=VarType>(boolean)&nbsp;</span>msg <span class=DefaultValue> = false</span> )</p>
+</td></tr></table></div></div>
+<h2 style="margin-bottom: 3pt;">Description</h2>
+<p><blockquote>This action allow to add objects (for action collapse and expand) into the ShapeContainer. (Objects must exist on the stage: Page or Dialog).</blockquote></p>
+<h2 class="H2Tight">Parameters</h2>
+<h3 class="ParameterHeading">n</h3>
+<p class="ParameterBody"><span class="type">(number)&nbsp;</span>ShapeContainer index (using create and begin at 1, default = 0)</p>
+<h3 class="ParameterHeading">tbl_objects</h3>
+<p class="ParameterBody"><span class="type">(table)&nbsp;</span>Table of all objects that will be management by the created ShapeContainer</p>
+<h3 class="ParameterHeading">link</h3>
+<p class="ParameterBody"><span class="type">(string)&nbsp;</span>The link that will be associated with ShapeContainer Title (On Click Event)</p>
+<h3 class="ParameterHeading">msg</h3>
+<p class="ParameterBody"><span class="type">(boolean)&nbsp;</span>Enable or Disable Warning and Infos messages (PS: When adding objects it update the file ExtendedScript.lua then ShapeContainer need to be restarted when all objects are added to all shape containers)</p>
+<br>
+<h2>Return</h2><blockquote><p>This action returns a <span class="type">(boolean)</span> value.<br><br></p></blockquote><br><hr><h2><p align="center">Made with Action Plugin Compiler</p></h2></body></html>

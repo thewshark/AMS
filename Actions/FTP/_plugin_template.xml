@@ -1,0 +1,629 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<PluginTemplates>
+   <Plugin>
+      <Name>FTP (64-bit)</Name>
+      <File>FTPx64.lmd</File>
+      <InterfaceFile>FTP.lmd</InterfaceFile>
+      <Version>2.0.1.0</Version>
+      <AuthorInfo>FTP Actions Plugin (64-bit)
+Created by Indigo Rose Corporation
+Copyright © 2003-2015 Indigo Rose Corporation
+http://www.indigorose.com</AuthorInfo>
+      <ActionXML>
+         <![CDATA[<ActionTemplates>
+            <Action>
+               <Name>FTP.CdUp</Name>
+               <Description>Moves up one directory level on the FTP server.</Description>
+               <ReturnValueType/>
+               <Arguments/>
+            </Action>
+            <Action>
+               <Name>FTP.ChangeDir</Name>
+               <Description>Changes the current directory on the FTP server.</Description>
+               <ReturnValueType/>
+               <Arguments>
+                  <Arg>
+                     <Name>Path</Name>
+                     <Description>The path to the directory on the FTP server that you want to navigate to.</Description>
+                     <Type>string</Type>
+                     <Default/>
+                     <Required>1</Required>
+                     <EasyMode>
+                        <Default>"/dir1/dir2"</Default>
+                        <DataType>string</DataType>
+                        <Constraints>1,*</Constraints>
+                     </EasyMode>
+                  </Arg>
+               </Arguments>
+            </Action>
+            <Action>
+               <Name>FTP.ClearLog</Name>
+               <Description>Clears (empties) the command/response log.</Description>
+               <ReturnValueType/>
+               <Arguments/>
+            </Action>
+            <Action>
+               <Name>FTP.Command</Name>
+               <Description>Performs a custom FTP command on the FTP server.</Description>
+               <ReturnValueType/>
+               <Arguments>
+                  <Arg>
+                     <Name>Command</Name>
+                      <Description>Any valid FTP command or any server-specific command.</Description>
+                      <Type>string</Type>
+                      <Default/>
+                      <Required>1</Required>
+                      <EasyMode>
+                         <Default>"chmod myfile.ext 777"</Default>
+                         <DataType>string</DataType>
+                         <Constraints>1,*</Constraints>
+                      </EasyMode>
+                  </Arg>
+               </Arguments>
+            </Action>
+            <Action>
+               <Name>FTP.Connect</Name>
+               <Description>Connects to an FTP server.</Description>
+               <ReturnValueType/>
+               <Arguments>
+                  <Arg>
+                     <Name>Hostname</Name>
+                     <Description>The hostname or IP address of the FTP site you want to connect to.</Description>
+                     <Type>string</Type>
+                     <Default/>
+                     <Required>1</Required>
+                     <EasyMode>
+                        <Default>"ftp.mydomain.com"</Default>
+                        <DataType>string</DataType>
+                        <Constraints>1,*</Constraints>
+                     </EasyMode>
+                  </Arg>
+                  <Arg>
+                     <Name>Username</Name>
+                     <Description>The username you want to login as, or "anonymous" to initiate an anonymous login.</Description>
+                     <Type>string</Type>
+                     <Default>"anonymous"</Default>
+                     <Required>0</Required>
+                     <EasyMode>
+                        <Default>"anonymous"</Default>
+                        <DataType>string</DataType>
+                        <Constraints>none</Constraints>
+                     </EasyMode>
+                  </Arg>
+                  <Arg>
+                     <Name>Password</Name>
+                     <Description>The password for the given username.</Description>
+                     <Type>string</Type>
+                     <Default>"anonymous@anonymous.com"</Default>
+                     <Required>0</Required>
+                     <EasyMode>
+                        <Default>"anonymous@anonymous.com"</Default>
+                        <DataType>string</DataType>
+                        <Constraints>none</Constraints>
+                     </EasyMode>
+                  </Arg>
+                  <Arg>
+                     <Name>Account</Name>
+                     <Description>An additional "account" name for systems which require it (usually used for access control).</Description>
+                     <Type>string</Type>
+                     <Default>""</Default>
+                     <Required>0</Required>
+                     <EasyMode>
+                        <Default>""</Default>
+                        <DataType>string</DataType>
+                        <Constraints>none</Constraints>
+                        </EasyMode>
+                  </Arg>
+                  <Arg>
+                     <Name>HidePassword</Name>
+                     <Description>Whether to include the password in the FTP log as plain text or replace it with "****".</Description>
+                     <Type>boolean</Type>
+                     <Default>true</Default>
+                     <Required>0</Required>
+                     <EasyMode>
+                        <Default>true</Default>
+                        <DataType>boolean</DataType>
+                        <Constraints>none</Constraints>
+                     </EasyMode>
+                  </Arg>
+               </Arguments>
+            </Action>
+            <Action>
+               <Name>FTP.Delete</Name>
+               <Description>Deletes a file in the current directory on the FTP server.</Description>
+               <ReturnValueType/>
+               <Arguments>
+                  <Arg>
+                     <Name>Filename</Name>
+                     <Description>The name of the file that you want to delete.</Description>
+                     <Type>string</Type>
+                     <Default/>
+                     <Required>1</Required>
+                     <EasyMode>
+                        <Default>"myfile.ext"</Default>
+                        <DataType>string</DataType>
+                        <Constraints>1,*</Constraints>
+                     </EasyMode>
+                  </Arg>
+               </Arguments>
+            </Action>
+            <Action>
+               <Name>FTP.Disconnect</Name>
+               <Description>Disconnects from the FTP server.</Description>
+               <ReturnValueType/>
+               <Arguments/>
+            </Action>
+            <Action>
+               <Name>FTP.Download</Name>
+               <Description>Downloads a file from the current directory on the FTP server.</Description>
+               <ReturnValueType/>
+               <Arguments>
+                  <Arg>
+                     <Name>Source</Name>
+                     <Description>The name of the file that you want to download.</Description>
+                     <Type>string</Type>
+                     <Default/>
+                     <Required>1</Required>
+                     <EasyMode>
+                        <Default>"myfile.ext"</Default>
+                        <DataType>string</DataType>
+                        <Constraints>1,*</Constraints>
+                        </EasyMode>
+                  </Arg>
+                  <Arg>
+                     <Name>Destination</Name>
+                     <Description>The full path and filename of the destination file that you want to download to.</Description>
+                     <Type>string</Type>
+                     <Default/>
+                     <Required>1</Required>
+                     <EasyMode>
+                        <Default>"C:\\mydir\\myfile.ext"</Default>
+                        <DataType>string</DataType>
+                        <Constraints>1,*</Constraints>
+                     </EasyMode>
+                  </Arg>
+                  <Arg>
+                     <Name>CallbackFunction</Name>
+                     <Description>The name of a function that will be called whenever progress is made in the download operation.</Description>
+                     <Type>function</Type>
+                     <Default>nil</Default>
+                     <Required>0</Required>
+                     <EasyMode>
+                        <Default>nil</Default>
+                        <DataType>function</DataType>
+                        <Constraints>none</Constraints>
+                     </EasyMode>
+                  </Arg>
+               </Arguments>
+            </Action>
+            <Action>
+               <Name>FTP.GetConnectTimeout</Name>
+               <Description>Returns the number of seconds that the application will wait while attempting to establish a connection with the FTP server.</Description>
+               <ReturnValueType>number</ReturnValueType>
+               <Arguments/>
+            </Action>
+            <Action>
+               <Name>FTP.GetControlPort</Name>
+               <Description>Returns the control port being used for communication with the FTP server.</Description>
+               <ReturnValueType>number</ReturnValueType>
+               <Arguments/>
+            </Action>
+            <Action>
+               <Name>FTP.GetCurrentDir</Name>
+               <Description>Returns the path to the current directory on the FTP server.</Description>
+               <ReturnValueType>string</ReturnValueType>
+               <Arguments/>
+            </Action>
+            <Action>
+               <Name>FTP.GetDataPort</Name>
+               <Description>Returns the data port being used for communication with the FTP server.</Description>
+               <ReturnValueType>number</ReturnValueType>
+               <Arguments/>
+            </Action>
+            <Action>
+               <Name>FTP.GetFileInfo</Name>
+               <Description>Returns a table containing information about a specific file in the current directory on the FTP server.</Description>
+               <ReturnValueType>table</ReturnValueType>
+               <Arguments>
+                  <Arg>
+                     <Name>Filename</Name>
+                     <Description>The name of a file in the current directory on the FTP server.</Description>
+                     <Type>string</Type>
+                     <Default/>
+                     <Required>1</Required>
+                     <EasyMode>
+                        <Default>"myfile.ext"</Default>
+                        <DataType>string</DataType>
+                        <Constraints>1,*</Constraints>
+                     </EasyMode>
+                  </Arg>
+               </Arguments>
+            </Action>
+            <Action>
+               <Name>FTP.GetHelp</Name>
+               <Description>Returns the help text for a command from the FTP server.</Description>
+               <ReturnValueType>string</ReturnValueType>
+               <Arguments>
+                  <Arg>
+                     <Name>Command</Name>
+                     <Description>The command whose help text you want to retrieve. (On some servers you can use "" to get a list of all commands.)</Description>
+                     <Type>string</Type>
+                     <Default/>
+                     <Required>1</Required>
+                     <EasyMode>
+                        <Default>""</Default>
+                        <DataType>string</DataType>
+                        <Constraints>none</Constraints>
+                     </EasyMode>
+                  </Arg>
+               </Arguments>
+            </Action>
+            <Action>
+               <Name>FTP.GetLastResponse</Name>
+               <Description>Returns the text received from the FTP server as a result of the most recent FTP action.</Description>
+               <ReturnValueType>string</ReturnValueType>
+               <Arguments/>
+            </Action>
+            <Action>
+               <Name>FTP.GetLog</Name>
+               <Description>Returns a log of the interaction with the FTP server, including commands sent to the server and responses received from it.</Description>
+               <ReturnValueType>string</ReturnValueType>
+               <Arguments/>
+            </Action>
+            <Action>
+               <Name>FTP.GetPassiveMode</Name>
+               <Description>Returns true if the FTP actions will communicate with the server in passive mode (where control and data connections are both originated by the client).</Description>
+               <ReturnValueType>boolean</ReturnValueType>
+               <Arguments/>
+            </Action>
+            <Action>
+               <Name>FTP.GetTransferType</Name>
+               <Description>Returns the transfer type (FTP.ASCII or FTP.BINARY) being used for data transfer and storage.</Description>
+               <ReturnValueType>number</ReturnValueType>
+               <Arguments/>
+            </Action>
+            <Action>
+               <Name>FTP.IsConnected</Name>
+               <Description>Returns true if there is currently a connection with an FTP server.</Description>
+               <ReturnValueType>boolean</ReturnValueType>
+               <Arguments/>
+            </Action>
+            <Action>
+               <Name>FTP.IsValidHostname</Name>
+               <Description>Returns true if the given hostname or IP address is valid (formatted properly).</Description>
+               <ReturnValueType>boolean</ReturnValueType>
+               <Arguments>
+                  <Arg>
+                     <Name>Hostname</Name>
+                     <Description>The hostname or IP address whose format you want to validate.</Description>
+                     <Type>string</Type>
+                     <Default/>
+                     <Required>1</Required>
+                     <EasyMode>
+                        <Default>"mydomain.com"</Default>
+                        <DataType>string</DataType>
+                        <Constraints>1,*</Constraints>
+                     </EasyMode>
+                  </Arg>
+               </Arguments>
+            </Action>
+            <Action>
+               <Name>FTP.List</Name>
+               <Description>Returns a numerically indexed table of tables with information about each file or folder in the current directory on the FTP server.</Description>
+               <ReturnValueType>table</ReturnValueType>
+               <Arguments/>
+            </Action>
+            <Action>
+               <Name>FTP.ListFiles</Name>
+               <Description>Returns a numerically indexed table of tables with information about each file in the current directory on the FTP server.</Description>
+               <ReturnValueType>table</ReturnValueType>
+               <Arguments/>
+            </Action>
+            <Action>
+               <Name>FTP.ListFolders</Name>
+               <Description>Returns a numerically indexed table of tables with information about each folder in the current directory on the FTP server.</Description>
+               <ReturnValueType>table</ReturnValueType>
+               <Arguments/>
+            </Action>
+            <Action>
+               <Name>FTP.MakeDir</Name>
+               <Description>Creates a new folder in the current directory on the FTP server.</Description>
+               <ReturnValueType/>
+               <Arguments>
+                  <Arg>
+                     <Name>DirName</Name>
+                     <Description>The name of the folder you want to create.</Description>
+                     <Type>string</Type>
+                     <Default/>
+                     <Required>1</Required>
+                     <EasyMode>
+                        <Default>"mydir"</Default>
+                        <DataType>string</DataType>
+                        <Constraints>1,*</Constraints>
+                     </EasyMode>
+                  </Arg>
+               </Arguments>
+            </Action>
+            <Action>
+               <Name>FTP.NoOp</Name>
+               <Description>Performs a "no-op" operation (a NOOP command).</Description>
+               <ReturnValueType/>
+               <Arguments/>
+            </Action>
+            <Action>
+               <Name>FTP.RemoveDir</Name>
+               <Description>Deletes a specific folder in the current directory on the FTP server.</Description>
+               <ReturnValueType/>
+               <Arguments>
+                  <Arg>
+                     <Name>DirName</Name>
+                     <Description>The name of the folder you want to delete.</Description>
+                     <Type>string</Type>
+                     <Default/>
+                     <Required>1</Required>
+                     <EasyMode>
+                        <Default>"mydir"</Default>
+                        <DataType>string</DataType>
+                        <Constraints>1,*</Constraints>
+                     </EasyMode>
+                  </Arg>
+               </Arguments>
+            </Action>
+            <Action>
+               <Name>FTP.Rename</Name>
+               <Description>Renames a file in the current directory on the FTP server.</Description>
+               <ReturnValueType/>
+               <Arguments>
+                  <Arg>
+                     <Name>Oldname</Name>
+                     <Description>The name of the file you want to rename.</Description>
+                     <Type>string</Type>
+                     <Default/>
+                     <Required>1</Required>
+                     <EasyMode>
+                        <Default>"oldname.ext"</Default>
+                        <DataType>string</DataType>
+                        <Constraints>1,*</Constraints>
+                     </EasyMode>
+                  </Arg>
+                  <Arg>
+                     <Name>Newname</Name>
+                     <Description>The new name for the file.</Description>
+                     <Type>string</Type>
+                     <Default/>
+                     <Required>1</Required>
+                     <EasyMode>
+                        <Default>"newname.ext"</Default>
+                        <DataType>string</DataType>
+                        <Constraints>1,*</Constraints>
+                     </EasyMode>
+                  </Arg>
+               </Arguments>
+            </Action>
+            <Action>
+               <Name>FTP.Resume</Name>
+               <Description>Resumes downloading a file from the current directory on the FTP server. (Continues downloading a file whose download was interrupted.)</Description>
+               <ReturnValueType/>
+               <Arguments>
+                  <Arg>
+                     <Name>Source</Name>
+                     <Description>The name of the file that you want to download.</Description>
+                     <Type>string</Type>
+                     <Default/>
+                     <Required>1</Required>
+                     <EasyMode>
+                        <Default>"myfile.ext"</Default>
+                        <DataType>string</DataType>
+                        <Constraints>1,*</Constraints>
+                     </EasyMode>
+                  </Arg>
+                  <Arg>
+                     <Name>Destination</Name>
+                     <Description>The full path and filename of the destination file that you want to continue downloading.</Description>
+                     <Type>string</Type>
+                     <Default/>
+                     <Required>1</Required>
+                     <EasyMode>
+                        <Default>"C:\\mydir\\myfile.ext"</Default>
+                        <DataType>string</DataType>
+                        <Constraints>1,*</Constraints>
+                     </EasyMode>
+                  </Arg>
+                  <Arg>
+                     <Name>CallbackFunction</Name>
+                     <Description>The name of a function that will be called whenever progress is made in the download operation.</Description>
+                     <Type>function</Type>
+                     <Default>nil</Default>
+                     <Required>0</Required>
+                     <EasyMode>
+                        <Default>nil</Default>
+                        <DataType>function</DataType>
+                        <Constraints>none</Constraints>
+                     </EasyMode>
+                  </Arg>
+               </Arguments>
+            </Action>
+            <Action>
+               <Name>FTP.SetCommandCallback</Name>
+               <Description>Registers a callback function to be called whenever a command is sent to the server.</Description>
+               <ReturnValueType/>
+               <Arguments>
+                  <Arg>
+                     <Name>CallbackFunction</Name>
+                     <Description>The name of a function that will be called whenever a command is sent to the server.</Description>
+                     <Type>function</Type>
+                     <Default>nil</Default>
+                     <Required>0</Required>
+                     <EasyMode>
+                        <Default>nil</Default>
+                        <DataType>function</DataType>
+                        <Constraints>none</Constraints>
+                     </EasyMode>
+                  </Arg>
+               </Arguments>
+            </Action>
+            <Action>
+               <Name>FTP.SetConnectTimeout</Name>
+               <Description>Sets the number of seconds that the application will wait while attempting to establish a connection with the FTP server.</Description>
+               <ReturnValueType/>
+               <Arguments>
+                  <Arg>
+                     <Name>Timeout</Name>
+                     <Description>The connection timeout, in seconds.</Description>
+                     <Type>number</Type>
+                     <Default/>
+                     <Required>1</Required>
+                     <EasyMode>
+                        <Default>15</Default>
+                        <DataType>number</DataType>
+                        <Constraints>1,*</Constraints>
+                     </EasyMode>
+                  </Arg>
+               </Arguments>
+            </Action>
+            <Action>
+               <Name>FTP.SetControlPort</Name>
+               <Description>Sets the control port that will be used for communication with the FTP server.</Description>
+               <ReturnValueType/>
+               <Arguments>
+                  <Arg>
+                     <Name>ControlPort</Name>
+                     <Description>The control port to use for communication with the FTP server.</Description>
+                     <Type>number</Type>
+                     <Default/>
+                     <Required>1</Required>
+                     <EasyMode>
+                        <Default>21</Default>
+                        <DataType>number</DataType>
+                        <Constraints>0,32000</Constraints>
+                     </EasyMode>
+                  </Arg>
+               </Arguments>
+            </Action>
+            <Action>
+               <Name>FTP.SetDataPort</Name>
+               <Description>Sets the data port that will be used for communication with the FTP server.</Description>
+               <ReturnValueType/>
+               <Arguments>
+                  <Arg>
+                     <Name>DataPort</Name>
+                     <Description>The data port to use for communication with the FTP server.</Description>
+                     <Type>number</Type>
+                     <Default/>
+                     <Required>1</Required>
+                     <EasyMode>
+                        <Default>1020</Default>
+                        <DataType>number</DataType>
+                        <Constraints>0,32000</Constraints>
+                     </EasyMode>
+                  </Arg>
+               </Arguments>
+            </Action>
+            <Action>
+               <Name>FTP.SetPassiveMode</Name>
+               <Description>Sets the data transfer mode to use when communicating with the server.</Description>
+               <ReturnValueType/>
+               <Arguments>
+                  <Arg>
+                     <Name>PassiveMode</Name>
+                     <Description>Whether to communicate with the server in passive mode (where control and data connections are both originated by the client).</Description>
+                     <Type>boolean</Type>
+                     <Default/>
+                     <Required>1</Required>
+                     <EasyMode>
+                        <Default>true</Default>
+                        <DataType>boolean</DataType>
+                        <Constraints>none</Constraints>
+                     </EasyMode>
+                  </Arg>
+               </Arguments>
+            </Action>
+            <Action>
+               <Name>FTP.SetResponseCallback</Name>
+               <Description>Registers a callback function to be called whenever a command response is received from the server.</Description>
+               <ReturnValueType/>
+               <Arguments>
+                  <Arg>
+                     <Name>CallbackFunction</Name>
+                     <Description>The name of a function that will be called whenever a command response is received from the server.</Description>
+                     <Type>function</Type>
+                     <Default>nil</Default>
+                     <Required>0</Required>
+                     <EasyMode>
+                        <Default>nil</Default>
+                        <DataType>function</DataType>
+                        <Constraints>none</Constraints>
+                     </EasyMode>
+                  </Arg>
+               </Arguments>
+            </Action>
+            <Action>
+               <Name>FTP.SetTransferType</Name>
+               <Description>Sets the transfer type (FTP.ASCII or FTP.BINARY) to use for data transfer and storage.</Description>
+               <ReturnValueType/>
+               <Arguments>
+                  <Arg>
+                     <Name>TransferType</Name>
+                     <Description>The transfer type to use for uploads and downloads.</Description>
+                     <Type>number</Type>
+                     <Default/>
+                     <Required>1</Required>
+                     <EasyMode>
+                        <Default>FTP.AUTO</Default>
+                        <DataType>combo</DataType>
+                        <Constraints>FTP.ASCII,FTP.BINARY,FTP.AUTO</Constraints>
+                     </EasyMode>
+                  </Arg>
+               </Arguments>
+            </Action>
+            <Action>
+               <Name>FTP.Upload</Name>
+               <Description>Uploads a file to the current directory on the FTP server.</Description>
+               <ReturnValueType/>
+               <Arguments>
+                  <Arg>
+                     <Name>Source</Name>
+                     <Description>The full path and filename of the file that you want to upload.</Description>
+                     <Type>string</Type>
+                     <Default/>
+                     <Required>1</Required>
+                     <EasyMode>
+                        <Default>"C:\\mydir\\myfile.ext"</Default>
+                        <DataType>string</DataType>
+                        <Constraints>1,*</Constraints>
+                     </EasyMode>
+                  </Arg>
+                  <Arg>
+                     <Name>Destination</Name>
+                     <Description>The name that you want the uploaded file to have.</Description>
+                     <Type>string</Type>
+                     <Default/>
+                     <Required>1</Required>
+                     <EasyMode>
+                        <Default>"myfile.ext"</Default>
+                        <DataType>string</DataType>
+                        <Constraints>1,*</Constraints>
+                     </EasyMode>
+                  </Arg>
+                  <Arg>
+                     <Name>CallbackFunction</Name>
+                     <Description>The name of a function that will be called whenever progress is made in the upload operation.</Description>
+                     <Type>function</Type>
+                     <Default>nil</Default>
+                     <Required>0</Required>
+                     <EasyMode>
+                        <Default>nil</Default>
+                        <DataType>function</DataType>
+                        <Constraints>none</Constraints>
+                     </EasyMode>
+                  </Arg>
+               </Arguments>
+            </Action>
+         </ActionTemplates>]]>
+      </ActionXML>
+      <LuaVersion>Lua 5.1</LuaVersion>
+      <SDKVersion>2</SDKVersion>
+      <LicenseFile>FTP.lic</LicenseFile>
+      <Platform>x64</Platform>
+   </Plugin>
+</PluginTemplates>

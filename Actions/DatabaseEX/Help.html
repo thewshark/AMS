@@ -1,0 +1,876 @@
+<html>
+<head>
+<title>Database</title>
+<style>
+
+
+	body {
+	  font-family: Verdana, sans-serif;
+	  font-size: 8pt;
+	  background-color: #ffffff;
+	}
+	  
+	body {
+	  font-family: Verdana, sans-serif;
+	  font-size: 8pt;
+	  background-color: #ffffff;
+	}
+	
+	hr {
+	  text-align: center;
+	  color: #f0f0f0;
+	  width: 100%;
+	  height: 6pt;
+	  margin-top: 0pt;
+	  margin-bottom: -3pt;
+	  border: none;
+	}
+	
+	A:link, A:active, A:visited {
+	  color: #0000ff;
+	  text-decoration: none;
+	}
+	
+	A:hover {
+	  color: #0000ff;
+	  text-decoration: underline;
+	}
+	
+	h1 {
+	  font-family: Verdana;
+	  font-weight: bold;
+	  font-size: 18.0pt;
+	  white-space: nowrap;
+	  color: #fff;
+	  background-color: #699BEF;
+	  padding: 4pt 3pt;
+	  padding: 5px 4px;
+	  margin-top: 0pt;
+	  margin-bottom: 0pt;
+	  border-right: 1px solid #333;
+	  border-left: 1px solid #699BEF;
+	  border-bottom: solid black 1px;
+	}
+	
+	h2 {
+	  font-family: Arial, sans-serif;
+	  font-size: 12.0pt;
+	  letter-spacing: .2ex;
+	  color: #000;
+	  margin-left: 0pt;
+	  margin-right: 0pt;
+	  margin-top: 18pt;
+	  margin-bottom: 9pt;
+	}
+	
+	h2.H2Tight {
+		margin-bottom: -6pt;
+	}
+	
+	h3 {
+	  font-family: Arial, sans-serif;
+	  font-size: 10pt;
+	  font-weight: bold;
+	  font-style: normal;
+	  color: black;
+	  letter-spacing: 0px;
+	  margin-left: 0pt;
+	  margin-right: 0pt;
+	  margin-top: 18pt;
+	  margin-bottom: 3pt;
+	}
+	
+	h3.ParameterHeading {
+		font-family: Arial, sans-serif;
+		margin-left: 12pt;
+		margin-right: 0pt;
+		margin-top: 18pt;
+		margin-bottom: 3pt;
+		font-size: 9pt;
+		font-weight: bold;
+		font-style: italic;
+		letter-spacing: .2ex;
+		color: #3C77B3;
+		x-next-class: ParameterBody;
+		x-next-type: p;
+	}
+	
+	p {
+	  font-family: Verdana;
+	  font-size: 8.0pt;
+	  line-height: 12.0pt;
+	  margin-left: 0pt;
+	  margin-right: 0pt;
+	  margin-top: 0pt;
+	  margin-bottom: 9pt;
+	}
+	  
+	p.NavLocal {
+	  white-space: nowrap;
+	  text-indent: -4px;
+	  font-family: Verdana, Arial, sans-serif;
+	  font-weight: bold;
+	  font-style: normal;
+	  font-size: 13px;
+	  background-color: #e4e4e4;
+	  margin-top: 0px;
+	  margin-bottom: 12pt;
+	  padding-top: 4px;
+	  padding-bottom: 4px;
+	  padding-left: 0px;
+	  padding-right: 0px;
+	
+	  border-bottom: 1px solid #e4e4e4;
+	}
+	  
+	p.ParameterBody {
+		margin-left: 12pt;
+		x-next-class: ParameterHeading;
+		x-next-type: h3;
+	}
+	  
+	div.Actions p, div.Properties p, div.Events p, div.ErrorCodes p {
+	  font-family: Verdana;
+	  font-size: 8.0pt;
+	  line-height: 12.0pt;
+	  margin-top: 0pt;
+	  margin-bottom: 9pt;
+	  margin-left: 12pt;
+	  margin-right: 0pt;
+	}
+	
+	div.Declaration table p {
+		white-space: nowrap;
+		line-height: normal;
+		x-text-tab-stops: repeat 1in;
+		font-family: "Courier New", Courier, monospace;
+		font-size: 10.0pt;
+		background-color: #eee;
+		color: #000000;
+		margin-left: 0px;
+		margin-right: 0px;
+		margin-top: 0px;
+		margin-bottom: 0px;
+		padding: 0pt;
+		border-style: none;
+	}
+	
+	div.Declaration {
+		white-space: nowrap;
+		line-height: normal;
+		x-text-tab-stops: repeat 1in;
+		font-family: "Courier New", Courier, monospace;
+		font-size: 9.0pt;
+		background-color: #eee;
+		color: #000000;
+		width: 100%;
+		margin-left: 0px;
+		margin-right: 0px;
+		margin-top: 0pt;
+		margin-bottom: 9pt;
+		padding: 2pt;
+		border-top: #c0c0c0 1px solid;
+		border-right: #c0c0c0 1px solid;
+		border-left: #c0c0c0 1px solid;
+		border-bottom: #c0c0c0 1px solid;
+	}
+	
+	span.VarType {
+		font-family: "Courier New", monospace;
+		font-size: 9pt;
+		font-style: italic;
+		color: #abd;
+	}
+	
+	span.type {
+		color: #aaa;
+	}
+	
+	span.wab {
+		font-family: Verdana;
+		font-size: 13px;
+		padding: 0px 0px;
+		margin: 0px;
+		border: none;
+		visibility: hidden;
+	}
+
+	span.DefaultValue {
+		white-space: nowrap;
+		font-family: "Courier New", monospace;
+		font-size: 9pt;
+		color: #aaa;
+	}
+	
+	</style>
+</head>
+<body>
+<h1>Database Help File</h1>
+<p class="NavLocal"><span class=wab>&nbsp;</span><span class="here">Welcome</span></p>
+<hr><div class="Properties">
+<h2>Table of Contents</h2>
+<p><blockquote>
+<A href="#Database.RemoveColumn"><b>Database.RemoveColumn</b></A>
+<br>
+<A href="#Database.AddColumn"><b>Database.AddColumn</b></A>
+<br>
+<A href="#Database.GetColumnName"><b>Database.GetColumnName</b></A>
+<br>
+<A href="#Database.SetColumnName"><b>Database.SetColumnName</b></A>
+<br>
+<A href="#Database.Create"><b>Database.Create</b></A>
+<br>
+<A href="#Database.Add"><b>Database.Add</b></A>
+<br>
+<A href="#Database.UpdateRow"><b>Database.UpdateRow</b></A>
+<br>
+<A href="#Database.UpdateRowItem"><b>Database.UpdateRowItem</b></A>
+<br>
+<A href="#Database.Insert"><b>Database.Insert</b></A>
+<br>
+<A href="#Database.RemoveRow"><b>Database.RemoveRow</b></A>
+<br>
+<A href="#Database.CountColumns"><b>Database.CountColumns</b></A>
+<br>
+<A href="#Database.CountRows"><b>Database.CountRows</b></A>
+<br>
+<A href="#Database.ReadRow"><b>Database.ReadRow</b></A>
+<br>
+<A href="#Database.ReadRowItem"><b>Database.ReadRowItem</b></A>
+<br>
+<A href="#Database.SaveToFile"><b>Database.SaveToFile</b></A>
+<br>
+<A href="#Database.LoadFromFile"><b>Database.LoadFromFile</b></A>
+<br>
+<A href="#Database.SetDelimiter"><b>Database.SetDelimiter</b></A>
+<br>
+<A href="#Database.GetDelimiter"><b>Database.GetDelimiter</b></A>
+<br>
+</blockquote></p></div>
+<h1><A name="Database.RemoveColumn">Database.RemoveColumn</A></h1><br>
+<div class=Declaration>
+<div align=left>
+<table x-use-null-cells
+	style="float: alignleft;
+	x-cell-content-align: Top;
+	border-spacing: 0px;
+	border-spacing: 0px;"
+	cellspacing=0>
+<col>
+<col>
+<tr style="x-cell-content-align: top;" valign=top>
+<td style="padding-right: 0px;
+	padding-left: 0px;
+	border-top-style: none;
+	border-bottom-style: none;
+	border-right-style: none;
+	border-left-style: none;">
+<p><span class=VarType>(boolean)&nbsp;</span>Database.RemoveColumn (&nbsp;</td>
+<td style="padding-right: 0px;
+	padding-left: 0px;
+	border-top-style: none;
+	border-right-style: none;
+	border-bottom-style: none;">
+<p><span class=VarType>(tabel)&nbsp;</span>Database, </p>
+<p><span class=VarType>(number)&nbsp;</span>Column Index )</p>
+</td></tr></table></div></div>
+<h2 style="margin-bottom: 3pt;">Description</h2>
+<p><blockquote>Removes a column from the database, returns true if OK, else false is returned.</blockquote></p>
+<h2 class="H2Tight">Parameters</h2>
+<h3 class="ParameterHeading">Database</h3>
+<p class="ParameterBody"><span class="type">(tabel)&nbsp;</span>A handle to a open database.</p>
+<h3 class="ParameterHeading">Column Index</h3>
+<p class="ParameterBody"><span class="type">(number)&nbsp;</span>The index of the column you want add to remove from the database.</p>
+<br>
+<h2>Return</h2><blockquote><p>This action returns a <span class="type">(boolean)</span> value.<br><br></p></blockquote><br><hr><h1><A name="Database.AddColumn">Database.AddColumn</A></h1><br>
+<div class=Declaration>
+<div align=left>
+<table x-use-null-cells
+	style="float: alignleft;
+	x-cell-content-align: Top;
+	border-spacing: 0px;
+	border-spacing: 0px;"
+	cellspacing=0>
+<col>
+<col>
+<tr style="x-cell-content-align: top;" valign=top>
+<td style="padding-right: 0px;
+	padding-left: 0px;
+	border-top-style: none;
+	border-bottom-style: none;
+	border-right-style: none;
+	border-left-style: none;">
+<p><span class=VarType>(number)&nbsp;</span>Database.AddColumn (&nbsp;</td>
+<td style="padding-right: 0px;
+	padding-left: 0px;
+	border-top-style: none;
+	border-right-style: none;
+	border-bottom-style: none;">
+<p><span class=VarType>(tabel)&nbsp;</span>Database, </p>
+<p><span class=VarType>(string)&nbsp;</span>Column Name )</p>
+</td></tr></table></div></div>
+<h2 style="margin-bottom: 3pt;">Description</h2>
+<p><blockquote>Adds a column to the database, returns column index if OK, else -1 is returned.</blockquote></p>
+<h2 class="H2Tight">Parameters</h2>
+<h3 class="ParameterHeading">Database</h3>
+<p class="ParameterBody"><span class="type">(tabel)&nbsp;</span>A handle to a open database.</p>
+<h3 class="ParameterHeading">Column Name</h3>
+<p class="ParameterBody"><span class="type">(string)&nbsp;</span>The name of the column you want add to the database.</p>
+<br>
+<h2>Return</h2><blockquote><p>This action returns a <span class="type">(number)</span> value.<br><br></p></blockquote><br><hr><h1><A name="Database.GetColumnName">Database.GetColumnName</A></h1><br>
+<div class=Declaration>
+<div align=left>
+<table x-use-null-cells
+	style="float: alignleft;
+	x-cell-content-align: Top;
+	border-spacing: 0px;
+	border-spacing: 0px;"
+	cellspacing=0>
+<col>
+<col>
+<tr style="x-cell-content-align: top;" valign=top>
+<td style="padding-right: 0px;
+	padding-left: 0px;
+	border-top-style: none;
+	border-bottom-style: none;
+	border-right-style: none;
+	border-left-style: none;">
+<p><span class=VarType>(string)&nbsp;</span>Database.GetColumnName (&nbsp;</td>
+<td style="padding-right: 0px;
+	padding-left: 0px;
+	border-top-style: none;
+	border-right-style: none;
+	border-bottom-style: none;">
+<p><span class=VarType>(tabel)&nbsp;</span>Database, </p>
+<p><span class=VarType>(number)&nbsp;</span>Column Index )</p>
+</td></tr></table></div></div>
+<h2 style="margin-bottom: 3pt;">Description</h2>
+<p><blockquote>Returns the column name from the given index, if any error a blank string ("") is returned.</blockquote></p>
+<h2 class="H2Tight">Parameters</h2>
+<h3 class="ParameterHeading">Database</h3>
+<p class="ParameterBody"><span class="type">(tabel)&nbsp;</span>A handle to a open database.</p>
+<h3 class="ParameterHeading">Column Index</h3>
+<p class="ParameterBody"><span class="type">(number)&nbsp;</span>The index of the column you want to get the name of.</p>
+<br>
+<h2>Return</h2><blockquote><p>This action returns a <span class="type">(string)</span> value.<br><br></p></blockquote><br><hr><h1><A name="Database.SetColumnName">Database.SetColumnName</A></h1><br>
+<div class=Declaration>
+<div align=left>
+<table x-use-null-cells
+	style="float: alignleft;
+	x-cell-content-align: Top;
+	border-spacing: 0px;
+	border-spacing: 0px;"
+	cellspacing=0>
+<col>
+<col>
+<tr style="x-cell-content-align: top;" valign=top>
+<td style="padding-right: 0px;
+	padding-left: 0px;
+	border-top-style: none;
+	border-bottom-style: none;
+	border-right-style: none;
+	border-left-style: none;">
+<p><span class=VarType>(boolean)&nbsp;</span>Database.SetColumnName (&nbsp;</td>
+<td style="padding-right: 0px;
+	padding-left: 0px;
+	border-top-style: none;
+	border-right-style: none;
+	border-bottom-style: none;">
+<p><span class=VarType>(tabel)&nbsp;</span>Database, </p>
+<p><span class=VarType>(number)&nbsp;</span>Column Index, </p>
+<p><span class=VarType>(string)&nbsp;</span>Column Name )</p>
+</td></tr></table></div></div>
+<h2 style="margin-bottom: 3pt;">Description</h2>
+<p><blockquote>Sets the column name at the given index, if OK then true is returned else if any error false is returned.</blockquote></p>
+<h2 class="H2Tight">Parameters</h2>
+<h3 class="ParameterHeading">Database</h3>
+<p class="ParameterBody"><span class="type">(tabel)&nbsp;</span>A handle to a open database.</p>
+<h3 class="ParameterHeading">Column Index</h3>
+<p class="ParameterBody"><span class="type">(number)&nbsp;</span>The index of the column you want to rename.</p>
+<h3 class="ParameterHeading">Column Name</h3>
+<p class="ParameterBody"><span class="type">(string)&nbsp;</span>The new name for this column.</p>
+<br>
+<h2>Return</h2><blockquote><p>This action returns a <span class="type">(boolean)</span> value.<br><br></p></blockquote><br><hr><h1><A name="Database.Create">Database.Create</A></h1><br>
+<div class=Declaration>
+<div align=left>
+<table x-use-null-cells
+	style="float: alignleft;
+	x-cell-content-align: Top;
+	border-spacing: 0px;
+	border-spacing: 0px;"
+	cellspacing=0>
+<col>
+<col>
+<tr style="x-cell-content-align: top;" valign=top>
+<td style="padding-right: 0px;
+	padding-left: 0px;
+	border-top-style: none;
+	border-bottom-style: none;
+	border-right-style: none;
+	border-left-style: none;">
+<p><span class=VarType>(tabel)&nbsp;</span>Database.Create (&nbsp;</td>
+<td style="padding-right: 0px;
+	padding-left: 0px;
+	border-top-style: none;
+	border-right-style: none;
+	border-bottom-style: none;">
+<p><span class=VarType>(string)&nbsp;</span>Column Names )</p>
+</td></tr></table></div></div>
+<h2 style="margin-bottom: 3pt;">Description</h2>
+<p><blockquote>Creates a database in memory and returns a handle to it.</blockquote></p>
+<h2 class="H2Tight">Parameters</h2>
+<h3 class="ParameterHeading">Column Names</h3>
+<p class="ParameterBody"><span class="type">(string)&nbsp;</span>A delimited string of the column names, the delimiter MUST be the same as set in Database.SetDelimiter or ("|") is default.</p>
+<br>
+<h2>Return</h2><blockquote><p>This action returns a <span class="type">(tabel)</span> value.<br><br></p></blockquote><br><hr><h1><A name="Database.Add">Database.Add</A></h1><br>
+<div class=Declaration>
+<div align=left>
+<table x-use-null-cells
+	style="float: alignleft;
+	x-cell-content-align: Top;
+	border-spacing: 0px;
+	border-spacing: 0px;"
+	cellspacing=0>
+<col>
+<col>
+<tr style="x-cell-content-align: top;" valign=top>
+<td style="padding-right: 0px;
+	padding-left: 0px;
+	border-top-style: none;
+	border-bottom-style: none;
+	border-right-style: none;
+	border-left-style: none;">
+<p><span class=VarType>(number)&nbsp;</span>Database.Add (&nbsp;</td>
+<td style="padding-right: 0px;
+	padding-left: 0px;
+	border-top-style: none;
+	border-right-style: none;
+	border-bottom-style: none;">
+<p><span class=VarType>(tabel)&nbsp;</span>Database, </p>
+<p><span class=VarType>(string)&nbsp;</span>Values )</p>
+</td></tr></table></div></div>
+<h2 style="margin-bottom: 3pt;">Description</h2>
+<p><blockquote>Adds a item to the end of the database and returns the index of the new item, if any error (-1) is returned.</blockquote></p>
+<h2 class="H2Tight">Parameters</h2>
+<h3 class="ParameterHeading">Database</h3>
+<p class="ParameterBody"><span class="type">(tabel)&nbsp;</span>A handle to a open database.</p>
+<h3 class="ParameterHeading">Values</h3>
+<p class="ParameterBody"><span class="type">(string)&nbsp;</span>A delimited string of the values to add, the amount of values must match the amount of columns, the delimiter MUST be the same as set in Database.SetDelimiter or ("|") is default.</p>
+<br>
+<h2>Return</h2><blockquote><p>This action returns a <span class="type">(number)</span> value.<br><br></p></blockquote><br><hr><h1><A name="Database.UpdateRow">Database.UpdateRow</A></h1><br>
+<div class=Declaration>
+<div align=left>
+<table x-use-null-cells
+	style="float: alignleft;
+	x-cell-content-align: Top;
+	border-spacing: 0px;
+	border-spacing: 0px;"
+	cellspacing=0>
+<col>
+<col>
+<tr style="x-cell-content-align: top;" valign=top>
+<td style="padding-right: 0px;
+	padding-left: 0px;
+	border-top-style: none;
+	border-bottom-style: none;
+	border-right-style: none;
+	border-left-style: none;">
+<p><span class=VarType>(boolean)&nbsp;</span>Database.UpdateRow (&nbsp;</td>
+<td style="padding-right: 0px;
+	padding-left: 0px;
+	border-top-style: none;
+	border-right-style: none;
+	border-bottom-style: none;">
+<p><span class=VarType>(tabel)&nbsp;</span>Database, </p>
+<p><span class=VarType>(string)&nbsp;</span>Values, </p>
+<p><span class=VarType>(number)&nbsp;</span>Row Index )</p>
+</td></tr></table></div></div>
+<h2 style="margin-bottom: 3pt;">Description</h2>
+<p><blockquote>Updates/edits a row in the database, the row MUST exists, returns true if ok else returns false.</blockquote></p>
+<h2 class="H2Tight">Parameters</h2>
+<h3 class="ParameterHeading">Database</h3>
+<p class="ParameterBody"><span class="type">(tabel)&nbsp;</span>A handle to a open database.</p>
+<h3 class="ParameterHeading">Values</h3>
+<p class="ParameterBody"><span class="type">(string)&nbsp;</span>A delimited string of the new row values, the amount of values must match the amount of columns, the delimiter MUST be the same as set in Database.SetDelimiter or ("|") is default.</p>
+<h3 class="ParameterHeading">Row Index</h3>
+<p class="ParameterBody"><span class="type">(number)&nbsp;</span>The index of the row to update/edit.</p>
+<br>
+<h2>Return</h2><blockquote><p>This action returns a <span class="type">(boolean)</span> value.<br><br></p></blockquote><br><hr><h1><A name="Database.UpdateRowItem">Database.UpdateRowItem</A></h1><br>
+<div class=Declaration>
+<div align=left>
+<table x-use-null-cells
+	style="float: alignleft;
+	x-cell-content-align: Top;
+	border-spacing: 0px;
+	border-spacing: 0px;"
+	cellspacing=0>
+<col>
+<col>
+<tr style="x-cell-content-align: top;" valign=top>
+<td style="padding-right: 0px;
+	padding-left: 0px;
+	border-top-style: none;
+	border-bottom-style: none;
+	border-right-style: none;
+	border-left-style: none;">
+<p><span class=VarType>(boolean)&nbsp;</span>Database.UpdateRowItem (&nbsp;</td>
+<td style="padding-right: 0px;
+	padding-left: 0px;
+	border-top-style: none;
+	border-right-style: none;
+	border-bottom-style: none;">
+<p><span class=VarType>(tabel)&nbsp;</span>Database, </p>
+<p><span class=VarType>(string)&nbsp;</span>Values, </p>
+<p><span class=VarType>(number)&nbsp;</span>Row Index, </p>
+<p><span class=VarType>(number)&nbsp;</span>Column Index )</p>
+</td></tr></table></div></div>
+<h2 style="margin-bottom: 3pt;">Description</h2>
+<p><blockquote>Updates/edits a item in the given row, the row and column MUST exists, returns true if ok else returns false.</blockquote></p>
+<h2 class="H2Tight">Parameters</h2>
+<h3 class="ParameterHeading">Database</h3>
+<p class="ParameterBody"><span class="type">(tabel)&nbsp;</span>A handle to a open database.</p>
+<h3 class="ParameterHeading">Values</h3>
+<p class="ParameterBody"><span class="type">(string)&nbsp;</span>A delimited string of the new row values, the amount of values must match the amount of columns, the delimiter MUST be the same as set in Database.SetDelimiter or ("|") is default.</p>
+<h3 class="ParameterHeading">Row Index</h3>
+<p class="ParameterBody"><span class="type">(number)&nbsp;</span>The index of the row to update/edit.</p>
+<h3 class="ParameterHeading">Column Index</h3>
+<p class="ParameterBody"><span class="type">(number)&nbsp;</span>The index of the column to update/edit.</p>
+<br>
+<h2>Return</h2><blockquote><p>This action returns a <span class="type">(boolean)</span> value.<br><br></p></blockquote><br><hr><h1><A name="Database.Insert">Database.Insert</A></h1><br>
+<div class=Declaration>
+<div align=left>
+<table x-use-null-cells
+	style="float: alignleft;
+	x-cell-content-align: Top;
+	border-spacing: 0px;
+	border-spacing: 0px;"
+	cellspacing=0>
+<col>
+<col>
+<tr style="x-cell-content-align: top;" valign=top>
+<td style="padding-right: 0px;
+	padding-left: 0px;
+	border-top-style: none;
+	border-bottom-style: none;
+	border-right-style: none;
+	border-left-style: none;">
+<p><span class=VarType>(number)&nbsp;</span>Database.Insert (&nbsp;</td>
+<td style="padding-right: 0px;
+	padding-left: 0px;
+	border-top-style: none;
+	border-right-style: none;
+	border-bottom-style: none;">
+<p><span class=VarType>(tabel)&nbsp;</span>Database, </p>
+<p><span class=VarType>(string)&nbsp;</span>Values, </p>
+<p><span class=VarType>(number)&nbsp;</span>Row Index )</p>
+</td></tr></table></div></div>
+<h2 style="margin-bottom: 3pt;">Description</h2>
+<p><blockquote>Inserts a item into the database at the given index and returns the new items index, if the index is over the total database count then its added to the end, if any error (-1) is returned.</blockquote></p>
+<h2 class="H2Tight">Parameters</h2>
+<h3 class="ParameterHeading">Database</h3>
+<p class="ParameterBody"><span class="type">(tabel)&nbsp;</span>A handle to a open database.</p>
+<h3 class="ParameterHeading">Values</h3>
+<p class="ParameterBody"><span class="type">(string)&nbsp;</span>A delimited string of the values to add, the amount of values must match the amount of columns, the delimiter MUST be the same as set in Database.SetDelimiter or ("|") is default.</p>
+<h3 class="ParameterHeading">Row Index</h3>
+<p class="ParameterBody"><span class="type">(number)&nbsp;</span>The index of the row to insert.</p>
+<br>
+<h2>Return</h2><blockquote><p>This action returns a <span class="type">(number)</span> value.<br><br></p></blockquote><br><hr><h1><A name="Database.RemoveRow">Database.RemoveRow</A></h1><br>
+<div class=Declaration>
+<div align=left>
+<table x-use-null-cells
+	style="float: alignleft;
+	x-cell-content-align: Top;
+	border-spacing: 0px;
+	border-spacing: 0px;"
+	cellspacing=0>
+<col>
+<col>
+<tr style="x-cell-content-align: top;" valign=top>
+<td style="padding-right: 0px;
+	padding-left: 0px;
+	border-top-style: none;
+	border-bottom-style: none;
+	border-right-style: none;
+	border-left-style: none;">
+<p><span class=VarType>(boolean)&nbsp;</span>Database.RemoveRow (&nbsp;</td>
+<td style="padding-right: 0px;
+	padding-left: 0px;
+	border-top-style: none;
+	border-right-style: none;
+	border-bottom-style: none;">
+<p><span class=VarType>(tabel)&nbsp;</span>Database, </p>
+<p><span class=VarType>(number)&nbsp;</span>Row Index )</p>
+</td></tr></table></div></div>
+<h2 style="margin-bottom: 3pt;">Description</h2>
+<p><blockquote>Removes a item from the database, returns true if the item was removed else returns false.</blockquote></p>
+<h2 class="H2Tight">Parameters</h2>
+<h3 class="ParameterHeading">Database</h3>
+<p class="ParameterBody"><span class="type">(tabel)&nbsp;</span>A handle to a open database.</p>
+<h3 class="ParameterHeading">Row Index</h3>
+<p class="ParameterBody"><span class="type">(number)&nbsp;</span>The index of the row to remove.</p>
+<br>
+<h2>Return</h2><blockquote><p>This action returns a <span class="type">(boolean)</span> value.<br><br></p></blockquote><br><hr><h1><A name="Database.CountColumns">Database.CountColumns</A></h1><br>
+<div class=Declaration>
+<div align=left>
+<table x-use-null-cells
+	style="float: alignleft;
+	x-cell-content-align: Top;
+	border-spacing: 0px;
+	border-spacing: 0px;"
+	cellspacing=0>
+<col>
+<col>
+<tr style="x-cell-content-align: top;" valign=top>
+<td style="padding-right: 0px;
+	padding-left: 0px;
+	border-top-style: none;
+	border-bottom-style: none;
+	border-right-style: none;
+	border-left-style: none;">
+<p><span class=VarType>(number)&nbsp;</span>Database.CountColumns (&nbsp;</td>
+<td style="padding-right: 0px;
+	padding-left: 0px;
+	border-top-style: none;
+	border-right-style: none;
+	border-bottom-style: none;">
+<p><span class=VarType>(tabel)&nbsp;</span>Database )</p>
+</td></tr></table></div></div>
+<h2 style="margin-bottom: 3pt;">Description</h2>
+<p><blockquote>Returns the number of columns, if any error (-1) is returned.</blockquote></p>
+<h2 class="H2Tight">Parameters</h2>
+<h3 class="ParameterHeading">Database</h3>
+<p class="ParameterBody"><span class="type">(tabel)&nbsp;</span>A handle to a open database.</p>
+<br>
+<h2>Return</h2><blockquote><p>This action returns a <span class="type">(number)</span> value.<br><br></p></blockquote><br><hr><h1><A name="Database.CountRows">Database.CountRows</A></h1><br>
+<div class=Declaration>
+<div align=left>
+<table x-use-null-cells
+	style="float: alignleft;
+	x-cell-content-align: Top;
+	border-spacing: 0px;
+	border-spacing: 0px;"
+	cellspacing=0>
+<col>
+<col>
+<tr style="x-cell-content-align: top;" valign=top>
+<td style="padding-right: 0px;
+	padding-left: 0px;
+	border-top-style: none;
+	border-bottom-style: none;
+	border-right-style: none;
+	border-left-style: none;">
+<p><span class=VarType>(number)&nbsp;</span>Database.CountRows (&nbsp;</td>
+<td style="padding-right: 0px;
+	padding-left: 0px;
+	border-top-style: none;
+	border-right-style: none;
+	border-bottom-style: none;">
+<p><span class=VarType>(tabel)&nbsp;</span>Database )</p>
+</td></tr></table></div></div>
+<h2 style="margin-bottom: 3pt;">Description</h2>
+<p><blockquote>Returns the number of rows, if any error (-1) is returned.</blockquote></p>
+<h2 class="H2Tight">Parameters</h2>
+<h3 class="ParameterHeading">Database</h3>
+<p class="ParameterBody"><span class="type">(tabel)&nbsp;</span>A handle to a open database.</p>
+<br>
+<h2>Return</h2><blockquote><p>This action returns a <span class="type">(number)</span> value.<br><br></p></blockquote><br><hr><h1><A name="Database.ReadRow">Database.ReadRow</A></h1><br>
+<div class=Declaration>
+<div align=left>
+<table x-use-null-cells
+	style="float: alignleft;
+	x-cell-content-align: Top;
+	border-spacing: 0px;
+	border-spacing: 0px;"
+	cellspacing=0>
+<col>
+<col>
+<tr style="x-cell-content-align: top;" valign=top>
+<td style="padding-right: 0px;
+	padding-left: 0px;
+	border-top-style: none;
+	border-bottom-style: none;
+	border-right-style: none;
+	border-left-style: none;">
+<p><span class=VarType>(tabel)&nbsp;</span>Database.ReadRow (&nbsp;</td>
+<td style="padding-right: 0px;
+	padding-left: 0px;
+	border-top-style: none;
+	border-right-style: none;
+	border-bottom-style: none;">
+<p><span class=VarType>(tabel)&nbsp;</span>Database, </p>
+<p><span class=VarType>(number)&nbsp;</span>Row Index )</p>
+</td></tr></table></div></div>
+<h2 style="margin-bottom: 3pt;">Description</h2>
+<p><blockquote>Reads a database row and returns a numerically indexed table of the rows contents, the number of table elements will always be equal to the number of columns for that database, if any error a blank string ("") is returned</blockquote></p>
+<h2 class="H2Tight">Parameters</h2>
+<h3 class="ParameterHeading">Database</h3>
+<p class="ParameterBody"><span class="type">(tabel)&nbsp;</span>A handle to a open database.</p>
+<h3 class="ParameterHeading">Row Index</h3>
+<p class="ParameterBody"><span class="type">(number)&nbsp;</span>The index of the row to read.</p>
+<br>
+<h2>Return</h2><blockquote><p>This action returns a <span class="type">(tabel)</span> value.<br><br></p></blockquote><br><hr><h1><A name="Database.ReadRowItem">Database.ReadRowItem</A></h1><br>
+<div class=Declaration>
+<div align=left>
+<table x-use-null-cells
+	style="float: alignleft;
+	x-cell-content-align: Top;
+	border-spacing: 0px;
+	border-spacing: 0px;"
+	cellspacing=0>
+<col>
+<col>
+<tr style="x-cell-content-align: top;" valign=top>
+<td style="padding-right: 0px;
+	padding-left: 0px;
+	border-top-style: none;
+	border-bottom-style: none;
+	border-right-style: none;
+	border-left-style: none;">
+<p><span class=VarType>(string)&nbsp;</span>Database.ReadRowItem (&nbsp;</td>
+<td style="padding-right: 0px;
+	padding-left: 0px;
+	border-top-style: none;
+	border-right-style: none;
+	border-bottom-style: none;">
+<p><span class=VarType>(tabel)&nbsp;</span>Database, </p>
+<p><span class=VarType>(number)&nbsp;</span>Row Index, </p>
+<p><span class=VarType>(number)&nbsp;</span>Item Index )</p>
+</td></tr></table></div></div>
+<h2 style="margin-bottom: 3pt;">Description</h2>
+<p><blockquote>Reads a database row item and returns the value as a string,if any error a blank string ("") is returned</blockquote></p>
+<h2 class="H2Tight">Parameters</h2>
+<h3 class="ParameterHeading">Database</h3>
+<p class="ParameterBody"><span class="type">(tabel)&nbsp;</span>A handle to a open database.</p>
+<h3 class="ParameterHeading">Row Index</h3>
+<p class="ParameterBody"><span class="type">(number)&nbsp;</span>The index of the row to read.</p>
+<h3 class="ParameterHeading">Item Index</h3>
+<p class="ParameterBody"><span class="type">(number)&nbsp;</span>The index of the item to read.</p>
+<br>
+<h2>Return</h2><blockquote><p>This action returns a <span class="type">(string)</span> value.<br><br></p></blockquote><br><hr><h1><A name="Database.SaveToFile">Database.SaveToFile</A></h1><br>
+<div class=Declaration>
+<div align=left>
+<table x-use-null-cells
+	style="float: alignleft;
+	x-cell-content-align: Top;
+	border-spacing: 0px;
+	border-spacing: 0px;"
+	cellspacing=0>
+<col>
+<col>
+<tr style="x-cell-content-align: top;" valign=top>
+<td style="padding-right: 0px;
+	padding-left: 0px;
+	border-top-style: none;
+	border-bottom-style: none;
+	border-right-style: none;
+	border-left-style: none;">
+<p><span class=VarType>(boolean)&nbsp;</span>Database.SaveToFile (&nbsp;</td>
+<td style="padding-right: 0px;
+	padding-left: 0px;
+	border-top-style: none;
+	border-right-style: none;
+	border-bottom-style: none;">
+<p><span class=VarType>(tabel)&nbsp;</span>Database, </p>
+<p><span class=VarType>(string)&nbsp;</span>Filepath )</p>
+</td></tr></table></div></div>
+<h2 style="margin-bottom: 3pt;">Description</h2>
+<p><blockquote>Saves a database to file, returns true if ok else false is returned.</blockquote></p>
+<h2 class="H2Tight">Parameters</h2>
+<h3 class="ParameterHeading">Database</h3>
+<p class="ParameterBody"><span class="type">(tabel)&nbsp;</span>A handle to a open database.</p>
+<h3 class="ParameterHeading">Filepath</h3>
+<p class="ParameterBody"><span class="type">(string)&nbsp;</span>The path of the database file</p>
+<br>
+<h2>Return</h2><blockquote><p>This action returns a <span class="type">(boolean)</span> value.<br><br></p></blockquote><br><hr><h1><A name="Database.LoadFromFile">Database.LoadFromFile</A></h1><br>
+<div class=Declaration>
+<div align=left>
+<table x-use-null-cells
+	style="float: alignleft;
+	x-cell-content-align: Top;
+	border-spacing: 0px;
+	border-spacing: 0px;"
+	cellspacing=0>
+<col>
+<col>
+<tr style="x-cell-content-align: top;" valign=top>
+<td style="padding-right: 0px;
+	padding-left: 0px;
+	border-top-style: none;
+	border-bottom-style: none;
+	border-right-style: none;
+	border-left-style: none;">
+<p><span class=VarType>(tabel)&nbsp;</span>Database.LoadFromFile (&nbsp;</td>
+<td style="padding-right: 0px;
+	padding-left: 0px;
+	border-top-style: none;
+	border-right-style: none;
+	border-bottom-style: none;">
+<p><span class=VarType>(string)&nbsp;</span>Filepath )</p>
+</td></tr></table></div></div>
+<h2 style="margin-bottom: 3pt;">Description</h2>
+<p><blockquote>Loads a database into memory and returns a handle to it.</blockquote></p>
+<h2 class="H2Tight">Parameters</h2>
+<h3 class="ParameterHeading">Filepath</h3>
+<p class="ParameterBody"><span class="type">(string)&nbsp;</span>The path of the database file</p>
+<br>
+<h2>Return</h2><blockquote><p>This action returns a <span class="type">(tabel)</span> value.<br><br></p></blockquote><br><hr><h1><A name="Database.SetDelimiter">Database.SetDelimiter</A></h1><br>
+<div class=Declaration>
+<div align=left>
+<table x-use-null-cells
+	style="float: alignleft;
+	x-cell-content-align: Top;
+	border-spacing: 0px;
+	border-spacing: 0px;"
+	cellspacing=0>
+<col>
+<col>
+<tr style="x-cell-content-align: top;" valign=top>
+<td style="padding-right: 0px;
+	padding-left: 0px;
+	border-top-style: none;
+	border-bottom-style: none;
+	border-right-style: none;
+	border-left-style: none;">
+<p>Database.SetDelimiter (&nbsp;</td>
+<td style="padding-right: 0px;
+	padding-left: 0px;
+	border-top-style: none;
+	border-right-style: none;
+	border-bottom-style: none;">
+<p><span class=VarType>(string)&nbsp;</span>Delimiter )</p>
+</td></tr></table></div></div>
+<h2 style="margin-bottom: 3pt;">Description</h2>
+<p><blockquote>Loads a database into memory and returns a handle to it.</blockquote></p>
+<h2 class="H2Tight">Parameters</h2>
+<h3 class="ParameterHeading">Delimiter</h3>
+<p class="ParameterBody"><span class="type">(string)&nbsp;</span>Sets the global delimiter of the database.</p>
+<br>
+<h2>Return</h2><blockquote><p>This action dose not return any value.<br><br></p></blockquote><br><hr><h1><A name="Database.GetDelimiter">Database.GetDelimiter</A></h1><br>
+<div class=Declaration>
+<div align=left>
+<table x-use-null-cells
+	style="float: alignleft;
+	x-cell-content-align: Top;
+	border-spacing: 0px;
+	border-spacing: 0px;"
+	cellspacing=0>
+<col>
+<col>
+<tr style="x-cell-content-align: top;" valign=top>
+<td style="padding-right: 0px;
+	padding-left: 0px;
+	border-top-style: none;
+	border-bottom-style: none;
+	border-right-style: none;
+	border-left-style: none;">
+<p><span class=VarType>(string)&nbsp;</span>Database.GetDelimiter ()</td>
+<td style="padding-right: 0px;
+	padding-left: 0px;
+	border-top-style: none;
+	border-right-style: none;
+	border-bottom-style: none;">
+</td></tr></table></div></div>
+<h2 style="margin-bottom: 3pt;">Description</h2>
+<p><blockquote>Gets the global delimiter of the database.</blockquote></p>
+<h2 class="H2Tight">Parameters</h2><h3 class="ParameterHeading">None</h3><br>
+<h2>Return</h2><blockquote><p>This action returns a <span class="type">(string)</span> value.<br><br></p></blockquote><br><hr><h2><p align="center">Made with Action Plugin Compiler</p></h2></body></html>
